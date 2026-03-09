@@ -21,4 +21,3 @@ class BlockDefinition(BaseModel):
     block_no: int
     code: BlockCode
     label: str
-    body_partial: str
