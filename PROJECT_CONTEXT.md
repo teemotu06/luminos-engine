@@ -46,12 +46,14 @@ Docker is **not** being used yet in this project.
 ```text
 luminos-engine/
 ├── .gitignore
+├── PROJECT_CONTEXT.md
 ├── requirements.txt
 ├── app/
 │   ├── __init__.py
 │   ├── main.py
 │   ├── content/
 │   │   └── lessons/
+│   │       ├── G1-L1.json
 │   │       ├── g1_l1_u1_lesson_1.json
 │   │       └── g1_l1_u1_lesson_1_blocks.json
 │   ├── routers/
@@ -59,31 +61,44 @@ luminos-engine/
 │   │   └── lesson.py
 │   ├── schemas/
 │   │   ├── __init__.py
-│   │   ├── block.py
+│   │   ├── block_definition.py
+│   │   ├── block_id.py
 │   │   ├── lesson.py
 │   │   ├── lesson_block.py
-│   │   └── slide.py
+│   │   ├── slide.py
+│   │   └── view_type.py
 │   ├── services/
 │   │   ├── __init__.py
 │   │   ├── block_registry.py
 │   │   ├── block_validator.py
-│   │   ├── lesson_service.py
-│   │   └── view_resolver.py
+│   │   ├── lesson_navigation.py
+│   │   └── lesson_service.py
 │   ├── static/
+│   │   ├── lesson.css
+│   │   ├── lesson.js
 │   │   └── styles.css
 │   └── templates/
 │       ├── base.html
 │       └── lesson/
 │           ├── view.html
-│           ├── partials/
-│           │   └── slide_card.html
-│           └── views/
-│               ├── default.html
-│               ├── launch.html
-│               ├── teach.html
-│               ├── model.html
-│               ├── guided.html
-│               ├── independent.html
-│               ├── check.html
-│               ├── quiz.html
-│               └── wrap.html
+│           └── partials/
+│               ├── block_card.html
+│               ├── block_header.html
+│               ├── block_body_router.html
+│               ├── block_progress.html
+│               ├── lesson_header.html
+│               ├── slide_nav.html
+│               ├── slide_stage.html
+│               ├── teacher_overlay.html
+│               ├── shared/
+│               │   ├── block_notes.html
+│               │   └── list_rows.html
+│               └── views/
+│                   ├── view_audio_prompt.html
+│                   ├── view_drag_letter.html
+│                   ├── view_drag_word.html
+│                   ├── view_flashcard.html
+│                   ├── view_minimal_pair.html
+│                   ├── view_quick_check.html
+│                   ├── view_read_respond.html
+│                   └── view_writing_encoding.html
