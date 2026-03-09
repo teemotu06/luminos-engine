@@ -1,0 +1,16 @@
+{# app/templates/lesson/partials/block_header.html #}
+
+<div class="lesson-block-header">
+  <div class="lesson-block-header__top">
+    <div class="lesson-block-header__eyebrow">
+      <span class="lesson-block-header__number">Block {{ slide.block }}</span>
+
+      {% if slide.view_type %}
+        <span class="lesson-block-header__separator">·</span>
+        <span class="lesson-block-header__label">{{ slide.view_type }}</span>
+      {% endif %}
+    </div>
+
+    <h2 class="lesson-block-header__title">{{ slide.title }}</h2>
+  </div>
+</div>

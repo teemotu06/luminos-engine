@@ -1,12 +1,13 @@
-<section class="card slide-card">
-    <p class="slide-meta">Block {{ slide.block }} · {{ slide.view_type }}</p>
-    <h2 class="slide-title">{{ slide.title }}</h2>
-
+<div class="lesson-block-body">
     {% if slide.text %}
         <p class="slide-note">{{ slide.text }}</p>
+    {% endif %}
+
+    {% if slide.prompt %}
+        <p class="slide-note"><strong>{{ slide.prompt }}</strong></p>
     {% endif %}
 
     {% if slide.teacher_note %}
         <p class="slide-note">{{ slide.teacher_note }}</p>
     {% endif %}
-</section>
+</div>

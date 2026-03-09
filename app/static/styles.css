@@ -64,19 +64,50 @@ body {
     padding: 20px 24px;
 }
 
-.slide-meta {
-    margin: 0 0 10px 0;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.slide-title {
-    margin: 0 0 8px 0;
-    font-size: 24px;
-}
-
 .slide-note {
     margin: 0;
     color: var(--text);
     line-height: 1.6;
+}
+.lesson-block-header {
+    margin-bottom: 12px;
+}
+
+.lesson-block-header__top {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lesson-block-header__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.lesson-block-header__number,
+.lesson-block-header__label {
+    color: var(--muted);
+    font-size: 14px;
+}
+.lesson-block-header__title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.lesson-block-header__separator {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.lesson-block-body {
+    display: grid;
+    gap: 6px;
 }

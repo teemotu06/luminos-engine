@@ -12,5 +12,8 @@ def get_lesson(request: Request, lesson_id: str):
     lesson = load_lesson(lesson_id)
     return templates.TemplateResponse(
         "lesson/view.html",
-        {"request": request, "lesson": lesson},
+        {
+            "request": request,
+            "lesson": lesson,
+        },
     )

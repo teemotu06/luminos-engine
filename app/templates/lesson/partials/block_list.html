@@ -1,0 +1,5 @@
+{% for block in lesson.blocks %}
+    {% for slide in block.slides %}
+        {% include "lesson/partials/block_card.html" %}
+    {% endfor %}
+{% endfor %}
