@@ -9,6 +9,13 @@
 
 {% block content %}
 <div class="page lesson-shell" x-data="lessonShell()" :class="{ 'lesson-shell--presentation': presentationMode }">
+    <button
+        type="button"
+        class="lesson-mode-toggle"
+        @click="presentationMode = !presentationMode"
+        x-text="presentationMode ? 'Exit Presentation' : 'Presentation Mode'">
+    </button>
+
     {% include "lesson/partials/lesson_header.html" %}
     {% include "lesson/partials/block_progress.html" %}
 
