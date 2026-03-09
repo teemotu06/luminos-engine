@@ -1,8 +1,8 @@
 <div class="lesson-block-body">
     {% include "lesson/partials/shared/block_notes.html" %}
 
-    {% if slide.dictation_items %}
-        {% with items = slide.dictation_items, row_label = "Prompt" %}
+    {% if slide.content_payload.get("dictation_items") %}
+        {% with items = slide.content_payload.get("dictation_items", []), row_label = "Prompt" %}
             {% include "lesson/partials/shared/list_rows.html" %}
         {% endwith %}
     {% endif %}

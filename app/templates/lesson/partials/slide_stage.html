@@ -1,0 +1,5 @@
+{% if ordered_slides %}
+    {% with entry = ordered_slides[current_index], block = ordered_slides[current_index].block, slide = ordered_slides[current_index].slide %}
+        {% include "lesson/partials/block_card.html" %}
+    {% endwith %}
+{% endif %}

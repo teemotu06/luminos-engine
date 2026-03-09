@@ -1,0 +1,15 @@
+from typing import Literal
+
+
+BlockId = Literal[
+    "B1_REVIEW_FLASHCARDS",
+    "B2_REVIEW_LISTEN_WRITE",
+    "B3_NEW_SOUND",
+    "B4_VOCAB_WARMUP",
+    "B5_WORD_BUILDING",
+    "B6_SENTENCE_BRIDGE",
+    "B7_DECODABLE_READER",
+    "B8_ENCODING_WRITING",
+    "B9_MORPHEME_MOMENT",
+    "B10_MEANING_CLOSE",
+]

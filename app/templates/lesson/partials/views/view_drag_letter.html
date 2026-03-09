@@ -1,8 +1,8 @@
 <div class="lesson-block-body">
     {% include "lesson/partials/shared/block_notes.html" %}
 
-    {% if slide.morpheme_items %}
-        {% with items = slide.morpheme_items, row_label = "Word Part" %}
+    {% if slide.content_payload.get("word_build_items") %}
+        {% with items = slide.content_payload.get("word_build_items", []), row_label = "Word" %}
             {% include "lesson/partials/shared/list_rows.html" %}
         {% endwith %}
     {% endif %}

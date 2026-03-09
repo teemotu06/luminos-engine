@@ -1,9 +1,9 @@
 <div class="lesson-block-body">
     {% include "lesson/partials/shared/block_notes.html" %}
 
-    {% if slide.reader_lines %}
+    {% if slide.content_payload.get("reader_lines") %}
         <div class="lesson-reader">
-            {% for line in slide.reader_lines %}
+            {% for line in slide.content_payload.get("reader_lines", []) %}
                 <p class="lesson-reader-line">{{ line }}</p>
             {% endfor %}
         </div>

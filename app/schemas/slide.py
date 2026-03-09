@@ -1,21 +1,35 @@
-from typing import Optional, List
+from typing import Optional, Literal, List, Dict, Any
 
 from pydantic import BaseModel, Field
 
+from app.schemas.view_type import ViewType
+
+from app.schemas.block_id import BlockId
+
+
+KoreanInterferenceFlag = Literal[
+    "r_l",
+    "f_p",
+    "v_b",
+    "th_voiceless",
+    "th_voiced",
+    "cluster",
+    "vowel_quality",
+]
+
+NextAction = Literal["manual_next", "auto_next"]
+
 
 class Slide(BaseModel):
-    id: str
-    block_no: int = Field(ge=1, le=10)
-    teacher_note: Optional[str] = None
-    text: Optional[str] = None
-    prompt: Optional[str] = None
-    items: List[str] = Field(default_factory=list)
-    dictation_items: List[str] = Field(default_factory=list)
-    minimal_pairs: List[str] = Field(default_factory=list)
-    vocab_items: List[str] = Field(default_factory=list)
-    word_build_items: List[str] = Field(default_factory=list)
-    sentence_items: List[str] = Field(default_factory=list)
-    reader_lines: List[str] = Field(default_factory=list)
-    encoding_items: List[str] = Field(default_factory=list)
-    morpheme_items: List[str] = Field(default_factory=list)
-    close_questions: List[str] = Field(default_factory=list)
+    slide_id: str
+    block_id: BlockId
+    slide_title: str
+    view_type: ViewType
+    content_payload: Dict[str, Any] = Field(default_factory=dict)
+    teacher_cue: Optional[str] = None
+    expected_response: Optional[str] = None
+    correction_move: Optional[str] = None
+    korean_interference_flag: Optional[KoreanInterferenceFlag] = None
+    markable: bool = False
+    marking_options: List[str] = Field(default_factory=list)
+    next_action: NextAction = "manual_next"

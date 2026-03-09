@@ -157,3 +157,38 @@ body {
     font-size: 18px;
     line-height: 1.5;
 }
+
+.lesson-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.lesson-nav__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 108px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+}
+
+.lesson-nav__button--disabled {
+    color: var(--muted);
+    background: #f3f1ec;
+    box-shadow: none;
+}
+
+.lesson-nav__status {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+}

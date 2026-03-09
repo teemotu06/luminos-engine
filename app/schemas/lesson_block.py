@@ -10,5 +10,4 @@ class LessonBlock(BaseModel):
     block_no: int = Field(ge=1, le=10)
     code: BlockCode
     label: str
-    title: str
     slides: List[Slide]

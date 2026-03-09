@@ -1,9 +1,0 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
-
-    {% if slide.sentence_items %}
-        {% with items = slide.sentence_items, row_label = "Sentence" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
-    {% endif %}
-</div>

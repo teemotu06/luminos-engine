@@ -1,0 +1,166 @@
+{
+  "blocks": [
+    {
+      "block_no": 1,
+      "code": "B1_REVIEW_FLASHCARDS",
+      "label": "Flashcard Phoneme Review",
+      "title": "Review Known Sounds",
+      "slides": [
+        {
+          "id": "b1_slide_1",
+          "block_no": 1,
+          "text": "Review the known phonemes with flashcards.",
+          "items": ["s", "a", "t", "i", "p"],
+          "teacher_note": "Keep the pace brisk."
+        }
+      ]
+    },
+    {
+      "block_no": 2,
+      "code": "B2_REVIEW_LISTEN_WRITE",
+      "label": "Listening & Write Review",
+      "title": "Listen and Write",
+      "slides": [
+        {
+          "id": "b2_slide_1",
+          "block_no": 2,
+          "text": "Listen to each prompt and write what you hear.",
+          "dictation_items": ["s", "sat", "pin"],
+          "teacher_note": "Say each item clearly. Repeat once only if needed."
+        }
+      ]
+    },
+    {
+      "block_no": 3,
+      "code": "B3_NEW_SOUND",
+      "label": "New Sound Introduction",
+      "title": "Teach /p/",
+      "slides": [
+        {
+          "id": "b3_slide_1",
+          "block_no": 3,
+          "text": "/p/ is a short, clear sound.",
+          "prompt": "Say /p/ with me.",
+          "minimal_pairs": ["p / b", "pan / ban", "pig / big"],
+          "teacher_note": "Model the sound clearly and flag Korean interference if needed."
+        }
+      ]
+    },
+    {
+      "block_no": 4,
+      "code": "B4_VOCAB_WARMUP",
+      "label": "Vocabulary Warm-Up",
+      "title": "New Words",
+      "slides": [
+        {
+          "id": "b4_slide_1",
+          "block_no": 4,
+          "text": "Introduce the lesson words orally before blending work begins.",
+          "vocab_items": ["pat", "pin", "pop"],
+          "prompt": "Point, say, and repeat each word.",
+          "teacher_note": "All lesson words are introduced here, including words with the new sound."
+        }
+      ]
+    },
+    {
+      "block_no": 5,
+      "code": "B5_WORD_BUILDING",
+      "label": "Word Building",
+      "title": "Blend the Word",
+      "slides": [
+        {
+          "id": "b5_slide_1",
+          "block_no": 5,
+          "text": "Map each sound to print and blend the full word.",
+          "word_build_items": ["p-a-t → pat", "p-i-n → pin", "p-o-p → pop"],
+          "prompt": "Touch each sound, then blend the word.",
+          "teacher_note": "Model slowly first, then repeat at natural speed."
+        }
+      ]
+    },
+    {
+      "block_no": 6,
+      "code": "B6_SENTENCE_BRIDGE",
+      "label": "Sentence Bridge",
+      "title": "Read the Sentence",
+      "slides": [
+        {
+          "id": "b6_slide_1",
+          "block_no": 6,
+          "text": "Move from word reading into short controlled sentences.",
+          "sentence_items": ["Pat is in.", "Pat sat.", "Pin is in."],
+          "prompt": "Point under each word and read the full sentence.",
+          "teacher_note": "Keep the sentence fully double-controlled."
+        }
+      ]
+    },
+    {
+      "block_no": 7,
+      "code": "B7_DECODABLE_READER",
+      "label": "Decodable Reader / Fluency",
+      "title": "Read the Decodable",
+      "slides": [
+        {
+          "id": "b7_slide_1",
+          "block_no": 7,
+          "text": "Read the connected text smoothly and then reread for fluency.",
+          "reader_lines": ["Pat sat.", "Pat is in.", "Pat sat in."],
+          "prompt": "Read once carefully, then reread with smoother phrasing.",
+          "teacher_note": "Keep the text fully controlled and support fluent rereading."
+        }
+      ]
+    },
+    {
+      "block_no": 8,
+      "code": "B8_ENCODING_WRITING",
+      "label": "Encoding & Writing",
+      "title": "Write the Word",
+      "slides": [
+        {
+          "id": "b8_slide_1",
+          "block_no": 8,
+          "text": "Use speech-to-print to encode the sounds you hear.",
+          "encoding_items": ["Write: pat", "Write: pin", "Write: Pat sat."],
+          "prompt": "Listen, segment, and write each item.",
+          "teacher_note": "Check sound-symbol mapping and full left-to-right encoding."
+        }
+      ]
+    },
+    {
+      "block_no": 9,
+      "code": "B9_MORPHEME_MOMENT",
+      "label": "Morpheme Moment",
+      "title": "Word Meaning Link",
+      "slides": [
+        {
+          "id": "b9_slide_1",
+          "block_no": 9,
+          "text": "Build early awareness that words can contain meaningful parts.",
+          "morpheme_items": ["play + er", "jump + ing", "cat + s"],
+          "prompt": "Say the whole word, then notice the extra word part.",
+          "teacher_note": "Keep this light and oral for early groups."
+        }
+      ]
+    },
+    {
+      "block_no": 10,
+      "code": "B10_MEANING_CLOSE",
+      "label": "Meaning-Making Close",
+      "title": "Close the Lesson",
+      "slides": [
+        {
+          "id": "b10_slide_1",
+          "block_no": 10,
+          "text": "End the lesson at meaning, recall, and oral response.",
+          "close_questions": [
+            "What sound did we learn today?",
+            "Which word did you read today?",
+            "Can you say one sentence from the lesson?"
+          ],
+          "prompt": "Answer in a full spoken response where possible.",
+          "teacher_note": "Close with meaning, recall, and confidence."
+        }
+      ]
+    }
+  ]
+}
