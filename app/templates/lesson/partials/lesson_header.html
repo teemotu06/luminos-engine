@@ -1,13 +1,4 @@
 <header class="card lesson-header" x-show="!presentationMode">
-    <p class="lesson-eyebrow">{{ lesson.level }} · {{ lesson.unit }} · Lesson {{ lesson.lesson_number }}</p>
+    <p class="lesson-eyebrow">{{ lesson.unit_id }} · {{ lesson.target_pattern }}</p>
     <h1 class="lesson-title">{{ lesson.title }}</h1>
-
-    <div class="lesson-header__actions">
-        <button
-            type="button"
-            class="lesson-presentation-toggle"
-            @click="presentationMode = !presentationMode"
-            x-text="presentationMode ? 'Show Teacher View' : 'Presentation Mode'">
-        </button>
-    </div>
 </header>
