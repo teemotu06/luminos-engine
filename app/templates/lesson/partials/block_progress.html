@@ -1,0 +1,13 @@
+<nav class="block-progress" aria-label="Lesson block progress" x-show="!presentationMode">
+  {% if ordered_slides %}
+    {% with active_slide = ordered_slides[current_index].slide %}
+      {% for block in lesson.blocks %}
+        {% set is_active = block.code == active_slide.block_id %}
+        <div class="block-progress__item{% if is_active %} block-progress__item--active{% endif %}">
+          <span class="block-progress__number">Block {{ block.block_no }}</span>
+          <span class="block-progress__code">{{ block.code }}</span>
+        </div>
+      {% endfor %}
+    {% endwith %}
+  {% endif %}
+</nav>

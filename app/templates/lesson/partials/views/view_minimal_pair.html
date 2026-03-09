@@ -1,9 +1,26 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
+<div class="lesson-minimal-pair">
+  {% if slide.content_payload.text %}
+  <div class="lesson-minimal-pair__flag">
+    <div class="lesson-minimal-pair__flag-label">Teaching note</div>
+    <div class="lesson-minimal-pair__flag-value">
+      {{ slide.content_payload.text }}
+    </div>
+  </div>
+  {% endif %}
 
-    {% if slide.content_payload.get("minimal_pairs") %}
-        {% with items = slide.content_payload.get("minimal_pairs", []), row_label = "Contrast" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
-    {% endif %}
+  {% if slide.content_payload.prompt %}
+  <div class="lesson-minimal-pair__answer">
+    {{ slide.content_payload.prompt }}
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.minimal_pairs %}
+  <div class="lesson-minimal-pair__choices">
+    {% for pair in slide.content_payload.minimal_pairs %}
+    <div class="lesson-minimal-pair__choice">
+      <span class="lesson-minimal-pair__choice-label">{{ pair }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 </div>

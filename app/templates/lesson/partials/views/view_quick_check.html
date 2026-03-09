@@ -1,15 +1,121 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
+<div class="lesson-quick-check">
+  {% if slide.content_payload.check_items %}
+  <div class="lesson-quick-check__items">
+    {% for item in slide.content_payload.check_items %}
+    <div class="lesson-quick-check__item" x-data="quickCheckItem()">
+      <div class="lesson-quick-check__item-label">
+        {{ item.label }}
+      </div>
 
-    {% if slide.content_payload.get("morpheme_items") %}
-        {% with items = slide.content_payload.get("morpheme_items", []), row_label = "Word Part" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
-    {% endif %}
+      {% if item.phoneme %}
+      <div class="lesson-quick-check__item-phoneme">
+        {{ item.phoneme }}
+      </div>
+      {% endif %}
 
-    {% if slide.content_payload.get("close_questions") %}
-        {% with items = slide.content_payload.get("close_questions", []), row_label = "Close" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
-    {% endif %}
+      <div class="lesson-quick-check__marking">
+        {% for option in slide.content_payload.marking_options %}
+        <button
+          type="button"
+          class="lesson-quick-check__mark-button"
+          :class="{ 'lesson-quick-check__mark-button--active': selectedMark === '{{ option }}' }"
+          @click="chooseMark('{{ option }}')">
+          {{ option }}
+        </button>
+        {% endfor %}
+      </div>
+
+      <div class="lesson-quick-check__error-tags">
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'sound_substitution' }"
+          @click="chooseErrorTag('sound_substitution')">
+          sound_substitution
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'vowel_confusion' }"
+          @click="chooseErrorTag('vowel_confusion')">
+          vowel_confusion
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'omission' }"
+          @click="chooseErrorTag('omission')">
+          omission
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'insertion' }"
+          @click="chooseErrorTag('insertion')">
+          insertion
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'blending_failure' }"
+          @click="chooseErrorTag('blending_failure')">
+          blending_failure
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'segmentation_failure' }"
+          @click="chooseErrorTag('segmentation_failure')">
+          segmentation_failure
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'oral_vocabulary_gap' }"
+          @click="chooseErrorTag('oral_vocabulary_gap')">
+          oral_vocabulary_gap
+        </button>
+
+        <button
+          type="button"
+          class="lesson-quick-check__tag-button"
+          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'low_automaticity' }"
+          @click="chooseErrorTag('low_automaticity')">
+          low_automaticity
+        </button>
+      </div>
+
+      <label class="lesson-quick-check__overlay-tag">
+        <input
+          type="checkbox"
+          :checked="koreanTransfer"
+          @change="toggleKoreanTransfer()">
+        <span>Korean Transfer</span>
+      </label>
+
+      <div class="lesson-quick-check__confirm">
+        <button
+          type="button"
+          class="lesson-quick-check__confirm-button"
+          :disabled="!hasSelection()"
+          @click="confirmMarking()">
+          Confirm Mark
+        </button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.notes_field %}
+  <div class="lesson-quick-check__notes">
+    {{ slide.content_payload.notes_field }}
+  </div>
+  {% endif %}
 </div>

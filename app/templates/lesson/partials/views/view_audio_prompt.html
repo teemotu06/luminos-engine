@@ -1,9 +1,47 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
+<div class="lesson-audio-prompt" x-data="{ revealed: false }">
+  {% if slide.content_payload.prompt_text %}
+  <p class="lesson-audio-prompt__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </p>
+  {% endif %}
 
-    {% if slide.content_payload.get("dictation_items") %}
-        {% with items = slide.content_payload.get("dictation_items", []), row_label = "Prompt" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
+  {% if slide.content_payload.image %}
+  <div class="lesson-audio-prompt__image-wrap">
+    <img
+      class="lesson-audio-prompt__image"
+      src="{{ slide.content_payload.image }}"
+      alt="{{ slide.slide_title }}">
+  </div>
+  {% endif %}
+
+  <div class="lesson-audio-prompt__actions">
+    <button
+      type="button"
+      class="lesson-audio-prompt__button"
+      @click="playAudio('{{ slide.content_payload.audio_file }}')">
+      Play
+    </button>
+
+    <button
+      type="button"
+      class="lesson-audio-prompt__button"
+      @click="playAudio('{{ slide.content_payload.audio_file }}')">
+      Replay
+    </button>
+
+    {% if slide.content_payload.reveal_text %}
+    <button
+      type="button"
+      class="lesson-audio-prompt__button"
+      @click="revealed = !revealed">
+      Reveal
+    </button>
     {% endif %}
+  </div>
+
+  {% if slide.content_payload.reveal_text %}
+  <div class="lesson-audio-prompt__reveal" x-show="revealed">
+    {{ slide.content_payload.reveal_text }}
+  </div>
+  {% endif %}
 </div>

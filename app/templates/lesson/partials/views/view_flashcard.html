@@ -1,19 +1,32 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
+<div class="lesson-flashcard" x-data="{ revealed: false }">
+  <button
+    type="button"
+    class="lesson-flashcard__card"
+    @click="revealed = !revealed">
+    <span class="lesson-flashcard__text" x-show="!revealed">
+      {{ slide.content_payload.front_text }}
+    </span>
 
-    {% if slide.content_payload.get("items") %}
-        <div class="lesson-chip-row">
-            {% for item in slide.content_payload.get("items", []) %}
-                <span class="lesson-chip">{{ item }}</span>
-            {% endfor %}
-        </div>
+    <span class="lesson-flashcard__text" x-show="revealed">
+      {{ slide.content_payload.back_text or slide.content_payload.front_text }}
+    </span>
+  </button>
+
+  <div class="lesson-flashcard__actions">
+    {% if slide.content_payload.audio %}
+    <button
+      type="button"
+      class="lesson-flashcard__button"
+      @click="playAudio('{{ slide.content_payload.audio }}')">
+      Play Audio
+    </button>
     {% endif %}
 
-    {% if slide.content_payload.get("vocab_items") %}
-        <div class="lesson-chip-row">
-            {% for item in slide.content_payload.get("vocab_items", []) %}
-                <span class="lesson-chip">{{ item }}</span>
-            {% endfor %}
-        </div>
-    {% endif %}
+    <button
+      type="button"
+      class="lesson-flashcard__button"
+      @click="revealed = !revealed">
+      Reveal
+    </button>
+  </div>
 </div>

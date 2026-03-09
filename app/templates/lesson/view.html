@@ -2,9 +2,15 @@
 
 {% block title %}{{ lesson.title }}{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}">
+<script defer src="{{ url_for('static', path='lesson.js') }}"></script>
+{% endblock %}
+
 {% block content %}
-<div class="page">
+<div class="page lesson-shell" x-data="lessonShell()" :class="{ 'lesson-shell--presentation': presentationMode }">
     {% include "lesson/partials/lesson_header.html" %}
+    {% include "lesson/partials/block_progress.html" %}
 
     <main class="block-list">
         {% include "lesson/partials/slide_stage.html" %}

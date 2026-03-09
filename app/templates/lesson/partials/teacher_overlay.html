@@ -1,0 +1,54 @@
+<aside class="teacher-overlay" x-show="!presentationMode">
+  <div class="teacher-overlay__section">
+    <div class="teacher-overlay__label">Block</div>
+    <div class="teacher-overlay__value">
+      {{ slide.block_id }} · Block {{ block.block_no }}
+    </div>
+  </div>
+
+  <div class="teacher-overlay__section">
+    <div class="teacher-overlay__label">Slide</div>
+    <div class="teacher-overlay__value">
+      {{ slide.slide_title }}
+    </div>
+  </div>
+
+  <div class="teacher-overlay__section">
+    <div class="teacher-overlay__label">Teacher cue</div>
+    <div class="teacher-overlay__value">
+      {{ slide.teacher_cue }}
+    </div>
+  </div>
+
+  <div class="teacher-overlay__section">
+    <div class="teacher-overlay__label">Expected response</div>
+    <div class="teacher-overlay__value">
+      {{ slide.expected_response }}
+    </div>
+  </div>
+
+  <div class="teacher-overlay__section">
+    <div class="teacher-overlay__label">Correction move</div>
+    <div class="teacher-overlay__value">
+      {{ slide.correction_move }}
+    </div>
+  </div>
+
+  {% if slide.korean_interference_flag %}
+  <div class="teacher-overlay__section teacher-overlay__section--flag">
+    <div class="teacher-overlay__label">Korean interference flag</div>
+    <div class="teacher-overlay__value">
+      {{ slide.korean_interference_flag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if slide.markable %}
+  <div class="teacher-overlay__section teacher-overlay__section--marking">
+    <div class="teacher-overlay__label">Mark to record</div>
+    <div class="teacher-overlay__value">
+      {{ slide.marking_options|join(" · ") }}
+    </div>
+  </div>
+  {% endif %}
+</aside>

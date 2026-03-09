@@ -1,11 +1,48 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
-
-    {% if slide.content_payload.get("reader_lines") %}
-        <div class="lesson-reader">
-            {% for line in slide.content_payload.get("reader_lines", []) %}
-                <p class="lesson-reader-line">{{ line }}</p>
-            {% endfor %}
-        </div>
+<div class="lesson-read-respond" x-data="{ highlighted: false, fontScale: 1 }">
+  <div class="lesson-read-respond__controls">
+    {% if slide.content_payload.highlight_pattern %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="highlighted = !highlighted">
+      Highlight
+    </button>
     {% endif %}
+
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="fontScale = Math.max(0.85, fontScale - 0.1)">
+      A-
+    </button>
+
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="fontScale = Math.min(1.5, fontScale + 0.1)">
+      A+
+    </button>
+
+    {% if slide.content_payload.audio_support %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="playAudio('{{ slide.content_payload.audio_support }}')">
+      Play Audio
+    </button>
+    {% endif %}
+  </div>
+
+  <div
+    class="lesson-read-respond__text"
+    :style="`font-size: ${fontScale}em;`"
+    :class="{ 'lesson-read-respond__text--highlighted': highlighted }">
+    {{ slide.content_payload.text_content }}
+  </div>
+
+  {% if slide.content_payload.comprehension_prompt %}
+  <div class="lesson-read-respond__prompt">
+    {{ slide.content_payload.comprehension_prompt }}
+  </div>
+  {% endif %}
 </div>

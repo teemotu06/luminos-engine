@@ -1,9 +1,51 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
+<div class="lesson-writing-encoding" x-data="{ revealed: false }">
+  {% if slide.content_payload.audio_prompt %}
+  <div class="lesson-writing-encoding__actions">
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
+      Play Dictation
+    </button>
 
-    {% if slide.content_payload.get("encoding_items") %}
-        {% with items = slide.content_payload.get("encoding_items", []), row_label = "Task" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
-    {% endif %}
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
+      Replay
+    </button>
+
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="revealed = !revealed">
+      Reveal Answer
+    </button>
+  </div>
+  {% else %}
+  <div class="lesson-writing-encoding__actions">
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="revealed = !revealed">
+      Reveal Answer
+    </button>
+  </div>
+  {% endif %}
+
+  <div class="lesson-writing-encoding__dictation">
+    {{ slide.content_payload.dictated_text }}
+  </div>
+
+  {% if slide.content_payload.elkonin_boxes %}
+  <div class="lesson-writing-encoding__boxes">
+    {% for _ in range(slide.content_payload.elkonin_boxes) %}
+    <div class="lesson-writing-encoding__box"></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="lesson-writing-encoding__reveal" x-show="revealed">
+    {{ slide.content_payload.expected_answer }}
+  </div>
 </div>

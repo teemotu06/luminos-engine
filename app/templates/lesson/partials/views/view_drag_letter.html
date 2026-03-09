@@ -1,9 +1,23 @@
-<div class="lesson-block-body">
-    {% include "lesson/partials/shared/block_notes.html" %}
+<div class="lesson-drag-letter">
+  {% if slide.content_payload.text %}
+  <div class="lesson-drag-letter__prompt">
+    {{ slide.content_payload.text }}
+  </div>
+  {% endif %}
 
-    {% if slide.content_payload.get("word_build_items") %}
-        {% with items = slide.content_payload.get("word_build_items", []), row_label = "Word" %}
-            {% include "lesson/partials/shared/list_rows.html" %}
-        {% endwith %}
-    {% endif %}
+  {% if slide.content_payload.prompt %}
+  <div class="lesson-drag-letter__feedback">
+    {{ slide.content_payload.prompt }}
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.word_build_items %}
+  <div class="lesson-drag-letter__cards">
+    {% for item in slide.content_payload.word_build_items %}
+    <div class="lesson-drag-letter__card">
+      {{ item }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 </div>
