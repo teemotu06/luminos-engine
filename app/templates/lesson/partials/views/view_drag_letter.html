@@ -1,23 +1,61 @@
-<div class="lesson-drag-letter">
-  {% if slide.content_payload.text %}
+<div class="lesson-drag-letter" x-data="dragBuild({{ slide.content_payload.slots | tojson }})">
+  {% if slide.content_payload.prompt_text %}
   <div class="lesson-drag-letter__prompt">
-    {{ slide.content_payload.text }}
+    {{ slide.content_payload.prompt_text }}
   </div>
   {% endif %}
 
-  {% if slide.content_payload.prompt %}
-  <div class="lesson-drag-letter__feedback">
-    {{ slide.content_payload.prompt }}
-  </div>
-  {% endif %}
+  <div class="lesson-drag-letter__slots">
+    <template x-for="(item, index) in placedItems" :key="index">
+      <button
+        type="button"
+        class="lesson-drag-letter__slot"
+        @click="removeItem(index)"
+        x-text="item">
+      </button>
+    </template>
 
-  {% if slide.content_payload.word_build_items %}
+    <template x-for="slotIndex in Math.max({{ slide.content_payload.slots|length }} - placedItems.length, 0)" :key="'empty-' + slotIndex">
+      <div class="lesson-drag-letter__slot"></div>
+    </template>
+  </div>
+
   <div class="lesson-drag-letter__cards">
-    {% for item in slide.content_payload.word_build_items %}
-    <div class="lesson-drag-letter__card">
-      {{ item }}
-    </div>
+    {% for letter in slide.content_payload.draggable_letters %}
+    <button
+      type="button"
+      class="lesson-drag-letter__card"
+      @click="placeItem('{{ letter }}')">
+      {{ letter }}
+    </button>
     {% endfor %}
   </div>
-  {% endif %}
+
+  <div class="lesson-drag-letter__actions">
+    <button
+      type="button"
+      class="lesson-drag-letter__button"
+      @click="check()">
+      Check
+    </button>
+
+    <button
+      type="button"
+      class="lesson-drag-letter__button"
+      @click="reset()">
+      Reset
+    </button>
+
+    <button
+      type="button"
+      class="lesson-drag-letter__button"
+      @click="reveal()">
+      Reveal
+    </button>
+  </div>
+
+  <div class="lesson-drag-letter__feedback" x-show="checked">
+    <span x-show="isCorrect()">Correct</span>
+    <span x-show="!isCorrect()">Target word: {{ slide.content_payload.target_word }}</span>
+  </div>
 </div>

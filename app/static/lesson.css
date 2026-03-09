@@ -616,3 +616,21 @@
 .lesson-minimal-pair__mark-button--active {
   border-color: var(--c-blue, #1A5C6E);
 }
+
+.lesson-quick-check__confirm {
+  margin-top: 4px;
+}
+
+.lesson-quick-check__confirm-button {
+  padding: 10px 14px;
+  border: 1px solid var(--c-border, #e6e6e6);
+  border-radius: 12px;
+  background: var(--c-surface, #fff);
+  font: inherit;
+  cursor: pointer;
+}
+
+.lesson-quick-check__confirm-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

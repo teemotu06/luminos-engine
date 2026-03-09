@@ -11,8 +11,9 @@
           "slide_title": "Review Known Sounds",
           "view_type": "flashcard",
           "content_payload": {
-            "text": "Review the known phonemes with flashcards.",
-            "items": ["s", "a", "t", "i", "p"]
+            "front_text": "s",
+            "back_text": "/s/",
+            "audio": "s.mp3"
           },
           "teacher_cue": "Keep the pace brisk.",
           "expected_response": "Students say each sound accurately.",
@@ -34,14 +35,18 @@
           "slide_title": "Listen and Write",
           "view_type": "audio_prompt",
           "content_payload": {
-            "text": "Listen to each prompt and write what you hear.",
-            "dictation_items": ["s", "sat", "pin"]
+            "audio_file": "review_listen_write.mp3",
+            "prompt_text": "Listen and write what you hear.",
+            "reveal_text": "s · sat · pin"
           },
           "teacher_cue": "Say each item clearly. Repeat once only if needed.",
           "expected_response": "Students write the heard sound or word accurately.",
           "correction_move": "Repeat once, then segment orally if students are unsure.",
           "markable": true,
-          "marking_options": ["correct", "incorrect"],
+          "marking_options": [
+            "correct",
+            "incorrect"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -57,16 +62,28 @@
           "slide_title": "Teach /p/",
           "view_type": "minimal_pair",
           "content_payload": {
-            "text": "/p/ is a short, clear sound.",
-            "prompt": "Say /p/ with me.",
-            "minimal_pairs": ["p / b", "pan / ban", "pig / big"]
+            "pair_A": {
+              "label": "/p/",
+              "audio": "p_sound.mp3"
+            },
+            "pair_B": {
+              "label": "/b/",
+              "audio": "b_sound.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "Confusion between /p/ and /b/",
+            "correction_routine": "Model /p/ with a clear puff of air, contrast with /b/, then repeat slowly."
           },
           "teacher_cue": "Model the sound clearly and flag Korean interference if needed.",
           "expected_response": "Students repeat /p/ and discriminate the contrasts.",
           "correction_move": "Re-model the mouth shape and contrast /p/ against /b/ slowly.",
           "korean_interference_flag": "f_p",
           "markable": true,
-          "marking_options": ["secure", "developing", "needs_support"],
+          "marking_options": [
+            "secure",
+            "developing",
+            "needs_support"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -82,9 +99,9 @@
           "slide_title": "New Words",
           "view_type": "flashcard",
           "content_payload": {
-            "text": "Introduce the lesson words orally before blending work begins.",
-            "vocab_items": ["pat", "pin", "pop"],
-            "prompt": "Point, say, and repeat each word."
+            "front_text": "pat",
+            "back_text": "pin · pop",
+            "audio": "vocab_warmup.mp3"
           },
           "teacher_cue": "All lesson words are introduced here, including words with the new sound.",
           "expected_response": "Students repeat each word clearly.",
@@ -106,15 +123,27 @@
           "slide_title": "Blend the Word",
           "view_type": "drag_letter",
           "content_payload": {
-            "text": "Map each sound to print and blend the full word.",
-            "word_build_items": ["p-a-t → pat", "p-i-n → pin", "p-o-p → pop"],
-            "prompt": "Touch each sound, then blend the word."
+            "prompt_text": "Build the word pat.",
+            "target_word": "pat",
+            "slots": [
+              "p",
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "p",
+              "a",
+              "t"
+            ]
           },
           "teacher_cue": "Model slowly first, then repeat at natural speed.",
           "expected_response": "Students track each grapheme and blend the full word.",
           "correction_move": "Return to sound-by-sound blending, then re-blend the full word.",
           "markable": true,
-          "marking_options": ["correct", "incorrect"],
+          "marking_options": [
+            "correct",
+            "incorrect"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -130,15 +159,21 @@
           "slide_title": "Read the Sentence",
           "view_type": "drag_word",
           "content_payload": {
-            "text": "Move from word reading into short controlled sentences.",
-            "sentence_items": ["Pat is in.", "Pat sat.", "Pin is in."],
-            "prompt": "Point under each word and read the full sentence."
+            "target_sentence": "Pat sat",
+            "word_cards": [
+              "Pat",
+              "sat"
+            ],
+            "punctuation_card": "."
           },
           "teacher_cue": "Keep the sentence fully double-controlled.",
           "expected_response": "Students read each sentence left to right with one-to-one tracking.",
           "correction_move": "Go back to word-level reading, then rebuild the sentence.",
           "markable": true,
-          "marking_options": ["correct", "incorrect"],
+          "marking_options": [
+            "correct",
+            "incorrect"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -154,15 +189,18 @@
           "slide_title": "Read the Decodable",
           "view_type": "read_respond",
           "content_payload": {
-            "text": "Read the connected text smoothly and then reread for fluency.",
-            "reader_lines": ["Pat sat.", "Pat is in.", "Pat sat in."],
-            "prompt": "Read once carefully, then reread with smoother phrasing."
+            "text_content": "Pat sat. Pat is in. Pat sat in.",
+            "comprehension_prompt": "Read once carefully, then reread with smoother phrasing."
           },
           "teacher_cue": "Keep the text fully controlled and support fluent rereading.",
           "expected_response": "Students read the connected text accurately, then more fluently on reread.",
           "correction_move": "Support line-by-line decoding first, then return to the full passage.",
           "markable": true,
-          "marking_options": ["accurate", "developing", "needs_support"],
+          "marking_options": [
+            "accurate",
+            "developing",
+            "needs_support"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -178,15 +216,19 @@
           "slide_title": "Write the Word",
           "view_type": "writing_encoding",
           "content_payload": {
-            "text": "Use speech-to-print to encode the sounds you hear.",
-            "encoding_items": ["Write: pat", "Write: pin", "Write: Pat sat."],
-            "prompt": "Listen, segment, and write each item."
+            "dictated_text": "pat",
+            "expected_answer": "pat",
+            "elkonin_boxes": 3
           },
           "teacher_cue": "Check sound-symbol mapping and full left-to-right encoding.",
           "expected_response": "Students segment and write each item with accurate sound-symbol mapping.",
           "correction_move": "Re-segment orally and prompt students to represent each sound in order.",
           "markable": true,
-          "marking_options": ["correct", "partially_correct", "incorrect"],
+          "marking_options": [
+            "correct",
+            "partially_correct",
+            "incorrect"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -202,9 +244,22 @@
           "slide_title": "Word Meaning Link",
           "view_type": "quick_check",
           "content_payload": {
-            "text": "Build early awareness that words can contain meaningful parts.",
-            "morpheme_items": ["play + er", "jump + ing", "cat + s"],
-            "prompt": "Say the whole word, then notice the extra word part."
+            "check_items": [
+              {
+                "label": "play + er"
+              },
+              {
+                "label": "jump + ing"
+              },
+              {
+                "label": "cat + s"
+              }
+            ],
+            "marking_options": [
+              "correct",
+              "incorrect"
+            ],
+            "notes_field": "Say the whole word, then notice the extra word part."
           },
           "teacher_cue": "Keep this light and oral for early groups.",
           "expected_response": "Students notice and say the whole word and its added part.",
@@ -226,13 +281,22 @@
           "slide_title": "Close the Lesson",
           "view_type": "quick_check",
           "content_payload": {
-            "text": "End the lesson at meaning, recall, and oral response.",
-            "close_questions": [
-              "What sound did we learn today?",
-              "Which word did you read today?",
-              "Can you say one sentence from the lesson?"
+            "check_items": [
+              {
+                "label": "What sound did we learn today?"
+              },
+              {
+                "label": "Which word did you read today?"
+              },
+              {
+                "label": "Can you say one sentence from the lesson?"
+              }
             ],
-            "prompt": "Answer in a full spoken response where possible."
+            "marking_options": [
+              "correct",
+              "incorrect"
+            ],
+            "notes_field": "Answer in a full spoken response where possible."
           },
           "teacher_cue": "Close with meaning, recall, and confidence.",
           "expected_response": "Students answer orally with lesson recall and confidence.",
@@ -244,4 +308,4 @@
       ]
     }
   ]
-} 
+}
