@@ -1,0 +1,11 @@
+{% if slide.text %}
+    <p class="block-note">{{ slide.text }}</p>
+{% endif %}
+
+{% if slide.prompt %}
+    <p class="block-note"><strong>{{ slide.prompt }}</strong></p>
+{% endif %}
+
+{% if slide.teacher_note %}
+    <p class="block-note">{{ slide.teacher_note }}</p>
+{% endif %}

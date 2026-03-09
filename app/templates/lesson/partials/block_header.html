@@ -1,16 +1,11 @@
-{# app/templates/lesson/partials/block_header.html #}
-
 <div class="lesson-block-header">
-  <div class="lesson-block-header__top">
-    <div class="lesson-block-header__eyebrow">
-      <span class="lesson-block-header__number">Block {{ slide.block }}</span>
-
-      {% if slide.view_type %}
-        <span class="lesson-block-header__separator">·</span>
-        <span class="lesson-block-header__label">{{ slide.view_type }}</span>
-      {% endif %}
+  <div class="lesson-block-header__meta">
+    <div class="lesson-block-header__left">
+      <span class="lesson-block-header__number">Block {{ block.block_no }}</span>
     </div>
 
-    <h2 class="lesson-block-header__title">{{ slide.title }}</h2>
+    {% if block.title %}
+      <h3 class="lesson-block-header__title">{{ block.title }}</h3>
+    {% endif %}
   </div>
 </div>

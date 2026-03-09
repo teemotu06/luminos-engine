@@ -1,0 +1,9 @@
+<div class="lesson-block-body">
+    {% include "lesson/partials/shared/block_notes.html" %}
+
+    {% if slide.morpheme_items %}
+        {% with items = slide.morpheme_items, row_label = "Word Part" %}
+            {% include "lesson/partials/shared/list_rows.html" %}
+        {% endwith %}
+    {% endif %}
+</div>

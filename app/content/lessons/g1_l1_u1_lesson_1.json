@@ -3,24 +3,5 @@
   "level": "G1-L1",
   "unit": "Unit 1",
   "lesson_number": 1,
-  "title": "Sample Lesson",
-  "slides": [
-    {
-      "id": "slide_1",
-      "block": 1,
-      "view_type": "launch",
-      "title": "Welcome",
-      "teacher_note": "Open the lesson and greet the class.",
-      "text": "Today we will learn a new sound and practise words together."
-    },
-    {
-      "id": "slide_2",
-      "block": 2,
-      "view_type": "teach",
-      "title": "Teach /p/",
-      "teacher_note": "Model the target sound clearly.",
-      "text": "/p/ is a short, clear sound.",
-      "prompt": "Say /p/ with me."
-    }
-  ]
+  "title": "Sample Lesson"
 }

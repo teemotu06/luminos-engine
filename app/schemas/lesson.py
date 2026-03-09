@@ -1,27 +1,8 @@
-from typing import List, Optional, Literal
+from typing import List
+
 from pydantic import BaseModel, Field
 
-
-ViewType = Literal[
-    "launch",
-    "teach",
-    "model",
-    "guided",
-    "independent",
-    "check",
-    "quiz",
-    "wrap",
-]
-
-
-class Slide(BaseModel):
-    id: str
-    block: int = Field(ge=1, le=10)
-    view_type: ViewType
-    title: str
-    teacher_note: Optional[str] = None
-    text: Optional[str] = None
-    prompt: Optional[str] = None
+from app.schemas.lesson_block import LessonBlock
 
 
 class Lesson(BaseModel):
@@ -30,4 +11,4 @@ class Lesson(BaseModel):
     unit: str
     lesson_number: int
     title: str
-    slides: List[Slide]
+    blocks: List[LessonBlock] = Field(default_factory=list)

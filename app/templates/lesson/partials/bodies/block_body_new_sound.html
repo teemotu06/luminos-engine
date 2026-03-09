@@ -1,0 +1,9 @@
+<div class="lesson-block-body">
+    {% include "lesson/partials/shared/block_notes.html" %}
+
+    {% if slide.minimal_pairs %}
+        {% with items = slide.minimal_pairs, row_label = "Contrast" %}
+            {% include "lesson/partials/shared/list_rows.html" %}
+        {% endwith %}
+    {% endif %}
+</div>

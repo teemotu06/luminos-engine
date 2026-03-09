@@ -1,0 +1,9 @@
+<div class="lesson-block-body">
+    {% include "lesson/partials/shared/block_notes.html" %}
+
+    {% if slide.encoding_items %}
+        {% with items = slide.encoding_items, row_label = "Task" %}
+            {% include "lesson/partials/shared/list_rows.html" %}
+        {% endwith %}
+    {% endif %}
+</div>

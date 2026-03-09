@@ -1,0 +1,11 @@
+<div class="lesson-block-body">
+    {% include "lesson/partials/shared/block_notes.html" %}
+
+    {% if slide.items %}
+        <div class="lesson-chip-row">
+            {% for item in slide.items %}
+                <span class="lesson-chip">{{ item }}</span>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

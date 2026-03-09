@@ -1,5 +1,7 @@
 {% for block in lesson.blocks %}
-    {% for slide in block.slides %}
-        {% include "lesson/partials/block_card.html" %}
+    {% for block_slide in block.slides %}
+        {% with slide = block_slide %}
+            {% include "lesson/partials/block_card.html" %}
+        {% endwith %}
     {% endfor %}
 {% endfor %}

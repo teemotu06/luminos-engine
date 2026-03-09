@@ -55,59 +55,105 @@ body {
     line-height: 1.1;
 }
 
-.slide-list {
+.block-list {
     display: grid;
     gap: 16px;
 }
 
-.slide-card {
+.block-card {
     padding: 20px 24px;
 }
 
-.slide-note {
+.block-note {
     margin: 0;
     color: var(--text);
     line-height: 1.6;
 }
+
 .lesson-block-header {
     margin-bottom: 12px;
 }
 
-.lesson-block-header__top {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.lesson-block-header__eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin: 0;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-.lesson-block-header__number,
-.lesson-block-header__label {
+.lesson-block-header__number {
     color: var(--muted);
     font-size: 14px;
 }
+
 .lesson-block-header__title {
     margin: 0;
     font-size: 24px;
     line-height: 1.2;
 }
 
-.lesson-block-header__separator {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1;
-}
-
 .lesson-block-body {
     display: grid;
     gap: 6px;
+}
+
+.lesson-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 4px 0 2px 0;
+}
+
+.lesson-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #f3f1ec;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.lesson-list {
+    display: grid;
+    gap: 10px;
+    margin: 4px 0 2px 0;
+}
+
+.lesson-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #faf8f4;
+}
+
+.lesson-list-label {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lesson-list-value {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.lesson-reader {
+    display: grid;
+    gap: 8px;
+    margin: 4px 0 2px 0;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #faf8f4;
+}
+
+.lesson-reader-line {
+    margin: 0;
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.5;
 }

@@ -1,0 +1,11 @@
+<div class="lesson-block-body">
+    {% include "lesson/partials/shared/block_notes.html" %}
+
+    {% if slide.reader_lines %}
+        <div class="lesson-reader">
+            {% for line in slide.reader_lines %}
+                <p class="lesson-reader-line">{{ line }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
