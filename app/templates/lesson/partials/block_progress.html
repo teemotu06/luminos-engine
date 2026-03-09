@@ -5,7 +5,7 @@
         {% set is_active = block.code == active_slide.block_id %}
         <div class="block-progress__item{% if is_active %} block-progress__item--active{% endif %}">
           <span class="block-progress__number">Block {{ block.block_no }}</span>
-          <span class="block-progress__code">{{ block.code }}</span>
+          <span class="block-progress__code">{{ block.label }}</span>
         </div>
       {% endfor %}
     {% endwith %}
