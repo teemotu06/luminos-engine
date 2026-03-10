@@ -1,10 +1,10 @@
-from typing import Optional, Literal, List, Dict, Any
+from typing import Optional, Literal, List
 
 from pydantic import BaseModel, Field
 
-from app.schemas.view_type import ViewType
-
 from app.schemas.block_id import BlockId
+from app.schemas.slide_payloads import SlidePayload
+from app.schemas.view_type import ViewType
 
 
 KoreanInterferenceFlag = Literal[
@@ -25,7 +25,7 @@ class Slide(BaseModel):
     block_id: BlockId
     slide_title: str
     view_type: ViewType
-    content_payload: Dict[str, Any] = Field(default_factory=dict)
+    content_payload: SlidePayload
     teacher_cue: Optional[str] = None
     expected_response: Optional[str] = None
     correction_move: Optional[str] = None
