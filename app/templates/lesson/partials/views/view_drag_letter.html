@@ -1,41 +1,58 @@
-<div class="lesson-drag-letter" x-data="dragBuild({{ slide.content_payload.slots | tojson }})">
-  {% if slide.content_payload.prompt_text %}
-  <div class="lesson-drag-letter__prompt">
-    {{ slide.content_payload.prompt_text }}
-  </div>
-  {% endif %}
+<div
+  class="lesson-drag-letter"
+  x-data='dragBuild({{ slide.content_payload.target_letters | tojson }})'
+>
+  <div class="lesson-drag-letter__header">
+    <div class="lesson-drag-letter__eyebrow">Word Building</div>
 
-  <div class="lesson-drag-letter__slots">
-    <template x-for="(item, index) in placedItems" :key="index">
+    {% if slide.content_payload.prompt_text %}
+    <h3 class="lesson-drag-letter__prompt">
+      {{ slide.content_payload.prompt_text }}
+    </h3>
+    {% endif %}
+  </div>
+
+  <div class="lesson-drag-letter__board">
+    <div class="lesson-drag-letter__target-row">
+      <div class="lesson-drag-letter__slots" aria-label="Word slots">
+        {% for idx in range(slide.content_payload.target_letters | length) %}
+          <template x-if="placedItems[{{ idx }}] !== undefined">
+            <button
+              type="button"
+              class="lesson-drag-letter__slot lesson-drag-letter__slot--filled"
+              :class="checked ? (isCorrect() ? 'lesson-drag-letter__slot--correct' : 'lesson-drag-letter__slot--incorrect') : ''"
+              @click="removeItem({{ idx }})"
+              x-text="placedItems[{{ idx }}]">
+            </button>
+          </template>
+
+          <template x-if="placedItems[{{ idx }}] === undefined">
+            <div class="lesson-drag-letter__slot lesson-drag-letter__slot--empty"></div>
+          </template>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="lesson-drag-letter__bank-label">Letter Bank</div>
+
+    <div class="lesson-drag-letter__cards">
+      {% for letter in slide.content_payload.draggable_letters %}
       <button
         type="button"
-        class="lesson-drag-letter__slot"
-        @click="removeItem(index)"
-        x-text="item">
+        class="lesson-drag-letter__card"
+        @click="placeItem('{{ letter }}')">
+        {{ letter }}
       </button>
-    </template>
-
-    <template x-for="slotIndex in Math.max({{ slide.content_payload.slots|length }} - placedItems.length, 0)" :key="'empty-' + slotIndex">
-      <div class="lesson-drag-letter__slot"></div>
-    </template>
-  </div>
-
-  <div class="lesson-drag-letter__cards">
-    {% for letter in slide.content_payload.draggable_letters %}
-    <button
-      type="button"
-      class="lesson-drag-letter__card"
-      @click="placeItem('{{ letter }}')">
-      {{ letter }}
-    </button>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="lesson-drag-letter__actions">
     <button
       type="button"
       class="lesson-drag-letter__button"
-      @click="check()">
+      @click="check()"
+      :disabled="placedItems.length !== {{ slide.content_payload.target_letters | length }}">
       Check
     </button>
 

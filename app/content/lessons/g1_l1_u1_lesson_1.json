@@ -1,7 +1,309 @@
 {
   "lesson_id": "g1_l1_u1_lesson_1",
-  "level": "G1-L1",
-  "unit": "Unit 1",
-  "lesson_number": 1,
-  "title": "Sample Lesson"
+  "unit_id": "G1",
+  "target_pattern": "s · a · t · i · p · n",
+  "title": "Sample Lesson",
+  "korean_interference_active": [],
+  "blocks": [
+    {
+      "block_no": 1,
+      "code": "B1_REVIEW_FLASHCARDS",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "b1_s1",
+          "block_id": "B1_REVIEW_FLASHCARDS",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "s",
+            "back_text": "/s/",
+            "audio": "s.mp3"
+          },
+          "teacher_cue": "Keep the pace brisk.",
+          "expected_response": "Students say each sound accurately.",
+          "correction_move": "Model the target sound once, then have students repeat together.",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 2,
+      "code": "B2_REVIEW_LISTEN_WRITE",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "b2_s1",
+          "block_id": "B2_REVIEW_LISTEN_WRITE",
+          "slide_title": "Listen and Write",
+          "view_type": "audio_prompt",
+          "content_payload": {
+            "audio_file": "review_listen_write.mp3",
+            "prompt_text": "Listen and write what you hear.",
+            "reveal_text": "s · sat · pin"
+          },
+          "teacher_cue": "Say each item clearly. Repeat once only if needed.",
+          "expected_response": "Students write the heard sound or word accurately.",
+          "correction_move": "Repeat once, then segment orally if students are unsure.",
+          "markable": true,
+          "marking_options": [
+            "correct",
+            "incorrect"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 3,
+      "code": "B3_NEW_SOUND",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "b3_s1",
+          "block_id": "B3_NEW_SOUND",
+          "slide_title": "Teach /p/",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "/p/",
+              "audio": "p_sound.mp3"
+            },
+            "pair_B": {
+              "label": "/b/",
+              "audio": "b_sound.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "Confusion between /p/ and /b/",
+            "correction_routine": "Model /p/ with a clear puff of air, contrast with /b/, then repeat slowly."
+          },
+          "teacher_cue": "Model the sound clearly and flag Korean interference if needed.",
+          "expected_response": "Students repeat /p/ and discriminate the contrasts.",
+          "correction_move": "Re-model the mouth shape and contrast /p/ against /b/ slowly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "developing",
+            "needs_support"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 4,
+      "code": "B4_VOCAB_WARMUP",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "b4_s1",
+          "block_id": "B4_VOCAB_WARMUP",
+          "slide_title": "New Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "pat",
+            "back_text": "pin · pop",
+            "audio": "vocab_warmup.mp3"
+          },
+          "teacher_cue": "All lesson words are introduced here, including words with the new sound.",
+          "expected_response": "Students repeat each word clearly.",
+          "correction_move": "Model the word, isolate the first sound, then repeat the whole word.",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 5,
+      "code": "B5_WORD_BUILDING",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "b5_s1",
+          "block_id": "B5_WORD_BUILDING",
+          "slide_title": "Blend the Word",
+          "view_type": "read_respond",
+          "content_payload": {
+            "prompt_text": "Blend the word.",
+            "target_word": "pat",
+            "phoneme_parts": ["p", "a", "t"],
+            "blend_audio": "/static/audio/pat_blend.mp3",
+            "word_audio": "/static/audio/pat_word.mp3"
+          },
+          "teacher_cue": "Model slowly first, then repeat at natural speed.",
+          "expected_response": "Students track each grapheme and blend the full word.",
+          "correction_move": "Return to sound-by-sound blending, then re-blend the full word.",
+          "markable": true,
+          "marking_options": [
+            "correct",
+            "incorrect"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 6,
+      "code": "B6_SENTENCE_BRIDGE",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "b6_s1",
+          "block_id": "B6_SENTENCE_BRIDGE",
+          "slide_title": "Read the Sentence",
+          "view_type": "drag_word",
+          "content_payload": {
+            "target_sentence": "Pat sat",
+            "word_cards": [
+              "Pat",
+              "sat"
+            ],
+            "punctuation_card": "."
+          },
+          "teacher_cue": "Keep the sentence fully double-controlled.",
+          "expected_response": "Students read each sentence left to right with one-to-one tracking.",
+          "correction_move": "Go back to word-level reading, then rebuild the sentence.",
+          "markable": true,
+          "marking_options": [
+            "correct",
+            "incorrect"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 7,
+      "code": "B7_DECODABLE_READER",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "b7_s1",
+          "block_id": "B7_DECODABLE_READER",
+          "slide_title": "Read the Decodable",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Pat sat. Pat is in. Pat sat in.",
+            "comprehension_prompt": "Read once carefully, then reread with smoother phrasing."
+          },
+          "teacher_cue": "Keep the text fully controlled and support fluent rereading.",
+          "expected_response": "Students read the connected text accurately, then more fluently on reread.",
+          "correction_move": "Support line-by-line decoding first, then return to the full passage.",
+          "markable": true,
+          "marking_options": [
+            "accurate",
+            "developing",
+            "needs_support"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 8,
+      "code": "B8_ENCODING_WRITING",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "b8_s1",
+          "block_id": "B8_ENCODING_WRITING",
+          "slide_title": "Write the Word",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "pat",
+            "expected_answer": "pat",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Check sound-symbol mapping and full left-to-right encoding.",
+          "expected_response": "Students segment and write each item with accurate sound-symbol mapping.",
+          "correction_move": "Re-segment orally and prompt students to represent each sound in order.",
+          "markable": true,
+          "marking_options": [
+            "correct",
+            "partially_correct",
+            "incorrect"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 9,
+      "code": "B9_MORPHEME_MOMENT",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "b9_s1",
+          "block_id": "B9_MORPHEME_MOMENT",
+          "slide_title": "Word Meaning Link",
+          "view_type": "quick_check",
+          "content_payload": {
+            "check_items": [
+              {
+                "label": "play + er"
+              },
+              {
+                "label": "jump + ing"
+              },
+              {
+                "label": "cat + s"
+              }
+            ],
+            "marking_options": [
+              "correct",
+              "incorrect"
+            ],
+            "notes_field": "Say the whole word, then notice the extra word part."
+          },
+          "teacher_cue": "Keep this light and oral for early groups.",
+          "expected_response": "Students notice and say the whole word and its added part.",
+          "correction_move": "Model the base word first, then add the extra part and say the whole word.",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    {
+      "block_no": 10,
+      "code": "B10_MEANING_CLOSE",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "b10_s1",
+          "block_id": "B10_MEANING_CLOSE",
+          "slide_title": "Close the Lesson",
+          "view_type": "quick_check",
+          "content_payload": {
+            "check_items": [
+              {
+                "label": "What sound did we learn today?"
+              },
+              {
+                "label": "Which word did you read today?"
+              },
+              {
+                "label": "Can you say one sentence from the lesson?"
+              }
+            ],
+            "marking_options": [
+              "correct",
+              "incorrect"
+            ],
+            "notes_field": "Answer in a full spoken response where possible."
+          },
+          "teacher_cue": "Close with meaning, recall, and confidence.",
+          "expected_response": "Students answer orally with lesson recall and confidence.",
+          "correction_move": "Prompt with the first word or model a full response, then have students repeat.",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  ]
 }
