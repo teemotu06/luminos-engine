@@ -1,47 +1,43 @@
-<div class="lesson-drag-word" x-data="dragBuild({{ slide.content_payload.target_sentence.split(' ') | tojson }})">
-  <div class="lesson-drag-word__slots">
-    <template x-for="(item, index) in placedItems" :key="index">
+<div class="lesson-drag-word" x-data='dragBuild({{ slide.content_payload.target_sentence.split(" ") | tojson }})'>
+  <div class="lesson-drag-word__board">
+    <div class="lesson-drag-word__slots">
+      <template x-for="(item, index) in placedItems" :key="index">
+        <button
+          type="button"
+          class="lesson-drag-word__slot lesson-drag-word__slot--filled"
+          :class="checked ? (isCorrect() ? 'lesson-drag-word__slot--correct' : 'lesson-drag-word__slot--incorrect') : ''"
+          @click="removeItem(index)"
+          :style="getResponsiveTextStyle(item, 'word-card')"
+          x-text="item">
+        </button>
+      </template>
+
+      <template x-for="slotIndex in Math.max({{ slide.content_payload.target_sentence.split(" ") | length }} - placedItems.length, 0)" :key="'empty-' + slotIndex">
+        <div class="lesson-drag-word__slot lesson-drag-word__slot--empty"></div>
+      </template>
+    </div>
+
+    <div class="lesson-drag-word__bank-label">Word Bank</div>
+
+    <div class="lesson-drag-word__cards">
+      {% for word in slide.content_payload.word_cards %}
       <button
         type="button"
-        class="lesson-drag-word__slot"
-        @click="removeItem(index)"
-        x-text="item">
+        class="lesson-drag-word__card"
+        :style='getResponsiveTextStyle({{ word | tojson }}, "word-card")'
+        @click="placeItem('{{ word }}')">
+        {{ word }}
       </button>
-    </template>
-
-    <template x-for="slotIndex in Math.max({{ slide.content_payload.target_sentence.split(' ')|length }} - placedItems.length, 0)" :key="'empty-' + slotIndex">
-      <div class="lesson-drag-word__slot"></div>
-    </template>
-
-    {% if slide.content_payload.punctuation_card %}
-    <div class="lesson-drag-word__slot" x-show="revealed">
-      {{ slide.content_payload.punctuation_card }}
+      {% endfor %}
     </div>
-    {% endif %}
-  </div>
-
-  <div class="lesson-drag-word__cards">
-    {% for word in slide.content_payload.word_cards %}
-    <button
-      type="button"
-      class="lesson-drag-word__card"
-      @click="placeItem('{{ word }}')">
-      {{ word }}
-    </button>
-    {% endfor %}
-
-    {% if slide.content_payload.punctuation_card %}
-    <div class="lesson-drag-word__card">
-      {{ slide.content_payload.punctuation_card }}
-    </div>
-    {% endif %}
   </div>
 
   <div class="lesson-drag-word__actions">
     <button
       type="button"
       class="lesson-drag-word__button"
-      @click="check()">
+      @click="check()"
+      :disabled="placedItems.length !== {{ slide.content_payload.target_sentence.split(' ') | length }}">
       Check
     </button>
 
@@ -58,10 +54,5 @@
       @click="reveal()">
       Reveal
     </button>
-  </div>
-
-  <div class="lesson-drag-word__feedback" x-show="checked">
-    <span x-show="isCorrect()">Correct</span>
-    <span x-show="!isCorrect()">Target sentence: {{ slide.content_payload.target_sentence }}{% if slide.content_payload.punctuation_card %}{{ slide.content_payload.punctuation_card }}{% endif %}</span>
   </div>
 </div>

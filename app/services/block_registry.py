@@ -3,53 +3,53 @@ from app.services.block_definition import BlockDefinition
 
 BLOCK_REGISTRY = [
     BlockDefinition(
-        block_no=1,
-        code="B1_REVIEW_FLASHCARDS",
+        block_id="01",
         label="Flashcard Phoneme Review",
+        allowed_view_types=("flashcard", "audio_prompt", "quick_check"),
     ),
     BlockDefinition(
-        block_no=2,
-        code="B2_REVIEW_LISTEN_WRITE",
+        block_id="02",
         label="Listening & Write Review",
+        allowed_view_types=("audio_prompt", "writing_encoding", "quick_check"),
     ),
     BlockDefinition(
-        block_no=3,
-        code="B3_NEW_SOUND",
+        block_id="03",
         label="New Sound Introduction",
+        allowed_view_types=("flashcard", "audio_prompt", "minimal_pair", "read_respond"),
     ),
     BlockDefinition(
-        block_no=4,
-        code="B4_VOCAB_WARMUP",
+        block_id="04",
         label="Vocabulary Warm-Up",
+        allowed_view_types=("flashcard", "audio_prompt", "minimal_pair", "read_respond"),
     ),
     BlockDefinition(
-        block_no=5,
-        code="B5_WORD_BUILDING",
+        block_id="05",
         label="Word Building",
+        allowed_view_types=("drag_letter", "flashcard", "read_respond", "writing_encoding"),
     ),
     BlockDefinition(
-        block_no=6,
-        code="B6_SENTENCE_BRIDGE",
+        block_id="06",
         label="Sentence Bridge",
+        allowed_view_types=("read_respond", "drag_word", "audio_prompt"),
     ),
     BlockDefinition(
-        block_no=7,
-        code="B7_DECODABLE_READER",
+        block_id="07",
         label="Decodable Reader / Fluency",
+        allowed_view_types=("read_respond", "audio_prompt", "quick_check"),
     ),
     BlockDefinition(
-        block_no=8,
-        code="B8_ENCODING_WRITING",
+        block_id="08",
         label="Encoding & Writing",
+        allowed_view_types=("writing_encoding", "audio_prompt", "quick_check"),
     ),
     BlockDefinition(
-        block_no=9,
-        code="B9_MORPHEME_MOMENT",
+        block_id="09",
         label="Morpheme Moment",
+        allowed_view_types=("flashcard", "drag_word", "read_respond"),
     ),
     BlockDefinition(
-        block_no=10,
-        code="B10_MEANING_CLOSE",
+        block_id="10",
         label="Meaning-Making Close",
+        allowed_view_types=("read_respond", "quick_check"),
     ),
 ]

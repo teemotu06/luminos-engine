@@ -1,9 +1,11 @@
 from app.schemas.lesson import Lesson
 from app.schemas.slide_payloads import VIEW_PAYLOAD_MAP
+from app.services.block_registry import BLOCK_REGISTRY
 
 
 def validate_slide_payloads(lesson: Lesson) -> None:
-    for block in lesson.blocks:
+    for definition in BLOCK_REGISTRY:
+        block = lesson.blocks[definition.block_id]
         for slide in block.slides:
 
             view_type = slide.view_type
@@ -16,10 +18,10 @@ def validate_slide_payloads(lesson: Lesson) -> None:
             payload_model = VIEW_PAYLOAD_MAP[view_type]
 
             try:
-                payload_model(**slide.content_payload.dict())
+                payload_model(**slide.content_payload.model_dump())
             except Exception as e:
                 raise ValueError(
                     f"Invalid payload in lesson '{lesson.lesson_id}', "
-                    f"block {block.block_no}, slide '{slide.slide_id}', "
+                    f"block {block.block_id}, slide '{slide.slide_id}', "
                     f"view_type '{view_type}': {e}"
                 )

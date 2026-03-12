@@ -1,35 +1,27 @@
 {% if ordered_slides %}
-<nav class="lesson-nav">
+<nav class="lesson-nav" aria-label="Lesson slide navigation">
 
-    {% if current_index > 0 %}
-        <a
-            id="lesson-prev-link"
-            class="lesson-nav__button"
-            href="/lesson/{{ lesson.lesson_id }}?slide_index={{ current_index - 1 }}">
-            Previous
-        </a>
-    {% else %}
-        <span class="lesson-nav__button lesson-nav__button--disabled">
-            Previous
-        </span>
-    {% endif %}
+    <button
+        id="lesson-prev-link"
+        type="button"
+        class="lesson-nav__button"
+        @click="goToPrevSlide()"
+        :disabled="activeSlideIndex === 0">
+        Previous
+    </button>
 
     <span class="lesson-nav__status">
-        Slide {{ current_index + 1 }} of {{ ordered_slides|length }}
+        <span x-text="`Slide ${activeSlideIndex + 1} of {{ ordered_slides|length }}`"></span>
     </span>
 
-    {% if current_index + 1 < ordered_slides|length %}
-        <a
-            id="lesson-next-link"
-            class="lesson-nav__button"
-            href="/lesson/{{ lesson.lesson_id }}?slide_index={{ current_index + 1 }}">
-            Next
-        </a>
-    {% else %}
-        <span class="lesson-nav__button lesson-nav__button--disabled">
-            Next
-        </span>
-    {% endif %}
+    <button
+        id="lesson-next-link"
+        type="button"
+        class="lesson-nav__button"
+        @click="goToNextSlide()"
+        :disabled="activeSlideIndex >= {{ ordered_slides|length - 1 }}">
+        Next
+    </button>
 
 </nav>
 {% endif %}

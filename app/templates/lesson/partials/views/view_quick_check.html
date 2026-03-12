@@ -1,8 +1,73 @@
+{% if slide.content_payload.display_mode == 'lesson_close' %}
+<div
+  class="lesson-close"
+  x-data="{ activeIndex: 0, total: {{ slide.content_payload.check_items | length }} }">
+  <div class="lesson-close__header">
+    <div class="lesson-close__eyebrow">Meaning-Making Close</div>
+    <div class="lesson-close__title">
+      {{ slide.content_payload.title or slide.slide_title }}
+    </div>
+  </div>
+
+  {% if slide.content_payload.check_items %}
+  <div class="lesson-close__stage">
+    {% for item in slide.content_payload.check_items %}
+    <div
+      class="lesson-close__prompt"
+      x-show="activeIndex === {{ loop.index0 }}">
+      {{ item.label }}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="lesson-close__progress" aria-hidden="true">
+    {% for item in slide.content_payload.check_items %}
+    <button
+      type="button"
+      class="lesson-close__dot"
+      :class="{ 'lesson-close__dot--active': activeIndex === {{ loop.index0 }} }"
+      @click="activeIndex = {{ loop.index0 }}"
+      aria-label="Prompt {{ loop.index }}">
+    </button>
+    {% endfor %}
+  </div>
+
+  <div class="lesson-close__nav">
+    <button
+      type="button"
+      class="lesson-close__button lesson-close__button--secondary"
+      @click="activeIndex = Math.max(0, activeIndex - 1)"
+      :disabled="activeIndex === 0">
+      Back
+    </button>
+
+    <div
+      class="lesson-close__status"
+      x-text="`Prompt ${activeIndex + 1} of ${total}`">
+    </div>
+
+    <button
+      type="button"
+      class="lesson-close__button"
+      @click="activeIndex = activeIndex + 1 < total ? activeIndex + 1 : 0"
+      x-text="activeIndex + 1 < total ? 'Next Prompt' : 'Restart'">
+    </button>
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.notes_field %}
+  <div class="lesson-close__note">
+    {{ slide.content_payload.notes_field }}
+  </div>
+  {% endif %}
+</div>
+{% else %}
 <div class="lesson-quick-check">
   {% if slide.content_payload.check_items %}
   <div class="lesson-quick-check__items">
     {% for item in slide.content_payload.check_items %}
-    <div class="lesson-quick-check__item" x-data="quickCheckItem()">
+    {% set item_index = loop.index0 %}
+    <div class="lesson-quick-check__item">
       <div class="lesson-quick-check__item-label">
         {{ item.label }}
       </div>
@@ -18,8 +83,8 @@
         <button
           type="button"
           class="lesson-quick-check__mark-button"
-          :class="{ 'lesson-quick-check__mark-button--active': selectedMark === '{{ option }}' }"
-          @click="chooseMark('{{ option }}')">
+          :class="{ 'lesson-quick-check__mark-button--active': getQuickCheckItemMark({{ slide_index }}, {{ item_index }}) === '{{ option }}' }"
+          @click="setQuickCheckItemMark({{ slide_index }}, {{ item_index }}, '{{ option }}')">
           {{ option }}
         </button>
         {% endfor %}
@@ -29,64 +94,64 @@
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'sound_substitution' }"
-          @click="chooseErrorTag('sound_substitution')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'sound_substitution') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'sound_substitution')">
           sound_substitution
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'vowel_confusion' }"
-          @click="chooseErrorTag('vowel_confusion')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'vowel_confusion') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'vowel_confusion')">
           vowel_confusion
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'omission' }"
-          @click="chooseErrorTag('omission')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'omission') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'omission')">
           omission
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'insertion' }"
-          @click="chooseErrorTag('insertion')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'insertion') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'insertion')">
           insertion
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'blending_failure' }"
-          @click="chooseErrorTag('blending_failure')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'blending_failure') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'blending_failure')">
           blending_failure
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'segmentation_failure' }"
-          @click="chooseErrorTag('segmentation_failure')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'segmentation_failure') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'segmentation_failure')">
           segmentation_failure
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'oral_vocabulary_gap' }"
-          @click="chooseErrorTag('oral_vocabulary_gap')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'oral_vocabulary_gap') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'oral_vocabulary_gap')">
           oral_vocabulary_gap
         </button>
 
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': selectedErrorTag === 'low_automaticity' }"
-          @click="chooseErrorTag('low_automaticity')">
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'low_automaticity') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'low_automaticity')">
           low_automaticity
         </button>
       </div>
@@ -94,22 +159,27 @@
       <label class="lesson-quick-check__overlay-tag">
         <input
           type="checkbox"
-          :checked="koreanTransfer"
-          @change="toggleKoreanTransfer()">
+          :checked="getQuickCheckItemKoreanTransfer({{ slide_index }}, {{ item_index }})"
+          @change="toggleQuickCheckKoreanTransfer({{ slide_index }}, {{ item_index }})">
         <span>Korean Transfer</span>
       </label>
-
-      <div class="lesson-quick-check__confirm">
-        <button
-          type="button"
-          class="lesson-quick-check__confirm-button"
-          :disabled="!hasSelection()"
-          @click="confirmMarking()">
-          Confirm Mark
-        </button>
-      </div>
     </div>
     {% endfor %}
+  </div>
+
+  <div class="lesson-quick-check__confirm">
+    <button
+      type="button"
+      class="lesson-quick-check__confirm-button"
+      @click="submitQuickCheck({
+        slideIndex: {{ slide_index }},
+        slideId: '{{ slide.slide_id }}',
+        blockId: '{{ slide.block_id }}',
+        items: {{ slide.content_payload.model_dump()['check_items'] | tojson }},
+        completed: false
+      })">
+      Confirm Mark
+    </button>
   </div>
   {% endif %}
 
@@ -119,3 +189,4 @@
   </div>
   {% endif %}
 </div>
+{% endif %}

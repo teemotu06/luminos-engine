@@ -1,19 +1,15 @@
 <nav class="block-progress" aria-label="Lesson block progress" x-show="!presentationMode">
   {% if ordered_slides %}
-    {% with active_slide = ordered_slides[current_index].slide %}
-      {% for block in lesson.blocks %}
-        {% set is_active = block.code == active_slide.block_id %}
-
-        <a
-          class="block-progress__item{% if is_active %} block-progress__item--active{% endif %}"
-          href="/lesson/{{ lesson.lesson_id }}?slide_index={{ ordered_slides | selectattr('block.code', 'equalto', block.code) | map(attribute='block_first_slide_index') | first }}">
-
-          <span class="block-progress__number">Block {{ block.block_no }}</span>
-          <span class="block-progress__code">{{ block.label }}</span>
-
-        </a>
-
-      {% endfor %}
-    {% endwith %}
+    {% for block in ordered_blocks %}
+      {% set block_start_index = ordered_slides | selectattr('block.block_id', 'equalto', block.block_id) | map(attribute='block_first_slide_index') | first %}
+      <button
+        type="button"
+        class="block-progress__item"
+        :class="{ 'block-progress__item--active': activeBlockId === '{{ block.block_id }}' }"
+        @click="goToSlide({{ block_start_index }})">
+        <span class="block-progress__number">Block {{ block.block_id }}</span>
+        <span class="block-progress__code">{{ block.label }}</span>
+      </button>
+    {% endfor %}
   {% endif %}
 </nav>

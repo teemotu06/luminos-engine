@@ -2,7 +2,7 @@
   <div class="teacher-overlay__section">
     <div class="teacher-overlay__label">Block</div>
     <div class="teacher-overlay__value">
-      {{ slide.block_id }} · Block {{ block.block_no }}
+      {{ slide.block_id }} · {{ block.label }}
     </div>
   </div>
 
@@ -34,6 +34,13 @@
     </div>
   </div>
 
+  <div class="teacher-overlay__section">
+    <div class="teacher-overlay__label">Observation note</div>
+    <div class="teacher-overlay__value">
+      {{ slide.observation_note }}
+    </div>
+  </div>
+
   {% if slide.korean_interference_flag %}
   <div class="teacher-overlay__section teacher-overlay__section--flag">
     <div class="teacher-overlay__label">Korean interference flag</div>
@@ -46,8 +53,58 @@
   {% if slide.markable %}
   <div class="teacher-overlay__section teacher-overlay__section--marking">
     <div class="teacher-overlay__label">Mark to record</div>
-    <div class="teacher-overlay__value">
-      {{ slide.marking_options|join(" · ") }}
+    <div class="teacher-overlay__mark-options">
+      {% for option in slide.marking_options %}
+      <button
+        type="button"
+        class="teacher-overlay__mark-button"
+        :class="{ 'teacher-overlay__mark-button--active': getSlideMark({{ slide_index }}) === '{{ option }}' }"
+        @click="setSlideMark({{ slide_index }}, '{{ option }}')">
+        {{ option }}
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="teacher-overlay__error-tags">
+      {% for error_tag in ['sound_substitution', 'vowel_confusion', 'omission', 'insertion', 'blending_failure', 'segmentation_failure', 'oral_vocabulary_gap', 'low_automaticity'] %}
+      <button
+        type="button"
+        class="teacher-overlay__tag-button"
+        :class="{ 'teacher-overlay__tag-button--active': hasSlideErrorTag({{ slide_index }}, '{{ error_tag }}') }"
+        @click="toggleSlideErrorTag({{ slide_index }}, '{{ error_tag }}')">
+        {{ error_tag }}
+      </button>
+      {% endfor %}
+    </div>
+
+    <label class="teacher-overlay__checkbox">
+      <input
+        type="checkbox"
+        :checked="getSlideKoreanTransfer({{ slide_index }})"
+        @change="toggleSlideKoreanTransfer({{ slide_index }})">
+      <span>Korean Transfer</span>
+    </label>
+
+    <textarea
+      class="teacher-overlay__note"
+      rows="3"
+      placeholder="Teacher note"
+      x-model="ensureSlideMark({{ slide_index }}).teacherNote"></textarea>
+
+    <button
+      type="button"
+      class="teacher-overlay__confirm"
+      @click="submitSlideMark({
+        slideIndex: {{ slide_index }},
+        slideId: '{{ slide.slide_id }}',
+        blockId: '{{ slide.block_id }}',
+        completed: {{ 'true' if slide.block_id == '10' else 'false' }}
+    })">
+      Confirm Mark
+    </button>
+
+    <div class="teacher-overlay__result" x-show="lastMarkingResult">
+      <span x-text="lastMarkingResult"></span>
     </div>
   </div>
   {% endif %}
