@@ -1,4 +1,4 @@
-<nav class="block-progress" aria-label="Lesson block progress" x-show="!presentationMode">
+<nav class="block-progress" aria-label="Lesson block progress" x-show="!presentationMode" x-cloak>
   {% if ordered_slides %}
     {% for block in ordered_blocks %}
       {% set block_start_index = ordered_slides | selectattr('block.block_id', 'equalto', block.block_id) | map(attribute='block_first_slide_index') | first %}

@@ -43,7 +43,7 @@
 
   {% if slide.korean_interference_flag %}
   <div class="teacher-overlay__section teacher-overlay__section--flag">
-    <div class="teacher-overlay__label">Korean interference flag</div>
+    <div class="teacher-overlay__label">Korean interference</div>
     <div class="teacher-overlay__value">
       {{ slide.korean_interference_flag }}
     </div>
@@ -51,6 +51,22 @@
   {% endif %}
 
   {% if slide.markable %}
+  {% set mark_labels = {
+    'secure': 'Secure',
+    'shaky': 'Shaky',
+    'missed': 'Missed',
+    'skipped': 'Skipped'
+  } %}
+  {% set error_labels = {
+    'sound_substitution': 'Sound Sub.',
+    'vowel_confusion': 'Vowel Conf.',
+    'omission': 'Omission',
+    'insertion': 'Insertion',
+    'blending_failure': 'Blend Fail',
+    'segmentation_failure': 'Seg. Fail',
+    'oral_vocabulary_gap': 'Vocab Gap',
+    'low_automaticity': 'Low Auto.'
+  } %}
   <div class="teacher-overlay__section teacher-overlay__section--marking">
     <div class="teacher-overlay__label">Mark to record</div>
     <div class="teacher-overlay__mark-options">
@@ -58,9 +74,10 @@
       <button
         type="button"
         class="teacher-overlay__mark-button"
+        data-status="{{ option }}"
         :class="{ 'teacher-overlay__mark-button--active': getSlideMark({{ slide_index }}) === '{{ option }}' }"
         @click="setSlideMark({{ slide_index }}, '{{ option }}')">
-        {{ option }}
+        {{ mark_labels[option] | default(option | title) }}
       </button>
       {% endfor %}
     </div>
@@ -72,7 +89,7 @@
         class="teacher-overlay__tag-button"
         :class="{ 'teacher-overlay__tag-button--active': hasSlideErrorTag({{ slide_index }}, '{{ error_tag }}') }"
         @click="toggleSlideErrorTag({{ slide_index }}, '{{ error_tag }}')">
-        {{ error_tag }}
+        {{ error_labels[error_tag] | default(error_tag) }}
       </button>
       {% endfor %}
     </div>
@@ -88,7 +105,7 @@
     <textarea
       class="teacher-overlay__note"
       rows="3"
-      placeholder="Teacher note"
+      placeholder="Teacher note…"
       x-model="ensureSlideMark({{ slide_index }}).teacherNote"></textarea>
 
     <button

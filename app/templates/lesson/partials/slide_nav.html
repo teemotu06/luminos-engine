@@ -7,11 +7,11 @@
         class="lesson-nav__button"
         @click="goToPrevSlide()"
         :disabled="activeSlideIndex === 0">
-        Previous
+        <span class="lesson-nav__arrow">←</span> Previous
     </button>
 
     <span class="lesson-nav__status">
-        <span x-text="`Slide ${activeSlideIndex + 1} of {{ ordered_slides|length }}`"></span>
+        <span x-text="`${activeSlideIndex + 1} / {{ ordered_slides|length }}`"></span>
     </span>
 
     <button
@@ -20,7 +20,7 @@
         class="lesson-nav__button"
         @click="goToNextSlide()"
         :disabled="activeSlideIndex >= {{ ordered_slides|length - 1 }}">
-        Next
+        Next <span class="lesson-nav__arrow">→</span>
     </button>
 
 </nav>
