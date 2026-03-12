@@ -3,10 +3,16 @@
     {% with active_slide = ordered_slides[current_index].slide %}
       {% for block in lesson.blocks %}
         {% set is_active = block.code == active_slide.block_id %}
-        <div class="block-progress__item{% if is_active %} block-progress__item--active{% endif %}">
+
+        <a
+          class="block-progress__item{% if is_active %} block-progress__item--active{% endif %}"
+          href="/lesson/{{ lesson.lesson_id }}?slide_index={{ ordered_slides | selectattr('block.code', 'equalto', block.code) | map(attribute='block_first_slide_index') | first }}">
+
           <span class="block-progress__number">Block {{ block.block_no }}</span>
           <span class="block-progress__code">{{ block.label }}</span>
-        </div>
+
+        </a>
+
       {% endfor %}
     {% endwith %}
   {% endif %}

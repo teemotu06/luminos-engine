@@ -1,16 +1,35 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 
 from app.services.lesson_navigation import flatten_lesson_slides
-from app.services.lesson_service import load_lesson
+from app.services.lesson_service import load_lesson, list_lesson_ids, load_all_lessons
 
 router = APIRouter(prefix="/lesson", tags=["lesson"])
 templates = Jinja2Templates(directory="app/templates")
 
 
+@router.get("/")
+def lesson_index():
+    lessons = load_all_lessons()
+    return {
+        "lessons": [
+            {
+                "lesson_id": lesson.lesson_id,
+                "title": lesson.title,
+                "unit_id": lesson.unit_id,
+            }
+            for lesson in lessons
+        ]
+    }
+
+
 @router.get("/{lesson_id}")
 def get_lesson(request: Request, lesson_id: str, slide_index: int = 0):
-    lesson = load_lesson(lesson_id)
+    try:
+        lesson = load_lesson(lesson_id)
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Lesson not found")
+
     ordered_slides = flatten_lesson_slides(lesson)
 
     if not ordered_slides:

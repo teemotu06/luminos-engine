@@ -1,3 +1,59 @@
+{% if slide.content_payload.phoneme_parts %}
+<div
+  class="lesson-read-respond"
+  data-presentation-flow="blend-reveal-next"
+  data-phoneme-parts='{{ slide.content_payload.phoneme_parts | tojson }}'
+  data-blend-audio='{{ slide.content_payload.blend_audio | tojson }}'
+  data-word-audio='{{ slide.content_payload.word_audio | tojson }}'>
+  <div class="lesson-read-respond__controls">
+    {% if slide.content_payload.blend_audio %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click='runBlendSequence({{ slide.content_payload.phoneme_parts | tojson }}, {{ slide.content_payload.blend_audio | tojson }}, {{ slide.content_payload.word_audio | tojson }})'>
+      Blend
+    </button>
+    {% endif %}
+
+    {% if slide.content_payload.word_audio %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="playAudio('{{ slide.content_payload.word_audio }}')">
+      Hear Word
+    </button>
+    {% endif %}
+  </div>
+
+  {% if slide.content_payload.prompt_text %}
+  <div class="lesson-read-respond__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </div>
+  {% endif %}
+
+  <div class="lesson-read-respond__text lesson-read-respond__text--blend">
+    {% for part in slide.content_payload.phoneme_parts %}
+    <span class="lesson-read-respond__phoneme-group">
+      <span
+        class="lesson-read-respond__phoneme"
+        :class="{ 'lesson-read-respond__phoneme--active': activeBlendIndex === {{ loop.index0 }} }">
+        {{ part }}
+      </span>
+      <span
+        class="lesson-read-respond__phoneme-dot"
+        :class="{ 'lesson-read-respond__phoneme-dot--active': activeBlendIndex === {{ loop.index0 }} }">
+      </span>
+    </span>
+    {% endfor %}
+  </div>
+
+  <div
+    class="lesson-read-respond__prompt lesson-read-respond__answer"
+    x-show="revealed">
+    {{ slide.content_payload.target_word }}
+  </div>
+</div>
+{% else %}
 <div class="lesson-read-respond" x-data="{ highlighted: false, fontScale: 1 }">
   <div class="lesson-read-respond__controls">
     {% if slide.content_payload.highlight_pattern %}
@@ -46,3 +102,4 @@
   </div>
   {% endif %}
 </div>
+{% endif %}

@@ -1,25 +1,35 @@
 {% if ordered_slides %}
-    <nav class="lesson-nav">
-        {% if current_index > 0 %}
-            <a
-                id="lesson-prev-link"
-                class="lesson-nav__button"
-                href="/lesson/{{ lesson.lesson_id }}?slide_index={{ current_index - 1 }}">Previous</a>
-        {% else %}
-            <span class="lesson-nav__button lesson-nav__button--disabled">Previous</span>
-        {% endif %}
+<nav class="lesson-nav">
 
-        <span class="lesson-nav__status" x-show="!presentationMode">
-            Slide {{ current_index + 1 }} of {{ ordered_slides|length }}
+    {% if current_index > 0 %}
+        <a
+            id="lesson-prev-link"
+            class="lesson-nav__button"
+            href="/lesson/{{ lesson.lesson_id }}?slide_index={{ current_index - 1 }}">
+            Previous
+        </a>
+    {% else %}
+        <span class="lesson-nav__button lesson-nav__button--disabled">
+            Previous
         </span>
+    {% endif %}
 
-        {% if current_index + 1 < ordered_slides|length %}
-            <a
-                id="lesson-next-link"
-                class="lesson-nav__button"
-                href="/lesson/{{ lesson.lesson_id }}?slide_index={{ current_index + 1 }}">Next</a>
-        {% else %}
-            <span class="lesson-nav__button lesson-nav__button--disabled">Next</span>
-        {% endif %}
-    </nav>
+    <span class="lesson-nav__status">
+        Slide {{ current_index + 1 }} of {{ ordered_slides|length }}
+    </span>
+
+    {% if current_index + 1 < ordered_slides|length %}
+        <a
+            id="lesson-next-link"
+            class="lesson-nav__button"
+            href="/lesson/{{ lesson.lesson_id }}?slide_index={{ current_index + 1 }}">
+            Next
+        </a>
+    {% else %}
+        <span class="lesson-nav__button lesson-nav__button--disabled">
+            Next
+        </span>
+    {% endif %}
+
+</nav>
 {% endif %}

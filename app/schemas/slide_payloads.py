@@ -33,6 +33,7 @@ class MinimalPairPayload(BaseModel):
 class DragLetterPayload(BaseModel):
     prompt_text: str
     target_word: str
+    target_letters: List[str] = Field(default_factory=list)
     slots: List[str] = Field(default_factory=list)
     draggable_letters: List[str] = Field(default_factory=list)
     image: Optional[str] = None
@@ -47,11 +48,16 @@ class DragWordPayload(BaseModel):
 
 
 class ReadRespondPayload(BaseModel):
-    text_content: str
+    text_content: Optional[str] = None
     highlight_pattern: Optional[str] = None
     audio_support: Optional[str] = None
     comprehension_prompt: Optional[str] = None
 
+    prompt_text: Optional[str] = None
+    target_word: Optional[str] = None
+    phoneme_parts: List[str] = Field(default_factory=list)
+    blend_audio: Optional[str] = None
+    word_audio: Optional[str] = None
 
 class WritingEncodingPayload(BaseModel):
     audio_prompt: Optional[str] = None
@@ -81,3 +87,14 @@ SlidePayload = Union[
     WritingEncodingPayload,
     QuickCheckPayload,
 ]
+
+VIEW_PAYLOAD_MAP = {
+    "flashcard": FlashcardPayload,
+    "audio_prompt": AudioPromptPayload,
+    "minimal_pair": MinimalPairPayload,
+    "drag_letter": DragLetterPayload,
+    "drag_word": DragWordPayload,
+    "read_respond": ReadRespondPayload,
+    "writing_encoding": WritingEncodingPayload,
+    "quick_check": QuickCheckPayload,
+}
