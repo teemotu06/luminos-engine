@@ -1,13 +1,38 @@
 :root {
+    /* ── Core palette ─────────────────────────────────────── */
     --bg: #f7f6f3;
     --surface: #ffffff;
     --text: #111111;
-    --muted: #666666;
+    --muted: #5a5a5a;
     --border: #e7e2d9;
-    --accent: #1f5f6b;
+    --accent: #1a5c6e;
     --radius: 16px;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     --max-width: 1100px;
+
+    /* ── Semantic colour aliases (used by lesson.css) ─────── */
+    --c-text: #111111;
+    --c-text-muted: #5a5a5a;
+    --c-text-tertiary: #9b9b9b;
+    --c-border: #e7e2d9;
+    --c-blue: #1a5c6e;
+    --c-blue-light: rgba(26, 92, 110, 0.08);
+
+    /* Status colours */
+    --c-green: #1b7a3a;
+    --c-green-bg: #eef9f1;
+    --c-green-border: rgba(27, 122, 58, 0.22);
+
+    --c-amber: #a16207;
+    --c-amber-bg: #fffbeb;
+    --c-amber-border: rgba(243, 217, 139, 0.9);
+
+    --c-red: #b91c1c;
+    --c-red-bg: #fff7f7;
+    --c-red-border: rgba(185, 28, 28, 0.2);
+
+    --c-gray-bg: #f3f1ec;
+    --c-gray-border: rgba(17, 17, 17, 0.1);
 }
 
 * {
@@ -23,7 +48,13 @@ html, body {
 }
 
 body {
-    padding: 32px;
+    padding: 24px 32px 40px;
+}
+
+@media (max-width: 680px) {
+    body {
+        padding: 16px;
+    }
 }
 
 .page {
@@ -38,22 +69,45 @@ body {
     box-shadow: var(--shadow);
 }
 
+/* ── Lesson Header ──────────────────────────────────────── */
+
 .lesson-header {
-    padding: 24px 28px;
-    margin-bottom: 20px;
+    position: relative;
+    padding: 20px 28px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.lesson-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--c-blue);
+    border-radius: 4px 0 0 4px;
 }
 
 .lesson-eyebrow {
-    margin: 0 0 8px 0;
-    color: var(--muted);
-    font-size: 14px;
+    margin: 0 0 6px 0;
+    color: var(--c-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .lesson-title {
     margin: 0;
-    font-size: 36px;
-    line-height: 1.1;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--c-text);
+    letter-spacing: -0.01em;
 }
+
+/* ── Block List ─────────────────────────────────────────── */
 
 .block-list {
     display: grid;
@@ -70,25 +124,52 @@ body {
     line-height: 1.6;
 }
 
+/* ── Block Header ───────────────────────────────────────── */
+
 .lesson-block-header {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.lesson-block-header__meta {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lesson-block-header__left {
+    flex-shrink: 0;
 }
 
 .lesson-block-header__number {
-    color: var(--muted);
-    font-size: 14px;
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: rgba(26, 92, 110, 0.09);
+    color: var(--c-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .lesson-block-header__title {
     margin: 0;
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--c-text);
+    letter-spacing: -0.01em;
 }
 
 .lesson-block-body {
     display: grid;
     gap: 6px;
 }
+
+/* ── Chips ──────────────────────────────────────────────── */
 
 .lesson-chip-row {
     display: flex;
@@ -111,6 +192,8 @@ body {
     font-weight: 600;
     line-height: 1;
 }
+
+/* ── List Rows ──────────────────────────────────────────── */
 
 .lesson-list {
     display: grid;
@@ -141,6 +224,8 @@ body {
     font-weight: 600;
 }
 
+/* ── Reader ─────────────────────────────────────────────── */
+
 .lesson-reader {
     display: grid;
     gap: 8px;
@@ -157,6 +242,8 @@ body {
     font-size: 18px;
     line-height: 1.5;
 }
+
+/* ── Lesson Nav (global base – overridden in lesson.css) ── */
 
 .lesson-nav {
     display: flex;
@@ -179,6 +266,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
 
 .lesson-nav__button--disabled {
@@ -193,19 +281,30 @@ body {
     font-weight: 600;
 }
 
+/* ── Presentation Mode Toggle ───────────────────────────── */
+
 .lesson-mode-toggle {
     position: fixed;
-    top: 12px;
-    right: 12px;
+    top: 14px;
+    right: 14px;
     z-index: 100;
-    padding: 10px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 15px;
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 999px;
     background: var(--surface);
     color: var(--text);
     font: inherit;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: var(--shadow);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: background 120ms ease, box-shadow 120ms ease;
+}
+
+.lesson-mode-toggle:hover {
+    background: #f8f6f1;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }

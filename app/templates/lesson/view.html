@@ -20,8 +20,8 @@
         <button
             type="button"
             class="lesson-mode-toggle"
-            @click="togglePresentationMode()"
-            x-text="presentationMode ? 'Exit Presentation' : 'Presentation Mode'">
+            @click="togglePresentationMode()">
+            <span x-text="presentationMode ? '✕ Exit' : '⊞ Present'">⊞ Present</span>
         </button>
     </div>
 

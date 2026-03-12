@@ -62,6 +62,22 @@
   {% endif %}
 </div>
 {% else %}
+{% set mark_labels = {
+  'secure': 'Secure',
+  'shaky': 'Shaky',
+  'missed': 'Missed',
+  'skipped': 'Skipped'
+} %}
+{% set error_labels = {
+  'sound_substitution': 'Sound Sub.',
+  'vowel_confusion': 'Vowel Conf.',
+  'omission': 'Omission',
+  'insertion': 'Insertion',
+  'blending_failure': 'Blend Fail',
+  'segmentation_failure': 'Seg. Fail',
+  'oral_vocabulary_gap': 'Vocab Gap',
+  'low_automaticity': 'Low Auto.'
+} %}
 <div class="lesson-quick-check">
   {% if slide.content_payload.check_items %}
   <div class="lesson-quick-check__items">
@@ -83,77 +99,24 @@
         <button
           type="button"
           class="lesson-quick-check__mark-button"
+          data-status="{{ option }}"
           :class="{ 'lesson-quick-check__mark-button--active': getQuickCheckItemMark({{ slide_index }}, {{ item_index }}) === '{{ option }}' }"
           @click="setQuickCheckItemMark({{ slide_index }}, {{ item_index }}, '{{ option }}')">
-          {{ option }}
+          {{ mark_labels[option] | default(option | title) }}
         </button>
         {% endfor %}
       </div>
 
       <div class="lesson-quick-check__error-tags">
+        {% for error_tag in ['sound_substitution', 'vowel_confusion', 'omission', 'insertion', 'blending_failure', 'segmentation_failure', 'oral_vocabulary_gap', 'low_automaticity'] %}
         <button
           type="button"
           class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'sound_substitution') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'sound_substitution')">
-          sound_substitution
+          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, '{{ error_tag }}') }"
+          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, '{{ error_tag }}')">
+          {{ error_labels[error_tag] | default(error_tag) }}
         </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'vowel_confusion') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'vowel_confusion')">
-          vowel_confusion
-        </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'omission') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'omission')">
-          omission
-        </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'insertion') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'insertion')">
-          insertion
-        </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'blending_failure') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'blending_failure')">
-          blending_failure
-        </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'segmentation_failure') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'segmentation_failure')">
-          segmentation_failure
-        </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'oral_vocabulary_gap') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'oral_vocabulary_gap')">
-          oral_vocabulary_gap
-        </button>
-
-        <button
-          type="button"
-          class="lesson-quick-check__tag-button"
-          :class="{ 'lesson-quick-check__tag-button--active': quickCheckHasErrorTag({{ slide_index }}, {{ item_index }}, 'low_automaticity') }"
-          @click="toggleQuickCheckErrorTag({{ slide_index }}, {{ item_index }}, 'low_automaticity')">
-          low_automaticity
-        </button>
+        {% endfor %}
       </div>
 
       <label class="lesson-quick-check__overlay-tag">
