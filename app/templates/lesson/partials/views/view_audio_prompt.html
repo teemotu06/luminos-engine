@@ -17,16 +17,9 @@
   <div class="lesson-audio-prompt__actions">
     <button
       type="button"
-      class="lesson-audio-prompt__button"
+      class="lesson-audio-prompt__button lesson-audio-prompt__button--play"
       @click="playAudio('{{ slide.content_payload.audio_file }}')">
-      Play
-    </button>
-
-    <button
-      type="button"
-      class="lesson-audio-prompt__button"
-      @click="playAudio('{{ slide.content_payload.audio_file }}')">
-      Replay
+      ▶ Play
     </button>
 
     {% if slide.content_payload.reveal_text %}
@@ -34,7 +27,7 @@
       type="button"
       class="lesson-audio-prompt__button"
       @click="revealed = !revealed">
-      Reveal
+      <span x-text="revealed ? 'Hide' : 'Reveal'">Reveal</span>
     </button>
     {% endif %}
   </div>
