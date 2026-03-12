@@ -8,16 +8,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="page lesson-shell" x-data="lessonShell()" :class="{ 'lesson-shell--presentation': presentationMode }">
-    <button
-        type="button"
-        class="lesson-mode-toggle"
-        @click="presentationMode = !presentationMode"
-        x-text="presentationMode ? 'Exit Presentation' : 'Presentation Mode'">
-    </button>
+<div
+    class="page lesson-shell"
+    x-data='lessonShell({
+        initialSlideIndex: {{ initial_slide_index | default(0) }},
+        attemptId: {{ attempt_id | tojson }},
+        lessonId: {{ lesson.lesson_id | tojson }}
+    })'
+    :class="{ 'lesson-shell--presentation': presentationMode }">
+    <div class="lesson-shell__controls">
+        <button
+            type="button"
+            class="lesson-mode-toggle"
+            @click="togglePresentationMode()"
+            x-text="presentationMode ? 'Exit Presentation' : 'Presentation Mode'">
+        </button>
+    </div>
 
     {% include "lesson/partials/lesson_header.html" %}
     {% include "lesson/partials/block_progress.html" %}
+    <div class="lesson-shell__meta" hidden data-attempt-id="{{ attempt_id }}" data-lesson-id="{{ lesson.lesson_id }}"></div>
 
     <main class="block-list">
         {% include "lesson/partials/slide_stage.html" %}

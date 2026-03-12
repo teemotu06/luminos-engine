@@ -1,7 +1,8 @@
-from typing import List
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
+from app.schemas.block_id import BlockId
 from app.schemas.lesson_block import LessonBlock
 
 
@@ -11,4 +12,6 @@ class Lesson(BaseModel):
     target_pattern: str
     title: str
     korean_interference_active: List[str] = Field(default_factory=list)
-    blocks: List[LessonBlock] = Field(default_factory=list)
+    content_pack_status: str = "draft"
+    json_path: Optional[str] = None
+    blocks: Dict[BlockId, LessonBlock] = Field(default_factory=dict)

@@ -16,7 +16,9 @@
       type="button"
       class="lesson-minimal-pair__choice"
       @click="playAudio('{{ slide.content_payload.pair_A.audio }}')">
-      <span class="lesson-minimal-pair__choice-label">
+      <span
+        class="lesson-minimal-pair__choice-label"
+        :style='getResponsiveTextStyle({{ slide.content_payload.pair_A.label | tojson }}, "choice")'>
         {{ slide.content_payload.pair_A.label }}
       </span>
       <span class="lesson-minimal-pair__choice-audio">Play A</span>
@@ -26,18 +28,20 @@
       type="button"
       class="lesson-minimal-pair__choice"
       @click="playAudio('{{ slide.content_payload.pair_B.audio }}')">
-      <span class="lesson-minimal-pair__choice-label">
+      <span
+        class="lesson-minimal-pair__choice-label"
+        :style='getResponsiveTextStyle({{ slide.content_payload.pair_B.label | tojson }}, "choice")'>
         {{ slide.content_payload.pair_B.label }}
       </span>
       <span class="lesson-minimal-pair__choice-audio">Play B</span>
     </button>
   </div>
 
-  <div class="lesson-minimal-pair__answer">
+  <div class="lesson-minimal-pair__answer" x-show="!presentationMode">
     Correct choice: {{ slide.content_payload.correct_choice }}
   </div>
 
-  <div class="lesson-minimal-pair__marking">
+  <div class="lesson-minimal-pair__marking" x-show="!presentationMode">
     <button
       type="button"
       class="lesson-minimal-pair__mark-button"

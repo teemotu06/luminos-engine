@@ -2,22 +2,10 @@ from typing import Literal
 
 from pydantic import BaseModel
 
-
-BlockCode = Literal[
-    "B1_REVIEW_FLASHCARDS",
-    "B2_REVIEW_LISTEN_WRITE",
-    "B3_NEW_SOUND",
-    "B4_VOCAB_WARMUP",
-    "B5_WORD_BUILDING",
-    "B6_SENTENCE_BRIDGE",
-    "B7_DECODABLE_READER",
-    "B8_ENCODING_WRITING",
-    "B9_MORPHEME_MOMENT",
-    "B10_MEANING_CLOSE",
-]
-
+from app.schemas.block_id import BlockId
+from app.schemas.view_type import ViewType
 
 class BlockDefinition(BaseModel):
-    block_no: int
-    code: BlockCode
+    block_id: BlockId
     label: str
+    allowed_view_types: tuple[ViewType, ...]

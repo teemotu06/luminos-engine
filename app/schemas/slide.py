@@ -26,10 +26,11 @@ class Slide(BaseModel):
     slide_title: str
     view_type: ViewType
     content_payload: SlidePayload
-    teacher_cue: Optional[str] = None
-    expected_response: Optional[str] = None
-    correction_move: Optional[str] = None
-    korean_interference_flag: Optional[KoreanInterferenceFlag] = None
-    markable: bool = False
+    teacher_cue: Optional[str] = Field(...)
+    expected_response: Optional[str] = Field(...)
+    correction_move: Optional[str] = Field(...)
+    observation_note: Optional[str] = Field(...)
+    korean_interference_flag: Optional[KoreanInterferenceFlag] = Field(...)
+    markable: bool
     marking_options: List[str] = Field(default_factory=list)
-    next_action: NextAction = "manual_next"
+    next_action: NextAction

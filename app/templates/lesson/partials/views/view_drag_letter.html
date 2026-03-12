@@ -22,6 +22,7 @@
               class="lesson-drag-letter__slot lesson-drag-letter__slot--filled"
               :class="checked ? (isCorrect() ? 'lesson-drag-letter__slot--correct' : 'lesson-drag-letter__slot--incorrect') : ''"
               @click="removeItem({{ idx }})"
+              :style="getResponsiveTextStyle(placedItems[{{ idx }}], 'letter-card')"
               x-text="placedItems[{{ idx }}]">
             </button>
           </template>
@@ -40,6 +41,7 @@
       <button
         type="button"
         class="lesson-drag-letter__card"
+        :style='getResponsiveTextStyle({{ letter | tojson }}, "letter-card")'
         @click="placeItem('{{ letter }}')">
         {{ letter }}
       </button>

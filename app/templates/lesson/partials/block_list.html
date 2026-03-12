@@ -1,4 +1,4 @@
-{% for block in lesson.blocks %}
+{% for block in ordered_blocks %}
     {% for block_slide in block.slides %}
         {% with slide = block_slide %}
             {% include "lesson/partials/block_card.html" %}

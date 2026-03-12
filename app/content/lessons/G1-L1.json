@@ -1,0 +1,274 @@
+{
+  "lesson_id": "G1-L1",
+  "unit_id": "G1",
+  "target_pattern": "s · a · t",
+  "title": "Group 1, Lesson 1: s, a, t",
+  "korean_interference_active": ["vowel_quality"],
+  "content_pack_status": "ready",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "s",
+            "back_text": "/s/",
+            "audio": "/static/audio/s.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students respond /s/ quickly and cleanly.",
+          "correction_move": "Model /s/, students repeat three times, then recheck.",
+          "observation_note": "Watch for /sh/ drift and delayed retrieval.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/review_sat.mp3",
+            "prompt_text": "Listen and write the sound or word.",
+            "dictated_text": "s · sat",
+            "expected_answer": "s · sat",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Say each item once, then replay once if needed.",
+          "expected_response": "Students write the heard sound and word accurately.",
+          "correction_move": "Repeat once, then segment orally if students hesitate.",
+          "observation_note": "Watch whether students can encode from sound without prompt chaining.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /a/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "/a/",
+            "audio": "/static/audio/a.mp3"
+          },
+          "teacher_cue": "New sound today. Watch my mouth and listen.",
+          "expected_response": "Students produce /a/ cleanly.",
+          "correction_move": "Model /a/ with short crisp articulation and have students repeat.",
+          "observation_note": "Watch for vowel quality drift toward a longer sound.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Warm Up Lesson Words",
+          "view_type": "audio_prompt",
+          "content_payload": {
+            "audio_file": "/static/audio/pat_sat.mp3",
+            "prompt_text": "Say the words after me.",
+            "reveal_text": "pat · sat"
+          },
+          "teacher_cue": "Introduce the words orally before any print-heavy work.",
+          "expected_response": "Students repeat each word clearly and with meaning.",
+          "correction_move": "Model the word, confirm meaning, then repeat in a short oral sentence.",
+          "observation_note": "Watch for oral vocabulary gaps before decoding begins.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build pat",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "prompt_text": "Build the word.",
+            "target_word": "pat",
+            "target_letters": ["p", "a", "t"],
+            "slots": ["", "", ""],
+            "draggable_letters": ["a", "t", "p"]
+          },
+          "teacher_cue": "Say the sounds and build left to right.",
+          "expected_response": "Students map each phoneme to the correct grapheme.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students can hold the phoneme sequence in order.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Pat sat.",
+            "display_mode": "sentence",
+            "show_font_controls": true
+          },
+          "teacher_cue": "Track left to right and read the full sentence.",
+          "expected_response": "Students read the sentence accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one tracking.",
+          "observation_note": "Watch for loss of accuracy at the sentence level.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Read the Decodable",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Pat sat. Pat sat at a mat.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Who sat?"
+          },
+          "teacher_cue": "Read for accuracy first, then reread for fluency.",
+          "expected_response": "Students read the connected text with increasing fluency.",
+          "correction_move": "Support line by line, then reread the full passage.",
+          "observation_note": "Watch whether fluency collapses after the first sentence.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Write the Sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/pat_sat_sentence.mp3",
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "Pat sat.",
+            "expected_answer": "Pat sat.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Dictate once, replay once, then check spacing and punctuation.",
+          "expected_response": "Students write the full sentence accurately.",
+          "correction_move": "Repeat the sentence, segment by word, then rewrite.",
+          "observation_note": "Watch for spacing and punctuation breakdowns.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Spot the Part",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "prompt_text": "What part stays the same?",
+            "displayed_words": ["pat", "sat"],
+            "highlighted_chunk": "at",
+            "support_text": "The part at stays the same in pat and sat."
+          },
+          "teacher_cue": "Say both words and notice the part that stayed the same.",
+          "expected_response": "Students identify at as the repeated part.",
+          "correction_move": "Model pat and sat, point to at in both words, then repeat.",
+          "observation_note": "Watch whether students can notice the repeated chunk without guessing.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Meaning Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "title": "Close the Lesson",
+            "check_items": [
+              { "label": "What sound did we learn today?", "phoneme": "/a/" },
+              { "label": "Which word do you remember reading?", "phoneme": null },
+              { "label": "What happened in the story?", "phoneme": null }
+            ],
+            "marking_options": ["secure", "shaky", "missed"],
+            "notes_field": "Keep the close brief and oral."
+          },
+          "teacher_cue": "Close with recall, meaning, and confidence.",
+          "expected_response": "Students answer orally and show lesson recall.",
+          "correction_move": "Prompt with the first word or model a full answer, then repeat.",
+          "observation_note": "Watch whether students can move from decoding to meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}
