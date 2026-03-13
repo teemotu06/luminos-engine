@@ -30,8 +30,8 @@ Notes:
 - Frontend interaction: Alpine.js
 - Audio playback: Howler.js
 - Typography: Inter (UI), Cormorant Garamond (display/titles), IBM Plex Mono (grapheme/phoneme) — all via Google Fonts, loaded in `base.html`
-- Persistence: SQLAlchemy
-- Default local database: SQLite via `sqlite:///./luminos_engine.db`
+- Persistence: SQLAlchemy + PostgreSQL (`psycopg2-binary`)
+- Database: PostgreSQL — `luminos_engine` database on `localhost:5432`
 - Content layer: lesson JSON files in `app/content/lessons/`
 - Static assets: `app/static/`
   - `styles.css` — CSS design tokens, base styles, lesson header, chrome
@@ -44,14 +44,26 @@ Notes:
 - Static files are mounted at `/static`
 - Lesson router is mounted from `app/routers/lesson.py`
 - On startup:
-  - SQLAlchemy tables are created
-  - lesson metadata is synced from JSON files into the database
+  - `python-dotenv` loads `.env` via `app/db.py`
+  - `DATABASE_URL` is read from the environment — app raises `RuntimeError` if not set
+  - SQLAlchemy creates all tables via `Base.metadata.create_all()` if they don't exist
+  - Lesson metadata is synced from JSON files into the `lesson` table
 
-Current startup behavior:
-- The app creates the local DB schema on launch if needed
-- The current lesson content is synced into the `lesson` table
+## 5. Database configuration
 
-## 5. Current route surface
+- **Engine**: PostgreSQL (`postgres:16`)
+- **Container**: `platform-postgres` Docker container
+- **Host**: `localhost:5432`
+- **Database**: `luminos_engine` — isolated, not shared with other projects
+- **User**: `luminos`
+- **Tables created on startup**: `lesson`, `lesson_attempt`, `slide_result`
+- **`app/db.py`**: central DB setup — calls `load_dotenv()`, reads `DATABASE_URL` from env, raises clearly if missing
+- **`.env`**: gitignored local file — must contain `DATABASE_URL=postgresql://luminos:luminos@localhost:5432/luminos_engine`
+- **`.env.example`**: committed — documents the expected format
+- **No Alembic yet** — schema is managed by `create_all()` at startup
+- The old `luminos_engine.db` SQLite file exists at the repo root but is no longer used
+
+## 6. Current route surface
 
 Implemented lesson routes:
 - `GET /`
@@ -69,7 +81,7 @@ Implemented lesson routes:
   - writes slide results
   - updates the lesson attempt summary
 
-## 6. Current data model and persistence
+## 7. Current data model and persistence
 
 Implemented database tables:
 - `lesson`
@@ -91,7 +103,7 @@ Current recommendation logic:
 - `missed` -> `repeat`
 - If a learner key exists and repeated phoneme trouble is found across consecutive lessons, recommendation can escalate to `support`
 
-## 7. Current lesson content contract
+## 8. Current lesson content contract
 
 Current lesson files:
 - one JSON file per lesson
@@ -127,7 +139,7 @@ Current implemented lesson schema shape:
   - `marking_options`
   - `next_action`
 
-## 8. Block registry and allowed view types
+## 9. Block registry and allowed view types
 
 The lesson engine enforces:
 - fixed 10-block order
@@ -156,7 +168,7 @@ Current allowed view types by block:
 - `10` Meaning-Making Close
   - `read_respond`, `quick_check`
 
-## 9. Current rendering model
+## 10. Current rendering model
 
 Current runtime lesson model:
 - the full lesson is rendered once into the page
@@ -172,7 +184,7 @@ Current lesson render flow:
 5. Render the lesson shell with all slides
 6. Alpine controls in-page navigation, reveal states, audio, and marking
 
-## 10. Current frontend shell behavior
+## 11. Current frontend shell behavior
 
 Primary shell state lives in `app/static/lesson.js`.
 
@@ -199,7 +211,7 @@ Current keyboard controls:
 - `Space`
   - reveal / next-step behavior depending on slide mode
 
-## 11. Current teacher overlay behavior
+## 12. Current teacher overlay behavior
 
 The teacher overlay is visible when presentation mode is off.
 It is rendered as a sticky sidebar at `296px` wide on desktop (≥ 1100px).
@@ -233,7 +245,7 @@ Current block number pill behavior:
 - block identity is conveyed by the block progress nav row at the top and the overlay header
 - the slide title (`slide_title`) is shown alone in the card header
 
-## 12. Current top block tab row behavior
+## 13. Current top block tab row behavior
 
 The block row:
 - shows all 10 blocks as pill buttons
@@ -246,7 +258,7 @@ Current UX characteristics:
 - active tab has a blue-tinted background, inset highlight, and stronger font weight
 - hidden in presentation mode
 
-## 13. Current visual design system
+## 14. Current visual design system
 
 CSS variables are defined in `styles.css` and referenced throughout `lesson.css`.
 
@@ -290,7 +302,7 @@ Global: `font-feature-settings: "cv01", "cv02", "cv03"`, `-webkit-font-smoothing
 - Single-column in presentation mode
 - All primary CTAs use `translateY(-1px)` on hover for micro-interaction feedback
 
-## 14. Current implemented view library
+## 15. Current implemented view library
 
 Implemented view types:
 - `flashcard`
@@ -367,7 +379,7 @@ Current notable behavior by view:
   - final close rating appears only at the end
   - complete lesson button submits the final result
 
-## 15. Current sample lesson (`G1-L1`) block-by-block behavior
+## 16. Current sample lesson (`G1-L1`) block-by-block behavior
 
 ### Block 01: Flashcard Phoneme Review
 
@@ -497,7 +509,7 @@ Current state:
 - overlay is compact for this block
 - not markable in the overlay
 
-## 16. Current marking model
+## 17. Current marking model
 
 Two implemented marking paths exist:
 
@@ -526,7 +538,7 @@ Behavior:
 - final mark is shown only on the last prompt
 - `Complete Lesson` sends one slide-level result with `completed: true`
 
-## 17. Current completion behavior
+## 18. Current completion behavior
 
 Lesson completion currently happens when:
 - the teacher submits Block 10 through the `lesson_close` complete action
@@ -536,7 +548,7 @@ This means:
 - ordinary slide marks do not complete the lesson
 - Block 10 is the implemented end-of-lesson completion point
 
-## 18. Current assets
+## 19. Current assets
 
 Current local image assets include:
 - vocabulary images in `app/static/images/vocab/`
@@ -544,7 +556,7 @@ Current local image assets include:
 
 Current audio references exist in lesson content, but this repo currently documents the paths rather than bundling a complete verified audio library for every referenced file.
 
-## 19. Current implementation boundaries
+## 20. Current implementation boundaries
 
 This repo currently behaves as:
 - a standalone lesson engine
@@ -559,7 +571,7 @@ This repo does not currently implement:
 - speech recognition
 - adaptive branching beyond the current recommendation logic
 
-## 20. Current known realities and constraints
+## 21. Current known realities and constraints
 
 - `PROJECT_CONTEXT.md` is descriptive only
 - the repo is materially more advanced than earlier continuity summaries
@@ -568,7 +580,7 @@ This repo does not currently implement:
 - Block 10 now completes the lesson through the close flow
 - some content references local static audio paths that may still require real media files to exist for full live playback
 
-## 21. Current practical summary
+## 22. Current practical summary
 
 The system is currently operating as:
 - one FastAPI-rendered lesson shell
