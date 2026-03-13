@@ -29,7 +29,7 @@ Notes:
 - Templates: Jinja2
 - Frontend interaction: Alpine.js
 - Audio playback: Howler.js
-- Typography: Inter (Google Fonts, loaded via `base.html`)
+- Typography: Inter (UI), Cormorant Garamond (display/titles), IBM Plex Mono (grapheme/phoneme) — all via Google Fonts, loaded in `base.html`
 - Persistence: SQLAlchemy
 - Default local database: SQLite via `sqlite:///./luminos_engine.db`
 - Content layer: lesson JSON files in `app/content/lessons/`
@@ -180,7 +180,7 @@ Current shell capabilities:
 - in-page slide navigation
 - block jump navigation
 - shared reveal state
-- presentation mode toggle
+- presentation mode toggle (labels: "Presentation Mode" / "Teacher Mode")
 - audio playback via Howler
 - drag build interactions
 - teacher-side mark state
@@ -203,6 +203,10 @@ Current keyboard controls:
 
 The teacher overlay is visible when presentation mode is off.
 It is rendered as a sticky sidebar at `296px` wide on desktop (≥ 1100px).
+
+Current mode toggle labels:
+- Teacher mode (overlay visible): button reads **"Presentation Mode"** (click to enter)
+- Presentation mode (overlay hidden): button reads **"Teacher Mode"** (click to return)
 
 Current overlay DOM structure:
 - `teacher-overlay__header` — block ID + label (meta-primary), slide title (meta-secondary)
@@ -246,23 +250,42 @@ Current UX characteristics:
 
 CSS variables are defined in `styles.css` and referenced throughout `lesson.css`.
 
+### Palette
+
+The current palette is warm earth tones, not teal. The `--c-blue` alias now points to the primary accent colour (terracotta), retained for semantic compatibility with lesson.css.
+
 Current token values:
-- `--bg: #f2f0eb` — warm off-white page background
-- `--surface: #ffffff` — card surfaces
-- `--c-blue: #0d5468` — primary teal accent
-- `--c-blue-hover: #0b4557` — teal hover state
-- `--c-blue-light: rgba(13, 84, 104, 0.08)` — tinted backgrounds
-- `--c-blue-mid: rgba(13, 84, 104, 0.14)` — active border tints
-- `--c-border: #e3ddd3` — warm grey border
-- `--max-width: 1200px` — page container cap
+- `--bg: #efe8df` — warm parchment page background (rendered with radial+linear gradient)
+- `--surface: #fbf7f0` — card surfaces
+- `--surface-strong: #fffdf9` — elevated card surfaces
+- `--surface-muted: #f3ebdf` — recessed/muted surfaces
+- `--accent: #b66636` — primary terracotta accent
+- `--accent-strong: #995022` — darker accent for hover/active states
+- `--c-blue: #b66636` — semantic alias for primary accent (same as `--accent`)
+- `--c-blue-hover: #995022` — hover state for accent elements
+- `--c-blue-light: rgba(182, 102, 54, 0.08)` — tinted backgrounds
+- `--c-blue-mid: rgba(182, 102, 54, 0.18)` — active border tints
+- `--c-border: #ddd0bf` — warm border
+- `--c-border-strong: #cfbda9` — stronger border for emphasis
+- `--c-text: #171411` — near-black warm text
+- `--c-text-muted: #685d52` — secondary text
+- `--c-text-tertiary: #a09284` — tertiary/label text
+- `--max-width: 1320px` — page container cap
+- `--radius: 18px` — base border radius
 - Status: green (`#166534`), amber (`#92400e`), red (`#991b1b`) with matching `*-bg` and `*-border` variants
 
-Typography:
-- Font: Inter (Google Fonts), loaded in `base.html` before stylesheets
-- `font-feature-settings: "cv01", "cv02", "cv03"` — Inter optical sizing enabled
-- `-webkit-font-smoothing: antialiased` applied globally
+### Typography
 
-Layout:
+Three-font system registered as CSS variables:
+- `--font-sans: "Inter"` — UI chrome, overlays, labels, navigation
+- `--font-serif: "Cormorant Garamond"` — display text, lesson titles
+- `--font-mono: "IBM Plex Mono"` — grapheme and phoneme display in content slides
+
+All three loaded via Google Fonts in `base.html`.
+Global: `font-feature-settings: "cv01", "cv02", "cv03"`, `-webkit-font-smoothing: antialiased`.
+
+### Layout
+- Page background: `radial-gradient` light bloom at top + `linear-gradient` warm fade
 - Two-column on desktop: `296px` teacher overlay + `minmax(0, 1fr)` content
 - Single-column in presentation mode
 - All primary CTAs use `translateY(-1px)` on hover for micro-interaction feedback
@@ -561,4 +584,4 @@ The current product state is a functional classroom lesson runner with:
 - implemented view library
 - persistent attempt/mark storage
 - end-of-lesson close/completion flow
-- polished visual design system (Inter font, refined teal palette, consistent component language)
+- polished visual design system (three-font typographic stack, warm earth-tone palette, consistent component language)
