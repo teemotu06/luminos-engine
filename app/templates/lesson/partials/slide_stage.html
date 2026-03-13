@@ -1,0 +1,28 @@
+{% if ordered_slides %}
+<section class="lesson-stage">
+    <div class="teacher-overlay-stack">
+        {% for entry in ordered_slides %}
+            {% with block = entry.block, slide = entry.slide, slide_index = entry.slide_index %}
+                <div x-show="activeSlideIndex === {{ slide_index }}" x-cloak>
+                    {% include "lesson/partials/teacher_overlay.html" %}
+                </div>
+            {% endwith %}
+        {% endfor %}
+    </div>
+
+    <div class="lesson-slide-stack">
+        {% for entry in ordered_slides %}
+            {% with block = entry.block, slide = entry.slide, slide_index = entry.slide_index %}
+                <div
+                    class="lesson-slide-frame"
+                    data-slide-index="{{ slide_index }}"
+                    data-block-id="{{ slide.block_id }}"
+                    x-show="activeSlideIndex === {{ slide_index }}"
+                    x-cloak>
+                    {% include "lesson/partials/block_card.html" %}
+                </div>
+            {% endwith %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

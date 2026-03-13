@@ -1,0 +1,90 @@
+<div class="lesson-writing-encoding" x-data="{ revealed: false }">
+  {% if slide.content_payload.display_mode == 'sentence' %}
+  <div class="lesson-writing-encoding__hero">
+    <div class="lesson-writing-encoding__eyebrow">Encoding & Writing</div>
+
+    {% if slide.content_payload.prompt_text %}
+    <div class="lesson-writing-encoding__prompt">
+      {{ slide.content_payload.prompt_text }}
+    </div>
+    {% endif %}
+
+    <div class="lesson-writing-encoding__board">
+      <div
+        class="lesson-writing-encoding__lines"
+        x-show="!revealed"
+        aria-hidden="true">
+        <div class="lesson-writing-encoding__line"></div>
+        <div class="lesson-writing-encoding__line"></div>
+        <div class="lesson-writing-encoding__line"></div>
+      </div>
+
+      <div
+        class="lesson-writing-encoding__board-answer"
+        x-show="revealed"
+        :style='getResponsiveTextStyle({{ slide.content_payload.expected_answer | tojson }}, "sentence")'>
+        <div class="lesson-writing-encoding__board-answer-sheet">
+          {{ slide.content_payload.expected_answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div
+    class="lesson-writing-encoding__dictation"
+    :style='getResponsiveTextStyle({{ slide.content_payload.dictated_text | tojson }}, "word")'>
+    {{ slide.content_payload.dictated_text }}
+  </div>
+
+  {% if slide.content_payload.elkonin_boxes %}
+  <div class="lesson-writing-encoding__boxes">
+    {% for _ in range(slide.content_payload.elkonin_boxes) %}
+    <div class="lesson-writing-encoding__box"></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endif %}
+
+  {% if slide.content_payload.audio_prompt %}
+  <div class="lesson-writing-encoding__actions">
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
+      Play Dictation
+    </button>
+
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
+      Replay
+    </button>
+
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="revealed = !revealed">
+      Reveal Answer
+    </button>
+  </div>
+  {% else %}
+  <div class="lesson-writing-encoding__actions">
+    <button
+      type="button"
+      class="lesson-writing-encoding__button"
+      @click="revealed = !revealed">
+      Reveal Answer
+    </button>
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.display_mode != 'sentence' %}
+  <div
+    class="lesson-writing-encoding__reveal"
+    x-show="revealed"
+    :style='getResponsiveTextStyle({{ slide.content_payload.expected_answer | tojson }}, "word")'>
+    {{ slide.content_payload.expected_answer }}
+  </div>
+  {% endif %}
+</div>

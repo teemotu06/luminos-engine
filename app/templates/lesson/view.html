@@ -2,17 +2,36 @@
 
 {% block title %}{{ lesson.title }}{% endblock %}
 
-{% block content %}
-<div class="page">
-    <header class="card lesson-header">
-        <p class="lesson-eyebrow">{{ lesson.level }} · {{ lesson.unit }} · Lesson {{ lesson.lesson_number }}</p>
-        <h1 class="lesson-title">{{ lesson.title }}</h1>
-    </header>
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}">
+<script defer src="{{ url_for('static', path='lesson.js') }}?v=2"></script>
+{% endblock %}
 
-    <main class="slide-list">
-        {% for slide in lesson.slides %}
-            {% include "lesson/partials/slide_card.html" %}
-        {% endfor %}
+{% block content %}
+<div
+    class="page lesson-shell"
+    x-data='lessonShell({
+        initialSlideIndex: {{ initial_slide_index | default(0) }},
+        attemptId: {{ attempt_id | tojson }},
+        lessonId: {{ lesson.lesson_id | tojson }}
+    })'
+    :class="{ 'lesson-shell--presentation': presentationMode }">
+    <div class="lesson-shell__controls">
+        <button
+            type="button"
+            class="lesson-mode-toggle"
+            @click="togglePresentationMode()">
+            <span x-text="presentationMode ? '← Exit' : '▶ Present'">▶ Present</span>
+        </button>
+    </div>
+
+    {% include "lesson/partials/lesson_header.html" %}
+    {% include "lesson/partials/block_progress.html" %}
+    <div class="lesson-shell__meta" hidden data-attempt-id="{{ attempt_id }}" data-lesson-id="{{ lesson.lesson_id }}"></div>
+
+    <main class="block-list">
+        {% include "lesson/partials/slide_stage.html" %}
+        {% include "lesson/partials/slide_nav.html" %}
     </main>
 </div>
 {% endblock %}

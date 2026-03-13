@@ -1,0 +1,180 @@
+{% if slide.content_payload.phoneme_parts %}
+<div
+  class="lesson-read-respond"
+  data-presentation-flow="blend-reveal-next"
+  data-phoneme-parts='{{ slide.content_payload.phoneme_parts | tojson }}'
+  data-blend-audio='{{ slide.content_payload.blend_audio | tojson }}'
+  data-word-audio='{{ slide.content_payload.word_audio | tojson }}'>
+  <div class="lesson-read-respond__controls">
+    {% if slide.content_payload.blend_audio %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click='runBlendSequence({{ slide.content_payload.phoneme_parts | tojson }}, {{ slide.content_payload.blend_audio | tojson }}, {{ slide.content_payload.word_audio | tojson }})'>
+      Blend
+    </button>
+    {% endif %}
+
+    {% if slide.content_payload.word_audio %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="playAudio('{{ slide.content_payload.word_audio }}')">
+      Hear Word
+    </button>
+    {% endif %}
+  </div>
+
+  {% if slide.content_payload.prompt_text %}
+  <div class="lesson-read-respond__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </div>
+  {% endif %}
+
+  <div class="lesson-read-respond__text lesson-read-respond__text--blend">
+    {% for part in slide.content_payload.phoneme_parts %}
+    <span class="lesson-read-respond__phoneme-group">
+      <span
+        class="lesson-read-respond__phoneme"
+        :class="{ 'lesson-read-respond__phoneme--active': activeBlendIndex === {{ loop.index0 }} }">
+        {{ part }}
+      </span>
+      <span
+        class="lesson-read-respond__phoneme-dot"
+        :class="{ 'lesson-read-respond__phoneme-dot--active': activeBlendIndex === {{ loop.index0 }} }">
+      </span>
+    </span>
+    {% endfor %}
+  </div>
+
+  <div
+    class="lesson-read-respond__prompt lesson-read-respond__answer"
+    x-show="revealed">
+    {{ slide.content_payload.target_word }}
+  </div>
+</div>
+{% else %}
+<div class="lesson-read-respond" x-data="{ highlighted: false, fontScale: 1, supportRevealed: false }">
+  {% if slide.content_payload.display_mode == 'spot_part' %}
+  <div class="lesson-read-respond__spot-part">
+    <div class="lesson-read-respond__spot-header">
+      <div class="lesson-read-respond__spot-eyebrow">Spot the Part</div>
+      {% if slide.content_payload.prompt_text %}
+      <div class="lesson-read-respond__spot-prompt">
+        {{ slide.content_payload.prompt_text }}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="lesson-read-respond__spot-compare-row">
+      {% for word in slide.content_payload.displayed_words %}
+      <div class="lesson-read-respond__spot-word">
+        {% if slide.content_payload.highlighted_chunk and slide.content_payload.highlighted_chunk in word %}
+          {% set parts = word.split(slide.content_payload.highlighted_chunk, 1) %}
+          <span>{{ parts[0] }}</span><span class="lesson-read-respond__spot-chunk">{{ slide.content_payload.highlighted_chunk }}</span><span>{{ parts[1] }}</span>
+        {% else %}
+          {{ word }}
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="lesson-read-respond__controls">
+      {% if slide.content_payload.support_text %}
+      <button
+        type="button"
+        class="lesson-read-respond__button lesson-read-respond__button--check"
+        @click="supportRevealed = !supportRevealed"
+        x-text="supportRevealed ? 'Hide Check' : 'Check'">
+      </button>
+      {% endif %}
+    </div>
+
+    {% if slide.content_payload.support_text %}
+    <div
+      class="lesson-read-respond__spot-support"
+      x-show="supportRevealed">
+      {{ slide.content_payload.support_text }}
+    </div>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="lesson-read-respond__controls">
+    {% if slide.content_payload.highlight_pattern %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="highlighted = !highlighted">
+      Highlight
+    </button>
+    {% endif %}
+
+    {% if slide.content_payload.show_font_controls %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="fontScale = Math.max(0.85, fontScale - 0.1)">
+      A-
+    </button>
+
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="fontScale = Math.min(1.5, fontScale + 0.1)">
+      A+
+    </button>
+    {% endif %}
+
+    {% if slide.content_payload.audio_support %}
+    <button
+      type="button"
+      class="lesson-read-respond__button"
+      @click="playAudio('{{ slide.content_payload.audio_support }}')">
+      Play Audio
+    </button>
+    {% endif %}
+  </div>
+
+  {% if slide.content_payload.display_mode == 'reader' %}
+  <div class="lesson-read-respond__reader{% if slide.content_payload.image %} lesson-read-respond__reader--with-image{% endif %}">
+    <div class="lesson-read-respond__reader-copy">
+      <div
+        class="lesson-read-respond__text lesson-read-respond__text--reader"
+        :style='getResponsiveTextStyle({{ slide.content_payload.text_content | tojson }}, "sentence", fontScale)'
+        :class="{ 'lesson-read-respond__text--highlighted': highlighted }">
+        {{ slide.content_payload.text_content }}
+      </div>
+
+      {% if slide.content_payload.comprehension_prompt %}
+      <div class="lesson-read-respond__reader-note">
+        {{ slide.content_payload.comprehension_prompt }}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if slide.content_payload.image %}
+    <div class="lesson-read-respond__reader-media">
+      <img
+        class="lesson-read-respond__reader-image"
+        src="{{ slide.content_payload.image }}"
+        alt="{{ slide.slide_title }}">
+    </div>
+    {% endif %}
+  </div>
+  {% else %}
+  <div
+    class="lesson-read-respond__text {% if slide.content_payload.display_mode == 'sentence' %}lesson-read-respond__text--sentence{% endif %}"
+    :style='getResponsiveTextStyle({{ slide.content_payload.text_content | tojson }}, {% if slide.content_payload.display_mode == "sentence" %}"sentence"{% else %}"default"{% endif %}, fontScale)'
+    :class="{ 'lesson-read-respond__text--highlighted': highlighted }">
+    {{ slide.content_payload.text_content }}
+  </div>
+
+  {% if slide.content_payload.comprehension_prompt %}
+  <div class="lesson-read-respond__prompt">
+    {{ slide.content_payload.comprehension_prompt }}
+  </div>
+  {% endif %}
+  {% endif %}
+  {% endif %}
+</div>
+{% endif %}

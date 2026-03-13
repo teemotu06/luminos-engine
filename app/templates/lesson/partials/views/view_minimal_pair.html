@@ -1,0 +1,61 @@
+<div class="lesson-minimal-pair" x-data="{ selectedResult: '' }">
+  {% if slide.content_payload.korean_flag %}
+  <div class="lesson-minimal-pair__flag">
+    <div class="lesson-minimal-pair__flag-label">Korean interference flag</div>
+    <div class="lesson-minimal-pair__flag-value">
+      {{ slide.content_payload.korean_flag }}
+    </div>
+    <div class="lesson-minimal-pair__correction">
+      {{ slide.content_payload.correction_routine }}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="lesson-minimal-pair__choices">
+    <button
+      type="button"
+      class="lesson-minimal-pair__choice"
+      @click="playAudio('{{ slide.content_payload.pair_A.audio }}')">
+      <span
+        class="lesson-minimal-pair__choice-label"
+        :style='getResponsiveTextStyle({{ slide.content_payload.pair_A.label | tojson }}, "choice")'>
+        {{ slide.content_payload.pair_A.label }}
+      </span>
+      <span class="lesson-minimal-pair__choice-audio">Play A</span>
+    </button>
+
+    <button
+      type="button"
+      class="lesson-minimal-pair__choice"
+      @click="playAudio('{{ slide.content_payload.pair_B.audio }}')">
+      <span
+        class="lesson-minimal-pair__choice-label"
+        :style='getResponsiveTextStyle({{ slide.content_payload.pair_B.label | tojson }}, "choice")'>
+        {{ slide.content_payload.pair_B.label }}
+      </span>
+      <span class="lesson-minimal-pair__choice-audio">Play B</span>
+    </button>
+  </div>
+
+  <div class="lesson-minimal-pair__answer" x-show="!presentationMode">
+    Correct choice: {{ slide.content_payload.correct_choice }}
+  </div>
+
+  <div class="lesson-minimal-pair__marking" x-show="!presentationMode">
+    <button
+      type="button"
+      class="lesson-minimal-pair__mark-button"
+      :class="{ 'lesson-minimal-pair__mark-button--active': selectedResult === 'correct' }"
+      @click="selectedResult = 'correct'">
+      Correct
+    </button>
+
+    <button
+      type="button"
+      class="lesson-minimal-pair__mark-button"
+      :class="{ 'lesson-minimal-pair__mark-button--active': selectedResult === 'incorrect' }"
+      @click="selectedResult = 'incorrect'">
+      Incorrect
+    </button>
+  </div>
+</div>

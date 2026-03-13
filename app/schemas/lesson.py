@@ -1,33 +1,17 @@
-from typing import List, Optional, Literal
+from typing import Dict, List, Optional
+
 from pydantic import BaseModel, Field
 
-
-ViewType = Literal[
-    "launch",
-    "teach",
-    "model",
-    "guided",
-    "independent",
-    "check",
-    "quiz",
-    "wrap",
-]
-
-
-class Slide(BaseModel):
-    id: str
-    block: int = Field(ge=1, le=10)
-    view_type: ViewType
-    title: str
-    teacher_note: Optional[str] = None
-    text: Optional[str] = None
-    prompt: Optional[str] = None
+from app.schemas.block_id import BlockId
+from app.schemas.lesson_block import LessonBlock
 
 
 class Lesson(BaseModel):
     lesson_id: str
-    level: str
-    unit: str
-    lesson_number: int
+    unit_id: str
+    target_pattern: str
     title: str
-    slides: List[Slide]
+    korean_interference_active: List[str] = Field(default_factory=list)
+    content_pack_status: str = "draft"
+    json_path: Optional[str] = None
+    blocks: Dict[BlockId, LessonBlock] = Field(default_factory=dict)

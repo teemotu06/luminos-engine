@@ -1,0 +1,27 @@
+{% if ordered_slides %}
+<nav class="lesson-nav" aria-label="Lesson slide navigation">
+
+    <button
+        id="lesson-prev-link"
+        type="button"
+        class="lesson-nav__button"
+        @click="goToPrevSlide()"
+        :disabled="activeSlideIndex === 0">
+        <span class="lesson-nav__arrow">←</span> Previous
+    </button>
+
+    <span class="lesson-nav__status">
+        <span x-text="`${activeSlideIndex + 1} / {{ ordered_slides|length }}`"></span>
+    </span>
+
+    <button
+        id="lesson-next-link"
+        type="button"
+        class="lesson-nav__button"
+        @click="goToNextSlide()"
+        :disabled="activeSlideIndex >= {{ ordered_slides|length - 1 }}">
+        Next <span class="lesson-nav__arrow">→</span>
+    </button>
+
+</nav>
+{% endif %}

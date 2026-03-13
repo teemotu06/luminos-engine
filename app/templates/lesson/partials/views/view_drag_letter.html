@@ -1,0 +1,80 @@
+<div
+  class="lesson-drag-letter"
+  x-data='dragBuild({{ slide.content_payload.target_letters | tojson }})'
+>
+  <div class="lesson-drag-letter__header">
+    <div class="lesson-drag-letter__eyebrow">Word Building</div>
+
+    {% if slide.content_payload.prompt_text %}
+    <h3 class="lesson-drag-letter__prompt">
+      {{ slide.content_payload.prompt_text }}
+    </h3>
+    {% endif %}
+  </div>
+
+  <div class="lesson-drag-letter__board">
+    <div class="lesson-drag-letter__target-row">
+      <div class="lesson-drag-letter__slots" aria-label="Word slots">
+        {% for idx in range(slide.content_payload.target_letters | length) %}
+          <template x-if="placedItems[{{ idx }}] !== undefined">
+            <button
+              type="button"
+              class="lesson-drag-letter__slot lesson-drag-letter__slot--filled"
+              :class="checked ? (isCorrect() ? 'lesson-drag-letter__slot--correct' : 'lesson-drag-letter__slot--incorrect') : ''"
+              @click="removeItem({{ idx }})"
+              :style="getResponsiveTextStyle(placedItems[{{ idx }}], 'letter-card')"
+              x-text="placedItems[{{ idx }}]">
+            </button>
+          </template>
+
+          <template x-if="placedItems[{{ idx }}] === undefined">
+            <div class="lesson-drag-letter__slot lesson-drag-letter__slot--empty"></div>
+          </template>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="lesson-drag-letter__bank-label">Letter Bank</div>
+
+    <div class="lesson-drag-letter__cards">
+      {% for letter in slide.content_payload.draggable_letters %}
+      <button
+        type="button"
+        class="lesson-drag-letter__card"
+        :style='getResponsiveTextStyle({{ letter | tojson }}, "letter-card")'
+        @click="placeItem('{{ letter }}')">
+        {{ letter }}
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="lesson-drag-letter__actions">
+    <button
+      type="button"
+      class="lesson-drag-letter__button"
+      @click="check()"
+      :disabled="placedItems.length !== {{ slide.content_payload.target_letters | length }}">
+      Check
+    </button>
+
+    <button
+      type="button"
+      class="lesson-drag-letter__button"
+      @click="reset()">
+      Reset
+    </button>
+
+    <button
+      type="button"
+      class="lesson-drag-letter__button"
+      @click="reveal()">
+      Reveal
+    </button>
+  </div>
+
+  <div class="lesson-drag-letter__feedback" x-show="checked">
+    <span x-show="isCorrect()">Correct</span>
+    <span x-show="!isCorrect()">Target word: {{ slide.content_payload.target_word }}</span>
+  </div>
+</div>
