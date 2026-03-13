@@ -29,10 +29,14 @@ Notes:
 - Templates: Jinja2
 - Frontend interaction: Alpine.js
 - Audio playback: Howler.js
+- Typography: Inter (Google Fonts, loaded via `base.html`)
 - Persistence: SQLAlchemy
 - Default local database: SQLite via `sqlite:///./luminos_engine.db`
 - Content layer: lesson JSON files in `app/content/lessons/`
 - Static assets: `app/static/`
+  - `styles.css` — CSS design tokens, base styles, lesson header, chrome
+  - `lesson.css` — all lesson component styles (1800+ lines)
+  - `lesson.js` — Alpine.js `lessonShell()` and `dragBuild()` components
 
 ## 4. App entry and startup behavior
 
@@ -198,37 +202,72 @@ Current keyboard controls:
 ## 11. Current teacher overlay behavior
 
 The teacher overlay is visible when presentation mode is off.
+It is rendered as a sticky sidebar at `296px` wide on desktop (≥ 1100px).
 
-Current overlay structure:
-- compact block/slide meta header
-- teacher cue as the primary instruction
-- grouped guidance area
-  - expected response
-  - correction move
-  - observation note
-- Korean interference banner when present
-- marking controls for markable slides
+Current overlay DOM structure:
+- `teacher-overlay__header` — block ID + label (meta-primary), slide title (meta-secondary)
+- `teacher-overlay__section--primary` — teacher cue (largest text in overlay)
+- `teacher-overlay__section--guidance` — grouped grid:
+  - Expected response
+  - Correction move
+  - Watch for (observation note)
+- `teacher-overlay__section--flag` — Korean interference banner (amber tint, only when present)
+- `teacher-overlay__section--marking` — marking controls (only on markable slides):
+  - status buttons (Secure / Shaky / Missed / Skipped)
+  - error tag pills
+  - Korean Transfer checkbox
+  - teacher note textarea (2 rows)
+  - Confirm Mark button
 
-Current block-specific behavior:
-- most markable slides show status buttons, error tags, Korean Transfer checkbox, note field, and confirm button in the overlay
-- Block 10 currently uses a compact overlay mode
-  - cue remains visible
-  - guidance is reduced to a lighter watch-for area
-  - overlay marking is not shown for Block 10 because Block 10 is no longer `markable`
+Block 10 compact mode (`teacher-overlay--compact`):
+- cue remains visible
+- guidance section shows only `Watch for` (observation note)
+- no marking controls (Block 10 is not `markable` — it marks via the lesson close flow)
+
+Current block number pill behavior:
+- the block number pill has been removed from the content card's slide header (`block_header.html`)
+- block identity is conveyed by the block progress nav row at the top and the overlay header
+- the slide title (`slide_title`) is shown alone in the card header
 
 ## 12. Current top block tab row behavior
 
 The block row:
-- shows all 10 blocks
-- uses the current active slide’s block to determine active state
+- shows all 10 blocks as pill buttons
+- uses the current active slide’s `block_id` to determine active state
 - allows direct jump to the first slide in each block
+- horizontally scrollable on smaller viewports (scrollbar hidden)
 
 Current UX characteristics:
-- larger tab width than earlier versions
-- better spacing for longer block names
-- active state remains visually strong
+- each tab shows block number (`Block 01`) and block label
+- active tab has a blue-tinted background, inset highlight, and stronger font weight
+- hidden in presentation mode
 
-## 13. Current implemented view library
+## 13. Current visual design system
+
+CSS variables are defined in `styles.css` and referenced throughout `lesson.css`.
+
+Current token values:
+- `--bg: #f2f0eb` — warm off-white page background
+- `--surface: #ffffff` — card surfaces
+- `--c-blue: #0d5468` — primary teal accent
+- `--c-blue-hover: #0b4557` — teal hover state
+- `--c-blue-light: rgba(13, 84, 104, 0.08)` — tinted backgrounds
+- `--c-blue-mid: rgba(13, 84, 104, 0.14)` — active border tints
+- `--c-border: #e3ddd3` — warm grey border
+- `--max-width: 1200px` — page container cap
+- Status: green (`#166534`), amber (`#92400e`), red (`#991b1b`) with matching `*-bg` and `*-border` variants
+
+Typography:
+- Font: Inter (Google Fonts), loaded in `base.html` before stylesheets
+- `font-feature-settings: "cv01", "cv02", "cv03"` — Inter optical sizing enabled
+- `-webkit-font-smoothing: antialiased` applied globally
+
+Layout:
+- Two-column on desktop: `296px` teacher overlay + `minmax(0, 1fr)` content
+- Single-column in presentation mode
+- All primary CTAs use `translateY(-1px)` on hover for micro-interaction feedback
+
+## 14. Current implemented view library
 
 Implemented view types:
 - `flashcard`
@@ -305,7 +344,7 @@ Current notable behavior by view:
   - final close rating appears only at the end
   - complete lesson button submits the final result
 
-## 14. Current sample lesson (`G1-L1`) block-by-block behavior
+## 15. Current sample lesson (`G1-L1`) block-by-block behavior
 
 ### Block 01: Flashcard Phoneme Review
 
@@ -435,7 +474,7 @@ Current state:
 - overlay is compact for this block
 - not markable in the overlay
 
-## 15. Current marking model
+## 16. Current marking model
 
 Two implemented marking paths exist:
 
@@ -464,7 +503,7 @@ Behavior:
 - final mark is shown only on the last prompt
 - `Complete Lesson` sends one slide-level result with `completed: true`
 
-## 16. Current completion behavior
+## 17. Current completion behavior
 
 Lesson completion currently happens when:
 - the teacher submits Block 10 through the `lesson_close` complete action
@@ -474,7 +513,7 @@ This means:
 - ordinary slide marks do not complete the lesson
 - Block 10 is the implemented end-of-lesson completion point
 
-## 17. Current assets
+## 18. Current assets
 
 Current local image assets include:
 - vocabulary images in `app/static/images/vocab/`
@@ -482,7 +521,7 @@ Current local image assets include:
 
 Current audio references exist in lesson content, but this repo currently documents the paths rather than bundling a complete verified audio library for every referenced file.
 
-## 18. Current implementation boundaries
+## 19. Current implementation boundaries
 
 This repo currently behaves as:
 - a standalone lesson engine
@@ -497,7 +536,7 @@ This repo does not currently implement:
 - speech recognition
 - adaptive branching beyond the current recommendation logic
 
-## 19. Current known realities and constraints
+## 20. Current known realities and constraints
 
 - `PROJECT_CONTEXT.md` is descriptive only
 - the repo is materially more advanced than earlier continuity summaries
@@ -506,7 +545,7 @@ This repo does not currently implement:
 - Block 10 now completes the lesson through the close flow
 - some content references local static audio paths that may still require real media files to exist for full live playback
 
-## 20. Current practical summary
+## 21. Current practical summary
 
 The system is currently operating as:
 - one FastAPI-rendered lesson shell
@@ -516,10 +555,10 @@ The system is currently operating as:
 - DB-backed attempt creation and slide-level marking
 - one implemented sample lesson covering Blocks 01 through 10
 
-The current product state is no longer just a shell.
-It is now a functional classroom lesson runner with:
+The current product state is a functional classroom lesson runner with:
 - content validation
 - fixed block architecture
 - implemented view library
 - persistent attempt/mark storage
 - end-of-lesson close/completion flow
+- polished visual design system (Inter font, refined teal palette, consistent component language)
