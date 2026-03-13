@@ -27,22 +27,41 @@
           {{ slide.content_payload.expected_answer }}
         </div>
       </div>
-    </div>
+  </div>
   </div>
   {% else %}
-  <div
-    class="lesson-writing-encoding__dictation"
-    :style='getResponsiveTextStyle({{ slide.content_payload.dictated_text | tojson }}, "word")'>
-    {{ slide.content_payload.dictated_text }}
-  </div>
-
-  {% if slide.content_payload.elkonin_boxes %}
-  <div class="lesson-writing-encoding__boxes">
-    {% for _ in range(slide.content_payload.elkonin_boxes) %}
-    <div class="lesson-writing-encoding__box"></div>
-    {% endfor %}
+  {% if slide.content_payload.prompt_text %}
+  <div class="lesson-writing-encoding__prompt">
+    {{ slide.content_payload.prompt_text }}
   </div>
   {% endif %}
+
+  {% set answer_text = slide.content_payload.expected_answer.replace(' ', '') %}
+  {% set answer_chars = answer_text | list %}
+  {% set box_count = slide.content_payload.elkonin_boxes or (answer_chars | length) %}
+
+  <div class="lesson-writing-encoding__dictation lesson-writing-encoding__dictation--word">
+    <div class="lesson-writing-encoding__student-note">
+      Students write on paper or a whiteboard.
+    </div>
+
+    <div class="lesson-writing-encoding__boxes">
+      {% for idx in range(box_count) %}
+      <div
+        class="lesson-writing-encoding__box"
+        :class="{ 'lesson-writing-encoding__box--revealed': revealed }">
+        {% if idx < answer_chars | length %}
+        <span
+          class="lesson-writing-encoding__box-letter"
+          x-show="revealed"
+          x-cloak>
+          {{ answer_chars[idx] }}
+        </span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
   {% endif %}
 
   {% if slide.content_payload.audio_prompt %}
@@ -64,8 +83,8 @@
     <button
       type="button"
       class="lesson-writing-encoding__button"
-      @click="revealed = !revealed">
-      Reveal Answer
+      @click="revealed = !revealed"
+      x-text="revealed ? 'Hide Answer' : 'Reveal Answer'">
     </button>
   </div>
   {% else %}
@@ -73,18 +92,9 @@
     <button
       type="button"
       class="lesson-writing-encoding__button"
-      @click="revealed = !revealed">
-      Reveal Answer
+      @click="revealed = !revealed"
+      x-text="revealed ? 'Hide Answer' : 'Reveal Answer'">
     </button>
-  </div>
-  {% endif %}
-
-  {% if slide.content_payload.display_mode != 'sentence' %}
-  <div
-    class="lesson-writing-encoding__reveal"
-    x-show="revealed"
-    :style='getResponsiveTextStyle({{ slide.content_payload.expected_answer | tojson }}, "word")'>
-    {{ slide.content_payload.expected_answer }}
   </div>
   {% endif %}
 </div>

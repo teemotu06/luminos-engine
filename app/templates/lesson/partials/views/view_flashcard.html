@@ -1,5 +1,5 @@
 <div class="lesson-flashcard">
-  {% if slide.content_payload.image %}
+  {% if slide.content_payload.image and slide.content_payload.front_text %}
   <div class="lesson-flashcard__image-wrap">
     <img
       class="lesson-flashcard__image"
@@ -12,12 +12,23 @@
     type="button"
     class="lesson-flashcard__card"
     @click="revealed = !revealed">
+    {% if slide.content_payload.image and not slide.content_payload.front_text %}
+    <img
+      class="lesson-flashcard__card-image"
+      x-show="!revealed"
+      x-cloak
+      src="{{ slide.content_payload.image }}"
+      alt="{{ slide.slide_title }}">
+    {% endif %}
+
+    {% if slide.content_payload.front_text %}
     <span
       class="lesson-flashcard__text"
       x-show="!revealed"
       :style='getResponsiveTextStyle({{ slide.content_payload.front_text | tojson }}, "word")'>
       {{ slide.content_payload.front_text }}
     </span>
+    {% endif %}
 
     <span
       class="lesson-flashcard__text"

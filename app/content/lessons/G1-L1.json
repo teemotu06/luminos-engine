@@ -41,16 +41,95 @@
           "slide_title": "Listen and Write",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/review_sat.mp3",
-            "prompt_text": "Listen and write the sound or word.",
-            "dictated_text": "s · sat",
-            "expected_answer": "s · sat",
+            "audio_prompt": "/static/audio/block02_sat.mp3",
+            "dictated_text": "sat",
+            "expected_answer": "sat",
             "elkonin_boxes": 3
           },
-          "teacher_cue": "Say each item once, then replay once if needed.",
-          "expected_response": "Students write the heard sound and word accurately.",
-          "correction_move": "Repeat once, then segment orally if students hesitate.",
-          "observation_note": "Watch whether students can encode from sound without prompt chaining.",
+          "teacher_cue": "Play sat once, then replay only if needed before checking.",
+          "expected_response": "Students write sat accurately on paper or a whiteboard.",
+          "correction_move": "Replay sat once, then segment /s/ /a/ /t/ orally before checking.",
+          "observation_note": "Watch whether students can hold the full word from sound to print.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_tap.mp3",
+            "dictated_text": "tap",
+            "expected_answer": "tap",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Play tap once, then replay only if needed before checking.",
+          "expected_response": "Students write tap accurately on paper or a whiteboard.",
+          "correction_move": "Replay tap once, then segment /t/ /a/ /p/ orally before checking.",
+          "observation_note": "Watch for sound order errors and missing final consonants.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_map.mp3",
+            "dictated_text": "map",
+            "expected_answer": "map",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Play map once, then replay only if needed before checking.",
+          "expected_response": "Students write map accurately on paper or a whiteboard.",
+          "correction_move": "Replay map once, then segment /m/ /a/ /p/ orally before checking.",
+          "observation_note": "Watch whether students can encode the medial vowel cleanly.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-04",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_bat.mp3",
+            "dictated_text": "bat",
+            "expected_answer": "bat",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Play bat once, then replay only if needed before checking.",
+          "expected_response": "Students write bat accurately on paper or a whiteboard.",
+          "correction_move": "Replay bat once, then segment /b/ /a/ /t/ orally before checking.",
+          "observation_note": "Watch for initial consonant confusion when students encode from hearing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-05",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_hit.mp3",
+            "dictated_text": "hit",
+            "expected_answer": "hit",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Play hit once, then replay only if needed before checking.",
+          "expected_response": "Students write hit accurately on paper or a whiteboard.",
+          "correction_move": "Replay hit once, then segment /h/ /i/ /t/ orally before checking.",
+          "observation_note": "Watch whether students can hold a different medial vowel without drift.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -90,17 +169,98 @@
         {
           "slide_id": "04-01",
           "block_id": "04",
-          "slide_title": "Warm Up Lesson Words",
-          "view_type": "audio_prompt",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
           "content_payload": {
-            "audio_file": "/static/audio/pat_sat.mp3",
-            "prompt_text": "Say the words after me.",
-            "reveal_text": "pat · sat"
+            "front_text": "",
+            "back_text": "pie",
+            "image": "/static/images/vocab/pie.svg",
+            "audio": "/static/audio/block04_pie.mp3"
           },
-          "teacher_cue": "Introduce the words orally before any print-heavy work.",
-          "expected_response": "Students repeat each word clearly and with meaning.",
-          "correction_move": "Model the word, confirm meaning, then repeat in a short oral sentence.",
-          "observation_note": "Watch for oral vocabulary gaps before decoding begins.",
+          "teacher_cue": "Show the picture, elicit meaning, then model pie orally before revealing print.",
+          "expected_response": "Students say pie orally and connect it to the image before seeing print.",
+          "correction_move": "Model pie, gesture to the image, use a short oral sentence, then recheck.",
+          "observation_note": "Watch whether students know the meaning from the image before print appears.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "pizza",
+            "image": "/static/images/vocab/pizza.svg",
+            "audio": "/static/audio/block04_pizza.mp3"
+          },
+          "teacher_cue": "Use the picture first, model pizza aloud, then reveal the written word.",
+          "expected_response": "Students say pizza orally and attach the word to the image.",
+          "correction_move": "Model pizza, confirm meaning with the image, then repeat chorally.",
+          "observation_note": "Watch whether students respond from meaning first rather than guessing from print.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "puzzle",
+            "image": "/static/images/vocab/puzzle.svg",
+            "audio": "/static/audio/block04_puzzle.mp3"
+          },
+          "teacher_cue": "Lead with the picture, teach puzzle orally, then reveal the word.",
+          "expected_response": "Students say puzzle and connect the meaning to the image.",
+          "correction_move": "Model puzzle, gesture to the picture parts, then repeat and reveal print.",
+          "observation_note": "Watch whether the oral word is secure before the written form appears.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "price",
+            "image": "/static/images/vocab/price.svg",
+            "audio": "/static/audio/block04_price.mp3"
+          },
+          "teacher_cue": "Discuss the image, model price orally, then reveal print.",
+          "expected_response": "Students use price orally with meaning before seeing the written word.",
+          "correction_move": "Model price, point to the tag, use a short oral sentence, then reveal print.",
+          "observation_note": "Watch whether price is understood as meaning, not just repeated as sound.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "pirate",
+            "image": "/static/images/vocab/pirate.svg",
+            "audio": "/static/audio/block04_pirate.mp3"
+          },
+          "teacher_cue": "Start with the pirate picture, teach the word orally, then reveal print.",
+          "expected_response": "Students say pirate orally and connect it to the image first.",
+          "correction_move": "Model pirate, anchor meaning with the image, then repeat and reveal the word.",
+          "observation_note": "Watch whether the image helps students hold meaning before print.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -115,19 +275,78 @@
         {
           "slide_id": "05-01",
           "block_id": "05",
-          "slide_title": "Build pat",
+          "slide_title": "Build the Word",
           "view_type": "drag_letter",
           "content_payload": {
-            "prompt_text": "Build the word.",
             "target_word": "pat",
             "target_letters": ["p", "a", "t"],
-            "slots": ["", "", ""],
+            "slots": ["p", "a", "t"],
             "draggable_letters": ["a", "t", "p"]
           },
           "teacher_cue": "Say the sounds and build left to right.",
           "expected_response": "Students map each phoneme to the correct grapheme.",
           "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
           "observation_note": "Watch whether students can hold the phoneme sequence in order.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build the Word",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "pizza",
+            "target_letters": ["p", "i", "zz", "a"],
+            "slots": ["p", "i", "zz", "a"],
+            "draggable_letters": ["zz", "a", "p", "i"]
+          },
+          "teacher_cue": "Build the word from its sound parts left to right.",
+          "expected_response": "Students build pizza using the correct grapheme chunks.",
+          "correction_move": "Return to oral segmenting, then rebuild one unit at a time.",
+          "observation_note": "Watch whether students hold the double-z chunk as one unit.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build the Word",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "rack",
+            "target_letters": ["r", "a", "ck"],
+            "slots": ["r", "a", "ck"],
+            "draggable_letters": ["ck", "r", "a"]
+          },
+          "teacher_cue": "Build the word using the grapheme chunks you hear.",
+          "expected_response": "Students build rack as r | a | ck.",
+          "correction_move": "Model the final chunk ck as one unit, then rebuild left to right.",
+          "observation_note": "Watch whether students treat ck as a single build unit.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build the Word",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "pineapple",
+            "target_letters": ["p", "i", "n", "e", "a", "pp", "le"],
+            "slots": ["p", "i", "n", "e", "a", "pp", "le"],
+            "draggable_letters": ["le", "p", "a", "pp", "i", "n", "e"]
+          },
+          "teacher_cue": "Build the longer word carefully from left to right in chunks.",
+          "expected_response": "Students build pineapple using the full sequence of grapheme units.",
+          "correction_move": "Chunk the word orally, then rebuild one unit at a time from the start.",
+          "observation_note": "Watch whether students can sustain the full sequence across a longer build.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -173,7 +392,8 @@
             "text_content": "Pat sat. Pat sat at a mat.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Who sat?"
+            "comprehension_prompt": "Who sat at the mat?",
+            "image": "/static/images/readers/pat-sat-mat.svg"
           },
           "teacher_cue": "Read for accuracy first, then reread for fluency.",
           "expected_response": "Students read the connected text with increasing fluency.",
@@ -224,15 +444,54 @@
           "view_type": "read_respond",
           "content_payload": {
             "display_mode": "spot_part",
-            "prompt_text": "What part stays the same?",
             "displayed_words": ["pat", "sat"],
             "highlighted_chunk": "at",
-            "support_text": "The part at stays the same in pat and sat."
+            "support_text": "Notice how at stays the same in both words."
           },
           "teacher_cue": "Say both words and notice the part that stayed the same.",
           "expected_response": "Students identify at as the repeated part.",
           "correction_move": "Model pat and sat, point to at in both words, then repeat.",
           "observation_note": "Watch whether students can notice the repeated chunk without guessing.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Spot the Part",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": ["map", "tap"],
+            "highlighted_chunk": "ap",
+            "support_text": "The part ap repeats across both words."
+          },
+          "teacher_cue": "Read both words and notice the repeated ending.",
+          "expected_response": "Students identify ap as the repeated part.",
+          "correction_move": "Model map and tap, point to ap in both words, then repeat.",
+          "observation_note": "Watch whether students can notice the shared pattern inside the full words.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Spot the Part",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": ["rack", "back"],
+            "highlighted_chunk": "ack",
+            "support_text": "The chunk ack stays the same while the first sound changes."
+          },
+          "teacher_cue": "Read both words and notice the repeated chunk inside each full word.",
+          "expected_response": "Students identify ack as the repeated part.",
+          "correction_move": "Model rack and back, point to ack in both words, then repeat.",
+          "observation_note": "Watch whether students can hold the longer repeated chunk across both words.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -250,6 +509,7 @@
           "slide_title": "Meaning Close",
           "view_type": "quick_check",
           "content_payload": {
+            "display_mode": "lesson_close",
             "title": "Close the Lesson",
             "check_items": [
               { "label": "What sound did we learn today?", "phoneme": "/a/" },
@@ -264,8 +524,8 @@
           "correction_move": "Prompt with the first word or model a full answer, then repeat.",
           "observation_note": "Watch whether students can move from decoding to meaning.",
           "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         }
       ]

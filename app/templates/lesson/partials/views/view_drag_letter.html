@@ -1,21 +1,12 @@
 <div
   class="lesson-drag-letter"
-  x-data='dragBuild({{ slide.content_payload.target_letters | tojson }})'
+  x-data='dragBuild({{ (slide.content_payload.slots or slide.content_payload.target_letters) | tojson }})'
 >
-  <div class="lesson-drag-letter__header">
-    <div class="lesson-drag-letter__eyebrow">Word Building</div>
-
-    {% if slide.content_payload.prompt_text %}
-    <h3 class="lesson-drag-letter__prompt">
-      {{ slide.content_payload.prompt_text }}
-    </h3>
-    {% endif %}
-  </div>
-
+  {% set slot_units = slide.content_payload.slots or slide.content_payload.target_letters %}
   <div class="lesson-drag-letter__board">
     <div class="lesson-drag-letter__target-row">
       <div class="lesson-drag-letter__slots" aria-label="Word slots">
-        {% for idx in range(slide.content_payload.target_letters | length) %}
+        {% for idx in range(slot_units | length) %}
           <template x-if="placedItems[{{ idx }}] !== undefined">
             <button
               type="button"
@@ -33,8 +24,6 @@
         {% endfor %}
       </div>
     </div>
-
-    <div class="lesson-drag-letter__bank-label">Letter Bank</div>
 
     <div class="lesson-drag-letter__cards">
       {% for letter in slide.content_payload.draggable_letters %}
@@ -54,7 +43,7 @@
       type="button"
       class="lesson-drag-letter__button"
       @click="check()"
-      :disabled="placedItems.length !== {{ slide.content_payload.target_letters | length }}">
+      :disabled="placedItems.length !== {{ slot_units | length }}">
       Check
     </button>
 
@@ -73,8 +62,11 @@
     </button>
   </div>
 
-  <div class="lesson-drag-letter__feedback" x-show="checked">
-    <span x-show="isCorrect()">Correct</span>
-    <span x-show="!isCorrect()">Target word: {{ slide.content_payload.target_word }}</span>
+  <div
+    class="lesson-drag-letter__feedback"
+    x-show="checked"
+    :class="isCorrect() ? 'lesson-drag-letter__feedback--correct' : 'lesson-drag-letter__feedback--incorrect'">
+    <span x-show="isCorrect()">Built correctly</span>
+    <span x-show="!isCorrect()">Check the build and try again</span>
   </div>
 </div>

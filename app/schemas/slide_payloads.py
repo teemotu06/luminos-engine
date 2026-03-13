@@ -32,7 +32,7 @@ class MinimalPairPayload(BaseModel):
 
 
 class DragLetterPayload(BaseModel):
-    prompt_text: str
+    prompt_text: Optional[str] = None
     target_word: str
     target_letters: List[str] = Field(default_factory=list)
     slots: List[str] = Field(default_factory=list)

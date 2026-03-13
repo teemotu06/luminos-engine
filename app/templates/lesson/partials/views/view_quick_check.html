@@ -1,14 +1,13 @@
 {% if slide.content_payload.display_mode == 'lesson_close' %}
+{% set mark_labels = {
+  'secure': 'Secure',
+  'shaky': 'Shaky',
+  'missed': 'Missed',
+  'skipped': 'Skipped'
+} %}
 <div
   class="lesson-close"
   x-data="{ activeIndex: 0, total: {{ slide.content_payload.check_items | length }} }">
-  <div class="lesson-close__header">
-    <div class="lesson-close__eyebrow">Meaning-Making Close</div>
-    <div class="lesson-close__title">
-      {{ slide.content_payload.title or slide.slide_title }}
-    </div>
-  </div>
-
   {% if slide.content_payload.check_items %}
   <div class="lesson-close__stage">
     {% for item in slide.content_payload.check_items %}
@@ -41,11 +40,6 @@
       Back
     </button>
 
-    <div
-      class="lesson-close__status"
-      x-text="`Prompt ${activeIndex + 1} of ${total}`">
-    </div>
-
     <button
       type="button"
       class="lesson-close__button"
@@ -55,11 +49,37 @@
   </div>
   {% endif %}
 
-  {% if slide.content_payload.notes_field %}
-  <div class="lesson-close__note">
-    {{ slide.content_payload.notes_field }}
+  <div class="lesson-close__marking" x-show="activeIndex === total - 1" x-cloak>
+    <div class="lesson-close__mark-options">
+      {% for option in slide.content_payload.marking_options %}
+      <button
+        type="button"
+        class="lesson-close__mark-button"
+        data-status="{{ option }}"
+        :class="{ 'lesson-close__mark-button--active': getSlideMark({{ slide_index }}) === '{{ option }}' }"
+        @click="setSlideMark({{ slide_index }}, '{{ option }}')">
+        {{ mark_labels[option] | default(option | title) }}
+      </button>
+      {% endfor %}
+    </div>
+
+    <button
+      type="button"
+      class="lesson-close__complete"
+      :disabled="!getSlideMark({{ slide_index }})"
+      @click="submitSlideMark({
+        slideIndex: {{ slide_index }},
+        slideId: '{{ slide.slide_id }}',
+        blockId: '{{ slide.block_id }}',
+        completed: true
+      })">
+      Complete Lesson
+    </button>
+
+    <div class="lesson-close__result" x-show="lastMarkingResult">
+      <span x-text="lastMarkingResult"></span>
+    </div>
   </div>
-  {% endif %}
 </div>
 {% else %}
 {% set mark_labels = {

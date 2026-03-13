@@ -1,45 +1,56 @@
-<aside class="teacher-overlay" x-show="!presentationMode">
-  <div class="teacher-overlay__section">
-    <div class="teacher-overlay__label">Block</div>
-    <div class="teacher-overlay__value">
-      {{ slide.block_id }} · {{ block.label }}
+{% set is_lesson_close = slide.view_type == 'quick_check' and slide.content_payload.display_mode == 'lesson_close' %}
+<aside class="teacher-overlay{% if is_lesson_close %} teacher-overlay--compact{% endif %}" x-show="!presentationMode">
+  <div class="teacher-overlay__header">
+    <div class="teacher-overlay__meta">
+      <div class="teacher-overlay__meta-primary">{{ slide.block_id }} · {{ block.label }}</div>
+      <div class="teacher-overlay__meta-secondary">{{ slide.slide_title }}</div>
     </div>
   </div>
 
-  <div class="teacher-overlay__section">
-    <div class="teacher-overlay__label">Slide</div>
-    <div class="teacher-overlay__value">
-      {{ slide.slide_title }}
-    </div>
-  </div>
-
-  <div class="teacher-overlay__section">
+  <div class="teacher-overlay__section teacher-overlay__section--primary">
     <div class="teacher-overlay__label">Teacher cue</div>
-    <div class="teacher-overlay__value">
+    <div class="teacher-overlay__value teacher-overlay__value--primary">
       {{ slide.teacher_cue }}
     </div>
   </div>
 
-  <div class="teacher-overlay__section">
-    <div class="teacher-overlay__label">Expected response</div>
-    <div class="teacher-overlay__value">
-      {{ slide.expected_response }}
+  {% if is_lesson_close %}
+  <div class="teacher-overlay__section teacher-overlay__section--guidance">
+    <div class="teacher-overlay__guidance-grid">
+      <div class="teacher-overlay__guidance-item">
+        <div class="teacher-overlay__label">Watch for</div>
+        <div class="teacher-overlay__value">
+          {{ slide.observation_note }}
+        </div>
+      </div>
     </div>
   </div>
+  {% else %}
+  <div class="teacher-overlay__section teacher-overlay__section--guidance">
+    <div class="teacher-overlay__guidance-grid">
+      <div class="teacher-overlay__guidance-item">
+        <div class="teacher-overlay__label">Expected</div>
+        <div class="teacher-overlay__value">
+          {{ slide.expected_response }}
+        </div>
+      </div>
 
-  <div class="teacher-overlay__section">
-    <div class="teacher-overlay__label">Correction move</div>
-    <div class="teacher-overlay__value">
-      {{ slide.correction_move }}
-    </div>
-  </div>
+      <div class="teacher-overlay__guidance-item">
+        <div class="teacher-overlay__label">Correction</div>
+        <div class="teacher-overlay__value">
+          {{ slide.correction_move }}
+        </div>
+      </div>
 
-  <div class="teacher-overlay__section">
-    <div class="teacher-overlay__label">Observation note</div>
-    <div class="teacher-overlay__value">
-      {{ slide.observation_note }}
+      <div class="teacher-overlay__guidance-item">
+        <div class="teacher-overlay__label">Watch for</div>
+        <div class="teacher-overlay__value">
+          {{ slide.observation_note }}
+        </div>
+      </div>
     </div>
   </div>
+  {% endif %}
 
   {% if slide.korean_interference_flag %}
   <div class="teacher-overlay__section teacher-overlay__section--flag">
@@ -68,7 +79,7 @@
     'low_automaticity': 'Low Auto.'
   } %}
   <div class="teacher-overlay__section teacher-overlay__section--marking">
-    <div class="teacher-overlay__label">Mark to record</div>
+    <div class="teacher-overlay__label">Mark</div>
     <div class="teacher-overlay__mark-options">
       {% for option in slide.marking_options %}
       <button
@@ -104,7 +115,7 @@
 
     <textarea
       class="teacher-overlay__note"
-      rows="3"
+      rows="2"
       placeholder="Teacher note…"
       x-model="ensureSlideMark({{ slide_index }}).teacherNote"></textarea>
 
