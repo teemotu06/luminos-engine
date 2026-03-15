@@ -322,14 +322,16 @@ Current notable behavior by view:
 - supports audio replay
 - reveal toggles within the card
 - used for phoneme review and vocabulary warm-up
-- supports optional post-reveal blend-through mode (`blend_units`)
+- supports optional blend-through mode via `blend_units` in `content_payload`
   - `blend_units`: ordered array of `{grapheme, phoneme?, audio?}` objects
-  - when present: a blend row and Blend button appear on the back side after reveal
-  - clicking Blend steps left-to-right through each grapheme unit, highlighting each in sequence
-  - per-unit audio plays if `audio` is set on the unit; word audio plays at the end
-  - implemented in `runVocabBlend()` in `lesson.js`
-  - uses the shared `activeBlendIndex` state (resets on slide navigation)
-  - slides without `blend_units` are unaffected
+  - when present, the grapheme unit row IS the word display on the back side — no separate full-word span
+  - the blend row receives the same `getResponsiveTextStyle()` as the normal word, so units scale identically
+  - units render in IBM Plex Mono, `font-weight: 700`, `font-size: inherit` — one integrated teaching surface
+  - a Blend button appears in the actions row only after reveal (outside the card `<button>` to avoid nested button violation)
+  - clicking Blend calls `runVocabBlend()` in `lesson.js`, stepping left-to-right through units via `activeBlendIndex`
+  - per-unit audio plays if set; full-word audio plays after the last unit
+  - `activeBlendIndex` resets on slide navigation
+  - slides without `blend_units` render the normal `lesson-flashcard__text` span, entirely unaffected
 
 ### `audio_prompt`
 - supports audio play / replay
