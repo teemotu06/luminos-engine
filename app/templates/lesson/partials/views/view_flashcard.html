@@ -30,25 +30,31 @@
     </span>
     {% endif %}
 
-    <div class="lesson-flashcard__back" x-show="revealed" x-cloak>
-      <span
-        class="lesson-flashcard__text"
-        :style='getResponsiveTextStyle({{ (slide.content_payload.back_text or slide.content_payload.front_text) | tojson }}, "word")'>
-        {{ slide.content_payload.back_text or slide.content_payload.front_text }}
-      </span>
+    {% set back_word = slide.content_payload.back_text or slide.content_payload.front_text %}
 
-      {% if slide.content_payload.blend_units %}
-      <div class="lesson-flashcard__blend-row">
-        {% for unit in slide.content_payload.blend_units %}
-        <span
-          class="lesson-flashcard__blend-unit"
-          :class="{ 'lesson-flashcard__blend-unit--active': activeBlendIndex === {{ loop.index0 }} }">
-          {{ unit.grapheme }}
-        </span>
-        {% endfor %}
-      </div>
-      {% endif %}
+    {% if slide.content_payload.blend_units %}
+    {% set blend_json = slide.content_payload.model_dump().blend_units | tojson %}
+    <div
+      class="lesson-flashcard__blend-row"
+      x-show="revealed"
+      x-cloak
+      :style='getResponsiveTextStyle({{ back_word | tojson }}, "word")'>
+      {% for unit in slide.content_payload.blend_units %}
+      <span
+        class="lesson-flashcard__blend-unit"
+        :class="{ 'lesson-flashcard__blend-unit--active': activeBlendIndex === {{ loop.index0 }} }">
+        {{ unit.grapheme }}
+      </span>
+      {% endfor %}
     </div>
+    {% else %}
+    <span
+      class="lesson-flashcard__text"
+      x-show="revealed"
+      :style='getResponsiveTextStyle({{ back_word | tojson }}, "word")'>
+      {{ back_word }}
+    </span>
+    {% endif %}
 
     <span class="lesson-flashcard__hint" x-show="!revealed" x-cloak>tap to reveal</span>
   </button>
@@ -64,7 +70,6 @@
     {% endif %}
 
     {% if slide.content_payload.blend_units %}
-    {% set blend_json = slide.content_payload.model_dump().blend_units | tojson %}
     <button
       type="button"
       class="lesson-flashcard__button lesson-flashcard__button--blend"

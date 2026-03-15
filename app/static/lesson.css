@@ -629,31 +629,20 @@
   background: rgba(182, 102, 54, 0.12);
 }
 
-.lesson-flashcard__back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-}
-
 .lesson-flashcard__blend-row {
   display: flex;
-  gap: 4px;
+  gap: 2px;
   align-items: baseline;
   justify-content: center;
-  width: 100%;
-  border-top: 1px solid rgba(15, 15, 15, 0.07);
-  padding-top: 14px;
+  line-height: 1.1;
 }
 
 .lesson-flashcard__blend-unit {
   font-family: var(--font-mono);
-  font-size: 42px;
-  font-weight: 600;
-  line-height: 1;
-  padding: 6px 10px;
-  border-radius: 10px;
+  font-size: inherit;
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 8px;
   color: var(--c-text);
   background: transparent;
   transition: background 160ms ease, color 160ms ease;
