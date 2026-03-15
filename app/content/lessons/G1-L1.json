@@ -175,7 +175,11 @@
             "front_text": "",
             "back_text": "pie",
             "image": "/static/images/vocab/pie.svg",
-            "audio": "/static/audio/block04_pie.mp3"
+            "audio": "/static/audio/block04_pie.mp3",
+            "blend_units": [
+              {"grapheme": "p", "phoneme": "/p/", "audio": null},
+              {"grapheme": "ie", "phoneme": "/aɪ/", "audio": null}
+            ]
           },
           "teacher_cue": "Show the picture, elicit meaning, then model pie orally before revealing print.",
           "expected_response": "Students say pie orally and connect it to the image before seeing print.",

@@ -619,6 +619,47 @@
   background: rgba(26, 92, 110, 0.09);
 }
 
+.lesson-flashcard__button--blend {
+  border-color: rgba(182, 102, 54, 0.3);
+  background: rgba(182, 102, 54, 0.06);
+  color: var(--accent);
+}
+
+.lesson-flashcard__button--blend:hover {
+  background: rgba(182, 102, 54, 0.12);
+}
+
+.lesson-flashcard__blend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.lesson-flashcard__blend-row {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+}
+
+.lesson-flashcard__blend-unit {
+  font-family: var(--font-mono);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: var(--c-text);
+  background: transparent;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.lesson-flashcard__blend-unit--active {
+  background: var(--accent);
+  color: #fff;
+}
+
 
 /* ==========================================================
    MINIMAL PAIR

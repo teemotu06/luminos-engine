@@ -4,11 +4,18 @@ from typing_extensions import Literal
 from pydantic import BaseModel, Field
 
 
+class BlendUnit(BaseModel):
+    grapheme: str
+    phoneme: Optional[str] = None
+    audio: Optional[str] = None
+
+
 class FlashcardPayload(BaseModel):
     front_text: str
     back_text: Optional[str] = None
     image: Optional[str] = None
     audio: Optional[str] = None
+    blend_units: Optional[List[BlendUnit]] = None
 
 
 class AudioPromptPayload(BaseModel):

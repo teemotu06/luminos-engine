@@ -256,6 +256,43 @@
       return this.ensureQuickCheckItem(slideIndex, itemIndex).errorTags.includes(errorTag);
     },
 
+    runVocabBlend(units = [], wordAudioSrc) {
+      if (this.blendTimer) {
+        clearTimeout(this.blendTimer);
+        this.blendTimer = null;
+      }
+
+      this.activeBlendIndex = -1;
+
+      if (!units.length) {
+        if (wordAudioSrc) this.playAudio(wordAudioSrc);
+        return;
+      }
+
+      const stepDuration = 800;
+      let currentIndex = 0;
+
+      const runStep = () => {
+        this.activeBlendIndex = currentIndex;
+        const unit = units[currentIndex];
+        if (unit.audio) this.playAudio(unit.audio);
+
+        if (currentIndex < units.length - 1) {
+          currentIndex += 1;
+          this.blendTimer = window.setTimeout(runStep, stepDuration);
+          return;
+        }
+
+        this.blendTimer = window.setTimeout(() => {
+          this.activeBlendIndex = -1;
+          if (wordAudioSrc) this.playAudio(wordAudioSrc);
+          this.blendTimer = null;
+        }, stepDuration);
+      };
+
+      runStep();
+    },
+
     runBlendSequence(phonemeParts = [], blendAudioSrc, wordAudioSrc) {
       if (this.blendTimer) {
         clearTimeout(this.blendTimer);
