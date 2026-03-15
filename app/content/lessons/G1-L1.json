@@ -199,7 +199,13 @@
             "front_text": "",
             "back_text": "pizza",
             "image": "/static/images/vocab/pizza.svg",
-            "audio": "/static/audio/block04_pizza.mp3"
+            "audio": "/static/audio/block04_pizza.mp3",
+            "blend_units": [
+              {"grapheme": "p", "phoneme": "/p/", "audio": null},
+              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
+              {"grapheme": "zz", "phoneme": "/z/", "audio": null},
+              {"grapheme": "a", "phoneme": "/ə/", "audio": null}
+            ]
           },
           "teacher_cue": "Use the picture first, model pizza aloud, then reveal the written word.",
           "expected_response": "Students say pizza orally and attach the word to the image.",
@@ -219,7 +225,13 @@
             "front_text": "",
             "back_text": "puzzle",
             "image": "/static/images/vocab/puzzle.svg",
-            "audio": "/static/audio/block04_puzzle.mp3"
+            "audio": "/static/audio/block04_puzzle.mp3",
+            "blend_units": [
+              {"grapheme": "p", "phoneme": "/p/", "audio": null},
+              {"grapheme": "u", "phoneme": "/ʌ/", "audio": null},
+              {"grapheme": "zz", "phoneme": "/z/", "audio": null},
+              {"grapheme": "le", "phoneme": "/əl/", "audio": null}
+            ]
           },
           "teacher_cue": "Lead with the picture, teach puzzle orally, then reveal the word.",
           "expected_response": "Students say puzzle and connect the meaning to the image.",
@@ -239,7 +251,13 @@
             "front_text": "",
             "back_text": "price",
             "image": "/static/images/vocab/price.svg",
-            "audio": "/static/audio/block04_price.mp3"
+            "audio": "/static/audio/block04_price.mp3",
+            "blend_units": [
+              {"grapheme": "p", "phoneme": "/p/", "audio": null},
+              {"grapheme": "r", "phoneme": "/r/", "audio": null},
+              {"grapheme": "i", "phoneme": "/aɪ/", "audio": null},
+              {"grapheme": "ce", "phoneme": "/s/", "audio": null}
+            ]
           },
           "teacher_cue": "Discuss the image, model price orally, then reveal print.",
           "expected_response": "Students use price orally with meaning before seeing the written word.",
@@ -259,7 +277,13 @@
             "front_text": "",
             "back_text": "pirate",
             "image": "/static/images/vocab/pirate.svg",
-            "audio": "/static/audio/block04_pirate.mp3"
+            "audio": "/static/audio/block04_pirate.mp3",
+            "blend_units": [
+              {"grapheme": "p", "phoneme": "/p/", "audio": null},
+              {"grapheme": "i", "phoneme": "/aɪ/", "audio": null},
+              {"grapheme": "r", "phoneme": "/r/", "audio": null},
+              {"grapheme": "ate", "phoneme": "/ɪt/", "audio": null}
+            ]
           },
           "teacher_cue": "Start with the pirate picture, teach the word orally, then reveal print.",
           "expected_response": "Students say pirate orally and connect it to the image first.",
