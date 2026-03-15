@@ -65,11 +65,15 @@ Notes:
 
 ## 6. Current route surface
 
-Implemented lesson routes:
+Implemented routes:
 - `GET /`
-  - simple health payload
+  - redirects to `/lesson/`
 - `GET /lesson/`
-  - returns lesson index JSON
+  - teacher-facing lesson launcher page (HTML, Jinja2 template)
+  - lists all lessons loaded from `app/content/lessons/`
+  - grouped by `unit_id` using Jinja2 `groupby`
+  - each row shows: lesson ID, label (split from title on `': '`), target pattern, status badge, Open link
+  - template: `app/templates/lesson/index.html`
 - `GET /lesson/{lesson_id}`
   - renders the full lesson shell
   - creates a new lesson attempt
