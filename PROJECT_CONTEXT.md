@@ -600,10 +600,33 @@ This repo does not currently implement:
 - Block 10 now completes the lesson through the close flow
 - some content references local static audio paths that may still require real media files to exist for full live playback
 
-## 22. Current practical summary
+## 22. Lesson launcher page (`GET /lesson/`)
+
+The launcher is the entry point for teachers navigating between lessons.
+
+Template: `app/templates/lesson/index.html`
+
+Current layout:
+- Page header: uppercase meta label ("LUMINOS · Lesson Library"), serif h1, muted intro line
+- Stats row: total lessons · groups · sounds (computed from `target_pattern` splits via Jinja2 namespace)
+- Groups separated by 0.5px `<hr>` dividers
+- Each group: uppercase "GROUP" kicker + serif 20px group title (`unit_id`)
+- Lesson cards in responsive auto-fill grid (`minmax(200px, 1fr)`, gap 12px)
+
+Lesson card anatomy:
+- Top row: lesson ID (uppercase sans) + 7px status dot (green = ready, blue-gray = other)
+- Phoneme pills: each item from `target_pattern.split(' · ')` in monospace, `#eeedfe` bg / `#3c3489` text, 4px radius
+- Italic serif subtitle (lesson label, split from `title` on `': '`)
+- "Open lesson →" in muted blue (`#6b7fa3`)
+
+Static delivery note:
+- `styles.css` is loaded with `?v=2` in `base.html` to bust browser cache after the launcher redesign
+
+## 23. Current practical summary
 
 The system is currently operating as:
-- one FastAPI-rendered lesson shell
+- teacher-facing lesson launcher at `/lesson/` (HTML, grouped by unit)
+- one FastAPI-rendered lesson shell per lesson
 - one fully rendered lesson in the DOM
 - Alpine-managed in-page classroom navigation
 - teacher-guided instruction with presentation mode
@@ -611,6 +634,7 @@ The system is currently operating as:
 - one implemented sample lesson covering Blocks 01 through 10
 
 The current product state is a functional classroom lesson runner with:
+- teacher-facing lesson library entry point
 - content validation
 - fixed block architecture
 - implemented view library
