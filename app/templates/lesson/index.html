@@ -1,33 +1,67 @@
 {% extends "base.html" %}
 
-{% block title %}Lessons — LUMINOS{% endblock %}
+{% block title %}Lesson Library — LUMINOS{% endblock %}
 
 {% block content %}
+
+{# ── Pre-compute stats ─────────────────────────────────── #}
+{% set ns = namespace(sound_count=0) %}
+{% for lesson in lessons %}
+  {% if lesson.target_pattern %}
+    {% set ns.sound_count = ns.sound_count + (lesson.target_pattern.split(' · ') | length) %}
+  {% endif %}
+{% endfor %}
+{% set group_count = lessons | groupby('unit_id') | list | length %}
+
 <div class="page launcher">
 
   <header class="launcher__header">
-    <div class="launcher__wordmark">LUMINOS</div>
-    <h1 class="launcher__title">Lesson Engine</h1>
+    <div class="launcher__meta-label">LUMINOS · Lesson Library</div>
+    <h1 class="launcher__title">Lesson Library</h1>
+    <p class="launcher__intro">Open a lesson by unit and launch directly into teacher mode.</p>
+    <div class="launcher__stats">
+      <div class="launcher__stat">
+        <span class="launcher__stat-number">{{ lessons | length }}</span>
+        <span class="launcher__stat-label">Lessons</span>
+      </div>
+      <div class="launcher__stat">
+        <span class="launcher__stat-number">{{ group_count }}</span>
+        <span class="launcher__stat-label">Groups</span>
+      </div>
+      <div class="launcher__stat">
+        <span class="launcher__stat-number">{{ ns.sound_count }}</span>
+        <span class="launcher__stat-label">Sounds</span>
+      </div>
+    </div>
   </header>
 
   <main class="launcher__main">
     {% for unit_id, unit_lessons in lessons | groupby('unit_id') %}
+    {% set grouped_lessons = unit_lessons | list %}
+    {% if not loop.first %}<hr class="launcher__divider">{% endif %}
     <section class="launcher__group">
-      <h2 class="launcher__group-label">{{ unit_id }}</h2>
-      <div class="launcher__lesson-list">
-        {% for lesson in unit_lessons %}
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Group</div>
+        <h2 class="launcher__group-title">{{ unit_id }}</h2>
+      </div>
+      <div class="launcher__lesson-grid">
+        {% for lesson in grouped_lessons %}
         {% set parts = lesson.title.split(': ') %}
         {% set lesson_label = parts[1] if parts | length > 1 else lesson.title %}
         <a class="launcher__lesson-card" href="/lesson/{{ lesson.lesson_id }}">
-          <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
-          <span class="launcher__lesson-label">{{ lesson_label }}</span>
+          <div class="launcher__card-top">
+            <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
+            <span class="launcher__status-dot launcher__status-dot--{{ lesson.content_pack_status }}"></span>
+          </div>
           {% if lesson.target_pattern %}
-          <span class="launcher__lesson-pattern">{{ lesson.target_pattern }}</span>
+          <div class="launcher__phoneme-pills">
+            {% for phoneme in lesson.target_pattern.split(' · ') %}
+            <span class="launcher__phoneme-pill">{{ phoneme }}</span>
+            {% endfor %}
+          </div>
           {% endif %}
-          <span class="launcher__lesson-status launcher__lesson-status--{{ lesson.content_pack_status }}">
-            {{ lesson.content_pack_status }}
-          </span>
-          <span class="launcher__lesson-cta">Open →</span>
+          <span class="launcher__lesson-subtitle">{{ lesson_label }}</span>
+          <span class="launcher__lesson-cta">Open lesson →</span>
         </a>
         {% endfor %}
       </div>
