@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Lessons — LUMINOS{% endblock %}
+
+{% block content %}
+<div class="page launcher">
+
+  <header class="launcher__header">
+    <div class="launcher__wordmark">LUMINOS</div>
+    <h1 class="launcher__title">Lesson Engine</h1>
+  </header>
+
+  <main class="launcher__main">
+    {% for unit_id, unit_lessons in lessons | groupby('unit_id') %}
+    <section class="launcher__group">
+      <h2 class="launcher__group-label">{{ unit_id }}</h2>
+      <div class="launcher__lesson-list">
+        {% for lesson in unit_lessons %}
+        {% set parts = lesson.title.split(': ') %}
+        {% set lesson_label = parts[1] if parts | length > 1 else lesson.title %}
+        <a class="launcher__lesson-card" href="/lesson/{{ lesson.lesson_id }}">
+          <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
+          <span class="launcher__lesson-label">{{ lesson_label }}</span>
+          {% if lesson.target_pattern %}
+          <span class="launcher__lesson-pattern">{{ lesson.target_pattern }}</span>
+          {% endif %}
+          <span class="launcher__lesson-status launcher__lesson-status--{{ lesson.content_pack_status }}">
+            {{ lesson.content_pack_status }}
+          </span>
+          <span class="launcher__lesson-cta">Open →</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </main>
+
+</div>
+{% endblock %}

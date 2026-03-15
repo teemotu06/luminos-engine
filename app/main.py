@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.db import Base, SessionLocal, engine
@@ -21,4 +22,4 @@ def startup():
 
 @app.get("/")
 def root():
-    return {"status": "ok", "app": "LUMINOS Lesson Engine"}
+    return RedirectResponse(url="/lesson/")

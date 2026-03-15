@@ -15,18 +15,15 @@ templates = Jinja2Templates(directory="app/templates")
 
 
 @router.get("/")
-def lesson_index():
+def lesson_index(request: Request):
     lessons = load_all_lessons()
-    return {
-        "lessons": [
-            {
-                "lesson_id": lesson.lesson_id,
-                "title": lesson.title,
-                "unit_id": lesson.unit_id,
-            }
-            for lesson in lessons
-        ]
-    }
+    return templates.TemplateResponse(
+        "lesson/index.html",
+        {
+            "request": request,
+            "lessons": lessons,
+        },
+    )
 
 
 @router.get("/{lesson_id}")
