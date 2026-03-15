@@ -30,12 +30,25 @@
     </span>
     {% endif %}
 
-    <span
-      class="lesson-flashcard__text"
-      x-show="revealed"
-      :style='getResponsiveTextStyle({{ (slide.content_payload.back_text or slide.content_payload.front_text) | tojson }}, "word")'>
-      {{ slide.content_payload.back_text or slide.content_payload.front_text }}
-    </span>
+    <div class="lesson-flashcard__back" x-show="revealed" x-cloak>
+      <span
+        class="lesson-flashcard__text"
+        :style='getResponsiveTextStyle({{ (slide.content_payload.back_text or slide.content_payload.front_text) | tojson }}, "word")'>
+        {{ slide.content_payload.back_text or slide.content_payload.front_text }}
+      </span>
+
+      {% if slide.content_payload.blend_units %}
+      <div class="lesson-flashcard__blend-row">
+        {% for unit in slide.content_payload.blend_units %}
+        <span
+          class="lesson-flashcard__blend-unit"
+          :class="{ 'lesson-flashcard__blend-unit--active': activeBlendIndex === {{ loop.index0 }} }">
+          {{ unit.grapheme }}
+        </span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
 
     <span class="lesson-flashcard__hint" x-show="!revealed" x-cloak>tap to reveal</span>
   </button>
@@ -50,6 +63,18 @@
     </button>
     {% endif %}
 
+    {% if slide.content_payload.blend_units %}
+    {% set blend_json = slide.content_payload.model_dump().blend_units | tojson %}
+    <button
+      type="button"
+      class="lesson-flashcard__button lesson-flashcard__button--blend"
+      x-show="revealed"
+      x-cloak
+      @click='runVocabBlend({{ blend_json }}, {{ slide.content_payload.audio | tojson }})'>
+      Blend
+    </button>
+    {% endif %}
+
     <button
       type="button"
       class="lesson-flashcard__button lesson-flashcard__button--reveal"
@@ -57,25 +82,4 @@
       <span x-text="revealed ? 'Hide' : 'Reveal'">Reveal</span>
     </button>
   </div>
-
-  {% if slide.content_payload.blend_units %}
-  {% set blend_json = slide.content_payload.model_dump().blend_units | tojson %}
-  <div class="lesson-flashcard__blend" x-show="revealed" x-cloak>
-    <div class="lesson-flashcard__blend-row">
-      {% for unit in slide.content_payload.blend_units %}
-      <span
-        class="lesson-flashcard__blend-unit"
-        :class="{ 'lesson-flashcard__blend-unit--active': activeBlendIndex === {{ loop.index0 }} }">
-        {{ unit.grapheme }}
-      </span>
-      {% endfor %}
-    </div>
-    <button
-      type="button"
-      class="lesson-flashcard__button lesson-flashcard__button--blend"
-      @click='runVocabBlend({{ blend_json }}, {{ slide.content_payload.audio | tojson }})'>
-      Blend
-    </button>
-  </div>
-  {% endif %}
 </div>

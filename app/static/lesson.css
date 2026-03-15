@@ -629,18 +629,22 @@
   background: rgba(182, 102, 54, 0.12);
 }
 
-.lesson-flashcard__blend {
+.lesson-flashcard__back {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding-top: 4px;
+  gap: 14px;
+  width: 100%;
 }
 
 .lesson-flashcard__blend-row {
   display: flex;
   gap: 4px;
   align-items: baseline;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid rgba(15, 15, 15, 0.07);
+  padding-top: 14px;
 }
 
 .lesson-flashcard__blend-unit {
