@@ -322,6 +322,14 @@ Current notable behavior by view:
 - supports audio replay
 - reveal toggles within the card
 - used for phoneme review and vocabulary warm-up
+- supports optional post-reveal blend-through mode (`blend_units`)
+  - `blend_units`: ordered array of `{grapheme, phoneme?, audio?}` objects
+  - when present: a blend row and Blend button appear on the back side after reveal
+  - clicking Blend steps left-to-right through each grapheme unit, highlighting each in sequence
+  - per-unit audio plays if `audio` is set on the unit; word audio plays at the end
+  - implemented in `runVocabBlend()` in `lesson.js`
+  - uses the shared `activeBlendIndex` state (resets on slide navigation)
+  - slides without `blend_units` are unaffected
 
 ### `audio_prompt`
 - supports audio play / replay
@@ -429,6 +437,12 @@ Current state:
 - audio models the word
 - reveal shows print
 - not markable
+- all five slides include `blend_units` for optional post-reveal blend-through:
+  - `pie` → `p | ie`
+  - `pizza` → `p | i | zz | a`
+  - `puzzle` → `p | u | zz | le`
+  - `price` → `p | r | i | ce`
+  - `pirate` → `p | i | r | ate`
 
 ### Block 05: Word Building
 
