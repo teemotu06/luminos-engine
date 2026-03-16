@@ -393,141 +393,93 @@ Current notable behavior by view:
   - final close rating appears only at the end
   - complete lesson button submits the final result
 
-## 16. Current sample lesson (`G1-L1`) block-by-block behavior
+## 16. Current lessons
 
-### Block 01: Flashcard Phoneme Review
+Two lessons currently implemented. Both at `content_pack_status: draft`.
 
-Current state:
-- one flashcard slide
-- reviews known sound `s`
-- front shows grapheme
-- reveal shows `/s/`
-- audio available
-- not markable
+### G1-L1 — Group 1, Lesson 1: s, a, t
 
-### Block 02: Listening & Write Review
+Block-by-block:
 
-Current state:
-- five separate word dictation slides
-- words:
-  - `sat`
-  - `tap`
-  - `map`
-  - `bat`
-  - `hit`
-- each slide:
-  - one word only
-  - audio play / replay
-  - students write on paper or whiteboard
-  - answer reveals inside the same writing boxes
-- markable
+**Block 01** — Flashcard Phoneme Review (1 slide)
+- Establishes the phoneme-grapheme card routine (Lesson 1 has no prior phonemes to review)
+- Not markable
 
-### Block 03: New Sound Introduction
+**Block 02** — Listening & Write Review (1 slide)
+- Encoding routine demo with single sound `s` using 1 Elkonin box
+- Not markable (routine setup, not prior-word review)
 
-Current state:
-- one flashcard slide introducing `/a/`
-- markable
-- Korean interference flag active for `vowel_quality`
+**Block 03** — New Sound Introduction (3 slides)
+- Introduces `/s/` (slide 03-01), `/æ/` (slide 03-02), `/t/` (slide 03-03)
+- Each markable: secure / shaky / missed
 
-### Block 04: Vocabulary Warm-Up
+**Block 04** — Vocabulary Warm-Up (3 flashcard slides with `blend_units`)
+- `sat` → `s | a | t`
+- `at` → `a | t`
+- `a` → `a`
+- Not markable
 
-Current state:
-- five image-led flashcard slides
-- words:
-  - `pie`
-  - `pizza`
-  - `puzzle`
-  - `price`
-  - `pirate`
-- front side is image-first
-- audio models the word
-- reveal shows print
-- not markable
-- all five slides include `blend_units` for optional post-reveal blend-through:
-  - `pie` → `p | ie`
-  - `pizza` → `p | i | zz | a`
-  - `puzzle` → `p | u | zz | le`
-  - `price` → `p | r | i | ce`
-  - `pirate` → `p | i | r | ate`
+**Block 05** — Word Building (3 drag-letter slides)
+- `sat`, `at`, `as`
+- Markable
 
-### Block 05: Word Building
+**Block 06** — Sentence Bridge (1 slide)
+- Sentence: `I sat.` — read_respond, sentence mode, font controls
+- Markable
 
-Current state:
-- four drag-letter slides
-- words:
-  - `pat`
-  - `pizza`
-  - `rack`
-  - `pineapple`
-- uses unit/chunk slot logic
-- examples:
-  - `pat` -> `p | a | t`
-  - `rack` -> `r | a | ck`
-  - `pizza` -> `p | i | zz | a`
-  - `pineapple` -> `p | i | n | e | a | pp | le`
-- generic visible title
-- cleaner UI with no answer leakage
-- markable
+**Block 07** — Decodable Reader (1 slide)
+- Text: `I sat.` — reader mode, comprehension prompt
+- Markable
 
-### Block 06: Sentence Bridge
+**Block 08** — Encoding & Writing (3 slides)
+- Dictation: `sat` (3 boxes), `at` (2 boxes), `a` (1 box)
+- Markable
 
-Current state:
-- one sentence-level read/respond slide
-- reads `Pat sat.`
-- font controls enabled
-- markable
+**Block 09** — Morpheme Moment (1 slide)
+- spot_part: `sat` / `at`, highlighted chunk `at`
+- Not markable
 
-### Block 07: Decodable Reader / Fluency
+**Block 10** — Meaning-Making Close (1 slide)
+- lesson_close flow, 4 oral prompts, phoneme counting `/s/ /æ/ /t/`
 
-Current state:
-- one reader-mode read/respond slide
-- text:
-  - `Pat sat. Pat sat at a mat.`
-- text remains the primary focus
-- supporting illustration appears to the side
-- comprehension prompt:
-  - `Who sat at the mat?`
-- font controls enabled
-- markable
+---
 
-### Block 08: Encoding & Writing
+### G1-L2 — Group 1, Lesson 2: i
 
-Current state:
-- one sentence-level writing/encoding slide
-- dictated sentence:
-  - `Pat sat.`
-- reveal shows answer on a sentence board
-- markable
+Block-by-block:
 
-### Block 09: Morpheme Moment
+**Block 01** — Flashcard Phoneme Review (3 slides)
+- Reviews `s`, `a`, `t` from G1-L1
 
-Current state:
-- three read/respond `spot_part` slides
-- whole-word horizontal comparison cards
-- repeated chunk highlighted inside full words
-- current comparisons:
-  - `pat / sat` with `at`
-  - `map / tap` with `ap`
-  - `rack / back` with `ack`
-- no check button
-- passive guided pattern-noticing format
-- not markable
+**Block 02** — Listening & Write Review (3 slides)
+- Encoding review: prior words using s · a · t pool
 
-### Block 10: Meaning-Making Close
+**Block 03** — New Sound Introduction (1 slide)
+- Introduces `/ɪ/` (grapheme `i`)
+- Markable
 
-Current state:
-- one `quick_check` slide using `display_mode: "lesson_close"`
-- prompt sequence:
-  - one oral prompt at a time
-  - back / next / restart controls
-- final close mark is hidden until the end of the prompt flow
-- final statuses:
-  - `secure`
-  - `shaky`
-  - `missed`
-- `Complete Lesson` button submits final mark with `completed: true`
-- overlay is compact for this block
-- not markable in the overlay
+**Block 04** — Vocabulary Warm-Up (4 flashcard slides with `blend_units`)
+- Decodable words using s · a · t · i pool
+
+**Block 05** — Word Building (3 drag-letter slides)
+- Markable
+
+**Block 06** — Sentence Bridge (3 slides)
+- read_respond, sentence mode
+
+**Block 07** — Decodable Reader (1 slide)
+- reader mode
+
+**Block 08** — Encoding & Writing (3 slides)
+- Markable
+
+**Block 09** — Morpheme Moment (1 slide)
+- spot_part pattern noticing
+
+**Block 10** — Meaning-Making Close (1 slide)
+- lesson_close flow
+
+See Section 16 for per-lesson block detail. Block 05–10 structure is consistent across lessons: drag-letter word building, sentence bridge, decodable reader, encoding/writing, morpheme moment, lesson_close.
 
 ## 17. Current marking model
 
@@ -581,7 +533,7 @@ Current audio references exist in lesson content, but this repo currently docume
 This repo currently behaves as:
 - a standalone lesson engine
 - a lesson delivery and teacher-marking system
-- a single-lesson sample implementation (`G1-L1`) with full 10-block coverage
+- two lesson implementations (`G1-L1`, `G1-L2`) each with full 10-block coverage
 
 This repo does not currently implement:
 - student-device mode
@@ -619,8 +571,15 @@ Lesson card anatomy:
 - Italic serif subtitle (lesson label, split from `title` on `': '`)
 - "Open lesson →" in muted blue (`#6b7fa3`)
 
+Back link:
+- `lesson_header.html` has a `← Lesson Library` back link above the breadcrumb meta row, hidden in presentation mode
+- Styled with `.lesson-header__back`: 12px Inter, `var(--c-text-muted)`, no underline, `margin-bottom: 12px`
+
+Launcher title color:
+- `.launcher__title` uses `var(--accent)` (terracotta `#b66636`) — not `var(--c-text)`
+
 Static delivery note:
-- `styles.css` is loaded with `?v=2` in `base.html` to bust browser cache after the launcher redesign
+- `styles.css` is loaded with `?v=4` in `base.html` to bust browser cache
 
 ## 23. Current practical summary
 
@@ -634,7 +593,8 @@ The system is currently operating as:
 - one implemented sample lesson covering Blocks 01 through 10
 
 The current product state is a functional classroom lesson runner with:
-- teacher-facing lesson library entry point
+- teacher-facing lesson library entry point (← Lesson Library back link on detail page)
+- two draft lessons: G1-L1 (s·a·t) and G1-L2 (i)
 - content validation
 - fixed block architecture
 - implemented view library
