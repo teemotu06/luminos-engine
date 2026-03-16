@@ -330,7 +330,7 @@ Current notable behavior by view:
   - `blend_units`: ordered array of `{grapheme, phoneme?, audio?}` objects
   - when present, the grapheme unit row IS the word display on the back side — no separate full-word span
   - the blend row receives the same `getResponsiveTextStyle()` as the normal word, so units scale identically
-  - units render in IBM Plex Mono, `font-weight: 700`, `font-size: inherit` — one integrated teaching surface
+  - units render in `var(--font-serif)` (Cormorant Garamond), `font-weight: 700`, `font-size: inherit` — one integrated teaching surface
   - a Blend button appears in the actions row only after reveal (outside the card `<button>` to avoid nested button violation)
   - clicking Blend calls `runVocabBlend()` in `lesson.js`, stepping left-to-right through units via `activeBlendIndex`
   - per-unit audio plays if set; full-word audio plays after the last unit
@@ -362,6 +362,7 @@ Current notable behavior by view:
 
 ### `read_respond`
 - supports sentence mode
+  - sentence mode uses `var(--font-serif)` and warm cream gradient background to match reader mode visually
 - supports reader mode
 - supports spot-part mode
 - supports blend-reveal-next flow for word blending
