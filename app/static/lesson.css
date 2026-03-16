@@ -638,7 +638,7 @@
 }
 
 .lesson-flashcard__blend-unit {
-  font-family: var(--font-mono);
+  font-family: var(--font-serif);
   font-size: inherit;
   font-weight: 700;
   padding: 0 4px;
@@ -778,9 +778,11 @@
   display: grid;
   place-items: center;
   text-align: center;
+  font-family: var(--font-serif);
   font-size: 72px;
   font-weight: 700;
   line-height: 1.2;
+  background: linear-gradient(160deg, #fffdf9 0%, #fefcf8 100%);
 }
 
 .lesson-read-respond__reader {

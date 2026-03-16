@@ -3,7 +3,7 @@
 {% block title %}{{ lesson.title }}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=4">
 <script defer src="{{ url_for('static', path='lesson.js') }}?v=2"></script>
 {% endblock %}
 
