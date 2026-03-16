@@ -1,0 +1,1322 @@
+{
+  "lesson_id": "G2-L11",
+  "unit_id": "G2",
+  "target_pattern": "/w/ · w",
+  "title": "Group 2, Lesson 11: The w Sound",
+  "cumulative_phoneme_pool": [
+    "s",
+    "a",
+    "t",
+    "i",
+    "p",
+    "n",
+    "c",
+    "k",
+    "e",
+    "h",
+    "r",
+    "m",
+    "d",
+    "w"
+  ],
+  "korean_interference_active": [
+    "ɪ_vs_iː",
+    "r_vs_l"
+  ],
+  "content_pack_status": "draft",
+  "lesson_note": null,
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "s",
+            "back_text": "/s/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "/a/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "t",
+            "back_text": "/t/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "i",
+            "back_text": "/ɪ/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "p",
+            "back_text": "/p/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "n",
+            "back_text": "/n/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "c/k",
+            "back_text": "/k/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-08",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "e",
+            "back_text": "/e/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-09",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "h",
+            "back_text": "/h/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-10",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-11",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "m",
+            "back_text": "/m/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-12",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "d",
+            "back_text": "/d/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e, h, r, m, d cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "did",
+            "expected_answer": "did",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate did, red, den, man, trek.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "red",
+            "expected_answer": "red",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate did, red, den, man, trek.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "den",
+            "expected_answer": "den",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate did, red, den, man, trek.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-04",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "man",
+            "expected_answer": "man",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate did, red, den, man, trek.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-05",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "trek",
+            "expected_answer": "trek",
+            "elkonin_boxes": 4
+          },
+          "teacher_cue": "Dictate did, red, den, man, trek.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /w/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "w",
+            "back_text": "/w/",
+            "audio": null
+          },
+          "phoneme": "/w/",
+          "grapheme": "w",
+          "articulation_note": "Voiced labiovelar approximant. Lips round tightly as if saying /uː/, then open rapidly as the vowel follows. Back of tongue raised. Voice on. /w/ only appears at the start of a syllable.",
+          "teacher_cue": null,
+          "expected_response": "Students produce /w/ accurately.",
+          "correction_move": "Model /w/ and repeat chorally.",
+          "korean_interference_note": "⚑ Continue /r/ production check. This is the final lesson of Group 2 — confirm all students have established the tongue-curl for /r/ before entering Group 3.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "sight_words_introduced": [
+        "was",
+        "with",
+        "we"
+      ],
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — win",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "win",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "To come first — top-1,000 ✓.",
+          "expected_response": "Students say win and connect it to meaning.",
+          "correction_move": "Model win with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — wet",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "wet",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Covered in water. Show a wet object.",
+          "expected_response": "Students say wet and connect it to meaning.",
+          "correction_move": "Model wet with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — wick",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "wick",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ck",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "The thread in a candle.",
+          "expected_response": "Students say wick and connect it to meaning.",
+          "correction_move": "Model wick with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — swim",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "swim",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "To move through water. Mime swimming.",
+          "expected_response": "Students say swim and connect it to meaning.",
+          "correction_move": "Model swim with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — swept",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "swept",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "pt",
+                "phoneme": "/pt/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Past tense of sweep.",
+          "expected_response": "Students say swept and connect it to meaning.",
+          "correction_move": "Model swept with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — twin",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "twin",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "One of two born together.",
+          "expected_response": "Students say twin and connect it to meaning.",
+          "correction_move": "Model twin with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — wind",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "wind",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Moving air.",
+          "expected_response": "Students say wind and connect it to meaning.",
+          "correction_move": "Model wind with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — swam",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "swam",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Past tense of swim.",
+          "expected_response": "Students say swam and connect it to meaning.",
+          "correction_move": "Model swam with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — wink",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "wink",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "To close one eye briefly. Demonstrate.",
+          "expected_response": "Students say wink and connect it to meaning.",
+          "correction_move": "Model wink with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build the Word — win",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "win",
+            "target_letters": [
+              "w",
+              "i",
+              "n"
+            ],
+            "slots": [
+              "w",
+              "i",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "i",
+              "w"
+            ]
+          },
+          "teacher_cue": "Build win left to right.",
+          "expected_response": "Students build win accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build the Word — wet",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "wet",
+            "target_letters": [
+              "w",
+              "e",
+              "t"
+            ],
+            "slots": [
+              "w",
+              "e",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "e",
+              "w"
+            ]
+          },
+          "teacher_cue": "Build wet left to right.",
+          "expected_response": "Students build wet accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build the Word — swim",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "swim",
+            "target_letters": [
+              "s",
+              "w",
+              "i",
+              "m"
+            ],
+            "slots": [
+              "s",
+              "w",
+              "i",
+              "m"
+            ],
+            "draggable_letters": [
+              "m",
+              "i",
+              "w",
+              "s"
+            ]
+          },
+          "teacher_cue": "Build swim left to right.",
+          "expected_response": "Students build swim accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build the Word — twin",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "twin",
+            "target_letters": [
+              "t",
+              "w",
+              "i",
+              "n"
+            ],
+            "slots": [
+              "t",
+              "w",
+              "i",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "i",
+              "w",
+              "t"
+            ]
+          },
+          "teacher_cue": "Build twin left to right.",
+          "expected_response": "Students build twin accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build the Word — wink",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "wink",
+            "target_letters": [
+              "w",
+              "i",
+              "n",
+              "k"
+            ],
+            "slots": [
+              "w",
+              "i",
+              "n",
+              "k"
+            ],
+            "draggable_letters": [
+              "k",
+              "n",
+              "i",
+              "w"
+            ]
+          },
+          "teacher_cue": "Build wink left to right.",
+          "expected_response": "Students build wink accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — We can swim.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We can swim.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "Students read.",
+          "expected_response": "Students read 'We can swim.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — We can swim and win.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We can swim and win.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "and connecting two verbs.",
+          "expected_response": "Students read 'We can swim and win.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — The twin was wet. We swim with him.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The twin was wet. We swim with him.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "Two sentences. Was — past tense. With — new sight word.",
+          "expected_response": "Students read 'The twin was wet. We swim with him.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — He swept the den. I was with the men.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He swept the den. I was with the men.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "Two sentences. Past tense swept and was used together.",
+          "expected_response": "Students read 'He swept the den. I was with the men.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ],
+      "block_note": "⚑ Confirm /r/ production in swept, wind before reading."
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "reader_title": "Lesson 11 Reader — We Can Win",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Lesson 11 Reader — We Can Win",
+          "view_type": "read_respond",
+          "content_payload": {
+            "reader_sentences": [
+              "We can swim.",
+              "We can swim and win.",
+              "The twin was wet.",
+              "We swim with him.",
+              "He swept the den.",
+              "I was with the men.",
+              "The cat was in the den.",
+              "He had a red wick.",
+              "We ran and I swam."
+            ],
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "image": null,
+            "after_reading_prompt": "Who swam? Who swept the den? Was the cat in the den? Tell me what happened.",
+            "text_content": "We can swim.\nWe can swim and win.\nThe twin was wet.\nWe swim with him.\nHe swept the den.\nI was with the men.\nThe cat was in the den.\nHe had a red wick.\nWe ran and I swam.",
+            "comprehension_prompt": "Who swam? Who swept the den? Was the cat in the den? Tell me what happened."
+          },
+          "teacher_cue": "9 sentences. Echo read, then choral.",
+          "expected_response": "Students read all sentences accurately.",
+          "correction_move": "Echo read sentence by sentence, then choral.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write — win",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "win",
+            "expected_answer": "win",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate win. Students segment and write.",
+          "expected_response": "Students write win accurately.",
+          "correction_move": "Segment phonemes, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write — wet",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "wet",
+            "expected_answer": "wet",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate wet. Students segment and write.",
+          "expected_response": "Students write wet accurately.",
+          "correction_move": "Segment phonemes, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write — swim",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "swim",
+            "expected_answer": "swim",
+            "elkonin_boxes": 4
+          },
+          "teacher_cue": "Dictate swim. Students segment and write.",
+          "expected_response": "Students write swim accurately.",
+          "correction_move": "Segment phonemes, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Pattern Noticing",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "swim",
+              "twin",
+              "swept"
+            ],
+            "highlighted_chunk": null,
+            "support_text": "Compare swim / twin / swept. Ask: 'These words all start with two consonants together — what do you notice?' (onset clusters — seed for Group 8 cluster work.)"
+          },
+          "teacher_cue": "Compare swim / twin / swept. Ask: 'These words all start with two consonants together — what do you notice?' (onset clusters — seed for Group 8 cluster work.)",
+          "expected_response": "Students notice the shared or changed pattern.",
+          "correction_move": "Say each word slowly, point to the pattern.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Meaning Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "What sound did we learn today?",
+                "phoneme": "/w/"
+              },
+              {
+                "label": "Which w word do you remember: win, wet, or swim?",
+                "phoneme": null
+              },
+              {
+                "label": "What can you read now that you could not read before?",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "L0 — Emergent Literacy — is now complete. Students exiting L0 can decode all CVC words using the 14-phoneme pool (s a t i p n c k e h r m d w). The /r/ Korean interference point is established and monitored. Students are ready for Group 3.",
+            "marking_options": [
+              "secure",
+              "shaky",
+              "missed"
+            ]
+          },
+          "teacher_cue": "Close with oral recall and meaning-making.",
+          "expected_response": "Students respond orally using lesson vocabulary.",
+          "correction_move": "Model a response and invite repetition.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

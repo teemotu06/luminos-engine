@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 from sqlalchemy.orm import Session
@@ -11,10 +12,18 @@ from app.services.slide_payload_validator import validate_slide_payloads
 
 
 LESSONS_DIR = Path("app/content/lessons")
+LESSON_ID_RE = re.compile(r"^G(?P<group>\d+)-L(?P<lesson>\d+)$")
 
 
 def get_lesson_file_path(lesson_id: str) -> Path:
     return LESSONS_DIR / f"{lesson_id}.json"
+
+
+def lesson_sort_key(lesson_id: str) -> tuple[int, int, str]:
+    match = LESSON_ID_RE.match(lesson_id)
+    if match:
+        return (int(match.group("group")), int(match.group("lesson")), lesson_id)
+    return (10**9, 10**9, lesson_id)
 
 
 def read_lesson_data(lesson_id: str) -> dict:
@@ -42,7 +51,7 @@ def load_lesson(lesson_id: str) -> Lesson:
 
 def list_lesson_ids() -> list[str]:
     lesson_files = LESSONS_DIR.glob("*.json")
-    return sorted(file.stem for file in lesson_files)
+    return sorted((file.stem for file in lesson_files), key=lesson_sort_key)
 
 
 def load_all_lessons() -> list[Lesson]:

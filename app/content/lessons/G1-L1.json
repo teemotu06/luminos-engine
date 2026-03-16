@@ -16,8 +16,8 @@
           "slide_title": "Phoneme-Grapheme Cards Routine",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "Letters make sounds",
-            "back_text": "We will check sounds every lesson."
+            "front_text": "First lesson: no review yet. Move to the next block.",
+            "back_text": "First lesson: no review yet. Move to the next block."
           },
           "teacher_cue": "Introduce the phoneme-grapheme card routine. Explain that a letter makes a sound and every lesson begins by checking what students know.",
           "expected_response": "Students attend to the routine and understand that print maps to sound.",
@@ -66,7 +66,8 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "s",
-            "back_text": "/s/"
+            "back_text": "/s/",
+            "audio": "/static/audio/phonemes/sound_s.mp3"
           },
           "teacher_cue": "Make a snake sound — ssssss. Feel the air on your hand.",
           "expected_response": "Students produce /s/ as a steady hiss.",
@@ -84,7 +85,8 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "a",
-            "back_text": "/æ/"
+            "back_text": "/æ/",
+            "audio": "/static/audio/phonemes/sound_a.mp3"
           },
           "teacher_cue": "Open your mouth wide like a doctor visit — aaaa.",
           "expected_response": "Students produce short /æ/ with an open mouth and low tongue.",
@@ -102,7 +104,8 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "t",
-            "back_text": "/t/"
+            "back_text": "/t/",
+            "audio": "/static/audio/phonemes/sound_t.mp3"
           },
           "teacher_cue": "Tap the roof of your mouth and let it pop — t! t! t!",
           "expected_response": "Students produce /t/ with a clean sharp release.",
@@ -127,6 +130,7 @@
           "content_payload": {
             "front_text": "",
             "back_text": "sat",
+            "image": "/static/images/vocab/sat.png",
             "blend_units": [
               { "grapheme": "s", "phoneme": "/s/", "audio": null },
               { "grapheme": "a", "phoneme": "/æ/", "audio": null },
@@ -150,6 +154,7 @@
           "content_payload": {
             "front_text": "",
             "back_text": "at",
+            "image": "/static/images/vocab/at.png",
             "blend_units": [
               { "grapheme": "a", "phoneme": "/æ/", "audio": null },
               { "grapheme": "t", "phoneme": "/t/", "audio": null }
@@ -172,11 +177,12 @@
           "content_payload": {
             "front_text": "",
             "back_text": "a",
+            "image": "/static/images/vocab/a.png",
             "blend_units": [
               { "grapheme": "a", "phoneme": "/æ/", "audio": null }
             ]
           },
-          "teacher_cue": "Teach a as the indefinite article with simple examples like one cat. Students will hear this word often in sentences.",
+          "teacher_cue": "Point to the picture and model: a jar. Explain that a is used before one thing. Students repeat the phrase together.",
           "expected_response": "Students recognise a as a high-frequency useful word.",
           "correction_move": "Model a in a short phrase, then repeat and reveal print.",
           "observation_note": "Sight word active this lesson alongside the and I.",
@@ -265,7 +271,8 @@
           "content_payload": {
             "text_content": "I sat.",
             "display_mode": "sentence",
-            "show_font_controls": true
+            "show_font_controls": true,
+            "image": "/static/images/readers/i_sat.png"
           },
           "teacher_cue": "Lesson 1 has only one meaningful sentence at this stage. Establish the sentence reading routine, not test volume.",
           "expected_response": "Students read I sat. with one-to-one word tracking.",
@@ -291,7 +298,8 @@
             "text_content": "I sat.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "How many words did you read? Point to each one."
+            "comprehension_prompt": "How many words did you read? Point to each one.",
+            "image": "/static/images/readers/i_sat.png"
           },
           "teacher_cue": "Track print left to right and match spoken words to written words.",
           "expected_response": "Students read the single sentence and point to each word.",

@@ -1,0 +1,1085 @@
+{
+  "lesson_id": "G2-L7",
+  "unit_id": "G2",
+  "target_pattern": "/h/ · h",
+  "title": "Group 2, Lesson 7: The h Sound",
+  "cumulative_phoneme_pool": [
+    "s",
+    "a",
+    "t",
+    "i",
+    "p",
+    "n",
+    "c",
+    "k",
+    "e",
+    "h"
+  ],
+  "korean_interference_active": [
+    "ɪ_vs_iː"
+  ],
+  "content_pack_status": "draft",
+  "lesson_note": null,
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "s",
+            "back_text": "/s/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "/a/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "t",
+            "back_text": "/t/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "i",
+            "back_text": "/ɪ/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "p",
+            "back_text": "/p/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "n",
+            "back_text": "/n/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "c/k",
+            "back_text": "/k/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-08",
+          "block_id": "01",
+          "slide_title": "Review Known Sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "e",
+            "back_text": "/e/",
+            "audio": null
+          },
+          "teacher_cue": "Flash s, a, t, i, p, n, c/k, e cards.",
+          "expected_response": "Students produce all phonemes accurately.",
+          "correction_move": "Re-drill any missed phoneme.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "pet",
+            "expected_answer": "pet",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate pet, net, step, ten, cat.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "net",
+            "expected_answer": "net",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate pet, net, step, ten, cat.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "step",
+            "expected_answer": "step",
+            "elkonin_boxes": 4
+          },
+          "teacher_cue": "Dictate pet, net, step, ten, cat.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-04",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "ten",
+            "expected_answer": "ten",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate pet, net, step, ten, cat.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-05",
+          "block_id": "02",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "cat",
+            "expected_answer": "cat",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate pet, net, step, ten, cat.",
+          "expected_response": "Students write all words accurately.",
+          "correction_move": "Segment missed word phoneme by phoneme, then rewrite.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /h/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "h",
+            "back_text": "/h/",
+            "audio": null
+          },
+          "phoneme": "/h/",
+          "grapheme": "h",
+          "articulation_note": "Voiceless glottal fricative. Air flows from the lungs through the open vocal tract — no contact between articulators. /h/ only appears at the start of a syllable in English.",
+          "teacher_cue": null,
+          "expected_response": "Students produce /h/ accurately.",
+          "correction_move": "Model /h/ and repeat chorally.",
+          "korean_interference_note": null,
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "sight_words_introduced": [
+        "he"
+      ],
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — hit",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "hit",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "To strike — top-1,000 ✓. Tap the desk gently.",
+          "expected_response": "Students say hit and connect it to meaning.",
+          "correction_move": "Model hit with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — hat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "hat",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "A head covering. Show or mime wearing a hat.",
+          "expected_response": "Students say hat and connect it to meaning.",
+          "correction_move": "Model hat with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — has",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "has",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Third person singular of 'have' — top-1,000 ✓.",
+          "expected_response": "Students say has and connect it to meaning.",
+          "correction_move": "Model has with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — his",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "his",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Possessive pronoun — top-1,000 ✓.",
+          "expected_response": "Students say his and connect it to meaning.",
+          "correction_move": "Model his with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — hen",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "hen",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "A female chicken. Show a picture.",
+          "expected_response": "Students say hen and connect it to meaning.",
+          "correction_move": "Model hen with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — hip",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "hip",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "The joint between the torso and the leg. Point to your hip.",
+          "expected_response": "Students say hip and connect it to meaning.",
+          "correction_move": "Model hip with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up — hint",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "hint",
+            "image": null,
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "A small clue. 'I'll give you a hint.'",
+          "expected_response": "Students say hint and connect it to meaning.",
+          "correction_move": "Model hint with context, reveal print.",
+          "observation_note": null,
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build the Word — hit",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hit",
+            "target_letters": [
+              "h",
+              "i",
+              "t"
+            ],
+            "slots": [
+              "h",
+              "i",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "i",
+              "h"
+            ]
+          },
+          "teacher_cue": "Build hit left to right.",
+          "expected_response": "Students build hit accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build the Word — hat",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hat",
+            "target_letters": [
+              "h",
+              "a",
+              "t"
+            ],
+            "slots": [
+              "h",
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "a",
+              "h"
+            ]
+          },
+          "teacher_cue": "Build hat left to right.",
+          "expected_response": "Students build hat accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build the Word — hen",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hen",
+            "target_letters": [
+              "h",
+              "e",
+              "n"
+            ],
+            "slots": [
+              "h",
+              "e",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "e",
+              "h"
+            ]
+          },
+          "teacher_cue": "Build hen left to right.",
+          "expected_response": "Students build hen accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build the Word — hint",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hint",
+            "target_letters": [
+              "h",
+              "i",
+              "n",
+              "t"
+            ],
+            "slots": [
+              "h",
+              "i",
+              "n",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "n",
+              "i",
+              "h"
+            ]
+          },
+          "teacher_cue": "Build hint left to right.",
+          "expected_response": "Students build hint accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build the Word — heck",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "heck",
+            "target_letters": [
+              "h",
+              "e",
+              "ck"
+            ],
+            "slots": [
+              "h",
+              "e",
+              "ck"
+            ],
+            "draggable_letters": [
+              "ck",
+              "e",
+              "h"
+            ]
+          },
+          "teacher_cue": "Build heck left to right.",
+          "expected_response": "Students build heck accurately.",
+          "correction_move": "Segment phonemes orally, then rebuild.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — He sat.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He sat.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "Students read.",
+          "expected_response": "Students read 'He sat.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — He has a hat. The hen sat.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He has a hat. The hen sat.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "Two sentences. he introduces a character.",
+          "expected_response": "Students read 'He has a hat. The hen sat.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence — He has his hat. The hen has a hint.",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He has his hat. The hen has a hint.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": null
+          },
+          "teacher_cue": "Possessive his — already in Block 04. Building pronoun variety.",
+          "expected_response": "Students read 'He has his hat. The hen has a hint.' accurately.",
+          "correction_move": "Echo read, then choral read.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ],
+      "block_note": null
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "reader_title": "Lesson 7 Reader — He and the Hen",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Lesson 7 Reader — He and the Hen",
+          "view_type": "read_respond",
+          "content_payload": {
+            "reader_sentences": [
+              "He sat.",
+              "He has a hat.",
+              "The hen sat.",
+              "He hit the net.",
+              "His hat is a tan cap.",
+              "The hen sat at the step.",
+              "He has a hint."
+            ],
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "image": null,
+            "after_reading_prompt": "Who is the story about? What does he have? Where did the hen sit?",
+            "text_content": "He sat.\nHe has a hat.\nThe hen sat.\nHe hit the net.\nHis hat is a tan cap.\nThe hen sat at the step.\nHe has a hint.",
+            "comprehension_prompt": "Who is the story about? What does he have? Where did the hen sit?"
+          },
+          "teacher_cue": "7 sentences. Echo read, then choral.",
+          "expected_response": "Students read all sentences accurately.",
+          "correction_move": "Echo read sentence by sentence, then choral.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write — hit",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "hit",
+            "expected_answer": "hit",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate hit. Students segment and write.",
+          "expected_response": "Students write hit accurately.",
+          "correction_move": "Segment phonemes, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write — hat",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "hat",
+            "expected_answer": "hat",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate hat. Students segment and write.",
+          "expected_response": "Students write hat accurately.",
+          "correction_move": "Segment phonemes, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write — hen",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "hen",
+            "expected_answer": "hen",
+            "elkonin_boxes": 3
+          },
+          "teacher_cue": "Dictate hen. Students segment and write.",
+          "expected_response": "Students write hen accurately.",
+          "correction_move": "Segment phonemes, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Pattern Noticing",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "hit",
+              "hat",
+              "hint"
+            ],
+            "highlighted_chunk": null,
+            "support_text": "Compare hit / hat / hint. Ask: 'What is the same about all three?' (all start with h)"
+          },
+          "teacher_cue": "Compare hit / hat / hint. Ask: 'What is the same about all three?' (all start with h)",
+          "expected_response": "Students notice the shared or changed pattern.",
+          "correction_move": "Say each word slowly, point to the pattern.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Meaning Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              "He has a hat. He sat. The hen sat. Who is he? Picture him in your mind.",
+              "Tell me one thing about him — use a word you know.",
+              "He has a ___. He can ___. Finish the sentence."
+            ],
+            "notes_field": "Pronoun comprehension. Beginning character inference.",
+            "marking_options": [
+              "secure",
+              "shaky",
+              "missed"
+            ]
+          },
+          "teacher_cue": "Close with oral recall and meaning-making.",
+          "expected_response": "Students respond orally using lesson vocabulary.",
+          "correction_move": "Model a response and invite repetition.",
+          "observation_note": null,
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}
