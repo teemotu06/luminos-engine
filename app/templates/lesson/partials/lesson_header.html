@@ -4,6 +4,7 @@
     {% set title_segments = title_prefix.split(', ') %}
     {% set main_title = title_segments[0] %}
     {% set lesson_label = title_segments[1] if title_segments | length > 1 else title_prefix %}
+    <a class="lesson-header__back" href="/lesson/">← Lesson Library</a>
     <div class="lesson-header__meta-row">
         <p class="lesson-header__meta">
             <span class="lesson-header__meta-item">{{ lesson.unit_id }}</span>

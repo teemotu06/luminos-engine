@@ -102,6 +102,21 @@ body {
     overflow: hidden;
 }
 
+.lesson-header__back {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--c-text-muted);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+
+.lesson-header__back:hover {
+    color: var(--c-text);
+}
+
 .lesson-header__meta-row {
     margin-bottom: 14px;
 }
