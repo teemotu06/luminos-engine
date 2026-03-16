@@ -407,7 +407,7 @@ body {
     font-size: 42px;
     font-weight: 600;
     line-height: 1.08;
-    color: var(--c-text);
+    color: var(--accent);
 }
 
 .launcher__intro {
