@@ -3,8 +3,8 @@
   "unit_id": "G1",
   "target_pattern": "s · a · t",
   "title": "Group 1, Lesson 1: s, a, t",
-  "korean_interference_active": ["vowel_quality"],
-  "content_pack_status": "ready",
+  "korean_interference_active": [],
+  "content_pack_status": "draft",
   "blocks": {
     "01": {
       "block_id": "01",
@@ -13,17 +13,16 @@
         {
           "slide_id": "01-01",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Phoneme-Grapheme Cards Routine",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "s",
-            "back_text": "/s/",
-            "audio": "/static/audio/s.mp3"
+            "front_text": "Letters make sounds",
+            "back_text": "We will check sounds every lesson."
           },
-          "teacher_cue": "What sound?",
-          "expected_response": "Students respond /s/ quickly and cleanly.",
-          "correction_move": "Model /s/, students repeat three times, then recheck.",
-          "observation_note": "Watch for /sh/ drift and delayed retrieval.",
+          "teacher_cue": "Introduce the phoneme-grapheme card routine. Explain that a letter makes a sound and every lesson begins by checking what students know.",
+          "expected_response": "Students attend to the routine and understand that print maps to sound.",
+          "correction_move": "Re-model with one example card and restate the routine simply.",
+          "observation_note": "Lesson 1 has no prior phonemes to review. This block establishes the routine only.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -38,101 +37,20 @@
         {
           "slide_id": "02-01",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Encoding Routine Demo",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block02_sat.mp3",
-            "dictated_text": "sat",
-            "expected_answer": "sat",
-            "elkonin_boxes": 3
+            "dictated_text": "s",
+            "expected_answer": "s",
+            "elkonin_boxes": 1
           },
-          "teacher_cue": "Play sat once, then replay only if needed before checking.",
-          "expected_response": "Students write sat accurately on paper or a whiteboard.",
-          "correction_move": "Replay sat once, then segment /s/ /a/ /t/ orally before checking.",
-          "observation_note": "Watch whether students can hold the full word from sound to print.",
+          "teacher_cue": "There are no prior words yet. Use this block to establish the encoding routine with single sound-to-letter practice.",
+          "expected_response": "Students attempt to hear one sound and write one matching letter.",
+          "correction_move": "Model one sound slowly, show how to write the matching grapheme, then repeat together.",
+          "observation_note": "Lesson 1 Block 02 is routine setup, not prior-word review.",
           "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "02-02",
-          "block_id": "02",
-          "slide_title": "Listen and Write",
-          "view_type": "writing_encoding",
-          "content_payload": {
-            "audio_prompt": "/static/audio/block02_tap.mp3",
-            "dictated_text": "tap",
-            "expected_answer": "tap",
-            "elkonin_boxes": 3
-          },
-          "teacher_cue": "Play tap once, then replay only if needed before checking.",
-          "expected_response": "Students write tap accurately on paper or a whiteboard.",
-          "correction_move": "Replay tap once, then segment /t/ /a/ /p/ orally before checking.",
-          "observation_note": "Watch for sound order errors and missing final consonants.",
-          "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "02-03",
-          "block_id": "02",
-          "slide_title": "Listen and Write",
-          "view_type": "writing_encoding",
-          "content_payload": {
-            "audio_prompt": "/static/audio/block02_map.mp3",
-            "dictated_text": "map",
-            "expected_answer": "map",
-            "elkonin_boxes": 3
-          },
-          "teacher_cue": "Play map once, then replay only if needed before checking.",
-          "expected_response": "Students write map accurately on paper or a whiteboard.",
-          "correction_move": "Replay map once, then segment /m/ /a/ /p/ orally before checking.",
-          "observation_note": "Watch whether students can encode the medial vowel cleanly.",
-          "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "02-04",
-          "block_id": "02",
-          "slide_title": "Listen and Write",
-          "view_type": "writing_encoding",
-          "content_payload": {
-            "audio_prompt": "/static/audio/block02_bat.mp3",
-            "dictated_text": "bat",
-            "expected_answer": "bat",
-            "elkonin_boxes": 3
-          },
-          "teacher_cue": "Play bat once, then replay only if needed before checking.",
-          "expected_response": "Students write bat accurately on paper or a whiteboard.",
-          "correction_move": "Replay bat once, then segment /b/ /a/ /t/ orally before checking.",
-          "observation_note": "Watch for initial consonant confusion when students encode from hearing.",
-          "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "02-05",
-          "block_id": "02",
-          "slide_title": "Listen and Write",
-          "view_type": "writing_encoding",
-          "content_payload": {
-            "audio_prompt": "/static/audio/block02_hit.mp3",
-            "dictated_text": "hit",
-            "expected_answer": "hit",
-            "elkonin_boxes": 3
-          },
-          "teacher_cue": "Play hit once, then replay only if needed before checking.",
-          "expected_response": "Students write hit accurately on paper or a whiteboard.",
-          "correction_move": "Replay hit once, then segment /h/ /i/ /t/ orally before checking.",
-          "observation_note": "Watch whether students can hold a different medial vowel without drift.",
-          "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         }
       ]
@@ -144,18 +62,53 @@
         {
           "slide_id": "03-01",
           "block_id": "03",
-          "slide_title": "Introduce /a/",
+          "slide_title": "Introduce /s/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "s",
+            "back_text": "/s/"
+          },
+          "teacher_cue": "Make a snake sound — ssssss. Feel the air on your hand.",
+          "expected_response": "Students produce /s/ as a steady hiss.",
+          "correction_move": "Model /s/ again with airflow emphasis, then repeat chorally.",
+          "observation_note": "Voiceless alveolar fricative. Tongue tip near the ridge behind the upper teeth. Air flows continuously.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Introduce /æ/",
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "a",
-            "back_text": "/a/",
-            "audio": "/static/audio/a.mp3"
+            "back_text": "/æ/"
           },
-          "teacher_cue": "New sound today. Watch my mouth and listen.",
-          "expected_response": "Students produce /a/ cleanly.",
-          "correction_move": "Model /a/ with short crisp articulation and have students repeat.",
-          "observation_note": "Watch for vowel quality drift toward a longer sound.",
-          "korean_interference_flag": "vowel_quality",
+          "teacher_cue": "Open your mouth wide like a doctor visit — aaaa.",
+          "expected_response": "Students produce short /æ/ with an open mouth and low tongue.",
+          "correction_move": "Model /æ/ again with a wider jaw drop and brief repetition.",
+          "observation_note": "Short open front vowel. Mouth open wide, tongue low and flat, jaw drops noticeably.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Introduce /t/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "t",
+            "back_text": "/t/"
+          },
+          "teacher_cue": "Tap the roof of your mouth and let it pop — t! t! t!",
+          "expected_response": "Students produce /t/ with a clean sharp release.",
+          "correction_move": "Model /t/ again and exaggerate the tongue tap and release.",
+          "observation_note": "Voiceless alveolar stop. Tongue tip touches the ridge behind the upper teeth, builds pressure, then releases.",
+          "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
           "next_action": "manual_next"
@@ -173,18 +126,17 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "",
-            "back_text": "pie",
-            "image": "/static/images/vocab/pie.svg",
-            "audio": "/static/audio/block04_pie.mp3",
+            "back_text": "sat",
             "blend_units": [
-              {"grapheme": "p", "phoneme": "/p/", "audio": null},
-              {"grapheme": "ie", "phoneme": "/aɪ/", "audio": null}
+              { "grapheme": "s", "phoneme": "/s/", "audio": null },
+              { "grapheme": "a", "phoneme": "/æ/", "audio": null },
+              { "grapheme": "t", "phoneme": "/t/", "audio": null }
             ]
           },
-          "teacher_cue": "Show the picture, elicit meaning, then model pie orally before revealing print.",
-          "expected_response": "Students say pie orally and connect it to the image before seeing print.",
-          "correction_move": "Model pie, gesture to the image, use a short oral sentence, then recheck.",
-          "observation_note": "Watch whether students know the meaning from the image before print appears.",
+          "teacher_cue": "Teach sat orally first, then reveal print.",
+          "expected_response": "Students say sat and connect it to meaning/action.",
+          "correction_move": "Model sat, repeat chorally, then reveal the written word.",
+          "observation_note": "Word is decodable with the current pool s · a · t.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -197,20 +149,16 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "",
-            "back_text": "pizza",
-            "image": "/static/images/vocab/pizza.svg",
-            "audio": "/static/audio/block04_pizza.mp3",
+            "back_text": "at",
             "blend_units": [
-              {"grapheme": "p", "phoneme": "/p/", "audio": null},
-              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
-              {"grapheme": "zz", "phoneme": "/z/", "audio": null},
-              {"grapheme": "a", "phoneme": "/ə/", "audio": null}
+              { "grapheme": "a", "phoneme": "/æ/", "audio": null },
+              { "grapheme": "t", "phoneme": "/t/", "audio": null }
             ]
           },
-          "teacher_cue": "Use the picture first, model pizza aloud, then reveal the written word.",
-          "expected_response": "Students say pizza orally and attach the word to the image.",
-          "correction_move": "Model pizza, confirm meaning with the image, then repeat chorally.",
-          "observation_note": "Watch whether students respond from meaning first rather than guessing from print.",
+          "teacher_cue": "Teach at orally in a simple phrase, then reveal print.",
+          "expected_response": "Students say at and recognise it in context.",
+          "correction_move": "Model at in a short phrase, then repeat and reveal print.",
+          "observation_note": "Word is decodable with the current pool s · a · t.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -223,72 +171,15 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "",
-            "back_text": "puzzle",
-            "image": "/static/images/vocab/puzzle.svg",
-            "audio": "/static/audio/block04_puzzle.mp3",
+            "back_text": "a",
             "blend_units": [
-              {"grapheme": "p", "phoneme": "/p/", "audio": null},
-              {"grapheme": "u", "phoneme": "/ʌ/", "audio": null},
-              {"grapheme": "zz", "phoneme": "/z/", "audio": null},
-              {"grapheme": "le", "phoneme": "/əl/", "audio": null}
+              { "grapheme": "a", "phoneme": "/æ/", "audio": null }
             ]
           },
-          "teacher_cue": "Lead with the picture, teach puzzle orally, then reveal the word.",
-          "expected_response": "Students say puzzle and connect the meaning to the image.",
-          "correction_move": "Model puzzle, gesture to the picture parts, then repeat and reveal print.",
-          "observation_note": "Watch whether the oral word is secure before the written form appears.",
-          "korean_interference_flag": null,
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "04-04",
-          "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
-          "view_type": "flashcard",
-          "content_payload": {
-            "front_text": "",
-            "back_text": "price",
-            "image": "/static/images/vocab/price.svg",
-            "audio": "/static/audio/block04_price.mp3",
-            "blend_units": [
-              {"grapheme": "p", "phoneme": "/p/", "audio": null},
-              {"grapheme": "r", "phoneme": "/r/", "audio": null},
-              {"grapheme": "i", "phoneme": "/aɪ/", "audio": null},
-              {"grapheme": "ce", "phoneme": "/s/", "audio": null}
-            ]
-          },
-          "teacher_cue": "Discuss the image, model price orally, then reveal print.",
-          "expected_response": "Students use price orally with meaning before seeing the written word.",
-          "correction_move": "Model price, point to the tag, use a short oral sentence, then reveal print.",
-          "observation_note": "Watch whether price is understood as meaning, not just repeated as sound.",
-          "korean_interference_flag": null,
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "04-05",
-          "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
-          "view_type": "flashcard",
-          "content_payload": {
-            "front_text": "",
-            "back_text": "pirate",
-            "image": "/static/images/vocab/pirate.svg",
-            "audio": "/static/audio/block04_pirate.mp3",
-            "blend_units": [
-              {"grapheme": "p", "phoneme": "/p/", "audio": null},
-              {"grapheme": "i", "phoneme": "/aɪ/", "audio": null},
-              {"grapheme": "r", "phoneme": "/r/", "audio": null},
-              {"grapheme": "ate", "phoneme": "/ɪt/", "audio": null}
-            ]
-          },
-          "teacher_cue": "Start with the pirate picture, teach the word orally, then reveal print.",
-          "expected_response": "Students say pirate orally and connect it to the image first.",
-          "correction_move": "Model pirate, anchor meaning with the image, then repeat and reveal the word.",
-          "observation_note": "Watch whether the image helps students hold meaning before print.",
+          "teacher_cue": "Teach a as the indefinite article with simple examples like one cat. Students will hear this word often in sentences.",
+          "expected_response": "Students recognise a as a high-frequency useful word.",
+          "correction_move": "Model a in a short phrase, then repeat and reveal print.",
+          "observation_note": "Sight word active this lesson alongside the and I.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -306,15 +197,15 @@
           "slide_title": "Build the Word",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "pat",
-            "target_letters": ["p", "a", "t"],
-            "slots": ["p", "a", "t"],
-            "draggable_letters": ["a", "t", "p"]
+            "target_word": "sat",
+            "target_letters": ["s", "a", "t"],
+            "slots": ["s", "a", "t"],
+            "draggable_letters": ["a", "t", "s"]
           },
-          "teacher_cue": "Say the sounds and build left to right.",
-          "expected_response": "Students map each phoneme to the correct grapheme.",
-          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
-          "observation_note": "Watch whether students can hold the phoneme sequence in order.",
+          "teacher_cue": "Build sat left to right.",
+          "expected_response": "Students blend and build sat accurately.",
+          "correction_move": "Return to oral segmenting /s/ /æ/ /t/, then rebuild one sound at a time.",
+          "observation_note": "This block establishes the blending routine. Keep volume low and process explicit.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -326,15 +217,15 @@
           "slide_title": "Build the Word",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "pizza",
-            "target_letters": ["p", "i", "zz", "a"],
-            "slots": ["p", "i", "zz", "a"],
-            "draggable_letters": ["zz", "a", "p", "i"]
+            "target_word": "at",
+            "target_letters": ["a", "t"],
+            "slots": ["a", "t"],
+            "draggable_letters": ["t", "a"]
           },
-          "teacher_cue": "Build the word from its sound parts left to right.",
-          "expected_response": "Students build pizza using the correct grapheme chunks.",
-          "correction_move": "Return to oral segmenting, then rebuild one unit at a time.",
-          "observation_note": "Watch whether students hold the double-z chunk as one unit.",
+          "teacher_cue": "Build at left to right.",
+          "expected_response": "Students build at accurately.",
+          "correction_move": "Repeat the sounds slowly, then rebuild.",
+          "observation_note": "Only three phonemes are available in Lesson 1, so the word list is intentionally short.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -346,35 +237,15 @@
           "slide_title": "Build the Word",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "rack",
-            "target_letters": ["r", "a", "ck"],
-            "slots": ["r", "a", "ck"],
-            "draggable_letters": ["ck", "r", "a"]
+            "target_word": "as",
+            "target_letters": ["a", "s"],
+            "slots": ["a", "s"],
+            "draggable_letters": ["s", "a"]
           },
-          "teacher_cue": "Build the word using the grapheme chunks you hear.",
-          "expected_response": "Students build rack as r | a | ck.",
-          "correction_move": "Model the final chunk ck as one unit, then rebuild left to right.",
-          "observation_note": "Watch whether students treat ck as a single build unit.",
-          "korean_interference_flag": null,
-          "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "05-04",
-          "block_id": "05",
-          "slide_title": "Build the Word",
-          "view_type": "drag_letter",
-          "content_payload": {
-            "target_word": "pineapple",
-            "target_letters": ["p", "i", "n", "e", "a", "pp", "le"],
-            "slots": ["p", "i", "n", "e", "a", "pp", "le"],
-            "draggable_letters": ["le", "p", "a", "pp", "i", "n", "e"]
-          },
-          "teacher_cue": "Build the longer word carefully from left to right in chunks.",
-          "expected_response": "Students build pineapple using the full sequence of grapheme units.",
-          "correction_move": "Chunk the word orally, then rebuild one unit at a time from the start.",
-          "observation_note": "Watch whether students can sustain the full sequence across a longer build.",
+          "teacher_cue": "Build as left to right.",
+          "expected_response": "Students build as accurately.",
+          "correction_move": "Repeat the sounds slowly, then rebuild.",
+          "observation_note": "The focus is establishing the blending routine, not volume.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -392,14 +263,14 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Pat sat.",
+            "text_content": "I sat.",
             "display_mode": "sentence",
             "show_font_controls": true
           },
-          "teacher_cue": "Track left to right and read the full sentence.",
-          "expected_response": "Students read the sentence accurately.",
-          "correction_move": "Model the sentence once, then return to one-to-one tracking.",
-          "observation_note": "Watch for loss of accuracy at the sentence level.",
+          "teacher_cue": "Lesson 1 has only one meaningful sentence at this stage. Establish the sentence reading routine, not test volume.",
+          "expected_response": "Students read I sat. with one-to-one word tracking.",
+          "correction_move": "Model once, then track each word left to right and reread together.",
+          "observation_note": "Sight words active: the · a · I. Sentence uses I plus sat.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -414,19 +285,18 @@
         {
           "slide_id": "07-01",
           "block_id": "07",
-          "slide_title": "Read the Decodable",
+          "slide_title": "First Reading — Lesson 1",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Pat sat. Pat sat at a mat.",
+            "text_content": "I sat.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Who sat at the mat?",
-            "image": "/static/images/readers/pat-sat-mat.svg"
+            "comprehension_prompt": "How many words did you read? Point to each one."
           },
-          "teacher_cue": "Read for accuracy first, then reread for fluency.",
-          "expected_response": "Students read the connected text with increasing fluency.",
-          "correction_move": "Support line by line, then reread the full passage.",
-          "observation_note": "Watch whether fluency collapses after the first sentence.",
+          "teacher_cue": "Track print left to right and match spoken words to written words.",
+          "expected_response": "Students read the single sentence and point to each word.",
+          "correction_move": "Echo read first, then repeat while pointing to each word.",
+          "observation_note": "Lesson 1 reader is a single-sentence introduction to the reading routine.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -441,19 +311,55 @@
         {
           "slide_id": "08-01",
           "block_id": "08",
-          "slide_title": "Write the Sentence",
+          "slide_title": "Listen and Write",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/pat_sat_sentence.mp3",
-            "prompt_text": "Listen and write the sentence.",
-            "dictated_text": "Pat sat.",
-            "expected_answer": "Pat sat.",
-            "display_mode": "sentence"
+            "dictated_text": "sat",
+            "expected_answer": "sat",
+            "elkonin_boxes": 3
           },
-          "teacher_cue": "Dictate once, replay once, then check spacing and punctuation.",
-          "expected_response": "Students write the full sentence accurately.",
-          "correction_move": "Repeat the sentence, segment by word, then rewrite.",
-          "observation_note": "Watch for spacing and punctuation breakdowns.",
+          "teacher_cue": "Dictate sat. Students segment into phonemes using Elkonin boxes, then write.",
+          "expected_response": "Students write sat accurately.",
+          "correction_move": "Repeat sat, segment /s/ /æ/ /t/, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "at",
+            "expected_answer": "at",
+            "elkonin_boxes": 2
+          },
+          "teacher_cue": "Dictate at. Students segment into phonemes using Elkonin boxes, then write.",
+          "expected_response": "Students write at accurately.",
+          "correction_move": "Repeat at, segment /æ/ /t/, then rewrite.",
+          "observation_note": "Reveal and check after writing.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": ["secure", "shaky", "missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "a",
+            "expected_answer": "a",
+            "elkonin_boxes": 1
+          },
+          "teacher_cue": "Dictate a. Students write the word after hearing it.",
+          "expected_response": "Students write a accurately.",
+          "correction_move": "Model the word again, then rewrite and check.",
+          "observation_note": "Block 08 words are drawn from Block 04 vocabulary.",
           "korean_interference_flag": null,
           "markable": true,
           "marking_options": ["secure", "shaky", "missed"],
@@ -468,58 +374,18 @@
         {
           "slide_id": "09-01",
           "block_id": "09",
-          "slide_title": "Spot the Part",
+          "slide_title": "Pattern Noticing",
           "view_type": "read_respond",
           "content_payload": {
             "display_mode": "spot_part",
-            "displayed_words": ["pat", "sat"],
+            "displayed_words": ["sat", "at"],
             "highlighted_chunk": "at",
-            "support_text": "Notice how at stays the same in both words."
+            "support_text": "What do you notice? Which sound part do they share?"
           },
-          "teacher_cue": "Say both words and notice the part that stayed the same.",
-          "expected_response": "Students identify at as the repeated part.",
-          "correction_move": "Model pat and sat, point to at in both words, then repeat.",
-          "observation_note": "Watch whether students can notice the repeated chunk without guessing.",
-          "korean_interference_flag": null,
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "09-02",
-          "block_id": "09",
-          "slide_title": "Spot the Part",
-          "view_type": "read_respond",
-          "content_payload": {
-            "display_mode": "spot_part",
-            "displayed_words": ["map", "tap"],
-            "highlighted_chunk": "ap",
-            "support_text": "The part ap repeats across both words."
-          },
-          "teacher_cue": "Read both words and notice the repeated ending.",
-          "expected_response": "Students identify ap as the repeated part.",
-          "correction_move": "Model map and tap, point to ap in both words, then repeat.",
-          "observation_note": "Watch whether students can notice the shared pattern inside the full words.",
-          "korean_interference_flag": null,
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "09-03",
-          "block_id": "09",
-          "slide_title": "Spot the Part",
-          "view_type": "read_respond",
-          "content_payload": {
-            "display_mode": "spot_part",
-            "displayed_words": ["rack", "back"],
-            "highlighted_chunk": "ack",
-            "support_text": "The chunk ack stays the same while the first sound changes."
-          },
-          "teacher_cue": "Read both words and notice the repeated chunk inside each full word.",
-          "expected_response": "Students identify ack as the repeated part.",
-          "correction_move": "Model rack and back, point to ack in both words, then repeat.",
-          "observation_note": "Watch whether students can hold the longer repeated chunk across both words.",
+          "teacher_cue": "Draw attention to sat and at. Keep it informal — no metalinguistic terminology required.",
+          "expected_response": "Students notice the shared /æ/ · /t/ pattern.",
+          "correction_move": "Read both words, point to at, and repeat the shared part.",
+          "observation_note": "Group 1 Morpheme Moment is light pattern noticing only.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -540,17 +406,18 @@
             "display_mode": "lesson_close",
             "title": "Close the Lesson",
             "check_items": [
-              { "label": "What sound did we learn today?", "phoneme": "/a/" },
-              { "label": "Which word do you remember reading?", "phoneme": null },
-              { "label": "What happened in the story?", "phoneme": null }
+              { "label": "We learned three sounds today: s, a, t.", "phoneme": null },
+              { "label": "Close your eyes. Can you hear the sounds in the word sat?", "phoneme": null },
+              { "label": "Hold up a finger for each sound — how many?", "phoneme": null },
+              { "label": "Now tell me: what did you do today? Use the word sat.", "phoneme": null }
             ],
             "marking_options": ["secure", "shaky", "missed"],
-            "notes_field": "Keep the close brief and oral."
+            "notes_field": "Expected answer for phoneme counting: 3 fingers — /s/ /æ/ /t/."
           },
-          "teacher_cue": "Close with recall, meaning, and confidence.",
-          "expected_response": "Students answer orally and show lesson recall.",
-          "correction_move": "Prompt with the first word or model a full answer, then repeat.",
-          "observation_note": "Watch whether students can move from decoding to meaning.",
+          "teacher_cue": "Close with phoneme counting and oral recall.",
+          "expected_response": "Students identify three sounds in sat and respond orally using the word sat.",
+          "correction_move": "Model the sounds /s/ /æ/ /t/ and count them again together.",
+          "observation_note": "This establishes the idea that words are made of individual sounds.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
