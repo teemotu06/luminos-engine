@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 from typing import Optional, Union
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, String, Text
+from sqlalchemy import Boolean, DateTime, ForeignKey, String, Text, UniqueConstraint
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.types import JSON
@@ -16,6 +16,36 @@ UuidType = UUID(as_uuid=True) if DATABASE_URL.startswith("postgresql") else Stri
 
 def new_uuid_value():
     return uuid.uuid4() if DATABASE_URL.startswith("postgresql") else str(uuid.uuid4())
+
+
+class ClassRecord(Base):
+    __tablename__ = "class_group"
+
+    id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
+    class_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+
+    students: Mapped[list["StudentRecord"]] = relationship(
+        back_populates="class_group",
+        cascade="all, delete-orphan",
+        order_by="StudentRecord.student_name",
+    )
+
+
+class StudentRecord(Base):
+    __tablename__ = "student_record"
+
+    id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
+    class_id: Mapped[Union[str, uuid.UUID]] = mapped_column(
+        ForeignKey("class_group.id", ondelete="CASCADE"), nullable=False
+    )
+    student_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+
+    class_group: Mapped["ClassRecord"] = relationship(back_populates="students")
+
+    __table_args__ = (UniqueConstraint("class_id", "student_name", name="uq_student_per_class"),)
 
 
 class LessonRecord(Base):
@@ -35,6 +65,7 @@ class LessonAttemptRecord(Base):
 
     attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
     lesson_id: Mapped[str] = mapped_column(ForeignKey("lesson.lesson_id"), nullable=False)
+    class_id: Mapped[Optional[str]] = mapped_column(String(36), nullable=True)
     learner_key: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     teacher_key: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     attempt_date: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
@@ -65,3 +96,21 @@ class SlideResultRecord(Base):
     item_results: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
 
     attempt: Mapped["LessonAttemptRecord"] = relationship(back_populates="slide_results")
+
+
+class StudentMarkRecord(Base):
+    __tablename__ = "student_mark"
+
+    id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
+    attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(ForeignKey("lesson_attempt.attempt_id"), nullable=False)
+    lesson_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    block_id: Mapped[str] = mapped_column(String(2), nullable=False)
+    student_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    status: Mapped[str] = mapped_column(String(20), nullable=False)
+    error_tags: Mapped[Optional[list]] = mapped_column(JsonType, default=None, nullable=True)
+    support_level: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    teacher_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    timestamp: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+
+    attempt: Mapped["LessonAttemptRecord"] = relationship()

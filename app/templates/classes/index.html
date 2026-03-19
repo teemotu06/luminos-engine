@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Classes — LUMINOS{% endblock %}
+
+{% block content %}
+<div class="page launcher">
+
+  <header class="launcher__header">
+    <a class="launcher__back" href="/lesson/">← Lesson Library</a>
+    <div class="launcher__meta-label">LUMINOS · Class Management</div>
+    <h1 class="launcher__title">Classes</h1>
+    <p class="launcher__intro">Manage classes and student rosters.</p>
+    <div class="launcher__stats">
+      <div class="launcher__stat">
+        <span class="launcher__stat-number">{{ classes | length }}</span>
+        <span class="launcher__stat-label">Classes</span>
+      </div>
+      <div class="launcher__stat">
+        <span class="launcher__stat-number">{{ classes | sum(attribute='student_count') }}</span>
+        <span class="launcher__stat-label">Students</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="launcher__main">
+    <div class="launcher__lesson-grid">
+      {% for cls in classes %}
+      <a class="launcher__lesson-card" href="/classes/{{ cls.id }}">
+        <div class="launcher__card-top">
+          <span class="launcher__lesson-id">{{ cls.class_name }}</span>
+        </div>
+        {% if cls.description %}
+        <span class="launcher__lesson-subtitle">{{ cls.description }}</span>
+        {% endif %}
+        <span class="launcher__lesson-subtitle">{{ cls.student_count }} student{{ 's' if cls.student_count != 1 }}</span>
+        <span class="launcher__lesson-cta">View class →</span>
+      </a>
+      {% endfor %}
+
+      <a class="launcher__lesson-card launcher__lesson-card--new" href="/classes/new">
+        <div class="launcher__card-top">
+          <span class="launcher__lesson-id" style="font-size: 20px; font-weight: 300;">+</span>
+        </div>
+        <span class="launcher__lesson-subtitle">Create a new class</span>
+        <span class="launcher__lesson-cta">New class →</span>
+      </a>
+    </div>
+  </main>
+
+</div>
+{% endblock %}

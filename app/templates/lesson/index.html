@@ -13,7 +13,9 @@
 {% endfor %}
 {% set group_count = lessons | groupby('unit_id') | list | length %}
 
-<div class="page launcher">
+<div
+  class="page launcher"
+  x-data="{ selectedClassId: '' }">
 
   <header class="launcher__header">
     <div class="launcher__meta-label">LUMINOS · Lesson Library</div>
@@ -35,6 +37,23 @@
     </div>
   </header>
 
+  {# ── Class selector ────────────────────────────────────── #}
+  <div class="class-selector">
+    <div class="class-selector__header">
+      <span class="class-selector__label">Teaching class</span>
+      <a class="class-selector__manage" href="/classes/">Manage classes →</a>
+    </div>
+    <select
+      class="class-selector__select"
+      id="class-select"
+      x-model="selectedClassId">
+      <option value="" disabled>Select a class to load roster</option>
+      {% for cls in classes %}
+      <option value="{{ cls.id }}">{{ cls.class_name }}{% if cls.description %} · {{ cls.description }}{% endif %} ({{ cls.student_count }} student{{ 's' if cls.student_count != 1 }})</option>
+      {% endfor %}
+    </select>
+  </div>
+
   <main class="launcher__main">
     {% for unit_id, unit_lessons in lessons | groupby('unit_id') %}
     {% set grouped_lessons = unit_lessons | list %}
@@ -48,7 +67,9 @@
         {% for lesson in grouped_lessons %}
         {% set parts = lesson.title.split(': ') %}
         {% set lesson_label = parts[1] if parts | length > 1 else lesson.title %}
-        <a class="launcher__lesson-card" href="/lesson/{{ lesson.lesson_id }}">
+        <a
+          class="launcher__lesson-card"
+          :href="`/lesson/{{ lesson.lesson_id }}` + (selectedClassId ? '?class_id=' + selectedClassId : '')">
           <div class="launcher__card-top">
             <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
             <span class="launcher__status-dot launcher__status-dot--{{ lesson.content_pack_status }}"></span>
@@ -68,6 +89,34 @@
     </section>
     {% endfor %}
   </main>
+
+  <hr class="launcher__divider">
+
+  {# ── Classes section ───────────────────────────────────── #}
+  <section class="launcher__group">
+    <div class="launcher__group-header">
+      <div class="launcher__group-kicker">Classes</div>
+      <h2 class="launcher__group-title">Class management</h2>
+    </div>
+    <div class="launcher__lesson-grid">
+      {% for cls in classes %}
+      <a class="launcher__lesson-card" href="/classes/{{ cls.id }}">
+        <div class="launcher__card-top">
+          <span class="launcher__lesson-id">{{ cls.class_name }}</span>
+        </div>
+        <span class="launcher__lesson-subtitle">{{ cls.student_count }} student{{ 's' if cls.student_count != 1 }}</span>
+        <span class="launcher__lesson-cta">View class →</span>
+      </a>
+      {% endfor %}
+      <a class="launcher__lesson-card" href="/classes/new">
+        <div class="launcher__card-top">
+          <span class="launcher__lesson-id" style="font-size: 20px; font-weight: 300;">+</span>
+        </div>
+        <span class="launcher__lesson-subtitle">Create a new class</span>
+        <span class="launcher__lesson-cta">New class →</span>
+      </a>
+    </div>
+  </section>
 
 </div>
 {% endblock %}

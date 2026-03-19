@@ -595,3 +595,400 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ── Back link ───────────────────────────────────────────── */
+
+.launcher__back {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--c-text-muted);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+
+.launcher__back:hover {
+    color: var(--c-text);
+}
+
+/* ── Class selector ──────────────────────────────────────── */
+
+.class-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem 1.25rem;
+    background: #fff;
+    border: 0.5px solid rgba(15, 15, 15, 0.12);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.class-selector__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.class-selector__label {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-text-muted);
+}
+
+.class-selector__manage {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7fa3;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.class-selector__manage:hover {
+    color: var(--c-text);
+}
+
+.class-selector__select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 0.5px solid rgba(15, 15, 15, 0.14);
+    border-radius: 8px;
+    background: rgba(15, 15, 15, 0.02);
+    font: inherit;
+    font-size: 13px;
+    color: var(--c-text);
+    cursor: pointer;
+    appearance: auto;
+}
+
+.class-selector__select:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+/* ── Forms ───────────────────────────────────────────────── */
+
+.luminos-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 480px;
+}
+
+.luminos-form--inline {
+    flex-direction: row;
+    align-items: flex-end;
+    max-width: 100%;
+}
+
+.luminos-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.luminos-form__label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-text);
+}
+
+.luminos-form__optional {
+    font-weight: 400;
+    color: var(--c-text-muted);
+}
+
+.luminos-form__input {
+    padding: 10px 14px;
+    border: 1px solid rgba(15, 15, 15, 0.16);
+    border-radius: 10px;
+    background: #fff;
+    font: inherit;
+    font-size: 14px;
+    color: var(--c-text);
+    flex: 1;
+}
+
+.luminos-form__input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+.luminos-form__submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 120ms ease;
+}
+
+.luminos-form__submit:hover {
+    background: var(--accent-strong);
+}
+
+.form-error {
+    padding: 10px 14px;
+    border-radius: 9px;
+    background: #fef2f2;
+    border: 1px solid rgba(153, 27, 27, 0.18);
+    color: #991b1b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ── Student list (class detail) ─────────────────────────── */
+
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.student-list__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    border: 1px solid rgba(15, 15, 15, 0.08);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.student-list__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--c-text);
+}
+
+.student-list__link {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.student-list__link:hover {
+    color: var(--accent-strong);
+}
+
+/* ── Student profile ─────────────────────────────────────── */
+
+.student-profile__summary {
+    margin-bottom: 1.5rem;
+}
+
+.student-profile__status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.student-profile__status-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 10px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.student-profile__status-card--secure  { background: #d4edda; border-color: #84c99a; }
+.student-profile__status-card--shaky   { background: #fff3cd; border-color: #f0c04d; }
+.student-profile__status-card--missed  { background: #f8d7da; border-color: #e9838a; }
+.student-profile__status-card--skipped { background: #e9ecef; border-color: #adb5bd; }
+
+.student-profile__status-count {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.student-profile__status-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+}
+
+.student-profile__status-across {
+    font-size: 11px;
+    opacity: 0.55;
+    text-align: center;
+}
+
+.student-profile__patterns {
+    margin-bottom: 1.5rem;
+}
+
+.student-profile__pattern-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.student-profile__pattern-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 14px;
+    border: 1px solid rgba(15, 15, 15, 0.08);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.student-profile__pattern-name {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: #3c3489;
+    min-width: 80px;
+}
+
+.student-profile__pattern-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.student-profile__lesson {
+    margin-bottom: 1.5rem;
+}
+
+.student-profile__lesson-header {
+    margin-bottom: 10px;
+}
+
+.student-profile__lesson-title {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--c-text);
+    margin-bottom: 4px;
+}
+
+.student-profile__lesson-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.student-profile__lesson-pattern {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 7px;
+    background: #eeedfe;
+    color: #3c3489;
+    border-radius: 4px;
+}
+
+.student-profile__lesson-date {
+    font-size: 12px;
+    color: var(--c-text-muted);
+}
+
+.student-profile__block {
+    margin-bottom: 12px;
+}
+
+.student-profile__block-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(17, 17, 17, 0.4);
+    margin-bottom: 6px;
+}
+
+.student-profile__slide-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.student-profile__slide-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px;
+    border: 1px solid rgba(17, 17, 17, 0.07);
+    border-radius: 9px;
+    background: #fff;
+    font-size: 13px;
+}
+
+.student-profile__slide-id {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(17, 17, 17, 0.45);
+    flex-shrink: 0;
+}
+
+.student-profile__mark-badge {
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.student-profile__mark-badge--secure  { background: #d4edda; color: #1a5c2e; }
+.student-profile__mark-badge--shaky   { background: #fff3cd; color: #7a4f00; }
+.student-profile__mark-badge--missed  { background: #f8d7da; color: #6e1a1e; }
+.student-profile__mark-badge--skipped { background: #e9ecef; color: #4a4f54; }
+
+.student-profile__support {
+    font-size: 11px;
+    color: rgba(17, 17, 17, 0.45);
+    font-style: italic;
+}
+
+.student-profile__note {
+    font-size: 12px;
+    color: rgba(17, 17, 17, 0.55);
+    margin-left: auto;
+}
+
+.student-profile__error-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.student-profile__error-tag {
+    padding: 2px 8px;
+    border-radius: 5px;
+    background: rgba(17, 17, 17, 0.06);
+    border: 1px solid rgba(17, 17, 17, 0.10);
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(17, 17, 17, 0.65);
+}
+
+/* ── Roster empty notice ─────────────────────────────────── */
+
+.roster__empty {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: rgba(17, 17, 17, 0.45);
+    font-style: italic;
+}

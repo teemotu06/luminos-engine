@@ -14,14 +14,24 @@
         <span x-text="`${activeSlideIndex + 1} / {{ ordered_slides|length }}`"></span>
     </span>
 
-    <button
-        id="lesson-next-link"
-        type="button"
-        class="lesson-nav__button"
-        @click="goToNextSlide()"
-        :disabled="activeSlideIndex >= {{ ordered_slides|length - 1 }}">
-        Next <span class="lesson-nav__arrow">→</span>
-    </button>
+    <template x-if="activeSlideIndex < {{ ordered_slides|length - 1 }}">
+      <button
+          id="lesson-next-link"
+          type="button"
+          class="lesson-nav__button"
+          @click="goToNextSlide()">
+          Next <span class="lesson-nav__arrow">→</span>
+      </button>
+    </template>
+    <template x-if="activeSlideIndex >= {{ ordered_slides|length - 1 }}">
+      <a
+          id="lesson-finish-link"
+          class="lesson-nav__button lesson-nav__button--finish"
+          :href="`/lesson/{{ lesson.lesson_id }}/review/${attemptId}`"
+          @click.prevent="finishLesson()">
+          Finish &amp; review <span class="lesson-nav__arrow">→</span>
+      </a>
+    </template>
 
 </nav>
 {% endif %}

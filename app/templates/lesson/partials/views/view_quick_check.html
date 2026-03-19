@@ -49,37 +49,6 @@
   </div>
   {% endif %}
 
-  <div class="lesson-close__marking" x-show="activeIndex === total - 1" x-cloak>
-    <div class="lesson-close__mark-options">
-      {% for option in slide.content_payload.marking_options %}
-      <button
-        type="button"
-        class="lesson-close__mark-button"
-        data-status="{{ option }}"
-        :class="{ 'lesson-close__mark-button--active': getSlideMark({{ slide_index }}) === '{{ option }}' }"
-        @click="setSlideMark({{ slide_index }}, '{{ option }}')">
-        {{ mark_labels[option] | default(option | title) }}
-      </button>
-      {% endfor %}
-    </div>
-
-    <button
-      type="button"
-      class="lesson-close__complete"
-      :disabled="!getSlideMark({{ slide_index }})"
-      @click="submitSlideMark({
-        slideIndex: {{ slide_index }},
-        slideId: '{{ slide.slide_id }}',
-        blockId: '{{ slide.block_id }}',
-        completed: true
-      })">
-      Complete Lesson
-    </button>
-
-    <div class="lesson-close__result" x-show="lastMarkingResult">
-      <span x-text="lastMarkingResult"></span>
-    </div>
-  </div>
 </div>
 {% else %}
 {% set mark_labels = {

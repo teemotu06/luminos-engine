@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}{{ student_name }} — Student Profile{% endblock %}
+
+{% block content %}
+<div class="page launcher">
+
+  <header class="launcher__header">
+    {% if class_id %}
+    <a class="launcher__back" href="/classes/{{ class_id }}">← Back to class</a>
+    {% else %}
+    <a class="launcher__back" href="/lesson/">← Lesson Library</a>
+    {% endif %}
+    <div class="launcher__meta-label">LUMINOS · Student Profile</div>
+    <h1 class="launcher__title">{{ student_name }}</h1>
+    <p class="launcher__intro">Skill evidence from all recorded lesson sessions.</p>
+  </header>
+
+  <main class="launcher__main">
+
+    {% if total_marks == 0 %}
+    <p style="color: rgba(17,17,17,0.45); font-size: 15px;">No marks recorded yet for this student.</p>
+
+    {% else %}
+
+    {# ── Status pattern ────────────────────────────────────── #}
+    <section class="student-profile__summary">
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Overview</div>
+        <h2 class="launcher__group-title">Status pattern</h2>
+      </div>
+      <div class="student-profile__status-grid">
+        {% for status in ['secure', 'shaky', 'missed', 'skipped'] %}
+        {% set count = status_counts.get(status, 0) %}
+        <div class="student-profile__status-card student-profile__status-card--{{ status }}">
+          <span class="student-profile__status-count">{{ count }}</span>
+          <span class="student-profile__status-label">{{ status | title }}</span>
+          {# Count distinct lessons for this status #}
+          {% set ns = namespace(lesson_ids=[]) %}
+          {% for lid, lesson_group in lessons.items() %}
+            {% for block_id, slides in lesson_group.blocks.items() %}
+              {% for slide_id, mark in slides.items() %}
+                {% if mark.status == status and lid not in ns.lesson_ids %}
+                  {% set ns.lesson_ids = ns.lesson_ids + [lid] %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endfor %}
+          {% if count > 0 %}
+          <span class="student-profile__status-across">across {{ ns.lesson_ids | length }} lesson{{ 's' if ns.lesson_ids | length != 1 }}</span>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {# ── Missed/shaky pattern summary ─────────────────────── #}
+    {% if missed_shaky_patterns %}
+    <section class="student-profile__patterns">
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Skill evidence summary</div>
+        <h2 class="launcher__group-title">Missed and shaky patterns</h2>
+      </div>
+      <div class="student-profile__pattern-list">
+        {% for entry in missed_shaky_patterns %}
+        <div class="student-profile__pattern-row">
+          <span class="student-profile__pattern-name">{{ entry.pattern }}</span>
+          <div class="student-profile__pattern-badges">
+            {% if entry.missed %}
+            <span class="student-profile__mark-badge student-profile__mark-badge--missed">{{ entry.missed }} missed</span>
+            {% endif %}
+            {% if entry.shaky %}
+            <span class="student-profile__mark-badge student-profile__mark-badge--shaky">{{ entry.shaky }} shaky</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <hr class="launcher__divider">
+
+    {# ── Lessons ───────────────────────────────────────────── #}
+    <section class="launcher__group">
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Evidence</div>
+        <h2 class="launcher__group-title">Lessons</h2>
+      </div>
+
+      {% for lid, lesson_group in lessons.items() %}
+      <div class="student-profile__lesson">
+        <div class="student-profile__lesson-header">
+          <div class="student-profile__lesson-title">{{ lesson_group.lesson_title }}</div>
+          <div class="student-profile__lesson-meta">
+            {% if lesson_group.target_pattern %}
+            <span class="student-profile__lesson-pattern">{{ lesson_group.target_pattern }}</span>
+            {% endif %}
+            {% if lesson_group.attempt_date %}
+            <span class="student-profile__lesson-date">{{ lesson_group.attempt_date.strftime('%d %b %Y') }}</span>
+            {% endif %}
+          </div>
+        </div>
+
+        {% for block_id, slides in lesson_group.blocks.items() %}
+        <div class="student-profile__block">
+          <div class="student-profile__block-label">Block {{ block_id }}</div>
+          <div class="student-profile__slide-list">
+            {% set error_labels = {
+              'sound_substitution': 'Sound substitution',
+              'vowel_confusion': 'Vowel confusion',
+              'omission': 'Omission',
+              'insertion': 'Insertion',
+              'blending_failure': 'Blend failure',
+              'segmentation_failure': 'Segmentation failure',
+              'oral_vocabulary_gap': 'Vocabulary gap',
+              'low_automaticity': 'Low automaticity',
+              'korean_transfer': 'Korean transfer'
+            } %}
+            {% for slide_id, mark in slides.items() %}
+            <div class="student-profile__slide-row">
+              <span class="student-profile__slide-id">{{ slide_id }}</span>
+              <span class="student-profile__mark-badge student-profile__mark-badge--{{ mark.status }}">{{ mark.status | title }}</span>
+              {% if mark.support_level %}
+              <span class="student-profile__support">{{ mark.support_level }}</span>
+              {% endif %}
+              {% if mark.error_tags %}
+              <div class="student-profile__error-tags">
+                {% for tag in mark.error_tags %}
+                <span class="student-profile__error-tag">{{ error_labels.get(tag, tag) }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+              {% if mark.teacher_note %}
+              <span class="student-profile__note">{{ mark.teacher_note }}</span>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if not loop.last %}<hr class="launcher__divider" style="margin: 1rem 0;">{% endif %}
+      {% endfor %}
+    </section>
+
+    {% endif %}
+
+  </main>
+
+</div>
+{% endblock %}

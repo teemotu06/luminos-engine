@@ -6,6 +6,7 @@
     activeBlendIndex: -1,
     activeSlideIndex: Number(config.initialSlideIndex || 0),
     attemptId: config.attemptId || "",
+    classLabel: config.className || "",
     audioPlayers: {},
     blendTimer: null,
     isSubmitting: false,
@@ -14,7 +15,9 @@
     presentationMode: false,
     quickCheckMarks: {},
     revealed: false,
+    roster: config.roster || [],
     slideMarks: {},
+    studentMarks: {},
 
     get activeBlockId() {
       return this.currentSlideElement()?.dataset.blockId || null;
@@ -157,6 +160,10 @@
       this.goToSlide(this.activeSlideIndex - 1);
     },
 
+    getStudentMark(slideIndex, studentName) {
+      return (this.studentMarks[slideIndex] || {})[studentName] || "";
+    },
+
     goToSlide(index) {
       this.activeSlideIndex = this.clampSlideIndex(index);
       this.revealed = false;
@@ -170,6 +177,52 @@
     init() {
       this.presentationMode =
         window.sessionStorage.getItem(PRESENTATION_MODE_STORAGE_KEY) === "true";
+
+      const blockProgress = document.querySelector(".block-progress");
+      if (blockProgress) {
+        let isDragging = false;
+        let startX = 0;
+        let scrollLeft = 0;
+        let hasDragged = false;
+
+        blockProgress.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          hasDragged = false;
+          startX = e.pageX - blockProgress.getBoundingClientRect().left;
+          scrollLeft = blockProgress.scrollLeft;
+          blockProgress.style.cursor = "grabbing";
+          blockProgress.style.userSelect = "none";
+        });
+
+        blockProgress.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          const x = e.pageX - blockProgress.getBoundingClientRect().left;
+          const walk = x - startX;
+          if (Math.abs(walk) > 4) {
+            hasDragged = true;
+            blockProgress.scrollLeft = scrollLeft - walk;
+          }
+        });
+
+        const stopDrag = () => {
+          isDragging = false;
+          blockProgress.style.cursor = "";
+          blockProgress.style.userSelect = "";
+        };
+
+        blockProgress.addEventListener("mouseup", stopDrag);
+        blockProgress.addEventListener("mouseleave", stopDrag);
+
+        blockProgress.addEventListener("click", (e) => {
+          if (hasDragged) {
+            e.stopPropagation();
+            e.preventDefault();
+            hasDragged = false;
+          }
+        }, true);
+      }
+
+      Alpine.store("lessonRoster").shell = this;
 
       window.addEventListener("keydown", (event) => {
         const active = document.activeElement;
@@ -344,6 +397,24 @@
       this.ensureSlideMark(slideIndex).status = status;
     },
 
+    setAndSubmitSlideMark(slideIndex, option, slideId, blockId) {
+      this.setSlideMark(slideIndex, option);
+      this.submitSlideMark({ slideIndex, slideId, blockId });
+    },
+
+    async finishLesson() {
+      try {
+        await fetch(`/lesson/${this.lessonId}/complete`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ attempt_id: this.attemptId }),
+        });
+      } catch (e) {
+        // navigate regardless
+      }
+      window.location.href = `/lesson/${this.lessonId}/review/${this.attemptId}`;
+    },
+
     setSlideTeacherNote(slideIndex, value) {
       this.ensureSlideMark(slideIndex).teacherNote = value;
     },
@@ -433,7 +504,68 @@
 
     togglePresentationMode() {
       this.presentationMode = !this.presentationMode;
+      if (!this.presentationMode) {
+        Alpine.store("lessonRoster").panelOpen = false;
+      }
       this.savePresentationMode();
+    },
+
+    cycleStudentMark(studentName, slideId, blockId) {
+      const CYCLE = ["secure", "shaky", "missed", "skipped"];
+      const slideIndex = this.activeSlideIndex;
+      if (!this.studentMarks[slideIndex]) this.studentMarks[slideIndex] = {};
+      const current = this.studentMarks[slideIndex][studentName] || "";
+      const currentIdx = CYCLE.indexOf(current);
+      let next;
+      if (currentIdx === -1) {
+        next = CYCLE[0];
+      } else if (currentIdx === CYCLE.length - 1) {
+        next = "";
+      } else {
+        next = CYCLE[currentIdx + 1];
+      }
+      this.studentMarks[slideIndex][studentName] = next;
+      if (next === "") {
+        this.deleteStudentMark({
+          attempt_id: this.attemptId,
+          lesson_id: this.lessonId,
+          slide_id: slideId,
+          student_name: studentName,
+        });
+      } else {
+        this.postStudentMark({
+          attempt_id: this.attemptId,
+          lesson_id: this.lessonId,
+          slide_id: slideId,
+          block_id: blockId,
+          student_name: studentName,
+          status: next,
+        });
+      }
+    },
+
+    async deleteStudentMark(payload) {
+      try {
+        await fetch(`/lesson/${this.lessonId}/student-mark`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch (error) {
+        console.error("Student mark delete failed:", error);
+      }
+    },
+
+    async postStudentMark(payload) {
+      try {
+        await fetch(`/lesson/${this.lessonId}/student-mark`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch (error) {
+        console.error("Student mark failed:", error);
+      }
     },
 
     toggleQuickCheckErrorTag(slideIndex, itemIndex, errorTag) {
@@ -469,7 +601,89 @@
     },
   });
 
+  window.reviewShell = (config = {}) => ({
+    attemptId: config.attemptId || "",
+    lessonId: config.lessonId || "",
+    marks: config.marks || {},
+    editingKey: null,
+    editStatus: "",
+    editNote: "",
+    isSaving: false,
+
+    getMarkStatus(slideId, studentName) {
+      return (this.marks[`${slideId}__${studentName}`] || {}).status || "";
+    },
+
+    hasNote(slideId, studentName) {
+      return !!(this.marks[`${slideId}__${studentName}`] || {}).teacher_note;
+    },
+
+    openEdit(slideId, studentName) {
+      const key = `${slideId}__${studentName}`;
+      const existing = this.marks[key] || {};
+      this.editingKey = key;
+      this.editStatus = existing.status || "";
+      this.editNote = existing.teacher_note || "";
+    },
+
+    closeEdit() {
+      this.editingKey = null;
+    },
+
+    async saveEdit(slideId, studentName, blockId) {
+      if (!this.editStatus) return;
+      this.isSaving = true;
+      try {
+        await fetch(`/lesson/${this.lessonId}/student-mark`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            attempt_id: this.attemptId,
+            lesson_id: this.lessonId,
+            slide_id: slideId,
+            block_id: blockId,
+            student_name: studentName,
+            status: this.editStatus,
+            teacher_note: this.editNote,
+          }),
+        });
+        const key = `${slideId}__${studentName}`;
+        this.marks[key] = {
+          ...(this.marks[key] || {}),
+          status: this.editStatus,
+          teacher_note: this.editNote,
+        };
+        this.closeEdit();
+      } catch (err) {
+        console.error("Review save failed:", err);
+      } finally {
+        this.isSaving = false;
+      }
+    },
+  });
+
   document.addEventListener("alpine:init", () => {
+    Alpine.store("lessonRoster", {
+      shell: null,
+      panelOpen: false,
+      get roster() { return this.shell ? this.shell.roster : []; },
+      get classLabel() { return this.shell ? this.shell.classLabel : ""; },
+      get presentationMode() { return this.shell ? this.shell.presentationMode : false; },
+      getStudentStatus(student) {
+        if (!this.shell) return "";
+        const idx = this.shell.activeSlideIndex;
+        return (this.shell.studentMarks[idx] || {})[student] || "";
+      },
+      cycleStudent(student) {
+        if (!this.shell) return;
+        const idx = this.shell.activeSlideIndex;
+        const el = document.querySelector(`.lesson-slide-frame[data-slide-index="${idx}"]`);
+        const slideId = el ? el.dataset.slideId : "";
+        const blockId = el ? el.dataset.blockId : "";
+        this.shell.cycleStudentMark(student, slideId, blockId);
+      },
+    });
+
     Alpine.data("dragBuild", (expectedItems = []) => ({
       placedItems: [],
       revealed: false,

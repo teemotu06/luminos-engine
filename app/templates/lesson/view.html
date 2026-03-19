@@ -3,8 +3,8 @@
 {% block title %}{{ lesson.title }}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=4">
-<script defer src="{{ url_for('static', path='lesson.js') }}?v=2"></script>
+<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=6">
+<script defer src="{{ url_for('static', path='lesson.js') }}?v=4"></script>
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,9 @@
     x-data='lessonShell({
         initialSlideIndex: {{ initial_slide_index | default(0) }},
         attemptId: {{ attempt_id | tojson }},
-        lessonId: {{ lesson.lesson_id | tojson }}
+        lessonId: {{ lesson.lesson_id | tojson }},
+        roster: {{ roster | tojson }},
+        className: {{ class_name | tojson }}
     })'
     :class="{ 'lesson-shell--presentation': presentationMode }">
     <div class="lesson-shell__controls">
@@ -34,4 +36,41 @@
         {% include "lesson/partials/slide_nav.html" %}
     </main>
 </div>
+{% endblock %}
+
+{% block body_panels %}
+<div
+    x-data
+    x-show="$store.lessonRoster && $store.lessonRoster.panelOpen"
+    x-cloak
+    class="roster-float-panel">
+    <div class="roster-float-panel__header">
+        <span class="roster-float-panel__title" x-text="$store.lessonRoster ? $store.lessonRoster.classLabel : ''"></span>
+        <button type="button" class="roster-float-panel__close" @click="$store.lessonRoster.panelOpen = false">&#x2715;</button>
+    </div>
+    <div class="roster-float-panel__students">
+        <template x-if="$store.lessonRoster">
+            <template x-for="student in $store.lessonRoster.roster" :key="student">
+                <button
+                    type="button"
+                    class="roster-float-panel__student"
+                    :data-status="$store.lessonRoster.getStudentStatus(student)"
+                    @click="$store.lessonRoster.cycleStudent(student)">
+                    <span x-text="student"></span>
+                    <span class="roster-float-panel__badge" x-text="$store.lessonRoster.getStudentStatus(student) || '—'"></span>
+                </button>
+            </template>
+        </template>
+    </div>
+</div>
+
+<button
+    type="button"
+    class="roster-float-btn"
+    x-data
+    x-show="$store.lessonRoster && $store.lessonRoster.presentationMode"
+    x-cloak
+    @click="$store.lessonRoster.panelOpen = !$store.lessonRoster.panelOpen">
+    Roster
+</button>
 {% endblock %}

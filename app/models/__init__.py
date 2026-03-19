@@ -1,3 +1,17 @@
-from app.models.lesson import LessonAttemptRecord, LessonRecord, SlideResultRecord
+from app.models.lesson import (
+    ClassRecord,
+    LessonAttemptRecord,
+    LessonRecord,
+    SlideResultRecord,
+    StudentMarkRecord,
+    StudentRecord,
+)
 
-__all__ = ["LessonRecord", "LessonAttemptRecord", "SlideResultRecord"]
+__all__ = [
+    "ClassRecord",
+    "LessonRecord",
+    "LessonAttemptRecord",
+    "SlideResultRecord",
+    "StudentMarkRecord",
+    "StudentRecord",
+]

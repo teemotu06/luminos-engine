@@ -5,8 +5,8 @@ from uuid import uuid4
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.lesson import LessonAttemptRecord, SlideResultRecord
-from app.schemas.marking import SlideMarkRequest
+from app.models.lesson import LessonAttemptRecord, SlideResultRecord, StudentMarkRecord
+from app.schemas.marking import SlideMarkRequest, StudentMarkRequest
 
 
 STATUS_PRIORITY = {"secure": 0, "shaky": 1, "missed": 2, "skipped": 3}
@@ -22,12 +22,14 @@ def create_attempt(
     lesson_id: str,
     learner_key: Optional[str] = None,
     teacher_key: Optional[str] = None,
+    class_id: Optional[str] = None,
 ) -> LessonAttemptRecord:
     attempt = LessonAttemptRecord(
         attempt_id=str(uuid4()),
         lesson_id=lesson_id,
         learner_key=learner_key,
         teacher_key=teacher_key,
+        class_id=class_id,
         mastery_status="shaky",
         next_recommendation="move_on",
         phoneme_error_log=[],
@@ -144,6 +146,71 @@ def _repeated_problem_phoneme(previous_log: list, current_log: list) -> Optional
         if phoneme in previous_phonemes:
             return phoneme
     return None
+
+
+def delete_student_mark(
+    db: Session,
+    attempt_id: str,
+    slide_id: str,
+    student_name: str,
+) -> None:
+    existing = (
+        db.execute(
+            select(StudentMarkRecord).where(
+                StudentMarkRecord.attempt_id == attempt_id,
+                StudentMarkRecord.slide_id == slide_id,
+                StudentMarkRecord.student_name == student_name,
+            )
+        )
+        .scalars()
+        .first()
+    )
+    if existing is not None:
+        db.delete(existing)
+        db.commit()
+
+
+def record_student_mark(db: Session, mark: StudentMarkRequest) -> StudentMarkRecord:
+    attempt = db.get(LessonAttemptRecord, mark.attempt_id)
+    if attempt is None:
+        raise ValueError(f"Unknown attempt_id {mark.attempt_id}")
+    if attempt.lesson_id != mark.lesson_id:
+        raise ValueError("Attempt lesson_id does not match mark lesson_id")
+
+    existing = (
+        db.execute(
+            select(StudentMarkRecord).where(
+                StudentMarkRecord.attempt_id == mark.attempt_id,
+                StudentMarkRecord.slide_id == mark.slide_id,
+                StudentMarkRecord.student_name == mark.student_name,
+            )
+        )
+        .scalars()
+        .first()
+    )
+
+    if existing is None:
+        existing = StudentMarkRecord(
+            attempt_id=mark.attempt_id,
+            lesson_id=mark.lesson_id,
+            slide_id=mark.slide_id,
+            block_id=mark.block_id,
+            student_name=mark.student_name,
+            status=mark.status,
+            error_tags=mark.error_tags,
+            support_level=mark.support_level,
+            teacher_note=mark.teacher_note,
+        )
+        db.add(existing)
+    else:
+        existing.status = mark.status
+        existing.error_tags = mark.error_tags
+        existing.support_level = mark.support_level
+        existing.teacher_note = mark.teacher_note
+
+    db.commit()
+    db.refresh(existing)
+    return existing
 
 
 def record_slide_mark(db: Session, mark: SlideMarkRequest) -> LessonAttemptRecord:

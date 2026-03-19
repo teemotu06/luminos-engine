@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Review — {{ lesson.title }}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=5">
+<script defer src="{{ url_for('static', path='lesson.js') }}?v=3"></script>
+{% endblock %}
+
+{% block content %}
+<div
+  class="review-shell"
+  x-data='reviewShell({
+    attemptId: {{ attempt_id | tojson }},
+    lessonId: {{ lesson.lesson_id | tojson }},
+    marks: {{ marks_json | tojson }}
+  })'>
+
+  <header class="review-shell__header">
+    <a class="review-shell__back" href="/lesson/">← Lesson library</a>
+    <h1 class="review-shell__title">{{ lesson.title }}</h1>
+    <div class="review-shell__meta">
+      {% if class_name %}<span>{{ class_name }}</span>{% if attempt_date %} · {% endif %}{% endif %}
+      {% if attempt_date %}<span>{{ attempt_date.strftime('%d %b %Y') }}</span>{% endif %}
+    </div>
+  </header>
+
+  {# ── Session summary ──────────────────────────────────── #}
+  <div class="review-summary">
+    <div class="review-summary__label">Session summary</div>
+    <div class="review-summary__row">
+      <span class="review-summary__chip review-summary__chip--{{ mastery_status }}">{{ mastery_status | title }}</span>
+      <span class="review-summary__rec">
+        {% if next_recommendation == 'move_on' %}Move on
+        {% elif next_recommendation == 'repeat' %}Repeat lesson
+        {% elif next_recommendation == 'support' %}Additional support
+        {% else %}{{ next_recommendation }}{% endif %}
+      </span>
+    </div>
+  </div>
+
+  {% if not markable_blocks %}
+  <p style="color: rgba(17,17,17,0.45); font-size: 15px;">No markable slides in this lesson.</p>
+  {% else %}
+
+  {% for block_id, block_data in markable_blocks.items() %}
+  <section class="review-block">
+    <div class="review-block__label">{{ block_data.label }}</div>
+
+    {% for slide_info in block_data.slides %}
+    <div class="review-slide">
+      <div class="review-slide__title">{{ slide_info.slide_title }}</div>
+
+      <div class="review-slide__students">
+        {% for student in roster %}
+        <button
+          type="button"
+          class="review-student-badge"
+          :class="{
+            'review-student-badge--secure':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'secure',
+            'review-student-badge--shaky':    getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'shaky',
+            'review-student-badge--missed':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'missed',
+            'review-student-badge--skipped':  getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'skipped',
+            'review-student-badge--unmarked': !getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')
+          }"
+          @click="editingKey === '{{ slide_info.slide_id }}__{{ student }}' ? closeEdit() : openEdit('{{ slide_info.slide_id }}', '{{ student }}')">
+          <span>{{ student }}</span>
+          <template x-if="getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')">
+            <span class="review-student-badge__status" x-text="getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')"></span>
+          </template>
+          <template x-if="hasNote('{{ slide_info.slide_id }}', '{{ student }}')">
+            <span class="review-student-badge__note-dot" aria-hidden="true"></span>
+          </template>
+        </button>
+        {% endfor %}
+
+        {% if not roster %}
+        <p style="font-size: 13px; color: rgba(17,17,17,0.4);">No class roster linked to this attempt.</p>
+        {% endif %}
+      </div>
+
+      {# Inline edit panel for this slide #}
+      {% for student in roster %}
+      <div
+        class="review-edit-panel"
+        x-show="editingKey === '{{ slide_info.slide_id }}__{{ student }}'"
+        x-cloak>
+        <div class="review-edit-panel__student">{{ student }}</div>
+
+        <div class="review-edit-panel__status-row">
+          {% for option in ['secure', 'shaky', 'missed', 'skipped'] %}
+          <button
+            type="button"
+            class="review-edit-panel__status-btn review-edit-panel__status-btn--{{ option }}"
+            :class="{ 'review-edit-panel__status-btn--active': editStatus === '{{ option }}' }"
+            @click="editStatus = '{{ option }}'">
+            {{ option | title }}
+          </button>
+          {% endfor %}
+        </div>
+
+        <textarea
+          class="review-edit-panel__note"
+          rows="2"
+          placeholder="Optional note..."
+          x-model="editNote"></textarea>
+
+        <div class="review-edit-panel__actions">
+          <button
+            type="button"
+            class="review-edit-panel__save"
+            :disabled="!editStatus || isSaving"
+            @click="saveEdit('{{ slide_info.slide_id }}', '{{ student }}', '{{ slide_info.block_id }}')">
+            <span x-text="isSaving ? 'Saving…' : 'Save'">Save</span>
+          </button>
+          <button
+            type="button"
+            class="review-edit-panel__cancel"
+            @click="closeEdit()">
+            Cancel
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+
+  {% endif %}
+
+  <div class="review-done-row">
+    <a class="review-done-link" href="/lesson/">Done — back to lessons</a>
+  </div>
+
+</div>
+{% endblock %}
