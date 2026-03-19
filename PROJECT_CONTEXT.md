@@ -34,19 +34,20 @@ Notes:
 - Database: PostgreSQL — `luminos_engine` database on `localhost:5432`
 - Content layer: lesson JSON files in `app/content/lessons/`
 - Static assets: `app/static/`
-  - `styles.css` — CSS design tokens, base styles, lesson header, chrome
-  - `lesson.css` — all lesson component styles (1800+ lines)
-  - `lesson.js` — Alpine.js `lessonShell()` and `dragBuild()` components
+  - `styles.css` — CSS design tokens, base styles, lesson header, chrome, launcher, class selector, student profile
+  - `lesson.css` — all lesson component styles (2900+ lines)
+  - `lesson.js` — Alpine.js `lessonShell()`, `reviewShell()`, `dragBuild()` components + `lessonRoster` Alpine store
 
 ## 4. App entry and startup behavior
 
 - App entrypoint: `app/main.py`
 - Static files are mounted at `/static`
-- Lesson router is mounted from `app/routers/lesson.py`
+- Routers mounted: `lesson_router`, `students_router`, `classes_router`
 - On startup:
   - `python-dotenv` loads `.env` via `app/db.py`
   - `DATABASE_URL` is read from the environment — app raises `RuntimeError` if not set
-  - SQLAlchemy creates all tables via `Base.metadata.create_all()` if they don't exist
+  - SQLAlchemy creates all tables via `Base.metadata.create_all()`
+  - Startup migration: adds `class_id` column to `lesson_attempt` if it doesn't exist (safe no-op if already present)
   - Lesson metadata is synced from JSON files into the `lesson` table
 
 ## 5. Database configuration
@@ -56,92 +57,67 @@ Notes:
 - **Host**: `localhost:5432`
 - **Database**: `luminos_engine` — isolated, not shared with other projects
 - **User**: `luminos`
-- **Tables created on startup**: `lesson`, `lesson_attempt`, `slide_result`
+- **Tables created on startup**: `lesson`, `lesson_attempt`, `slide_result`, `student_mark`, `student`, `class`
 - **`app/db.py`**: central DB setup — calls `load_dotenv()`, reads `DATABASE_URL` from env, raises clearly if missing
 - **`.env`**: gitignored local file — must contain `DATABASE_URL=postgresql://luminos:luminos@localhost:5432/luminos_engine`
 - **`.env.example`**: committed — documents the expected format
-- **No Alembic yet** — schema is managed by `create_all()` at startup
-- The old `luminos_engine.db` SQLite file exists at the repo root but is no longer used
+- **No Alembic yet** — schema is managed by `create_all()` + startup migration shim
 
 ## 6. Current route surface
 
-Implemented routes:
-- `GET /`
-  - redirects to `/lesson/`
-- `GET /lesson/`
-  - teacher-facing lesson launcher page (HTML, Jinja2 template)
-  - lists all lessons loaded from `app/content/lessons/`
-  - grouped by `unit_id` using Jinja2 `groupby`
-  - each row shows: lesson ID, label (split from title on `': '`), target pattern, status badge, Open link
-  - template: `app/templates/lesson/index.html`
-- `GET /lesson/{lesson_id}`
-  - renders the full lesson shell
-  - creates a new lesson attempt
-- `GET /lesson/{lesson_id}/block/{block_id}`
-  - renders the same full shell, but starts on the first slide for that block
-  - creates a new lesson attempt
-- `POST /lesson/{lesson_id}/mark`
-  - receives a slide mark payload
-  - writes slide results
-  - updates the lesson attempt summary
+### Lesson routes (`app/routers/lesson.py`)
+- `GET /` — redirects to `/lesson/`
+- `GET /lesson/` — teacher-facing lesson launcher page; class selector at top; grouped lesson list
+- `GET /lesson/{lesson_id}` — renders full lesson shell; creates new attempt
+- `GET /lesson/{lesson_id}/block/{block_id}` — same shell, starts at first slide of that block
+- `POST /lesson/{lesson_id}/mark` — receives slide mark payload; writes slide result; updates attempt summary
+- `POST /lesson/{lesson_id}/student-mark` — upserts a `StudentMarkRecord` for one student × slide
+- `DELETE /lesson/{lesson_id}/student-mark` — deletes a `StudentMarkRecord` (used when cycling back to unmarked)
+- `POST /lesson/{lesson_id}/complete` — sets `attempt.completed = True`; navigates to review on success
+- `GET /lesson/{lesson_id}/review/{attempt_id}` — post-lesson review screen with mastery summary and editable student marks
+
+### Student routes (`app/routers/students.py`)
+- `GET /students/{student_name}` — student profile page showing all historical marks grouped by lesson
+
+### Class routes (`app/routers/classes.py`)
+- Class management routes (create, list, detail)
 
 ## 7. Current data model and persistence
 
 Implemented database tables:
-- `lesson`
-  - lesson metadata synced from JSON
-- `lesson_attempt`
-  - one attempt record per lesson run
-- `slide_result`
-  - one stored result per slide per attempt
+
+- `lesson` — lesson metadata synced from JSON
+- `lesson_attempt` — one attempt record per lesson run; has `class_id` column for roster association
+- `slide_result` — one stored result per slide per attempt
+- `student_mark` (`StudentMarkRecord`) — one record per student × slide × attempt; stores `status`, `error_tags` (nullable JSON), `teacher_note`
+- `student` (`StudentRecord`) — student registry
+- `class` (`ClassRecord`) — class registry; holds roster JSON
 
 Current persistence behavior:
 - Opening a lesson creates a new `lesson_attempt`
-- Marking writes or updates a `slide_result`
-- Attempt summary is recalculated after each mark
-- Completion is only set when a mark payload is submitted with `completed: true`
+- Slide marks write or update a `slide_result`
+- Student marks write or update a `student_mark` via POST; DELETE removes the record
+- `StudentMarkRecord.error_tags` is nullable (no error tags are collected in the current teacher overlay — field reserved for review editing)
+- Attempt `completed` is set via the dedicated `/complete` endpoint (not via the mark payload)
+- Attempt summary is recalculated after each slide mark
 
 Current recommendation logic:
-- `secure` -> `move_on`
-- `shaky` -> `move_on`
-- `missed` -> `repeat`
+- `secure` → `move_on`
+- `shaky` → `move_on`
+- `missed` → `repeat`
 - If a learner key exists and repeated phoneme trouble is found across consecutive lessons, recommendation can escalate to `support`
 
 ## 8. Current lesson content contract
 
 Current lesson files:
 - one JSON file per lesson
-- current sample lesson: `app/content/lessons/G1-L1.json`
+- two implemented lessons: `G1-L1.json`, `G1-L2.json`
 
 Current implemented lesson schema shape:
-- lesson-level fields:
-  - `lesson_id`
-  - `unit_id`
-  - `target_pattern`
-  - `title`
-  - `korean_interference_active`
-  - `content_pack_status`
-  - `json_path` is populated at load time
-- blocks are keyed by block id strings:
-  - `"01"` through `"10"`
-- each block contains:
-  - `block_id`
-  - `label`
-  - `slides`
-- each slide currently includes:
-  - `slide_id`
-  - `block_id`
-  - `slide_title`
-  - `view_type`
-  - `content_payload`
-  - `teacher_cue`
-  - `expected_response`
-  - `correction_move`
-  - `observation_note`
-  - `korean_interference_flag`
-  - `markable`
-  - `marking_options`
-  - `next_action`
+- lesson-level fields: `lesson_id`, `unit_id`, `target_pattern`, `title`, `korean_interference_active`, `content_pack_status`, `json_path`
+- blocks keyed by block id strings: `"01"` through `"10"`
+- each block: `block_id`, `label`, `slides`
+- each slide: `slide_id`, `block_id`, `slide_title`, `view_type`, `content_payload`, `teacher_cue`, `expected_response`, `correction_move`, `observation_note`, `korean_interference_flag`, `markable`, `marking_options`, `next_action`
 
 ## 9. Block registry and allowed view types
 
@@ -151,26 +127,16 @@ The lesson engine enforces:
 - allowed view types per block
 
 Current allowed view types by block:
-- `01` Flashcard Phoneme Review
-  - `flashcard`, `audio_prompt`, `quick_check`
-- `02` Listening & Write Review
-  - `audio_prompt`, `writing_encoding`, `quick_check`
-- `03` New Sound Introduction
-  - `flashcard`, `audio_prompt`, `minimal_pair`, `read_respond`
-- `04` Vocabulary Warm-Up
-  - `flashcard`, `audio_prompt`, `minimal_pair`, `read_respond`
-- `05` Word Building
-  - `drag_letter`, `flashcard`, `read_respond`, `writing_encoding`
-- `06` Sentence Bridge
-  - `read_respond`, `drag_word`, `audio_prompt`
-- `07` Decodable Reader / Fluency
-  - `read_respond`, `audio_prompt`, `quick_check`
-- `08` Encoding & Writing
-  - `writing_encoding`, `audio_prompt`, `quick_check`
-- `09` Morpheme Moment
-  - `flashcard`, `drag_word`, `read_respond`
-- `10` Meaning-Making Close
-  - `read_respond`, `quick_check`
+- `01` Flashcard Phoneme Review — `flashcard`, `audio_prompt`, `quick_check`
+- `02` Listening & Write Review — `audio_prompt`, `writing_encoding`, `quick_check`
+- `03` New Sound Introduction — `flashcard`, `audio_prompt`, `minimal_pair`, `read_respond`
+- `04` Vocabulary Warm-Up — `flashcard`, `audio_prompt`, `minimal_pair`, `read_respond`
+- `05` Word Building — `drag_letter`, `flashcard`, `read_respond`, `writing_encoding`
+- `06` Sentence Bridge — `read_respond`, `drag_word`, `audio_prompt`
+- `07` Decodable Reader / Fluency — `read_respond`, `audio_prompt`, `quick_check`
+- `08` Encoding & Writing — `writing_encoding`, `audio_prompt`, `quick_check`
+- `09` Morpheme Moment — `flashcard`, `drag_word`, `read_respond`
+- `10` Meaning-Making Close — `read_respond`, `quick_check`
 
 ## 10. Current rendering model
 
@@ -192,33 +158,51 @@ Current lesson render flow:
 
 Primary shell state lives in `app/static/lesson.js`.
 
-Current shell capabilities:
-- in-page slide navigation
-- block jump navigation
-- shared reveal state
-- presentation mode toggle (labels: "Presentation Mode" / "Teacher Mode")
-- audio playback via Howler
-- drag build interactions
-- teacher-side mark state
-- quick-check item state
-- POSTing marks to backend
+### `lessonShell` component
+All lesson interactivity. Key state:
+- `activeSlideIndex` — currently displayed slide
+- `presentationMode` — toggles teacher overlay and floating roster button visibility
+- `slideMarks` — class-level slide marks (status per slide index)
+- `studentMarks` — per-student marks keyed by `[slideIndex][studentName]`
+- `quickCheckMarks` — quick-check item state
+- `roster` — array of student names from the loaded class
+- `classLabel` — display name of the loaded class (NOTE: config key is `className`, internal property is `classLabel` — `className` is a reserved DOM property and must not be used as an Alpine reactive key)
+
+Key methods:
+- `cycleStudentMark(studentName, slideId, blockId)` — cycles `""→secure→shaky→missed→skipped→""`, auto-DELETEs on cycle back to `""`
+- `setAndSubmitSlideMark(slideIndex, option, slideId, blockId)` — sets class response status and immediately POSTs (no confirm button)
+- `finishLesson()` — POSTs to `/lesson/{id}/complete` then navigates to review screen
+- `togglePresentationMode()` — toggles mode, closes floating roster panel when switching back to teacher mode
+
+### `lessonRoster` Alpine store
+Registered in `alpine:init` in `lesson.js`. Bridges the floating roster panel (rendered at body level, outside the lesson card) to `lessonShell` state.
+
+State:
+- `shell` — reference set to `this` in `lessonShell.init()`
+- `panelOpen` — controls floating panel visibility
+- Getters: `roster`, `classLabel`, `presentationMode` — all proxied from `shell`
+- `getStudentStatus(student)` — reads `shell.studentMarks[activeSlideIndex][student]`
+- `cycleStudent(student)` — calls `shell.cycleStudentMark(...)` for the current slide
+
+### `reviewShell` component
+Post-lesson review screen interactivity.
+- Initialised with server-rendered `marks` dict (keyed `"slide_id__student_name"`)
+- `openEdit(slideId, studentName)` / `saveEdit(...)` / `closeEdit()` — inline edit panel
+- Edit panel: status buttons + note textarea only (no error tags)
+- POSTs to `/lesson/{id}/student-mark`
 
 Current keyboard controls:
-- `P`
-  - toggle presentation mode
-- `R`
-  - toggle reveal
-- `ArrowLeft`
-  - previous slide
-- `ArrowRight`
-  - next slide
-- `Space`
-  - reveal / next-step behavior depending on slide mode
+- `P` — toggle presentation mode
+- `R` — toggle reveal
+- `ArrowLeft` — previous slide
+- `ArrowRight` — next slide
+- `Space` — reveal / next-step behavior depending on slide mode
 
 ## 12. Current teacher overlay behavior
 
 The teacher overlay is visible when presentation mode is off.
-It is rendered as a sticky sidebar at `296px` wide on desktop (≥ 1100px).
+It renders as the left column of the 2-column grid on desktop (≥ 1100px), `304px` wide.
+In presentation mode the overlay column is hidden; the content column expands to full width.
 
 Current mode toggle labels:
 - Teacher mode (overlay visible): button reads **"Presentation Mode"** (click to enter)
@@ -227,62 +211,79 @@ Current mode toggle labels:
 Current overlay DOM structure:
 - `teacher-overlay__header` — block ID + label (meta-primary), slide title (meta-secondary)
 - `teacher-overlay__section--primary` — teacher cue (largest text in overlay)
-- `teacher-overlay__section--guidance` — grouped grid:
-  - Expected response
-  - Correction move
-  - Watch for (observation note)
+- `teacher-overlay__section--guidance` — Expected response, Correction move, Watch for
 - `teacher-overlay__section--flag` — Korean interference banner (amber tint, only when present)
-- `teacher-overlay__section--marking` — marking controls (only on markable slides):
-  - status buttons (Secure / Shaky / Missed / Skipped)
-  - error tag pills
-  - Korean Transfer checkbox
-  - teacher note textarea (2 rows)
-  - Confirm Mark button
+- `teacher-overlay__section--roster` — student roster badges (on every slide, including non-markable)
+- `teacher-overlay__section--marking` — Class Response buttons (on every slide except `lesson_close`):
+  - "Got it" / "Mixed" / "Revisit" buttons (label mapping: `secure`/`shaky`/`missed`)
+  - Tapping a button immediately saves (no confirm button)
+  - Section label: "Class response"
+  - No error tags, no Korean Transfer checkbox, no teacher note, no confirm button
 
-Block 10 compact mode (`teacher-overlay--compact`):
-- cue remains visible
-- guidance section shows only `Watch for` (observation note)
-- no marking controls (Block 10 is not `markable` — it marks via the lesson close flow)
+No marking is shown on `lesson_close` slides (Block 10). The Finish & Review button in `slide_nav.html` is sufficient.
 
-Current block number pill behavior:
-- the block number pill has been removed from the content card's slide header (`block_header.html`)
-- block identity is conveyed by the block progress nav row at the top and the overlay header
-- the slide title (`slide_title`) is shown alone in the card header
+Block progress bar:
+- drag-to-scroll via mousedown/mousemove/mouseup
+- `hasDragged` guard prevents click events from firing after a drag
 
-## 13. Current top block tab row behavior
+## 13. Current block progress / tab row behavior
 
-The block row:
-- shows all 10 blocks as pill buttons
-- uses the current active slide’s `block_id` to determine active state
-- allows direct jump to the first slide in each block
-- horizontally scrollable on smaller viewports (scrollbar hidden)
+- Shows all 10 blocks as pill buttons
+- Uses active slide's `block_id` to determine active state
+- Allows direct jump to first slide in each block
+- Horizontally scrollable; drag-to-scroll enabled; scrollbar hidden
+- Hidden in presentation mode
 
-Current UX characteristics:
-- each tab shows block number (`Block 01`) and block label
-- active tab has a blue-tinted background, inset highlight, and stronger font weight
-- hidden in presentation mode
+## 14. Current floating roster (presentation mode)
 
-## 14. Current visual design system
+In presentation mode, a small fixed **"Roster"** button appears at `position: fixed; bottom: 24px; right: 24px; z-index: 1000`.
+
+Tapping opens a compact panel at `position: fixed; bottom: 72px; right: 24px; z-index: 1000; width: 220px`.
+
+Panel contents:
+- Class name in the header
+- Close (×) button
+- Student list — each row shows student name + current status badge for the active slide
+- Tapping a student cycles their mark (same `secure→shaky→missed→skipped→""` cycle as teacher mode)
+
+The button and panel are rendered at body level via `{% block body_panels %}` in `base.html` — completely outside the lesson card div. They use `$store.lessonRoster` to communicate with `lessonShell`.
+
+The projected screen (main content) is unaffected — only the Roster button is visible in the corner. Students do not see the panel unless the teacher opens it.
+
+## 15. Current post-lesson review screen
+
+Route: `GET /lesson/{lesson_id}/review/{attempt_id}`
+Template: `app/templates/lesson/review.html`
+Alpine component: `reviewShell`
+
+Layout:
+- "Session summary" section: mastery status chip + recommendation label
+- Block-by-block student mark grid
+- Each student badge shows status color + dashed border if unmarked + note dot indicator
+- Tapping a badge opens an inline edit panel (status buttons + note textarea; no error tags)
+- "Done" link returns to lesson library
+
+## 16. Current visual design system
 
 CSS variables are defined in `styles.css` and referenced throughout `lesson.css`.
 
 ### Palette
 
-The current palette is warm earth tones, not teal. The `--c-blue` alias now points to the primary accent colour (terracotta), retained for semantic compatibility with lesson.css.
+The current palette is warm earth tones. The `--c-blue` alias points to the primary accent colour (terracotta).
 
 Current token values:
-- `--bg: #efe8df` — warm parchment page background (rendered with radial+linear gradient)
+- `--bg: #efe8df` — warm parchment page background
 - `--surface: #fbf7f0` — card surfaces
 - `--surface-strong: #fffdf9` — elevated card surfaces
 - `--surface-muted: #f3ebdf` — recessed/muted surfaces
 - `--accent: #b66636` — primary terracotta accent
 - `--accent-strong: #995022` — darker accent for hover/active states
-- `--c-blue: #b66636` — semantic alias for primary accent (same as `--accent`)
-- `--c-blue-hover: #995022` — hover state for accent elements
+- `--c-blue: #b66636` — semantic alias for primary accent
+- `--c-blue-hover: #995022` — hover state
 - `--c-blue-light: rgba(182, 102, 54, 0.08)` — tinted backgrounds
 - `--c-blue-mid: rgba(182, 102, 54, 0.18)` — active border tints
 - `--c-border: #ddd0bf` — warm border
-- `--c-border-strong: #cfbda9` — stronger border for emphasis
+- `--c-border-strong: #cfbda9` — stronger border
 - `--c-text: #171411` — near-black warm text
 - `--c-text-muted: #685d52` — secondary text
 - `--c-text-tertiary: #a09284` — tertiary/label text
@@ -292,249 +293,110 @@ Current token values:
 
 ### Typography
 
-Three-font system registered as CSS variables:
+Three-font system:
 - `--font-sans: "Inter"` — UI chrome, overlays, labels, navigation
 - `--font-serif: "Cormorant Garamond"` — display text, lesson titles
-- `--font-mono: "IBM Plex Mono"` — grapheme and phoneme display in content slides
-
-All three loaded via Google Fonts in `base.html`.
-Global: `font-feature-settings: "cv01", "cv02", "cv03"`, `-webkit-font-smoothing: antialiased`.
+- `--font-mono: "IBM Plex Mono"` — grapheme and phoneme display
 
 ### Layout
 - Page background: `radial-gradient` light bloom at top + `linear-gradient` warm fade
-- Two-column on desktop: `296px` teacher overlay + `minmax(0, 1fr)` content
-- Single-column in presentation mode
-- All primary CTAs use `translateY(-1px)` on hover for micro-interaction feedback
+- Two-column on desktop (≥ 1100px): `304px` teacher overlay + `minmax(0, 1fr)` content
+- Single-column in presentation mode (overlay hidden, content full width)
+- All primary CTAs use `translateY(-1px)` on hover
 
-## 15. Current implemented view library
+## 17. Current implemented view library
 
-Implemented view types:
-- `flashcard`
-- `audio_prompt`
-- `minimal_pair`
-- `drag_letter`
-- `drag_word`
-- `read_respond`
-- `writing_encoding`
-- `quick_check`
-
-Current notable behavior by view:
+Implemented view types: `flashcard`, `audio_prompt`, `minimal_pair`, `drag_letter`, `drag_word`, `read_respond`, `writing_encoding`, `quick_check`
 
 ### `flashcard`
-- supports text front/back
-- supports image-first front side
-- supports audio replay
-- reveal toggles within the card
-- used for phoneme review and vocabulary warm-up
-- supports optional blend-through mode via `blend_units` in `content_payload`
-  - `blend_units`: ordered array of `{grapheme, phoneme?, audio?}` objects
-  - when present, the grapheme unit row IS the word display on the back side — no separate full-word span
-  - the blend row receives the same `getResponsiveTextStyle()` as the normal word, so units scale identically
-  - units render in `var(--font-serif)` (Cormorant Garamond), `font-weight: 700`, `font-size: inherit` — one integrated teaching surface
-  - a Blend button appears in the actions row only after reveal (outside the card `<button>` to avoid nested button violation)
-  - clicking Blend calls `runVocabBlend()` in `lesson.js`, stepping left-to-right through units via `activeBlendIndex`
-  - per-unit audio plays if set; full-word audio plays after the last unit
-  - `activeBlendIndex` resets on slide navigation
-  - slides without `blend_units` render the normal `lesson-flashcard__text` span, entirely unaffected
+- text front/back, optional image-first, optional audio, reveal toggle
+- optional `blend_units` mode: `{grapheme, phoneme?, audio?}` array; Blend button steps through units with per-unit audio
 
 ### `audio_prompt`
-- supports audio play / replay
-- supports optional reveal text
-- supports optional image
+- audio play/replay, optional reveal text, optional image
 
 ### `minimal_pair`
-- supports pair audio playback
-- supports Korean interference display
-- answer key is hidden in presentation mode
+- pair audio playback, Korean interference display, answer key hidden in presentation mode
 
 ### `drag_letter`
-- uses unit-based slot arrays
-- slot count is driven by `slots` first, then falls back to `target_letters`
-- supports chunk builds such as `r | a | ck`
-- includes check / reset / reveal
-- visual feedback:
-  - green success state
-  - red incorrect state
+- unit-based slot arrays, chunk builds, check/reset/reveal, green/red feedback
 
 ### `drag_word`
-- sentence-level drag build
-- supports check / reset / reveal
+- sentence-level drag build, check/reset/reveal
 
 ### `read_respond`
-- supports sentence mode
-  - sentence mode uses `var(--font-serif)` and warm cream gradient background to match reader mode visually
-- supports reader mode
-- supports spot-part mode
-- supports blend-reveal-next flow for word blending
-- supports optional illustration/image in reader mode
-- supports optional comprehension prompt
-- supports font-size controls
+- sentence mode, reader mode, spot-part mode, blend-reveal-next flow, optional illustration, optional comprehension prompt, font-size controls
 
 ### `writing_encoding`
-- supports sentence dictation presentation
-- supports word-level dictation slides
-- for word dictation:
-  - prompt text can be omitted
-  - answer is not shown initially
-  - reveal displays answer inside boxes
-  - box count is dynamic and tied to answer or configured box count
+- sentence and word-level dictation, reveal displays answer in boxes, box count tied to answer or configured count
 
 ### `quick_check`
-- has two branches:
-  - generic quick-check rubric branch
-  - `lesson_close` branch
-- generic quick-check:
-  - item-level statuses
-  - error tags
-  - Korean Transfer toggle
-  - confirm mark button
-- lesson-close:
-  - one oral prompt at a time
-  - back / next / restart
-  - final close rating appears only at the end
-  - complete lesson button submits the final result
+Two branches:
+- **Generic quick-check**: item-level statuses, error tags, Korean Transfer toggle, confirm mark
+- **`lesson_close`**: one oral prompt at a time, back/next/restart navigation only — no marking controls (lesson is completed via the Finish & Review button in `slide_nav.html`)
 
-## 16. Current lessons
+## 18. Current marking model
 
-Two lessons currently implemented. Both at `content_pack_status: draft`.
-
-### G1-L1 — Group 1, Lesson 1: s, a, t
-
-Block-by-block:
-
-**Block 01** — Flashcard Phoneme Review (1 slide)
-- Establishes the phoneme-grapheme card routine (Lesson 1 has no prior phonemes to review)
-- Not markable
-
-**Block 02** — Listening & Write Review (1 slide)
-- Encoding routine demo with single sound `s` using 1 Elkonin box
-- Not markable (routine setup, not prior-word review)
-
-**Block 03** — New Sound Introduction (3 slides)
-- Introduces `/s/` (slide 03-01), `/æ/` (slide 03-02), `/t/` (slide 03-03)
-- Each markable: secure / shaky / missed
-
-**Block 04** — Vocabulary Warm-Up (3 flashcard slides with `blend_units`)
-- `sat` → `s | a | t`
-- `at` → `a | t`
-- `a` → `a`
-- Not markable
-
-**Block 05** — Word Building (3 drag-letter slides)
-- `sat`, `at`, `as`
-- Markable
-
-**Block 06** — Sentence Bridge (1 slide)
-- Sentence: `I sat.` — read_respond, sentence mode, font controls
-- Markable
-
-**Block 07** — Decodable Reader (1 slide)
-- Text: `I sat.` — reader mode, comprehension prompt
-- Markable
-
-**Block 08** — Encoding & Writing (3 slides)
-- Dictation: `sat` (3 boxes), `at` (2 boxes), `a` (1 box)
-- Markable
-
-**Block 09** — Morpheme Moment (1 slide)
-- spot_part: `sat` / `at`, highlighted chunk `at`
-- Not markable
-
-**Block 10** — Meaning-Making Close (1 slide)
-- lesson_close flow, 4 oral prompts, phoneme counting `/s/ /æ/ /t/`
-
----
-
-### G1-L2 — Group 1, Lesson 2: i
-
-Block-by-block:
-
-**Block 01** — Flashcard Phoneme Review (3 slides)
-- Reviews `s`, `a`, `t` from G1-L1
-
-**Block 02** — Listening & Write Review (3 slides)
-- Encoding review: prior words using s · a · t pool
-
-**Block 03** — New Sound Introduction (1 slide)
-- Introduces `/ɪ/` (grapheme `i`)
-- Markable
-
-**Block 04** — Vocabulary Warm-Up (4 flashcard slides with `blend_units`)
-- Decodable words using s · a · t · i pool
-
-**Block 05** — Word Building (3 drag-letter slides)
-- Markable
-
-**Block 06** — Sentence Bridge (3 slides)
-- read_respond, sentence mode
-
-**Block 07** — Decodable Reader (1 slide)
-- reader mode
-
-**Block 08** — Encoding & Writing (3 slides)
-- Markable
-
-**Block 09** — Morpheme Moment (1 slide)
-- spot_part pattern noticing
-
-**Block 10** — Meaning-Making Close (1 slide)
-- lesson_close flow
-
-See Section 16 for per-lesson block detail. Block 05–10 structure is consistent across lessons: drag-letter word building, sentence bridge, decodable reader, encoding/writing, morpheme moment, lesson_close.
-
-## 17. Current marking model
-
-Two implemented marking paths exist:
-
-### Overlay slide mark path
-Used for ordinary markable slides.
+### Overlay class response path
+Used on every slide except `lesson_close`.
 
 Behavior:
-- teacher selects one slide-level status
-- optional error tags and Korean Transfer can be added
-- optional teacher note can be entered
-- confirm sends one slide result
+- Teacher taps one of three buttons: Got it (secure) / Mixed (shaky) / Revisit (missed)
+- Mark saves immediately on tap — no confirm button
+- Section label: "Class response"
+- No error tags, no Korean Transfer, no teacher note at slide level
+
+### Student roster path
+Present on every slide (including non-markable ones).
+
+Behavior:
+- Roster shows all students in the loaded class
+- Tapping a student badge cycles status: `""→secure→shaky→missed→skipped→""`
+- Cycling back to `""` sends a DELETE to remove the record
+- All other states POST to `/lesson/{lesson_id}/student-mark`
 
 ### Quick-check item path
 Used by generic `quick_check` slides.
 
 Behavior:
-- teacher marks each item
-- aggregate slide status is derived from the worst item status
-- item-level data is submitted as `item_results`
+- Teacher marks each item
+- Aggregate slide status derived from worst item status
+- Item-level data submitted as `item_results`
 
-### Block 10 close path
-Used only for `lesson_close`.
+## 19. Current completion behavior
+
+Lesson completion:
+- Teacher taps **"Finish & review"** in `slide_nav.html` (visible on the last slide)
+- `finishLesson()` POSTs to `/lesson/{id}/complete` (sets `attempt.completed = True`)
+- Browser navigates to the review screen at `/lesson/{id}/review/{attempt_id}`
+
+The old `Complete Lesson` button in the `lesson_close` quick_check view has been removed. Block 10 only shows oral prompts; completion is entirely handled by the Finish & Review button.
+
+## 20. Class selector on launcher
+
+The launcher page (`GET /lesson/`) includes a class selector at the top.
 
 Behavior:
-- teacher progresses through oral prompts
-- final mark is shown only on the last prompt
-- `Complete Lesson` sends one slide-level result with `completed: true`
+- Styled card with label + "Manage" link + `<select>` dropdown
+- Disabled placeholder option as the first `<option>`
+- Selecting a class sets `class_id` on the attempt and loads the class roster into the lesson shell
+- Roster flows through to the teacher overlay and the floating roster panel
 
-## 18. Current completion behavior
+## 21. Current assets
 
-Lesson completion currently happens when:
-- the teacher submits Block 10 through the `lesson_close` complete action
-- that POST includes `completed: true`
-
-This means:
-- ordinary slide marks do not complete the lesson
-- Block 10 is the implemented end-of-lesson completion point
-
-## 19. Current assets
-
-Current local image assets include:
+Current local image assets:
 - vocabulary images in `app/static/images/vocab/`
-- decodable reader illustration in `app/static/images/readers/`
+- decodable reader illustrations in `app/static/images/readers/`
 
-Current audio references exist in lesson content, but this repo currently documents the paths rather than bundling a complete verified audio library for every referenced file.
+Audio references exist in lesson content. Not all referenced audio files may be present locally.
 
-## 20. Current implementation boundaries
+## 22. Current implementation boundaries
 
 This repo currently behaves as:
 - a standalone lesson engine
-- a lesson delivery and teacher-marking system
-- two lesson implementations (`G1-L1`, `G1-L2`) each with full 10-block coverage
+- a teacher-facing lesson delivery and marking system
+- a student mark history tracker (student profile pages)
+- two lesson implementations (`G1-L1`, `G1-L2`) with full 10-block coverage
 
 This repo does not currently implement:
 - student-device mode
@@ -544,61 +406,54 @@ This repo does not currently implement:
 - speech recognition
 - adaptive branching beyond the current recommendation logic
 
-## 21. Current known realities and constraints
+## 23. Current lessons
 
-- `PROJECT_CONTEXT.md` is descriptive only
-- the repo is materially more advanced than earlier continuity summaries
-- current navigation is in-page, not query-string slide navigation
-- the current sample lesson is `G1-L1`, not the earlier lower-case sample file
-- Block 10 now completes the lesson through the close flow
-- some content references local static audio paths that may still require real media files to exist for full live playback
+Two lessons at `content_pack_status: draft`.
 
-## 22. Lesson launcher page (`GET /lesson/`)
+### G1-L1 — Group 1, Lesson 1: s, a, t
 
-The launcher is the entry point for teachers navigating between lessons.
+**Block 01** — Flashcard Phoneme Review (1 slide) — not markable
+**Block 02** — Listening & Write Review (1 slide) — not markable
+**Block 03** — New Sound Introduction (3 slides) — markable: `/s/`, `/æ/`, `/t/`
+**Block 04** — Vocabulary Warm-Up (3 flashcard slides with `blend_units`): `sat`, `at`, `a` — not markable
+**Block 05** — Word Building (3 drag-letter slides): `sat`, `at`, `as` — markable
+**Block 06** — Sentence Bridge (1 slide): `I sat.` — markable
+**Block 07** — Decodable Reader (1 slide): `I sat.` reader mode — markable
+**Block 08** — Encoding & Writing (3 slides): `sat`, `at`, `a` — markable
+**Block 09** — Morpheme Moment (1 slide): spot_part `sat`/`at` — not markable
+**Block 10** — Meaning-Making Close (1 slide): lesson_close, 4 oral prompts
 
-Template: `app/templates/lesson/index.html`
+### G1-L2 — Group 1, Lesson 2: i
 
-Current layout:
-- Page header: uppercase meta label ("LUMINOS · Lesson Library"), serif h1, muted intro line
-- Stats row: total lessons · groups · sounds (computed from `target_pattern` splits via Jinja2 namespace)
-- Groups separated by 0.5px `<hr>` dividers
-- Each group: uppercase "GROUP" kicker + serif 20px group title (`unit_id`)
-- Lesson cards in responsive auto-fill grid (`minmax(200px, 1fr)`, gap 12px)
+**Block 01** — Flashcard Phoneme Review (3 slides): reviews `s`, `a`, `t`
+**Block 02** — Listening & Write Review (3 slides): encoding review
+**Block 03** — New Sound Introduction (1 slide): `/ɪ/` — markable
+**Block 04** — Vocabulary Warm-Up (4 flashcard slides with `blend_units`)
+**Block 05** — Word Building (3 drag-letter slides) — markable
+**Block 06** — Sentence Bridge (3 slides)
+**Block 07** — Decodable Reader (1 slide)
+**Block 08** — Encoding & Writing (3 slides) — markable
+**Block 09** — Morpheme Moment (1 slide): spot_part
+**Block 10** — Meaning-Making Close (1 slide): lesson_close
 
-Lesson card anatomy:
-- Top row: lesson ID (uppercase sans) + 7px status dot (green = ready, blue-gray = other)
-- Phoneme pills: each item from `target_pattern.split(' · ')` in monospace, `#eeedfe` bg / `#3c3489` text, 4px radius
-- Italic serif subtitle (lesson label, split from `title` on `': '`)
-- "Open lesson →" in muted blue (`#6b7fa3`)
+## 24. Known implementation notes and constraints
 
-Back link:
-- `lesson_header.html` has a `← Lesson Library` back link above the breadcrumb meta row, hidden in presentation mode
-- Styled with `.lesson-header__back`: 12px Inter, `var(--c-text-muted)`, no underline, `margin-bottom: 12px`
+- `className` is a reserved DOM property — Alpine reactive data must use `classLabel` instead. Config object passed to `lessonShell()` still uses `className` as the key; it is immediately aliased to `classLabel` inside the component.
+- `StudentMarkRecord.error_tags` is nullable; error tags are not currently collected in the lesson flow (field is reserved for future use).
+- Block progress bar drag-to-scroll uses a `hasDragged` boolean guard to prevent clicks from firing after a drag gesture.
+- The `lessonRoster` Alpine store is registered in `alpine:init` and wired to `lessonShell` in `init()`. The store is the only channel between the body-level floating roster panel and the lesson shell scope.
+- Server runs on port 8001 (port 8000 is used by another project).
+- No Alembic — `class_id` column migration is handled by a startup shim in `main.py`.
 
-Launcher title color:
-- `.launcher__title` uses `var(--accent)` (terracotta `#b66636`) — not `var(--c-text)`
-
-Static delivery note:
-- `styles.css` is loaded with `?v=4` in `base.html` to bust browser cache
-
-## 23. Current practical summary
+## 25. Current practical summary
 
 The system is currently operating as:
-- teacher-facing lesson launcher at `/lesson/` (HTML, grouped by unit)
-- one FastAPI-rendered lesson shell per lesson
-- one fully rendered lesson in the DOM
-- Alpine-managed in-page classroom navigation
-- teacher-guided instruction with presentation mode
-- DB-backed attempt creation and slide-level marking
-- one implemented sample lesson covering Blocks 01 through 10
-
-The current product state is a functional classroom lesson runner with:
-- teacher-facing lesson library entry point (← Lesson Library back link on detail page)
-- two draft lessons: G1-L1 (s·a·t) and G1-L2 (i)
-- content validation
-- fixed block architecture
-- implemented view library
-- persistent attempt/mark storage
-- end-of-lesson close/completion flow
-- polished visual design system (three-font typographic stack, warm earth-tone palette, consistent component language)
+- Teacher-facing lesson launcher at `/lesson/` with class selector
+- Full lesson shell with 2-column teacher overlay (teacher mode) / full-width clean display (presentation mode)
+- Floating Roster button in presentation mode for discreet per-student marking
+- Auto-saving class response on every slide (no confirm button)
+- Per-student one-tap cycling marks synced to DB in real time
+- Post-lesson review screen with mastery summary and inline mark editing
+- Student profile pages showing full mark history
+- Two draft lessons: G1-L1 (s·a·t) and G1-L2 (i)
+- Polished warm earth-tone visual design system (three-font stack, terracotta accent, consistent component language)
