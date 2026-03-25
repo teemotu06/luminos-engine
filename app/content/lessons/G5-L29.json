@@ -1,0 +1,1257 @@
+{
+  "lesson_id": "G5-L29",
+  "unit_id": "G5",
+  "target_pattern": "oa_ow",
+  "title": "Group 5, Lesson 29: oa and ow",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: ee/ea",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ee/ea",
+            "back_text": "/iː/",
+            "audio": "/static/audio/eeea.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /iː/ quickly and cleanly.",
+          "correction_move": "Model /iː/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ai/ay",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ai/ay",
+            "back_text": "/eɪ/",
+            "audio": "/static/audio/aiay.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /eɪ/ quickly and cleanly.",
+          "correction_move": "Model /eɪ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model to in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model go in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model no in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model do in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: see",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_see.mp3",
+            "dictated_text": "see",
+            "expected_answer": "see",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "s",
+              "ee"
+            ]
+          },
+          "teacher_cue": "Play see once. Replay only if needed.",
+          "expected_response": "Students write see accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: feet",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_feet.mp3",
+            "dictated_text": "feet",
+            "expected_answer": "feet",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "ee",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play feet once. Replay only if needed.",
+          "expected_response": "Students write feet accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: eat",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_eat.mp3",
+            "dictated_text": "eat",
+            "expected_answer": "eat",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "ea",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play eat once. Replay only if needed.",
+          "expected_response": "Students write eat accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /oʊ/ — oa and ow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "oa / ow",
+            "back_text": "/oʊ/",
+            "audio": "/static/audio/oa_ow.mp3"
+          },
+          "teacher_cue": "New sound — long /oʊ/. Two spellings: oa appears in the middle of a word (boat, road, coat), ow appears at the end of a word (snow, flow, grow). Same position rule as ai/ay: oa in the middle, ow at the end. Note: ow can also make /aʊ/ (as in cow) — that pattern comes later. For now: ow = /oʊ/.",
+          "expected_response": "Students produce /oʊ/ cleanly and understand the oa/ow position rule.",
+          "correction_move": "Model the position rule: oa in the middle — boat, road. ow at the end — snow, flow. Students sort. Preview: ow can also say /aʊ/ — but we will learn that later.",
+          "observation_note": "Watch for ow/oa spelling confusion and for pure /oʊ/ production — not diphthong drift.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: boat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "boat",
+            "back_text": "/b/ /oʊ/ /t/",
+            "audio": "/static/audio/block04_boat.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "oa",
+                "phoneme": "/oʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say boat — a vessel on water. oa in the middle. Reveal and blend.",
+          "expected_response": "Students say boat orally, connect meaning, then blend on the card.",
+          "correction_move": "Model boat orally again, reveal and blend.",
+          "observation_note": "Watch for the oa vowel team in the middle and for /oʊ/ production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: road",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "road",
+            "back_text": "/r/ /oʊ/ /d/",
+            "audio": "/static/audio/block04_road.mp3",
+            "blend_units": [
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "oa",
+                "phoneme": "/oʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say road — a path for vehicles. Confirm /r/ onset and oa vowel team. Reveal and blend.",
+          "expected_response": "Students say road orally, connect meaning, then blend on the card.",
+          "correction_move": "Model road orally again, reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ and for the oa vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: float",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "float",
+            "back_text": "/f/ /l/ /oʊ/ /t/",
+            "audio": "/static/audio/block04_float.mp3",
+            "blend_units": [
+              {
+                "grapheme": "f",
+                "phoneme": "/f/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              },
+              {
+                "grapheme": "oa",
+                "phoneme": "/oʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime something floating on water. fl onset, oa vowel team. Reveal and blend.",
+          "expected_response": "Students say float orally, connect meaning, then blend on the card.",
+          "correction_move": "Model float orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and /l/ vs /r/ in onset.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: snow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "snow",
+            "back_text": "/s/ /n/ /oʊ/",
+            "audio": "/static/audio/block04_snow.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              },
+              {
+                "grapheme": "ow",
+                "phoneme": "/oʊ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime falling snow. sn onset, ow at the end. Reveal and blend.",
+          "expected_response": "Students say snow orally, connect meaning, then blend on the card.",
+          "correction_move": "Model snow orally again, reveal and blend.",
+          "observation_note": "Watch for the ow spelling at the end — contrast with oa in the middle.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: grow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "grow",
+            "back_text": "/g/ /r/ /oʊ/",
+            "audio": "/static/audio/block04_grow.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "ow",
+                "phoneme": "/oʊ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say grow — to get bigger. gr onset, ow at the end. Confirm /r/ in onset. Reveal and blend.",
+          "expected_response": "Students say grow orally, connect meaning, then blend on the card.",
+          "correction_move": "Model grow orally again, reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ in onset and for the ow spelling at the end.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: slow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "slow",
+            "back_text": "/s/ /l/ /oʊ/",
+            "audio": "/static/audio/block04_slow.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              },
+              {
+                "grapheme": "ow",
+                "phoneme": "/oʊ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say slow — not fast. sl onset, ow at the end. Reveal and blend.",
+          "expected_response": "Students say slow orally, connect meaning, then blend on the card.",
+          "correction_move": "Model slow orally again, reveal and blend.",
+          "observation_note": "Watch for sl onset and ow coda.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: goat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "goat",
+            "back_text": "goat"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read goat accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: load",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "load",
+            "back_text": "load"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read load accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: long",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "long",
+            "back_text": "long"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read long accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: glow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "glow",
+            "back_text": "glow"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read glow accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: coat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "coat",
+            "back_text": "coat"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read coat accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: flows",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "flows",
+            "back_text": "flows"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read flows accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: grows",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "grows",
+            "back_text": "grows"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read grows accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: coach",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "coach",
+            "back_text": "coach"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read coach accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-15",
+          "block_id": "04",
+          "slide_title": "Reader Prep: loads",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "loads",
+            "back_text": "loads"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read loads accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-16",
+          "block_id": "04",
+          "slide_title": "Reader Prep: soap",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "soap",
+            "back_text": "soap"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read soap accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-17",
+          "block_id": "04",
+          "slide_title": "Reader Prep: toast",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "toast",
+            "back_text": "toast"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read toast accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: boat",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "boat",
+            "target_letters": [
+              "b",
+              "oa",
+              "t"
+            ],
+            "slots": [
+              "b",
+              "oa",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "oa",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build boat left to right.",
+          "expected_response": "Students build boat correctly: b | oa | t.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: road",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "road",
+            "target_letters": [
+              "r",
+              "oa",
+              "d"
+            ],
+            "slots": [
+              "r",
+              "oa",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "oa",
+              "r"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build road left to right.",
+          "expected_response": "Students build road correctly: r | oa | d.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: float",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "float",
+            "target_letters": [
+              "f",
+              "l",
+              "oa",
+              "t"
+            ],
+            "slots": [
+              "f",
+              "l",
+              "oa",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "oa",
+              "l",
+              "f"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build float left to right.",
+          "expected_response": "Students build float correctly: f | l | oa | t.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: snow",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "snow",
+            "target_letters": [
+              "s",
+              "n",
+              "ow"
+            ],
+            "slots": [
+              "s",
+              "n",
+              "ow"
+            ],
+            "draggable_letters": [
+              "ow",
+              "n",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build snow left to right.",
+          "expected_response": "Students build snow correctly: s | n | ow.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: grow",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "grow",
+            "target_letters": [
+              "g",
+              "r",
+              "ow"
+            ],
+            "slots": [
+              "g",
+              "r",
+              "ow"
+            ],
+            "draggable_letters": [
+              "ow",
+              "r",
+              "g"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build grow left to right.",
+          "expected_response": "Students build grow correctly: g | r | ow.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The boat can float.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "boat": "decodable",
+              "can": "decodable",
+              "float": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on boat, can, float.",
+          "expected_response": "Students read \"The boat can float.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The boat can float.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The goat is on the road.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "goat": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "road": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on goat, is, on, road.",
+          "expected_response": "Students read \"The goat is on the road.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The goat is on the road.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The snow can glow.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "snow": "decodable",
+              "can": "decodable",
+              "glow": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on snow, can, glow.",
+          "expected_response": "Students read \"The snow can glow.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The snow can glow.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "They load the boat by the road.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "They": "sight",
+              "load": "decodable",
+              "the": "sight",
+              "boat": "decodable",
+              "by": "decodable",
+              "road": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on load, boat, by, road.",
+          "expected_response": "Students read \"They load the boat by the road.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"They load the boat by the road.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The boat can float.\nThe goat is on the road.\nThe snow can glow.\nThey load the boat by the road.\nThe coach loads soap and toast.\nThe road is long in the snow.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Where is the goat? What do they load onto the boat? Why is the road slow?",
+            "word_types": {
+              "The": "sight",
+              "boat": "decodable",
+              "can": "decodable",
+              "float": "decodable",
+              "goat": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "road": "decodable",
+              "snow": "decodable",
+              "glow": "decodable",
+              "They": "sight",
+              "load": "decodable",
+              "by": "decodable",
+              "coach": "decodable",
+              "loads": "decodable",
+              "soap": "decodable",
+              "and": "decodable",
+              "toast": "decodable",
+              "long": "decodable",
+              "in": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
+          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
+          "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: boat",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_boat.mp3",
+            "dictated_text": "boat",
+            "expected_answer": "boat",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "oa",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play boat once. Replay only if needed. Remind students: /oʊ/ is spelled 'oa' — both letters go in one box.",
+          "expected_response": "Students write boat accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: road",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_road.mp3",
+            "dictated_text": "road",
+            "expected_answer": "road",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "r",
+              "oa",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play road once. Replay only if needed. Remind students: /oʊ/ is spelled 'oa' — both letters go in one box.",
+          "expected_response": "Students write road accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: snow",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_snow.mp3",
+            "dictated_text": "snow",
+            "expected_answer": "snow",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "n",
+              "ow"
+            ]
+          },
+          "teacher_cue": "Play snow once. Replay only if needed. Remind students: /oʊ/ is spelled 'ow' — both letters go in one box.",
+          "expected_response": "Students write snow accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "boat",
+              "coat",
+              "road",
+              "load"
+            ],
+            "highlighted_chunk": "oa",
+            "support_text": "What do these words share? What sound does oa make?"
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share? What sound does oa make?",
+          "expected_response": "Students identify the shared chunk and name the sound it makes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask again.",
+          "observation_note": "Watch whether students isolate the vowel team correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today? What are the two spellings?",
+                "phoneme": "/oʊ/"
+              },
+              {
+                "label": "Where is the goat? What do they load onto the boat? Why is the road slow?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using boat or road.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

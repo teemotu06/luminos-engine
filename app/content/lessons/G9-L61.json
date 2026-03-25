@@ -1,0 +1,1022 @@
+{
+  "lesson_id": "G9-L61",
+  "unit_id": "G9",
+  "target_pattern": "suffix_ful_less_ness_ment",
+  "title": "Group 9, Lesson 61: Suffixes -ful, -less, -ness, -ment",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: -ing -er -est",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ing -er -est",
+            "back_text": "comparative suffixes",
+            "audio": "/static/audio/-ing_-er_-est.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce comparative suffixes quickly and cleanly.",
+          "correction_move": "Model comparative suffixes, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: -ed",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ed",
+            "back_text": "past tense suffix",
+            "audio": "/static/audio/-ed.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce past tense suffix quickly and cleanly.",
+          "correction_move": "Model past tense suffix, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: prefixes",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "prefixes",
+            "back_text": "un- re- pre- dis-",
+            "audio": "/static/audio/prefixes.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce un- re- pre- dis- quickly and cleanly.",
+          "correction_move": "Model un- re- pre- dis-, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: she",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "she",
+            "back_text": "she — sight word",
+            "audio": "/static/audio/sight_she.mp3",
+            "word_types": {
+              "she": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say she immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: they",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "they",
+            "back_text": "they — sight word",
+            "audio": "/static/audio/sight_they.mp3",
+            "word_types": {
+              "they": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say they immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: come",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "come",
+            "back_text": "come — sight word",
+            "audio": "/static/audio/sight_come.mp3",
+            "word_types": {
+              "come": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say come immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: running",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_running.mp3",
+            "dictated_text": "running",
+            "expected_answer": "running",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "r",
+              "u",
+              "nn",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play running once. Replay only if needed.",
+          "expected_response": "Students write running accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: making",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_making.mp3",
+            "dictated_text": "making",
+            "expected_answer": "making",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "m",
+              "a",
+              "k",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play making once. Replay only if needed.",
+          "expected_response": "Students write making accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: biggest",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_biggest.mp3",
+            "dictated_text": "biggest",
+            "expected_answer": "biggest",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "b",
+              "i",
+              "gg",
+              "e",
+              "s",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play biggest once. Replay only if needed.",
+          "expected_response": "Students write biggest accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce suffixes: -ful -less -ness -ment",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ful  -less  -ness  -ment",
+            "back_text": "adjective and noun suffixes",
+            "audio": "/static/audio/suffix_ful_less.mp3"
+          },
+          "teacher_cue": "Four more suffixes that create new words. -ful = full of: hope→hopeful, care→careful, use→useful. -less = without: hope→hopeless, help→helpless, care→careless. -ness = the state of: dark→darkness, kind→kindness, happy→happiness (y→i). -ment = the result of: treat→treatment, move→movement, amaze→amazement. Notice: hopeful and hopeless use the same base — the suffix changes the meaning completely.",
+          "expected_response": "Students add -ful, -less, -ness, and -ment to base words and explain the new meanings.",
+          "correction_move": "Model: hope + ful = hopeful (full of hope). hope + less = hopeless (without hope). dark + ness = darkness (the state of being dark). treat + ment = treatment (the result of treating). Students generate more examples.",
+          "observation_note": "Watch for y→i rule being missed in words like happiness.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: hopeful",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hopeful",
+            "back_text": "/h/ /oʊ/ /p/ /f/ /ʊl/",
+            "audio": "/static/audio/block04_hopeful.mp3",
+            "blend_units": [
+              {
+                "grapheme": "hope",
+                "phoneme": "/hoʊp/",
+                "audio": null
+              },
+              {
+                "grapheme": "ful",
+                "phoneme": "/fʊl/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say hopeful — full of hope. hope + ful. Reveal and blend.",
+          "expected_response": "Students say hopeful orally and connect meaning before blending.",
+          "correction_move": "Model hopeful orally again, reveal and blend.",
+          "observation_note": "Watch for -ful suffix and long /oʊ/ in hope.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: helpless",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "helpless",
+            "back_text": "/h/ /e/ /l/ /p/ /l/ /ɪ/ /s/",
+            "audio": "/static/audio/block04_helpless.mp3",
+            "blend_units": [
+              {
+                "grapheme": "help",
+                "phoneme": "/help/",
+                "audio": null
+              },
+              {
+                "grapheme": "less",
+                "phoneme": "/lɪs/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say helpless — without help. help + less. Reveal and blend.",
+          "expected_response": "Students say helpless orally and connect meaning before blending.",
+          "correction_move": "Model helpless orally again, reveal and blend.",
+          "observation_note": "Watch for -less suffix and two /l/ sounds.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: darkness",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "darkness",
+            "back_text": "/d/ /ɑː/ /k/ /n/ /ɪ/ /s/",
+            "audio": "/static/audio/block04_darkness.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dark",
+                "phoneme": "/dɑːk/",
+                "audio": null
+              },
+              {
+                "grapheme": "ness",
+                "phoneme": "/nɪs/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say darkness — the state of being dark. dark + ness. Reveal and blend.",
+          "expected_response": "Students say darkness orally and connect meaning before blending.",
+          "correction_move": "Model darkness orally again, reveal and blend.",
+          "observation_note": "Watch for -ness suffix and /ɑː/ in dark.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: treatment",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "treatment",
+            "back_text": "/t/ /r/ /iː/ /t/ /m/ /ə/ /n/ /t/",
+            "audio": "/static/audio/block04_treatment.mp3",
+            "blend_units": [
+              {
+                "grapheme": "treat",
+                "phoneme": "/triːt/",
+                "audio": null
+              },
+              {
+                "grapheme": "ment",
+                "phoneme": "/mənt/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say treatment — the result of treating. treat + ment. Reveal and blend.",
+          "expected_response": "Students say treatment orally and connect meaning before blending.",
+          "correction_move": "Model treatment orally again, reveal and blend.",
+          "observation_note": "Watch for -ment suffix and long /iː/ in treat.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: movement",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "movement",
+            "back_text": "/m/ /uː/ /v/ /m/ /ə/ /n/ /t/",
+            "audio": "/static/audio/block04_movement.mp3",
+            "blend_units": [
+              {
+                "grapheme": "move",
+                "phoneme": "/muːv/",
+                "audio": null
+              },
+              {
+                "grapheme": "ment",
+                "phoneme": "/mənt/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say movement — the result of moving. move + ment (drop the e before -ment? No — -ment starts with a consonant, so keep the e). Reveal and blend.",
+          "expected_response": "Students say movement orally and connect meaning before blending.",
+          "correction_move": "Model movement orally again, reveal and blend.",
+          "observation_note": "Watch for -ment suffix and long /uː/ in move.",
+          "korean_interference_flag": "v_b",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: happiness",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "happiness",
+            "back_text": "/h/ /æ/ /p/ /iː/ /n/ /ɪ/ /s/",
+            "audio": "/static/audio/block04_happiness.mp3",
+            "blend_units": [
+              {
+                "grapheme": "happi",
+                "phoneme": "/hæpiː/",
+                "audio": null
+              },
+              {
+                "grapheme": "ness",
+                "phoneme": "/nɪs/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say happiness — the state of being happy. happy → change y to i + ness. Reveal and blend.",
+          "expected_response": "Students say happiness orally and connect meaning before blending.",
+          "correction_move": "Model happiness orally again, reveal and blend.",
+          "observation_note": "Watch for the y→i change and -ness suffix.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: hopeful",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hopeful",
+            "target_letters": [
+              "hope",
+              "ful"
+            ],
+            "slots": [
+              "hope",
+              "ful"
+            ],
+            "draggable_letters": [
+              "ful",
+              "hope"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build hopeful left to right.",
+          "expected_response": "Students build hopeful correctly: hope | ful.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: helpless",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "helpless",
+            "target_letters": [
+              "help",
+              "less"
+            ],
+            "slots": [
+              "help",
+              "less"
+            ],
+            "draggable_letters": [
+              "less",
+              "help"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build helpless left to right.",
+          "expected_response": "Students build helpless correctly: help | less.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: darkness",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "darkness",
+            "target_letters": [
+              "dark",
+              "ness"
+            ],
+            "slots": [
+              "dark",
+              "ness"
+            ],
+            "draggable_letters": [
+              "ness",
+              "dark"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build darkness left to right.",
+          "expected_response": "Students build darkness correctly: dark | ness.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: treatment",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "treatment",
+            "target_letters": [
+              "treat",
+              "ment"
+            ],
+            "slots": [
+              "treat",
+              "ment"
+            ],
+            "draggable_letters": [
+              "ment",
+              "treat"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build treatment left to right.",
+          "expected_response": "Students build treatment correctly: treat | ment.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: happiness",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "happiness",
+            "target_letters": [
+              "happi",
+              "ness"
+            ],
+            "slots": [
+              "happi",
+              "ness"
+            ],
+            "draggable_letters": [
+              "ness",
+              "happi"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build happiness left to right.",
+          "expected_response": "Students build happiness correctly: happi | ness.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The treatment is for happiness.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "treatment": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "happiness": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on treatment, is, for, happiness.",
+          "expected_response": "Students read \"The treatment is for happiness.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The treatment is for happiness.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The movement is hopeful.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "movement": "decodable",
+              "is": "decodable",
+              "hopeful": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on movement, is, hopeful.",
+          "expected_response": "Students read \"The movement is hopeful.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The movement is hopeful.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The helpless are in the darkness.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "helpless": "decodable",
+              "are": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "darkness": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on helpless, are, in, darkness.",
+          "expected_response": "Students read \"The helpless are in the darkness.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The helpless are in the darkness.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The treatment is for the helpless.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "treatment": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "helpless": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on treatment, is, for, helpless.",
+          "expected_response": "Students read \"The treatment is for the helpless.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The treatment is for the helpless.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The treatment is for the darkness.\nThe movement is hopeful.\nThe treatment is for happiness.\nThe helpless are in the movement.\nThe hopeful are in the movement.\nThe treatment is for the helpless in the darkness.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all the -ful words. Find all the -less words. Find all the -ness words. Find all the -ment words.",
+            "word_types": {
+              "The": "sight",
+              "treatment": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "darkness": "decodable",
+              "movement": "decodable",
+              "hopeful": "decodable",
+              "happiness": "decodable",
+              "helpless": "decodable",
+              "are": "decodable",
+              "in": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: hopeful",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_hopeful.mp3",
+            "dictated_text": "hopeful",
+            "expected_answer": "hopeful",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "h",
+              "o",
+              "p",
+              "e",
+              "f",
+              "u",
+              "l"
+            ]
+          },
+          "teacher_cue": "Play hopeful once. Replay only if needed.",
+          "expected_response": "Students write hopeful accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: darkness",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_darkness.mp3",
+            "dictated_text": "darkness",
+            "expected_answer": "darkness",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "d",
+              "ar",
+              "kn",
+              "e",
+              "ss"
+            ]
+          },
+          "teacher_cue": "Play darkness once. Replay only if needed. Remind students: /ɑr/ is spelled 'ar' — both letters go in one box.",
+          "expected_response": "Students write darkness accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: treatment",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_treatment.mp3",
+            "dictated_text": "treatment",
+            "expected_answer": "treatment",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "t",
+              "r",
+              "ea",
+              "t",
+              "m",
+              "e",
+              "n",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play treatment once. Replay only if needed. Remind students: /iː/ is spelled 'ea' — both letters go in one box.",
+          "expected_response": "Students write treatment accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "hopeful",
+              "hopeless",
+              "helpless",
+              "careless",
+              "useless"
+            ],
+            "highlighted_chunk": "-less",
+            "support_text": "What does -less add to each base word?"
+          },
+          "teacher_cue": "Show the words. Ask: What does -less add to each base word?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "-ful = full of. -less = without. -ness = the state of. -ment = the result of.",
+                "phoneme": null
+              },
+              {
+                "label": "Find all the -ful words. Find all the -less words. Find all the -ness words. Find all the -ment words.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using hopeful or helpless.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

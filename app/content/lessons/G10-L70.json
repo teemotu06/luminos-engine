@@ -1,0 +1,1052 @@
+{
+  "lesson_id": "G10-L70",
+  "unit_id": "G10",
+  "target_pattern": "morphological_families",
+  "title": "Group 10, Lesson 70: Morphological Word Families",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: Greek roots",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "Greek roots",
+            "back_text": "graph phone scope meter bio",
+            "audio": "/static/audio/Greek_roots.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce graph phone scope meter bio quickly and cleanly.",
+          "correction_move": "Model graph phone scope meter bio, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: Latin roots",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "Latin roots",
+            "back_text": "port rupt dict struct vis",
+            "audio": "/static/audio/Latin_roots.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce port rupt dict struct vis quickly and cleanly.",
+          "correction_move": "Model port rupt dict struct vis, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: suffixes",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "suffixes",
+            "back_text": "-ful -less -ness -ment -ing -er -est",
+            "audio": "/static/audio/suffixes.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce -ful -less -ness -ment -ing -er -est quickly and cleanly.",
+          "correction_move": "Model -ful -less -ness -ment -ing -er -est, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: so",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "so",
+            "back_text": "so — sight word",
+            "audio": "/static/audio/sight_so.mp3",
+            "word_types": {
+              "so": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say so immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: she",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "she",
+            "back_text": "she — sight word",
+            "audio": "/static/audio/sight_she.mp3",
+            "word_types": {
+              "she": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say she immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: photograph",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_photograph.mp3",
+            "dictated_text": "photograph",
+            "expected_answer": "photograph",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "ph",
+              "o",
+              "t",
+              "o",
+              "g",
+              "r",
+              "a",
+              "ph"
+            ]
+          },
+          "teacher_cue": "Play photograph once. Replay only if needed.",
+          "expected_response": "Students write photograph accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: telephone",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_telephone.mp3",
+            "dictated_text": "telephone",
+            "expected_answer": "telephone",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "t",
+              "e",
+              "l",
+              "e",
+              "ph",
+              "o",
+              "n"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play telephone once. Replay only if needed.",
+          "expected_response": "Students write telephone accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: biology",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_biology.mp3",
+            "dictated_text": "biology",
+            "expected_answer": "biology",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "b",
+              "i",
+              "o",
+              "l",
+              "o",
+              "g",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play biology once. Replay only if needed.",
+          "expected_response": "Students write biology accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce morphological word families",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "nation → national → nationality → international",
+            "back_text": "base + affixes = word family",
+            "audio": "/static/audio/word_families.mp3"
+          },
+          "teacher_cue": "A morphological word family is a group of words that all share the same root but differ in their affixes (prefixes and suffixes). act → action → active → activity → actor → react → interaction → overreact. form → inform → reform → transform → formation → formal → uniform → performance. nation → national → nationality → international → nationalism → nationalise. Knowing one word in a family gives you access to all the others — the meaning stays connected.",
+          "expected_response": "Students generate word families from a root and explain how affixes change the part of speech and meaning.",
+          "correction_move": "Model: start with act. Add -ion → action (noun). Add -ive → active (adjective). Add -ity → activity (noun). Add re- → react (verb). Add inter- → interaction (noun). Students build family trees.",
+          "observation_note": "Watch for students treating derived words as completely new vocabulary rather than extensions of known words.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: national",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "national",
+            "back_text": "/n/ /æ/ /ʃ/ /ə/ /n/ /əl/",
+            "audio": "/static/audio/block04_national.mp3",
+            "blend_units": [
+              {
+                "grapheme": "nation",
+                "phoneme": "/neɪʃən/",
+                "audio": null
+              },
+              {
+                "grapheme": "al",
+                "phoneme": "/əl/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say national — nation + al. From nation (a country). Reveal and blend.",
+          "expected_response": "Students say national orally and connect meaning before blending.",
+          "correction_move": "Model national orally again, reveal and blend.",
+          "observation_note": "Watch for -tion in nation and -al suffix creating an adjective.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: action",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "action",
+            "back_text": "/æ/ /k/ /ʃ/ /ə/ /n/",
+            "audio": "/static/audio/block04_action.mp3",
+            "blend_units": [
+              {
+                "grapheme": "act",
+                "phoneme": "/ækt/",
+                "audio": null
+              },
+              {
+                "grapheme": "ion",
+                "phoneme": "/ʃən/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say action — act + ion. From act (to do). Reveal and blend.",
+          "expected_response": "Students say action orally and connect meaning before blending.",
+          "correction_move": "Model action orally again, reveal and blend.",
+          "observation_note": "Watch for -tion suffix and short vowel in act-.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: formation",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "formation",
+            "back_text": "/f/ /ɔː/ /m/ /eɪ/ /ʃ/ /ə/ /n/",
+            "audio": "/static/audio/block04_formation.mp3",
+            "blend_units": [
+              {
+                "grapheme": "form",
+                "phoneme": "/fɔːm/",
+                "audio": null
+              },
+              {
+                "grapheme": "ation",
+                "phoneme": "/eɪʃən/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say formation — form + ation. From form (to shape). Reveal and blend.",
+          "expected_response": "Students say formation orally and connect meaning before blending.",
+          "correction_move": "Model formation orally again, reveal and blend.",
+          "observation_note": "Watch for -ation suffix and /ɔː/ in form-.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: transform",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "transform",
+            "back_text": "/t/ /r/ /æ/ /n/ /s/ /f/ /ɔː/ /m/",
+            "audio": "/static/audio/block04_transform.mp3",
+            "blend_units": [
+              {
+                "grapheme": "trans",
+                "phoneme": "/træns/",
+                "audio": null
+              },
+              {
+                "grapheme": "form",
+                "phoneme": "/fɔːm/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say transform — trans (across) + form (shape) = change shape completely. Reveal and blend.",
+          "expected_response": "Students say transform orally and connect meaning before blending.",
+          "correction_move": "Model transform orally again, reveal and blend.",
+          "observation_note": "Watch for tr cluster, trans- prefix, and /ɔː/ in form-.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: information",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "information",
+            "back_text": "/ɪ/ /n/ /f/ /ə/ /m/ /eɪ/ /ʃ/ /ə/ /n/",
+            "audio": "/static/audio/block04_information.mp3",
+            "blend_units": [
+              {
+                "grapheme": "in",
+                "phoneme": "/ɪn/",
+                "audio": null
+              },
+              {
+                "grapheme": "form",
+                "phoneme": "/fɔːm/",
+                "audio": null
+              },
+              {
+                "grapheme": "ation",
+                "phoneme": "/eɪʃən/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say information — in + form + ation. From inform (to shape the mind with facts). Reveal and blend.",
+          "expected_response": "Students say information orally and connect meaning before blending.",
+          "correction_move": "Model information orally again, reveal and blend.",
+          "observation_note": "Watch for in- prefix, form root, -ation suffix — three morphemes.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: international",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "international",
+            "back_text": "/ɪ/ /n/ /t/ /ə/ /n/ /æ/ /ʃ/ /ə/ /n/ /əl/",
+            "audio": "/static/audio/block04_international.mp3",
+            "blend_units": [
+              {
+                "grapheme": "inter",
+                "phoneme": "/ɪntə/",
+                "audio": null
+              },
+              {
+                "grapheme": "nation",
+                "phoneme": "/neɪʃən/",
+                "audio": null
+              },
+              {
+                "grapheme": "al",
+                "phoneme": "/əl/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say international — inter + nation + al. Three morphemes. Between nations. Reveal and blend.",
+          "expected_response": "Students say international orally and connect meaning before blending.",
+          "correction_move": "Model international orally again, reveal and blend.",
+          "observation_note": "Watch for three morphemes and the schwa in inter-.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: national",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "national",
+            "target_letters": [
+              "nation",
+              "al"
+            ],
+            "slots": [
+              "nation",
+              "al"
+            ],
+            "draggable_letters": [
+              "al",
+              "nation"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build national left to right.",
+          "expected_response": "Students build national correctly: nation | al.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: action",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "action",
+            "target_letters": [
+              "act",
+              "ion"
+            ],
+            "slots": [
+              "act",
+              "ion"
+            ],
+            "draggable_letters": [
+              "ion",
+              "act"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build action left to right.",
+          "expected_response": "Students build action correctly: act | ion.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: formation",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "formation",
+            "target_letters": [
+              "form",
+              "ation"
+            ],
+            "slots": [
+              "form",
+              "ation"
+            ],
+            "draggable_letters": [
+              "ation",
+              "form"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build formation left to right.",
+          "expected_response": "Students build formation correctly: form | ation.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: transform",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "transform",
+            "target_letters": [
+              "trans",
+              "form"
+            ],
+            "slots": [
+              "trans",
+              "form"
+            ],
+            "draggable_letters": [
+              "form",
+              "trans"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build transform left to right.",
+          "expected_response": "Students build transform correctly: trans | form.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: information",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "information",
+            "target_letters": [
+              "in",
+              "form",
+              "ation"
+            ],
+            "slots": [
+              "in",
+              "form",
+              "ation"
+            ],
+            "draggable_letters": [
+              "ation",
+              "form",
+              "in"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build information left to right.",
+          "expected_response": "Students build information correctly: in | form | ation.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The national action could transform information.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "national": "decodable",
+              "action": "decodable",
+              "could": "decodable",
+              "transform": "decodable",
+              "information": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on national, action, could, transform.",
+          "expected_response": "Students read \"The national action could transform information.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The national action could transform information.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The information was for international action.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "information": "decodable",
+              "was": "sight",
+              "for": "decodable",
+              "international": "decodable",
+              "action": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on information, for, international, action.",
+          "expected_response": "Students read \"The information was for international action.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The information was for international action.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The formation could transform it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "formation": "decodable",
+              "could": "decodable",
+              "transform": "decodable",
+              "it": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on formation, could, transform, it.",
+          "expected_response": "Students read \"The formation could transform it.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The formation could transform it.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The international action was national.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "international": "decodable",
+              "action": "decodable",
+              "was": "sight",
+              "national": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on international, action, national.",
+          "expected_response": "Students read \"The international action was national.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The international action was national.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The international action was national.\nThe information was for the action.\nThe formation could transform it.\nThe international information was national.\nThe national action could transform the formation.\nThe international formation had information.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What action was national? What could transform the formation? Find the morphology-family words in the reader.",
+            "word_types": {
+              "The": "sight",
+              "international": "decodable",
+              "action": "decodable",
+              "was": "sight",
+              "national": "decodable",
+              "information": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "formation": "decodable",
+              "could": "decodable",
+              "transform": "decodable",
+              "it": "decodable",
+              "had": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: national",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_national.mp3",
+            "dictated_text": "national",
+            "expected_answer": "national",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "n",
+              "a",
+              "t",
+              "i",
+              "o",
+              "n",
+              "a",
+              "l"
+            ]
+          },
+          "teacher_cue": "Play national once. Replay only if needed.",
+          "expected_response": "Students write national accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: transform",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_transform.mp3",
+            "dictated_text": "transform",
+            "expected_answer": "transform",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "t",
+              "r",
+              "a",
+              "n",
+              "s",
+              "f",
+              "or",
+              "m"
+            ]
+          },
+          "teacher_cue": "Play transform once. Replay only if needed. Remind students: /ɔr/ is spelled 'or' — both letters go in one box.",
+          "expected_response": "Students write transform accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: information",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_information.mp3",
+            "dictated_text": "information",
+            "expected_answer": "information",
+            "elkonin_boxes": 10,
+            "grapheme_units": [
+              "i",
+              "n",
+              "f",
+              "or",
+              "m",
+              "a",
+              "t",
+              "i",
+              "o",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play information once. Replay only if needed. Remind students: /ɔr/ is spelled 'or' — both letters go in one box.",
+          "expected_response": "Students write information accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "act",
+              "action",
+              "active",
+              "activity",
+              "actor",
+              "react",
+              "interaction"
+            ],
+            "highlighted_chunk": "act",
+            "support_text": "What does act mean? How does each affix change the word?"
+          },
+          "teacher_cue": "Show the words. Ask: What does act mean? How does each affix change the word?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "A word family shares one root. nation → national → nationality → international.",
+                "phoneme": null
+              },
+              {
+                "label": "What action was national? What could transform the formation? Find the morphology-family words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using national or action.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

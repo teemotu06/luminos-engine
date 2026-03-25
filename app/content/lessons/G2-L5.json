@@ -1,20 +1,10 @@
 {
   "lesson_id": "G2-L5",
   "unit_id": "G2",
-  "target_pattern": "/k/ · c · k",
-  "title": "Group 2, Lesson 5: The c / k Sound",
-  "cumulative_phoneme_pool": [
-    "s",
-    "a",
-    "t",
-    "i",
-    "p",
-    "n",
-    "c",
-    "k"
-  ],
+  "target_pattern": "c_k",
+  "title": "Group 2, Lesson 5: c and k",
   "korean_interference_active": [
-    "ɪ_vs_iː"
+    "vowel_quality"
   ],
   "content_pack_status": "draft",
   "blocks": {
@@ -25,139 +15,124 @@
         {
           "slide_id": "01-01",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Review: i",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "s",
-            "back_text": "/s/",
-            "audio": null
+            "front_text": "i",
+            "back_text": "/ɪ/",
+            "audio": "/static/audio/i.mp3"
           },
-          "teacher_cue": "Flash s, a, t, i, p, n cards. Students call out each sound.",
-          "expected_response": "Students produce all six phonemes accurately on sight.",
-          "correction_move": "Re-drill any missed phoneme: show card, model sound, choral repeat.",
-          "observation_note": null,
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ɪ/ quickly and cleanly.",
+          "correction_move": "Model /ɪ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /ɪ/.",
           "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         },
         {
           "slide_id": "01-02",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Review: p",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "a",
-            "back_text": "/a/",
-            "audio": null
+            "front_text": "p",
+            "back_text": "/p/",
+            "audio": "/static/audio/p.mp3"
           },
-          "teacher_cue": "Flash s, a, t, i, p, n cards. Students call out each sound.",
-          "expected_response": "Students produce all six phonemes accurately on sight.",
-          "correction_move": "Re-drill any missed phoneme: show card, model sound, choral repeat.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /p/ quickly and cleanly.",
+          "correction_move": "Model /p/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /p/.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         },
         {
           "slide_id": "01-03",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Review: n",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "t",
-            "back_text": "/t/",
-            "audio": null
+            "front_text": "n",
+            "back_text": "/n/",
+            "audio": "/static/audio/n.mp3"
           },
-          "teacher_cue": "Flash s, a, t, i, p, n cards. Students call out each sound.",
-          "expected_response": "Students produce all six phonemes accurately on sight.",
-          "correction_move": "Re-drill any missed phoneme: show card, model sound, choral repeat.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /n/ quickly and cleanly.",
+          "correction_move": "Model /n/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /n/.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         },
         {
           "slide_id": "01-04",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Sight Word Review: I",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "i",
-            "back_text": "/ɪ/",
-            "audio": null
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
           },
-          "teacher_cue": "Flash s, a, t, i, p, n cards. Students call out each sound.",
-          "expected_response": "Students produce all six phonemes accurately on sight.",
-          "correction_move": "Re-drill any missed phoneme: show card, model sound, choral repeat.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say I immediately without blending.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         },
         {
           "slide_id": "01-05",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Sight Word Review: the",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "p",
-            "back_text": "/p/",
-            "audio": null
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
           },
-          "teacher_cue": "Flash s, a, t, i, p, n cards. Students call out each sound.",
-          "expected_response": "Students produce all six phonemes accurately on sight.",
-          "correction_move": "Re-drill any missed phoneme: show card, model sound, choral repeat.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say the immediately without blending.",
+          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         },
         {
           "slide_id": "01-06",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Sight Word Review: a",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "n",
-            "back_text": "/n/",
-            "audio": null
+            "front_text": "a",
+            "back_text": "a — sight word",
+            "audio": "/static/audio/sight_a.mp3",
+            "word_types": {
+              "a": "sight"
+            }
           },
-          "teacher_cue": "Flash s, a, t, i, p, n cards. Students call out each sound.",
-          "expected_response": "Students produce all six phonemes accurately on sight.",
-          "correction_move": "Re-drill any missed phoneme: show card, model sound, choral repeat.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say a immediately without blending.",
+          "correction_move": "Model a in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
           "next_action": "manual_next"
         }
       ]
@@ -169,17 +144,23 @@
         {
           "slide_id": "02-01",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Listen and Write: tin",
           "view_type": "writing_encoding",
           "content_payload": {
-            "dictated_text": "sat",
-            "expected_answer": "sat",
-            "elkonin_boxes": 3
+            "audio_prompt": "/static/audio/block02_tin.mp3",
+            "dictated_text": "tin",
+            "expected_answer": "tin",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "t",
+              "i",
+              "n"
+            ]
           },
-          "teacher_cue": "Dictate sat, sit, tap, tin, pan one at a time.",
-          "expected_response": "Students write all five words accurately.",
-          "correction_move": "Segment the missed word phoneme by phoneme, then rewrite.",
-          "observation_note": null,
+          "teacher_cue": "Play tin once. Replay only if needed before checking.",
+          "expected_response": "Students write tin accurately.",
+          "correction_move": "Replay tin once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode tin accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -192,17 +173,23 @@
         {
           "slide_id": "02-02",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Listen and Write: pan",
           "view_type": "writing_encoding",
           "content_payload": {
-            "dictated_text": "sit",
-            "expected_answer": "sit",
-            "elkonin_boxes": 3
+            "audio_prompt": "/static/audio/block02_pan.mp3",
+            "dictated_text": "pan",
+            "expected_answer": "pan",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "p",
+              "a",
+              "n"
+            ]
           },
-          "teacher_cue": "Dictate sat, sit, tap, tin, pan one at a time.",
-          "expected_response": "Students write all five words accurately.",
-          "correction_move": "Segment the missed word phoneme by phoneme, then rewrite.",
-          "observation_note": null,
+          "teacher_cue": "Play pan once. Replay only if needed before checking.",
+          "expected_response": "Students write pan accurately.",
+          "correction_move": "Replay pan once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode pan accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -215,63 +202,23 @@
         {
           "slide_id": "02-03",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Listen and Write: nap",
           "view_type": "writing_encoding",
           "content_payload": {
-            "dictated_text": "tap",
-            "expected_answer": "tap",
-            "elkonin_boxes": 3
+            "audio_prompt": "/static/audio/block02_nap.mp3",
+            "dictated_text": "nap",
+            "expected_answer": "nap",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "n",
+              "a",
+              "p"
+            ]
           },
-          "teacher_cue": "Dictate sat, sit, tap, tin, pan one at a time.",
-          "expected_response": "Students write all five words accurately.",
-          "correction_move": "Segment the missed word phoneme by phoneme, then rewrite.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "02-04",
-          "block_id": "02",
-          "slide_title": "Listen and Write",
-          "view_type": "writing_encoding",
-          "content_payload": {
-            "dictated_text": "tin",
-            "expected_answer": "tin",
-            "elkonin_boxes": 3
-          },
-          "teacher_cue": "Dictate sat, sit, tap, tin, pan one at a time.",
-          "expected_response": "Students write all five words accurately.",
-          "correction_move": "Segment the missed word phoneme by phoneme, then rewrite.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
-          "markable": true,
-          "marking_options": [
-            "secure",
-            "shaky",
-            "missed"
-          ],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "02-05",
-          "block_id": "02",
-          "slide_title": "Listen and Write",
-          "view_type": "writing_encoding",
-          "content_payload": {
-            "dictated_text": "pan",
-            "expected_answer": "pan",
-            "elkonin_boxes": 3
-          },
-          "teacher_cue": "Dictate sat, sit, tap, tin, pan one at a time.",
-          "expected_response": "Students write all five words accurately.",
-          "correction_move": "Segment the missed word phoneme by phoneme, then rewrite.",
-          "observation_note": null,
+          "teacher_cue": "Play nap once. Replay only if needed before checking.",
+          "expected_response": "Students write nap accurately.",
+          "correction_move": "Replay nap once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode nap accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -295,17 +242,13 @@
           "content_payload": {
             "front_text": "c / k",
             "back_text": "/k/",
-            "audio": null
+            "audio": "/static/audio/k.mp3"
           },
-          "phoneme": "/k/",
-          "grapheme": "c / k",
-          "articulation_note": "Voiceless velar stop. The back of the tongue rises to touch the soft palate at the back of the mouth, builds pressure, releases with a burst. No voicing.",
-          "spelling_rule": "c — used before a, o, u and at the end of words after consonants: cat · cap · can. k — used before e, i to avoid confusion: kit · kick · king. Both graphemes represent the same phoneme /k/.",
-          "teacher_cue": null,
-          "expected_response": "Students produce /k/ accurately. Students understand two spellings represent one sound.",
-          "correction_move": "Model /k/ — exaggerate the back-of-mouth release. Review c vs k spelling rule.",
-          "observation_note": "Introduce both graphemes together this lesson.",
-          "korean_interference_flag": null,
+          "teacher_cue": "New sound. The back of the tongue rises to touch the soft palate at the back of the mouth. Release with a burst — no voicing. Two spellings, one sound: c and k.",
+          "expected_response": "Students produce /k/ cleanly and understand that c and k represent the same sound.",
+          "correction_move": "Model /k/ with a hand at the throat confirming no vibration, then show both c and k cards. Students produce the sound from each.",
+          "observation_note": "Watch for confusion between c and k spellings, and for any voiced /g/ substitution.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -319,17 +262,16 @@
     "04": {
       "block_id": "04",
       "label": "Vocabulary Warm-Up",
-      "sight_words_introduced": [],
       "slides": [
         {
           "slide_id": "04-01",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — can",
+          "slide_title": "Vocabulary: can",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "can",
-            "image": null,
+            "front_text": "can",
+            "back_text": "/k/ /æ/ /n/",
+            "audio": "/static/audio/block04_can.mp3",
             "blend_units": [
               {
                 "grapheme": "c",
@@ -348,11 +290,11 @@
               }
             ]
           },
-          "teacher_cue": "To be able to — top-1,000 ✓. Use in a sentence: 'I can sit.'",
-          "expected_response": "Students say can and understand its modal function.",
-          "correction_move": "Model can in a sentence, reveal print.",
-          "observation_note": "Spelled with c before a.",
-          "korean_interference_flag": null,
+          "teacher_cue": "Use can in a short oral sentence — I can tap. Say the word, then reveal print and blend.",
+          "expected_response": "Students say can orally and connect meaning before print.",
+          "correction_move": "Model can orally again, then reveal and blend.",
+          "observation_note": "Watch whether students produce a clean /k/ onset.",
+          "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -360,12 +302,12 @@
         {
           "slide_id": "04-02",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — cat",
+          "slide_title": "Vocabulary: cat",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "cat",
-            "image": null,
+            "front_text": "cat",
+            "back_text": "/k/ /æ/ /t/",
+            "audio": "/static/audio/block04_cat.mp3",
             "blend_units": [
               {
                 "grapheme": "c",
@@ -384,11 +326,11 @@
               }
             ]
           },
-          "teacher_cue": "The animal — top-1,000 ✓. Show a picture.",
-          "expected_response": "Students say cat and connect it to the animal.",
-          "correction_move": "Model cat with visual support, reveal print.",
-          "observation_note": "The classic first word. Spelled with c before a.",
-          "korean_interference_flag": null,
+          "teacher_cue": "Say cat orally — a familiar animal. Reveal print and blend all three sounds.",
+          "expected_response": "Students say cat orally and connect meaning before print.",
+          "correction_move": "Model cat orally again, then reveal and blend.",
+          "observation_note": "Watch whether students produce the short /æ/ clearly in this high-frequency word.",
+          "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -396,12 +338,12 @@
         {
           "slide_id": "04-03",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — cap",
+          "slide_title": "Vocabulary: cap",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "cap",
-            "image": null,
+            "front_text": "cap",
+            "back_text": "/k/ /æ/ /p/",
+            "audio": "/static/audio/block04_cap.mp3",
             "blend_units": [
               {
                 "grapheme": "c",
@@ -420,11 +362,11 @@
               }
             ]
           },
-          "teacher_cue": "A hat with a brim. Show a picture.",
-          "expected_response": "Students say cap and connect it to a type of hat.",
-          "correction_move": "Model cap with visual support, reveal print.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Point to a cap or mime putting one on. Say the word, then reveal print and blend.",
+          "expected_response": "Students say cap orally and connect meaning before print.",
+          "correction_move": "Model cap orally again, then reveal and blend.",
+          "observation_note": "Watch for the final /p/ — students must close lips completely.",
+          "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -432,12 +374,12 @@
         {
           "slide_id": "04-04",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — kit",
+          "slide_title": "Vocabulary: kit",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "kit",
-            "image": null,
+            "front_text": "kit",
+            "back_text": "/k/ /ɪ/ /t/",
+            "audio": "/static/audio/block04_kit.mp3",
             "blend_units": [
               {
                 "grapheme": "k",
@@ -456,10 +398,10 @@
               }
             ]
           },
-          "teacher_cue": "A set of tools. Spelled with k before i.",
-          "expected_response": "Students say kit and understand it means a set of things.",
-          "correction_move": "Model kit with visual support, reveal print.",
-          "observation_note": "Spelled with k before i.",
+          "teacher_cue": "Explain a kit as a set of tools. Note: this word uses k not c. Say the word, reveal print and blend.",
+          "expected_response": "Students say kit orally and connect meaning before print.",
+          "correction_move": "Model kit orally again, then reveal and blend.",
+          "observation_note": "Watch whether students recognise k as the same sound as c.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -468,12 +410,12 @@
         {
           "slide_id": "04-05",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — tick",
+          "slide_title": "Vocabulary: tick",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "tick",
-            "image": null,
+            "front_text": "tick",
+            "back_text": "/t/ /ɪ/ /k/",
+            "audio": "/static/audio/block04_tick.mp3",
             "blend_units": [
               {
                 "grapheme": "t",
@@ -486,16 +428,21 @@
                 "audio": null
               },
               {
-                "grapheme": "ck",
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
                 "phoneme": "/k/",
                 "audio": null
               }
             ]
           },
-          "teacher_cue": "A mark of correctness ✓. Draw a tick on the board.",
-          "expected_response": "Students say tick and connect it to a check mark.",
-          "correction_move": "Model tick with visual, reveal print.",
-          "observation_note": "ck spelling at the end of a short-vowel syllable.",
+          "teacher_cue": "Draw a tick mark. Say tick orally, then reveal print and blend. Note the ck ending — two letters, one sound.",
+          "expected_response": "Students say tick orally and connect meaning before print.",
+          "correction_move": "Model tick orally again, then reveal and blend.",
+          "observation_note": "Watch whether students blend four letters cleanly and hold the short /ɪ/.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -504,12 +451,12 @@
         {
           "slide_id": "04-06",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — pick",
+          "slide_title": "Vocabulary: pick",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "pick",
-            "image": null,
+            "front_text": "pick",
+            "back_text": "/p/ /ɪ/ /k/",
+            "audio": "/static/audio/block04_pick.mp3",
             "blend_units": [
               {
                 "grapheme": "p",
@@ -522,16 +469,21 @@
                 "audio": null
               },
               {
-                "grapheme": "ck",
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
                 "phoneme": "/k/",
                 "audio": null
               }
             ]
           },
-          "teacher_cue": "To choose or select. Demonstrate picking an object.",
-          "expected_response": "Students say pick and understand it means to choose.",
-          "correction_move": "Model pick with gesture, reveal print.",
-          "observation_note": null,
+          "teacher_cue": "Mime picking something up. Say pick orally, then reveal print and blend.",
+          "expected_response": "Students say pick orally and connect meaning before print.",
+          "correction_move": "Model pick orally again, then reveal and blend.",
+          "observation_note": "Watch for confusion of pick and tick — same vowel and coda, different onset.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -540,35 +492,17 @@
         {
           "slide_id": "04-07",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up — sick",
+          "slide_title": "Reader Prep: sick",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "sick",
-            "image": null,
-            "blend_units": [
-              {
-                "grapheme": "s",
-                "phoneme": "/s/",
-                "audio": null
-              },
-              {
-                "grapheme": "i",
-                "phoneme": "/ɪ/",
-                "audio": null
-              },
-              {
-                "grapheme": "ck",
-                "phoneme": "/k/",
-                "audio": null
-              }
-            ]
+            "front_text": "sick",
+            "back_text": "/s/ /i/ /ck/"
           },
-          "teacher_cue": "Unwell. Use a picture or expression.",
-          "expected_response": "Students say sick and understand it means unwell.",
-          "correction_move": "Model sick with expression, reveal print.",
-          "observation_note": null,
-          "korean_interference_flag": "vowel_quality",
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read sick accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -582,7 +516,7 @@
         {
           "slide_id": "05-01",
           "block_id": "05",
-          "slide_title": "Build the Word — cat",
+          "slide_title": "Build: cat",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "cat",
@@ -597,16 +531,16 @@
               "t"
             ],
             "draggable_letters": [
-              "a",
               "t",
+              "a",
               "c"
             ]
           },
-          "teacher_cue": "Build cat left to right.",
-          "expected_response": "Students build cat accurately.",
-          "correction_move": "Segment /k/ /æ/ /t/, then rebuild.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Say the sounds and build cat left to right.",
+          "expected_response": "Students build cat correctly: c | a | t.",
+          "correction_move": "Return to oral segmenting of cat, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -618,7 +552,7 @@
         {
           "slide_id": "05-02",
           "block_id": "05",
-          "slide_title": "Build the Word — cap",
+          "slide_title": "Build: cap",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "cap",
@@ -638,11 +572,11 @@
               "c"
             ]
           },
-          "teacher_cue": "Build cap left to right.",
-          "expected_response": "Students build cap accurately.",
-          "correction_move": "Segment /k/ /æ/ /p/, then rebuild.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Say the sounds and build cap left to right.",
+          "expected_response": "Students build cap correctly: c | a | p.",
+          "correction_move": "Return to oral segmenting of cap, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -654,30 +588,33 @@
         {
           "slide_id": "05-03",
           "block_id": "05",
-          "slide_title": "Build the Word — tick",
+          "slide_title": "Build: tick",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "tick",
             "target_letters": [
               "t",
               "i",
-              "ck"
+              "c",
+              "k"
             ],
             "slots": [
               "t",
               "i",
-              "ck"
+              "c",
+              "k"
             ],
             "draggable_letters": [
-              "ck",
-              "t",
-              "i"
+              "k",
+              "c",
+              "i",
+              "t"
             ]
           },
-          "teacher_cue": "Build tick left to right.",
-          "expected_response": "Students build tick accurately.",
-          "correction_move": "Segment /t/ /ɪ/ /k/, then rebuild.",
-          "observation_note": "ck as a digraph in the slot.",
+          "teacher_cue": "Say the sounds and build tick left to right.",
+          "expected_response": "Students build tick correctly: t | i | c | k.",
+          "correction_move": "Return to oral segmenting of tick, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -690,30 +627,33 @@
         {
           "slide_id": "05-04",
           "block_id": "05",
-          "slide_title": "Build the Word — pick",
+          "slide_title": "Build: pick",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "pick",
             "target_letters": [
               "p",
               "i",
-              "ck"
+              "c",
+              "k"
             ],
             "slots": [
               "p",
               "i",
-              "ck"
+              "c",
+              "k"
             ],
             "draggable_letters": [
-              "ck",
-              "p",
-              "i"
+              "k",
+              "c",
+              "i",
+              "p"
             ]
           },
-          "teacher_cue": "Build pick left to right.",
-          "expected_response": "Students build pick accurately.",
-          "correction_move": "Segment /p/ /ɪ/ /k/, then rebuild.",
-          "observation_note": null,
+          "teacher_cue": "Say the sounds and build pick left to right.",
+          "expected_response": "Students build pick correctly: p | i | c | k.",
+          "correction_move": "Return to oral segmenting of pick, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -726,7 +666,7 @@
         {
           "slide_id": "05-05",
           "block_id": "05",
-          "slide_title": "Build the Word — scan",
+          "slide_title": "Build: scan",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "scan",
@@ -743,17 +683,17 @@
               "n"
             ],
             "draggable_letters": [
-              "a",
               "n",
-              "s",
-              "c"
+              "a",
+              "c",
+              "s"
             ]
           },
-          "teacher_cue": "Build scan left to right.",
-          "expected_response": "Students build scan accurately.",
-          "correction_move": "Segment /s/ /k/ /æ/ /n/, then rebuild.",
-          "observation_note": "CCVC onset cluster.",
-          "korean_interference_flag": null,
+          "teacher_cue": "Say the sounds and build scan left to right.",
+          "expected_response": "Students build scan correctly: s | c | a | n.",
+          "correction_move": "Return to oral segmenting of scan, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -767,32 +707,27 @@
     "06": {
       "block_id": "06",
       "label": "Sentence Bridge",
-      "sight_words_active": [
-        "the",
-        "a",
-        "I",
-        "it",
-        "is",
-        "an",
-        "in"
-      ],
       "slides": [
         {
           "slide_id": "06-01",
           "block_id": "06",
-          "slide_title": "Read the Sentence — A cat sat.",
+          "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
             "text_content": "A cat sat.",
             "display_mode": "sentence",
             "show_font_controls": true,
-            "image": null
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable"
+            }
           },
-          "teacher_cue": "The classic first sentence — now possible because c/k is taught this lesson.",
-          "expected_response": "Students read A cat sat. accurately.",
-          "correction_move": "Echo read, then choral read.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "A is a sight word. cat and sat are decodable. Blend through each one left to right.",
+          "expected_response": "Students read \"A cat sat.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch whether students can blend cat correctly using the new /k/ sound.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -804,19 +739,26 @@
         {
           "slide_id": "06-02",
           "block_id": "06",
-          "slide_title": "Read the Sentence — A cat sat in a pan.",
+          "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
             "text_content": "A cat sat in a pan.",
             "display_mode": "sentence",
             "show_font_controls": true,
-            "image": null
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable",
+              "in": "decodable",
+              "a": "sight",
+              "pan": "decodable"
+            }
           },
-          "teacher_cue": "Expanding with a location. The pan from Lesson 4 reappears.",
-          "expected_response": "Students read A cat sat in a pan. accurately.",
-          "correction_move": "Echo read, then choral read.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "A and a are sight words. All other words are decodable. Read the full sentence.",
+          "expected_response": "Students read \"A cat sat in a pan.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch whether students can hold a five-word sentence in working memory.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -828,19 +770,27 @@
         {
           "slide_id": "06-03",
           "block_id": "06",
-          "slide_title": "Read the Sentences — The cat can sit. I can pick it.",
+          "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
             "text_content": "The cat can sit. I can pick it.",
             "display_mode": "sentence",
             "show_font_controls": true,
-            "image": null
+            "word_types": {
+              "The": "sight",
+              "cat": "decodable",
+              "can": "decodable",
+              "sit": "decodable",
+              "I": "sight",
+              "pick": "decodable",
+              "it": "decodable"
+            }
           },
-          "teacher_cue": "Two sentences. Introduces can as a modal — already in Block 04.",
-          "expected_response": "Students read both sentences accurately.",
-          "correction_move": "Echo read each sentence separately, then together.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Two sentences. The and I are sight words. All other words decodable.",
+          "expected_response": "Students read \"The cat can sit. I can pick it.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch whether students read both sentences in sequence and produce /k/ cleanly in can, pick.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -854,34 +804,39 @@
     "07": {
       "block_id": "07",
       "label": "Decodable Reader / Fluency",
-      "reader_title": "Lesson 5 Reader — The Cat",
       "slides": [
         {
           "slide_id": "07-01",
           "block_id": "07",
-          "slide_title": "Lesson 5 Reader — The Cat",
+          "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "reader_sentences": [
-              "A cat sat.",
-              "A cat sat in a pan.",
-              "The cat can sit.",
-              "I can pick it.",
-              "A sick cat sat.",
-              "The cat sat in a cap."
-            ],
+            "text_content": "A cat sat.\nA cat sat in a pan.\nThe cat can sit.\nI can pick it.\nA sick cat sat.\nThe cat sat in a cap.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "image": null,
-            "after_reading_prompt": "Where did the cat sit? Is the cat sick? How do you know?",
-            "text_content": "A cat sat.\nA cat sat in a pan.\nThe cat can sit.\nI can pick it.\nA sick cat sat.\nThe cat sat in a cap.",
-            "comprehension_prompt": "Where did the cat sit? Is the cat sick? How do you know?"
+            "comprehension_prompt": "Where did the cat sit? Is the cat sick? How do you know?",
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable",
+              "in": "decodable",
+              "a": "sight",
+              "pan": "decodable",
+              "The": "sight",
+              "can": "decodable",
+              "sit": "decodable",
+              "I": "sight",
+              "pick": "decodable",
+              "it": "decodable",
+              "sick": "decodable",
+              "cap": "decodable"
+            }
           },
-          "teacher_cue": "6 sentences. Students are reading about a cat — a concrete, familiar subject. Echo read, choral, then individual.",
-          "expected_response": "Students read all six sentences with accurate word tracking.",
-          "correction_move": "Echo read sentence by sentence, then choral read.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
+          "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -899,18 +854,24 @@
         {
           "slide_id": "08-01",
           "block_id": "08",
-          "slide_title": "Listen and Write — cat",
+          "slide_title": "Listen and Write: cat",
           "view_type": "writing_encoding",
           "content_payload": {
+            "audio_prompt": "/static/audio/block08_cat.mp3",
             "dictated_text": "cat",
             "expected_answer": "cat",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "c",
+              "a",
+              "t"
+            ]
           },
-          "teacher_cue": "Dictate cat. Students segment and write.",
+          "teacher_cue": "Play cat once. Replay only if needed before checking.",
           "expected_response": "Students write cat accurately.",
-          "correction_move": "Segment /k/ /æ/ /t/, then rewrite.",
-          "observation_note": "Reveal and check after writing.",
-          "korean_interference_flag": null,
+          "correction_move": "Replay cat once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode cat accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -922,18 +883,24 @@
         {
           "slide_id": "08-02",
           "block_id": "08",
-          "slide_title": "Listen and Write — cap",
+          "slide_title": "Listen and Write: cap",
           "view_type": "writing_encoding",
           "content_payload": {
+            "audio_prompt": "/static/audio/block08_cap.mp3",
             "dictated_text": "cap",
             "expected_answer": "cap",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "c",
+              "a",
+              "p"
+            ]
           },
-          "teacher_cue": "Dictate cap. Students segment and write.",
+          "teacher_cue": "Play cap once. Replay only if needed before checking.",
           "expected_response": "Students write cap accurately.",
-          "correction_move": "Segment /k/ /æ/ /p/, then rewrite.",
-          "observation_note": "Reveal and check after writing.",
-          "korean_interference_flag": null,
+          "correction_move": "Replay cap once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode cap accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -945,17 +912,23 @@
         {
           "slide_id": "08-03",
           "block_id": "08",
-          "slide_title": "Listen and Write — tick",
+          "slide_title": "Listen and Write: tick",
           "view_type": "writing_encoding",
           "content_payload": {
+            "audio_prompt": "/static/audio/block08_tick.mp3",
             "dictated_text": "tick",
             "expected_answer": "tick",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "t",
+              "i",
+              "ck"
+            ]
           },
-          "teacher_cue": "Dictate tick. Students segment and write.",
+          "teacher_cue": "Play tick once. Replay only if needed before checking. Remind students: /k/ is spelled 'ck' — both letters go in one box.",
           "expected_response": "Students write tick accurately.",
-          "correction_move": "Segment /t/ /ɪ/ /k/, then rewrite.",
-          "observation_note": "Reveal and check after writing.",
+          "correction_move": "Replay tick once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode tick accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -974,26 +947,22 @@
         {
           "slide_id": "09-01",
           "block_id": "09",
-          "slide_title": "Pattern Noticing — cat/cap, tick/pick, c vs k",
+          "slide_title": "Compare the Words",
           "view_type": "read_respond",
           "content_payload": {
             "display_mode": "spot_part",
             "displayed_words": [
               "cat",
-              "cap",
-              "tick",
-              "pick",
-              "c",
-              "k"
+              "cap"
             ],
             "highlighted_chunk": null,
-            "support_text": "What is different? What is the same? Same sound — different shape."
+            "support_text": "What changed? Same onset, different ending — what is different?"
           },
-          "teacher_cue": "Compare cat and cap. Compare tick and pick. Ask: 'What is different? What is the same?' Introduce: same sound, two spellings. Show c and k side by side.",
-          "expected_response": "Students identify onset/coda differences and understand c/k represent the same phoneme.",
-          "correction_move": "Point to each letter, say /k/, then repeat with the student.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Read the words aloud. Ask: What changed? Same onset, different ending — what is different?",
+          "expected_response": "Students identify what changed and name the difference.",
+          "correction_move": "Model both words, isolate the changing part, then ask again.",
+          "observation_note": "Watch whether students can hear and name the specific change.",
+          "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -1007,34 +976,42 @@
         {
           "slide_id": "10-01",
           "block_id": "10",
-          "slide_title": "Meaning Close",
+          "slide_title": "Lesson Close",
           "view_type": "quick_check",
           "content_payload": {
             "display_mode": "lesson_close",
             "title": "Close the Lesson",
             "check_items": [
-              "The cat sat in a pan. Is that a good place for a cat?",
-              "Why? Why not? Tell me using a word you know.",
-              "Can you think of a better place for the cat to sit?",
-              "Tell me a sentence about the cat."
+              {
+                "label": "Which new sound did we learn today? How many spellings does it have?",
+                "phoneme": "/k/"
+              },
+              {
+                "label": "Where did the cat sit? Is the cat sick? How do you know?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using can or cat.",
+                "phoneme": null
+              }
             ],
-            "notes_field": "First opinion and evaluation prompt. Simple but real: students must form a view and express it within vocabulary constraints.",
-            "marking_options": [
-              "secure",
-              "shaky",
-              "missed"
-            ]
+            "notes_field": "Keep the close brief, oral, and text-based."
           },
-          "teacher_cue": "Close with opinion prompt — first evaluation question in L0.",
-          "expected_response": "Students express a simple opinion using known vocabulary.",
-          "correction_move": "Model a sentence: 'I think the cat should sit ___.' Invite repetition.",
-          "observation_note": null,
-          "korean_interference_flag": null,
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
         }
       ]
     }
-  }
+  },
+  "sight_words": [
+    "I",
+    "the",
+    "a"
+  ]
 }

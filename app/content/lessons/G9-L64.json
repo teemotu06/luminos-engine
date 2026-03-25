@@ -1,0 +1,1147 @@
+{
+  "lesson_id": "G9-L64",
+  "unit_id": "G9",
+  "target_pattern": "y_ee_multisyllable",
+  "title": "Group 9, Lesson 64: y as /iː/ at end of multi-syllable words",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: compound words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "compound words",
+            "back_text": "two words, one meaning",
+            "audio": "/static/audio/compound_words.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce two words, one meaning quickly and cleanly.",
+          "correction_move": "Model two words, one meaning, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: y /aɪ/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y /aɪ/",
+            "back_text": "/aɪ/ at end of one syllable",
+            "audio": "/static/audio/y_aɪ.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /aɪ/ at end of one syllable quickly and cleanly.",
+          "correction_move": "Model /aɪ/ at end of one syllable, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: ee/ea",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ee/ea",
+            "back_text": "/iː/",
+            "audio": "/static/audio/eeea.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /iː/ quickly and cleanly.",
+          "correction_move": "Model /iː/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: was",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "was",
+            "back_text": "was — sight word",
+            "audio": "/static/audio/sight_was.mp3",
+            "word_types": {
+              "was": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say was immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: we",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
+            "word_types": {
+              "we": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: sunshine",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_sunshine.mp3",
+            "dictated_text": "sunshine",
+            "expected_answer": "sunshine",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "s",
+              "u",
+              "n",
+              "sh",
+              "i",
+              "n"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play sunshine once. Replay only if needed.",
+          "expected_response": "Students write sunshine accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: bedroom",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_bedroom.mp3",
+            "dictated_text": "bedroom",
+            "expected_answer": "bedroom",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "b",
+              "e",
+              "d",
+              "r",
+              "oo",
+              "m"
+            ]
+          },
+          "teacher_cue": "Play bedroom once. Replay only if needed.",
+          "expected_response": "Students write bedroom accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: notebook",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_notebook.mp3",
+            "dictated_text": "notebook",
+            "expected_answer": "notebook",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "n",
+              "o",
+              "t",
+              "e",
+              "b",
+              "oo",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play notebook once. Replay only if needed.",
+          "expected_response": "Students write notebook accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce y as /iː/ — multi-syllable words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y at end of 2+ syllable word = /iː/",
+            "back_text": "happy, funny, city, party",
+            "audio": "/static/audio/y_ee.mp3"
+          },
+          "teacher_cue": "y has a third sound. At the end of a word with two or more syllables, y makes long /iː/: happy, funny, baby, city, party, story. This connects to what you already know: y at the start of a word = /j/ (yes), y at the end of a one-syllable word = /aɪ/ (my, fly), y at the end of a multi-syllable word = /iː/ (happy, party). Three sounds, one letter — position and syllable count are the guide.",
+          "expected_response": "Students apply the three y rules and produce /iː/ correctly in multi-syllable words ending in y.",
+          "correction_move": "Review the three y rules side by side. Sort words: yes (y=/j/), my/fly (y=/aɪ/), happy/party (y=/iː/). Establish the syllable-count rule for the third sound.",
+          "observation_note": "Watch for /aɪ/ substitution in multi-syllable y words — Korean learners who learned y=/aɪ/ may generalise.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose the final y spelling",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "funny",
+              "audio": "/static/audio/block03_funny.mp3"
+            },
+            "pair_B": {
+              "label": "tree",
+              "audio": "/static/audio/block03_tree.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "funny spells final /iː/ with y; tree spells final /iː/ with ee."
+          },
+          "teacher_cue": "Play both words. Students choose the word that uses final y for /iː/, not ee.",
+          "expected_response": "Students identify funny as the final y spelling and reject tree as ee.",
+          "correction_move": "Write both words and circle the spelling that maps to /iː/ in each.",
+          "observation_note": "Watch for students who know the sound but not the spelling distinction.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose the final y spelling",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "baby",
+              "audio": "/static/audio/block03_baby.mp3"
+            },
+            "pair_B": {
+              "label": "see",
+              "audio": "/static/audio/block03_see.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "baby uses final y for /iː/; see uses ee."
+          },
+          "teacher_cue": "Play both words. Ask students to choose the word where /iː/ is spelled with final y.",
+          "expected_response": "Students identify baby as the final y word and reject see as an ee word.",
+          "correction_move": "Contrast the spellings and restate the multi-syllable y rule.",
+          "observation_note": "Watch whether students can separate sound identity from spelling choice.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: happy",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "happy",
+            "back_text": "/h/ /æ/ /p/ /iː/",
+            "audio": "/static/audio/block04_happy.mp3",
+            "blend_units": [
+              {
+                "grapheme": "hap",
+                "phoneme": "/hæp/",
+                "audio": null
+              },
+              {
+                "grapheme": "py",
+                "phoneme": "/iː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say happy — two syllables, y at end = /iː/. Reveal and blend.",
+          "expected_response": "Students say happy orally and connect meaning before blending.",
+          "correction_move": "Model happy orally again, reveal and blend.",
+          "observation_note": "Watch for /iː/ at end — not /aɪ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: funny",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "funny",
+            "back_text": "/f/ /ʌ/ /n/ /iː/",
+            "audio": "/static/audio/block04_funny.mp3",
+            "blend_units": [
+              {
+                "grapheme": "fun",
+                "phoneme": "/fʌn/",
+                "audio": null
+              },
+              {
+                "grapheme": "ny",
+                "phoneme": "/niː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say funny — two syllables, y at end = /iː/. Confirm /f/ not /p/. Reveal and blend.",
+          "expected_response": "Students say funny orally and connect meaning before blending.",
+          "correction_move": "Model funny orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and /iː/ at end.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: city",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "city",
+            "back_text": "/s/ /ɪ/ /t/ /iː/",
+            "audio": "/static/audio/block04_city.mp3",
+            "blend_units": [
+              {
+                "grapheme": "cit",
+                "phoneme": "/sɪt/",
+                "audio": null
+              },
+              {
+                "grapheme": "y",
+                "phoneme": "/iː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say city — two syllables, soft c, y at end = /iː/. Reveal and blend.",
+          "expected_response": "Students say city orally and connect meaning before blending.",
+          "correction_move": "Model city orally again, reveal and blend.",
+          "observation_note": "Watch for soft c = /s/ in cit- and /iː/ at end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: party",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "party",
+            "back_text": "/p/ /ɑː/ /t/ /iː/",
+            "audio": "/static/audio/block04_party.mp3",
+            "blend_units": [
+              {
+                "grapheme": "par",
+                "phoneme": "/pɑː/",
+                "audio": null
+              },
+              {
+                "grapheme": "ty",
+                "phoneme": "/tiː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say party — two syllables, ar vowel, y at end = /iː/. Reveal and blend.",
+          "expected_response": "Students say party orally and connect meaning before blending.",
+          "correction_move": "Model party orally again, reveal and blend.",
+          "observation_note": "Watch for /ɑː/ in par- and /iː/ at end.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: story",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "story",
+            "back_text": "/s/ /t/ /ɔː/ /r/ /iː/",
+            "audio": "/static/audio/block04_story.mp3",
+            "blend_units": [
+              {
+                "grapheme": "stor",
+                "phoneme": "/stɔː/",
+                "audio": null
+              },
+              {
+                "grapheme": "y",
+                "phoneme": "/iː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say story — or vowel in first syllable, y at end = /iː/. Reveal and blend.",
+          "expected_response": "Students say story orally and connect meaning before blending.",
+          "correction_move": "Model story orally again, reveal and blend.",
+          "observation_note": "Watch for /ɔː/ in stor- and /iː/ at end.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: cloudy",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cloudy",
+            "back_text": "/k/ /l/ /aʊ/ /d/ /iː/",
+            "audio": "/static/audio/block04_cloudy.mp3",
+            "blend_units": [
+              {
+                "grapheme": "cloud",
+                "phoneme": "/klaʊd/",
+                "audio": null
+              },
+              {
+                "grapheme": "y",
+                "phoneme": "/iː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say cloudy — cloud + y. The y adds /iː/. Reveal and blend.",
+          "expected_response": "Students say cloudy orally and connect meaning before blending.",
+          "correction_move": "Model cloudy orally again, reveal and blend.",
+          "observation_note": "Watch for /aʊ/ in cloud- and /iː/ in suffix -y.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: happy",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "happy",
+            "target_letters": [
+              "hap",
+              "py"
+            ],
+            "slots": [
+              "hap",
+              "py"
+            ],
+            "draggable_letters": [
+              "py",
+              "hap"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build happy left to right.",
+          "expected_response": "Students build happy correctly: hap | py.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: funny",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "funny",
+            "target_letters": [
+              "fun",
+              "ny"
+            ],
+            "slots": [
+              "fun",
+              "ny"
+            ],
+            "draggable_letters": [
+              "ny",
+              "fun"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build funny left to right.",
+          "expected_response": "Students build funny correctly: fun | ny.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: city",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "city",
+            "target_letters": [
+              "cit",
+              "y"
+            ],
+            "slots": [
+              "cit",
+              "y"
+            ],
+            "draggable_letters": [
+              "y",
+              "cit"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build city left to right.",
+          "expected_response": "Students build city correctly: cit | y.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: party",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "party",
+            "target_letters": [
+              "par",
+              "ty"
+            ],
+            "slots": [
+              "par",
+              "ty"
+            ],
+            "draggable_letters": [
+              "ty",
+              "par"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build party left to right.",
+          "expected_response": "Students build party correctly: par | ty.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: story",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "story",
+            "target_letters": [
+              "stor",
+              "y"
+            ],
+            "slots": [
+              "stor",
+              "y"
+            ],
+            "draggable_letters": [
+              "y",
+              "stor"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build story left to right.",
+          "expected_response": "Students build story correctly: stor | y.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The happy baby was at the party.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "happy": "decodable",
+              "baby": "decodable",
+              "was": "sight",
+              "at": "decodable",
+              "the": "sight",
+              "party": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on happy, baby, at, party.",
+          "expected_response": "Students read \"The happy baby was at the party.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The happy baby was at the party.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The funny story was for the party.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "funny": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "for": "decodable",
+              "the": "sight",
+              "party": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on funny, story, for, party.",
+          "expected_response": "Students read \"The funny story was for the party.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The funny story was for the party.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The party was in the city.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "party": "decodable",
+              "was": "sight",
+              "in": "decodable",
+              "the": "sight",
+              "city": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on party, in, city.",
+          "expected_response": "Students read \"The party was in the city.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The party was in the city.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cloudy sky was over the city.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "cloudy": "decodable",
+              "sky": "decodable",
+              "was": "sight",
+              "over": "decodable",
+              "the": "sight",
+              "city": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on cloudy, sky, over, city.",
+          "expected_response": "Students read \"The cloudy sky was over the city.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The cloudy sky was over the city.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The city has a funny story.\nA happy baby is at the party.\nThe cloudy sky was over the city.\nThe story is for the party.\nThe happy baby was happy.\nThe city story was funny.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What story is in the city? Who is at the party? Find the words ending in y in the reader.",
+            "word_types": {
+              "The": "sight",
+              "city": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "funny": "decodable",
+              "story": "decodable",
+              "A": "sight",
+              "happy": "decodable",
+              "baby": "decodable",
+              "is": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "party": "decodable",
+              "cloudy": "decodable",
+              "sky": "decodable",
+              "was": "sight",
+              "over": "decodable",
+              "for": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: happy",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_happy.mp3",
+            "dictated_text": "happy",
+            "expected_answer": "happy",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "h",
+              "a",
+              "pp",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play happy once. Replay only if needed.",
+          "expected_response": "Students write happy accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: party",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_party.mp3",
+            "dictated_text": "party",
+            "expected_answer": "party",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "p",
+              "ar",
+              "t",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play party once. Replay only if needed. Remind students: /ɑr/ is spelled 'ar' — both letters go in one box.",
+          "expected_response": "Students write party accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: story",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_story.mp3",
+            "dictated_text": "story",
+            "expected_answer": "story",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "t",
+              "or",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play story once. Replay only if needed. Remind students: /ɔr/ is spelled 'or' — both letters go in one box.",
+          "expected_response": "Students write story accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: tree",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_tree.mp3",
+            "dictated_text": "tree",
+            "expected_answer": "tree",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "t",
+              "r",
+              "ee"
+            ]
+          },
+          "teacher_cue": "Transfer check. Dictate tree and ask students which spelling makes /iː/ here before they write.",
+          "expected_response": "Students write tree accurately and identify ee rather than final y as the spelling for /iː/.",
+          "correction_move": "Compare tree with funny and baby, then re-dictate.",
+          "observation_note": "Watch for overgeneralisation of final y as the only way to spell final /iː/.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-05",
+          "block_id": "08",
+          "slide_title": "Listen and Write: see",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_see.mp3",
+            "dictated_text": "see",
+            "expected_answer": "see",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "s",
+              "ee"
+            ]
+          },
+          "teacher_cue": "Use see as a second transfer dictation. Students decide whether /iː/ is spelled with ee or final y before writing.",
+          "expected_response": "Students write see accurately and maintain the contrast between final y and ee spellings.",
+          "correction_move": "Contrast see with city and story, then revisit the spelling decision explicitly.",
+          "observation_note": "Watch whether students can choose the correct spelling without teacher prompts.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "happy",
+              "unhappy",
+              "happily",
+              "happiest",
+              "happiness"
+            ],
+            "highlighted_chunk": "happ",
+            "support_text": "What is the base? How does each suffix or prefix change the meaning?"
+          },
+          "teacher_cue": "Show the words. Ask: What is the base? How does each suffix or prefix change the meaning?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "y at end of multi-syllable word = /iː/. y at end of one-syllable word = /aɪ/. y at start = /j/.",
+                "phoneme": null
+              },
+              {
+                "label": "What story is in the city? Who is at the party? Find the words ending in y in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using happy or funny.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1033 @@
+{
+  "lesson_id": "G9-L58",
+  "unit_id": "G9",
+  "target_pattern": "prefixes_un_re_pre_dis",
+  "title": "Group 9, Lesson 58: Prefixes un- re- pre- dis-",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: open syllable",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "open syllable",
+            "back_text": "CV = long vowel",
+            "audio": "/static/audio/open_syllable.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce CV = long vowel quickly and cleanly.",
+          "correction_move": "Model CV = long vowel, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: closed syllable",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "closed syllable",
+            "back_text": "CVC = short vowel",
+            "audio": "/static/audio/closed_syllable.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce CVC = short vowel quickly and cleanly.",
+          "correction_move": "Model CVC = short vowel, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: -tion",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-tion",
+            "back_text": "/ʃən/",
+            "audio": "/static/audio/-tion.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ʃən/ quickly and cleanly.",
+          "correction_move": "Model /ʃən/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: I",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say I immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: the",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say the immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: a",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "a — sight word",
+            "audio": "/static/audio/sight_a.mp3",
+            "word_types": {
+              "a": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say a immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: he",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "he",
+            "back_text": "he — sight word",
+            "audio": "/static/audio/sight_he.mp3",
+            "word_types": {
+              "he": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say he immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: baby",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_baby.mp3",
+            "dictated_text": "baby",
+            "expected_answer": "baby",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "b",
+              "a",
+              "b",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play baby once. Replay only if needed.",
+          "expected_response": "Students write baby accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: cabin",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_cabin.mp3",
+            "dictated_text": "cabin",
+            "expected_answer": "cabin",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "c",
+              "a",
+              "b",
+              "i",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play cabin once. Replay only if needed.",
+          "expected_response": "Students write cabin accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: music",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_music.mp3",
+            "dictated_text": "music",
+            "expected_answer": "music",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "m",
+              "u",
+              "s",
+              "i",
+              "c"
+            ]
+          },
+          "teacher_cue": "Play music once. Replay only if needed.",
+          "expected_response": "Students write music accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce prefixes: un- re- pre- dis-",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "un-  re-  pre-  dis-",
+            "back_text": "prefixes change meaning",
+            "audio": "/static/audio/prefixes.mp3"
+          },
+          "teacher_cue": "New morphological tool — prefixes. A prefix is a chunk added to the FRONT of a word that changes its meaning. un- = not or reverse: unhappy, unlock, undo. re- = again: replay, rewrite, reread. pre- = before: preview, preschool, predict. dis- = not or away: dislike, discover, disagree. Key decoding strategy: if a word looks long and hard, check if it starts with a known prefix — strip it off and decode the base word first.",
+          "expected_response": "Students identify prefixes, strip them, decode the base, then reassemble the full word.",
+          "correction_move": "Model the strategy: unlock → un + lock. Preview → pre + view. Dislike → dis + like. Students practice stripping prefixes and decoding the base word, then recombining.",
+          "observation_note": "Watch for students trying to decode the whole word as a single unit rather than using the prefix strategy.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: unlock",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "unlock",
+            "back_text": "/ʌn/ /lɒk/",
+            "audio": "/static/audio/block04_unlock.mp3",
+            "blend_units": [
+              {
+                "grapheme": "un-",
+                "phoneme": "/ʌn/",
+                "audio": null
+              },
+              {
+                "grapheme": "lock",
+                "phoneme": "/lɒk/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say unlock. un- = not/reverse, lock = the base. Reveal and blend by morpheme.",
+          "expected_response": "Students say unlock orally and connect meaning before blending.",
+          "correction_move": "Model unlock orally again, reveal and blend.",
+          "observation_note": "Watch for un- as a unit and lock as a known word.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: reread",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "reread",
+            "back_text": "/riː/ /riːd/",
+            "audio": "/static/audio/block04_reread.mp3",
+            "blend_units": [
+              {
+                "grapheme": "re-",
+                "phoneme": "/riː/",
+                "audio": null
+              },
+              {
+                "grapheme": "read",
+                "phoneme": "/riːd/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say reread — to read again. re- = again, read = the base. Reveal and blend.",
+          "expected_response": "Students say reread orally and connect meaning before blending.",
+          "correction_move": "Model reread orally again, reveal and blend.",
+          "observation_note": "Watch for re- as a unit and the long /iː/ in both re- and read.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: preview",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "preview",
+            "back_text": "/priː/ /vjuː/",
+            "audio": "/static/audio/block04_preview.mp3",
+            "blend_units": [
+              {
+                "grapheme": "pre-",
+                "phoneme": "/priː/",
+                "audio": null
+              },
+              {
+                "grapheme": "view",
+                "phoneme": "/vjuː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say preview — to see before. pre- = before, view = the base. Reveal and blend.",
+          "expected_response": "Students say preview orally and connect meaning before blending.",
+          "correction_move": "Model preview orally again, reveal and blend.",
+          "observation_note": "Watch for pre- as a unit.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: dislike",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "dislike",
+            "back_text": "/dɪs/ /laɪk/",
+            "audio": "/static/audio/block04_dislike.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dis-",
+                "phoneme": "/dɪs/",
+                "audio": null
+              },
+              {
+                "grapheme": "like",
+                "phoneme": "/laɪk/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say dislike — to not like. dis- = not, like = the base. Reveal and blend.",
+          "expected_response": "Students say dislike orally and connect meaning before blending.",
+          "correction_move": "Model dislike orally again, reveal and blend.",
+          "observation_note": "Watch for dis- as a unit and CVCe pattern in like.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: unhappy",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "unhappy",
+            "back_text": "/ʌn/ /hæ/ /piː/",
+            "audio": "/static/audio/block04_unhappy.mp3",
+            "blend_units": [
+              {
+                "grapheme": "un-",
+                "phoneme": "/ʌn/",
+                "audio": null
+              },
+              {
+                "grapheme": "hap",
+                "phoneme": "/hæp/",
+                "audio": null
+              },
+              {
+                "grapheme": "py",
+                "phoneme": "/piː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say unhappy — not happy. un- = not, happy = the base. Reveal and blend.",
+          "expected_response": "Students say unhappy orally and connect meaning before blending.",
+          "correction_move": "Model unhappy orally again, reveal and blend.",
+          "observation_note": "Watch for un- as a unit and y=/iː/ at end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: discover",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "discover",
+            "back_text": "/dɪs/ /kʌ/ /vər/",
+            "audio": "/static/audio/block04_discover.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dis-",
+                "phoneme": "/dɪs/",
+                "audio": null
+              },
+              {
+                "grapheme": "cov",
+                "phoneme": "/kʌv/",
+                "audio": null
+              },
+              {
+                "grapheme": "er",
+                "phoneme": "/ər/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say discover — to find out. dis- = away, cover = the base. Reveal and blend.",
+          "expected_response": "Students say discover orally and connect meaning before blending.",
+          "correction_move": "Model discover orally again, reveal and blend.",
+          "observation_note": "Watch for dis- as a unit and the er ending.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: unlock",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "unlock",
+            "target_letters": [
+              "un",
+              "lock"
+            ],
+            "slots": [
+              "un",
+              "lock"
+            ],
+            "draggable_letters": [
+              "lock",
+              "un"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build unlock left to right.",
+          "expected_response": "Students build unlock correctly: un | lock.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: reread",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "reread",
+            "target_letters": [
+              "re",
+              "read"
+            ],
+            "slots": [
+              "re",
+              "read"
+            ],
+            "draggable_letters": [
+              "read",
+              "re"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build reread left to right.",
+          "expected_response": "Students build reread correctly: re | read.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: preview",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "preview",
+            "target_letters": [
+              "pre",
+              "view"
+            ],
+            "slots": [
+              "pre",
+              "view"
+            ],
+            "draggable_letters": [
+              "view",
+              "pre"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build preview left to right.",
+          "expected_response": "Students build preview correctly: pre | view.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: dislike",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "dislike",
+            "target_letters": [
+              "dis",
+              "like"
+            ],
+            "slots": [
+              "dis",
+              "like"
+            ],
+            "draggable_letters": [
+              "like",
+              "dis"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build dislike left to right.",
+          "expected_response": "Students build dislike correctly: dis | like.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: unhappy",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "unhappy",
+            "target_letters": [
+              "un",
+              "hap",
+              "py"
+            ],
+            "slots": [
+              "un",
+              "hap",
+              "py"
+            ],
+            "draggable_letters": [
+              "py",
+              "hap",
+              "un"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build unhappy left to right.",
+          "expected_response": "Students build unhappy correctly: un | hap | py.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We preview it and reread it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "We": "sight",
+              "preview": "decodable",
+              "it": "decodable",
+              "and": "decodable",
+              "reread": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on preview, it, and, reread.",
+          "expected_response": "Students read \"We preview it and reread it.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"We preview it and reread it.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "They unlock it and discover it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "They": "sight",
+              "unlock": "decodable",
+              "it": "decodable",
+              "and": "decodable",
+              "discover": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on unlock, it, and, discover.",
+          "expected_response": "Students read \"They unlock it and discover it.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"They unlock it and discover it.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She is unhappy, and I dislike it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "is": "decodable",
+              "unhappy": "decodable",
+              "and": "decodable",
+              "I": "sight",
+              "dislike": "decodable",
+              "it": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on is, unhappy, and, dislike.",
+          "expected_response": "Students read \"She is unhappy, and I dislike it.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"She is unhappy, and I dislike it.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We preview it before we unlock it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "We": "sight",
+              "preview": "decodable",
+              "it": "decodable",
+              "before": "decodable",
+              "we": "sight",
+              "unlock": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on preview, it, before, unlock.",
+          "expected_response": "Students read \"We preview it before we unlock it.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"We preview it before we unlock it.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We unlock it and reread it.\nWe preview it.\nThey discover it.\nShe is unhappy and I dislike it.\nWe reread the preview.\nThey discover it and unlock it.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all the un- words. Find all the re- words. Find all the pre- words. Find all the dis- words.",
+            "word_types": {
+              "We": "sight",
+              "unlock": "decodable",
+              "it": "decodable",
+              "and": "decodable",
+              "reread": "decodable",
+              "preview": "decodable",
+              "They": "sight",
+              "discover": "decodable",
+              "She": "sight",
+              "is": "decodable",
+              "unhappy": "decodable",
+              "I": "sight",
+              "dislike": "decodable",
+              "the": "sight"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: unlock",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_unlock.mp3",
+            "dictated_text": "unlock",
+            "expected_answer": "unlock",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "u",
+              "n",
+              "l",
+              "o",
+              "ck"
+            ]
+          },
+          "teacher_cue": "Play unlock once. Replay only if needed. Remind students: /k/ is spelled 'ck' — both letters go in one box.",
+          "expected_response": "Students write unlock accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: reread",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_reread.mp3",
+            "dictated_text": "reread",
+            "expected_answer": "reread",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "r",
+              "er",
+              "ea",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play reread once. Replay only if needed. Remind students: /ɜr/ is spelled 'er' — both letters go in one box. Remind students: /iː/ is spelled 'ea' — both letters go in one box.",
+          "expected_response": "Students write reread accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: dislike",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_dislike.mp3",
+            "dictated_text": "dislike",
+            "expected_answer": "dislike",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "d",
+              "i",
+              "s",
+              "l",
+              "i",
+              "k"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play dislike once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write dislike accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "unlock",
+              "unhappy",
+              "unseen",
+              "undo",
+              "unfair"
+            ],
+            "highlighted_chunk": "un-",
+            "support_text": "What does un- add to the meaning of each base word?"
+          },
+          "teacher_cue": "Show the words. Ask: What does un- add to the meaning of each base word?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "un- = not/reverse. re- = again. pre- = before. dis- = not/away. Say all four.",
+                "phoneme": null
+              },
+              {
+                "label": "Find all the un- words. Find all the re- words. Find all the pre- words. Find all the dis- words.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using unlock or reread.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

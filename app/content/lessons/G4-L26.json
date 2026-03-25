@@ -1,0 +1,1254 @@
+{
+  "lesson_id": "G4-L26",
+  "unit_id": "G4",
+  "target_pattern": "ng",
+  "title": "Group 4, Lesson 26: ng",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "with",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l",
+    "th_voiceless",
+    "th_voiced"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: qu",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "qu",
+            "back_text": "/kw/",
+            "audio": "/static/audio/qu.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /kw/ quickly and cleanly.",
+          "correction_move": "Model /kw/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /kw/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ch",
+            "back_text": "/tʃ/",
+            "audio": "/static/audio/ch.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /tʃ/ quickly and cleanly.",
+          "correction_move": "Model /tʃ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /tʃ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: th (voiced)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th (voiced)",
+            "back_text": "/ð/",
+            "audio": "/static/audio/th_(voiced).mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ð/ quickly and cleanly.",
+          "correction_move": "Model /ð/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /ð/.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model no in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model do in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: so",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "so",
+            "back_text": "so — sight word",
+            "audio": "/static/audio/sight_so.mp3",
+            "word_types": {
+              "so": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say so immediately without blending.",
+          "correction_move": "Model so in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model of in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: quick",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_quick.mp3",
+            "dictated_text": "quick",
+            "expected_answer": "quick",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "q",
+              "u",
+              "i",
+              "ck"
+            ]
+          },
+          "teacher_cue": "Play quick once. Replay only if needed.",
+          "expected_response": "Students write quick accurately.",
+          "correction_move": "Replay quick once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode quick accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: quit",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_quit.mp3",
+            "dictated_text": "quit",
+            "expected_answer": "quit",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "q",
+              "u",
+              "i",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play quit once. Replay only if needed.",
+          "expected_response": "Students write quit accurately.",
+          "correction_move": "Replay quit once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode quit accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: quest",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_quest.mp3",
+            "dictated_text": "quest",
+            "expected_answer": "quest",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "q",
+              "u",
+              "e",
+              "s",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play quest once. Replay only if needed.",
+          "expected_response": "Students write quest accurately.",
+          "correction_move": "Replay quest once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode quest accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /ŋ/ — ng",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ng",
+            "back_text": "/ŋ/",
+            "audio": "/static/audio/ng.mp3"
+          },
+          "teacher_cue": "New sound — ng. Back of tongue rises to the soft palate — same position as /k/ and /g/ — but air flows through the nose. Voice on. A nasal sound at the back of the mouth — nng. Important rule: ng appears at the END of syllables only — never at the start of a word. Korean has a similar sound ㅇ at syllable endings so production is accessible. The main challenge is the spelling: /ŋ/ is written ng — two letters, one sound.",
+          "expected_response": "Students produce /ŋ/ cleanly and understand that ng only appears at the end of syllables.",
+          "correction_move": "Model /n/ — front nasal. Model /ŋ/ — back nasal. Students alternate, feeling the tongue position shift from front to back. Then apply to words.",
+          "observation_note": "Watch for students adding a /g/ after /ŋ/ — producing 'sing-g'. The /g/ is silent in most accents.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: sing",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sing",
+            "back_text": "/s/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_sing.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say sing — to produce music with the voice. Confirm /ŋ/ at end, no /g/ after it. Blend.",
+          "expected_response": "Students say sing orally and connect meaning before blending on the card.",
+          "correction_move": "Model sing orally again, then reveal and blend.",
+          "observation_note": "Watch for /g/ intrusion after /ŋ/ and for short /ɪ/ vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: king",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "king",
+            "back_text": "/k/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_king.mp3",
+            "blend_units": [
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say king — a male monarch. Confirm /ŋ/ at end. Blend.",
+          "expected_response": "Students say king orally and connect meaning before blending on the card.",
+          "correction_move": "Model king orally again, then reveal and blend.",
+          "observation_note": "Watch for /g/ after /ŋ/ — redirect if students produce king-g.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: song",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "song",
+            "back_text": "/s/ /ɒ/ /ŋ/",
+            "audio": "/static/audio/block04_song.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/ɒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say song — a piece of music. Confirm /ŋ/ at end. Blend.",
+          "expected_response": "Students say song orally and connect meaning before blending on the card.",
+          "correction_move": "Model song orally again, then reveal and blend.",
+          "observation_note": "Watch for /g/ intrusion and for rounded /ɒ/ vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: strong",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "strong",
+            "back_text": "/s/ /t/ /r/ /ɒ/ /ŋ/",
+            "audio": "/static/audio/block04_strong.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/ɒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say strong — having great power. Note str onset. Confirm /r/ and /ŋ/ at end. Blend all five.",
+          "expected_response": "Students say strong orally and connect meaning before blending on the card.",
+          "correction_move": "Model strong orally again, then reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ in onset and for /g/ after /ŋ/ at the end.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: thing",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "thing",
+            "back_text": "/θ/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_thing.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/θ/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say thing — an object or matter. Note th onset — voiceless /θ/. Confirm /ŋ/ at end. Blend.",
+          "expected_response": "Students say thing orally and connect meaning before blending on the card.",
+          "correction_move": "Model thing orally again, then reveal and blend.",
+          "observation_note": "Watch for /t/ substitution on /θ/ and for /g/ after /ŋ/.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bring",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bring",
+            "back_text": "/b/ /r/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_bring.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say bring — to carry here. Note br onset and ng coda. Confirm /r/ and /ŋ/. Blend all four.",
+          "expected_response": "Students say bring orally and connect meaning before blending on the card.",
+          "correction_move": "Model bring orally again, then reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ in onset and for /g/ after /ŋ/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Vocabulary: sang",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sang",
+            "back_text": "/s/ /æ/ /ŋ/",
+            "audio": "/static/audio/block04_sang.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say sang — past tense of sing. Confirm /ŋ/ at end. Blend.",
+          "expected_response": "Students say sang orally and connect meaning before blending on the card.",
+          "correction_move": "Model sang orally again, then reveal and blend.",
+          "observation_note": "Watch for /g/ intrusion and for short /æ/ vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: long",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "long",
+            "back_text": "long"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read long accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: brings",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "brings",
+            "back_text": "brings"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read brings accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: ring",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ring",
+            "back_text": "ring"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read ring accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: wing",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "wing",
+            "back_text": "wing"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read wing accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: sings",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sings",
+            "back_text": "sings"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read sings accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: gong",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "gong",
+            "back_text": "gong"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read gong accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: sing",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "sing",
+            "target_letters": [
+              "s",
+              "i",
+              "ng"
+            ],
+            "slots": [
+              "s",
+              "i",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "i",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build sing left to right.",
+          "expected_response": "Students build sing correctly: s | i | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: king",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "king",
+            "target_letters": [
+              "k",
+              "i",
+              "ng"
+            ],
+            "slots": [
+              "k",
+              "i",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "i",
+              "k"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build king left to right.",
+          "expected_response": "Students build king correctly: k | i | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: song",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "song",
+            "target_letters": [
+              "s",
+              "o",
+              "ng"
+            ],
+            "slots": [
+              "s",
+              "o",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "o",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build song left to right.",
+          "expected_response": "Students build song correctly: s | o | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: strong",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "strong",
+            "target_letters": [
+              "s",
+              "t",
+              "r",
+              "o",
+              "ng"
+            ],
+            "slots": [
+              "s",
+              "t",
+              "r",
+              "o",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "o",
+              "r",
+              "t",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build strong left to right.",
+          "expected_response": "Students build strong correctly: s | t | r | o | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: thing",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "thing",
+            "target_letters": [
+              "th",
+              "i",
+              "ng"
+            ],
+            "slots": [
+              "th",
+              "i",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "i",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build thing left to right.",
+          "expected_response": "Students build thing correctly: th | i | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a song.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "song": "decodable"
+            }
+          },
+          "teacher_cue": "The and a are sight words. king, sang, song all decodable.",
+          "expected_response": "Students read \"The king sang a song.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ŋ/ at end of king and song — no /g/ after.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a long song.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "long": "decodable",
+              "song": "decodable"
+            }
+          },
+          "teacher_cue": "The and a are sight words. All other words decodable.",
+          "expected_response": "Students read \"The king sang a long song.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ŋ/ in king, long, song — three ng words in one sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She brings a ring. The king is strong.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "brings": "decodable",
+              "a": "sight",
+              "ring": "decodable",
+              "The": "sight",
+              "king": "decodable",
+              "is": "decodable",
+              "strong": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. She and The are sight words. All other words decodable.",
+          "expected_response": "Students read \"She brings a ring. The king is strong.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ŋ/ in brings, ring, king, strong and /r/ in brings, ring, strong.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Sing this thing! That is a long strong song.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Sing": "decodable",
+              "this": "decodable",
+              "thing": "decodable",
+              "That": "decodable",
+              "is": "decodable",
+              "a": "sight",
+              "long": "decodable",
+              "strong": "decodable",
+              "song": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. this and that are decodable. All words decodable.",
+          "expected_response": "Students read \"Sing this thing! That is a long strong song.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ŋ/ in sing, thing, long, strong, song — five ng words across two sentences.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a song.\nThe king sang a long song.\nShe brings a ring.\nThe king is strong.\nSing this thing!\nThat is a long strong song.\nThe king has a big ring and a long wing.\nShe sings and he brings the dish.\nThis is fun. I can sing and you can ring the gong.\nThe strong king did not quit his quest.\nBring the dish! Fetch the ring!\nThe king sat on his big chest and sang.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What did the king do? Find all the ng words. Tell me the story of the king in two sentences.",
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "song": "decodable",
+              "long": "decodable",
+              "She": "sight",
+              "brings": "decodable",
+              "ring": "decodable",
+              "is": "decodable",
+              "strong": "decodable",
+              "Sing": "decodable",
+              "this": "decodable",
+              "thing": "decodable",
+              "That": "decodable",
+              "has": "decodable",
+              "big": "decodable",
+              "and": "decodable",
+              "wing": "decodable",
+              "sings": "decodable",
+              "he": "sight",
+              "the": "sight",
+              "dish": "decodable",
+              "This": "decodable",
+              "fun": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "sing": "decodable",
+              "you": "decodable",
+              "gong": "decodable",
+              "did": "decodable",
+              "not": "decodable",
+              "quit": "decodable",
+              "his": "decodable",
+              "quest": "decodable",
+              "Bring": "decodable",
+              "Fetch": "decodable",
+              "sat": "decodable",
+              "on": "decodable",
+              "chest": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading.",
+          "observation_note": "Watch for tracking accuracy and any phoneme production errors.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sing",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_sing.mp3",
+            "dictated_text": "sing",
+            "expected_answer": "sing",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play sing once. Replay only if needed. Remind students: /ŋ/ is spelled 'ng' — both letters go in one box.",
+          "expected_response": "Students write sing accurately.",
+          "correction_move": "Replay sing once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode sing accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: king",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_king.mp3",
+            "dictated_text": "king",
+            "expected_answer": "king",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "k",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play king once. Replay only if needed. Remind students: /ŋ/ is spelled 'ng' — both letters go in one box.",
+          "expected_response": "Students write king accurately.",
+          "correction_move": "Replay king once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode king accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: strong",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_strong.mp3",
+            "dictated_text": "strong",
+            "expected_answer": "strong",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "s",
+              "t",
+              "r",
+              "o",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play strong once. Replay only if needed. Remind students: /ŋ/ is spelled 'ng' — both letters go in one box.",
+          "expected_response": "Students write strong accurately.",
+          "correction_move": "Replay strong once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode strong accurately.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "sing",
+              "ring",
+              "king",
+              "thing",
+              "bring"
+            ],
+            "highlighted_chunk": "ing",
+            "support_text": "What do these words share at the end?"
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share at the end?",
+          "expected_response": "Students identify the shared pattern and name what changes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask the question again.",
+          "observation_note": "Watch whether students can hear and see the shared pattern.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Group 4 is done — all the digraphs. Which new sound did we learn today?",
+                "phoneme": "/ŋ/"
+              },
+              {
+                "label": "What did the king do? Find all the ng words. Tell me the story of the king in two sentences.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using sing or king.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

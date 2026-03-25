@@ -1,0 +1,1228 @@
+{
+  "lesson_id": "G4-L23",
+  "unit_id": "G4",
+  "target_pattern": "th_voiced",
+  "title": "Group 4, Lesson 23: th (voiced)",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "with",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she"
+  ],
+  "korean_interference_active": [
+    "th_voiced",
+    "th_voiceless",
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: th (voiceless)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th (voiceless)",
+            "back_text": "/θ/",
+            "audio": "/static/audio/th_(voiceless).mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /θ/ quickly and cleanly.",
+          "correction_move": "Model /θ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /θ/.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: sh",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sh",
+            "back_text": "/ʃ/",
+            "audio": "/static/audio/sh.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ʃ/ quickly and cleanly.",
+          "correction_move": "Model /ʃ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /ʃ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /r/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model of in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: she",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "she",
+            "back_text": "she — sight word",
+            "audio": "/static/audio/sight_she.mp3",
+            "word_types": {
+              "she": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say she immediately without blending.",
+          "correction_move": "Model she in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: I",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say I immediately without blending.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: the",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say the immediately without blending.",
+          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: thin",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_thin.mp3",
+            "dictated_text": "thin",
+            "expected_answer": "thin",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "th",
+              "i",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play thin once. Replay only if needed.",
+          "expected_response": "Students write thin accurately.",
+          "correction_move": "Replay thin once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode thin accurately.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: path",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_path.mp3",
+            "dictated_text": "path",
+            "expected_answer": "path",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "p",
+              "a",
+              "th"
+            ]
+          },
+          "teacher_cue": "Play path once. Replay only if needed.",
+          "expected_response": "Students write path accurately.",
+          "correction_move": "Replay path once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode path accurately.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: think",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_think.mp3",
+            "dictated_text": "think",
+            "expected_answer": "think",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "th",
+              "i",
+              "n",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play think once. Replay only if needed.",
+          "expected_response": "Students write think accurately.",
+          "correction_move": "Replay think once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode think accurately.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /ð/ — mirror work mandatory (5 minutes minimum)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th",
+            "back_text": "/ð/ (voiced)",
+            "audio": "/static/audio/th_voiced.mp3"
+          },
+          "teacher_cue": "New sound — voiced th. HIGHEST PRIORITY KOREAN INTERFERENCE. Same tongue position as voiceless /θ/ — tip between teeth — but add voicing. Hand on throat: /θ/ no vibration, /ð/ vibrates. Korean substitutes /d/ — 'dis' for 'this', 'dat' for 'that'. This affects the most common English words. Mandatory 5-minute mirror session: alternate θ-ð-θ-ð, students confirm voicing switch with hand on throat.",
+          "expected_response": "Students produce /ð/ with tongue tip between teeth, continuous airflow, and throat vibration.",
+          "correction_move": "Mirror session: produce /θ/ — no vibration. Produce /ð/ — vibration. Alternate. Students hold hand on throat to feel the switch. Then apply to words: thin (/θ/) vs this (/ð/).",
+          "observation_note": "Watch for /d/ substitution throughout. Note: from this lesson 'with' is now fully decodable — w+i+th(/ð/). Acknowledge the upgrade from sight word to decodable.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose the voiced th word",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "this",
+              "audio": "/static/audio/block08_this.mp3"
+            },
+            "pair_B": {
+              "label": "thin",
+              "audio": "/static/audio/block08_thin.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "th_voiced",
+            "correction_routine": "Feel the throat. this has voiced /ð/; thin has voiceless /θ/."
+          },
+          "teacher_cue": "Play both words. Students choose the voiced th word and check voicing with a hand on the throat.",
+          "expected_response": "Students identify this as voiced th and contrast it with thin.",
+          "correction_move": "Alternate thin/this orally until students can feel the voicing switch and place the tongue correctly.",
+          "observation_note": "Watch for students who still collapse both th sounds into one category.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose the voiced th word",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "that",
+              "audio": "/static/audio/block08_that.mp3"
+            },
+            "pair_B": {
+              "label": "think",
+              "audio": "/static/audio/block08_think.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "th_voiced",
+            "correction_routine": "that begins with /ð/; think begins with /θ/."
+          },
+          "teacher_cue": "Play both words. Ask students to choose the voiced th word and explain how they know.",
+          "expected_response": "Students identify that as voiced th and reject think as voiceless th.",
+          "correction_move": "Contrast the pair with mirror work and repeated listening if students still default to /d/ or /θ/.",
+          "observation_note": "Watch whether students can maintain the contrast in connected speech, not just isolated sounds.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: this",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "this",
+            "back_text": "/ð/ /ɪ/ /s/",
+            "audio": "/static/audio/block04_this.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/ð/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say this — near demonstrative. Point to something nearby. Confirm /ð/ onset. Reveal print and blend.",
+          "expected_response": "Students say this orally and connect meaning before blending on the card.",
+          "correction_move": "Model this orally again, then reveal and blend.",
+          "observation_note": "Watch for /d/ substitution. Redirect with tongue-between-teeth and throat vibration check.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: that",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "that",
+            "back_text": "/ð/ /æ/ /t/",
+            "audio": "/static/audio/block04_that.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/ð/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say that — far demonstrative. Point to something across the room. Confirm /ð/ onset. Reveal print and blend.",
+          "expected_response": "Students say that orally and connect meaning before blending on the card.",
+          "correction_move": "Model that orally again, then reveal and blend.",
+          "observation_note": "Watch for /d/ at onset and for short /æ/ vowel.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: them",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "them",
+            "back_text": "/ð/ /e/ /m/",
+            "audio": "/static/audio/block04_them.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/ð/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say them — object pronoun for a group. Confirm /ð/ onset. Reveal print and blend.",
+          "expected_response": "Students say them orally and connect meaning before blending on the card.",
+          "correction_move": "Model them orally again, then reveal and blend.",
+          "observation_note": "Watch for /d/ substitution and for the short /e/ vowel.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: then",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "then",
+            "back_text": "/ð/ /e/ /n/",
+            "audio": "/static/audio/block04_then.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/ð/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say then — at that time, or next. Use in a sentence: He ran and then he stopped. Confirm /ð/. Blend.",
+          "expected_response": "Students say then orally and connect meaning before blending on the card.",
+          "correction_move": "Model then orally again, then reveal and blend.",
+          "observation_note": "Watch for /d/ at onset.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: thus",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "thus",
+            "back_text": "/ð/ /ʌ/ /s/",
+            "audio": "/static/audio/block04_thus.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/ð/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say thus — therefore. Use in a sentence: He ran and thus he got fit. Confirm /ð/. Blend.",
+          "expected_response": "Students say thus orally and connect meaning before blending on the card.",
+          "correction_move": "Model thus orally again, then reveal and blend.",
+          "observation_note": "Watch for /d/ substitution and neutral /ʌ/ vowel.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Reader Prep: thinks",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "thinks",
+            "back_text": "thinks"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read thinks accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: best",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "best",
+            "back_text": "best"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read best accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Vocabulary Upgrade: with",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "with",
+            "back_text": "/w/ /ɪ/ /ð/ — now decodable",
+            "audio": "/static/audio/block04_with.mp3",
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "th",
+                "phoneme": "/ð/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "with was a sight word. Now that we know voiced th, it is fully decodable — w+i+th. Reveal print and blend all three sounds. Remove the underline in your mind.",
+          "expected_response": "Students blend with correctly as w | i | th(/ð/) and understand it is now decodable.",
+          "correction_move": "Model the blend, then have students confirm voiced /ð/ at the end.",
+          "observation_note": "Watch for /t/ or /d/ substitution for /ð/ at the end of with.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: this",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "this",
+            "target_letters": [
+              "th",
+              "i",
+              "s"
+            ],
+            "slots": [
+              "th",
+              "i",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "i",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build this left to right.",
+          "expected_response": "Students build this correctly: th | i | s.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: that",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "that",
+            "target_letters": [
+              "th",
+              "a",
+              "t"
+            ],
+            "slots": [
+              "th",
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "a",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build that left to right.",
+          "expected_response": "Students build that correctly: th | a | t.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: them",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "them",
+            "target_letters": [
+              "th",
+              "e",
+              "m"
+            ],
+            "slots": [
+              "th",
+              "e",
+              "m"
+            ],
+            "draggable_letters": [
+              "m",
+              "e",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build them left to right.",
+          "expected_response": "Students build them correctly: th | e | m.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: then",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "then",
+            "target_letters": [
+              "th",
+              "e",
+              "n"
+            ],
+            "slots": [
+              "th",
+              "e",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "e",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build then left to right.",
+          "expected_response": "Students build then correctly: th | e | n.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: thus",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "thus",
+            "target_letters": [
+              "th",
+              "u",
+              "s"
+            ],
+            "slots": [
+              "th",
+              "u",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "u",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build thus left to right.",
+          "expected_response": "Students build thus correctly: th | u | s.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "This is a dog.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "This": "decodable",
+              "is": "decodable",
+              "a": "sight",
+              "dog": "decodable"
+            }
+          },
+          "teacher_cue": "This is now decodable — no underline. is and a are decodable. dog is decodable.",
+          "expected_response": "Students read \"This is a dog.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ð/ in this — confirm tongue between teeth with voicing.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "That is the dog. This is a cat.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "That": "decodable",
+              "is": "decodable",
+              "the": "sight",
+              "dog": "decodable",
+              "This": "decodable",
+              "a": "sight",
+              "cat": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The is a sight word. All other words decodable.",
+          "expected_response": "Students read \"That is the dog. This is a cat.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ð/ in that and this — two voiced th words.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "This is the dog and that is the shed.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "This": "decodable",
+              "is": "decodable",
+              "the": "sight",
+              "dog": "decodable",
+              "and": "decodable",
+              "that": "decodable",
+              "shed": "decodable"
+            }
+          },
+          "teacher_cue": "The is a sight word. All other words decodable.",
+          "expected_response": "Students read \"This is the dog and that is the shed.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ð/ in this and that — and for /ʃ/ in shed.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Then the dog ran. That is that.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Then": "decodable",
+              "the": "sight",
+              "dog": "decodable",
+              "ran": "decodable",
+              "That": "decodable",
+              "is": "decodable",
+              "that": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The is a sight word. All other words decodable.",
+          "expected_response": "Students read \"Then the dog ran. That is that.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ð/ in then, that, that — three voiced th words. Final 'That is that' is an idiom.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "This is a dog.\nThat is the cat.\nThis is the dog and that is the shed.\nThen the dog ran.\nThat is that.\nHe went to the shop and then to the shed.\nThis is thin but that is thick.\nShe thinks this is the best path.\nThen she shut the shed and ran.\nI think this is fun.\nThat is what I think.\nThis is not bad.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Point to something near — say: this is ___. Point to something far — say: that is ___.",
+            "word_types": {
+              "This": "decodable",
+              "is": "decodable",
+              "a": "sight",
+              "dog": "decodable",
+              "That": "decodable",
+              "the": "sight",
+              "cat": "decodable",
+              "and": "decodable",
+              "that": "decodable",
+              "shed": "decodable",
+              "Then": "decodable",
+              "ran": "decodable",
+              "He": "sight",
+              "went": "decodable",
+              "to": "sight",
+              "shop": "decodable",
+              "then": "decodable",
+              "thin": "decodable",
+              "but": "decodable",
+              "thick": "decodable",
+              "She": "sight",
+              "thinks": "decodable",
+              "this": "decodable",
+              "best": "decodable",
+              "path": "decodable",
+              "she": "sight",
+              "shut": "decodable",
+              "I": "sight",
+              "think": "decodable",
+              "fun": "decodable",
+              "what": "decodable",
+              "not": "decodable",
+              "bad": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading.",
+          "observation_note": "Watch for tracking accuracy and any phoneme production errors.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: this",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_this.mp3",
+            "dictated_text": "this",
+            "expected_answer": "this",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "th",
+              "i",
+              "s"
+            ]
+          },
+          "teacher_cue": "Play this once. Replay only if needed. Remind students: /ð/ is spelled 'th' — both letters go in one box.",
+          "expected_response": "Students write this accurately.",
+          "correction_move": "Replay this once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode this accurately.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: that",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_that.mp3",
+            "dictated_text": "that",
+            "expected_answer": "that",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "th",
+              "a",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play that once. Replay only if needed. Remind students: /ð/ is spelled 'th' — both letters go in one box.",
+          "expected_response": "Students write that accurately.",
+          "correction_move": "Replay that once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode that accurately.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: then",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_then.mp3",
+            "dictated_text": "then",
+            "expected_answer": "then",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "th",
+              "e",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play then once. Replay only if needed. Remind students: /ð/ is spelled 'th' — both letters go in one box.",
+          "expected_response": "Students write then accurately.",
+          "correction_move": "Replay then once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode then accurately.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: thin",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_thin.mp3",
+            "dictated_text": "thin",
+            "expected_answer": "thin",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "th",
+              "i",
+              "n"
+            ]
+          },
+          "teacher_cue": "Transfer check. Dictate thin once and ask students whether they heard voiced or voiceless th before writing.",
+          "expected_response": "Students write thin accurately and identify the initial sound as voiceless /θ/ rather than voiced /ð/.",
+          "correction_move": "Contrast thin with this, then re-dictate. Return to hand-on-throat voicing checks.",
+          "observation_note": "Watch for students who can spell thin but misclassify its th sound.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-05",
+          "block_id": "08",
+          "slide_title": "Listen and Write: think",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_think.mp3",
+            "dictated_text": "think",
+            "expected_answer": "think",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "th",
+              "i",
+              "n",
+              "k"
+            ]
+          },
+          "teacher_cue": "Use think as a second transfer dictation. Students name the th sound first, then write.",
+          "expected_response": "Students write think accurately and maintain the voiced-versus-voiceless contrast.",
+          "correction_move": "Compare think with that and then before a second attempt.",
+          "observation_note": "Watch whether the voicing contrast survives in longer words.",
+          "korean_interference_flag": "th_voiced",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "thin",
+              "this"
+            ],
+            "highlighted_chunk": "th",
+            "support_text": "Both start with th — but which th? Say each one. Where is the difference?"
+          },
+          "teacher_cue": "Show the words. Ask: Both start with th — but which th? Say each one. Where is the difference?",
+          "expected_response": "Students identify the shared pattern and name what changes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask the question again.",
+          "observation_note": "Watch whether students can hear and see the shared pattern.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today? How is it different from voiceless th?",
+                "phoneme": "/ð/"
+              },
+              {
+                "label": "Point to something near — say: this is ___. Point to something far — say: that is ___.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using this or that.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1144 @@
+{
+  "lesson_id": "G3-L17",
+  "unit_id": "G3",
+  "target_pattern": "b",
+  "title": "Group 3, Lesson 17: b",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "with",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l",
+    "f_p"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: f",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "f",
+            "back_text": "/f/",
+            "audio": "/static/audio/f.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /f/ quickly and cleanly.",
+          "correction_move": "Model /f/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /f/.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: l",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "l",
+            "back_text": "/l/",
+            "audio": "/static/audio/l.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /l/ quickly and cleanly.",
+          "correction_move": "Model /l/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /l/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /r/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model to in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model go in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model no in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model do in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: frog",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_frog.mp3",
+            "dictated_text": "frog",
+            "expected_answer": "frog",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "f",
+              "r",
+              "o",
+              "g"
+            ]
+          },
+          "teacher_cue": "Play frog once. Replay only if needed before checking.",
+          "expected_response": "Students write frog accurately.",
+          "correction_move": "Replay frog once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode frog accurately from sound to print.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: felt",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_felt.mp3",
+            "dictated_text": "felt",
+            "expected_answer": "felt",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "f",
+              "e",
+              "l",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play felt once. Replay only if needed before checking.",
+          "expected_response": "Students write felt accurately.",
+          "correction_move": "Replay felt once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode felt accurately from sound to print.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: fog",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_fog.mp3",
+            "dictated_text": "fog",
+            "expected_answer": "fog",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "o",
+              "g"
+            ]
+          },
+          "teacher_cue": "Play fog once. Replay only if needed before checking.",
+          "expected_response": "Students write fog accurately.",
+          "correction_move": "Replay fog once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode fog accurately from sound to print.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /b/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "b",
+            "back_text": "/b/",
+            "audio": "/static/audio/b.mp3"
+          },
+          "teacher_cue": "New sound. Same position as /p/ — both lips close completely — but with voicing. Hand on throat: /p/ silent, /b/ vibrates. b/d orientation mnemonic: b — the round part faces right, the stick is on the left.",
+          "expected_response": "Students produce /b/ cleanly as a voiced bilabial stop and correctly orient b in print.",
+          "correction_move": "Model /p/ vs /b/ with hand on throat. Students alternate. Then show b and d side by side — reinforce the orientation mnemonic established at Lesson 10.",
+          "observation_note": "Watch for b/d reversal in print and for devoicing of /b/ to /p/ in production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: big",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "big",
+            "back_text": "/b/ /ɪ/ /g/",
+            "audio": "/static/audio/block04_big.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say big — large. Spread arms wide. Reveal print and blend.",
+          "expected_response": "Students say big orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model big orally again, then reveal and blend.",
+          "observation_note": "Watch for b/d reversal and for voiced /b/ at onset.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bad",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bad",
+            "back_text": "/b/ /æ/ /d/",
+            "audio": "/static/audio/block04_bad.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say bad — not good. Reveal print and blend. Note: b at start, d at end — both round parts.",
+          "expected_response": "Students say bad orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model bad orally again, then reveal and blend.",
+          "observation_note": "Watch for b/d orientation in both the initial and final letters.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bed",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bed",
+            "back_text": "/b/ /e/ /d/",
+            "audio": "/static/audio/block04_bed.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime sleeping and say bed. Reveal print and blend. Again — b at start, d at end.",
+          "expected_response": "Students say bed orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model bed orally again, then reveal and blend.",
+          "observation_note": "Watch for b/d confusion — this word has both letters.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bag",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bag",
+            "back_text": "/b/ /æ/ /g/",
+            "audio": "/static/audio/block04_bag.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Hold up a bag. Say the word, then reveal print and blend.",
+          "expected_response": "Students say bag orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model bag orally again, then reveal and blend.",
+          "observation_note": "Watch for voiced /b/ onset and short /æ/ vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: grub",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "grub",
+            "back_text": "/g/ /r/ /ʌ/ /b/",
+            "audio": "/static/audio/block04_grub.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Describe a grub as a small larva. Say the word — confirm /r/ onset cluster. Reveal print and blend.",
+          "expected_response": "Students say grub orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model grub orally again, then reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ and for voiced final /b/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: but",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "but",
+            "back_text": "/b/ /ʌ/ /t/",
+            "audio": "/static/audio/block04_but.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Use but in a sentence — I can run but I am not fast. Say the word, then reveal print and blend.",
+          "expected_response": "Students say but orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model but orally again, then reveal and blend.",
+          "observation_note": "Watch for voiced /b/ onset and neutral /ʌ/ vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: spot",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "spot",
+            "back_text": "spot"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read spot accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: bit",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bit",
+            "back_text": "bit"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read bit accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: fig",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fig",
+            "back_text": "fig"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read fig accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: big",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "big",
+            "target_letters": [
+              "b",
+              "i",
+              "g"
+            ],
+            "slots": [
+              "b",
+              "i",
+              "g"
+            ],
+            "draggable_letters": [
+              "g",
+              "i",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build big left to right.",
+          "expected_response": "Students build big correctly: b | i | g.",
+          "correction_move": "Return to oral segmenting of big, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: bad",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "bad",
+            "target_letters": [
+              "b",
+              "a",
+              "d"
+            ],
+            "slots": [
+              "b",
+              "a",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "a",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build bad left to right.",
+          "expected_response": "Students build bad correctly: b | a | d.",
+          "correction_move": "Return to oral segmenting of bad, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: bed",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "bed",
+            "target_letters": [
+              "b",
+              "e",
+              "d"
+            ],
+            "slots": [
+              "b",
+              "e",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "e",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build bed left to right.",
+          "expected_response": "Students build bed correctly: b | e | d.",
+          "correction_move": "Return to oral segmenting of bed, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: bag",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "bag",
+            "target_letters": [
+              "b",
+              "a",
+              "g"
+            ],
+            "slots": [
+              "b",
+              "a",
+              "g"
+            ],
+            "draggable_letters": [
+              "g",
+              "a",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build bag left to right.",
+          "expected_response": "Students build bag correctly: b | a | g.",
+          "correction_move": "Return to oral segmenting of bag, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: blob",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "blob",
+            "target_letters": [
+              "b",
+              "l",
+              "o",
+              "b"
+            ],
+            "slots": [
+              "b",
+              "l",
+              "o",
+              "b"
+            ],
+            "draggable_letters": [
+              "b",
+              "o",
+              "l",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build blob left to right.",
+          "expected_response": "Students build blob correctly: b | l | o | b.",
+          "correction_move": "Return to oral segmenting of blob, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A big dog ran.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "A": "sight",
+              "big": "decodable",
+              "dog": "decodable",
+              "ran": "decodable"
+            }
+          },
+          "teacher_cue": "A is a sight word. big, dog, ran all decodable.",
+          "expected_response": "Students read \"A big dog ran.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /b/ in big — voiced onset.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A big dog ran but the cat did not run.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "A": "sight",
+              "big": "decodable",
+              "dog": "decodable",
+              "ran": "decodable",
+              "but": "decodable",
+              "the": "sight",
+              "cat": "decodable",
+              "did": "decodable",
+              "not": "decodable",
+              "run": "decodable"
+            }
+          },
+          "teacher_cue": "A and the are sight words. All other words decodable.",
+          "expected_response": "Students read \"A big dog ran but the cat did not run.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /b/ in big and but — both voiced.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bed is big. He got into bed.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "bed": "decodable",
+              "is": "decodable",
+              "big": "decodable",
+              "He": "sight",
+              "got": "decodable",
+              "into": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The and He are sight words. All other words decodable.",
+          "expected_response": "Students read \"The bed is big. He got into bed.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for b/d orientation in bed — both letters appear.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The grub is in the mud. It is bad but I can get it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "grub": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "mud": "decodable",
+              "It": "decodable",
+              "bad": "decodable",
+              "but": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "get": "decodable",
+              "it": "decodable"
+            }
+          },
+          "teacher_cue": "The, I are sight words. All other words decodable.",
+          "expected_response": "Students read \"The grub is in the mud. It is bad but I can get it.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /r/ in grub and for /b/ in bad and but.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A big dog ran.\nA big dog ran but the cat did not run.\nThe bed is big.\nHe got into bed.\nThe grub is in the mud.\nIt is bad.\nI was in a bad spot.\nBut the sun is up.\nA big bad dog sat on the rug.\nHe bit into the big red fig.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What was bad? What made it stop? Tell me about the big bad dog.",
+            "word_types": {
+              "A": "sight",
+              "big": "decodable",
+              "dog": "decodable",
+              "ran": "decodable",
+              "but": "decodable",
+              "the": "sight",
+              "cat": "decodable",
+              "did": "decodable",
+              "not": "decodable",
+              "run": "decodable",
+              "The": "sight",
+              "bed": "decodable",
+              "is": "decodable",
+              "He": "sight",
+              "got": "decodable",
+              "into": "decodable",
+              "grub": "decodable",
+              "in": "decodable",
+              "mud": "decodable",
+              "It": "decodable",
+              "bad": "decodable",
+              "I": "sight",
+              "was": "sight",
+              "a": "sight",
+              "spot": "decodable",
+              "But": "decodable",
+              "sun": "decodable",
+              "up": "decodable",
+              "sat": "decodable",
+              "on": "decodable",
+              "rug": "decodable",
+              "bit": "decodable",
+              "red": "decodable",
+              "fig": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
+          "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: big",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_big.mp3",
+            "dictated_text": "big",
+            "expected_answer": "big",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "i",
+              "g"
+            ]
+          },
+          "teacher_cue": "Play big once. Replay only if needed before checking.",
+          "expected_response": "Students write big accurately.",
+          "correction_move": "Replay big once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode big accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: bad",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_bad.mp3",
+            "dictated_text": "bad",
+            "expected_answer": "bad",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "a",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play bad once. Replay only if needed before checking.",
+          "expected_response": "Students write bad accurately.",
+          "correction_move": "Replay bad once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode bad accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: bed",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_bed.mp3",
+            "dictated_text": "bed",
+            "expected_answer": "bed",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play bed once. Replay only if needed before checking.",
+          "expected_response": "Students write bed accurately.",
+          "correction_move": "Replay bed once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode bed accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "big",
+              "bag",
+              "bug",
+              "bog"
+            ],
+            "highlighted_chunk": "b",
+            "support_text": "What starts all these words? What changes?"
+          },
+          "teacher_cue": "Show the words. Ask: What starts all these words? What changes?",
+          "expected_response": "Students identify the shared pattern and name what changes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask the question again.",
+          "observation_note": "Watch whether students can hear and see the shared pattern across words.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today? How is it different from p?",
+                "phoneme": "/b/"
+              },
+              {
+                "label": "What was bad? What made it stop? Tell me about the big bad dog.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using big or bad.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

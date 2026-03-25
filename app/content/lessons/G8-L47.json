@@ -1,0 +1,1062 @@
+{
+  "lesson_id": "G8-L47",
+  "unit_id": "G8",
+  "target_pattern": "final_nasal_clusters",
+  "title": "Group 8, Lesson 47: final clusters -nd -nt -nk -mp",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "cluster"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: s-clusters",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "s-clusters",
+            "back_text": "sc sk sm sn sp st sw",
+            "audio": "/static/audio/s-clusters.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce sc sk sm sn sp st sw quickly and cleanly.",
+          "correction_move": "Model sc sk sm sn sp st sw, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: r-clusters",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r-clusters",
+            "back_text": "br cr dr fr gr pr tr",
+            "audio": "/static/audio/r-clusters.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce br cr dr fr gr pr tr quickly and cleanly.",
+          "correction_move": "Model br cr dr fr gr pr tr, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: l-clusters",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "l-clusters",
+            "back_text": "bl cl fl gl pl sl",
+            "audio": "/static/audio/l-clusters.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce bl cl fl gl pl sl quickly and cleanly.",
+          "correction_move": "Model bl cl fl gl pl sl, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: she",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "she",
+            "back_text": "she — sight word",
+            "audio": "/static/audio/sight_she.mp3",
+            "word_types": {
+              "she": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say she immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: they",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "they",
+            "back_text": "they — sight word",
+            "audio": "/static/audio/sight_they.mp3",
+            "word_types": {
+              "they": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say they immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: come",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "come",
+            "back_text": "come — sight word",
+            "audio": "/static/audio/sight_come.mp3",
+            "word_types": {
+              "come": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say come immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: some",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "some",
+            "back_text": "some — sight word",
+            "audio": "/static/audio/sight_some.mp3",
+            "word_types": {
+              "some": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say some immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: snap",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_snap.mp3",
+            "dictated_text": "snap",
+            "expected_answer": "snap",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "n",
+              "a",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play snap once. Replay only if needed.",
+          "expected_response": "Students write snap accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: spin",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_spin.mp3",
+            "dictated_text": "spin",
+            "expected_answer": "spin",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "p",
+              "i",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play spin once. Replay only if needed.",
+          "expected_response": "Students write spin accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: stem",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_stem.mp3",
+            "dictated_text": "stem",
+            "expected_answer": "stem",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "t",
+              "e",
+              "m"
+            ]
+          },
+          "teacher_cue": "Play stem once. Replay only if needed.",
+          "expected_response": "Students write stem accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce final clusters: -nd -nt -nk -mp",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-nd  -nt  -nk  -mp",
+            "back_text": "nasal final clusters",
+            "audio": "/static/audio/final_nasal_clusters.mp3"
+          },
+          "teacher_cue": "Final clusters — consonant pairs at the END of words. Four nasal-based final clusters today: -nd (sand, hand, bend), -nt (went, hunt, mint), -nk (think, tank, blink), -mp (damp, stamp, lamp). The nasal consonant (n or m) comes first, then the stop. Both must be pronounced — do not drop the final stop.",
+          "expected_response": "Students produce all four nasal final clusters fully — both consonants audible.",
+          "correction_move": "Model each cluster: -nd (feel the tongue touch the ridge then release), -nt (same but unvoiced), -nk (back of tongue then k), -mp (lips for m then burst for p). Students practise each in isolation before words.",
+          "observation_note": "Watch for final cluster reduction — Korean syllable structure often closes with a single consonant. Students may produce san for sand, wen for went. Both consonants must be present.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: hand",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hand",
+            "back_text": "/h/ /æ/ /n/ /d/",
+            "audio": "/static/audio/block04_hand.mp3",
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "nd",
+                "phoneme": "/nd/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Hold up your hand. Say hand — -nd final cluster. Reveal and blend. Both n and d must be clear.",
+          "expected_response": "Students say hand orally and connect meaning before blending.",
+          "correction_move": "Model hand orally again, reveal and blend.",
+          "observation_note": "Watch for final cluster reduction — hand not han.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: went",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "went",
+            "back_text": "/w/ /e/ /n/ /t/",
+            "audio": "/static/audio/block04_went.mp3",
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "nt",
+                "phoneme": "/nt/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say went — past tense of go. -nt final cluster. Reveal and blend.",
+          "expected_response": "Students say went orally and connect meaning before blending.",
+          "correction_move": "Model went orally again, reveal and blend.",
+          "observation_note": "Watch for the final t — must not be dropped.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: think",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "think",
+            "back_text": "/θ/ /ɪ/ /n/ /k/",
+            "audio": "/static/audio/block04_think.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/θ/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "nk",
+                "phoneme": "/ŋk/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say think — -nk final cluster. Note: nk = /ŋk/. Reveal and blend.",
+          "expected_response": "Students say think orally and connect meaning before blending.",
+          "correction_move": "Model think orally again, reveal and blend.",
+          "observation_note": "Watch for /θ/ onset and /ŋk/ at the end — both phonemes present.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: damp",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "damp",
+            "back_text": "/d/ /æ/ /m/ /p/",
+            "audio": "/static/audio/block04_damp.mp3",
+            "blend_units": [
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "mp",
+                "phoneme": "/mp/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say damp — slightly wet. -mp final cluster. Reveal and blend. Both m and p must be clear.",
+          "expected_response": "Students say damp orally and connect meaning before blending.",
+          "correction_move": "Model damp orally again, reveal and blend.",
+          "observation_note": "Watch for -mp final cluster — lips close for m then burst for p.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: stamp",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stamp",
+            "back_text": "/s/ /t/ /æ/ /m/ /p/",
+            "audio": "/static/audio/block04_stamp.mp3",
+            "blend_units": [
+              {
+                "grapheme": "st",
+                "phoneme": "/st/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "mp",
+                "phoneme": "/mp/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime stamping. Say stamp — initial st cluster AND final mp cluster. Reveal and blend.",
+          "expected_response": "Students say stamp orally and connect meaning before blending.",
+          "correction_move": "Model stamp orally again, reveal and blend.",
+          "observation_note": "Watch for st onset cluster and mp coda cluster — clusters at both ends.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: blink",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "blink",
+            "back_text": "/b/ /l/ /ɪ/ /ŋ/ /k/",
+            "audio": "/static/audio/block04_blink.mp3",
+            "blend_units": [
+              {
+                "grapheme": "bl",
+                "phoneme": "/bl/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "nk",
+                "phoneme": "/ŋk/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Blink your eyes. Say blink — bl onset cluster AND nk final cluster. Reveal and blend.",
+          "expected_response": "Students say blink orally and connect meaning before blending.",
+          "correction_move": "Model blink orally again, reveal and blend.",
+          "observation_note": "Watch for bl onset and /ŋk/ coda — clusters at both ends.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: hand",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hand",
+            "target_letters": [
+              "h",
+              "a",
+              "nd"
+            ],
+            "slots": [
+              "h",
+              "a",
+              "nd"
+            ],
+            "draggable_letters": [
+              "nd",
+              "a",
+              "h"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build hand left to right.",
+          "expected_response": "Students build hand correctly: h | a | nd.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: went",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "went",
+            "target_letters": [
+              "w",
+              "e",
+              "nt"
+            ],
+            "slots": [
+              "w",
+              "e",
+              "nt"
+            ],
+            "draggable_letters": [
+              "nt",
+              "e",
+              "w"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build went left to right.",
+          "expected_response": "Students build went correctly: w | e | nt.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: think",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "think",
+            "target_letters": [
+              "th",
+              "i",
+              "nk"
+            ],
+            "slots": [
+              "th",
+              "i",
+              "nk"
+            ],
+            "draggable_letters": [
+              "nk",
+              "i",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build think left to right.",
+          "expected_response": "Students build think correctly: th | i | nk.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: damp",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "damp",
+            "target_letters": [
+              "d",
+              "a",
+              "mp"
+            ],
+            "slots": [
+              "d",
+              "a",
+              "mp"
+            ],
+            "draggable_letters": [
+              "mp",
+              "a",
+              "d"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build damp left to right.",
+          "expected_response": "Students build damp correctly: d | a | mp.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: stamp",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "stamp",
+            "target_letters": [
+              "st",
+              "a",
+              "mp"
+            ],
+            "slots": [
+              "st",
+              "a",
+              "mp"
+            ],
+            "draggable_letters": [
+              "mp",
+              "a",
+              "st"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build stamp left to right.",
+          "expected_response": "Students build stamp correctly: st | a | mp.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The hand went to the stamp.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "hand": "decodable",
+              "went": "decodable",
+              "to": "sight",
+              "the": "sight",
+              "stamp": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on hand, went, stamp.",
+          "expected_response": "Students read \"The hand went to the stamp.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The hand went to the stamp.\".",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I think and then I blink.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "think": "decodable",
+              "and": "decodable",
+              "then": "decodable",
+              "blink": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on think, and, then, blink.",
+          "expected_response": "Students read \"I think and then I blink.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"I think and then I blink.\".",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The stamp is damp.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "stamp": "decodable",
+              "is": "decodable",
+              "damp": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on stamp, is, damp.",
+          "expected_response": "Students read \"The stamp is damp.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The stamp is damp.\".",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "My hand is on the damp stamp.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "My": "decodable",
+              "hand": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "damp": "decodable",
+              "stamp": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on My, hand, is, on.",
+          "expected_response": "Students read \"My hand is on the damp stamp.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"My hand is on the damp stamp.\".",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The hand went to the stamp.\nI blink and think.\nThe stamp is damp.\nMy hand is on the damp stamp.\nI think and blink by the stamp.\nThe damp stamp is by my hand.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all the -nd words. Find all the -nt words. Find all the -nk words. Find all the -mp words.",
+            "word_types": {
+              "The": "sight",
+              "hand": "decodable",
+              "went": "decodable",
+              "to": "sight",
+              "the": "sight",
+              "stamp": "decodable",
+              "I": "sight",
+              "blink": "decodable",
+              "and": "decodable",
+              "think": "decodable",
+              "is": "decodable",
+              "damp": "decodable",
+              "My": "decodable",
+              "on": "decodable",
+              "by": "decodable",
+              "my": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for cluster blending — no vowel insertion between consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: hand",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_hand.mp3",
+            "dictated_text": "hand",
+            "expected_answer": "hand",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "h",
+              "a",
+              "n",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play hand once. Replay only if needed.",
+          "expected_response": "Students write hand accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: went",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_went.mp3",
+            "dictated_text": "went",
+            "expected_answer": "went",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "w",
+              "e",
+              "n",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play went once. Replay only if needed.",
+          "expected_response": "Students write went accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: stamp",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_stamp.mp3",
+            "dictated_text": "stamp",
+            "expected_answer": "stamp",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "s",
+              "t",
+              "a",
+              "m",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play stamp once. Replay only if needed.",
+          "expected_response": "Students write stamp accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "hand",
+              "sand",
+              "band",
+              "bend",
+              "find"
+            ],
+            "highlighted_chunk": "-nd",
+            "support_text": "What do these words share at the end? Both sounds must be clear."
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share at the end? Both sounds must be clear.",
+          "expected_response": "Students identify the shared cluster and name its sounds.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the cluster correctly.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Name the four nasal final clusters: -nd -nt -nk -mp. Say one word for each.",
+                "phoneme": null
+              },
+              {
+                "label": "Find all the -nd words. Find all the -nt words. Find all the -nk words. Find all the -mp words.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using hand or went.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1230 @@
+{
+  "lesson_id": "G5-L35",
+  "unit_id": "G5",
+  "target_pattern": "z",
+  "title": "Group 5, Lesson 35: z",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l",
+    "v_b"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: y /aɪ/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y /aɪ/",
+            "back_text": "/aɪ/",
+            "audio": "/static/audio/y_aɪ.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /aɪ/ quickly and cleanly.",
+          "correction_move": "Model /aɪ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: oi/oy",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "oi/oy",
+            "back_text": "/ɔɪ/",
+            "audio": "/static/audio/oioy.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ɔɪ/ quickly and cleanly.",
+          "correction_move": "Model /ɔɪ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model do in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: so",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "so",
+            "back_text": "so — sight word",
+            "audio": "/static/audio/sight_so.mp3",
+            "word_types": {
+              "so": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say so immediately without blending.",
+          "correction_move": "Model so in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model of in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: she",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "she",
+            "back_text": "she — sight word",
+            "audio": "/static/audio/sight_she.mp3",
+            "word_types": {
+              "she": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say she immediately without blending.",
+          "correction_move": "Model she in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: my",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_my.mp3",
+            "dictated_text": "my",
+            "expected_answer": "my",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "m",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play my once. Replay only if needed.",
+          "expected_response": "Students write my accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: fly",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_fly.mp3",
+            "dictated_text": "fly",
+            "expected_answer": "fly",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "l",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play fly once. Replay only if needed.",
+          "expected_response": "Students write fly accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: sky",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_sky.mp3",
+            "dictated_text": "sky",
+            "expected_answer": "sky",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "k",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play sky once. Replay only if needed.",
+          "expected_response": "Students write sky accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /z/ — and clarify s=/z/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "z",
+            "back_text": "/z/",
+            "audio": "/static/audio/z.mp3"
+          },
+          "teacher_cue": "New sound — /z/. Voiced alveolar fricative. Same position as /s/ but with voicing. Hand on throat: /s/ silent, /z/ vibrates. zip, buzz, jazz. Important note: the letter s also makes /z/ in many words you already know. is = /ɪz/. his = /hɪz/. has = /hæz/. was = /wɒz/. These are not new — you have been reading them since Lesson 2. Now you know why they sound the way they do.",
+          "expected_response": "Students produce /z/ cleanly as a voiced alveolar fricative and understand that s can also make /z/.",
+          "correction_move": "Model /s/ vs /z/ with hand on throat. Students alternate. Then review: is, his, has, was — students confirm the /z/ in each. Connect to previous knowledge.",
+          "observation_note": "Watch for /s/ substitution and for b/v confusion — /z/ is the voiced counterpart of /s/, same as v is to f and b is to p.",
+          "korean_interference_flag": "v_b",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: zip",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "zip",
+            "back_text": "/z/ /ɪ/ /p/",
+            "audio": "/static/audio/block04_zip.mp3",
+            "blend_units": [
+              {
+                "grapheme": "z",
+                "phoneme": "/z/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say zip — to fasten with a zip. Confirm /z/ onset. Reveal and blend.",
+          "expected_response": "Students say zip orally, connect meaning, then blend on the card.",
+          "correction_move": "Model zip orally again, reveal and blend.",
+          "observation_note": "Watch for /s/ substitution at onset.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: buzz",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "buzz",
+            "back_text": "/b/ /ʌ/ /z/",
+            "audio": "/static/audio/block04_buzz.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "zz",
+                "phoneme": "/z/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime a bee buzzing. Say buzz — zz at the end is one sound. Reveal and blend.",
+          "expected_response": "Students say buzz orally, connect meaning, then blend on the card.",
+          "correction_move": "Model buzz orally again, reveal and blend.",
+          "observation_note": "Watch for the zz spelling — two letters, one sound /z/. Final voiced fricative.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: jazz",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "jazz",
+            "back_text": "/dʒ/ /æ/ /z/",
+            "audio": "/static/audio/block04_jazz.mp3",
+            "blend_units": [
+              {
+                "grapheme": "j",
+                "phoneme": "/dʒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "zz",
+                "phoneme": "/z/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say jazz — a style of music. jz double ending. Confirm /dʒ/ onset and /z/ coda. Reveal and blend.",
+          "expected_response": "Students say jazz orally, connect meaning, then blend on the card.",
+          "correction_move": "Model jazz orally again, reveal and blend.",
+          "observation_note": "Watch for the jz pattern and for /z/ at the end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: fizz",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fizz",
+            "back_text": "/f/ /ɪ/ /z/",
+            "audio": "/static/audio/block04_fizz.mp3",
+            "blend_units": [
+              {
+                "grapheme": "f",
+                "phoneme": "/f/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "zz",
+                "phoneme": "/z/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say fizz — the bubbles in a drink. Confirm /f/ onset and zz coda. Reveal and blend.",
+          "expected_response": "Students say fizz orally, connect meaning, then blend on the card.",
+          "correction_move": "Model fizz orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and for the zz spelling.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: zoom",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "zoom",
+            "back_text": "/z/ /uː/ /m/",
+            "audio": "/static/audio/block04_zoom.mp3",
+            "blend_units": [
+              {
+                "grapheme": "z",
+                "phoneme": "/z/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/uː/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say zoom — to move very fast. Confirm /z/ onset and long /uː/ vowel team. Reveal and blend.",
+          "expected_response": "Students say zoom orally, connect meaning, then blend on the card.",
+          "correction_move": "Model zoom orally again, reveal and blend.",
+          "observation_note": "Watch for /s/ on /z/ and for long /uː/ in oo.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: quiz",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "quiz",
+            "back_text": "/k/ /w/ /ɪ/ /z/",
+            "audio": "/static/audio/block04_quiz.mp3",
+            "blend_units": [
+              {
+                "grapheme": "qu",
+                "phoneme": "/kw/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "z",
+                "phoneme": "/z/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say quiz — a test of knowledge. qu+i+z — all three elements now taught. Reveal and blend.",
+          "expected_response": "Students say quiz orally, connect meaning, then blend on the card.",
+          "correction_move": "Model quiz orally again, reveal and blend.",
+          "observation_note": "Watch for /kw/ onset and for /z/ at the end — quiz is now fully decodable.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: zips",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "zips",
+            "back_text": "zips"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read zips accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: zooms",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "zooms",
+            "back_text": "zooms"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read zooms accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: zest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "zest",
+            "back_text": "zest"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read zest accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: know",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "know",
+            "back_text": "know"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read know accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: zone",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "zone",
+            "back_text": "zone"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read zone accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: fills",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fills",
+            "back_text": "fills"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read fills accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: plays",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "plays",
+            "back_text": "plays"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read plays accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: buzzes",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "buzzes",
+            "back_text": "buzzes"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read buzzes accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: zip",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "zip",
+            "target_letters": [
+              "z",
+              "i",
+              "p"
+            ],
+            "slots": [
+              "z",
+              "i",
+              "p"
+            ],
+            "draggable_letters": [
+              "p",
+              "i",
+              "z"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build zip left to right.",
+          "expected_response": "Students build zip correctly: z | i | p.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: buzz",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "buzz",
+            "target_letters": [
+              "b",
+              "u",
+              "zz"
+            ],
+            "slots": [
+              "b",
+              "u",
+              "zz"
+            ],
+            "draggable_letters": [
+              "zz",
+              "u",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build buzz left to right.",
+          "expected_response": "Students build buzz correctly: b | u | zz.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: jazz",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "jazz",
+            "target_letters": [
+              "j",
+              "a",
+              "zz"
+            ],
+            "slots": [
+              "j",
+              "a",
+              "zz"
+            ],
+            "draggable_letters": [
+              "zz",
+              "a",
+              "j"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build jazz left to right.",
+          "expected_response": "Students build jazz correctly: j | a | zz.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: fizz",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "fizz",
+            "target_letters": [
+              "f",
+              "i",
+              "zz"
+            ],
+            "slots": [
+              "f",
+              "i",
+              "zz"
+            ],
+            "draggable_letters": [
+              "zz",
+              "i",
+              "f"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build fizz left to right.",
+          "expected_response": "Students build fizz correctly: f | i | zz.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: zoom",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "zoom",
+            "target_letters": [
+              "z",
+              "oo",
+              "m"
+            ],
+            "slots": [
+              "z",
+              "oo",
+              "m"
+            ],
+            "draggable_letters": [
+              "m",
+              "oo",
+              "z"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build zoom left to right.",
+          "expected_response": "Students build zoom correctly: z | oo | m.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I zip up and he has jazz.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "zip": "decodable",
+              "up": "decodable",
+              "and": "decodable",
+              "he": "sight",
+              "has": "decodable",
+              "jazz": "decodable"
+            }
+          },
+          "teacher_cue": "I and he are sight words. zip, up, has, jazz all decodable.",
+          "expected_response": "Students read \"I zip up and he has jazz.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /z/ in zip and jazz — onset and coda.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The fizz is in the can. It will buzz.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "fizz": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "can": "decodable",
+              "It": "decodable",
+              "will": "decodable",
+              "buzz": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The is a sight word. fizz, can, buzz decodable.",
+          "expected_response": "Students read \"The fizz is in the can. It will buzz.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /z/ in fizz (coda) and buzz (coda).",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He zips and she zooms. That is zest.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "zips": "decodable",
+              "and": "decodable",
+              "she": "sight",
+              "zooms": "decodable",
+              "That": "decodable",
+              "is": "decodable",
+              "zest": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. He and she are sight words. zips, zooms, zest all decodable.",
+          "expected_response": "Students read \"He zips and she zooms. That is zest.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /z/ in zips, zooms, zest — three z words with varied vowels.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Quiz me! I know the zone and the zoom.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Quiz": "decodable",
+              "me": "sight",
+              "I": "sight",
+              "know": "decodable",
+              "the": "sight",
+              "zone": "decodable",
+              "and": "decodable",
+              "zoom": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. I and the are sight words. Quiz, zone, zoom decodable.",
+          "expected_response": "Students read \"Quiz me! I know the zone and the zoom.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /kw/ in quiz and /z/ in zone, zoom — different onset positions.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I zip up and he has jazz.\nThe fizz is in the can.\nIt will buzz.\nHe zips and she zooms.\nThat is zest!\nQuiz me! I know the zone and the zoom.\nThe jazz fills the zone with zest.\nShe zooms by with a buzz and a zip.\nI fizz with joy when the jazz plays.\nQuiz the team: what zooms? What buzzes? What has zest?",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all the z words. Which use z at the start? Which use z at the end?",
+            "word_types": {
+              "I": "sight",
+              "zip": "decodable",
+              "up": "decodable",
+              "and": "decodable",
+              "he": "sight",
+              "has": "decodable",
+              "jazz": "decodable",
+              "The": "sight",
+              "fizz": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "can": "decodable",
+              "It": "decodable",
+              "will": "decodable",
+              "buzz": "decodable",
+              "He": "sight",
+              "zips": "decodable",
+              "she": "sight",
+              "zooms": "decodable",
+              "That": "decodable",
+              "zest": "decodable",
+              "Quiz": "decodable",
+              "me": "sight",
+              "know": "decodable",
+              "zone": "decodable",
+              "zoom": "decodable",
+              "fills": "decodable",
+              "with": "decodable",
+              "She": "sight",
+              "by": "decodable",
+              "a": "sight",
+              "joy": "decodable",
+              "when": "decodable",
+              "plays": "decodable",
+              "team": "decodable",
+              "what": "decodable",
+              "What": "decodable",
+              "buzzes": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support before rereading the full passage.",
+          "observation_note": "Watch for correct vowel team production and tracking accuracy.",
+          "korean_interference_flag": "v_b",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: zip",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_zip.mp3",
+            "dictated_text": "zip",
+            "expected_answer": "zip",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "z",
+              "i",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play zip once. Replay only if needed.",
+          "expected_response": "Students write zip accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: buzz",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_buzz.mp3",
+            "dictated_text": "buzz",
+            "expected_answer": "buzz",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "u",
+              "zz"
+            ]
+          },
+          "teacher_cue": "Play buzz once. Replay only if needed.",
+          "expected_response": "Students write buzz accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: jazz",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_jazz.mp3",
+            "dictated_text": "jazz",
+            "expected_answer": "jazz",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "j",
+              "a",
+              "zz"
+            ]
+          },
+          "teacher_cue": "Play jazz once. Replay only if needed.",
+          "expected_response": "Students write jazz accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "buzz",
+              "fizz",
+              "jazz",
+              "fuzz"
+            ],
+            "highlighted_chunk": "zz",
+            "support_text": "What do these words share at the end? What sound does zz make?"
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share at the end? What sound does zz make?",
+          "expected_response": "Students identify the shared chunk and name the sound it makes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask again.",
+          "observation_note": "Watch whether students isolate the vowel team correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today? How is it different from s?",
+                "phoneme": "/z/"
+              },
+              {
+                "label": "Find all the z words. Which use z at the start? Which use z at the end?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using zip or buzz.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1316 @@
+{
+  "lesson_id": "G6-L37",
+  "unit_id": "G6",
+  "target_pattern": "er_ir_ur",
+  "title": "Group 6, Lesson 37: er, ir, ur",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: ar",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ar",
+            "back_text": "/ɑː/",
+            "audio": "/static/audio/ar.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ɑː/ quickly and cleanly.",
+          "correction_move": "Model /ɑː/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ee/ea",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ee/ea",
+            "back_text": "/iː/",
+            "audio": "/static/audio/eeea.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /iː/ quickly and cleanly.",
+          "correction_move": "Model /iː/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: I",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say I immediately without blending.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: the",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say the immediately without blending.",
+          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: a",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "a — sight word",
+            "audio": "/static/audio/sight_a.mp3",
+            "word_types": {
+              "a": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say a immediately without blending.",
+          "correction_move": "Model a in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: he",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "he",
+            "back_text": "he — sight word",
+            "audio": "/static/audio/sight_he.mp3",
+            "word_types": {
+              "he": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say he immediately without blending.",
+          "correction_move": "Model he in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: car",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_car.mp3",
+            "dictated_text": "car",
+            "expected_answer": "car",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "c",
+              "ar"
+            ]
+          },
+          "teacher_cue": "Play car once. Replay only if needed.",
+          "expected_response": "Students write car accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: farm",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_farm.mp3",
+            "dictated_text": "farm",
+            "expected_answer": "farm",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "ar",
+              "m"
+            ]
+          },
+          "teacher_cue": "Play farm once. Replay only if needed.",
+          "expected_response": "Students write farm accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: dark",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_dark.mp3",
+            "dictated_text": "dark",
+            "expected_answer": "dark",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "d",
+              "ar",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play dark once. Replay only if needed.",
+          "expected_response": "Students write dark accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /ɜː/ — er, ir, ur",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "er / ir / ur",
+            "back_text": "/ɜː/",
+            "audio": "/static/audio/er_ir_ur.mp3"
+          },
+          "teacher_cue": "New r-controlled vowel — /ɜː/. Three spellings, one sound: er (her, fern), ir (bird, girl), ur (fur, burn). The r colours the vowel to make a mid-central sound — lips neutral, tongue mid, no rounding. Important upgrade: 'her' was a sight word. It is now fully decodable — h+er. Point this out and remove the underline in students' minds.",
+          "expected_response": "Students produce /ɜː/ cleanly across all three spellings and understand that er/ir/ur all make the same sound.",
+          "correction_move": "Show all three spelling cards: er, ir, ur — all make /ɜː/. Model each with words. Then confirm the upgrade: her = h + er — now decodable.",
+          "observation_note": "Watch for Korean learners producing a pure /ɜ/ without the r-colouring — the /ɜː/ needs the retroflex quality of /r/ at the end.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bird",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bird",
+            "back_text": "/b/ /ɜː/ /d/",
+            "audio": "/static/audio/block04_bird.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "ir",
+                "phoneme": "/ɜː/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say bird — ir spelling this time. Same /ɜː/ sound. Reveal and blend.",
+          "expected_response": "Students say bird orally and connect meaning before blending.",
+          "correction_move": "Model bird orally again, reveal and blend.",
+          "observation_note": "Watch for /ɜː/ in ir — same sound as er in her.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: girl",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "girl",
+            "back_text": "/g/ /ɜː/ /l/",
+            "audio": "/static/audio/block04_girl.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              },
+              {
+                "grapheme": "ir",
+                "phoneme": "/ɜː/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say girl — ir spelling. Confirm /ɜː/ and /l/ at end. Reveal and blend.",
+          "expected_response": "Students say girl orally and connect meaning before blending.",
+          "correction_move": "Model girl orally again, reveal and blend.",
+          "observation_note": "Watch for /l/ vs /r/ in coda and /ɜː/ in ir.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: fur",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fur",
+            "back_text": "/f/ /ɜː/",
+            "audio": "/static/audio/block04_fur.mp3",
+            "blend_units": [
+              {
+                "grapheme": "f",
+                "phoneme": "/f/",
+                "audio": null
+              },
+              {
+                "grapheme": "ur",
+                "phoneme": "/ɜː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say fur — ur spelling this time. Same /ɜː/ sound. Reveal and blend.",
+          "expected_response": "Students say fur orally and connect meaning before blending.",
+          "correction_move": "Model fur orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and /ɜː/ in ur.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: burn",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "burn",
+            "back_text": "/b/ /ɜː/ /n/",
+            "audio": "/static/audio/block04_burn.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "ur",
+                "phoneme": "/ɜː/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say burn — to be on fire. ur spelling. Reveal and blend.",
+          "expected_response": "Students say burn orally and connect meaning before blending.",
+          "correction_move": "Model burn orally again, reveal and blend.",
+          "observation_note": "Watch for /ɜː/ in ur and clear final /n/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: shirt",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "shirt",
+            "back_text": "/ʃ/ /ɜː/ /t/",
+            "audio": "/static/audio/block04_shirt.mp3",
+            "blend_units": [
+              {
+                "grapheme": "sh",
+                "phoneme": "/ʃ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ir",
+                "phoneme": "/ɜː/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say shirt — a piece of clothing. sh onset, ir vowel. Reveal and blend.",
+          "expected_response": "Students say shirt orally and connect meaning before blending.",
+          "correction_move": "Model shirt orally again, reveal and blend.",
+          "observation_note": "Watch for /ʃ/ onset and /ɜː/ in ir.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Reader Prep: stir",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stir",
+            "back_text": "stir"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read stir accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: hurt",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hurt",
+            "back_text": "hurt"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read hurt accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: turns",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "turns",
+            "back_text": "turns"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read turns accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: burns",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "burns",
+            "back_text": "burns"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read burns accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: stirs",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stirs",
+            "back_text": "stirs"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read stirs accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: blur",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "blur",
+            "back_text": "blur"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read blur accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: fern",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fern",
+            "back_text": "fern"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read fern accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: twirls",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "twirls",
+            "back_text": "twirls"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read twirls accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: skirt",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "skirt",
+            "back_text": "skirt"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read skirt accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-15",
+          "block_id": "04",
+          "slide_title": "Reader Prep: river",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "river",
+            "back_text": "river"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read river accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-16",
+          "block_id": "04",
+          "slide_title": "Reader Prep: arm",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "arm",
+            "back_text": "arm"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read arm accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-17",
+          "block_id": "04",
+          "slide_title": "Reader Prep: hurts",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hurts",
+            "back_text": "hurts"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read hurts accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-18",
+          "block_id": "04",
+          "slide_title": "Reader Prep: perches",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "perches",
+            "back_text": "perches"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read perches accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-19",
+          "block_id": "04",
+          "slide_title": "Reader Prep: firm",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "firm",
+            "back_text": "firm"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read firm accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-20",
+          "block_id": "04",
+          "slide_title": "Reader Prep: branch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "branch",
+            "back_text": "branch"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read branch accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-21",
+          "block_id": "04",
+          "slide_title": "Vocabulary Upgrade: her",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "her",
+            "back_text": "her — now decodable",
+            "audio": "/static/audio/block04_her.mp3",
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "er",
+                "phoneme": "/ɜː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "her was a sight word. Now that we know er = /ɜː/, it is fully decodable — h+er. Blend it. Remove the underline in your mind.",
+          "expected_response": "Students blend her correctly using the new phoneme.",
+          "correction_move": "Model the blend, confirm the new sound, recheck.",
+          "observation_note": "Watch whether students successfully decode her after the upgrade.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: her",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "her",
+            "target_letters": [
+              "h",
+              "er"
+            ],
+            "slots": [
+              "h",
+              "er"
+            ],
+            "draggable_letters": [
+              "er",
+              "h"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build her left to right.",
+          "expected_response": "Students build her correctly: h | er.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: bird",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "bird",
+            "target_letters": [
+              "b",
+              "ir",
+              "d"
+            ],
+            "slots": [
+              "b",
+              "ir",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "ir",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build bird left to right.",
+          "expected_response": "Students build bird correctly: b | ir | d.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: girl",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "girl",
+            "target_letters": [
+              "g",
+              "ir",
+              "l"
+            ],
+            "slots": [
+              "g",
+              "ir",
+              "l"
+            ],
+            "draggable_letters": [
+              "l",
+              "ir",
+              "g"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build girl left to right.",
+          "expected_response": "Students build girl correctly: g | ir | l.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: fur",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "fur",
+            "target_letters": [
+              "f",
+              "ur"
+            ],
+            "slots": [
+              "f",
+              "ur"
+            ],
+            "draggable_letters": [
+              "ur",
+              "f"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build fur left to right.",
+          "expected_response": "Students build fur correctly: f | ur.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: burn",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "burn",
+            "target_letters": [
+              "b",
+              "ur",
+              "n"
+            ],
+            "slots": [
+              "b",
+              "ur",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "ur",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build burn left to right.",
+          "expected_response": "Students build burn correctly: b | ur | n.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bird is on the firm branch.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "bird": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "firm": "decodable",
+              "branch": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on bird, is, on, firm.",
+          "expected_response": "Students read \"The bird is on the firm branch.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The bird is on the firm branch.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The girl can stir.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "girl": "decodable",
+              "can": "decodable",
+              "stir": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on girl, can, stir.",
+          "expected_response": "Students read \"The girl can stir.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The girl can stir.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Her shirt has a burn.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Her": "decodable",
+              "shirt": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "burn": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on Her, shirt, has, burn.",
+          "expected_response": "Students read \"Her shirt has a burn.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"Her shirt has a burn.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He hurt his arm.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "hurt": "decodable",
+              "his": "decodable",
+              "arm": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on hurt, his, arm.",
+          "expected_response": "Students read \"He hurt his arm.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"He hurt his arm.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bird was on the firm branch.\nThe girl can stir.\nHer shirt has a burn.\nHe hurt his arm.\nA blur of fur was by the fern.\nThe bird perches on the branch.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What happened to the shirt? What does the bird do? Find all the er words, ir words, ur words.",
+            "word_types": {
+              "The": "sight",
+              "bird": "decodable",
+              "was": "sight",
+              "on": "decodable",
+              "the": "sight",
+              "firm": "decodable",
+              "branch": "decodable",
+              "girl": "decodable",
+              "can": "decodable",
+              "stir": "decodable",
+              "Her": "decodable",
+              "shirt": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "burn": "decodable",
+              "He": "sight",
+              "hurt": "decodable",
+              "his": "decodable",
+              "arm": "decodable",
+              "A": "sight",
+              "blur": "decodable",
+              "of": "sight",
+              "fur": "decodable",
+              "by": "decodable",
+              "fern": "decodable",
+              "perches": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
+          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
+          "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: bird",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_bird.mp3",
+            "dictated_text": "bird",
+            "expected_answer": "bird",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "ir",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play bird once. Replay only if needed. Remind students: /ɜr/ is spelled 'ir' — both letters go in one box.",
+          "expected_response": "Students write bird accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: girl",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_girl.mp3",
+            "dictated_text": "girl",
+            "expected_answer": "girl",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "g",
+              "ir",
+              "l"
+            ]
+          },
+          "teacher_cue": "Play girl once. Replay only if needed. Remind students: /ɜr/ is spelled 'ir' — both letters go in one box.",
+          "expected_response": "Students write girl accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: burn",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_burn.mp3",
+            "dictated_text": "burn",
+            "expected_answer": "burn",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "ur",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play burn once. Replay only if needed. Remind students: /ɜr/ is spelled 'ur' — both letters go in one box.",
+          "expected_response": "Students write burn accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "her",
+              "fern",
+              "bird",
+              "girl",
+              "fur",
+              "burn"
+            ],
+            "highlighted_chunk": "er/ir/ur",
+            "support_text": "All these share the same vowel sound. What are the three spellings?"
+          },
+          "teacher_cue": "Show the words. Ask: All these share the same vowel sound. What are the three spellings?",
+          "expected_response": "Students identify the shared chunk and name the sound it makes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask again.",
+          "observation_note": "Watch whether students isolate the pattern correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new pattern did we learn today? What are the three spellings?",
+                "phoneme": "/ɜː/"
+              },
+              {
+                "label": "What happened to the shirt? What does the bird do? Find all the er words, ir words, ur words.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using bird or girl.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

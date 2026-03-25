@@ -1,0 +1,1444 @@
+{
+  "lesson_id": "G9-L59",
+  "unit_id": "G9",
+  "target_pattern": "suffix_ed",
+  "title": "Group 9, Lesson 59: Suffix -ed (three sounds)",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: prefixes",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "prefixes",
+            "back_text": "un- re- pre- dis-",
+            "audio": "/static/audio/prefixes.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce un- re- pre- dis- quickly and cleanly.",
+          "correction_move": "Model un- re- pre- dis-, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: open/closed syllable",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "open/closed syllable",
+            "back_text": "CV vs CVC",
+            "audio": "/static/audio/openclosed_syllable.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce CV vs CVC quickly and cleanly.",
+          "correction_move": "Model CV vs CVC, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: th (voiced)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th (voiced)",
+            "back_text": "/ð/",
+            "audio": "/static/audio/th_(voiced).mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ð/ quickly and cleanly.",
+          "correction_move": "Model /ð/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: me",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "me",
+            "back_text": "me — sight word",
+            "audio": "/static/audio/sight_me.mp3",
+            "word_types": {
+              "me": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say me immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: was",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "was",
+            "back_text": "was — sight word",
+            "audio": "/static/audio/sight_was.mp3",
+            "word_types": {
+              "was": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say was immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: we",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
+            "word_types": {
+              "we": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: unlock",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_unlock.mp3",
+            "dictated_text": "unlock",
+            "expected_answer": "unlock",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "u",
+              "n",
+              "l",
+              "o",
+              "ck"
+            ]
+          },
+          "teacher_cue": "Play unlock once. Replay only if needed.",
+          "expected_response": "Students write unlock accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: reread",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_reread.mp3",
+            "dictated_text": "reread",
+            "expected_answer": "reread",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "r",
+              "er",
+              "ea",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play reread once. Replay only if needed.",
+          "expected_response": "Students write reread accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: dislike",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_dislike.mp3",
+            "dictated_text": "dislike",
+            "expected_answer": "dislike",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "d",
+              "i",
+              "s",
+              "l",
+              "i",
+              "k"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play dislike once. Replay only if needed.",
+          "expected_response": "Students write dislike accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce suffix -ed: three sounds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ed → /d/  /t/  /ɪd/",
+            "back_text": "past tense suffix",
+            "audio": "/static/audio/suffix_ed.mp3"
+          },
+          "teacher_cue": "The suffix -ed marks past tense. It has THREE sounds depending on the final sound of the base word. After a voiced sound: -ed = /d/ (played, called, lived). After a voiceless sound: -ed = /t/ (jumped, talked, picked). After /t/ or /d/: -ed = /ɪd/ — a full extra syllable (waited, landed, started, hunted). Rule: if the base ends in /t/ or /d/, you need the extra syllable /ɪd/ to avoid two stops colliding.",
+          "expected_response": "Students apply the three -ed rules to read and write past tense words correctly.",
+          "correction_move": "Model all three: played → /d/ (base ends in voiced /d/... wait — played ends in /eɪ/ voiced → /d/). jumped → /t/ (base ends in /p/ voiceless). waited → /ɪd/ (base ends in /t/ — can't add /t/ or /d/ directly). Students sort verbs into three columns.",
+          "observation_note": "Watch for students adding a full syllable to all -ed words (a common Korean interference — Korean past tense is always an extra syllable).",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose the word where ed says /t/",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "jumped",
+              "audio": "/static/audio/block08_jumped.mp3"
+            },
+            "pair_B": {
+              "label": "played",
+              "audio": "/static/audio/block03_played.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "After a voiceless sound, ed says /t/. After a voiced sound, ed says /d/."
+          },
+          "teacher_cue": "Play both words. Students choose the word where -ed says /t/ and explain what sound comes before the suffix.",
+          "expected_response": "Students identify jumped as the /t/ example and reject played as /d/.",
+          "correction_move": "Strip off the suffix and say the base aloud: jump ends in /p/ voiceless, play ends in a voiced sound.",
+          "observation_note": "Watch for students who rely on spelling position rather than final sound of the base word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose the word where ed says /ɪd/",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "waited",
+              "audio": "/static/audio/block08_waited.mp3"
+            },
+            "pair_B": {
+              "label": "called",
+              "audio": "/static/audio/block08_called.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "After /t/ or /d/, ed adds a full syllable: /ɪd/."
+          },
+          "teacher_cue": "Play both words. Ask students to choose the word with the extra syllable and explain why it happens.",
+          "expected_response": "Students identify waited as the /ɪd/ example and explain the /t/ base ending.",
+          "correction_move": "Tap the syllables: wait-ed versus called. Then re-state the t/d rule.",
+          "observation_note": "Watch for students who make every -ed word two syllables.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: played",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "played",
+            "back_text": "/p/ /l/ /eɪ/ /d/",
+            "audio": "/static/audio/block04_played.mp3",
+            "blend_units": [
+              {
+                "grapheme": "play",
+                "phoneme": "/pleɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ed",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say played — -ed = /d/ here because play ends in a voiced sound. Reveal and blend.",
+          "expected_response": "Students say played orally and connect meaning before blending.",
+          "correction_move": "Model played orally again, reveal and blend.",
+          "observation_note": "Watch for -ed = /d/ — no extra syllable.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: jumped",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "jumped",
+            "back_text": "/dʒ/ /ʌ/ /m/ /p/ /t/",
+            "audio": "/static/audio/block04_jumped.mp3",
+            "blend_units": [
+              {
+                "grapheme": "jump",
+                "phoneme": "/dʒʌmp/",
+                "audio": null
+              },
+              {
+                "grapheme": "ed",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say jumped — -ed = /t/ here because jump ends in /p/ (voiceless). Reveal and blend.",
+          "expected_response": "Students say jumped orally and connect meaning before blending.",
+          "correction_move": "Model jumped orally again, reveal and blend.",
+          "observation_note": "Watch for -ed = /t/ — no extra syllable.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: walked",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "walked",
+            "back_text": "/w/ /ɔː/ /k/ /t/",
+            "audio": "/static/audio/block04_walked.mp3",
+            "blend_units": [
+              {
+                "grapheme": "walk",
+                "phoneme": "/wɔːk/",
+                "audio": null
+              },
+              {
+                "grapheme": "ed",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say walked — -ed = /t/ here because walk ends in /k/ (voiceless). Reveal and blend.",
+          "expected_response": "Students say walked orally and connect meaning before blending.",
+          "correction_move": "Model walked orally again, reveal and blend.",
+          "observation_note": "Watch for -ed = /t/ and for the silent l in walk.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: waited",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "waited",
+            "back_text": "/w/ /eɪ/ /t/ /ɪ/ /d/",
+            "audio": "/static/audio/block04_waited.mp3",
+            "blend_units": [
+              {
+                "grapheme": "wait",
+                "phoneme": "/weɪt/",
+                "audio": null
+              },
+              {
+                "grapheme": "ed",
+                "phoneme": "/ɪd/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say waited — -ed = /ɪd/ here because wait ends in /t/. Two stops can't collide. Extra syllable. Reveal and blend.",
+          "expected_response": "Students say waited orally and connect meaning before blending.",
+          "correction_move": "Model waited orally again, reveal and blend.",
+          "observation_note": "Watch for -ed = /ɪd/ — the full extra syllable.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: landed",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "landed",
+            "back_text": "/l/ /æ/ /n/ /d/ /ɪ/ /d/",
+            "audio": "/static/audio/block04_landed.mp3",
+            "blend_units": [
+              {
+                "grapheme": "land",
+                "phoneme": "/lænd/",
+                "audio": null
+              },
+              {
+                "grapheme": "ed",
+                "phoneme": "/ɪd/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say landed — -ed = /ɪd/ here because land ends in /d/. Extra syllable. Reveal and blend.",
+          "expected_response": "Students say landed orally and connect meaning before blending.",
+          "correction_move": "Model landed orally again, reveal and blend.",
+          "observation_note": "Watch for -ed = /ɪd/ — two syllables total.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: called",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "called",
+            "back_text": "/k/ /ɔː/ /l/ /d/",
+            "audio": "/static/audio/block04_called.mp3",
+            "blend_units": [
+              {
+                "grapheme": "call",
+                "phoneme": "/kɔːl/",
+                "audio": null
+              },
+              {
+                "grapheme": "ed",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say called — -ed = /d/ here because call ends in /l/ (voiced). Reveal and blend.",
+          "expected_response": "Students say called orally and connect meaning before blending.",
+          "correction_move": "Model called orally again, reveal and blend.",
+          "observation_note": "Watch for -ed = /d/ — no extra syllable.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: started",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "started",
+            "back_text": "started"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read started accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: rested",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rested",
+            "back_text": "rested"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read rested accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: celebrated",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "celebrated",
+            "back_text": "celebrated"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read celebrated accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: painted",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "painted",
+            "back_text": "painted"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read painted accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: walls",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "walls",
+            "back_text": "walls"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read walls accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: jogged",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "jogged",
+            "back_text": "jogged"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read jogged accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: soft",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "soft",
+            "back_text": "soft"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read soft accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: sand",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sand",
+            "back_text": "sand"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read sand accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-15",
+          "block_id": "04",
+          "slide_title": "Reader Prep: early",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "early",
+            "back_text": "early"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read early accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-16",
+          "block_id": "04",
+          "slide_title": "Reader Prep: worked",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "worked",
+            "back_text": "worked"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read worked accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-17",
+          "block_id": "04",
+          "slide_title": "Reader Prep: hard",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hard",
+            "back_text": "hard"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read hard accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-18",
+          "block_id": "04",
+          "slide_title": "Reader Prep: ended",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ended",
+            "back_text": "ended"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read ended accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-19",
+          "block_id": "04",
+          "slide_title": "Reader Prep: spotted",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "spotted",
+            "back_text": "spotted"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read spotted accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-20",
+          "block_id": "04",
+          "slide_title": "Reader Prep: branch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "branch",
+            "back_text": "branch"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read branch accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-21",
+          "block_id": "04",
+          "slide_title": "Reader Prep: raced",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "raced",
+            "back_text": "raced"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read raced accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-22",
+          "block_id": "04",
+          "slide_title": "Reader Prep: safely",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "safely",
+            "back_text": "safely"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read safely accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: played",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "played",
+            "target_letters": [
+              "play",
+              "ed"
+            ],
+            "slots": [
+              "play",
+              "ed"
+            ],
+            "draggable_letters": [
+              "ed",
+              "play"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build played left to right.",
+          "expected_response": "Students build played correctly: play | ed.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: jumped",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "jumped",
+            "target_letters": [
+              "jump",
+              "ed"
+            ],
+            "slots": [
+              "jump",
+              "ed"
+            ],
+            "draggable_letters": [
+              "ed",
+              "jump"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build jumped left to right.",
+          "expected_response": "Students build jumped correctly: jump | ed.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: waited",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "waited",
+            "target_letters": [
+              "wait",
+              "ed"
+            ],
+            "slots": [
+              "wait",
+              "ed"
+            ],
+            "draggable_letters": [
+              "ed",
+              "wait"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build waited left to right.",
+          "expected_response": "Students build waited correctly: wait | ed.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: landed",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "landed",
+            "target_letters": [
+              "land",
+              "ed"
+            ],
+            "slots": [
+              "land",
+              "ed"
+            ],
+            "draggable_letters": [
+              "ed",
+              "land"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build landed left to right.",
+          "expected_response": "Students build landed correctly: land | ed.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: called",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "called",
+            "target_letters": [
+              "call",
+              "ed"
+            ],
+            "slots": [
+              "call",
+              "ed"
+            ],
+            "draggable_letters": [
+              "ed",
+              "call"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build called left to right.",
+          "expected_response": "Students build called correctly: call | ed.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She jumped and landed safely.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "jumped": "decodable",
+              "and": "decodable",
+              "landed": "decodable",
+              "safely": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on jumped, and, landed, safely.",
+          "expected_response": "Students read \"She jumped and landed safely.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"She jumped and landed safely.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He waited and then started.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "waited": "decodable",
+              "and": "decodable",
+              "then": "decodable",
+              "started": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on waited, and, then, started.",
+          "expected_response": "Students read \"He waited and then started.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"He waited and then started.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "They played and walked home.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "They": "sight",
+              "played": "decodable",
+              "and": "decodable",
+              "walked": "decodable",
+              "home": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on played, and, walked, home.",
+          "expected_response": "Students read \"They played and walked home.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"They played and walked home.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The team rested after they played.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "team": "decodable",
+              "rested": "decodable",
+              "after": "decodable",
+              "they": "sight",
+              "played": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on team, rested, after, played.",
+          "expected_response": "Students read \"The team rested after they played.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The team rested after they played.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She jumped and landed safely.\nHe waited and then started.\nThey played and walked home.\nThe team rested after they played.\nShe painted the walls and called for help.\nThe bird landed on the branch.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all the -ed = /d/ words. Find all the -ed = /t/ words. Find all the -ed = /ɪd/ words.",
+            "word_types": {
+              "She": "sight",
+              "jumped": "decodable",
+              "and": "decodable",
+              "landed": "decodable",
+              "safely": "decodable",
+              "He": "sight",
+              "waited": "decodable",
+              "then": "decodable",
+              "started": "decodable",
+              "They": "sight",
+              "played": "decodable",
+              "walked": "decodable",
+              "home": "decodable",
+              "The": "sight",
+              "team": "decodable",
+              "rested": "decodable",
+              "after": "decodable",
+              "they": "sight",
+              "painted": "decodable",
+              "the": "sight",
+              "walls": "decodable",
+              "called": "decodable",
+              "for": "decodable",
+              "help": "decodable",
+              "bird": "decodable",
+              "on": "decodable",
+              "branch": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
+          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
+          "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: jumped",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_jumped.mp3",
+            "dictated_text": "jumped",
+            "expected_answer": "jumped",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "j",
+              "u",
+              "m",
+              "p",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play jumped once. Replay only if needed.",
+          "expected_response": "Students write jumped accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: waited",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_waited.mp3",
+            "dictated_text": "waited",
+            "expected_answer": "waited",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "w",
+              "ai",
+              "t",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play waited once. Replay only if needed. Remind students: /eɪ/ is spelled 'ai' — both letters go in one box.",
+          "expected_response": "Students write waited accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: called",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_called.mp3",
+            "dictated_text": "called",
+            "expected_answer": "called",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "c",
+              "a",
+              "ll",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play called once. Replay only if needed.",
+          "expected_response": "Students write called accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: played",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_played.mp3",
+            "dictated_text": "played",
+            "expected_answer": "played",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "p",
+              "l",
+              "ai",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Transfer check. Dictate played and ask students which -ed sound they hear before writing.",
+          "expected_response": "Students write played accurately and identify -ed as /d/.",
+          "correction_move": "Compare played with jumped and waited. Sort all three by suffix sound before rewriting if needed.",
+          "observation_note": "Watch whether students can name the sound category as well as spell the word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-05",
+          "block_id": "08",
+          "slide_title": "Listen and Write: landed",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_landed.mp3",
+            "dictated_text": "landed",
+            "expected_answer": "landed",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "l",
+              "a",
+              "n",
+              "d",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Use landed as a second transfer dictation. Students name the -ed sound category first, then write.",
+          "expected_response": "Students write landed accurately and identify -ed as /ɪd/.",
+          "correction_move": "Tap the syllables and compare landed with called and jumped.",
+          "observation_note": "Watch for students who still avoid the extra syllable when the base ends in /d/.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "played",
+              "jumped",
+              "waited",
+              "landed",
+              "called"
+            ],
+            "highlighted_chunk": "-ed",
+            "support_text": "The -ed suffix has three sounds. Which sound does each word use?"
+          },
+          "teacher_cue": "Show the words. Ask: The -ed suffix has three sounds. Which sound does each word use?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "-ed = /d/ after voiced sounds. -ed = /t/ after voiceless sounds. -ed = /ɪd/ after t or d.",
+                "phoneme": null
+              },
+              {
+                "label": "Find all the -ed = /d/ words. Find all the -ed = /t/ words. Find all the -ed = /ɪd/ words.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using played or jumped.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1034 @@
+{
+  "lesson_id": "G10-L69",
+  "unit_id": "G10",
+  "target_pattern": "greek_roots",
+  "title": "Group 10, Lesson 69: Greek roots — graph, phone, scope, meter, bio",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "f_p"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: Latin roots",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "Latin roots",
+            "back_text": "port rupt dict struct vis",
+            "audio": "/static/audio/Latin_roots.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce port rupt dict struct vis quickly and cleanly.",
+          "correction_move": "Model port rupt dict struct vis, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ph /f/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ph /f/",
+            "back_text": "/f/ from ph",
+            "audio": "/static/audio/ph_f.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /f/ from ph quickly and cleanly.",
+          "correction_move": "Model /f/ from ph, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: prefixes",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "prefixes",
+            "back_text": "un- re- pre- dis-",
+            "audio": "/static/audio/prefixes.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce un- re- pre- dis- quickly and cleanly.",
+          "correction_move": "Model un- re- pre- dis-, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: we",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
+            "word_types": {
+              "we": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: transport",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_transport.mp3",
+            "dictated_text": "transport",
+            "expected_answer": "transport",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "t",
+              "r",
+              "a",
+              "n",
+              "s",
+              "p",
+              "or",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play transport once. Replay only if needed.",
+          "expected_response": "Students write transport accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: predict",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_predict.mp3",
+            "dictated_text": "predict",
+            "expected_answer": "predict",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "p",
+              "r",
+              "e",
+              "d",
+              "i",
+              "c",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play predict once. Replay only if needed.",
+          "expected_response": "Students write predict accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: visible",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_visible.mp3",
+            "dictated_text": "visible",
+            "expected_answer": "visible",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "v",
+              "i",
+              "s",
+              "i",
+              "b",
+              "l",
+              "e"
+            ]
+          },
+          "teacher_cue": "Play visible once. Replay only if needed.",
+          "expected_response": "Students write visible accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "v_b",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce Greek roots: graph phone scope meter bio",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "graph  phone  scope  meter  bio",
+            "back_text": "Greek roots — write, sound, see, measure, life",
+            "audio": "/static/audio/greek_roots.mp3"
+          },
+          "teacher_cue": "Five Greek roots that appear throughout science and academic English. graph = write: photograph, paragraph, autograph, geography, graphite. phone = sound: telephone, microphone, symphony, phonics, earphone. scope = see/examine: telescope, microscope, periscope, stethoscope. meter = measure: thermometer, centimeter, speedometer, diameter. bio = life: biology, biography, biome, antibiotic. Note: ph in these roots = /f/ (from Greek phi). Knowing these roots unlocks scientific and academic vocabulary.",
+          "expected_response": "Students identify Greek roots and use them to decode and infer meaning in academic vocabulary.",
+          "correction_move": "Show each root with its meaning. Build word webs: graph → photograph (light+write), paragraph (beside+write), autograph (self+write). Students generate more words.",
+          "observation_note": "Watch for students not recognising ph = /f/ in Greek root words.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: photograph",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "photograph",
+            "back_text": "/f/ /oʊ/ /t/ /ə/ /g/ /r/ /ɑː/ /f/",
+            "audio": "/static/audio/block04_photograph.mp3",
+            "blend_units": [
+              {
+                "grapheme": "photo",
+                "phoneme": "/foʊtə/",
+                "audio": null
+              },
+              {
+                "grapheme": "graph",
+                "phoneme": "/grɑːf/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say photograph — photo (light) + graph (write) = write with light. ph=/f/ in both. Reveal and blend.",
+          "expected_response": "Students say photograph orally and connect meaning before blending.",
+          "correction_move": "Model photograph orally again, reveal and blend.",
+          "observation_note": "Watch for ph=/f/ in photo- and -graph.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: telephone",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "telephone",
+            "back_text": "/t/ /e/ /l/ /ɪ/ /f/ /oʊ/ /n/",
+            "audio": "/static/audio/block04_telephone.mp3",
+            "blend_units": [
+              {
+                "grapheme": "tele",
+                "phoneme": "/telɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "phone",
+                "phoneme": "/foʊn/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say telephone — tele (far) + phone (sound) = far sound. ph=/f/ in phone. Reveal and blend.",
+          "expected_response": "Students say telephone orally and connect meaning before blending.",
+          "correction_move": "Model telephone orally again, reveal and blend.",
+          "observation_note": "Watch for ph=/f/ in phone and long /oʊ/ in -phone.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: telescope",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "telescope",
+            "back_text": "/t/ /e/ /l/ /ɪ/ /s/ /k/ /oʊ/ /p/",
+            "audio": "/static/audio/block04_telescope.mp3",
+            "blend_units": [
+              {
+                "grapheme": "tele",
+                "phoneme": "/telɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "scope",
+                "phoneme": "/skoʊp/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say telescope — tele (far) + scope (see) = see far. CVCe in scope. Reveal and blend.",
+          "expected_response": "Students say telescope orally and connect meaning before blending.",
+          "correction_move": "Model telescope orally again, reveal and blend.",
+          "observation_note": "Watch for long /oʊ/ in scope and CVCe pattern.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: thermometer",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "thermometer",
+            "back_text": "/θ/ /ɜː/ /m/ /ɒ/ /m/ /ɪ/ /t/ /ər/",
+            "audio": "/static/audio/block04_thermometer.mp3",
+            "blend_units": [
+              {
+                "grapheme": "thermo",
+                "phoneme": "/θɜːmə/",
+                "audio": null
+              },
+              {
+                "grapheme": "meter",
+                "phoneme": "/miːtər/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say thermometer — thermo (heat) + meter (measure) = measure heat. Reveal and blend.",
+          "expected_response": "Students say thermometer orally and connect meaning before blending.",
+          "correction_move": "Model thermometer orally again, reveal and blend.",
+          "observation_note": "Watch for /θ/ in thermo- and long /iː/ in meter.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: biology",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "biology",
+            "back_text": "/b/ /aɪ/ /ɒ/ /l/ /ə/ /dʒ/ /iː/",
+            "audio": "/static/audio/block04_biology.mp3",
+            "blend_units": [
+              {
+                "grapheme": "bio",
+                "phoneme": "/baɪə/",
+                "audio": null
+              },
+              {
+                "grapheme": "logy",
+                "phoneme": "/lədʒiː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say biology — bio (life) + logy (study of) = study of life. Reveal and blend.",
+          "expected_response": "Students say biology orally and connect meaning before blending.",
+          "correction_move": "Model biology orally again, reveal and blend.",
+          "observation_note": "Watch for long /aɪ/ in bio- and -y=/iː/ at end.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: paragraph",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "paragraph",
+            "back_text": "/p/ /æ/ /r/ /ə/ /g/ /r/ /ɑː/ /f/",
+            "audio": "/static/audio/block04_paragraph.mp3",
+            "blend_units": [
+              {
+                "grapheme": "para",
+                "phoneme": "/pærə/",
+                "audio": null
+              },
+              {
+                "grapheme": "graph",
+                "phoneme": "/grɑːf/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say paragraph — para (beside) + graph (write) = writing beside. Reveal and blend.",
+          "expected_response": "Students say paragraph orally and connect meaning before blending.",
+          "correction_move": "Model paragraph orally again, reveal and blend.",
+          "observation_note": "Watch for /r/ in para- and gr cluster + ph=/f/ in graph.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: photograph",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "photograph",
+            "target_letters": [
+              "photo",
+              "graph"
+            ],
+            "slots": [
+              "photo",
+              "graph"
+            ],
+            "draggable_letters": [
+              "graph",
+              "photo"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build photograph left to right.",
+          "expected_response": "Students build photograph correctly: photo | graph.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: telephone",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "telephone",
+            "target_letters": [
+              "tele",
+              "phone"
+            ],
+            "slots": [
+              "tele",
+              "phone"
+            ],
+            "draggable_letters": [
+              "phone",
+              "tele"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build telephone left to right.",
+          "expected_response": "Students build telephone correctly: tele | phone.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: telescope",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "telescope",
+            "target_letters": [
+              "tele",
+              "scope"
+            ],
+            "slots": [
+              "tele",
+              "scope"
+            ],
+            "draggable_letters": [
+              "scope",
+              "tele"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build telescope left to right.",
+          "expected_response": "Students build telescope correctly: tele | scope.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: biology",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "biology",
+            "target_letters": [
+              "bio",
+              "logy"
+            ],
+            "slots": [
+              "bio",
+              "logy"
+            ],
+            "draggable_letters": [
+              "logy",
+              "bio"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build biology left to right.",
+          "expected_response": "Students build biology correctly: bio | logy.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: paragraph",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "paragraph",
+            "target_letters": [
+              "para",
+              "graph"
+            ],
+            "slots": [
+              "para",
+              "graph"
+            ],
+            "draggable_letters": [
+              "graph",
+              "para"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build paragraph left to right.",
+          "expected_response": "Students build paragraph correctly: para | graph.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The photograph is for biology.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "photograph": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "biology": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on photograph, is, for, biology.",
+          "expected_response": "Students read \"The photograph is for biology.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The photograph is for biology.\".",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The telescope is with the photograph.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "telescope": "decodable",
+              "is": "decodable",
+              "with": "decodable",
+              "the": "sight",
+              "photograph": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on telescope, is, with, photograph.",
+          "expected_response": "Students read \"The telescope is with the photograph.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The telescope is with the photograph.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The thermometer is for biology.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "thermometer": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "biology": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on thermometer, is, for, biology.",
+          "expected_response": "Students read \"The thermometer is for biology.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The thermometer is for biology.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The paragraph is for biology.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "paragraph": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "biology": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on paragraph, is, for, biology.",
+          "expected_response": "Students read \"The paragraph is for biology.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The paragraph is for biology.\".",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The photograph is for biology.\nThe telescope and the thermometer were in biology.\nThe telephone is with the photograph.\nThe paragraph is for biology.\nThe telescope is with the photograph.\nThe thermometer is with the biology paragraph.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What is for biology? Which tools are in the reader? Find the Greek-root words in the reader.",
+            "word_types": {
+              "The": "sight",
+              "photograph": "decodable",
+              "is": "decodable",
+              "for": "decodable",
+              "biology": "decodable",
+              "telescope": "decodable",
+              "and": "decodable",
+              "the": "sight",
+              "thermometer": "decodable",
+              "were": "decodable",
+              "in": "decodable",
+              "telephone": "decodable",
+              "with": "decodable",
+              "paragraph": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: photograph",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_photograph.mp3",
+            "dictated_text": "photograph",
+            "expected_answer": "photograph",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "ph",
+              "o",
+              "t",
+              "o",
+              "g",
+              "r",
+              "a",
+              "ph"
+            ]
+          },
+          "teacher_cue": "Play photograph once. Replay only if needed. Remind students: /f/ is spelled 'ph' — both letters go in one box.",
+          "expected_response": "Students write photograph accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: telephone",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_telephone.mp3",
+            "dictated_text": "telephone",
+            "expected_answer": "telephone",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "t",
+              "e",
+              "l",
+              "e",
+              "ph",
+              "o",
+              "n"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play telephone once. Replay only if needed. Remind students: /f/ is spelled 'ph' — both letters go in one box. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write telephone accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: biology",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_biology.mp3",
+            "dictated_text": "biology",
+            "expected_answer": "biology",
+            "elkonin_boxes": 7,
+            "grapheme_units": [
+              "b",
+              "i",
+              "o",
+              "l",
+              "o",
+              "g",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play biology once. Replay only if needed.",
+          "expected_response": "Students write biology accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "photograph",
+              "paragraph",
+              "autograph",
+              "geography",
+              "biography"
+            ],
+            "highlighted_chunk": "graph",
+            "support_text": "What does graph mean? How does the prefix change the meaning of each word?"
+          },
+          "teacher_cue": "Show the words. Ask: What does graph mean? How does the prefix change the meaning of each word?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "graph = write. phone = sound. scope = see. meter = measure. bio = life.",
+                "phoneme": null
+              },
+              {
+                "label": "What is for biology? Which tools are in the reader? Find the Greek-root words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using photograph or telephone.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

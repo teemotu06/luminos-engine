@@ -42,7 +42,10 @@
           "content_payload": {
             "dictated_text": "s",
             "expected_answer": "s",
-            "elkonin_boxes": 1
+            "elkonin_boxes": 1,
+            "grapheme_units": [
+              "s"
+            ]
           },
           "teacher_cue": "There are no prior words yet. Use this block to establish the encoding routine with single sound-to-letter practice.",
           "expected_response": "Students attempt to hear one sound and write one matching letter.",
@@ -75,7 +78,11 @@
           "observation_note": "Voiceless alveolar fricative. Tongue tip near the ridge behind the upper teeth. Air flows continuously.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -94,7 +101,11 @@
           "observation_note": "Short open front vowel. Mouth open wide, tongue low and flat, jaw drops noticeably.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -113,7 +124,11 @@
           "observation_note": "Voiceless alveolar stop. Tongue tip touches the ridge behind the upper teeth, builds pressure, then releases.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -125,22 +140,19 @@
         {
           "slide_id": "04-01",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
+          "slide_title": "Sight Word: I",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "sat",
-            "image": "/static/images/vocab/sat.png",
-            "blend_units": [
-              { "grapheme": "s", "phoneme": "/s/", "audio": null },
-              { "grapheme": "a", "phoneme": "/æ/", "audio": null },
-              { "grapheme": "t", "phoneme": "/t/", "audio": null }
-            ]
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "word_types": {
+              "I": "sight"
+            }
           },
-          "teacher_cue": "Teach sat orally first, then reveal print.",
-          "expected_response": "Students say sat and connect it to meaning/action.",
-          "correction_move": "Model sat, repeat chorally, then reveal the written word.",
-          "observation_note": "Word is decodable with the current pool s · a · t.",
+          "teacher_cue": "Sight word — underlined. Say it as a whole unit. It uses the /aɪ/ diphthong — not taught until Lesson 34. Use it in a short oral sentence: I sat. Then reveal.",
+          "expected_response": "Students say I orally and recognise it as a whole-unit sight word — not a blend.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch whether students try to blend I. Redirect — sight word, say it whole. I appears in Block 06 and Block 07 of this lesson.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -149,21 +161,16 @@
         {
           "slide_id": "04-02",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
+          "slide_title": "Reader Prep: sat",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "",
-            "back_text": "at",
-            "image": "/static/images/vocab/at.png",
-            "blend_units": [
-              { "grapheme": "a", "phoneme": "/æ/", "audio": null },
-              { "grapheme": "t", "phoneme": "/t/", "audio": null }
-            ]
+            "front_text": "sat",
+            "back_text": "/s/ /a/ /t/"
           },
-          "teacher_cue": "Teach at orally in a simple phrase, then reveal print.",
-          "expected_response": "Students say at and recognise it in context.",
-          "correction_move": "Model at in a short phrase, then repeat and reveal print.",
-          "observation_note": "Word is decodable with the current pool s · a · t.",
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read sat accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -176,10 +183,81 @@
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "",
+            "back_text": "sat",
+            "image": "/static/images/vocab/sat.png",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Teach sat orally first, then reveal print.",
+          "expected_response": "Students say sat and connect it to meaning/action.",
+          "correction_move": "Model sat, repeat chorally, then reveal the written word.",
+          "observation_note": "Word is decodable with the current pool s · a · t.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "at",
+            "image": "/static/images/vocab/at.png",
+            "blend_units": [
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Teach at orally in a simple phrase, then reveal print.",
+          "expected_response": "Students say at and recognise it in context.",
+          "correction_move": "Model at in a short phrase, then repeat and reveal print.",
+          "observation_note": "Word is decodable with the current pool s · a · t.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary Warm-Up",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
             "back_text": "a",
             "image": "/static/images/vocab/a.png",
             "blend_units": [
-              { "grapheme": "a", "phoneme": "/æ/", "audio": null }
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              }
             ]
           },
           "teacher_cue": "Point to the picture and model: a jar. Explain that a is used before one thing. Students repeat the phrase together.",
@@ -204,9 +282,21 @@
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "sat",
-            "target_letters": ["s", "a", "t"],
-            "slots": ["s", "a", "t"],
-            "draggable_letters": ["a", "t", "s"]
+            "target_letters": [
+              "s",
+              "a",
+              "t"
+            ],
+            "slots": [
+              "s",
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "a",
+              "t",
+              "s"
+            ]
           },
           "teacher_cue": "Build sat left to right.",
           "expected_response": "Students blend and build sat accurately.",
@@ -214,7 +304,11 @@
           "observation_note": "This block establishes the blending routine. Keep volume low and process explicit.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -224,9 +318,18 @@
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "at",
-            "target_letters": ["a", "t"],
-            "slots": ["a", "t"],
-            "draggable_letters": ["t", "a"]
+            "target_letters": [
+              "a",
+              "t"
+            ],
+            "slots": [
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "a"
+            ]
           },
           "teacher_cue": "Build at left to right.",
           "expected_response": "Students build at accurately.",
@@ -234,7 +337,11 @@
           "observation_note": "Only three phonemes are available in Lesson 1, so the word list is intentionally short.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -244,9 +351,18 @@
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "as",
-            "target_letters": ["a", "s"],
-            "slots": ["a", "s"],
-            "draggable_letters": ["s", "a"]
+            "target_letters": [
+              "a",
+              "s"
+            ],
+            "slots": [
+              "a",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "a"
+            ]
           },
           "teacher_cue": "Build as left to right.",
           "expected_response": "Students build as accurately.",
@@ -254,7 +370,11 @@
           "observation_note": "The focus is establishing the blending routine, not volume.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -272,15 +392,23 @@
             "text_content": "I sat.",
             "display_mode": "sentence",
             "show_font_controls": true,
-            "image": "/static/images/readers/i_sat.png"
+            "image": "/static/images/readers/i_sat.png",
+            "word_types": {
+              "I": "decodable",
+              "sat": "decodable"
+            }
           },
           "teacher_cue": "Lesson 1 has only one meaningful sentence at this stage. Establish the sentence reading routine, not test volume.",
-          "expected_response": "Students read I sat. with one-to-one word tracking.",
+          "expected_response": "Students read \"I sat.\" accurately.",
           "correction_move": "Model once, then track each word left to right and reread together.",
           "observation_note": "Sight words active: the · a · I. Sentence uses I plus sat.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -298,8 +426,12 @@
             "text_content": "I sat.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "How many words did you read? Point to each one.",
-            "image": "/static/images/readers/i_sat.png"
+            "comprehension_prompt": "What did I do? Can you show me?",
+            "image": "/static/images/readers/i_sat.png",
+            "word_types": {
+              "I": "decodable",
+              "sat": "decodable"
+            }
           },
           "teacher_cue": "Track print left to right and match spoken words to written words.",
           "expected_response": "Students read the single sentence and point to each word.",
@@ -307,7 +439,11 @@
           "observation_note": "Lesson 1 reader is a single-sentence introduction to the reading routine.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -324,7 +460,12 @@
           "content_payload": {
             "dictated_text": "sat",
             "expected_answer": "sat",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "a",
+              "t"
+            ]
           },
           "teacher_cue": "Dictate sat. Students segment into phonemes using Elkonin boxes, then write.",
           "expected_response": "Students write sat accurately.",
@@ -332,7 +473,11 @@
           "observation_note": "Reveal and check after writing.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -343,7 +488,11 @@
           "content_payload": {
             "dictated_text": "at",
             "expected_answer": "at",
-            "elkonin_boxes": 2
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "a",
+              "t"
+            ]
           },
           "teacher_cue": "Dictate at. Students segment into phonemes using Elkonin boxes, then write.",
           "expected_response": "Students write at accurately.",
@@ -351,7 +500,11 @@
           "observation_note": "Reveal and check after writing.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -362,7 +515,10 @@
           "content_payload": {
             "dictated_text": "a",
             "expected_answer": "a",
-            "elkonin_boxes": 1
+            "elkonin_boxes": 1,
+            "grapheme_units": [
+              "a"
+            ]
           },
           "teacher_cue": "Dictate a. Students write the word after hearing it.",
           "expected_response": "Students write a accurately.",
@@ -370,7 +526,11 @@
           "observation_note": "Block 08 words are drawn from Block 04 vocabulary.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -386,7 +546,10 @@
           "view_type": "read_respond",
           "content_payload": {
             "display_mode": "spot_part",
-            "displayed_words": ["sat", "at"],
+            "displayed_words": [
+              "sat",
+              "at"
+            ],
             "highlighted_chunk": "at",
             "support_text": "What do you notice? Which sound part do they share?"
           },
@@ -414,18 +577,30 @@
             "display_mode": "lesson_close",
             "title": "Close the Lesson",
             "check_items": [
-              { "label": "We learned three sounds today: s, a, t.", "phoneme": null },
-              { "label": "Close your eyes. Can you hear the sounds in the word sat?", "phoneme": null },
-              { "label": "Hold up a finger for each sound — how many?", "phoneme": null },
-              { "label": "Now tell me: what did you do today? Use the word sat.", "phoneme": null }
+              {
+                "label": "We learned three sounds today: s, a, t.",
+                "phoneme": null
+              },
+              {
+                "label": "What did I do? Can you show me?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using I or sat.",
+                "phoneme": null
+              }
             ],
-            "marking_options": ["secure", "shaky", "missed"],
-            "notes_field": "Expected answer for phoneme counting: 3 fingers — /s/ /æ/ /t/."
+            "marking_options": [
+              "secure",
+              "shaky",
+              "missed"
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
           },
-          "teacher_cue": "Close with phoneme counting and oral recall.",
-          "expected_response": "Students identify three sounds in sat and respond orally using the word sat.",
-          "correction_move": "Model the sounds /s/ /æ/ /t/ and count them again together.",
-          "observation_note": "This establishes the idea that words are made of individual sounds.",
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],

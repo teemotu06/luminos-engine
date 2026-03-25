@@ -1,0 +1,1177 @@
+{
+  "lesson_id": "G5-L31",
+  "unit_id": "G5",
+  "target_pattern": "oo_short",
+  "title": "Group 5, Lesson 31: oo (short /ʊ/)",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: oo /uː/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "oo /uː/",
+            "back_text": "/uː/",
+            "audio": "/static/audio/oo_uː.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /uː/ quickly and cleanly.",
+          "correction_move": "Model /uː/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: oa/ow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "oa/ow",
+            "back_text": "/oʊ/",
+            "audio": "/static/audio/oaow.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /oʊ/ quickly and cleanly.",
+          "correction_move": "Model /oʊ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: I",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say I immediately without blending.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: the",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say the immediately without blending.",
+          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: a",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "a — sight word",
+            "audio": "/static/audio/sight_a.mp3",
+            "word_types": {
+              "a": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say a immediately without blending.",
+          "correction_move": "Model a in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: he",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "he",
+            "back_text": "he — sight word",
+            "audio": "/static/audio/sight_he.mp3",
+            "word_types": {
+              "he": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say he immediately without blending.",
+          "correction_move": "Model he in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: moon",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_moon.mp3",
+            "dictated_text": "moon",
+            "expected_answer": "moon",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "m",
+              "oo",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play moon once. Replay only if needed.",
+          "expected_response": "Students write moon accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: food",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_food.mp3",
+            "dictated_text": "food",
+            "expected_answer": "food",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "oo",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play food once. Replay only if needed.",
+          "expected_response": "Students write food accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: spoon",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_spoon.mp3",
+            "dictated_text": "spoon",
+            "expected_answer": "spoon",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "p",
+              "oo",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play spoon once. Replay only if needed.",
+          "expected_response": "Students write spoon accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /ʊ/ — short oo",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "oo",
+            "back_text": "/ʊ/ (short)",
+            "audio": "/static/audio/oo_short.mp3"
+          },
+          "teacher_cue": "Same spelling — different sound. oo can say /ʊ/ (short) as in book, cook, look. Lips are rounded but less tightly than /uː/. The sound is shorter and lower. This is one of the trickiest English spelling facts: oo has two sounds. Context and vocabulary knowledge help. Contrast: moon /uː/ — book /ʊ/. food /uː/ — good /ʊ/. spoon /uː/ — cook /ʊ/.",
+          "expected_response": "Students produce short /ʊ/ and understand that oo can represent either /uː/ or /ʊ/.",
+          "correction_move": "Model the contrast pairs: moon/book, food/good, spoon/cook. Students hear and repeat. Emphasise that both spellings are oo — context determines which sound.",
+          "observation_note": "Watch for /uː/ substitution — students will default to the previously taught sound. This ambiguity is a feature of English to be managed, not an error in the programme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose the short oo word",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "book",
+              "audio": "/static/audio/block04_book.mp3"
+            },
+            "pair_B": {
+              "label": "moon",
+              "audio": "/static/audio/block04_moon.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "book has /ʊ/; moon has /uː/. Same spelling, different vowel sound."
+          },
+          "teacher_cue": "Play both words. Ask students to choose the short oo word and explain the difference from long oo.",
+          "expected_response": "Students identify book as short oo and reject moon as long oo.",
+          "correction_move": "Rehearse both words with hand motions: short for /ʊ/, long stretch for /uː/.",
+          "observation_note": "Watch for carryover from the previous lesson where students default oo to /uː/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose the short oo word",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "look",
+              "audio": "/static/audio/block04_look.mp3"
+            },
+            "pair_B": {
+              "label": "food",
+              "audio": "/static/audio/block04_food.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "look has short oo /ʊ/; food has long oo /uː/."
+          },
+          "teacher_cue": "Play both words. Students choose the short oo word, then say each vowel sound aloud.",
+          "expected_response": "Students identify look as the short oo word and explain why food is not correct.",
+          "correction_move": "Contrast the pair with repeated listening, then have students sort both words by vowel sound.",
+          "observation_note": "Watch for students who can read the words but cannot yet name the sound distinction.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: book",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "book",
+            "back_text": "/b/ /ʊ/ /k/",
+            "audio": "/static/audio/block04_book.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Hold up a book. oo = short /ʊ/ here. Reveal and blend. Contrast with moon (/uː/).",
+          "expected_response": "Students say book orally, connect meaning, then blend on the card.",
+          "correction_move": "Model book orally again, reveal and blend.",
+          "observation_note": "Watch for /uː/ substitution — this oo is shorter and lower.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: cook",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cook",
+            "back_text": "/k/ /ʊ/ /k/",
+            "audio": "/static/audio/block04_cook.mp3",
+            "blend_units": [
+              {
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say cook — someone who prepares food. Contrast with cool (/uː/ — longer and higher). Blend.",
+          "expected_response": "Students say cook orally, connect meaning, then blend on the card.",
+          "correction_move": "Model cook orally again, reveal and blend.",
+          "observation_note": "Watch for /uː/ substitution and for the double /k/ sounds.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: look",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "look",
+            "back_text": "/l/ /ʊ/ /k/",
+            "audio": "/static/audio/block04_look.mp3",
+            "blend_units": [
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime looking around. Say look — short /ʊ/. Contrast with cool. Reveal and blend.",
+          "expected_response": "Students say look orally, connect meaning, then blend on the card.",
+          "correction_move": "Model look orally again, reveal and blend.",
+          "observation_note": "Watch for /l/ vs /r/ at onset and /ʊ/ vs /uː/ in the vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: good",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "good",
+            "back_text": "/g/ /ʊ/ /d/",
+            "audio": "/static/audio/block04_good.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say good — not bad. Contrast with food (/uː/). Reveal and blend.",
+          "expected_response": "Students say good orally, connect meaning, then blend on the card.",
+          "correction_move": "Model good orally again, reveal and blend.",
+          "observation_note": "Watch for /ʊ/ vs /uː/ — the key contrast of this lesson.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: stood",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stood",
+            "back_text": "/s/ /t/ /ʊ/ /d/",
+            "audio": "/static/audio/block04_stood.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say stood — past tense of stand. st onset, short /ʊ/. Reveal and blend.",
+          "expected_response": "Students say stood orally, connect meaning, then blend on the card.",
+          "correction_move": "Model stood orally again, reveal and blend.",
+          "observation_note": "Watch for /ʊ/ and for the st onset.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: wood",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "wood",
+            "back_text": "/w/ /ʊ/ /d/",
+            "audio": "/static/audio/block04_wood.mp3",
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say wood — the material from trees. Short /ʊ/. Contrast with food. Reveal and blend.",
+          "expected_response": "Students say wood orally, connect meaning, then blend on the card.",
+          "correction_move": "Model wood orally again, reveal and blend.",
+          "observation_note": "Watch for /ʊ/ vs /uː/ and for voiced final /d/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: book",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "book",
+            "target_letters": [
+              "b",
+              "oo",
+              "k"
+            ],
+            "slots": [
+              "b",
+              "oo",
+              "k"
+            ],
+            "draggable_letters": [
+              "k",
+              "oo",
+              "b"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build book left to right.",
+          "expected_response": "Students build book correctly: b | oo | k.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: cook",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "cook",
+            "target_letters": [
+              "c",
+              "oo",
+              "k"
+            ],
+            "slots": [
+              "c",
+              "oo",
+              "k"
+            ],
+            "draggable_letters": [
+              "k",
+              "oo",
+              "c"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build cook left to right.",
+          "expected_response": "Students build cook correctly: c | oo | k.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: look",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "look",
+            "target_letters": [
+              "l",
+              "oo",
+              "k"
+            ],
+            "slots": [
+              "l",
+              "oo",
+              "k"
+            ],
+            "draggable_letters": [
+              "k",
+              "oo",
+              "l"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build look left to right.",
+          "expected_response": "Students build look correctly: l | oo | k.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: good",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "good",
+            "target_letters": [
+              "g",
+              "oo",
+              "d"
+            ],
+            "slots": [
+              "g",
+              "oo",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "oo",
+              "g"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build good left to right.",
+          "expected_response": "Students build good correctly: g | oo | d.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: stood",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "stood",
+            "target_letters": [
+              "s",
+              "t",
+              "oo",
+              "d"
+            ],
+            "slots": [
+              "s",
+              "t",
+              "oo",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "oo",
+              "t",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build stood left to right.",
+          "expected_response": "Students build stood correctly: s | t | oo | d.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Look at the book.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "book": "decodable"
+            }
+          },
+          "teacher_cue": "The is a sight word. Look, at, book all decodable — both use short /ʊ/.",
+          "expected_response": "Students read \"Look at the book.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for short /ʊ/ in look and book — not /uː/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cook stood by the wood.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "cook": "decodable",
+              "stood": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "wood": "decodable"
+            }
+          },
+          "teacher_cue": "One sentence. The is a sight word. cook, stood, and wood come directly from today's prepared word bank.",
+          "expected_response": "Students read \"The cook stood by the wood.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for short /ʊ/ in cook, stood, and wood.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The good cook has the book.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "good": "decodable",
+              "cook": "decodable",
+              "has": "decodable",
+              "the": "sight",
+              "book": "decodable"
+            }
+          },
+          "teacher_cue": "One sentence. The is a sight word. good, cook, and book all come from today's lesson vocabulary.",
+          "expected_response": "Students read \"The good cook has the book.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for short /ʊ/ carried across good, cook, and book in one sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I look at the good cook by the wood.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "good": "decodable",
+              "cook": "decodable",
+              "by": "decodable",
+              "wood": "decodable"
+            }
+          },
+          "teacher_cue": "I and the are sight words. The rest of the sentence recycles today's prepared words in one stable scene.",
+          "expected_response": "Students read \"I look at the good cook by the wood.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for fluency across repeated short oo words without losing tracking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Look at the book.\nThe cook has a good book.\nThe cook stood by the wood.\nI look at the cook.\nThe good cook has the book.\nThe good cook stood by the wood.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Who has the book? Show me the sentence. Where did the cook stand? Find the short oo words in the reader.",
+            "word_types": {
+              "Look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "book": "decodable",
+              "The": "sight",
+              "cook": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "good": "decodable",
+              "stood": "decodable",
+              "by": "decodable",
+              "wood": "decodable",
+              "I": "sight",
+              "look": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Keep the scene stable: one cook, one book, one place by the wood. Ask the comprehension prompt after reading.",
+          "expected_response": "Students read the full mini-reader accurately, identify who has the book, and point to the sentence that shows where the cook stood.",
+          "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
+          "observation_note": "Watch for fluent tracking and stable short oo production across book, cook, good, stood, and wood.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: book",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_book.mp3",
+            "dictated_text": "book",
+            "expected_answer": "book",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "oo",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play book once. Replay only if needed. Remind students: /ʊ/ is spelled 'oo' — both letters go in one box.",
+          "expected_response": "Students write book accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: cook",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_cook.mp3",
+            "dictated_text": "cook",
+            "expected_answer": "cook",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "c",
+              "oo",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play cook once. Replay only if needed. Remind students: /ʊ/ is spelled 'oo' — both letters go in one box.",
+          "expected_response": "Students write cook accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: look",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_look.mp3",
+            "dictated_text": "look",
+            "expected_answer": "look",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "l",
+              "oo",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play look once. Replay only if needed. Remind students: /ʊ/ is spelled 'oo' — both letters go in one box.",
+          "expected_response": "Students write look accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: moon",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_moon.mp3",
+            "dictated_text": "moon",
+            "expected_answer": "moon",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "m",
+              "oo",
+              "n"
+            ]
+          },
+          "teacher_cue": "Use moon as the transfer check. Ask students to decide whether oo is short or long before they write.",
+          "expected_response": "Students write moon accurately and identify oo as long /uː/, not the new short oo sound.",
+          "correction_move": "Contrast moon with book before a second attempt. Emphasise that today they must choose between two oo sounds.",
+          "observation_note": "Watch whether students can switch back to the previous lesson's sound when the word demands it.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-05",
+          "block_id": "08",
+          "slide_title": "Listen and Write: food",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_food.mp3",
+            "dictated_text": "food",
+            "expected_answer": "food",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "oo",
+              "d"
+            ]
+          },
+          "teacher_cue": "Dictate food once. Ask students to explain why this word does not use the short oo sound from today's main practice.",
+          "expected_response": "Students write food accurately and identify oo as long /uː/ rather than short /ʊ/.",
+          "correction_move": "Compare food with look and good. Have students name the vowel sound first, then spell.",
+          "observation_note": "Watch for students who can hear the contrast only with teacher support.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "book",
+              "cook",
+              "look",
+              "took"
+            ],
+            "highlighted_chunk": "ook",
+            "support_text": "What do these words share? What sound does oo make here?"
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share? What sound does oo make here?",
+          "expected_response": "Students identify the shared chunk and name the sound it makes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask again.",
+          "observation_note": "Watch whether students isolate the vowel team correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Today's oo says /ʊ/. Yesterday's oo says /uː/. Can you hear the difference?",
+                "phoneme": "/ʊ/"
+              },
+              {
+                "label": "Who has the book? Show me the sentence. Where did the cook stand? Find the short oo words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using book or cook.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

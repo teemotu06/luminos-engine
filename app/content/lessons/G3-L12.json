@@ -1,11 +1,20 @@
 {
-  "lesson_id": "G2-L9",
-  "unit_id": "G2",
-  "target_pattern": "m",
-  "title": "Group 2, Lesson 9: m",
+  "lesson_id": "G3-L12",
+  "unit_id": "G3",
+  "target_pattern": "g",
+  "title": "Group 3, Lesson 12: g",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "with",
+    "we"
+  ],
   "korean_interference_active": [
-    "vowel_quality",
-    "r_l"
+    "vowel_quality"
   ],
   "content_pack_status": "draft",
   "blocks": {
@@ -35,17 +44,17 @@
         {
           "slide_id": "01-02",
           "block_id": "01",
-          "slide_title": "Review: h",
+          "slide_title": "Review: d",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "h",
-            "back_text": "/h/",
-            "audio": "/static/audio/h.mp3"
+            "front_text": "d",
+            "back_text": "/d/",
+            "audio": "/static/audio/d.mp3"
           },
           "teacher_cue": "What sound?",
-          "expected_response": "Students produce /h/ quickly and cleanly.",
-          "correction_move": "Model /h/, students repeat three times, then recheck.",
-          "observation_note": "Watch for hesitation or imprecise production of /h/.",
+          "expected_response": "Students produce /d/ quickly and cleanly.",
+          "correction_move": "Model /d/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /d/.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -54,18 +63,18 @@
         {
           "slide_id": "01-03",
           "block_id": "01",
-          "slide_title": "Review: e",
+          "slide_title": "Review: w",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "e",
-            "back_text": "/e/",
-            "audio": "/static/audio/e.mp3"
+            "front_text": "w",
+            "back_text": "/w/",
+            "audio": "/static/audio/w.mp3"
           },
           "teacher_cue": "What sound?",
-          "expected_response": "Students produce /e/ quickly and cleanly.",
-          "correction_move": "Model /e/, students repeat three times, then recheck.",
-          "observation_note": "Watch for hesitation or imprecise production of /e/.",
-          "korean_interference_flag": "vowel_quality",
+          "expected_response": "Students produce /w/ quickly and cleanly.",
+          "correction_move": "Model /w/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /w/.",
+          "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -73,20 +82,20 @@
         {
           "slide_id": "01-04",
           "block_id": "01",
-          "slide_title": "Sight Word Review: I",
+          "slide_title": "Sight Word Review: me",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "I",
-            "back_text": "I — sight word",
-            "audio": "/static/audio/sight_i.mp3",
+            "front_text": "me",
+            "back_text": "me — sight word",
+            "audio": "/static/audio/sight_me.mp3",
             "word_types": {
-              "I": "sight"
+              "me": "sight"
             }
           },
           "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
-          "expected_response": "Students say I immediately without blending.",
-          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
-          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "expected_response": "Students say me immediately without blending.",
+          "correction_move": "Model me in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -95,20 +104,20 @@
         {
           "slide_id": "01-05",
           "block_id": "01",
-          "slide_title": "Sight Word Review: the",
+          "slide_title": "Sight Word Review: was",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "the",
-            "back_text": "the — sight word",
-            "audio": "/static/audio/sight_the.mp3",
+            "front_text": "was",
+            "back_text": "was — sight word",
+            "audio": "/static/audio/sight_was.mp3",
             "word_types": {
-              "the": "sight"
+              "was": "sight"
             }
           },
           "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
-          "expected_response": "Students say the immediately without blending.",
-          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
-          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "expected_response": "Students say was immediately without blending.",
+          "correction_move": "Model was in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -117,20 +126,20 @@
         {
           "slide_id": "01-06",
           "block_id": "01",
-          "slide_title": "Sight Word Review: a",
+          "slide_title": "Sight Word Review: with",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "a",
-            "back_text": "a — sight word",
-            "audio": "/static/audio/sight_a.mp3",
+            "front_text": "with",
+            "back_text": "with — sight word",
+            "audio": "/static/audio/sight_with.mp3",
             "word_types": {
-              "a": "sight"
+              "with": "sight"
             }
           },
           "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
-          "expected_response": "Students say a immediately without blending.",
-          "correction_move": "Model a in a sentence, point to the underline, repeat chorally.",
-          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "expected_response": "Students say with immediately without blending.",
+          "correction_move": "Model with in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -139,20 +148,20 @@
         {
           "slide_id": "01-07",
           "block_id": "01",
-          "slide_title": "Sight Word Review: he",
+          "slide_title": "Sight Word Review: we",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "he",
-            "back_text": "he — sight word",
-            "audio": "/static/audio/sight_he.mp3",
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
             "word_types": {
-              "he": "sight"
+              "we": "sight"
             }
           },
           "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
-          "expected_response": "Students say he immediately without blending.",
-          "correction_move": "Model he in a sentence, point to the underline, repeat chorally.",
-          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model we in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -167,24 +176,24 @@
         {
           "slide_id": "02-01",
           "block_id": "02",
-          "slide_title": "Listen and Write: rat",
+          "slide_title": "Listen and Write: win",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block02_rat.mp3",
-            "dictated_text": "rat",
-            "expected_answer": "rat",
+            "audio_prompt": "/static/audio/block02_win.mp3",
+            "dictated_text": "win",
+            "expected_answer": "win",
             "elkonin_boxes": 3,
             "grapheme_units": [
-              "r",
-              "a",
-              "t"
+              "w",
+              "i",
+              "n"
             ]
           },
-          "teacher_cue": "Play rat once. Replay only if needed before checking.",
-          "expected_response": "Students write rat accurately.",
-          "correction_move": "Replay rat once, segment orally, then recheck.",
-          "observation_note": "Watch whether students encode rat accurately from sound to print.",
-          "korean_interference_flag": "r_l",
+          "teacher_cue": "Play win once. Replay only if needed before checking.",
+          "expected_response": "Students write win accurately.",
+          "correction_move": "Replay win once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode win accurately from sound to print.",
+          "korean_interference_flag": null,
           "markable": true,
           "marking_options": [
             "secure",
@@ -196,24 +205,24 @@
         {
           "slide_id": "02-02",
           "block_id": "02",
-          "slide_title": "Listen and Write: rip",
+          "slide_title": "Listen and Write: wet",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block02_rip.mp3",
-            "dictated_text": "rip",
-            "expected_answer": "rip",
+            "audio_prompt": "/static/audio/block02_wet.mp3",
+            "dictated_text": "wet",
+            "expected_answer": "wet",
             "elkonin_boxes": 3,
             "grapheme_units": [
-              "r",
-              "i",
-              "p"
+              "w",
+              "e",
+              "t"
             ]
           },
-          "teacher_cue": "Play rip once. Replay only if needed before checking.",
-          "expected_response": "Students write rip accurately.",
-          "correction_move": "Replay rip once, segment orally, then recheck.",
-          "observation_note": "Watch whether students encode rip accurately from sound to print.",
-          "korean_interference_flag": "r_l",
+          "teacher_cue": "Play wet once. Replay only if needed before checking.",
+          "expected_response": "Students write wet accurately.",
+          "correction_move": "Replay wet once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode wet accurately from sound to print.",
+          "korean_interference_flag": null,
           "markable": true,
           "marking_options": [
             "secure",
@@ -225,24 +234,25 @@
         {
           "slide_id": "02-03",
           "block_id": "02",
-          "slide_title": "Listen and Write: rack",
+          "slide_title": "Listen and Write: swim",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block02_rack.mp3",
-            "dictated_text": "rack",
-            "expected_answer": "rack",
-            "elkonin_boxes": 3,
+            "audio_prompt": "/static/audio/block02_swim.mp3",
+            "dictated_text": "swim",
+            "expected_answer": "swim",
+            "elkonin_boxes": 4,
             "grapheme_units": [
-              "r",
-              "a",
-              "ck"
+              "s",
+              "w",
+              "i",
+              "m"
             ]
           },
-          "teacher_cue": "Play rack once. Replay only if needed before checking.",
-          "expected_response": "Students write rack accurately.",
-          "correction_move": "Replay rack once, segment orally, then recheck.",
-          "observation_note": "Watch whether students encode rack accurately from sound to print.",
-          "korean_interference_flag": "r_l",
+          "teacher_cue": "Play swim once. Replay only if needed before checking.",
+          "expected_response": "Students write swim accurately.",
+          "correction_move": "Replay swim once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode swim accurately from sound to print.",
+          "korean_interference_flag": null,
           "markable": true,
           "marking_options": [
             "secure",
@@ -260,17 +270,17 @@
         {
           "slide_id": "03-01",
           "block_id": "03",
-          "slide_title": "Introduce /m/",
+          "slide_title": "Introduce /g/",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "m",
-            "back_text": "/m/",
-            "audio": "/static/audio/m.mp3"
+            "front_text": "g",
+            "back_text": "/g/",
+            "audio": "/static/audio/g.mp3"
           },
-          "teacher_cue": "New sound. Both lips close, voice on, sound comes through the nose — mmmm. A humming sensation at the lips. Place fingers on lips to feel the gentle vibration.",
-          "expected_response": "Students produce /m/ as a clean voiced bilabial nasal with audible nasal resonance.",
-          "correction_move": "Model with fingers on lips — students feel the hum. Then alternate /p/ and /m/: lips close for both, but /m/ hums and /p/ bursts.",
-          "observation_note": "Watch for weak nasal resonance or confusion with /n/ — both are nasals but at different positions.",
+          "teacher_cue": "New sound. Same position as /k/ — back of tongue rises to the soft palate — but with voicing. Hand on throat: /k/ silent, /g/ vibrates. Alternate: k-g-k-g.",
+          "expected_response": "Students produce /g/ cleanly as a voiced velar stop.",
+          "correction_move": "Model /k/ vs /g/ with hand on throat. Students alternate, confirming vibration for /g/.",
+          "observation_note": "Watch for hard-g vs soft-g confusion — at this stage g always makes /g/. Soft g taught at Lesson 43.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -289,110 +299,16 @@
         {
           "slide_id": "04-01",
           "block_id": "04",
-          "slide_title": "Sight Word: me",
+          "slide_title": "Vocabulary: get",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "me",
-            "back_text": "me — sight word",
-            "audio": "/static/audio/sight_me.mp3",
-            "word_types": {
-              "me": "sight"
-            }
-          },
-          "teacher_cue": "Sight word — underlined. Say it as a whole unit. Uses long /iː/ — not taught until Lesson 28. Learn as a whole unit. Use it in a short oral sentence, then reveal.",
-          "expected_response": "Students say me orally and recognise it as a whole-unit sight word.",
-          "correction_move": "Model me in a sentence, point to the underline, repeat chorally.",
-          "observation_note": "Watch whether students try to blend me. Redirect — sight word, say it whole.",
-          "korean_interference_flag": null,
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "04-02",
-          "block_id": "04",
-          "slide_title": "Vocabulary: man",
-          "view_type": "flashcard",
-          "content_payload": {
-            "front_text": "man",
-            "back_text": "/m/ /æ/ /n/",
-            "audio": "/static/audio/block04_man.mp3",
+            "front_text": "get",
+            "back_text": "/g/ /e/ /t/",
+            "audio": "/static/audio/block04_get.mp3",
             "blend_units": [
               {
-                "grapheme": "m",
-                "phoneme": "/m/",
-                "audio": null
-              },
-              {
-                "grapheme": "a",
-                "phoneme": "/æ/",
-                "audio": null
-              },
-              {
-                "grapheme": "n",
-                "phoneme": "/n/",
-                "audio": null
-              }
-            ]
-          },
-          "teacher_cue": "Say man orally — an adult male. Reveal print and blend all three sounds.",
-          "expected_response": "Students say man orally and connect meaning before print.",
-          "correction_move": "Model man orally again, then reveal and blend.",
-          "observation_note": "Watch for the /m/ onset — lips must close for a bilabial nasal.",
-          "korean_interference_flag": "vowel_quality",
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "04-03",
-          "block_id": "04",
-          "slide_title": "Vocabulary: map",
-          "view_type": "flashcard",
-          "content_payload": {
-            "front_text": "map",
-            "back_text": "/m/ /æ/ /p/",
-            "audio": "/static/audio/block04_map.mp3",
-            "blend_units": [
-              {
-                "grapheme": "m",
-                "phoneme": "/m/",
-                "audio": null
-              },
-              {
-                "grapheme": "a",
-                "phoneme": "/æ/",
-                "audio": null
-              },
-              {
-                "grapheme": "p",
-                "phoneme": "/p/",
-                "audio": null
-              }
-            ]
-          },
-          "teacher_cue": "Show a map or draw one. Say the word, then reveal print and blend.",
-          "expected_response": "Students say map orally and connect meaning before print.",
-          "correction_move": "Model map orally again, then reveal and blend.",
-          "observation_note": "Watch for the short /æ/ and clean final /p/.",
-          "korean_interference_flag": "vowel_quality",
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "04-04",
-          "block_id": "04",
-          "slide_title": "Vocabulary: met",
-          "view_type": "flashcard",
-          "content_payload": {
-            "front_text": "met",
-            "back_text": "/m/ /e/ /t/",
-            "audio": "/static/audio/block04_met.mp3",
-            "blend_units": [
-              {
-                "grapheme": "m",
-                "phoneme": "/m/",
+                "grapheme": "g",
+                "phoneme": "/g/",
                 "audio": null
               },
               {
@@ -407,64 +323,28 @@
               }
             ]
           },
-          "teacher_cue": "Say met orally — past tense of meet. I met a man. Reveal print and blend.",
-          "expected_response": "Students say met orally and connect meaning before print.",
-          "correction_move": "Model met orally again, then reveal and blend.",
-          "observation_note": "Watch for the short /e/ vowel — contrast with mat and mit if needed.",
+          "teacher_cue": "Say get orally — to obtain something. Reveal print and blend.",
+          "expected_response": "Students say get orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model get orally again, then reveal and blend.",
+          "observation_note": "Watch for the /g/ onset — voiced, not /k/.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
         },
         {
-          "slide_id": "04-05",
+          "slide_id": "04-02",
           "block_id": "04",
-          "slide_title": "Vocabulary: men",
+          "slide_title": "Vocabulary: gap",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "men",
-            "back_text": "/m/ /e/ /n/",
-            "audio": "/static/audio/block04_men.mp3",
+            "front_text": "gap",
+            "back_text": "/g/ /æ/ /p/",
+            "audio": "/static/audio/block04_gap.mp3",
             "blend_units": [
               {
-                "grapheme": "m",
-                "phoneme": "/m/",
-                "audio": null
-              },
-              {
-                "grapheme": "e",
-                "phoneme": "/e/",
-                "audio": null
-              },
-              {
-                "grapheme": "n",
-                "phoneme": "/n/",
-                "audio": null
-              }
-            ]
-          },
-          "teacher_cue": "Say men orally — more than one man. Reveal print and blend.",
-          "expected_response": "Students say men orally and connect meaning before print.",
-          "correction_move": "Model men orally again, then reveal and blend.",
-          "observation_note": "Watch for the final /n/ — must not be dropped.",
-          "korean_interference_flag": "vowel_quality",
-          "markable": false,
-          "marking_options": [],
-          "next_action": "manual_next"
-        },
-        {
-          "slide_id": "04-06",
-          "block_id": "04",
-          "slide_title": "Vocabulary: mask",
-          "view_type": "flashcard",
-          "content_payload": {
-            "front_text": "mask",
-            "back_text": "/m/ /æ/ /s/ /k/",
-            "audio": "/static/audio/block04_mask.mp3",
-            "blend_units": [
-              {
-                "grapheme": "m",
-                "phoneme": "/m/",
+                "grapheme": "g",
+                "phoneme": "/g/",
                 "audio": null
               },
               {
@@ -473,21 +353,165 @@
                 "audio": null
               },
               {
-                "grapheme": "s",
-                "phoneme": "/s/",
-                "audio": null
-              },
-              {
-                "grapheme": "k",
-                "phoneme": "/k/",
+                "grapheme": "p",
+                "phoneme": "/p/",
                 "audio": null
               }
             ]
           },
-          "teacher_cue": "Mime wearing a mask. Say the word, then reveal print and blend all four sounds.",
-          "expected_response": "Students say mask orally and connect meaning before print.",
-          "correction_move": "Model mask orally again, then reveal and blend.",
-          "observation_note": "Watch whether students blend the final sk cluster cleanly without inserting a vowel.",
+          "teacher_cue": "Describe a gap as a space or opening. Say the word, then reveal print and blend.",
+          "expected_response": "Students say gap orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model gap orally again, then reveal and blend.",
+          "observation_note": "Watch for the short /æ/ in the middle.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: pig",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "pig",
+            "back_text": "/p/ /ɪ/ /g/",
+            "audio": "/static/audio/block04_pig.mp3",
+            "blend_units": [
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say pig — a farm animal. Reveal print and blend. Note /g/ at the end — voiced final stop.",
+          "expected_response": "Students say pig orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model pig orally again, then reveal and blend.",
+          "observation_note": "Watch for the final /g/ — students must voice it, not devoice to /k/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: wig",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "wig",
+            "back_text": "/w/ /ɪ/ /g/",
+            "audio": "/static/audio/block04_wig.mp3",
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Describe a wig as a false head of hair. Reveal print and blend.",
+          "expected_response": "Students say wig orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model wig orally again, then reveal and blend.",
+          "observation_note": "Watch for the short /ɪ/ and voiced final /g/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: dig",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "dig",
+            "back_text": "/d/ /ɪ/ /g/",
+            "audio": "/static/audio/block04_dig.mp3",
+            "blend_units": [
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime digging. Say dig, then reveal print and blend.",
+          "expected_response": "Students say dig orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model dig orally again, then reveal and blend.",
+          "observation_note": "Watch for /g/ vs /k/ at the end — voiced vs voiceless.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: twig",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "twig",
+            "back_text": "/t/ /w/ /ɪ/ /g/",
+            "audio": "/static/audio/block04_twig.mp3",
+            "blend_units": [
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Hold up a small twig. Say the word, then reveal print and blend all four sounds.",
+          "expected_response": "Students say twig orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model twig orally again, then reveal and blend.",
+          "observation_note": "Watch whether students blend tw onset cleanly without inserting a vowel.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -496,14 +520,14 @@
         {
           "slide_id": "04-07",
           "block_id": "04",
-          "slide_title": "Reader Prep: mast",
+          "slide_title": "Reader Prep: grip",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "mast",
-            "back_text": "/m/ /a/ /s/ /t/"
+            "front_text": "grip",
+            "back_text": "/g/ /r/ /i/ /p/"
           },
           "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
-          "expected_response": "Students read mast accurately.",
+          "expected_response": "Students read grip accurately.",
           "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
           "observation_note": "Watch for smooth oral reading before it appears in connected text.",
           "korean_interference_flag": null,
@@ -520,29 +544,29 @@
         {
           "slide_id": "05-01",
           "block_id": "05",
-          "slide_title": "Build: man",
+          "slide_title": "Build: get",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "man",
+            "target_word": "get",
             "target_letters": [
-              "m",
-              "a",
-              "n"
+              "g",
+              "e",
+              "t"
             ],
             "slots": [
-              "m",
-              "a",
-              "n"
+              "g",
+              "e",
+              "t"
             ],
             "draggable_letters": [
-              "n",
-              "a",
-              "m"
+              "t",
+              "e",
+              "g"
             ]
           },
-          "teacher_cue": "Say the sounds and build man left to right.",
-          "expected_response": "Students build man correctly: m | a | n.",
-          "correction_move": "Return to oral segmenting of man, then rebuild one sound at a time.",
+          "teacher_cue": "Say the sounds and build get left to right.",
+          "expected_response": "Students build get correctly: g | e | t.",
+          "correction_move": "Return to oral segmenting of get, then rebuild one sound at a time.",
           "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
@@ -556,29 +580,29 @@
         {
           "slide_id": "05-02",
           "block_id": "05",
-          "slide_title": "Build: map",
+          "slide_title": "Build: gap",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "map",
+            "target_word": "gap",
             "target_letters": [
-              "m",
+              "g",
               "a",
               "p"
             ],
             "slots": [
-              "m",
+              "g",
               "a",
               "p"
             ],
             "draggable_letters": [
               "p",
               "a",
-              "m"
+              "g"
             ]
           },
-          "teacher_cue": "Say the sounds and build map left to right.",
-          "expected_response": "Students build map correctly: m | a | p.",
-          "correction_move": "Return to oral segmenting of map, then rebuild one sound at a time.",
+          "teacher_cue": "Say the sounds and build gap left to right.",
+          "expected_response": "Students build gap correctly: g | a | p.",
+          "correction_move": "Return to oral segmenting of gap, then rebuild one sound at a time.",
           "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
@@ -592,29 +616,29 @@
         {
           "slide_id": "05-03",
           "block_id": "05",
-          "slide_title": "Build: met",
+          "slide_title": "Build: pig",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "met",
+            "target_word": "pig",
             "target_letters": [
-              "m",
-              "e",
-              "t"
+              "p",
+              "i",
+              "g"
             ],
             "slots": [
-              "m",
-              "e",
-              "t"
+              "p",
+              "i",
+              "g"
             ],
             "draggable_letters": [
-              "t",
-              "e",
-              "m"
+              "g",
+              "i",
+              "p"
             ]
           },
-          "teacher_cue": "Say the sounds and build met left to right.",
-          "expected_response": "Students build met correctly: m | e | t.",
-          "correction_move": "Return to oral segmenting of met, then rebuild one sound at a time.",
+          "teacher_cue": "Say the sounds and build pig left to right.",
+          "expected_response": "Students build pig correctly: p | i | g.",
+          "correction_move": "Return to oral segmenting of pig, then rebuild one sound at a time.",
           "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
@@ -628,32 +652,29 @@
         {
           "slide_id": "05-04",
           "block_id": "05",
-          "slide_title": "Build: mask",
+          "slide_title": "Build: dig",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "mask",
+            "target_word": "dig",
             "target_letters": [
-              "m",
-              "a",
-              "s",
-              "k"
+              "d",
+              "i",
+              "g"
             ],
             "slots": [
-              "m",
-              "a",
-              "s",
-              "k"
+              "d",
+              "i",
+              "g"
             ],
             "draggable_letters": [
-              "k",
-              "s",
-              "a",
-              "m"
+              "g",
+              "i",
+              "d"
             ]
           },
-          "teacher_cue": "Say the sounds and build mask left to right.",
-          "expected_response": "Students build mask correctly: m | a | s | k.",
-          "correction_move": "Return to oral segmenting of mask, then rebuild one sound at a time.",
+          "teacher_cue": "Say the sounds and build dig left to right.",
+          "expected_response": "Students build dig correctly: d | i | g.",
+          "correction_move": "Return to oral segmenting of dig, then rebuild one sound at a time.",
           "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
@@ -667,32 +688,32 @@
         {
           "slide_id": "05-05",
           "block_id": "05",
-          "slide_title": "Build: stem",
+          "slide_title": "Build: twig",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "stem",
+            "target_word": "twig",
             "target_letters": [
-              "s",
               "t",
-              "e",
-              "m"
+              "w",
+              "i",
+              "g"
             ],
             "slots": [
-              "s",
               "t",
-              "e",
-              "m"
+              "w",
+              "i",
+              "g"
             ],
             "draggable_letters": [
-              "m",
-              "e",
-              "t",
-              "s"
+              "g",
+              "i",
+              "w",
+              "t"
             ]
           },
-          "teacher_cue": "Say the sounds and build stem left to right.",
-          "expected_response": "Students build stem correctly: s | t | e | m.",
-          "correction_move": "Return to oral segmenting of stem, then rebuild one sound at a time.",
+          "teacher_cue": "Say the sounds and build twig left to right.",
+          "expected_response": "Students build twig correctly: t | w | i | g.",
+          "correction_move": "Return to oral segmenting of twig, then rebuild one sound at a time.",
           "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
@@ -715,21 +736,19 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "A man has a map.",
+            "text_content": "The pig sat.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "A": "sight",
-              "man": "decodable",
-              "has": "decodable",
-              "a": "sight",
-              "map": "decodable"
+              "The": "sight",
+              "pig": "decodable",
+              "sat": "decodable"
             }
           },
-          "teacher_cue": "A and a are sight words. man, has, map all decodable. Read left to right.",
-          "expected_response": "Students read \"A man has a map.\" accurately.",
+          "teacher_cue": "The is a sight word. pig and sat are decodable.",
+          "expected_response": "Students read \"The pig sat.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
-          "observation_note": "Watch whether students produce /m/ cleanly in man and map.",
+          "observation_note": "Watch for voiced final /g/ in pig.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -745,24 +764,24 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He met a man. The man has a mask.",
+            "text_content": "I can dig. He has a pig.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
+              "I": "sight",
+              "can": "decodable",
+              "dig": "decodable",
               "He": "sight",
-              "met": "decodable",
-              "a": "sight",
-              "man": "decodable",
-              "The": "sight",
               "has": "decodable",
-              "mask": "decodable"
+              "a": "sight",
+              "pig": "decodable"
             }
           },
-          "teacher_cue": "Two sentences. He and The are sight words. All other words decodable.",
-          "expected_response": "Students read \"He met a man. The man has a mask.\" accurately.",
+          "teacher_cue": "Two sentences. I and He are sight words. All other words decodable.",
+          "expected_response": "Students read \"I can dig. He has a pig.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
-          "observation_note": "Watch for /m/ in met, man, mask and consistent /r/ in met (no /r/ — but r_l check still active).",
-          "korean_interference_flag": "r_l",
+          "observation_note": "Watch for /g/ in dig and pig.",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -777,27 +796,24 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The men ran. He met me. A man set the mast.",
+            "text_content": "The pig can dig. I get a grip.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "men": "decodable",
-              "ran": "decodable",
-              "He": "sight",
-              "met": "decodable",
-              "me": "sight",
-              "A": "sight",
-              "man": "decodable",
-              "set": "decodable",
-              "the": "sight",
-              "mast": "decodable"
+              "pig": "decodable",
+              "can": "decodable",
+              "dig": "decodable",
+              "I": "sight",
+              "get": "decodable",
+              "a": "sight",
+              "grip": "decodable"
             }
           },
-          "teacher_cue": "Three sentences. He, me, The are sight words. All other words decodable.",
-          "expected_response": "Students read \"The men ran. He met me. A man set the mast.\" accurately.",
+          "teacher_cue": "Two sentences. The and I are sight words. All other words decodable.",
+          "expected_response": "Students read \"The pig can dig. I get a grip.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
-          "observation_note": "Watch whether students say me as a whole sight word and do not blend it.",
+          "observation_note": "Watch for /g/ in pig, dig, get, grip — consistent voiced production.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -819,36 +835,35 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "A man has a map.\nHe met a man.\nThe men ran.\nI met him.\nThe man has a mask.\nHe set the mast.\nThe men can trek.",
+            "text_content": "The pig sat.\nI can dig.\nHe has a pig.\nThe pig can dig.\nI get a grip.\nHe ran and the pig ran.\nI can get it.\nThe pig had a wig.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Where is the man going? Why does he have a mask? Tell me the story in one sentence.",
+            "comprehension_prompt": "What did the pig do? Did the pig really have a wig? Tell me something funny.",
             "word_types": {
-              "A": "sight",
-              "man": "decodable",
+              "The": "sight",
+              "pig": "decodable",
+              "sat": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "dig": "decodable",
+              "He": "sight",
               "has": "decodable",
               "a": "sight",
-              "map": "decodable",
-              "He": "sight",
-              "met": "decodable",
-              "The": "sight",
-              "men": "decodable",
+              "get": "decodable",
+              "grip": "decodable",
               "ran": "decodable",
-              "I": "sight",
-              "him": "decodable",
-              "mask": "decodable",
-              "set": "decodable",
+              "and": "decodable",
               "the": "sight",
-              "mast": "decodable",
-              "can": "decodable",
-              "trek": "decodable"
+              "it": "decodable",
+              "had": "decodable",
+              "wig": "decodable"
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
-          "korean_interference_flag": "r_l",
+          "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
             "secure",
@@ -866,23 +881,23 @@
         {
           "slide_id": "08-01",
           "block_id": "08",
-          "slide_title": "Listen and Write: man",
+          "slide_title": "Listen and Write: pig",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block08_man.mp3",
-            "dictated_text": "man",
-            "expected_answer": "man",
+            "audio_prompt": "/static/audio/block08_pig.mp3",
+            "dictated_text": "pig",
+            "expected_answer": "pig",
             "elkonin_boxes": 3,
             "grapheme_units": [
-              "m",
-              "a",
-              "n"
+              "p",
+              "i",
+              "g"
             ]
           },
-          "teacher_cue": "Play man once. Replay only if needed before checking.",
-          "expected_response": "Students write man accurately.",
-          "correction_move": "Replay man once, segment orally, then recheck.",
-          "observation_note": "Watch whether students encode man accurately from sound to print.",
+          "teacher_cue": "Play pig once. Replay only if needed before checking.",
+          "expected_response": "Students write pig accurately.",
+          "correction_move": "Replay pig once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode pig accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -895,23 +910,23 @@
         {
           "slide_id": "08-02",
           "block_id": "08",
-          "slide_title": "Listen and Write: map",
+          "slide_title": "Listen and Write: dig",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block08_map.mp3",
-            "dictated_text": "map",
-            "expected_answer": "map",
+            "audio_prompt": "/static/audio/block08_dig.mp3",
+            "dictated_text": "dig",
+            "expected_answer": "dig",
             "elkonin_boxes": 3,
             "grapheme_units": [
-              "m",
-              "a",
-              "p"
+              "d",
+              "i",
+              "g"
             ]
           },
-          "teacher_cue": "Play map once. Replay only if needed before checking.",
-          "expected_response": "Students write map accurately.",
-          "correction_move": "Replay map once, segment orally, then recheck.",
-          "observation_note": "Watch whether students encode map accurately from sound to print.",
+          "teacher_cue": "Play dig once. Replay only if needed before checking.",
+          "expected_response": "Students write dig accurately.",
+          "correction_move": "Replay dig once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode dig accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -924,23 +939,23 @@
         {
           "slide_id": "08-03",
           "block_id": "08",
-          "slide_title": "Listen and Write: met",
+          "slide_title": "Listen and Write: get",
           "view_type": "writing_encoding",
           "content_payload": {
-            "audio_prompt": "/static/audio/block08_met.mp3",
-            "dictated_text": "met",
-            "expected_answer": "met",
+            "audio_prompt": "/static/audio/block08_get.mp3",
+            "dictated_text": "get",
+            "expected_answer": "get",
             "elkonin_boxes": 3,
             "grapheme_units": [
-              "m",
+              "g",
               "e",
               "t"
             ]
           },
-          "teacher_cue": "Play met once. Replay only if needed before checking.",
-          "expected_response": "Students write met accurately.",
-          "correction_move": "Replay met once, segment orally, then recheck.",
-          "observation_note": "Watch whether students encode met accurately from sound to print.",
+          "teacher_cue": "Play get once. Replay only if needed before checking.",
+          "expected_response": "Students write get accurately.",
+          "correction_move": "Replay get once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode get accurately from sound to print.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -964,16 +979,18 @@
           "content_payload": {
             "display_mode": "spot_part",
             "displayed_words": [
-              "man",
-              "men"
+              "pig",
+              "wig",
+              "dig",
+              "twig"
             ],
-            "highlighted_chunk": null,
-            "support_text": "What changed? Same onset and coda — which sound is different?"
+            "highlighted_chunk": "ig",
+            "support_text": "What do these words share at the end?"
           },
-          "teacher_cue": "Read the words aloud. Ask: What changed? Same onset and coda — which sound is different?",
-          "expected_response": "Students identify what changed and name the difference.",
-          "correction_move": "Model both words, isolate the changing part, then ask again.",
-          "observation_note": "Watch whether students can hear and name the specific change.",
+          "teacher_cue": "Show the words. Ask: What do these words share at the end?",
+          "expected_response": "Students identify the shared pattern and name what changes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask the question again.",
+          "observation_note": "Watch whether students can hear and see the shared pattern across words.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -996,14 +1013,14 @@
             "check_items": [
               {
                 "label": "Which new sound did we learn today?",
-                "phoneme": "/m/"
+                "phoneme": "/g/"
               },
               {
-                "label": "Where is the man going? Why does he have a mask? Tell me the story in one sentence.",
+                "label": "What did the pig do? Did the pig really have a wig? Tell me something funny.",
                 "phoneme": null
               },
               {
-                "label": "Tell me one full sentence using me or man.",
+                "label": "Tell me one full sentence using get or gap.",
                 "phoneme": null
               }
             ],
@@ -1020,12 +1037,5 @@
         }
       ]
     }
-  },
-  "sight_words": [
-    "I",
-    "the",
-    "a",
-    "he",
-    "me"
-  ]
+  }
 }

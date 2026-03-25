@@ -1,0 +1,1401 @@
+{
+  "lesson_id": "G8-L49",
+  "unit_id": "G8",
+  "target_pattern": "final_l_clusters",
+  "title": "Group 8, Lesson 49: final l-clusters -ld -lp -lk -lm",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l",
+    "cluster"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: -st -sk -sp -ft -lt -lf",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-st -sk -sp -ft -lt -lf",
+            "back_text": "s/f/l final clusters",
+            "audio": "/static/audio/-st_-sk_-sp_-ft_-lt_-lf.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce s/f/l final clusters quickly and cleanly.",
+          "correction_move": "Model s/f/l final clusters, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: -nd -nt -nk -mp",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-nd -nt -nk -mp",
+            "back_text": "nasal final clusters",
+            "audio": "/static/audio/-nd_-nt_-nk_-mp.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce nasal final clusters quickly and cleanly.",
+          "correction_move": "Model nasal final clusters, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: l",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "l",
+            "back_text": "/l/",
+            "audio": "/static/audio/l.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /l/ quickly and cleanly.",
+          "correction_move": "Model /l/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: a",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "a — sight word",
+            "audio": "/static/audio/sight_a.mp3",
+            "word_types": {
+              "a": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say a immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: he",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "he",
+            "back_text": "he — sight word",
+            "audio": "/static/audio/sight_he.mp3",
+            "word_types": {
+              "he": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say he immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: me",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "me",
+            "back_text": "me — sight word",
+            "audio": "/static/audio/sight_me.mp3",
+            "word_types": {
+              "me": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say me immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: was",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "was",
+            "back_text": "was — sight word",
+            "audio": "/static/audio/sight_was.mp3",
+            "word_types": {
+              "was": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say was immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: best",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_best.mp3",
+            "dictated_text": "best",
+            "expected_answer": "best",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "b",
+              "e",
+              "s",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play best once. Replay only if needed.",
+          "expected_response": "Students write best accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: left",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_left.mp3",
+            "dictated_text": "left",
+            "expected_answer": "left",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "l",
+              "e",
+              "f",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play left once. Replay only if needed.",
+          "expected_response": "Students write left accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: shelf",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_shelf.mp3",
+            "dictated_text": "shelf",
+            "expected_answer": "shelf",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "sh",
+              "e",
+              "l",
+              "f"
+            ]
+          },
+          "teacher_cue": "Play shelf once. Replay only if needed.",
+          "expected_response": "Students write shelf accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce final l-clusters: -ld -lp -lk -lm",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ld  -lp  -lk  -lm",
+            "back_text": "l final clusters",
+            "audio": "/static/audio/final_l_clusters.mp3"
+          },
+          "teacher_cue": "Four l-final clusters. -ld (bold, hold, cold, gold), -lp (help, yelp, gulp), -lk (milk, silk, bulk), -lm (film, elm, calm). The l comes first, then the second consonant. Both must be produced. The -old family is a key high-frequency pattern: bold, cold, fold, gold, hold, old, sold, told.",
+          "expected_response": "Students produce all four l-final clusters and learn the -old family as a unit.",
+          "correction_move": "Model each cluster. Then teach the -old family as a word family — same chunk, different onset. Students generate as many -old words as they can.",
+          "observation_note": "Watch for /r/ substitution for /l/ — still active. And watch for final cluster reduction.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: gold",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "gold",
+            "back_text": "/g/ /oʊ/ /l/ /d/",
+            "audio": "/static/audio/block04_gold.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/oʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ld",
+                "phoneme": "/ld/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say gold — the precious metal. -ld final cluster. Long /oʊ/ before the cluster. Reveal and blend.",
+          "expected_response": "Students say gold orally and connect meaning before blending.",
+          "correction_move": "Model gold orally again, reveal and blend.",
+          "observation_note": "Watch for long /oʊ/ in old and -ld cluster — both l and d clear.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: hold",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hold",
+            "back_text": "/h/ /oʊ/ /l/ /d/",
+            "audio": "/static/audio/block04_hold.mp3",
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/oʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ld",
+                "phoneme": "/ld/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime holding something. Say hold — -ld cluster. Reveal and blend.",
+          "expected_response": "Students say hold orally and connect meaning before blending.",
+          "correction_move": "Model hold orally again, reveal and blend.",
+          "observation_note": "Watch for -ld at the end — both sounds present.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: help",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "help",
+            "back_text": "/h/ /e/ /l/ /p/",
+            "audio": "/static/audio/block04_help.mp3",
+            "blend_units": [
+              {
+                "grapheme": "h",
+                "phoneme": "/h/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "lp",
+                "phoneme": "/lp/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say help — to assist. -lp final cluster. Reveal and blend.",
+          "expected_response": "Students say help orally and connect meaning before blending.",
+          "correction_move": "Model help orally again, reveal and blend.",
+          "observation_note": "Watch for -lp at the end — both l and p clear.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: milk",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "milk",
+            "back_text": "/m/ /ɪ/ /l/ /k/",
+            "audio": "/static/audio/block04_milk.mp3",
+            "blend_units": [
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "lk",
+                "phoneme": "/lk/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say milk — the white drink. -lk final cluster. Reveal and blend.",
+          "expected_response": "Students say milk orally and connect meaning before blending.",
+          "correction_move": "Model milk orally again, reveal and blend.",
+          "observation_note": "Watch for -lk at the end — both l and k clear.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: film",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "film",
+            "back_text": "/f/ /ɪ/ /l/ /m/",
+            "audio": "/static/audio/block04_film.mp3",
+            "blend_units": [
+              {
+                "grapheme": "f",
+                "phoneme": "/f/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "lm",
+                "phoneme": "/lm/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say film — a movie; also a thin layer. Confirm /f/ onset and -lm final cluster. Reveal and blend.",
+          "expected_response": "Students say film orally and connect meaning before blending.",
+          "correction_move": "Model film orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and -lm at the end.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bold",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bold",
+            "back_text": "/b/ /oʊ/ /l/ /d/",
+            "audio": "/static/audio/block04_bold.mp3",
+            "blend_units": [
+              {
+                "grapheme": "b",
+                "phoneme": "/b/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/oʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ld",
+                "phoneme": "/ld/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say bold — brave and confident. -ld cluster. Same -old family as gold and hold. Reveal and blend.",
+          "expected_response": "Students say bold orally and connect meaning before blending.",
+          "correction_move": "Model bold orally again, reveal and blend.",
+          "observation_note": "Watch for -ld cluster and long /oʊ/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: held",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "held",
+            "back_text": "held"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read held accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: helps",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "helps",
+            "back_text": "helps"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read helps accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: holds",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "holds",
+            "back_text": "holds"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read holds accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: cold",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cold",
+            "back_text": "cold"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read cold accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: glass",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "glass",
+            "back_text": "glass"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read glass accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: old",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "old",
+            "back_text": "old"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read old accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: gulped",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "gulped",
+            "back_text": "gulped"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read gulped accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: yelped",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "yelped",
+            "back_text": "yelped"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read yelped accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-15",
+          "block_id": "04",
+          "slide_title": "Reader Prep: silk",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "silk",
+            "back_text": "silk"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read silk accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-16",
+          "block_id": "04",
+          "slide_title": "Reader Prep: glowed",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "glowed",
+            "back_text": "glowed"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read glowed accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-17",
+          "block_id": "04",
+          "slide_title": "Reader Prep: dim",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "dim",
+            "back_text": "dim"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read dim accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-18",
+          "block_id": "04",
+          "slide_title": "Reader Prep: light",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "light",
+            "back_text": "light"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read light accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-19",
+          "block_id": "04",
+          "slide_title": "Reader Prep: yield",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "yield",
+            "back_text": "yield"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read yield accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-20",
+          "block_id": "04",
+          "slide_title": "Reader Prep: bulky",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bulky",
+            "back_text": "bulky"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read bulky accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-21",
+          "block_id": "04",
+          "slide_title": "Reader Prep: reel",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "reel",
+            "back_text": "reel"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read reel accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-22",
+          "block_id": "04",
+          "slide_title": "Reader Prep: told",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "told",
+            "back_text": "told"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read told accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-23",
+          "block_id": "04",
+          "slide_title": "Reader Prep: story",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "story",
+            "back_text": "story"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read story accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-24",
+          "block_id": "04",
+          "slide_title": "Reader Prep: all",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "all",
+            "back_text": "all"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read all accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: gold",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "gold",
+            "target_letters": [
+              "g",
+              "o",
+              "ld"
+            ],
+            "slots": [
+              "g",
+              "o",
+              "ld"
+            ],
+            "draggable_letters": [
+              "ld",
+              "o",
+              "g"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build gold left to right.",
+          "expected_response": "Students build gold correctly: g | o | ld.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: hold",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hold",
+            "target_letters": [
+              "h",
+              "o",
+              "ld"
+            ],
+            "slots": [
+              "h",
+              "o",
+              "ld"
+            ],
+            "draggable_letters": [
+              "ld",
+              "o",
+              "h"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build hold left to right.",
+          "expected_response": "Students build hold correctly: h | o | ld.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: help",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "help",
+            "target_letters": [
+              "h",
+              "e",
+              "lp"
+            ],
+            "slots": [
+              "h",
+              "e",
+              "lp"
+            ],
+            "draggable_letters": [
+              "lp",
+              "e",
+              "h"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build help left to right.",
+          "expected_response": "Students build help correctly: h | e | lp.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: milk",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "milk",
+            "target_letters": [
+              "m",
+              "i",
+              "lk"
+            ],
+            "slots": [
+              "m",
+              "i",
+              "lk"
+            ],
+            "draggable_letters": [
+              "lk",
+              "i",
+              "m"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build milk left to right.",
+          "expected_response": "Students build milk correctly: m | i | lk.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: film",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "film",
+            "target_letters": [
+              "f",
+              "i",
+              "lm"
+            ],
+            "slots": [
+              "f",
+              "i",
+              "lm"
+            ],
+            "draggable_letters": [
+              "lm",
+              "i",
+              "f"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build film left to right.",
+          "expected_response": "Students build film correctly: f | i | lm.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bold girl held the gold.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "bold": "decodable",
+              "girl": "decodable",
+              "held": "decodable",
+              "the": "sight",
+              "gold": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on bold, girl, held, gold.",
+          "expected_response": "Students read \"The bold girl held the gold.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The bold girl held the gold.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He holds the cold glass of milk.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "holds": "decodable",
+              "the": "sight",
+              "cold": "decodable",
+              "glass": "decodable",
+              "of": "sight",
+              "milk": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on holds, cold, glass, milk.",
+          "expected_response": "Students read \"He holds the cold glass of milk.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"He holds the cold glass of milk.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The old film reel was bold.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "old": "decodable",
+              "film": "decodable",
+              "reel": "decodable",
+              "was": "sight",
+              "bold": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on old, film, reel, bold.",
+          "expected_response": "Students read \"The old film reel was bold.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The old film reel was bold.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She told the bold story.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "told": "decodable",
+              "the": "sight",
+              "bold": "decodable",
+              "story": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on told, bold, story.",
+          "expected_response": "Students read \"She told the bold story.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"She told the bold story.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bold girl held the gold.\nHe holds the cold glass of milk.\nThe old film reel was in the dim light.\nShe told the bold story.\nThe cold glass glowed by the silk film.\nThey held still by the film.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all the -ld words. Find all the -lp words. Find all the -lk words.",
+            "word_types": {
+              "The": "sight",
+              "bold": "decodable",
+              "girl": "decodable",
+              "held": "decodable",
+              "the": "sight",
+              "gold": "decodable",
+              "He": "sight",
+              "holds": "decodable",
+              "cold": "decodable",
+              "glass": "decodable",
+              "of": "sight",
+              "milk": "decodable",
+              "old": "decodable",
+              "film": "decodable",
+              "reel": "decodable",
+              "was": "sight",
+              "in": "decodable",
+              "dim": "decodable",
+              "light": "decodable",
+              "She": "sight",
+              "told": "decodable",
+              "story": "decodable",
+              "glowed": "decodable",
+              "by": "decodable",
+              "silk": "decodable",
+              "They": "sight",
+              "still": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
+          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
+          "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: gold",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_gold.mp3",
+            "dictated_text": "gold",
+            "expected_answer": "gold",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "g",
+              "o",
+              "l",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play gold once. Replay only if needed.",
+          "expected_response": "Students write gold accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: help",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_help.mp3",
+            "dictated_text": "help",
+            "expected_answer": "help",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "h",
+              "e",
+              "l",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play help once. Replay only if needed.",
+          "expected_response": "Students write help accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: milk",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_milk.mp3",
+            "dictated_text": "milk",
+            "expected_answer": "milk",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "m",
+              "i",
+              "l",
+              "k"
+            ]
+          },
+          "teacher_cue": "Play milk once. Replay only if needed.",
+          "expected_response": "Students write milk accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "bold",
+              "cold",
+              "fold",
+              "gold",
+              "hold",
+              "old",
+              "told"
+            ],
+            "highlighted_chunk": "-old",
+            "support_text": "What do all these words share? What sound does -old make?"
+          },
+          "teacher_cue": "Show the words. Ask: What do all these words share? What sound does -old make?",
+          "expected_response": "Students identify the shared cluster and name its sounds.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the cluster correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Name the four l-final clusters: -ld -lp -lk -lm. One word for each.",
+                "phoneme": null
+              },
+              {
+                "label": "Who held the gold? What glowed in the dim light? Find the -ld, -lk, and -lm words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using gold or hold.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

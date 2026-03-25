@@ -1,0 +1,1108 @@
+{
+  "lesson_id": "G8-L45",
+  "unit_id": "G8",
+  "target_pattern": "r_clusters",
+  "title": "Group 8, Lesson 45: r-clusters (br cr dr fr gr pr tr)",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "r_l",
+    "f_p",
+    "cluster"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: l-clusters",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "l-clusters",
+            "back_text": "bl cl fl gl pl sl",
+            "audio": "/static/audio/l-clusters.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce bl cl fl gl pl sl quickly and cleanly.",
+          "correction_move": "Model bl cl fl gl pl sl, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: f",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "f",
+            "back_text": "/f/",
+            "audio": "/static/audio/f.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /f/ quickly and cleanly.",
+          "correction_move": "Model /f/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: was",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "was",
+            "back_text": "was — sight word",
+            "audio": "/static/audio/sight_was.mp3",
+            "word_types": {
+              "was": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say was immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: we",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
+            "word_types": {
+              "we": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: black",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_black.mp3",
+            "dictated_text": "black",
+            "expected_answer": "black",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "b",
+              "l",
+              "a",
+              "ck"
+            ]
+          },
+          "teacher_cue": "Play black once. Replay only if needed.",
+          "expected_response": "Students write black accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: flag",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_flag.mp3",
+            "dictated_text": "flag",
+            "expected_answer": "flag",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "f",
+              "l",
+              "a",
+              "g"
+            ]
+          },
+          "teacher_cue": "Play flag once. Replay only if needed.",
+          "expected_response": "Students write flag accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: plan",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_plan.mp3",
+            "dictated_text": "plan",
+            "expected_answer": "plan",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "p",
+              "l",
+              "a",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play plan once. Replay only if needed.",
+          "expected_response": "Students write plan accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce r-clusters: br cr dr fr gr pr tr",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "br  cr  dr  fr  gr  pr  tr",
+            "back_text": "r-clusters",
+            "audio": "/static/audio/r_clusters.mp3"
+          },
+          "teacher_cue": "R-clusters: a consonant followed immediately by r. Seven clusters this lesson. br (bring, brown), cr (crack, crown), dr (drop, drum), fr (frog, from), gr (grip, grow), pr (press, price), tr (trip, tree). Critical for Korean learners: /r/ must be produced correctly in every cluster. No vowel between the two consonants.",
+          "expected_response": "Students produce all seven r-clusters without vowel insertion and with correct /r/ production.",
+          "correction_move": "Drill each cluster: br-br-br, cr-cr-cr, dr-dr-dr, fr-fr-fr, gr-gr-gr, pr-pr-pr, tr-tr-tr. Confirm /r/ quality — tongue curled back, no contact — before applying to words.",
+          "observation_note": "Watch for vowel insertion (buh-ring, tuh-rip) and /l/ substitution for /r/ in clusters. Both are common Korean interference patterns in clusters.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: bring",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bring",
+            "back_text": "/b/ /r/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_bring.mp3",
+            "blend_units": [
+              {
+                "grapheme": "br",
+                "phoneme": "/br/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say bring — to carry here. br cluster, ng coda. Reveal and blend.",
+          "expected_response": "Students say bring orally and connect meaning before blending.",
+          "correction_move": "Model bring orally again, reveal and blend.",
+          "observation_note": "Watch for vowel insertion between b and r and /l/ on /r/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: crack",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "crack",
+            "back_text": "/k/ /r/ /æ/ /k/",
+            "audio": "/static/audio/block04_crack.mp3",
+            "blend_units": [
+              {
+                "grapheme": "cr",
+                "phoneme": "/kr/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ck",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say crack — a thin break. cr cluster. Reveal and blend.",
+          "expected_response": "Students say crack orally and connect meaning before blending.",
+          "correction_move": "Model crack orally again, reveal and blend.",
+          "observation_note": "Watch for cr onset — no vowel insertion, /r/ not /l/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: drop",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "drop",
+            "back_text": "/d/ /r/ /ɒ/ /p/",
+            "audio": "/static/audio/block04_drop.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dr",
+                "phoneme": "/dr/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/ɒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say drop — to fall or let fall. dr cluster. Reveal and blend.",
+          "expected_response": "Students say drop orally and connect meaning before blending.",
+          "correction_move": "Model drop orally again, reveal and blend.",
+          "observation_note": "Watch for dr onset and short /ɒ/ vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: frog",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "frog",
+            "back_text": "/f/ /r/ /ɒ/ /g/",
+            "audio": "/static/audio/block04_frog.mp3",
+            "blend_units": [
+              {
+                "grapheme": "fr",
+                "phoneme": "/fr/",
+                "audio": null
+              },
+              {
+                "grapheme": "o",
+                "phoneme": "/ɒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/g/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say frog — the amphibian. fr cluster. Confirm /f/ not /p/. Reveal and blend.",
+          "expected_response": "Students say frog orally and connect meaning before blending.",
+          "correction_move": "Model frog orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and for fr cluster — no vowel insertion.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: green",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "green",
+            "back_text": "/g/ /r/ /iː/ /n/",
+            "audio": "/static/audio/block04_green.mp3",
+            "blend_units": [
+              {
+                "grapheme": "gr",
+                "phoneme": "/gr/",
+                "audio": null
+              },
+              {
+                "grapheme": "ee",
+                "phoneme": "/iː/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say green — the colour. gr cluster, ee vowel team. Reveal and blend.",
+          "expected_response": "Students say green orally and connect meaning before blending.",
+          "correction_move": "Model green orally again, reveal and blend.",
+          "observation_note": "Watch for gr onset and long /iː/ in ee.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: price",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "price",
+            "back_text": "/p/ /r/ /aɪ/ /s/",
+            "audio": "/static/audio/block04_price.mp3",
+            "blend_units": [
+              {
+                "grapheme": "pr",
+                "phoneme": "/pr/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/aɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "silent",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say price — the cost. pr cluster, i_e CVCe, soft c. Reveal and blend.",
+          "expected_response": "Students say price orally and connect meaning before blending.",
+          "correction_move": "Model price orally again, reveal and blend.",
+          "observation_note": "Watch for pr onset and soft c = /s/ at the end.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Vocabulary: trip",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "trip",
+            "back_text": "/t/ /r/ /ɪ/ /p/",
+            "audio": "/static/audio/block04_trip.mp3",
+            "blend_units": [
+              {
+                "grapheme": "tr",
+                "phoneme": "/tr/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say trip — a journey. tr cluster. Reveal and blend.",
+          "expected_response": "Students say trip orally and connect meaning before blending.",
+          "correction_move": "Model trip orally again, reveal and blend.",
+          "observation_note": "Watch for tr onset — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: bring",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "bring",
+            "target_letters": [
+              "br",
+              "i",
+              "ng"
+            ],
+            "slots": [
+              "br",
+              "i",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "i",
+              "br"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build bring left to right.",
+          "expected_response": "Students build bring correctly: br | i | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: crack",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "crack",
+            "target_letters": [
+              "cr",
+              "a",
+              "ck"
+            ],
+            "slots": [
+              "cr",
+              "a",
+              "ck"
+            ],
+            "draggable_letters": [
+              "ck",
+              "a",
+              "cr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build crack left to right.",
+          "expected_response": "Students build crack correctly: cr | a | ck.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: drop",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "drop",
+            "target_letters": [
+              "dr",
+              "o",
+              "p"
+            ],
+            "slots": [
+              "dr",
+              "o",
+              "p"
+            ],
+            "draggable_letters": [
+              "p",
+              "o",
+              "dr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build drop left to right.",
+          "expected_response": "Students build drop correctly: dr | o | p.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: frog",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "frog",
+            "target_letters": [
+              "fr",
+              "o",
+              "g"
+            ],
+            "slots": [
+              "fr",
+              "o",
+              "g"
+            ],
+            "draggable_letters": [
+              "g",
+              "o",
+              "fr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build frog left to right.",
+          "expected_response": "Students build frog correctly: fr | o | g.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: green",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "green",
+            "target_letters": [
+              "gr",
+              "ee",
+              "n"
+            ],
+            "slots": [
+              "gr",
+              "ee",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "ee",
+              "gr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build green left to right.",
+          "expected_response": "Students build green correctly: gr | ee | n.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the green frog on the trip.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "on": "decodable",
+              "trip": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on bring, green, frog, on.",
+          "expected_response": "Students read \"We bring the green frog on the trip.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"We bring the green frog on the trip.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The green frog is by the crack.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "crack": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on green, frog, is, by.",
+          "expected_response": "Students read \"The green frog is by the crack.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The green frog is by the crack.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The price can drop on the trip.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "price": "decodable",
+              "can": "decodable",
+              "drop": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "trip": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on price, can, drop, on.",
+          "expected_response": "Students read \"The price can drop on the trip.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The price can drop on the trip.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the frog to the crack.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "frog": "decodable",
+              "to": "sight",
+              "crack": "decodable"
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on bring, frog, crack.",
+          "expected_response": "Students read \"We bring the frog to the crack.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"We bring the frog to the crack.\".",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the green frog on the trip.\nThe green frog is by the crack.\nThe price can drop on the trip.\nWe bring the frog by the crack.\nThe green frog can drop by the crack.\nThe trip price can drop.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Find all seven r-cluster types. Which is hardest to say?",
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "on": "decodable",
+              "trip": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "by": "decodable",
+              "crack": "decodable",
+              "price": "decodable",
+              "can": "decodable",
+              "drop": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for cluster blending — no vowel insertion between consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: frog",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_frog.mp3",
+            "dictated_text": "frog",
+            "expected_answer": "frog",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "f",
+              "r",
+              "o",
+              "g"
+            ]
+          },
+          "teacher_cue": "Play frog once. Replay only if needed.",
+          "expected_response": "Students write frog accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: green",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_green.mp3",
+            "dictated_text": "green",
+            "expected_answer": "green",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "g",
+              "r",
+              "ee",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play green once. Replay only if needed. Remind students: /iː/ is spelled 'ee' — both letters go in one box.",
+          "expected_response": "Students write green accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: trip",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_trip.mp3",
+            "dictated_text": "trip",
+            "expected_answer": "trip",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "t",
+              "r",
+              "i",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play trip once. Replay only if needed.",
+          "expected_response": "Students write trip accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "bring",
+              "crack",
+              "drop",
+              "frog",
+              "green",
+              "price",
+              "trip"
+            ],
+            "highlighted_chunk": "r-cluster",
+            "support_text": "What is the second sound in each of these words?"
+          },
+          "teacher_cue": "Show the words. Ask: What is the second sound in each of these words?",
+          "expected_response": "Students identify the shared cluster and name its sounds.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the cluster correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Name all seven r-clusters: br cr dr fr gr pr tr — say one word for each.",
+                "phoneme": null
+              },
+              {
+                "label": "Find all seven r-cluster types. Which is hardest to say?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using bring or crack.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

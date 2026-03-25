@@ -1,0 +1,1236 @@
+{
+  "lesson_id": "G5-L27",
+  "unit_id": "G5",
+  "target_pattern": "ai_ay",
+  "title": "Group 5, Lesson 27: ai and ay",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: ng",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ng",
+            "back_text": "/ŋ/",
+            "audio": "/static/audio/ng.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ŋ/ quickly and cleanly.",
+          "correction_move": "Model /ŋ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ch",
+            "back_text": "/tʃ/",
+            "audio": "/static/audio/ch.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /tʃ/ quickly and cleanly.",
+          "correction_move": "Model /tʃ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: th (voiced)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th (voiced)",
+            "back_text": "/ð/",
+            "audio": "/static/audio/th_(voiced).mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ð/ quickly and cleanly.",
+          "correction_move": "Model /ð/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: we",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
+            "word_types": {
+              "we": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model we in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model to in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model go in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model no in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: sing",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_sing.mp3",
+            "dictated_text": "sing",
+            "expected_answer": "sing",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play sing once. Replay only if needed.",
+          "expected_response": "Students write sing accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: king",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_king.mp3",
+            "dictated_text": "king",
+            "expected_answer": "king",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "k",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play king once. Replay only if needed.",
+          "expected_response": "Students write king accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: strong",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_strong.mp3",
+            "dictated_text": "strong",
+            "expected_answer": "strong",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "s",
+              "t",
+              "r",
+              "o",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play strong once. Replay only if needed.",
+          "expected_response": "Students write strong accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /eɪ/ — ai and ay",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ai / ay",
+            "back_text": "/eɪ/",
+            "audio": "/static/audio/ai_ay.mp3"
+          },
+          "teacher_cue": "New sound — and our first vowel team. Two letters, one long vowel sound: /eɪ/. Two spellings: ai appears in the middle of a word (rain, sail), ay appears at the end of a word (day, play). Same sound — different position rule.",
+          "expected_response": "Students produce /eɪ/ cleanly and understand the ai/ay position rule.",
+          "correction_move": "Model the position rule: ai in the middle — rain, sail, tail. ay at the end — day, say, way. Students sort words by position.",
+          "observation_note": "Watch for students confusing ai and ay spellings. Reinforce the position rule at every opportunity.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Sight Word: they",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "they",
+            "back_text": "they — sight word",
+            "audio": "/static/audio/sight_they.mp3",
+            "word_types": {
+              "they": "sight"
+            }
+          },
+          "teacher_cue": "Sight word — underlined. Say it as a whole unit. Uses 'ey' spelling for /eɪ/ — ey is a variant of ay not yet formally taught. Learn as a whole unit.",
+          "expected_response": "Students say they immediately as a whole unit.",
+          "correction_move": "Model they in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for blending attempts. Redirect — sight word, say it whole.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: rain",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rain",
+            "back_text": "/r/ /eɪ/ /n/",
+            "audio": "/static/audio/block04_rain.mp3",
+            "blend_units": [
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "ai",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say rain — water falling from clouds. Confirm /r/ onset and /eɪ/ vowel team. Reveal and blend.",
+          "expected_response": "Students say rain orally, connect meaning, then blend on the card.",
+          "correction_move": "Model rain orally again, reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ and for the ai spelling in the middle of the word.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: sail",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sail",
+            "back_text": "/s/ /eɪ/ /l/",
+            "audio": "/static/audio/block04_sail.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "ai",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say sail — to travel on water. ai in the middle. Reveal and blend.",
+          "expected_response": "Students say sail orally, connect meaning, then blend on the card.",
+          "correction_move": "Model sail orally again, reveal and blend.",
+          "observation_note": "Watch for the ai vowel team and /l/ vs /r/ in the coda.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: train",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "train",
+            "back_text": "/t/ /r/ /eɪ/ /n/",
+            "audio": "/static/audio/block04_train.mp3",
+            "blend_units": [
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "ai",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say train — a vehicle on rails. Note tr onset. Confirm ai vowel team. Reveal and blend.",
+          "expected_response": "Students say train orally, connect meaning, then blend on the card.",
+          "correction_move": "Model train orally again, reveal and blend.",
+          "observation_note": "Watch for vowel insertion between t and r and for the ai spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: day",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "day",
+            "back_text": "/d/ /eɪ/",
+            "audio": "/static/audio/block04_day.mp3",
+            "blend_units": [
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              },
+              {
+                "grapheme": "ay",
+                "phoneme": "/eɪ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say day — a period of time. ay at the end. Reveal and blend.",
+          "expected_response": "Students say day orally, connect meaning, then blend on the card.",
+          "correction_move": "Model day orally again, reveal and blend.",
+          "observation_note": "Watch for the ay spelling at the end of the word — contrast with ai in the middle.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: play",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "play",
+            "back_text": "/p/ /l/ /eɪ/",
+            "audio": "/static/audio/block04_play.mp3",
+            "blend_units": [
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              },
+              {
+                "grapheme": "ay",
+                "phoneme": "/eɪ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say play — to have fun. pl onset, ay at the end. Reveal and blend.",
+          "expected_response": "Students say play orally, connect meaning, then blend on the card.",
+          "correction_move": "Model play orally again, reveal and blend.",
+          "observation_note": "Watch for pl onset and ay coda.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Vocabulary: stay",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stay",
+            "back_text": "/s/ /t/ /eɪ/",
+            "audio": "/static/audio/block04_stay.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "ay",
+                "phoneme": "/eɪ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say stay — to remain. st onset, ay at the end. Reveal and blend.",
+          "expected_response": "Students say stay orally, connect meaning, then blend on the card.",
+          "correction_move": "Model stay orally again, reveal and blend.",
+          "observation_note": "Watch for the st onset and ay at the end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: bay",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bay",
+            "back_text": "bay"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read bay accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: way",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "way",
+            "back_text": "way"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read way accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: long",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "long",
+            "back_text": "long"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read long accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: paid",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "paid",
+            "back_text": "paid"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read paid accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: rainy",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rainy",
+            "back_text": "rainy"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read rainy accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: good",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "good",
+            "back_text": "good"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read good accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: wait",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "wait",
+            "back_text": "wait"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read wait accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-15",
+          "block_id": "04",
+          "slide_title": "Reader Prep: say",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "say",
+            "back_text": "say"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read say accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: rain",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "rain",
+            "target_letters": [
+              "r",
+              "ai",
+              "n"
+            ],
+            "slots": [
+              "r",
+              "ai",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "ai",
+              "r"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build rain left to right.",
+          "expected_response": "Students build rain correctly: r | ai | n.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: sail",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "sail",
+            "target_letters": [
+              "s",
+              "ai",
+              "l"
+            ],
+            "slots": [
+              "s",
+              "ai",
+              "l"
+            ],
+            "draggable_letters": [
+              "l",
+              "ai",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build sail left to right.",
+          "expected_response": "Students build sail correctly: s | ai | l.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: train",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "train",
+            "target_letters": [
+              "t",
+              "r",
+              "ai",
+              "n"
+            ],
+            "slots": [
+              "t",
+              "r",
+              "ai",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "ai",
+              "r",
+              "t"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build train left to right.",
+          "expected_response": "Students build train correctly: t | r | ai | n.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: day",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "day",
+            "target_letters": [
+              "d",
+              "ay"
+            ],
+            "slots": [
+              "d",
+              "ay"
+            ],
+            "draggable_letters": [
+              "ay",
+              "d"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build day left to right.",
+          "expected_response": "Students build day correctly: d | ay.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: play",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "play",
+            "target_letters": [
+              "p",
+              "l",
+              "ay"
+            ],
+            "slots": [
+              "p",
+              "l",
+              "ay"
+            ],
+            "draggable_letters": [
+              "ay",
+              "l",
+              "p"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build play left to right.",
+          "expected_response": "Students build play correctly: p | l | ay.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the vowel team.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sail on the bay.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "sail": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "bay": "decodable"
+            }
+          },
+          "teacher_cue": "I is a sight word. sail, on, bay all decodable. bay = b+ay at the end.",
+          "expected_response": "Students read \"I sail on the bay.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for the ai in sail and ay in bay — same sound, different position.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The rain is on the way.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "rain": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "way": "decodable"
+            }
+          },
+          "teacher_cue": "The is a sight word. rain, is, on, way all decodable.",
+          "expected_response": "Students read \"The rain is on the way.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for ai in rain (middle) and ay in way (end).",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Stay and play. The day is long.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Stay": "decodable",
+              "and": "decodable",
+              "play": "decodable",
+              "The": "sight",
+              "day": "decodable",
+              "is": "decodable",
+              "long": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The is a sight word. All other words decodable.",
+          "expected_response": "Students read \"Stay and play. The day is long.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for ay at the end of stay, play, day — all follow the rule.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He paid for the train. They can sail.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "paid": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "train": "decodable",
+              "They": "sight",
+              "can": "decodable",
+              "sail": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. He, the, They are sight words. paid, train, sail all decodable.",
+          "expected_response": "Students read \"He paid for the train. They can sail.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for ai in paid and train (middle position) and for they as a sight word.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sail on the bay.\nThe rain is on the way.\nStay and play.\nThe day is long.\nHe paid for the train.\nThey can sail.\nThe sail is on the train.\nA rainy day is a good day to play.\nStay on the path. The rain will stay.\nI wait and I say: the train is on its way.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Where does the train go? What do they do on a rainy day?",
+            "word_types": {
+              "I": "sight",
+              "sail": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "bay": "decodable",
+              "The": "sight",
+              "rain": "decodable",
+              "is": "decodable",
+              "way": "decodable",
+              "Stay": "decodable",
+              "and": "decodable",
+              "play": "decodable",
+              "day": "decodable",
+              "long": "decodable",
+              "He": "sight",
+              "paid": "decodable",
+              "for": "decodable",
+              "train": "decodable",
+              "They": "sight",
+              "can": "decodable",
+              "A": "sight",
+              "rainy": "decodable",
+              "a": "sight",
+              "good": "decodable",
+              "to": "sight",
+              "path": "decodable",
+              "will": "decodable",
+              "stay": "decodable",
+              "wait": "decodable",
+              "say": "decodable",
+              "its": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support before rereading the full passage.",
+          "observation_note": "Watch for correct vowel team production and tracking accuracy.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: rain",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_rain.mp3",
+            "dictated_text": "rain",
+            "expected_answer": "rain",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "r",
+              "ai",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play rain once. Replay only if needed. Remind students: /eɪ/ is spelled 'ai' — both letters go in one box.",
+          "expected_response": "Students write rain accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sail",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_sail.mp3",
+            "dictated_text": "sail",
+            "expected_answer": "sail",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "ai",
+              "l"
+            ]
+          },
+          "teacher_cue": "Play sail once. Replay only if needed. Remind students: /eɪ/ is spelled 'ai' — both letters go in one box.",
+          "expected_response": "Students write sail accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: day",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_day.mp3",
+            "dictated_text": "day",
+            "expected_answer": "day",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "d",
+              "ay"
+            ]
+          },
+          "teacher_cue": "Play day once. Replay only if needed. Remind students: /eɪ/ is spelled 'ay' — both letters go in one box.",
+          "expected_response": "Students write day accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "rain",
+              "sail",
+              "tail",
+              "main"
+            ],
+            "highlighted_chunk": "ai",
+            "support_text": "What do these words share? What sound does ai make?"
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share? What sound does ai make?",
+          "expected_response": "Students identify the shared chunk and name the sound it makes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask again.",
+          "observation_note": "Watch whether students isolate the vowel team correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today? What are the two spellings?",
+                "phoneme": "/eɪ/"
+              },
+              {
+                "label": "Where does the train go? What do they do on a rainy day?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using they or rain.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

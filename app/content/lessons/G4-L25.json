@@ -1,0 +1,1167 @@
+{
+  "lesson_id": "G4-L25",
+  "unit_id": "G4",
+  "target_pattern": "qu",
+  "title": "Group 4, Lesson 25: qu",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "with",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l",
+    "th_voiceless",
+    "th_voiced"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: ch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ch",
+            "back_text": "/tʃ/",
+            "audio": "/static/audio/ch.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /tʃ/ quickly and cleanly.",
+          "correction_move": "Model /tʃ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /tʃ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: th (voiced)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th (voiced)",
+            "back_text": "/ð/",
+            "audio": "/static/audio/th_(voiced).mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ð/ quickly and cleanly.",
+          "correction_move": "Model /ð/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /ð/.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: sh",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sh",
+            "back_text": "/ʃ/",
+            "audio": "/static/audio/sh.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ʃ/ quickly and cleanly.",
+          "correction_move": "Model /ʃ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /ʃ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: with",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "with",
+            "back_text": "with — sight word",
+            "audio": "/static/audio/sight_with.mp3",
+            "word_types": {
+              "with": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say with immediately without blending.",
+          "correction_move": "Model with in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: we",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "we",
+            "back_text": "we — sight word",
+            "audio": "/static/audio/sight_we.mp3",
+            "word_types": {
+              "we": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say we immediately without blending.",
+          "correction_move": "Model we in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model to in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model go in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: chip",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_chip.mp3",
+            "dictated_text": "chip",
+            "expected_answer": "chip",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "ch",
+              "i",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play chip once. Replay only if needed.",
+          "expected_response": "Students write chip accurately.",
+          "correction_move": "Replay chip once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode chip accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: chest",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_chest.mp3",
+            "dictated_text": "chest",
+            "expected_answer": "chest",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "ch",
+              "e",
+              "s",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play chest once. Replay only if needed.",
+          "expected_response": "Students write chest accurately.",
+          "correction_move": "Replay chest once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode chest accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: catch",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_catch.mp3",
+            "dictated_text": "catch",
+            "expected_answer": "catch",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "c",
+              "a",
+              "t",
+              "ch"
+            ]
+          },
+          "teacher_cue": "Play catch once. Replay only if needed.",
+          "expected_response": "Students write catch accurately.",
+          "correction_move": "Replay catch once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode catch accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /kw/ — qu",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "qu",
+            "back_text": "/kw/",
+            "audio": "/static/audio/qu.mp3"
+          },
+          "teacher_cue": "New sound — qu. In English, q always comes before u and they always work as a team — /kw/. Start with the k sound at the back of the throat, then immediately round the lips for /w/. qu! qu! quick! quest! Important rule: q and u are always together in English — q is never used alone.",
+          "expected_response": "Students produce /kw/ cleanly and understand that qu is always a unit — q never appears without u.",
+          "correction_move": "Model qu as a rapid k-w blend. Students copy. Establish the rule: q and u are always together.",
+          "observation_note": "Watch for students trying to say just /k/ without the /w/ element.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: quick",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "quick",
+            "back_text": "/k/ /w/ /ɪ/ /k/",
+            "audio": "/static/audio/block04_quick.mp3",
+            "blend_units": [
+              {
+                "grapheme": "qu",
+                "phoneme": "/kw/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say quick — fast. Confirm /kw/ onset. Reveal print and blend.",
+          "expected_response": "Students say quick orally and connect meaning before blending on the card.",
+          "correction_move": "Model quick orally again, then reveal and blend.",
+          "observation_note": "Watch for the /kw/ onset — both elements must be present.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: quit",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "quit",
+            "back_text": "/k/ /w/ /ɪ/ /t/",
+            "audio": "/static/audio/block04_quit.mp3",
+            "blend_units": [
+              {
+                "grapheme": "qu",
+                "phoneme": "/kw/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say quit — to stop. Confirm /kw/ onset. Reveal print and blend.",
+          "expected_response": "Students say quit orally and connect meaning before blending on the card.",
+          "correction_move": "Model quit orally again, then reveal and blend.",
+          "observation_note": "Watch for the /kw/ onset and clean final /t/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: quest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "quest",
+            "back_text": "/k/ /w/ /e/ /s/ /t/",
+            "audio": "/static/audio/block04_quest.mp3",
+            "blend_units": [
+              {
+                "grapheme": "qu",
+                "phoneme": "/kw/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say quest — a long difficult search. Confirm /kw/ onset. Reveal print and blend all five sounds.",
+          "expected_response": "Students say quest orally and connect meaning before blending on the card.",
+          "correction_move": "Model quest orally again, then reveal and blend.",
+          "observation_note": "Watch for /kw/ onset and the final st cluster.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: quill",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "quill",
+            "back_text": "/k/ /w/ /ɪ/ /l/",
+            "audio": "/static/audio/block04_quill.mp3",
+            "blend_units": [
+              {
+                "grapheme": "qu",
+                "phoneme": "/kw/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              },
+              {
+                "grapheme": "l",
+                "phoneme": "/l/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say quill — a feather used as a pen; also a spine of a porcupine. Confirm /kw/ onset. Blend.",
+          "expected_response": "Students say quill orally and connect meaning before blending on the card.",
+          "correction_move": "Model quill orally again, then reveal and blend.",
+          "observation_note": "Watch for /kw/ onset, short /ɪ/, and /l/ in coda — /l/ vs /r/ check still active.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: squid",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "squid",
+            "back_text": "/s/ /k/ /w/ /ɪ/ /d/",
+            "audio": "/static/audio/block04_squid.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "qu",
+                "phoneme": "/kw/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say squid — a sea creature with tentacles. Note s+qu onset. Confirm the cluster. Reveal print and blend.",
+          "expected_response": "Students say squid orally and connect meaning before blending on the card.",
+          "correction_move": "Model squid orally again, then reveal and blend.",
+          "observation_note": "Watch for the squ three-element onset — students may drop the /w/ element.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Reader Prep: dish",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "dish",
+            "back_text": "dish"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read dish accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: best",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "best",
+            "back_text": "best"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read best accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: bit",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bit",
+            "back_text": "bit"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read bit accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: squints",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "squints",
+            "back_text": "squints"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read squints accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: grins",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "grins",
+            "back_text": "grins"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read grins accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: quick",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "quick",
+            "target_letters": [
+              "qu",
+              "i",
+              "c",
+              "k"
+            ],
+            "slots": [
+              "qu",
+              "i",
+              "c",
+              "k"
+            ],
+            "draggable_letters": [
+              "k",
+              "c",
+              "i",
+              "qu"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build quick left to right.",
+          "expected_response": "Students build quick correctly: qu | i | c | k.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: quit",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "quit",
+            "target_letters": [
+              "qu",
+              "i",
+              "t"
+            ],
+            "slots": [
+              "qu",
+              "i",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "i",
+              "qu"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build quit left to right.",
+          "expected_response": "Students build quit correctly: qu | i | t.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: quest",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "quest",
+            "target_letters": [
+              "qu",
+              "e",
+              "s",
+              "t"
+            ],
+            "slots": [
+              "qu",
+              "e",
+              "s",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "s",
+              "e",
+              "qu"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build quest left to right.",
+          "expected_response": "Students build quest correctly: qu | e | s | t.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: quill",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "quill",
+            "target_letters": [
+              "qu",
+              "i",
+              "l",
+              "l"
+            ],
+            "slots": [
+              "qu",
+              "i",
+              "l",
+              "l"
+            ],
+            "draggable_letters": [
+              "l",
+              "l",
+              "i",
+              "qu"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build quill left to right.",
+          "expected_response": "Students build quill correctly: qu | i | l | l.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: squid",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "squid",
+            "target_letters": [
+              "s",
+              "qu",
+              "i",
+              "d"
+            ],
+            "slots": [
+              "s",
+              "qu",
+              "i",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "i",
+              "qu",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build squid left to right.",
+          "expected_response": "Students build squid correctly: s | qu | i | d.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He is quick.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "is": "decodable",
+              "quick": "decodable"
+            }
+          },
+          "teacher_cue": "He is a sight word. is and quick are decodable.",
+          "expected_response": "Students read \"He is quick.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /kw/ in quick — both elements of the onset.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He is quick on his quest.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "is": "decodable",
+              "quick": "decodable",
+              "on": "decodable",
+              "his": "decodable",
+              "quest": "decodable"
+            }
+          },
+          "teacher_cue": "He is a sight word. All other words decodable.",
+          "expected_response": "Students read \"He is quick on his quest.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /kw/ in quick and quest — two qu words in one sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The squid is on the dish. She quit.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "squid": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "dish": "decodable",
+              "She": "sight",
+              "quit": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The and She are sight words. All other words decodable.",
+          "expected_response": "Students read \"The squid is on the dish. She quit.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /kw/ in squid and quit.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Quick! Do not quit the quest. This is the best bit.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Quick": "decodable",
+              "Do": "sight",
+              "not": "decodable",
+              "quit": "decodable",
+              "the": "sight",
+              "quest": "decodable",
+              "This": "decodable",
+              "is": "decodable",
+              "best": "decodable",
+              "bit": "decodable"
+            }
+          },
+          "teacher_cue": "Three sentences. This and the are decodable. All words decodable.",
+          "expected_response": "Students read \"Quick! Do not quit the quest. This is the best bit.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /kw/ in Quick, quit, quest — three qu words. Motivational tone.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He is quick.\nHe is quick on his quest.\nThe squid is on the dish.\nShe quit.\nQuick! Do not quit the quest.\nThis is the best bit yet.\nHe has a quill and a big chest.\nShe squints and then she grins.\nThe squid slid off the dish.\nHe did not quit.\nHe is glad he did not quit.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What was the quest? Why did she quit? Why did he not quit?",
+            "word_types": {
+              "He": "sight",
+              "is": "decodable",
+              "quick": "decodable",
+              "on": "decodable",
+              "his": "decodable",
+              "quest": "decodable",
+              "The": "sight",
+              "squid": "decodable",
+              "the": "sight",
+              "dish": "decodable",
+              "She": "sight",
+              "quit": "decodable",
+              "Quick": "decodable",
+              "Do": "sight",
+              "not": "decodable",
+              "This": "decodable",
+              "best": "decodable",
+              "bit": "decodable",
+              "yet": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "quill": "decodable",
+              "and": "decodable",
+              "big": "decodable",
+              "chest": "decodable",
+              "squints": "decodable",
+              "then": "decodable",
+              "she": "sight",
+              "grins": "decodable",
+              "slid": "decodable",
+              "off": "decodable",
+              "did": "decodable",
+              "glad": "decodable",
+              "he": "sight"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading.",
+          "observation_note": "Watch for tracking accuracy and any phoneme production errors.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: quick",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_quick.mp3",
+            "dictated_text": "quick",
+            "expected_answer": "quick",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "q",
+              "u",
+              "i",
+              "ck"
+            ]
+          },
+          "teacher_cue": "Play quick once. Replay only if needed. Remind students: /k/ is spelled 'ck' — both letters go in one box.",
+          "expected_response": "Students write quick accurately.",
+          "correction_move": "Replay quick once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode quick accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: quit",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_quit.mp3",
+            "dictated_text": "quit",
+            "expected_answer": "quit",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "q",
+              "u",
+              "i",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play quit once. Replay only if needed.",
+          "expected_response": "Students write quit accurately.",
+          "correction_move": "Replay quit once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode quit accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: quest",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_quest.mp3",
+            "dictated_text": "quest",
+            "expected_answer": "quest",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "q",
+              "u",
+              "e",
+              "s",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play quest once. Replay only if needed.",
+          "expected_response": "Students write quest accurately.",
+          "correction_move": "Replay quest once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode quest accurately.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "quick",
+              "quit",
+              "quest",
+              "quill"
+            ],
+            "highlighted_chunk": "qu",
+            "support_text": "What starts all these words? What rule do you know about q?"
+          },
+          "teacher_cue": "Show the words. Ask: What starts all these words? What rule do you know about q?",
+          "expected_response": "Students identify the shared pattern and name what changes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask the question again.",
+          "observation_note": "Watch whether students can hear and see the shared pattern.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today? What rule goes with q?",
+                "phoneme": "/kw/"
+              },
+              {
+                "label": "What was the quest? Why did she quit? Why did he not quit?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using quick or quit.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1184 @@
+{
+  "lesson_id": "G3-L14",
+  "unit_id": "G3",
+  "target_pattern": "u",
+  "title": "Group 3, Lesson 14: u",
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "with",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: o",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "o",
+            "back_text": "/ɒ/",
+            "audio": "/static/audio/o.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ɒ/ quickly and cleanly.",
+          "correction_move": "Model /ɒ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /ɒ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: g",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "g",
+            "back_text": "/g/",
+            "audio": "/static/audio/g.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /g/ quickly and cleanly.",
+          "correction_move": "Model /g/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /g/.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /r/ quickly and cleanly.",
+          "correction_move": "Model /r/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production of /r/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model no in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model do in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: so",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "so",
+            "back_text": "so — sight word",
+            "audio": "/static/audio/sight_so.mp3",
+            "word_types": {
+              "so": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say so immediately without blending.",
+          "correction_move": "Model so in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model of in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: dog",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_dog.mp3",
+            "dictated_text": "dog",
+            "expected_answer": "dog",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "d",
+              "o",
+              "g"
+            ]
+          },
+          "teacher_cue": "Play dog once. Replay only if needed before checking.",
+          "expected_response": "Students write dog accurately.",
+          "correction_move": "Replay dog once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode dog accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: hot",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_hot.mp3",
+            "dictated_text": "hot",
+            "expected_answer": "hot",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "h",
+              "o",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play hot once. Replay only if needed before checking.",
+          "expected_response": "Students write hot accurately.",
+          "correction_move": "Replay hot once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode hot accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: stop",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_stop.mp3",
+            "dictated_text": "stop",
+            "expected_answer": "stop",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "t",
+              "o",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play stop once. Replay only if needed before checking.",
+          "expected_response": "Students write stop accurately.",
+          "correction_move": "Replay stop once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode stop accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce /ʌ/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "u",
+            "back_text": "/ʌ/",
+            "audio": "/static/audio/u_short.mp3"
+          },
+          "teacher_cue": "New sound. Relax your mouth completely. Tongue in the middle of the mouth, mid-height. Lips neutral — not rounded, not spread. Short and unstressed — uh.",
+          "expected_response": "Students produce short /ʌ/ cleanly with neutral lips and tongue.",
+          "correction_move": "Model all short vowels in sequence: /æ/ — /e/ — /ɪ/ — /ɒ/ — /ʌ/. Students identify the new one.",
+          "observation_note": "Watch for lip rounding — /ʌ/ has no rounding. Korean learners may substitute /a/ (as in bag). Monitor from this lesson.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: run",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "run",
+            "back_text": "/r/ /ʌ/ /n/",
+            "audio": "/static/audio/block04_run.mp3",
+            "blend_units": [
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say run — to move fast. Confirm /r/ onset. Reveal print and blend.",
+          "expected_response": "Students say run orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model run orally again, then reveal and blend.",
+          "observation_note": "Watch for /l/ substitution on /r/ and for the neutral /ʌ/ vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: sun",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sun",
+            "back_text": "/s/ /ʌ/ /n/",
+            "audio": "/static/audio/block04_sun.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "/n/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Point upward and say sun. Reveal print and blend.",
+          "expected_response": "Students say sun orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model sun orally again, then reveal and blend.",
+          "observation_note": "Watch for the /ʌ/ vowel — neutral lips, not rounded.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: mud",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "mud",
+            "back_text": "/m/ /ʌ/ /d/",
+            "audio": "/static/audio/block04_mud.mp3",
+            "blend_units": [
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Describe mud as wet earth. Say the word, then reveal print and blend.",
+          "expected_response": "Students say mud orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model mud orally again, then reveal and blend.",
+          "observation_note": "Watch for /ʌ/ in the middle and voiced final /d/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: drum",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "drum",
+            "back_text": "/d/ /r/ /ʌ/ /m/",
+            "audio": "/static/audio/block04_drum.mp3",
+            "blend_units": [
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime playing a drum. Confirm /r/ in the onset. Reveal print and blend all four sounds.",
+          "expected_response": "Students say drum orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model drum orally again, then reveal and blend.",
+          "observation_note": "Watch for vowel insertion between d and r — Korean learners may produce duh-rum.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: truck",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "truck",
+            "back_text": "/t/ /r/ /ʌ/ /k/",
+            "audio": "/static/audio/block04_truck.mp3",
+            "blend_units": [
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say truck — a large vehicle. Confirm /r/ in the onset. Reveal print and blend.",
+          "expected_response": "Students say truck orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model truck orally again, then reveal and blend.",
+          "observation_note": "Watch for vowel insertion between t and r and for the final ck spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: duck",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "duck",
+            "back_text": "/d/ /ʌ/ /k/",
+            "audio": "/static/audio/block04_duck.mp3",
+            "blend_units": [
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              },
+              {
+                "grapheme": "u",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "k",
+                "phoneme": "/k/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say duck — a water bird. Reveal print and blend.",
+          "expected_response": "Students say duck orally and connect meaning before blending the sounds on the card.",
+          "correction_move": "Model duck orally again, then reveal and blend.",
+          "observation_note": "Watch for the /ʌ/ vowel and final ck.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: rug",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rug",
+            "back_text": "/r/ /u/ /g/"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read rug accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: cut",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cut",
+            "back_text": "/c/ /u/ /t/"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read cut accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: nut",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "nut",
+            "back_text": "/n/ /u/ /t/"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read nut accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: got",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "got",
+            "back_text": "/g/ /o/ /t/"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read got accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: stuck",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stuck",
+            "back_text": "/s/ /t/ /u/ /ck/"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read stuck accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: run",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "run",
+            "target_letters": [
+              "r",
+              "u",
+              "n"
+            ],
+            "slots": [
+              "r",
+              "u",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "u",
+              "r"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build run left to right.",
+          "expected_response": "Students build run correctly: r | u | n.",
+          "correction_move": "Return to oral segmenting of run, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: mud",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "mud",
+            "target_letters": [
+              "m",
+              "u",
+              "d"
+            ],
+            "slots": [
+              "m",
+              "u",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "u",
+              "m"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build mud left to right.",
+          "expected_response": "Students build mud correctly: m | u | d.",
+          "correction_move": "Return to oral segmenting of mud, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: cup",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "cup",
+            "target_letters": [
+              "c",
+              "u",
+              "p"
+            ],
+            "slots": [
+              "c",
+              "u",
+              "p"
+            ],
+            "draggable_letters": [
+              "p",
+              "u",
+              "c"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build cup left to right.",
+          "expected_response": "Students build cup correctly: c | u | p.",
+          "correction_move": "Return to oral segmenting of cup, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: drum",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "drum",
+            "target_letters": [
+              "d",
+              "r",
+              "u",
+              "m"
+            ],
+            "slots": [
+              "d",
+              "r",
+              "u",
+              "m"
+            ],
+            "draggable_letters": [
+              "m",
+              "u",
+              "r",
+              "d"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build drum left to right.",
+          "expected_response": "Students build drum correctly: d | r | u | m.",
+          "correction_move": "Return to oral segmenting of drum, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: truck",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "truck",
+            "target_letters": [
+              "t",
+              "r",
+              "u",
+              "c",
+              "k"
+            ],
+            "slots": [
+              "t",
+              "r",
+              "u",
+              "c",
+              "k"
+            ],
+            "draggable_letters": [
+              "k",
+              "c",
+              "u",
+              "r",
+              "t"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build truck left to right.",
+          "expected_response": "Students build truck correctly: t | r | u | c | k.",
+          "correction_move": "Return to oral segmenting of truck, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I run. The sun is hot.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "run": "decodable",
+              "The": "sight",
+              "sun": "decodable",
+              "is": "decodable",
+              "hot": "decodable"
+            }
+          },
+          "teacher_cue": "I and The are sight words. run, sun, is, hot all decodable.",
+          "expected_response": "Students read \"I run. The sun is hot.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ʌ/ in run and sun.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I run in the sun. The mud is on the rug.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "run": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "sun": "decodable",
+              "The": "sight",
+              "mud": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "rug": "decodable"
+            }
+          },
+          "teacher_cue": "I and The are sight words. All other words decodable.",
+          "expected_response": "Students read \"I run in the sun. The mud is on the rug.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /ʌ/ in run, sun, mud, rug.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The drum is in the mud. I cut a nut.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "drum": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "mud": "decodable",
+              "I": "sight",
+              "cut": "decodable",
+              "a": "sight",
+              "nut": "decodable"
+            }
+          },
+          "teacher_cue": "Two sentences. The, I, a are sight words. All other words decodable.",
+          "expected_response": "Students read \"The drum is in the mud. I cut a nut.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /r/ in drum and for /ʌ/ consistently across both sentences.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The truck got stuck in the mud.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "truck": "decodable",
+              "got": "decodable",
+              "stuck": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "mud": "decodable"
+            }
+          },
+          "teacher_cue": "The is a sight word. All other words decodable. Longest sentence so far.",
+          "expected_response": "Students read \"The truck got stuck in the mud.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch whether students blend truck and stuck cleanly without vowel insertion between consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I run.\nThe sun is hot.\nI run in the sun.\nThe mud is on the rug.\nI cut a nut.\nThe drum is in the mud.\nThe duck sat in the mud.\nThe truck got stuck.\nThe sun set on the truck.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Why did the truck get stuck? What did the duck do? What happened when the sun set?",
+            "word_types": {
+              "I": "sight",
+              "run": "decodable",
+              "The": "sight",
+              "sun": "decodable",
+              "is": "decodable",
+              "hot": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "mud": "decodable",
+              "on": "decodable",
+              "rug": "decodable",
+              "cut": "decodable",
+              "a": "sight",
+              "nut": "decodable",
+              "drum": "decodable",
+              "duck": "decodable",
+              "sat": "decodable",
+              "truck": "decodable",
+              "got": "decodable",
+              "stuck": "decodable",
+              "set": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
+          "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: run",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_run.mp3",
+            "dictated_text": "run",
+            "expected_answer": "run",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "r",
+              "u",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play run once. Replay only if needed before checking.",
+          "expected_response": "Students write run accurately.",
+          "correction_move": "Replay run once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode run accurately from sound to print.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: mud",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_mud.mp3",
+            "dictated_text": "mud",
+            "expected_answer": "mud",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "m",
+              "u",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play mud once. Replay only if needed before checking.",
+          "expected_response": "Students write mud accurately.",
+          "correction_move": "Replay mud once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode mud accurately from sound to print.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: drum",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_drum.mp3",
+            "dictated_text": "drum",
+            "expected_answer": "drum",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "d",
+              "r",
+              "u",
+              "m"
+            ]
+          },
+          "teacher_cue": "Play drum once. Replay only if needed before checking.",
+          "expected_response": "Students write drum accurately.",
+          "correction_move": "Replay drum once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode drum accurately from sound to print.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "truck",
+              "stuck",
+              "duck"
+            ],
+            "highlighted_chunk": "uck",
+            "support_text": "What do these words share at the end?"
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share at the end?",
+          "expected_response": "Students identify the shared pattern and name what changes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask the question again.",
+          "observation_note": "Watch whether students can hear and see the shared pattern across words.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Which new sound did we learn today?",
+                "phoneme": "/ʌ/"
+              },
+              {
+                "label": "Why did the truck get stuck? What did the duck do? What happened when the sun set?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using run or sun.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}
