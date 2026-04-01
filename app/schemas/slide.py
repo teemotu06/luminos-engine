@@ -14,6 +14,7 @@ KoreanInterferenceFlag = Literal[
     "th_voiceless",
     "th_voiced",
     "cluster",
+    "final_coda",
     "vowel_quality",
 ]
 

@@ -3,6 +3,10 @@
   "unit_id": "G5",
   "target_pattern": "z",
   "title": "Group 5, Lesson 35: z",
+  "new_units": [
+    "z"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -291,6 +295,29 @@
           "expected_response": "Students produce /z/ cleanly as a voiced alveolar fricative and understand that s can also make /z/.",
           "correction_move": "Model /s/ vs /z/ with hand on throat. Students alternate. Then review: is, his, has, was — students confirm the /z/ in each. Connect to previous knowledge.",
           "observation_note": "Watch for /s/ substitution and for b/v confusion — /z/ is the voiced counterpart of /s/, same as v is to f and b is to p.",
+          "korean_interference_flag": "v_b",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say z In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "z",
+            "back_text": "/z/",
+            "audio": "/static/audio/z.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect z to one strong word from today.",
+          "expected_response": "Students say z clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "v_b",
           "markable": true,
           "marking_options": [
@@ -864,21 +891,28 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I zip up and he has jazz.",
+            "text_content": "I zip up.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "I": "sight",
               "zip": "decodable",
-              "up": "decodable",
-              "and": "decodable",
-              "he": "sight",
-              "has": "decodable",
-              "jazz": "decodable"
+              "up": "decodable"
+            },
+            "token_units": {
+              "zip": [
+                "z",
+                "i",
+                "p"
+              ],
+              "up": [
+                "u",
+                "p"
+              ]
             }
           },
           "teacher_cue": "I and he are sight words. zip, up, has, jazz all decodable.",
-          "expected_response": "Students read \"I zip up and he has jazz.\" accurately.",
+          "expected_response": "Students read \"I zip up.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /z/ in zip and jazz — onset and coda.",
           "korean_interference_flag": "vowel_quality",
@@ -896,23 +930,29 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The fizz is in the can. It will buzz.",
+            "text_content": "He zips it.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "The": "sight",
-              "fizz": "decodable",
-              "is": "decodable",
-              "in": "decodable",
-              "the": "sight",
-              "can": "decodable",
-              "It": "decodable",
-              "will": "decodable",
-              "buzz": "decodable"
+              "He": "sight",
+              "zips": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "zips": [
+                "z",
+                "i",
+                "p",
+                "s"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Two sentences. The is a sight word. fizz, can, buzz decodable.",
-          "expected_response": "Students read \"The fizz is in the can. It will buzz.\" accurately.",
+          "expected_response": "Students read \"He zips it.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /z/ in fizz (coda) and buzz (coda).",
           "korean_interference_flag": "f_p",
@@ -930,22 +970,35 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He zips and she zooms. That is zest.",
+            "text_content": "The zone is big.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "He": "sight",
-              "zips": "decodable",
-              "and": "decodable",
-              "she": "sight",
-              "zooms": "decodable",
-              "That": "decodable",
+              "The": "sight",
+              "zone": "decodable",
               "is": "decodable",
-              "zest": "decodable"
+              "big": "decodable"
+            },
+            "token_units": {
+              "zone": [
+                "z",
+                "o",
+                "n",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ]
             }
           },
           "teacher_cue": "Two sentences. He and she are sight words. zips, zooms, zest all decodable.",
-          "expected_response": "Students read \"He zips and she zooms. That is zest.\" accurately.",
+          "expected_response": "Students read \"The zone is big.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /z/ in zips, zooms, zest — three z words with varied vowels.",
           "korean_interference_flag": "vowel_quality",
@@ -963,22 +1016,39 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Quiz me! I know the zone and the zoom.",
+            "text_content": "The zoo is on the map.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "Quiz": "decodable",
-              "me": "sight",
-              "I": "sight",
-              "know": "decodable",
+              "The": "sight",
+              "zoo": "decodable",
+              "is": "decodable",
+              "on": "decodable",
               "the": "sight",
-              "zone": "decodable",
-              "and": "decodable",
-              "zoom": "decodable"
+              "map": "decodable"
+            },
+            "token_units": {
+              "zoo": [
+                "z",
+                "oo"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "map": [
+                "m",
+                "a",
+                "p"
+              ]
             }
           },
           "teacher_cue": "Two sentences. I and the are sight words. Quiz, zone, zoom decodable.",
-          "expected_response": "Students read \"Quiz me! I know the zone and the zoom.\" accurately.",
+          "expected_response": "Students read \"The zoo is on the map.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /kw/ in quiz and /z/ in zone, zoom — different onset positions.",
           "korean_interference_flag": "vowel_quality",
@@ -1002,56 +1072,315 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I zip up and he has jazz.\nThe fizz is in the can.\nIt will buzz.\nHe zips and she zooms.\nThat is zest!\nQuiz me! I know the zone and the zoom.\nThe jazz fills the zone with zest.\nShe zooms by with a buzz and a zip.\nI fizz with joy when the jazz plays.\nQuiz the team: what zooms? What buzzes? What has zest?",
+            "text_content": "I zip up.\nHe zips it.\nThe zone is big.\nThe zoo is on the map.\nThe zoo has a zebu.\nI see the zebu.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all the z words. Which use z at the start? Which use z at the end?",
+            "comprehension_prompt": "Where is the zoo? What do I see?",
             "word_types": {
               "I": "sight",
               "zip": "decodable",
               "up": "decodable",
-              "and": "decodable",
-              "he": "sight",
-              "has": "decodable",
-              "jazz": "decodable",
-              "The": "sight",
-              "fizz": "decodable",
-              "is": "decodable",
-              "in": "decodable",
-              "the": "sight",
-              "can": "decodable",
-              "It": "decodable",
-              "will": "decodable",
-              "buzz": "decodable",
               "He": "sight",
               "zips": "decodable",
-              "she": "sight",
-              "zooms": "decodable",
-              "That": "decodable",
-              "zest": "decodable",
-              "Quiz": "decodable",
-              "me": "sight",
-              "know": "decodable",
+              "it": "decodable",
+              "The": "sight",
               "zone": "decodable",
-              "zoom": "decodable",
-              "fills": "decodable",
-              "with": "decodable",
-              "She": "sight",
-              "by": "decodable",
+              "is": "decodable",
+              "big": "decodable",
+              "zoo": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "map": "decodable",
+              "has": "decodable",
               "a": "sight",
-              "joy": "decodable",
-              "when": "decodable",
-              "plays": "decodable",
-              "team": "decodable",
-              "what": "decodable",
-              "What": "decodable",
-              "buzzes": "decodable"
+              "zebu": "decodable",
+              "see": "decodable"
+            },
+            "token_units": {
+              "zip": [
+                "z",
+                "i",
+                "p"
+              ],
+              "up": [
+                "u",
+                "p"
+              ],
+              "zips": [
+                "z",
+                "i",
+                "p",
+                "s"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "zone": [
+                "z",
+                "o",
+                "n",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "zoo": [
+                "z",
+                "oo"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "map": [
+                "m",
+                "a",
+                "p"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "zebu": [
+                "z",
+                "e",
+                "b",
+                "u"
+              ],
+              "see": [
+                "s",
+                "ee"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support before rereading the full passage.",
           "observation_note": "Watch for correct vowel team production and tracking accuracy.",
+          "korean_interference_flag": "v_b",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I zip up.\nHe zips it.\nThe zone is big.\nThe zoo is on the map.\nThe zoo has a zebu.\nI see the zebu.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "I": "sight",
+              "zip": "decodable",
+              "up": "decodable",
+              "He": "sight",
+              "zips": "decodable",
+              "it": "decodable",
+              "The": "sight",
+              "zone": "decodable",
+              "is": "decodable",
+              "big": "decodable",
+              "zoo": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "map": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "zebu": "decodable",
+              "see": "decodable"
+            },
+            "token_units": {
+              "zip": [
+                "z",
+                "i",
+                "p"
+              ],
+              "up": [
+                "u",
+                "p"
+              ],
+              "zips": [
+                "z",
+                "i",
+                "p",
+                "s"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "zone": [
+                "z",
+                "o",
+                "n",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "zoo": [
+                "z",
+                "oo"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "map": [
+                "m",
+                "a",
+                "p"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "zebu": [
+                "z",
+                "e",
+                "b",
+                "u"
+              ],
+              "see": [
+                "s",
+                "ee"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "v_b",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread z Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I zip up.\nHe zips it.\nThe zone is big.\nThe zoo is on the map.\nThe zoo has a zebu.\nI see the zebu.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the z text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "I": "sight",
+              "zip": "decodable",
+              "up": "decodable",
+              "He": "sight",
+              "zips": "decodable",
+              "it": "decodable",
+              "The": "sight",
+              "zone": "decodable",
+              "is": "decodable",
+              "big": "decodable",
+              "zoo": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "map": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "zebu": "decodable",
+              "see": "decodable"
+            },
+            "token_units": {
+              "zip": [
+                "z",
+                "i",
+                "p"
+              ],
+              "up": [
+                "u",
+                "p"
+              ],
+              "zips": [
+                "z",
+                "i",
+                "p",
+                "s"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "zone": [
+                "z",
+                "o",
+                "n",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "zoo": [
+                "z",
+                "oo"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "map": [
+                "m",
+                "a",
+                "p"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "zebu": [
+                "z",
+                "e",
+                "b",
+                "u"
+              ],
+              "see": [
+                "s",
+                "ee"
+              ]
+            }
+          },
+          "teacher_cue": "Read the z text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "v_b",
           "markable": true,
           "marking_options": [
@@ -1153,6 +1482,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "I zip up.",
+            "expected_answer": "I zip up.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1174,7 +1529,8 @@
               "fuzz"
             ],
             "highlighted_chunk": "zz",
-            "support_text": "What do these words share at the end? What sound does zz make?"
+            "support_text": "What do these words share at the end? What sound does zz make?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What do these words share at the end? What sound does zz make?",
           "expected_response": "Students identify the shared chunk and name the sound it makes.",
@@ -1183,6 +1539,86 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I zip up.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "I": "sight",
+              "zip": "decodable",
+              "up": "decodable"
+            },
+            "token_units": {
+              "zip": [
+                "z",
+                "i",
+                "p"
+              ],
+              "up": [
+                "u",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use z In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I zip up.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using z, then say a second sentence with one change.",
+            "word_types": {
+              "I": "sight",
+              "zip": "decodable",
+              "up": "decodable"
+            },
+            "token_units": {
+              "zip": [
+                "z",
+                "i",
+                "p"
+              ],
+              "up": [
+                "u",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Use z in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1222,6 +1658,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final z Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's z focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's z focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

@@ -3,6 +3,16 @@
   "unit_id": "G8",
   "target_pattern": "r_clusters",
   "title": "Group 8, Lesson 45: r-clusters (br cr dr fr gr pr tr)",
+  "new_units": [
+    "br",
+    "cr",
+    "dr",
+    "fr",
+    "gr",
+    "pr",
+    "tr"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -304,6 +314,29 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say clusters In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "br  cr  dr  fr  gr  pr  tr",
+            "back_text": "r-clusters",
+            "audio": "/static/audio/r_clusters.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect clusters to one strong word from today.",
+          "expected_response": "Students say clusters clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -567,6 +600,42 @@
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Review clusters With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "trip",
+            "back_text": "/t/ /r/ /ɪ/ /p/",
+            "audio": "/static/audio/block04_trip.mp3",
+            "blend_units": [
+              {
+                "grapheme": "tr",
+                "phoneme": "/tr/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for clusters.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -777,6 +846,32 @@
               "frog": "decodable",
               "on": "decodable",
               "trip": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on bring, green, frog, on.",
@@ -798,7 +893,7 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The green frog is by the crack.",
+            "text_content": "The green frog is by the grass.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
@@ -808,11 +903,37 @@
               "is": "decodable",
               "by": "decodable",
               "the": "sight",
-              "crack": "decodable"
+              "grass": "decodable"
+            },
+            "token_units": {
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "grass": [
+                "gr",
+                "a",
+                "s",
+                "s"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on green, frog, is, by.",
-          "expected_response": "Students read \"The green frog is by the crack.\" accurately.",
+          "expected_response": "Students read \"The green frog is by the grass.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The green frog is by the crack.\".",
           "korean_interference_flag": "r_l",
@@ -841,6 +962,33 @@
               "on": "decodable",
               "the": "sight",
               "trip": "decodable"
+            },
+            "token_units": {
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "drop": [
+                "dr",
+                "o",
+                "p"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on price, can, drop, on.",
@@ -862,7 +1010,7 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "We bring the frog to the crack.",
+            "text_content": "We bring the frog to the tree.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
@@ -871,11 +1019,27 @@
               "the": "sight",
               "frog": "decodable",
               "to": "sight",
-              "crack": "decodable"
+              "tree": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "tree": [
+                "tr",
+                "ee"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on bring, frog, crack.",
-          "expected_response": "Students read \"We bring the frog to the crack.\" accurately.",
+          "expected_response": "Students read \"We bring the frog to the tree.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"We bring the frog to the crack.\".",
           "korean_interference_flag": "f_p",
@@ -899,10 +1063,10 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "We bring the green frog on the trip.\nThe green frog is by the crack.\nThe price can drop on the trip.\nWe bring the frog by the crack.\nThe green frog can drop by the crack.\nThe trip price can drop.",
+            "text_content": "We bring the green frog on the trip.\nThe green frog is by the grass.\nThe price can drop on the trip.\nWe bring the frog to the tree.\nThe green frog can grin.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all seven r-cluster types. Which is hardest to say?",
+            "comprehension_prompt": "Where is the frog? What can drop?",
             "word_types": {
               "We": "sight",
               "bring": "decodable",
@@ -914,16 +1078,300 @@
               "The": "sight",
               "is": "decodable",
               "by": "decodable",
-              "crack": "decodable",
+              "grass": "decodable",
               "price": "decodable",
               "can": "decodable",
-              "drop": "decodable"
+              "drop": "decodable",
+              "to": "sight",
+              "tree": "decodable",
+              "grin": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "grass": [
+                "gr",
+                "a",
+                "s",
+                "s"
+              ],
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "drop": [
+                "dr",
+                "o",
+                "p"
+              ],
+              "tree": [
+                "tr",
+                "ee"
+              ],
+              "grin": [
+                "gr",
+                "i",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
-          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support before rereading.",
           "observation_note": "Watch for cluster blending — no vowel insertion between consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the green frog on the trip.\nThe green frog is by the grass.\nThe price can drop on the trip.\nWe bring the frog to the tree.\nThe green frog can grin.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "on": "decodable",
+              "trip": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "by": "decodable",
+              "grass": "decodable",
+              "price": "decodable",
+              "can": "decodable",
+              "drop": "decodable",
+              "to": "sight",
+              "tree": "decodable",
+              "grin": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "grass": [
+                "gr",
+                "a",
+                "s",
+                "s"
+              ],
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "drop": [
+                "dr",
+                "o",
+                "p"
+              ],
+              "tree": [
+                "tr",
+                "ee"
+              ],
+              "grin": [
+                "gr",
+                "i",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread clusters Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the green frog on the trip.\nThe green frog is by the grass.\nThe price can drop on the trip.\nWe bring the frog to the tree.\nThe green frog can grin.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the clusters text smoothly. Then tell one thing you noticed about the clusters.",
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "on": "decodable",
+              "trip": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "by": "decodable",
+              "grass": "decodable",
+              "price": "decodable",
+              "can": "decodable",
+              "drop": "decodable",
+              "to": "sight",
+              "tree": "decodable",
+              "grin": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "grass": [
+                "gr",
+                "a",
+                "s",
+                "s"
+              ],
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "drop": [
+                "dr",
+                "o",
+                "p"
+              ],
+              "tree": [
+                "tr",
+                "ee"
+              ],
+              "grin": [
+                "gr",
+                "i",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Read the clusters text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1028,6 +1476,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "We bring the green frog on the trip.",
+            "expected_answer": "We bring the green frog on the trip.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1052,7 +1526,8 @@
               "trip"
             ],
             "highlighted_chunk": "r-cluster",
-            "support_text": "What is the second sound in each of these words?"
+            "support_text": "What is the second sound in each of these words?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What is the second sound in each of these words?",
           "expected_response": "Students identify the shared cluster and name its sounds.",
@@ -1061,6 +1536,124 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the green frog on the trip.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "on": "decodable",
+              "trip": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "R-Cluster Clarity",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "We bring the green frog on the trip.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the sentence. Keep the /r/ tight to the first consonant with no extra vowel. Then say one new cluster sentence.",
+            "word_types": {
+              "We": "sight",
+              "bring": "decodable",
+              "the": "sight",
+              "green": "decodable",
+              "frog": "decodable",
+              "on": "decodable",
+              "trip": "decodable"
+            },
+            "token_units": {
+              "bring": [
+                "br",
+                "i",
+                "ng"
+              ],
+              "green": [
+                "gr",
+                "ee",
+                "n"
+              ],
+              "frog": [
+                "fr",
+                "o",
+                "g"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "trip": [
+                "tr",
+                "i",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Use the sentence to rehearse tight r-clusters. Prevent inserted vowels between the consonants.",
+          "expected_response": "Students read the model sentence clearly and produce one more oral sentence with the target sound or cluster.",
+          "correction_move": "Model the target sound in isolation, return to the sentence, then guide students into one supported oral sentence.",
+          "observation_note": "Watch articulation accuracy on the target sound or cluster and whether students avoid inserting extra vowels.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1100,6 +1693,61 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final clusters Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's clusters focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's clusters focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

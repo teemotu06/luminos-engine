@@ -3,7 +3,7 @@ from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
 
-MarkStatus = Literal["secure", "shaky", "missed", "skipped"]
+MarkStatus = Literal["secure", "shaky", "missed", "skipped", "deferred", "absent"]
 SupportLevel = Literal["independent", "prompted", "modeled"]
 ErrorTag = Literal[
     "sound_substitution",

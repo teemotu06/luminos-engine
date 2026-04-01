@@ -3,6 +3,10 @@
   "unit_id": "G9",
   "target_pattern": "suffix_ed",
   "title": "Group 9, Lesson 59: Suffix -ed (three sounds)",
+  "new_units": [
+    "-ed"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -1030,19 +1034,25 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She jumped and landed safely.",
+            "text_content": "She jumped.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "She": "sight",
-              "jumped": "decodable",
-              "and": "decodable",
-              "landed": "decodable",
-              "safely": "decodable"
+              "jumped": "decodable"
+            },
+            "token_units": {
+              "jumped": [
+                "j",
+                "u",
+                "mp",
+                "e",
+                "d"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on jumped, and, landed, safely.",
-          "expected_response": "Students read \"She jumped and landed safely.\" accurately.",
+          "expected_response": "Students read \"She jumped.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"She jumped and landed safely.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1060,19 +1070,25 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He waited and then started.",
+            "text_content": "He waited.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "He": "sight",
-              "waited": "decodable",
-              "and": "decodable",
-              "then": "decodable",
-              "started": "decodable"
+              "waited": "decodable"
+            },
+            "token_units": {
+              "waited": [
+                "w",
+                "ai",
+                "t",
+                "e",
+                "d"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on waited, and, then, started.",
-          "expected_response": "Students read \"He waited and then started.\" accurately.",
+          "expected_response": "Students read \"He waited.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"He waited and then started.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1090,19 +1106,36 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "They played and walked home.",
+            "text_content": "They played at home.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "They": "sight",
               "played": "decodable",
-              "and": "decodable",
-              "walked": "decodable",
+              "at": "decodable",
               "home": "decodable"
+            },
+            "token_units": {
+              "played": [
+                "pl",
+                "ay",
+                "e",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "home": [
+                "h",
+                "o",
+                "m",
+                "e"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on played, and, walked, home.",
-          "expected_response": "Students read \"They played and walked home.\" accurately.",
+          "expected_response": "Students read \"They played at home.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"They played and walked home.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1120,20 +1153,31 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The team rested after they played.",
+            "text_content": "The team rested.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
               "team": "decodable",
-              "rested": "decodable",
-              "after": "decodable",
-              "they": "sight",
-              "played": "decodable"
+              "rested": "decodable"
+            },
+            "token_units": {
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "rested": [
+                "r",
+                "e",
+                "st",
+                "e",
+                "d"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on team, rested, after, played.",
-          "expected_response": "Students read \"The team rested after they played.\" accurately.",
+          "expected_response": "Students read \"The team rested.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The team rested after they played.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1157,44 +1201,258 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She jumped and landed safely.\nHe waited and then started.\nThey played and walked home.\nThe team rested after they played.\nShe painted the walls and called for help.\nThe bird landed on the branch.",
+            "text_content": "She jumped.\nHe waited.\nThey played at home.\nThe team rested.\nShe landed.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all the -ed = /d/ words. Find all the -ed = /t/ words. Find all the -ed = /ɪd/ words.",
+            "comprehension_prompt": "What did they do?",
             "word_types": {
               "She": "sight",
               "jumped": "decodable",
-              "and": "decodable",
-              "landed": "decodable",
-              "safely": "decodable",
               "He": "sight",
               "waited": "decodable",
-              "then": "decodable",
-              "started": "decodable",
               "They": "sight",
               "played": "decodable",
-              "walked": "decodable",
+              "at": "decodable",
               "home": "decodable",
               "The": "sight",
               "team": "decodable",
               "rested": "decodable",
-              "after": "decodable",
-              "they": "sight",
-              "painted": "decodable",
-              "the": "sight",
-              "walls": "decodable",
-              "called": "decodable",
-              "for": "decodable",
-              "help": "decodable",
-              "bird": "decodable",
-              "on": "decodable",
-              "branch": "decodable"
+              "landed": "decodable"
+            },
+            "token_units": {
+              "jumped": [
+                "j",
+                "u",
+                "mp",
+                "e",
+                "d"
+              ],
+              "waited": [
+                "w",
+                "ai",
+                "t",
+                "e",
+                "d"
+              ],
+              "played": [
+                "pl",
+                "ay",
+                "e",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "home": [
+                "h",
+                "o",
+                "m",
+                "e"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "rested": [
+                "r",
+                "e",
+                "st",
+                "e",
+                "d"
+              ],
+              "landed": [
+                "l",
+                "a",
+                "nd",
+                "e",
+                "d"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
-          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
           "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She jumped.\nHe waited.\nThey played at home.\nThe team rested.\nShe landed.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "She": "sight",
+              "jumped": "decodable",
+              "He": "sight",
+              "waited": "decodable",
+              "They": "sight",
+              "played": "decodable",
+              "at": "decodable",
+              "home": "decodable",
+              "The": "sight",
+              "team": "decodable",
+              "rested": "decodable",
+              "landed": "decodable"
+            },
+            "token_units": {
+              "jumped": [
+                "j",
+                "u",
+                "mp",
+                "e",
+                "d"
+              ],
+              "waited": [
+                "w",
+                "ai",
+                "t",
+                "e",
+                "d"
+              ],
+              "played": [
+                "pl",
+                "ay",
+                "e",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "home": [
+                "h",
+                "o",
+                "m",
+                "e"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "rested": [
+                "r",
+                "e",
+                "st",
+                "e",
+                "d"
+              ],
+              "landed": [
+                "l",
+                "a",
+                "nd",
+                "e",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread suffixes Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She jumped.\nHe waited.\nThey played at home.\nThe team rested.\nShe landed.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the suffixes text smoothly. Then tell one thing you noticed about the word parts.",
+            "word_types": {
+              "She": "sight",
+              "jumped": "decodable",
+              "He": "sight",
+              "waited": "decodable",
+              "They": "sight",
+              "played": "decodable",
+              "at": "decodable",
+              "home": "decodable",
+              "The": "sight",
+              "team": "decodable",
+              "rested": "decodable",
+              "landed": "decodable"
+            },
+            "token_units": {
+              "jumped": [
+                "j",
+                "u",
+                "mp",
+                "e",
+                "d"
+              ],
+              "waited": [
+                "w",
+                "ai",
+                "t",
+                "e",
+                "d"
+              ],
+              "played": [
+                "pl",
+                "ay",
+                "e",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "home": [
+                "h",
+                "o",
+                "m",
+                "e"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "rested": [
+                "r",
+                "e",
+                "st",
+                "e",
+                "d"
+              ],
+              "landed": [
+                "l",
+                "a",
+                "nd",
+                "e",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Read the suffixes text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -1388,7 +1646,8 @@
               "called"
             ],
             "highlighted_chunk": "-ed",
-            "support_text": "The -ed suffix has three sounds. Which sound does each word use?"
+            "support_text": "The -ed suffix has three sounds. Which sound does each word use?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: The -ed suffix has three sounds. Which sound does each word use?",
           "expected_response": "Students identify the shared morpheme and explain its meaning.",
@@ -1397,6 +1656,80 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She jumped.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "She": "sight",
+              "jumped": "decodable"
+            },
+            "token_units": {
+              "jumped": [
+                "j",
+                "u",
+                "mp",
+                "e",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use suffixes In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She jumped.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using suffixes, then say a second sentence with one change.",
+            "word_types": {
+              "She": "sight",
+              "jumped": "decodable"
+            },
+            "token_units": {
+              "jumped": [
+                "j",
+                "u",
+                "mp",
+                "e",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Use suffixes in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1436,6 +1769,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final suffixes Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's suffixes focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's suffixes focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

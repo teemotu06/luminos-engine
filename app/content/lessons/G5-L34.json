@@ -3,6 +3,10 @@
   "unit_id": "G5",
   "target_pattern": "y_long_i",
   "title": "Group 5, Lesson 34: y as /aɪ/",
+  "new_units": [
+    "y_long_i"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -289,6 +293,29 @@
           "expected_response": "Students produce /aɪ/ cleanly and understand that y at the end of a one-syllable word makes /aɪ/.",
           "correction_move": "Review: y as consonant /j/ (yes, yell). Contrast with y as /aɪ/ (my, fly). Establish the rule: position and syllable count determine the sound.",
           "observation_note": "Watch for students producing /j/ for y at the end of words. Redirect with the position rule.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say y as /aɪ/ In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y",
+            "back_text": "/aɪ/ (y at end of one-syllable word)",
+            "audio": "/static/audio/y_long_i.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect y as /aɪ/ to one strong word from today.",
+          "expected_response": "Students say y as /aɪ/ clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -818,18 +845,38 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I try to fly.",
+            "text_content": "My dog is by me.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "I": "sight",
-              "try": "decodable",
-              "to": "sight",
-              "fly": "decodable"
+              "My": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "me": "sight"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ]
             }
           },
           "teacher_cue": "I and to are sight words. try, fly decodable — both y = /aɪ/ at end.",
-          "expected_response": "Students read \"I try to fly.\" accurately.",
+          "expected_response": "Students read \"My dog is by me.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /aɪ/ in try and fly — same y pattern.",
           "korean_interference_flag": "vowel_quality",
@@ -847,21 +894,43 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The sky is dry. My wing is sly.",
+            "text_content": "My van is by the bay.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "The": "sight",
-              "sky": "decodable",
-              "is": "decodable",
-              "dry": "decodable",
               "My": "decodable",
-              "wing": "decodable",
-              "sly": "decodable"
+              "van": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "bay": "decodable"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "bay": [
+                "b",
+                "ay"
+              ]
             }
           },
           "teacher_cue": "Two sentences. The is a sight word. sky, dry, my, wing, sly all decodable.",
-          "expected_response": "Students read \"The sky is dry. My wing is sly.\" accurately.",
+          "expected_response": "Students read \"My van is by the bay.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for y = /aɪ/ in sky, dry, my, sly and for ng in wing.",
           "korean_interference_flag": "vowel_quality",
@@ -879,22 +948,39 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Why do they cry? They try and fly.",
+            "text_content": "The shy dog is by me.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "Why": "decodable",
-              "do": "sight",
-              "they": "sight",
-              "cry": "decodable",
-              "They": "sight",
-              "try": "decodable",
-              "and": "decodable",
-              "fly": "decodable"
+              "The": "sight",
+              "shy": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "me": "sight"
+            },
+            "token_units": {
+              "shy": [
+                "sh",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ]
             }
           },
           "teacher_cue": "Two sentences. They is a sight word. why, cry, try, fly all decodable.",
-          "expected_response": "Students read \"Why do they cry? They try and fly.\" accurately.",
+          "expected_response": "Students read \"The shy dog is by me.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for y = /aɪ/ in why, cry, try, fly — four y words.",
           "korean_interference_flag": "vowel_quality",
@@ -912,21 +998,29 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "My ship can fly by the sky.",
+            "text_content": "I go by the bay.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "My": "decodable",
-              "ship": "decodable",
-              "can": "decodable",
-              "fly": "decodable",
+              "I": "sight",
+              "go": "sight",
               "by": "decodable",
               "the": "sight",
-              "sky": "decodable"
+              "bay": "decodable"
+            },
+            "token_units": {
+              "by": [
+                "b",
+                "y"
+              ],
+              "bay": [
+                "b",
+                "ay"
+              ]
             }
           },
           "teacher_cue": "My is sight word... wait — my = m+y(/aɪ/) — all in pool, decodable! No underline.",
-          "expected_response": "Students read \"My ship can fly by the sky.\" accurately.",
+          "expected_response": "Students read \"I go by the bay.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for y = /aɪ/ in my, fly, by, sky — four y words.",
           "korean_interference_flag": "vowel_quality",
@@ -950,48 +1044,237 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I try to fly.\nThe sky is dry.\nMy boat is by the bay.\nWhy do they cry?\nThey try and fly.\nMy ship can fly by the sky.\nThe dry sky is high and wide.\nI cry and try and fly.\nWhy fly? To see the sky! To feel the wind go by!\nMy joy is to fly high in the dry blue sky.",
+            "text_content": "My dog is by me.\nMy van is by the bay.\nThe shy dog is by me.\nI go by the bay.\nMy toy is by the bike.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all the y = /aɪ/ words. What is the rule? When does y say /aɪ/?",
+            "comprehension_prompt": "What is by me? Where do I go?",
             "word_types": {
-              "I": "sight",
-              "try": "decodable",
-              "to": "sight",
-              "fly": "decodable",
-              "The": "sight",
-              "sky": "decodable",
-              "is": "decodable",
-              "dry": "decodable",
               "My": "decodable",
-              "boat": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
               "by": "decodable",
+              "me": "sight",
+              "van": "decodable",
               "the": "sight",
               "bay": "decodable",
-              "Why": "decodable",
-              "do": "sight",
-              "they": "sight",
-              "cry": "decodable",
-              "They": "sight",
-              "and": "decodable",
-              "ship": "decodable",
-              "can": "decodable",
-              "high": "decodable",
-              "wide": "decodable",
-              "To": "sight",
-              "see": "decodable",
-              "feel": "decodable",
-              "wind": "decodable",
+              "The": "sight",
+              "shy": "decodable",
+              "I": "sight",
               "go": "sight",
-              "joy": "decodable",
-              "in": "decodable",
-              "blue": "decodable"
+              "toy": "decodable",
+              "bike": "decodable"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "bay": [
+                "b",
+                "ay"
+              ],
+              "shy": [
+                "sh",
+                "y"
+              ],
+              "toy": [
+                "t",
+                "oy"
+              ],
+              "bike": [
+                "b",
+                "i",
+                "k",
+                "e"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support before rereading the full passage.",
           "observation_note": "Watch for correct vowel team production and tracking accuracy.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "My dog is by me.\nMy van is by the bay.\nThe shy dog is by me.\nI go by the bay.\nMy toy is by the bike.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "My": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "me": "sight",
+              "van": "decodable",
+              "the": "sight",
+              "bay": "decodable",
+              "The": "sight",
+              "shy": "decodable",
+              "I": "sight",
+              "go": "sight",
+              "toy": "decodable",
+              "bike": "decodable"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "bay": [
+                "b",
+                "ay"
+              ],
+              "shy": [
+                "sh",
+                "y"
+              ],
+              "toy": [
+                "t",
+                "oy"
+              ],
+              "bike": [
+                "b",
+                "i",
+                "k",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread y as /aɪ/ Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "My dog is by me.\nMy van is by the bay.\nThe shy dog is by me.\nI go by the bay.\nMy toy is by the bike.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the y as /aɪ/ text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "My": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "me": "sight",
+              "van": "decodable",
+              "the": "sight",
+              "bay": "decodable",
+              "The": "sight",
+              "shy": "decodable",
+              "I": "sight",
+              "go": "sight",
+              "toy": "decodable",
+              "bike": "decodable"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "bay": [
+                "b",
+                "ay"
+              ],
+              "shy": [
+                "sh",
+                "y"
+              ],
+              "toy": [
+                "t",
+                "oy"
+              ],
+              "bike": [
+                "b",
+                "i",
+                "k",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the y as /aɪ/ text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1092,6 +1375,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "My dog is by me.",
+            "expected_answer": "My dog is by me.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1115,7 +1424,8 @@
               "cry"
             ],
             "highlighted_chunk": "y",
-            "support_text": "What do all these words share at the end? What sound does y make here?"
+            "support_text": "What do all these words share at the end? What sound does y make here?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What do all these words share at the end? What sound does y make here?",
           "expected_response": "Students identify the shared chunk and name the sound it makes.",
@@ -1124,6 +1434,106 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "My dog is by me.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "My": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "me": "sight"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use y as /aɪ/ In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "My dog is by me.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using y as /aɪ/, then say a second sentence with one change.",
+            "word_types": {
+              "My": "decodable",
+              "dog": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "me": "sight"
+            },
+            "token_units": {
+              "My": [
+                "m",
+                "y"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Use y as /aɪ/ in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1163,6 +1573,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final y as /aɪ/ Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's y as /aɪ/ focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's y as /aɪ/ focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

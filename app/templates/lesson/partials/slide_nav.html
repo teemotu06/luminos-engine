@@ -1,18 +1,123 @@
 {% if ordered_slides %}
 <nav class="lesson-nav" aria-label="Lesson slide navigation">
 
+    {# ── Per-slide action buttons (left of progress bar) ─── #}
+    <div class="lesson-nav__actions">
+        {% for entry in ordered_slides %}
+        {% with slide = entry.slide, slide_index = entry.slide_index %}
+        <div class="lesson-nav__action-group"
+             x-show="activeSlideIndex === {{ slide_index }}"
+             x-cloak>
+
+            {% if slide.view_type == 'flashcard' %}
+                {% if slide.content_payload.audio %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="playAudio('{{ slide.content_payload.audio }}')">
+                    ▶ Audio
+                </button>
+                {% endif %}
+                {% if slide.content_payload.blend_units %}
+                {% set blend_json = slide.content_payload.model_dump().blend_units | tojson %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    x-show="revealed"
+                    x-cloak
+                    @click='runVocabBlend({{ blend_json }}, {{ slide.content_payload.audio | tojson }})'>
+                    Blend
+                </button>
+                {% endif %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="toggleReveal()"
+                    x-text="revealed ? 'Hide' : 'Reveal'">
+                    Reveal
+                </button>
+
+            {% elif slide.view_type == 'audio_prompt' %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="playAudio('{{ slide.content_payload.audio_file }}')">
+                    ▶ Play
+                </button>
+                {% if slide.content_payload.reveal_text %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="toggleReveal()"
+                    x-text="revealed ? 'Hide' : 'Reveal'">
+                    Reveal
+                </button>
+                {% endif %}
+
+            {% elif slide.view_type == 'writing_encoding' %}
+                {% if slide.content_payload.audio_prompt %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
+                    ▶ Dictation
+                </button>
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
+                    ↩ Replay
+                </button>
+                {% endif %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="toggleReveal()"
+                    x-text="revealed ? 'Hide Answer' : 'Reveal Answer'">
+                    Reveal Answer
+                </button>
+
+            {% elif slide.view_type == 'drag_letter' or slide.view_type == 'drag_word' %}
+                <button
+                    type="button"
+                    class="lesson-nav__button"
+                    @click="$dispatch('lesson-nav-reveal', { slideIndex: activeSlideIndex })">
+                    Reveal
+                </button>
+
+            {% endif %}
+
+        </div>
+        {% endwith %}
+        {% endfor %}
+    </div>
+
+    {# ── Progress bar ─────────────────────────────────────── #}
+    <div class="lesson-nav__progress">
+        <div class="lesson-nav__progress-track" aria-hidden="true">
+            <span class="lesson-nav__progress-fill" :style="`width: ${progressPercent}%`"></span>
+        </div>
+        <span class="lesson-nav__status" x-text="`${activeSlideIndex + 1} / {{ ordered_slides|length }}`"></span>
+    </div>
+
+    {# ── Nav controls ─────────────────────────────────────── #}
+    <button
+        type="button"
+        class="lesson-nav__button lesson-nav__button--utility"
+        @click="$store.lessonRoster.toggleRosterDetails()"
+        x-show="$store.lessonRoster.hasActiveLuminosPrompt && $store.lessonRoster.hasRoster"
+        x-cloak>
+        Class
+    </button>
+
     <button
         id="lesson-prev-link"
         type="button"
         class="lesson-nav__button"
         @click="goToPrevSlide()"
         :disabled="activeSlideIndex === 0">
-        <span class="lesson-nav__arrow">←</span> Previous
+        <span aria-hidden="true">←</span> Prev
     </button>
-
-    <span class="lesson-nav__status">
-        <span x-text="`${activeSlideIndex + 1} / {{ ordered_slides|length }}`"></span>
-    </span>
 
     <template x-if="activeSlideIndex < {{ ordered_slides|length - 1 }}">
       <button
@@ -20,7 +125,7 @@
           type="button"
           class="lesson-nav__button"
           @click="goToNextSlide()">
-          Next <span class="lesson-nav__arrow">→</span>
+          Next <span aria-hidden="true">→</span>
       </button>
     </template>
     <template x-if="activeSlideIndex >= {{ ordered_slides|length - 1 }}">
@@ -29,7 +134,7 @@
           class="lesson-nav__button lesson-nav__button--finish"
           :href="`/lesson/{{ lesson.lesson_id }}/review/${attemptId}`"
           @click.prevent="finishLesson()">
-          Finish &amp; review <span class="lesson-nav__arrow">→</span>
+          Finish &amp; review <span aria-hidden="true">→</span>
       </a>
     </template>
 

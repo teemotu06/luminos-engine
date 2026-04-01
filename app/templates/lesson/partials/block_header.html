@@ -1,5 +1,17 @@
 <div class="lesson-block-header">
   <div class="lesson-block-header__meta">
+    {% if slide.slide_id.startswith("dyn-") %}
+      <div class="lesson-block-header__eyebrow lesson-block-header__eyebrow--smart-review">
+        Smart Review · Generated from class performance
+      </div>
+      <button
+        type="button"
+        class="lesson-block-header__skip-review"
+        @click="skipDynamicReview()"
+        title="Skip all generated review slides">
+        Skip review
+      </button>
+    {% endif %}
     {% if slide.slide_title %}
       <h3 class="lesson-block-header__title">{{ slide.slide_title }}</h3>
     {% endif %}

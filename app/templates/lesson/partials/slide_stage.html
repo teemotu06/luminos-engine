@@ -1,22 +1,30 @@
 {% if ordered_slides %}
 <section class="lesson-stage">
-    <div class="teacher-overlay-stack" x-show="!presentationMode" x-cloak>
-        {% for entry in ordered_slides %}
-            {% with block = entry.block, slide = entry.slide, slide_index = entry.slide_index %}
-                <div x-show="activeSlideIndex === {{ slide_index }}" x-cloak>
-                    {% include "lesson/partials/teacher_overlay.html" %}
-                </div>
-            {% endwith %}
-        {% endfor %}
-    </div>
     <div class="lesson-slide-stack">
         {% for entry in ordered_slides %}
             {% with block = entry.block, slide = entry.slide, slide_index = entry.slide_index %}
+                {% set payload = slide.content_payload.model_dump() %}
                 <div
                     class="lesson-slide-frame"
                     data-slide-index="{{ slide_index }}"
                     data-block-id="{{ slide.block_id }}"
+                    data-block-label="{{ block.label }}"
                     data-slide-id="{{ slide.slide_id }}"
+                    data-slide-title="{{ slide.slide_title }}"
+                    data-view-type="{{ slide.view_type }}"
+                    data-teacher-cue="{{ slide.teacher_cue if slide.teacher_cue else '' }}"
+                    data-display-mode="{{ slide.content_payload.display_mode if slide.content_payload.display_mode else '' }}"
+                    data-prompt-text="{{ payload.get('prompt_text', '') }}"
+                    data-front-text="{{ payload.get('front_text', '') }}"
+                    data-target-word="{{ payload.get('target_word', '') }}"
+                    data-target-sentence="{{ payload.get('target_sentence', '') }}"
+                    data-dictated-text="{{ payload.get('dictated_text', '') }}"
+                    data-quick-check-title="{{ payload.get('title', '') }}"
+                    data-comprehension-prompt="{{ slide.content_payload.comprehension_prompt if slide.content_payload.comprehension_prompt else '' }}"
+                    data-comprehension-questions='{{ slide.content_payload.comprehension_questions | tojson if slide.content_payload.comprehension_questions else "[]" }}'
+                    data-luminos-says='{{ payload.get("luminos_says") | tojson if payload.get("luminos_says") else "null" }}'
+                    data-oral-check-eligible="{% if slide.block_id == '07' and slide.view_type == 'read_respond' and slide.content_payload.display_mode == 'reader' %}true{% else %}false{% endif %}"
+                    data-oral-check-config='{{ slide.content_payload.oral_enforcement.model_dump() | tojson if slide.content_payload.oral_enforcement else "null" }}'
                     x-show="activeSlideIndex === {{ slide_index }}"
                     x-cloak>
                     {% include "lesson/partials/block_card.html" %}

@@ -3,6 +3,12 @@
   "unit_id": "G6",
   "target_pattern": "er_ir_ur",
   "title": "Group 6, Lesson 37: er, ir, ur",
+  "new_units": [
+    "er",
+    "ir",
+    "ur"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -290,6 +296,29 @@
           "expected_response": "Students produce /ɜː/ cleanly across all three spellings and understand that er/ir/ur all make the same sound.",
           "correction_move": "Show all three spelling cards: er, ir, ur — all make /ɜː/. Model each with words. Then confirm the upgrade: her = h + er — now decodable.",
           "observation_note": "Watch for Korean learners producing a pure /ɜ/ without the r-colouring — the /ɜː/ needs the retroflex quality of /r/ at the end.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say today's sounds In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "er / ir / ur",
+            "back_text": "/ɜː/",
+            "audio": "/static/audio/er_ir_ur.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect today's sounds to one strong word from today.",
+          "expected_response": "Students say today's sounds clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -973,21 +1002,40 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The bird is on the firm branch.",
+            "text_content": "The bird is in the dirt.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
               "bird": "decodable",
               "is": "decodable",
-              "on": "decodable",
+              "in": "decodable",
               "the": "sight",
-              "firm": "decodable",
-              "branch": "decodable"
+              "dirt": "decodable"
+            },
+            "token_units": {
+              "bird": [
+                "b",
+                "ir",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dirt": [
+                "d",
+                "ir",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on bird, is, on, firm.",
-          "expected_response": "Students read \"The bird is on the firm branch.\" accurately.",
+          "expected_response": "Students read \"The bird is in the dirt.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The bird is on the firm branch.\".",
           "korean_interference_flag": "r_l",
@@ -1005,18 +1053,34 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The girl can stir.",
+            "text_content": "The girl is here.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
               "girl": "decodable",
-              "can": "decodable",
-              "stir": "decodable"
+              "is": "decodable",
+              "here": "decodable"
+            },
+            "token_units": {
+              "girl": [
+                "g",
+                "ir",
+                "l"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on girl, can, stir.",
-          "expected_response": "Students read \"The girl can stir.\" accurately.",
+          "expected_response": "Students read \"The girl is here.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The girl can stir.\".",
           "korean_interference_flag": "r_l",
@@ -1034,19 +1098,37 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Her shirt has a burn.",
+            "text_content": "Her fur is wet.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "Her": "decodable",
-              "shirt": "decodable",
-              "has": "decodable",
-              "a": "sight",
-              "burn": "decodable"
+              "fur": "decodable",
+              "is": "decodable",
+              "wet": "decodable"
+            },
+            "token_units": {
+              "Her": [
+                "h",
+                "er"
+              ],
+              "fur": [
+                "f",
+                "ur"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "wet": [
+                "w",
+                "e",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on Her, shirt, has, burn.",
-          "expected_response": "Students read \"Her shirt has a burn.\" accurately.",
+          "expected_response": "Students read \"Her fur is wet.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"Her shirt has a burn.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1064,18 +1146,34 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He hurt his arm.",
+            "text_content": "I can turn it.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "He": "sight",
-              "hurt": "decodable",
-              "his": "decodable",
-              "arm": "decodable"
+              "I": "sight",
+              "can": "decodable",
+              "turn": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "turn": [
+                "t",
+                "ur",
+                "n"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on hurt, his, arm.",
-          "expected_response": "Students read \"He hurt his arm.\" accurately.",
+          "expected_response": "Students read \"I can turn it.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"He hurt his arm.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1099,43 +1197,300 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The bird was on the firm branch.\nThe girl can stir.\nHer shirt has a burn.\nHe hurt his arm.\nA blur of fur was by the fern.\nThe bird perches on the branch.",
+            "text_content": "The bird is in the dirt.\nThe girl is here.\nHer fur is wet.\nI can turn it.\nThe girl can see the bird.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "What happened to the shirt? What does the bird do? Find all the er words, ir words, ur words.",
+            "comprehension_prompt": "Where is the bird? Who is here?",
             "word_types": {
               "The": "sight",
               "bird": "decodable",
-              "was": "sight",
-              "on": "decodable",
+              "is": "decodable",
+              "in": "decodable",
               "the": "sight",
-              "firm": "decodable",
-              "branch": "decodable",
+              "dirt": "decodable",
               "girl": "decodable",
-              "can": "decodable",
-              "stir": "decodable",
+              "here": "decodable",
               "Her": "decodable",
-              "shirt": "decodable",
-              "has": "decodable",
-              "a": "sight",
-              "burn": "decodable",
-              "He": "sight",
-              "hurt": "decodable",
-              "his": "decodable",
-              "arm": "decodable",
-              "A": "sight",
-              "blur": "decodable",
-              "of": "sight",
               "fur": "decodable",
-              "by": "decodable",
-              "fern": "decodable",
-              "perches": "decodable"
+              "wet": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "turn": "decodable",
+              "it": "decodable",
+              "see": "decodable"
+            },
+            "token_units": {
+              "bird": [
+                "b",
+                "ir",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dirt": [
+                "d",
+                "ir",
+                "t"
+              ],
+              "girl": [
+                "g",
+                "ir",
+                "l"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "Her": [
+                "h",
+                "er"
+              ],
+              "fur": [
+                "f",
+                "ur"
+              ],
+              "wet": [
+                "w",
+                "e",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "turn": [
+                "t",
+                "ur",
+                "n"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "see": [
+                "s",
+                "ee"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
-          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
           "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bird is in the dirt.\nThe girl is here.\nHer fur is wet.\nI can turn it.\nThe girl can see the bird.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "bird": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "dirt": "decodable",
+              "girl": "decodable",
+              "here": "decodable",
+              "Her": "decodable",
+              "fur": "decodable",
+              "wet": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "turn": "decodable",
+              "it": "decodable",
+              "see": "decodable"
+            },
+            "token_units": {
+              "bird": [
+                "b",
+                "ir",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dirt": [
+                "d",
+                "ir",
+                "t"
+              ],
+              "girl": [
+                "g",
+                "ir",
+                "l"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "Her": [
+                "h",
+                "er"
+              ],
+              "fur": [
+                "f",
+                "ur"
+              ],
+              "wet": [
+                "w",
+                "e",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "turn": [
+                "t",
+                "ur",
+                "n"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "see": [
+                "s",
+                "ee"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread today's sounds Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bird is in the dirt.\nThe girl is here.\nHer fur is wet.\nI can turn it.\nThe girl can see the bird.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the today's sounds text smoothly. Then tell one thing you noticed about the sounds.",
+            "word_types": {
+              "The": "sight",
+              "bird": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "dirt": "decodable",
+              "girl": "decodable",
+              "here": "decodable",
+              "Her": "decodable",
+              "fur": "decodable",
+              "wet": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "turn": "decodable",
+              "it": "decodable",
+              "see": "decodable"
+            },
+            "token_units": {
+              "bird": [
+                "b",
+                "ir",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dirt": [
+                "d",
+                "ir",
+                "t"
+              ],
+              "girl": [
+                "g",
+                "ir",
+                "l"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "Her": [
+                "h",
+                "er"
+              ],
+              "fur": [
+                "f",
+                "ur"
+              ],
+              "wet": [
+                "w",
+                "e",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "turn": [
+                "t",
+                "ur",
+                "n"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "see": [
+                "s",
+                "ee"
+              ]
+            }
+          },
+          "teacher_cue": "Read the today's sounds text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1237,6 +1592,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The bird is in the dirt.",
+            "expected_answer": "The bird is in the dirt.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1260,7 +1641,8 @@
               "burn"
             ],
             "highlighted_chunk": "er/ir/ur",
-            "support_text": "All these share the same vowel sound. What are the three spellings?"
+            "support_text": "All these share the same vowel sound. What are the three spellings?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: All these share the same vowel sound. What are the three spellings?",
           "expected_response": "Students identify the shared chunk and name the sound it makes.",
@@ -1269,6 +1651,110 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bird is in the dirt.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "bird": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "dirt": "decodable"
+            },
+            "token_units": {
+              "bird": [
+                "b",
+                "ir",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dirt": [
+                "d",
+                "ir",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use today's sounds In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The bird is in the dirt.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using today's sounds, then say a second sentence with one change.",
+            "word_types": {
+              "The": "sight",
+              "bird": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "dirt": "decodable"
+            },
+            "token_units": {
+              "bird": [
+                "b",
+                "ir",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dirt": [
+                "d",
+                "ir",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use today's sounds in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1308,6 +1794,61 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final today's sounds Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's today's sounds focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's sounds focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

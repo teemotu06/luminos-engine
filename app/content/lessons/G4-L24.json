@@ -3,6 +3,10 @@
   "unit_id": "G4",
   "target_pattern": "ch",
   "title": "Group 4, Lesson 24: ch",
+  "new_units": [
+    "ch"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -290,6 +294,29 @@
           "expected_response": "Students produce /tʃ/ cleanly as a voiced postalveolar affricate with a clear stop onset.",
           "correction_move": "Model the contrast: /ʃ/ — smooth continuous friction. /tʃ/ — hard stop then friction. Students alternate sh-ch-sh-ch.",
           "observation_note": "Watch for /ʃ/ substitution — the most likely error. Redirect: the ch has to start with a stop.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say ch In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ch",
+            "back_text": "/tʃ/",
+            "audio": "/static/audio/ch.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect ch to one strong word from today.",
+          "expected_response": "Students say ch clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -871,21 +898,30 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She had a chip on the dish.",
+            "text_content": "She had a chip.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "She": "sight",
               "had": "decodable",
               "a": "sight",
-              "chip": "decodable",
-              "on": "decodable",
-              "the": "sight",
-              "dish": "decodable"
+              "chip": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ]
             }
           },
           "teacher_cue": "She is a sight word. All other words decodable.",
-          "expected_response": "Students read \"She had a chip on the dish.\" accurately.",
+          "expected_response": "Students read \"She had a chip.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /tʃ/ in chip and /ʃ/ in dish — two different digraphs in one sentence.",
           "korean_interference_flag": "vowel_quality",
@@ -903,20 +939,30 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She had a chip and a chat.",
+            "text_content": "He had a chop.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "She": "sight",
+              "He": "sight",
               "had": "decodable",
               "a": "sight",
-              "chip": "decodable",
-              "and": "decodable",
-              "chat": "decodable"
+              "chop": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chop": [
+                "ch",
+                "o",
+                "p"
+              ]
             }
           },
           "teacher_cue": "She is a sight word. All other words decodable.",
-          "expected_response": "Students read \"She had a chip and a chat.\" accurately.",
+          "expected_response": "Students read \"He had a chop.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /tʃ/ in chip and chat — two ch words.",
           "korean_interference_flag": "vowel_quality",
@@ -934,22 +980,40 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He checks the chest. She can catch it.",
+            "text_content": "The chip is in the dish.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "He": "sight",
-              "checks": "decodable",
+              "The": "sight",
+              "chip": "decodable",
+              "is": "decodable",
+              "in": "decodable",
               "the": "sight",
-              "chest": "decodable",
-              "She": "sight",
-              "can": "decodable",
-              "catch": "decodable",
-              "it": "decodable"
+              "dish": "decodable"
+            },
+            "token_units": {
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dish": [
+                "d",
+                "i",
+                "sh"
+              ]
             }
           },
           "teacher_cue": "Two sentences. He and She are sight words. All other words decodable.",
-          "expected_response": "Students read \"He checks the chest. She can catch it.\" accurately.",
+          "expected_response": "Students read \"The chip is in the dish.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /tʃ/ in checks, chest, catch — three ch words across two sentences.",
           "korean_interference_flag": "vowel_quality",
@@ -967,22 +1031,28 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "That is such a big chip. Much fun!",
+            "text_content": "Such fun.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "That": "decodable",
-              "is": "decodable",
-              "such": "decodable",
-              "a": "sight",
-              "big": "decodable",
-              "chip": "decodable",
-              "Much": "decodable",
+              "Such": "decodable",
               "fun": "decodable"
+            },
+            "token_units": {
+              "Such": [
+                "s",
+                "u",
+                "ch"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Two sentences. That, such, big, chip, much, fun all decodable.",
-          "expected_response": "Students read \"That is such a big chip. Much fun!\" accurately.",
+          "expected_response": "Students read \"Such fun.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /tʃ/ in such and much — coda position — and in chip at onset.",
           "korean_interference_flag": "vowel_quality",
@@ -1006,53 +1076,282 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She had a chip on the dish.\nShe had a chip and a chat.\nHe checks the chest.\nShe can catch it.\nThat is such a big chip.\nMuch fun!\nThe rich man had a big chest.\nShe fetched the dish and sat.\nHe had chips and she had broth.\nCatch it! Do not drop it!\nShe checks and he matches. This is fun.",
+            "text_content": "She had a chip.\nHe had a chop.\nThe chip is in the dish.\nSuch fun.\nThe rich man had a chip.\nMuch fun.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "What did she have? What did he have? Who caught what?",
+            "comprehension_prompt": "Where is the chip? Who had a chip?",
             "word_types": {
               "She": "sight",
               "had": "decodable",
               "a": "sight",
               "chip": "decodable",
-              "on": "decodable",
+              "He": "sight",
+              "chop": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "in": "decodable",
               "the": "sight",
               "dish": "decodable",
-              "and": "decodable",
-              "chat": "decodable",
-              "He": "sight",
-              "checks": "decodable",
-              "chest": "decodable",
-              "can": "decodable",
-              "catch": "decodable",
-              "it": "decodable",
-              "That": "decodable",
-              "is": "decodable",
-              "such": "decodable",
-              "big": "decodable",
-              "Much": "decodable",
+              "Such": "decodable",
               "fun": "decodable",
-              "The": "sight",
               "rich": "decodable",
               "man": "decodable",
-              "fetched": "decodable",
-              "sat": "decodable",
-              "chips": "decodable",
-              "she": "sight",
-              "broth": "decodable",
-              "Catch": "decodable",
-              "Do": "sight",
-              "not": "decodable",
-              "drop": "decodable",
-              "he": "sight",
-              "matches": "decodable",
-              "This": "decodable"
+              "Much": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ],
+              "chop": [
+                "ch",
+                "o",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dish": [
+                "d",
+                "i",
+                "sh"
+              ],
+              "Such": [
+                "s",
+                "u",
+                "ch"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ],
+              "rich": [
+                "r",
+                "i",
+                "ch"
+              ],
+              "man": [
+                "m",
+                "a",
+                "n"
+              ],
+              "Much": [
+                "m",
+                "u",
+                "ch"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She had a chip.\nHe had a chop.\nThe chip is in the dish.\nSuch fun.\nThe rich man had a chip.\nMuch fun.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "She": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "chip": "decodable",
+              "He": "sight",
+              "chop": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "dish": "decodable",
+              "Such": "decodable",
+              "fun": "decodable",
+              "rich": "decodable",
+              "man": "decodable",
+              "Much": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ],
+              "chop": [
+                "ch",
+                "o",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dish": [
+                "d",
+                "i",
+                "sh"
+              ],
+              "Such": [
+                "s",
+                "u",
+                "ch"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ],
+              "rich": [
+                "r",
+                "i",
+                "ch"
+              ],
+              "man": [
+                "m",
+                "a",
+                "n"
+              ],
+              "Much": [
+                "m",
+                "u",
+                "ch"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread ch Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She had a chip.\nHe had a chop.\nThe chip is in the dish.\nSuch fun.\nThe rich man had a chip.\nMuch fun.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the ch text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "She": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "chip": "decodable",
+              "He": "sight",
+              "chop": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "dish": "decodable",
+              "Such": "decodable",
+              "fun": "decodable",
+              "rich": "decodable",
+              "man": "decodable",
+              "Much": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ],
+              "chop": [
+                "ch",
+                "o",
+                "p"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "dish": [
+                "d",
+                "i",
+                "sh"
+              ],
+              "Such": [
+                "s",
+                "u",
+                "ch"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ],
+              "rich": [
+                "r",
+                "i",
+                "ch"
+              ],
+              "man": [
+                "m",
+                "a",
+                "n"
+              ],
+              "Much": [
+                "m",
+                "u",
+                "ch"
+              ]
+            }
+          },
+          "teacher_cue": "Read the ch text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -1156,6 +1455,37 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write ch And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_catch.mp3",
+            "dictated_text": "catch",
+            "expected_answer": "catch",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "c",
+              "a",
+              "t",
+              "ch"
+            ],
+            "prompt_text": "Write the ch target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the ch target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1175,7 +1505,8 @@
               "ship"
             ],
             "highlighted_chunk": "sh/ch",
-            "support_text": "Say chip and ship. What is different at the start?"
+            "support_text": "Say chip and ship. What is different at the start?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: Say chip and ship. What is different at the start?",
           "expected_response": "Students identify the shared pattern and name what changes.",
@@ -1184,6 +1515,90 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She had a chip.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "She": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "chip": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use ch In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She had a chip.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using ch, then say a second sentence with one change.",
+            "word_types": {
+              "She": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "chip": "decodable"
+            },
+            "token_units": {
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "chip": [
+                "ch",
+                "i",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Use ch in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1223,6 +1638,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final ch Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's ch focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's ch focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

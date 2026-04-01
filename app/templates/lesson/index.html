@@ -12,67 +12,130 @@
   {% endif %}
 {% endfor %}
 {% set group_count = lessons | groupby('unit_id') | list | length %}
+{% set ready_count = lessons | selectattr('content_pack_status', 'equalto', 'ready') | list | length %}
+
+<script id="class-review-map" type="application/json">{{ class_review_map_json | default('{}', true) | safe }}</script>
 
 <div
   class="page launcher"
-  x-data="{ selectedClassId: '' }">
+  x-data="{
+    selectedClassId: '',
+    lessonProgress: {},
+    masteryGates: {},
+    classReviewMap: {},
+    init() {
+      const mapNode = document.getElementById('class-review-map');
+      if (mapNode && mapNode.textContent) {
+        try {
+          this.classReviewMap = JSON.parse(mapNode.textContent);
+        } catch (_error) {
+          this.classReviewMap = {};
+        }
+      }
+      this.$watch('selectedClassId', val => {
+        this.fetchProgress(val);
+        this.fetchMasteryGates(val);
+      });
+    },
+    fetchProgress(classId) {
+      if (!classId) { this.lessonProgress = {}; return; }
+      fetch('/lesson/progress?class_id=' + encodeURIComponent(classId))
+        .then(r => r.json())
+        .then(data => { this.lessonProgress = data; })
+        .catch(() => {});
+    },
+    fetchMasteryGates(classId) {
+      if (!classId) { this.masteryGates = {}; return; }
+      fetch('/lesson/mastery-gates?class_id=' + encodeURIComponent(classId))
+        .then(r => r.json())
+        .then(data => { this.masteryGates = data; })
+        .catch(() => {});
+    },
+    reviewFor(lessonId) {
+      if (!this.selectedClassId) return null;
+      return (this.classReviewMap[this.selectedClassId] || {})[lessonId] || null;
+    },
+    gateFor(lessonId) {
+      if (!this.selectedClassId) return null;
+      return this.masteryGates[lessonId] || null;
+    }
+  }">
 
   <header class="launcher__header">
-    <div class="launcher__meta-label">LUMINOS · Lesson Library</div>
-    <h1 class="launcher__title">Lesson Library</h1>
-    <p class="launcher__intro">Open a lesson by unit and launch directly into teacher mode.</p>
-    <div class="launcher__stats">
-      <div class="launcher__stat">
-        <span class="launcher__stat-number">{{ lessons | length }}</span>
-        <span class="launcher__stat-label">Lessons</span>
-      </div>
-      <div class="launcher__stat">
-        <span class="launcher__stat-number">{{ group_count }}</span>
-        <span class="launcher__stat-label">Groups</span>
-      </div>
-      <div class="launcher__stat">
-        <span class="launcher__stat-number">{{ ns.sound_count }}</span>
-        <span class="launcher__stat-label">Sounds</span>
-      </div>
+    <div class="launcher__header-identity">
+      <span class="launcher__header-sep">LUMINOS</span>
+      <h1 class="launcher__header-title">Lesson Library</h1>
+    </div>
+    <div class="launcher__header-stats">
+      <span class="launcher__stat-inline">{{ lessons | length }} lessons</span>
+      <span class="launcher__stat-inline">{{ group_count }} groups</span>
+      <span class="launcher__stat-inline launcher__stat-inline--ready">{{ ready_count }} ready</span>
+      <span class="launcher__stat-inline">{{ ns.sound_count }} sounds</span>
     </div>
   </header>
 
   {# ── Class selector ────────────────────────────────────── #}
-  <div class="class-selector">
-    <div class="class-selector__header">
-      <span class="class-selector__label">Teaching class</span>
+  <div class="class-selector" :class="{ 'class-selector--active': selectedClassId }">
+    <div class="class-selector__top">
+      <label for="class-select" class="class-selector__label">Select your class</label>
       <a class="class-selector__manage" href="/classes/">Manage classes →</a>
     </div>
     <select
       class="class-selector__select"
       id="class-select"
       x-model="selectedClassId">
-      <option value="" disabled>Select a class to load roster</option>
+      <option value="" data-class-label="">No class — quick preview</option>
       {% for cls in classes %}
-      <option value="{{ cls.id }}">{{ cls.class_name }}{% if cls.description %} · {{ cls.description }}{% endif %} ({{ cls.student_count }} student{{ 's' if cls.student_count != 1 }})</option>
+      <option value="{{ cls.id }}" data-class-label="{{ cls.class_name }}">{{ cls.class_name }}{% if cls.description %} · {{ cls.description }}{% endif %} ({{ cls.student_count }} student{{ 's' if cls.student_count != 1 }})</option>
       {% endfor %}
     </select>
+    <div class="class-selector__status">
+      <span class="class-selector__status-dot" :class="{ 'class-selector__status-dot--active': selectedClassId }"></span>
+      <span x-text="selectedClassId ? 'Roster-connected — marks will be saved' : 'No roster — marks will not be saved'"></span>
+    </div>
   </div>
 
-  <main class="launcher__main">
-    {% for unit_id, unit_lessons in lessons | groupby('unit_id') %}
-    {% set grouped_lessons = unit_lessons | list %}
+  <main id="main-content" class="launcher__main">
+    {% for group in lesson_groups %}
+    {% set grouped_lessons = group.lessons %}
     {% if not loop.first %}<hr class="launcher__divider">{% endif %}
     <section class="launcher__group">
       <div class="launcher__group-header">
-        <div class="launcher__group-kicker">Group</div>
-        <h2 class="launcher__group-title">{{ unit_id }}</h2>
+        <h2 class="launcher__group-title">{{ group.unit_id }}</h2>
+        <div class="launcher__group-meta">{{ grouped_lessons | length }} lesson{{ 's' if grouped_lessons | length != 1 }}</div>
       </div>
       <div class="launcher__lesson-grid">
         {% for lesson in grouped_lessons %}
         {% set parts = lesson.title.split(': ') %}
         {% set lesson_label = parts[1] if parts | length > 1 else lesson.title %}
+        {% set pattern_count = lesson.target_pattern.split(' · ') | length if lesson.target_pattern else 0 %}
+        {% set ki_anchor = ki_anchors.get(lesson.lesson_id) %}
         <a
           class="launcher__lesson-card"
-          :href="`/lesson/{{ lesson.lesson_id }}` + (selectedClassId ? '?class_id=' + selectedClassId : '')">
+          href="/lesson/{{ lesson.lesson_id }}"
+          :class="{ 'launcher__lesson-card--active': selectedClassId }"
+          onclick="const classSelect=document.getElementById('class-select'); const classId=classSelect && classSelect.value ? '?class_id=' + encodeURIComponent(classSelect.value) : ''; window.location.assign('/lesson/{{ lesson.lesson_id }}' + classId); return false;">
           <div class="launcher__card-top">
             <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
-            <span class="launcher__status-dot launcher__status-dot--{{ lesson.content_pack_status }}"></span>
+            <template x-if="lessonProgress['{{ lesson.lesson_id }}']">
+              <span
+                class="launcher__status-badge"
+                :class="'launcher__status-badge--' + lessonProgress['{{ lesson.lesson_id }}'].replace('_', '-')"
+                x-text="lessonProgress['{{ lesson.lesson_id }}'] === 'completed' ? 'Completed' : 'In Progress'">
+              </span>
+            </template>
+            <template x-if="!lessonProgress['{{ lesson.lesson_id }}']">
+              {% set status_labels = {'draft': 'Building', 'ready': 'Ready'} %}
+              <span class="launcher__status-badge launcher__status-badge--{{ lesson.content_pack_status }}">{{ status_labels.get(lesson.content_pack_status, lesson.content_pack_status | replace('_', ' ') | title) }}</span>
+            </template>
+            <template x-if="selectedClassId && gateFor('{{ lesson.lesson_id }}')">
+              <span
+                class="launcher__gate-pill"
+                :class="'launcher__gate-pill--' + gateFor('{{ lesson.lesson_id }}').gate_level"
+                :title="gateFor('{{ lesson.lesson_id }}').gate_label + (gateFor('{{ lesson.lesson_id }}').marked_count ? ' · ' + gateFor('{{ lesson.lesson_id }}').secure_count + '/' + gateFor('{{ lesson.lesson_id }}').marked_count + ' secure' : '')"
+                x-text="gateFor('{{ lesson.lesson_id }}').gate_label">
+              </span>
+            </template>
           </div>
           {% if lesson.target_pattern %}
           <div class="launcher__phoneme-pills">
@@ -82,7 +145,31 @@
           </div>
           {% endif %}
           <span class="launcher__lesson-subtitle">{{ lesson_label }}</span>
-          <span class="launcher__lesson-cta">Open lesson →</span>
+          <template x-if="selectedClassId && reviewFor('{{ lesson.lesson_id }}') && (reviewFor('{{ lesson.lesson_id }}').recent_review_target || reviewFor('{{ lesson.lesson_id }}').due_review_targets.length || reviewFor('{{ lesson.lesson_id }}').class_risk_targets.length)">
+            <div class="launcher__review-preview">
+              <div class="launcher__card-meta"><strong>Auto-review added to this lesson</strong></div>
+              <template x-if="reviewFor('{{ lesson.lesson_id }}').recent_review_target">
+                <div class="launcher__card-meta" x-text="'Warm-up: ' + reviewFor('{{ lesson.lesson_id }}').recent_review_target.pattern_key + ' (last lesson)'"></div>
+              </template>
+              <template x-for="item in reviewFor('{{ lesson.lesson_id }}').due_review_targets.slice(0, 1)" :key="item.pattern_key + '-due'">
+                <div class="launcher__card-meta" x-text="'Spaced review: ' + item.pattern_key"></div>
+              </template>
+              <template x-for="item in reviewFor('{{ lesson.lesson_id }}').class_risk_targets.slice(0, 1)" :key="item.pattern_key + '-risk'">
+                <div class="launcher__card-meta" x-text="'Class needs more work: ' + item.pattern_key + (item.weak_learner_count ? ' · ' + item.weak_learner_count + ' students weak' : '')"></div>
+              </template>
+            </div>
+          </template>
+          {% if ki_anchor %}
+          <div class="launcher__card-meta"><strong>{{ ki_anchor["policy"] }}</strong></div>
+          <div class="launcher__card-meta">Recommended after {{ ki_anchor["after"] }}</div>
+          <div class="launcher__card-meta">{{ ki_anchor["label"] }}</div>
+          <div class="launcher__card-meta">Assign when: {{ ki_anchor["assign_when"] }}</div>
+          <div class="launcher__card-meta">Skip or shorten when: {{ ki_anchor["skip_when"] }}</div>
+          {% endif %}
+          <div class="launcher__card-footer">
+            <span class="launcher__card-meta">{{ pattern_count }} target sound{{ 's' if pattern_count != 1 }}</span>
+            <span class="launcher__lesson-cta" x-text="selectedClassId ? 'Launch with class' : 'Open lesson'"></span>
+          </div>
         </a>
         {% endfor %}
       </div>
@@ -90,33 +177,6 @@
     {% endfor %}
   </main>
 
-  <hr class="launcher__divider">
-
-  {# ── Classes section ───────────────────────────────────── #}
-  <section class="launcher__group">
-    <div class="launcher__group-header">
-      <div class="launcher__group-kicker">Classes</div>
-      <h2 class="launcher__group-title">Class management</h2>
-    </div>
-    <div class="launcher__lesson-grid">
-      {% for cls in classes %}
-      <a class="launcher__lesson-card" href="/classes/{{ cls.id }}">
-        <div class="launcher__card-top">
-          <span class="launcher__lesson-id">{{ cls.class_name }}</span>
-        </div>
-        <span class="launcher__lesson-subtitle">{{ cls.student_count }} student{{ 's' if cls.student_count != 1 }}</span>
-        <span class="launcher__lesson-cta">View class →</span>
-      </a>
-      {% endfor %}
-      <a class="launcher__lesson-card" href="/classes/new">
-        <div class="launcher__card-top">
-          <span class="launcher__lesson-id" style="font-size: 20px; font-weight: 300;">+</span>
-        </div>
-        <span class="launcher__lesson-subtitle">Create a new class</span>
-        <span class="launcher__lesson-cta">New class →</span>
-      </a>
-    </div>
-  </section>
 
 </div>
 {% endblock %}

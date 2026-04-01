@@ -1,5 +1,7 @@
 {% set is_lesson_close = slide.view_type == 'quick_check' and slide.content_payload.display_mode == 'lesson_close' %}
-<aside class="teacher-overlay{% if is_lesson_close %} teacher-overlay--compact{% endif %}" x-show="!presentationMode">
+<aside
+  class="teacher-overlay{% if is_lesson_close %} teacher-overlay--compact{% endif %}"
+  x-cloak>
   <div class="teacher-overlay__header">
     <div class="teacher-overlay__meta">
       <div class="teacher-overlay__meta-primary">{{ slide.block_id }} · {{ block.label }}</div>
@@ -60,37 +62,6 @@
     </div>
   </div>
   {% endif %}
-
-  <div class="teacher-overlay__section teacher-overlay__section--roster">
-    <div class="roster__header">
-      <span class="teacher-overlay__label" x-text="classLabel || 'Class roster'"></span>
-      <a class="roster__review-link" :href="`/lesson/{{ lesson.lesson_id }}/review/${attemptId}`">Review after lesson →</a>
-    </div>
-    <div class="roster" x-show="roster.length > 0">
-      <template x-for="student in roster" :key="student">
-        <button
-          type="button"
-          class="roster__name"
-          :class="{
-            'roster__name--secure':  getStudentMark({{ slide_index }}, student) === 'secure',
-            'roster__name--shaky':   getStudentMark({{ slide_index }}, student) === 'shaky',
-            'roster__name--missed':  getStudentMark({{ slide_index }}, student) === 'missed',
-            'roster__name--skipped': getStudentMark({{ slide_index }}, student) === 'skipped'
-          }"
-          @click="cycleStudentMark(student, '{{ slide.slide_id }}', '{{ slide.block_id }}')">
-          <span x-text="student"></span>
-          <span
-            class="roster__status-chip"
-            x-show="getStudentMark({{ slide_index }}, student)"
-            x-text="getStudentMark({{ slide_index }}, student)">
-          </span>
-        </button>
-      </template>
-    </div>
-    <p class="roster__empty" x-show="roster.length === 0" x-cloak>
-      No class selected. Launch lesson with a class to mark students.
-    </p>
-  </div>
 
   {% if not is_lesson_close %}
   {% set mark_labels = {

@@ -3,6 +3,10 @@
   "unit_id": "G3",
   "target_pattern": "f",
   "title": "Group 3, Lesson 16: f",
+  "new_units": [
+    "f"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -290,6 +294,29 @@
           "expected_response": "Students produce /f/ cleanly as a voiceless labiodental fricative with continuous airflow.",
           "correction_move": "Tactile feedback: students hold hand near mouth. /p/ — one burst felt. /f/ — continuous stream felt. Alternate p-f-p-f until students feel and hear the difference.",
           "observation_note": "Watch for /p/ substitution — the most common Korean interference error for /f/. Redirect immediately with tactile cue.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say f In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "f",
+            "back_text": "/f/",
+            "audio": "/static/audio/f.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect f to one strong word from today.",
+          "expected_response": "Students say f clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "f_p",
           "markable": true,
           "marking_options": [
@@ -810,20 +837,40 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The frog sat on a log.",
+            "text_content": "The fig is on a log.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "frog": "decodable",
-              "sat": "decodable",
+              "fig": "decodable",
+              "is": "decodable",
               "on": "decodable",
               "a": "sight",
               "log": "decodable"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ]
             }
           },
           "teacher_cue": "The and a are sight words. All other words decodable.",
-          "expected_response": "Students read \"The frog sat on a log.\" accurately.",
+          "expected_response": "Students read \"The fig is on a log.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /f/ in frog and /r/ in frog and log — confirm both.",
           "korean_interference_flag": "f_p",
@@ -841,23 +888,52 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The frog sat on a log in the fog.",
+            "text_content": "The fig is on a log in the fog.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "frog": "decodable",
-              "sat": "decodable",
+              "fig": "decodable",
+              "is": "decodable",
               "on": "decodable",
               "a": "sight",
               "log": "decodable",
               "in": "decodable",
               "the": "sight",
               "fog": "decodable"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "fog": [
+                "f",
+                "o",
+                "g"
+              ]
             }
           },
           "teacher_cue": "The, a, the are sight words. All other words decodable.",
-          "expected_response": "Students read \"The frog sat on a log in the fog.\" accurately.",
+          "expected_response": "Students read \"The fig is on a log in the fog.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /f/ in frog and fog — two /f/ words in one sentence.",
           "korean_interference_flag": "f_p",
@@ -875,21 +951,44 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I felt the frost. The frog fled.",
+            "text_content": "I am fit. It is fun.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "I": "sight",
-              "felt": "decodable",
-              "the": "sight",
-              "frost": "decodable",
-              "The": "sight",
-              "frog": "decodable",
-              "fled": "decodable"
+              "am": "decodable",
+              "fit": "decodable",
+              "It": "decodable",
+              "is": "decodable",
+              "fun": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "fit": [
+                "f",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Two sentences. I and The are sight words. All other words decodable.",
-          "expected_response": "Students read \"I felt the frost. The frog fled.\" accurately.",
+          "expected_response": "Students read \"I am fit. It is fun.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /f/ at onset of felt, frost, fled — and for /r/ in frost and frog.",
           "korean_interference_flag": "f_p",
@@ -907,23 +1006,47 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The frog fled into the fog. I am glad.",
+            "text_content": "The fig is in the fog. He is fit.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "frog": "decodable",
-              "fled": "decodable",
-              "into": "decodable",
+              "fig": "decodable",
+              "is": "decodable",
+              "in": "decodable",
               "the": "sight",
               "fog": "decodable",
-              "I": "sight",
-              "am": "decodable",
-              "glad": "decodable"
+              "He": "sight",
+              "fit": "decodable"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "fog": [
+                "f",
+                "o",
+                "g"
+              ],
+              "fit": [
+                "f",
+                "i",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Two sentences. The, I are sight words. All other words decodable.",
-          "expected_response": "Students read \"The frog fled into the fog. I am glad.\" accurately.",
+          "expected_response": "Students read \"The fig is in the fog. He is fit.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for consistent /f/ production across all four /f/ words in this lesson.",
           "korean_interference_flag": "f_p",
@@ -947,14 +1070,14 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The frog sat on a log.\nThe frog sat on a log in the fog.\nI felt the frost.\nThe frog fled.\nThe frog fled into the fog.\nI am glad.\nThe frog is fat and fit.\nHe sniffed the frost.\nThe frog got on top of the log.\nI felt the fog and the frost.",
+            "text_content": "The fig is on a log.\nThe fig is on a log in the fog.\nI am fit.\nIt is fun.\nThe fig is in the fog.\nHe is fit.\nI am in the fog.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Why did the frog flee? Where did it go? Tell me the story of the frog in two sentences.",
+            "comprehension_prompt": "Where is the fig? Who is fit?",
             "word_types": {
               "The": "sight",
-              "frog": "decodable",
-              "sat": "decodable",
+              "fig": "decodable",
+              "is": "decodable",
               "on": "decodable",
               "a": "sight",
               "log": "decodable",
@@ -962,27 +1085,240 @@
               "the": "sight",
               "fog": "decodable",
               "I": "sight",
-              "felt": "decodable",
-              "frost": "decodable",
-              "fled": "decodable",
-              "into": "decodable",
               "am": "decodable",
-              "glad": "decodable",
-              "is": "decodable",
-              "fat": "decodable",
-              "and": "decodable",
               "fit": "decodable",
-              "He": "sight",
-              "sniffed": "decodable",
-              "got": "decodable",
-              "top": "decodable",
-              "of": "sight"
+              "It": "decodable",
+              "fun": "decodable",
+              "He": "sight"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "fog": [
+                "f",
+                "o",
+                "g"
+              ],
+              "am": [
+                "a",
+                "m"
+              ],
+              "fit": [
+                "f",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The fig is on a log.\nThe fig is on a log in the fog.\nI am fit.\nIt is fun.\nThe fig is in the fog.\nHe is fit.\nI am in the fog.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "fig": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "a": "sight",
+              "log": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "fog": "decodable",
+              "I": "sight",
+              "am": "decodable",
+              "fit": "decodable",
+              "It": "decodable",
+              "fun": "decodable",
+              "He": "sight"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "fog": [
+                "f",
+                "o",
+                "g"
+              ],
+              "am": [
+                "a",
+                "m"
+              ],
+              "fit": [
+                "f",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread f Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The fig is on a log.\nThe fig is on a log in the fog.\nI am fit.\nIt is fun.\nThe fig is in the fog.\nHe is fit.\nI am in the fog.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the f text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "The": "sight",
+              "fig": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "a": "sight",
+              "log": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "fog": "decodable",
+              "I": "sight",
+              "am": "decodable",
+              "fit": "decodable",
+              "It": "decodable",
+              "fun": "decodable",
+              "He": "sight"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "fog": [
+                "f",
+                "o",
+                "g"
+              ],
+              "am": [
+                "a",
+                "m"
+              ],
+              "fit": [
+                "f",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "fun": [
+                "f",
+                "u",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Read the f text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "f_p",
           "markable": true,
           "marking_options": [
@@ -1086,6 +1422,36 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write f And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_fog.mp3",
+            "dictated_text": "fog",
+            "expected_answer": "fog",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "o",
+              "g"
+            ],
+            "prompt_text": "Write the f target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the f target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1116,6 +1482,110 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The fig is on a log.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "fig": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "a": "sight",
+              "log": "decodable"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Lip Teeth /f/ Practice",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The fig is on a log.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the sentence. Touch lip to teeth for /f/. Then say one new /f/ sentence.",
+            "word_types": {
+              "The": "sight",
+              "fig": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "a": "sight",
+              "log": "decodable"
+            },
+            "token_units": {
+              "fig": [
+                "f",
+                "i",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "log": [
+                "l",
+                "o",
+                "g"
+              ]
+            }
+          },
+          "teacher_cue": "Model the /f/ sound with visible lip-teeth contact, then reread the sentence and have students generate one more /f/ sentence.",
+          "expected_response": "Students read the model sentence clearly and produce one more oral sentence with the target sound or cluster.",
+          "correction_move": "Model the target sound in isolation, return to the sentence, then guide students into one supported oral sentence.",
+          "observation_note": "Watch articulation accuracy on the target sound or cluster and whether students avoid inserting extra vowels.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1155,6 +1625,61 @@
           "korean_interference_flag": "f_p",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final f Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's f focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's f focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

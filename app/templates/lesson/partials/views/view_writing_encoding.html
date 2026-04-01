@@ -1,4 +1,4 @@
-<div class="lesson-writing-encoding" x-data="{ revealed: false }">
+<div class="lesson-writing-encoding">
   {% if slide.content_payload.display_mode == 'sentence' %}
   <div class="lesson-writing-encoding__hero">
     <div class="lesson-writing-encoding__eyebrow">Encoding & Writing</div>
@@ -64,37 +64,4 @@
   </div>
   {% endif %}
 
-  {% if slide.content_payload.audio_prompt %}
-  <div class="lesson-writing-encoding__actions">
-    <button
-      type="button"
-      class="lesson-writing-encoding__button"
-      @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
-      Play Dictation
-    </button>
-
-    <button
-      type="button"
-      class="lesson-writing-encoding__button"
-      @click="playAudio('{{ slide.content_payload.audio_prompt }}')">
-      Replay
-    </button>
-
-    <button
-      type="button"
-      class="lesson-writing-encoding__button"
-      @click="revealed = !revealed"
-      x-text="revealed ? 'Hide Answer' : 'Reveal Answer'">
-    </button>
-  </div>
-  {% else %}
-  <div class="lesson-writing-encoding__actions">
-    <button
-      type="button"
-      class="lesson-writing-encoding__button"
-      @click="revealed = !revealed"
-      x-text="revealed ? 'Hide Answer' : 'Reveal Answer'">
-    </button>
-  </div>
-  {% endif %}
 </div>

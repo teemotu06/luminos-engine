@@ -1,8 +1,16 @@
 {
   "lesson_id": "G8-L51",
   "unit_id": "G8",
-  "target_pattern": "",
-  "title": "Group 8, Lesson 51",
+  "target_pattern": "triple_clusters_review",
+  "title": "Group 8, Lesson 51: Triple Cluster Review",
+  "new_units": [
+    "str",
+    "spr",
+    "scr",
+    "spl",
+    "thr"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -295,6 +303,29 @@
           "expected_response": "Students produce all five three-letter clusters without any vowel insertion.",
           "correction_move": "Drill each cluster: str-str-str, spr-spr-spr, scr-scr-scr, spl-spl-spl, thr-thr-thr. Confirm all three consonants are present before moving to words.",
           "observation_note": "Watch for vowel insertion at any position — uh-strip, suh-pring. All three consonants must connect seamlessly.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say clusters In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "str  spr  scr  spl  thr",
+            "back_text": "triple clusters",
+            "audio": "/static/audio/triple_clusters.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect clusters to one strong word from today.",
+          "expected_response": "Students say clusters clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "cluster",
           "markable": true,
           "marking_options": [
@@ -1032,6 +1063,32 @@
               "in": "decodable",
               "the": "sight",
               "stream": "decodable"
+            },
+            "token_units": {
+              "Three": [
+                "thr",
+                "ee"
+              ],
+              "frogs": [
+                "fr",
+                "o",
+                "g",
+                "s"
+              ],
+              "splash": [
+                "spl",
+                "a",
+                "sh"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on Three, frogs, splash, in.",
@@ -1053,19 +1110,36 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She springs across the street.",
+            "text_content": "She springs by the street.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "She": "sight",
               "springs": "decodable",
-              "across": "decodable",
+              "by": "decodable",
               "the": "sight",
               "street": "decodable"
+            },
+            "token_units": {
+              "springs": [
+                "spr",
+                "i",
+                "ng",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "street": [
+                "str",
+                "ee",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on springs, across, street.",
-          "expected_response": "Students read \"She springs across the street.\" accurately.",
+          "expected_response": "Students read \"She springs by the street.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"She springs across the street.\".",
           "korean_interference_flag": "th_voiceless",
@@ -1083,19 +1157,35 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The split screen sprays light.",
+            "text_content": "The split stream sprays.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
               "split": "decodable",
-              "screen": "decodable",
-              "sprays": "decodable",
-              "light": "decodable"
+              "stream": "decodable",
+              "sprays": "decodable"
+            },
+            "token_units": {
+              "split": [
+                "spl",
+                "i",
+                "t"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ],
+              "sprays": [
+                "spr",
+                "ay",
+                "s"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on split, screen, sprays, light.",
-          "expected_response": "Students read \"The split screen sprays light.\" accurately.",
+          "expected_response": "Students read \"The split stream sprays.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The split screen sprays light.\".",
           "korean_interference_flag": "cluster",
@@ -1113,7 +1203,7 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He screams as the rocks split.",
+            "text_content": "He screams as the stream splits.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
@@ -1121,12 +1211,35 @@
               "screams": "decodable",
               "as": "decodable",
               "the": "sight",
-              "rocks": "decodable",
-              "split": "decodable"
+              "stream": "decodable",
+              "splits": "decodable"
+            },
+            "token_units": {
+              "screams": [
+                "scr",
+                "ea",
+                "m",
+                "s"
+              ],
+              "as": [
+                "a",
+                "s"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ],
+              "splits": [
+                "spl",
+                "i",
+                "t",
+                "s"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on screams, as, rocks, split.",
-          "expected_response": "Students read \"He screams as the rocks split.\" accurately.",
+          "expected_response": "Students read \"He screams as the stream splits.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"He screams as the rocks split.\".",
           "korean_interference_flag": "r_l",
@@ -1150,10 +1263,10 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Three frogs splash in the stream.\nShe springs across the street.\nHe screams. The stream sprays.\nThe split screen is by the street.\nLight is on the split screen.\nThen the stream strains past the rocks.",
+            "text_content": "Three frogs splash in the stream.\nShe springs by the street.\nThe split stream sprays.\nHe screams as the stream splits.\nThe street is by the stream.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all five three-letter cluster types. Say each cluster before the full word.",
+            "comprehension_prompt": "Where is the street? What sprays?",
             "word_types": {
               "Three": "decodable",
               "frogs": "decodable",
@@ -1163,28 +1276,323 @@
               "stream": "decodable",
               "She": "sight",
               "springs": "decodable",
-              "across": "decodable",
+              "by": "decodable",
               "street": "decodable",
+              "The": "sight",
+              "split": "decodable",
+              "sprays": "decodable",
               "He": "sight",
               "screams": "decodable",
-              "The": "sight",
-              "sprays": "decodable",
-              "split": "decodable",
-              "screen": "decodable",
-              "is": "decodable",
-              "by": "decodable",
-              "Light": "decodable",
-              "on": "decodable",
-              "Then": "decodable",
-              "strains": "decodable",
-              "past": "decodable",
-              "rocks": "decodable"
+              "as": "decodable",
+              "splits": "decodable",
+              "is": "decodable"
+            },
+            "token_units": {
+              "Three": [
+                "thr",
+                "ee"
+              ],
+              "frogs": [
+                "fr",
+                "o",
+                "g",
+                "s"
+              ],
+              "splash": [
+                "spl",
+                "a",
+                "sh"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ],
+              "springs": [
+                "spr",
+                "i",
+                "ng",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "street": [
+                "str",
+                "ee",
+                "t"
+              ],
+              "split": [
+                "spl",
+                "i",
+                "t"
+              ],
+              "sprays": [
+                "spr",
+                "ay",
+                "s"
+              ],
+              "screams": [
+                "scr",
+                "ea",
+                "m",
+                "s"
+              ],
+              "as": [
+                "a",
+                "s"
+              ],
+              "splits": [
+                "spl",
+                "i",
+                "t",
+                "s"
+              ],
+              "is": [
+                "i",
+                "s"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
-          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
           "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Three frogs splash in the stream.\nShe springs by the street.\nThe split stream sprays.\nHe screams as the stream splits.\nThe street is by the stream.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "Three": "decodable",
+              "frogs": "decodable",
+              "splash": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "stream": "decodable",
+              "She": "sight",
+              "springs": "decodable",
+              "by": "decodable",
+              "street": "decodable",
+              "The": "sight",
+              "split": "decodable",
+              "sprays": "decodable",
+              "He": "sight",
+              "screams": "decodable",
+              "as": "decodable",
+              "splits": "decodable",
+              "is": "decodable"
+            },
+            "token_units": {
+              "Three": [
+                "thr",
+                "ee"
+              ],
+              "frogs": [
+                "fr",
+                "o",
+                "g",
+                "s"
+              ],
+              "splash": [
+                "spl",
+                "a",
+                "sh"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ],
+              "springs": [
+                "spr",
+                "i",
+                "ng",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "street": [
+                "str",
+                "ee",
+                "t"
+              ],
+              "split": [
+                "spl",
+                "i",
+                "t"
+              ],
+              "sprays": [
+                "spr",
+                "ay",
+                "s"
+              ],
+              "screams": [
+                "scr",
+                "ea",
+                "m",
+                "s"
+              ],
+              "as": [
+                "a",
+                "s"
+              ],
+              "splits": [
+                "spl",
+                "i",
+                "t",
+                "s"
+              ],
+              "is": [
+                "i",
+                "s"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread clusters Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Three frogs splash in the stream.\nShe springs by the street.\nThe split stream sprays.\nHe screams as the stream splits.\nThe street is by the stream.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the clusters text smoothly. Then tell one thing you noticed about the clusters.",
+            "word_types": {
+              "Three": "decodable",
+              "frogs": "decodable",
+              "splash": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "stream": "decodable",
+              "She": "sight",
+              "springs": "decodable",
+              "by": "decodable",
+              "street": "decodable",
+              "The": "sight",
+              "split": "decodable",
+              "sprays": "decodable",
+              "He": "sight",
+              "screams": "decodable",
+              "as": "decodable",
+              "splits": "decodable",
+              "is": "decodable"
+            },
+            "token_units": {
+              "Three": [
+                "thr",
+                "ee"
+              ],
+              "frogs": [
+                "fr",
+                "o",
+                "g",
+                "s"
+              ],
+              "splash": [
+                "spl",
+                "a",
+                "sh"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ],
+              "springs": [
+                "spr",
+                "i",
+                "ng",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "street": [
+                "str",
+                "ee",
+                "t"
+              ],
+              "split": [
+                "spl",
+                "i",
+                "t"
+              ],
+              "sprays": [
+                "spr",
+                "ay",
+                "s"
+              ],
+              "screams": [
+                "scr",
+                "ea",
+                "m",
+                "s"
+              ],
+              "as": [
+                "a",
+                "s"
+              ],
+              "splits": [
+                "spl",
+                "i",
+                "t",
+                "s"
+              ],
+              "is": [
+                "i",
+                "s"
+              ]
+            }
+          },
+          "teacher_cue": "Read the clusters text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1290,6 +1698,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "Three frogs splash in the stream.",
+            "expected_answer": "Three frogs splash in the stream.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1321,6 +1755,122 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Three frogs splash in the stream.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "Three": "decodable",
+              "frogs": "decodable",
+              "splash": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "stream": "decodable"
+            },
+            "token_units": {
+              "Three": [
+                "thr",
+                "ee"
+              ],
+              "frogs": [
+                "fr",
+                "o",
+                "g",
+                "s"
+              ],
+              "splash": [
+                "spl",
+                "a",
+                "sh"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use clusters In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Three frogs splash in the stream.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using clusters, then say a second sentence with one change.",
+            "word_types": {
+              "Three": "decodable",
+              "frogs": "decodable",
+              "splash": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "stream": "decodable"
+            },
+            "token_units": {
+              "Three": [
+                "thr",
+                "ee"
+              ],
+              "frogs": [
+                "fr",
+                "o",
+                "g",
+                "s"
+              ],
+              "splash": [
+                "spl",
+                "a",
+                "sh"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "stream": [
+                "str",
+                "ea",
+                "m"
+              ]
+            }
+          },
+          "teacher_cue": "Use clusters in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1360,6 +1910,61 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final clusters Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's clusters focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's clusters focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

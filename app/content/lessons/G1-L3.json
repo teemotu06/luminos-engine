@@ -3,6 +3,10 @@
   "unit_id": "G1",
   "target_pattern": "p",
   "title": "Group 1, Lesson 3: p",
+  "new_units": [
+    "p"
+  ],
+  "new_sight_words": [],
   "korean_interference_active": [
     "vowel_quality"
   ],
@@ -254,6 +258,29 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say p In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "p",
+            "back_text": "/p/",
+            "audio": "/static/audio/p.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect p to one strong word from today.",
+          "expected_response": "Students say p clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -436,6 +463,42 @@
           "expected_response": "Students say pat orally and connect meaning before print.",
           "correction_move": "Model pat orally again, then reveal and blend.",
           "observation_note": "Watch whether students contrast /p/ at onset with the previously known /t/ at onset.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Review p With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "pat",
+            "back_text": "/p/ /æ/ /t/",
+            "audio": "/static/audio/block04_pat.mp3",
+            "blend_units": [
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for p.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -649,6 +712,20 @@
               "I": "sight",
               "tap": "decodable",
               "it": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "tap": [
+                "t",
+                "a",
+                "p"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Track left to right. I is a sight word — say it as a whole unit. tap and it are decodable — blend through.",
@@ -676,6 +753,18 @@
             "word_types": {
               "Pat": "decodable",
               "sat": "decodable"
+            },
+            "token_units": {
+              "Pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Both words are decodable. Pat is a name — capital P, same sounds. Blend through both words.",
@@ -706,12 +795,91 @@
               "at": "decodable",
               "a": "sight",
               "pit": "decodable"
+            },
+            "token_units": {
+              "Pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "a": [
+                "a"
+              ],
+              "pit": [
+                "p",
+                "i",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Read the full sentence. All words are decodable except a which is a sight word.",
           "expected_response": "Students read \"Pat sat at a pit.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch whether students can read a four-word sentence accurately and hold /ɪ/ in pit.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read And Explain p",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Pat sat at a pit.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Pat": "decodable",
+              "sat": "decodable",
+              "at": "decodable",
+              "a": "sight",
+              "pit": "decodable"
+            },
+            "token_units": {
+              "Pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "a": [
+                "a"
+              ],
+              "pit": [
+                "p",
+                "i",
+                "t"
+              ]
+            },
+            "comprehension_prompt": "What does this tell you about the lesson words? Say it back in your own words."
+          },
+          "teacher_cue": "Read it smoothly, then explain the p idea in your own words.",
+          "expected_response": "Students read accurately and explain the meaning of the p sentence.",
+          "correction_move": "Reread in a phrase, then prompt for a brief retell or answer.",
+          "observation_note": "Push comprehension right after decoding so the focus does not stay mechanical.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -747,12 +915,205 @@
               "a": "sight",
               "pit": "decodable",
               "sip": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "tap": [
+                "t",
+                "a",
+                "p"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "Pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "a": [
+                "a"
+              ],
+              "pit": [
+                "p",
+                "i",
+                "t"
+              ],
+              "sip": [
+                "s",
+                "i",
+                "p"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I tap it.\nPat sat.\nPat sat at a pit.\nI sip.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "I": "sight",
+              "tap": "decodable",
+              "it": "decodable",
+              "Pat": "decodable",
+              "sat": "decodable",
+              "at": "decodable",
+              "a": "sight",
+              "pit": "decodable",
+              "sip": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "tap": [
+                "t",
+                "a",
+                "p"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "Pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "a": [
+                "a"
+              ],
+              "pit": [
+                "p",
+                "i",
+                "t"
+              ],
+              "sip": [
+                "s",
+                "i",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread p Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I tap it.\nPat sat.\nPat sat at a pit.\nI sip.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the p text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "I": "sight",
+              "tap": "decodable",
+              "it": "decodable",
+              "Pat": "decodable",
+              "sat": "decodable",
+              "at": "decodable",
+              "a": "sight",
+              "pit": "decodable",
+              "sip": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "tap": [
+                "t",
+                "a",
+                "p"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "Pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "a": [
+                "a"
+              ],
+              "pit": [
+                "p",
+                "i",
+                "t"
+              ],
+              "sip": [
+                "s",
+                "i",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Read the p text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -854,6 +1215,36 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write p And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_pat.mp3",
+            "dictated_text": "pat",
+            "expected_answer": "pat",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "p",
+              "a",
+              "t"
+            ],
+            "prompt_text": "Write the p target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the p target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -882,6 +1273,92 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I tap it.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "I": "sight",
+              "tap": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "tap": [
+                "t",
+                "a",
+                "p"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use p In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I tap it.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using p, then say a second sentence with one change.",
+            "word_types": {
+              "I": "sight",
+              "tap": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "tap": [
+                "t",
+                "a",
+                "p"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use p in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -921,6 +1398,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final p Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's p focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's p focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

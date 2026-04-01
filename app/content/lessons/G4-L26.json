@@ -3,6 +3,10 @@
   "unit_id": "G4",
   "target_pattern": "ng",
   "title": "Group 4, Lesson 26: ng",
+  "new_units": [
+    "ng"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -294,6 +298,29 @@
           "expected_response": "Students produce /ŋ/ cleanly and understand that ng only appears at the end of syllables.",
           "correction_move": "Model /n/ — front nasal. Model /ŋ/ — back nasal. Students alternate, feeling the tongue position shift from front to back. Then apply to words.",
           "observation_note": "Watch for students adding a /g/ after /ŋ/ — producing 'sing-g'. The /g/ is silent in most accents.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say ng In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ng",
+            "back_text": "/ŋ/",
+            "audio": "/static/audio/ng.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect ng to one strong word from today.",
+          "expected_response": "Students say ng clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -897,6 +924,23 @@
               "sang": "decodable",
               "a": "sight",
               "song": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ]
             }
           },
           "teacher_cue": "The and a are sight words. king, sang, song all decodable.",
@@ -928,6 +972,28 @@
               "a": "sight",
               "long": "decodable",
               "song": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "long": [
+                "l",
+                "o",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ]
             }
           },
           "teacher_cue": "The and a are sight words. All other words decodable.",
@@ -949,22 +1015,23 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "She brings a ring. The king is strong.",
+            "text_content": "She sang.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "She": "sight",
-              "brings": "decodable",
-              "a": "sight",
-              "ring": "decodable",
-              "The": "sight",
-              "king": "decodable",
-              "is": "decodable",
-              "strong": "decodable"
+              "sang": "decodable"
+            },
+            "token_units": {
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ]
             }
           },
           "teacher_cue": "Two sentences. She and The are sight words. All other words decodable.",
-          "expected_response": "Students read \"She brings a ring. The king is strong.\" accurately.",
+          "expected_response": "Students read \"She sang.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /ŋ/ in brings, ring, king, strong and /r/ in brings, ring, strong.",
           "korean_interference_flag": "r_l",
@@ -982,23 +1049,34 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Sing this thing! That is a long strong song.",
+            "text_content": "Sing this thing.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "Sing": "decodable",
               "this": "decodable",
-              "thing": "decodable",
-              "That": "decodable",
-              "is": "decodable",
-              "a": "sight",
-              "long": "decodable",
-              "strong": "decodable",
-              "song": "decodable"
+              "thing": "decodable"
+            },
+            "token_units": {
+              "Sing": [
+                "s",
+                "i",
+                "ng"
+              ],
+              "this": [
+                "th",
+                "i",
+                "s"
+              ],
+              "thing": [
+                "th",
+                "i",
+                "ng"
+              ]
             }
           },
           "teacher_cue": "Two sentences. this and that are decodable. All words decodable.",
-          "expected_response": "Students read \"Sing this thing! That is a long strong song.\" accurately.",
+          "expected_response": "Students read \"Sing this thing.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /ŋ/ in sing, thing, long, strong, song — five ng words across two sentences.",
           "korean_interference_flag": "th_voiceless",
@@ -1022,10 +1100,10 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The king sang a song.\nThe king sang a long song.\nShe brings a ring.\nThe king is strong.\nSing this thing!\nThat is a long strong song.\nThe king has a big ring and a long wing.\nShe sings and he brings the dish.\nThis is fun. I can sing and you can ring the gong.\nThe strong king did not quit his quest.\nBring the dish! Fetch the ring!\nThe king sat on his big chest and sang.",
+            "text_content": "The king sang a song.\nThe king sang a long song.\nShe sang.\nSing this thing.\nThe king had a ring.\nThis is a long song.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "What did the king do? Find all the ng words. Tell me the story of the king in two sentences.",
+            "comprehension_prompt": "Who sang? What did the king have?",
             "word_types": {
               "The": "sight",
               "king": "decodable",
@@ -1034,45 +1112,267 @@
               "song": "decodable",
               "long": "decodable",
               "She": "sight",
-              "brings": "decodable",
-              "ring": "decodable",
-              "is": "decodable",
-              "strong": "decodable",
               "Sing": "decodable",
               "this": "decodable",
               "thing": "decodable",
-              "That": "decodable",
-              "has": "decodable",
-              "big": "decodable",
-              "and": "decodable",
-              "wing": "decodable",
-              "sings": "decodable",
-              "he": "sight",
-              "the": "sight",
-              "dish": "decodable",
+              "had": "decodable",
+              "ring": "decodable",
               "This": "decodable",
-              "fun": "decodable",
-              "I": "sight",
-              "can": "decodable",
-              "sing": "decodable",
-              "you": "decodable",
-              "gong": "decodable",
-              "did": "decodable",
-              "not": "decodable",
-              "quit": "decodable",
-              "his": "decodable",
-              "quest": "decodable",
-              "Bring": "decodable",
-              "Fetch": "decodable",
-              "sat": "decodable",
-              "on": "decodable",
-              "chest": "decodable"
+              "is": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ],
+              "long": [
+                "l",
+                "o",
+                "ng"
+              ],
+              "Sing": [
+                "s",
+                "i",
+                "ng"
+              ],
+              "this": [
+                "th",
+                "i",
+                "s"
+              ],
+              "thing": [
+                "th",
+                "i",
+                "ng"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "ring": [
+                "r",
+                "i",
+                "ng"
+              ],
+              "This": [
+                "th",
+                "i",
+                "s"
+              ],
+              "is": [
+                "i",
+                "s"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a song.\nThe king sang a long song.\nShe sang.\nSing this thing.\nThe king had a ring.\nThis is a long song.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "song": "decodable",
+              "long": "decodable",
+              "She": "sight",
+              "Sing": "decodable",
+              "this": "decodable",
+              "thing": "decodable",
+              "had": "decodable",
+              "ring": "decodable",
+              "This": "decodable",
+              "is": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ],
+              "long": [
+                "l",
+                "o",
+                "ng"
+              ],
+              "Sing": [
+                "s",
+                "i",
+                "ng"
+              ],
+              "this": [
+                "th",
+                "i",
+                "s"
+              ],
+              "thing": [
+                "th",
+                "i",
+                "ng"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "ring": [
+                "r",
+                "i",
+                "ng"
+              ],
+              "This": [
+                "th",
+                "i",
+                "s"
+              ],
+              "is": [
+                "i",
+                "s"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread ng Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a song.\nThe king sang a long song.\nShe sang.\nSing this thing.\nThe king had a ring.\nThis is a long song.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the ng text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "song": "decodable",
+              "long": "decodable",
+              "She": "sight",
+              "Sing": "decodable",
+              "this": "decodable",
+              "thing": "decodable",
+              "had": "decodable",
+              "ring": "decodable",
+              "This": "decodable",
+              "is": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ],
+              "long": [
+                "l",
+                "o",
+                "ng"
+              ],
+              "Sing": [
+                "s",
+                "i",
+                "ng"
+              ],
+              "this": [
+                "th",
+                "i",
+                "s"
+              ],
+              "thing": [
+                "th",
+                "i",
+                "ng"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "ring": [
+                "r",
+                "i",
+                "ng"
+              ],
+              "This": [
+                "th",
+                "i",
+                "s"
+              ],
+              "is": [
+                "i",
+                "s"
+              ]
+            }
+          },
+          "teacher_cue": "Read the ng text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1176,6 +1476,38 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write ng And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_strong.mp3",
+            "dictated_text": "strong",
+            "expected_answer": "strong",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "s",
+              "t",
+              "r",
+              "o",
+              "ng"
+            ],
+            "prompt_text": "Write the ng target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the ng target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1198,7 +1530,8 @@
               "bring"
             ],
             "highlighted_chunk": "ing",
-            "support_text": "What do these words share at the end?"
+            "support_text": "What do these words share at the end?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What do these words share at the end?",
           "expected_response": "Students identify the shared pattern and name what changes.",
@@ -1207,6 +1540,102 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a song.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "song": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use ng In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The king sang a song.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using ng, then say a second sentence with one change.",
+            "word_types": {
+              "The": "sight",
+              "king": "decodable",
+              "sang": "decodable",
+              "a": "sight",
+              "song": "decodable"
+            },
+            "token_units": {
+              "king": [
+                "k",
+                "i",
+                "ng"
+              ],
+              "sang": [
+                "s",
+                "a",
+                "ng"
+              ],
+              "song": [
+                "s",
+                "o",
+                "ng"
+              ]
+            }
+          },
+          "teacher_cue": "Use ng in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1246,6 +1675,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final ng Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's ng focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's ng focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

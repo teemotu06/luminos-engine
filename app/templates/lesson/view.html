@@ -4,7 +4,8 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=6">
-<script defer src="{{ url_for('static', path='lesson.js') }}?v=4"></script>
+<script defer src="{{ url_for('static', path='oral_prompt_helper.js') }}?v=2"></script>
+<script defer src="{{ url_for('static', path='lesson.js') }}?v=5"></script>
 {% endblock %}
 
 {% block content %}
@@ -17,21 +18,52 @@
         roster: {{ roster | tojson }},
         className: {{ class_name | tojson }}
     })'
-    :class="{ 'lesson-shell--presentation': presentationMode }">
-    <div class="lesson-shell__controls">
-        <button
-            type="button"
-            class="lesson-mode-toggle"
-            @click="togglePresentationMode()">
-            <span x-text="presentationMode ? 'Teacher Mode' : 'Presentation Mode'">Presentation Mode</span>
-        </button>
+    @mousemove="handleRuntimePointerMove($event)"
+    @mouseleave="hideTopDock()">
+    <a class="lesson-shell__backlink" href="/lesson/">Back to Library</a>
+
+    <div
+        class="lesson-shell__dock-trigger"
+        @mouseenter="showTopDock()"
+        aria-hidden="true">
     </div>
 
-    {% include "lesson/partials/lesson_header.html" %}
-    {% include "lesson/partials/block_progress.html" %}
+    <section
+        class="lesson-shell__chrome"
+        :class="{ 'lesson-shell__chrome--visible': topDockOpen }"
+        @mouseenter="showTopDock()"
+        @mouseleave="hideTopDock()"
+        x-cloak>
+        {% include "lesson/partials/lesson_header.html" %}
+        {% include "lesson/partials/block_progress.html" %}
+
+        {% if ordered_slides %}
+        <div class="lesson-dock-panel">
+            {% for entry in ordered_slides %}
+                {% with block = entry.block, slide = entry.slide, slide_index = entry.slide_index %}
+                    <div x-show="activeSlideIndex === {{ slide_index }}" x-cloak>
+                        {% include "lesson/partials/teacher_overlay.html" %}
+                    </div>
+                {% endwith %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </section>
+
     <div class="lesson-shell__meta" hidden data-attempt-id="{{ attempt_id }}" data-lesson-id="{{ lesson.lesson_id }}"></div>
 
-    <main class="block-list">
+    <main id="main-content" class="block-list lesson-shell__workspace">
+        {% if dynamic_review_slides %}
+        {% set review_pattern_count = (dynamic_review_slides | length) // 2 %}
+        <div class="smart-review-notice">
+            <strong>Smart Review active</strong> — {{ review_pattern_count }} pattern{{ 's' if review_pattern_count != 1 }} added to today's warm-up based on class history.
+            {% for slide in dynamic_review_slides %}
+            {% if slide.block_id == "01" %}
+            <span class="smart-review-notice__pattern">{{ slide.slide_title | replace("Smart Review: ", "") }}</span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
         {% include "lesson/partials/slide_stage.html" %}
         {% include "lesson/partials/slide_nav.html" %}
     </main>
@@ -41,36 +73,150 @@
 {% block body_panels %}
 <div
     x-data
-    x-show="$store.lessonRoster && $store.lessonRoster.panelOpen"
+    x-show="$store.lessonRoster && $store.lessonRoster.hasActiveLuminosPrompt"
+    x-transition
     x-cloak
-    class="roster-float-panel">
-    <div class="roster-float-panel__header">
-        <span class="roster-float-panel__title" x-text="$store.lessonRoster ? $store.lessonRoster.classLabel : ''"></span>
-        <button type="button" class="roster-float-panel__close" @click="$store.lessonRoster.panelOpen = false">&#x2715;</button>
-    </div>
-    <div class="roster-float-panel__students">
-        <template x-if="$store.lessonRoster">
-            <template x-for="student in $store.lessonRoster.roster" :key="student">
+    class="oral-float-panel"
+    :class="{ 'oral-float-panel--collapsed': $store.lessonRoster.panelCollapsed }">
+    <button
+        type="button"
+        class="oral-float-panel__collapsed-chip"
+        x-show="$store.lessonRoster.panelCollapsed"
+        x-cloak
+        @click="$store.lessonRoster.togglePanelCollapsed()">
+        <span class="oral-float-panel__collapsed-eyebrow">Luminos says</span>
+        <span class="oral-float-panel__collapsed-line" x-text="$store.lessonRoster.oralNotificationLine()"></span>
+    </button>
+    <div
+        class="oral-float-panel__bubble"
+        x-show="!$store.lessonRoster.panelCollapsed"
+        x-cloak>
+        <div class="oral-float-panel__topline">
+            <div class="oral-float-panel__topline-left">
+                <div class="oral-float-panel__eyebrow">Luminos says</div>
                 <button
                     type="button"
-                    class="roster-float-panel__student"
-                    :data-status="$store.lessonRoster.getStudentStatus(student)"
-                    @click="$store.lessonRoster.cycleStudent(student)">
-                    <span x-text="student"></span>
-                    <span class="roster-float-panel__badge" x-text="$store.lessonRoster.getStudentStatus(student) || '—'"></span>
-                </button>
+                    class="oral-float-panel__collapse-btn"
+                    aria-label="Hide Luminos says"
+                    @click="$store.lessonRoster.togglePanelCollapsed()">Hide</button>
+            </div>
+            <div class="oral-float-panel__progress" x-text="$store.lessonRoster.oralProgressLabel"></div>
+        </div>
+        <div class="oral-float-panel__line" x-text="$store.lessonRoster.oralNotificationLine()"></div>
+        <div class="oral-float-panel__subline" x-text="$store.lessonRoster.oralInstructionSupportLine()"></div>
+        <div class="oral-float-panel__transport">
+            <button
+                type="button"
+                class="oral-float-panel__transport-btn"
+                :disabled="!$store.lessonRoster.canPlayOralPrompt"
+                @click="$store.lessonRoster.playCurrentOralPrompt()">
+                Play
+            </button>
+            <button
+                type="button"
+                class="oral-float-panel__transport-btn"
+                :disabled="!$store.lessonRoster.canPauseOralPrompt"
+                @click="$store.lessonRoster.pauseCurrentOralPrompt()">
+                Pause
+            </button>
+            <button
+                type="button"
+                class="oral-float-panel__transport-btn"
+                x-show="$store.lessonRoster.hasRoster"
+                x-cloak
+                @click="$store.lessonRoster.toggleRosterDetails()"
+                x-text="$store.lessonRoster.rosterDetailsOpen ? 'Hide class' : 'Show class'">
+            </button>
+        </div>
+    </div>
+    <div
+        class="oral-float-panel__roster"
+        x-show="!$store.lessonRoster.panelCollapsed && $store.lessonRoster.rosterDetailsOpen"
+        x-cloak>
+        <div class="oral-float-panel__roster-header">
+            <div class="oral-float-panel__roster-header-main">
+                <span class="oral-float-panel__roster-title" x-text="$store.lessonRoster.classLabel || 'Class roster'"></span>
+                <span class="oral-float-panel__roster-hint">Click a learner to cycle the mark.</span>
+            </div>
+            <div class="oral-float-panel__roster-summary">
+                <span class="oral-float-panel__summary-chip oral-float-panel__summary-chip--resolved">
+                    <span class="oral-float-panel__summary-label">Marked</span>
+                    <span class="oral-float-panel__summary-value" x-text="$store.lessonRoster.rosterMarkedCount"></span>
+                </span>
+                <span class="oral-float-panel__summary-chip">
+                    <span class="oral-float-panel__summary-label">Left</span>
+                    <span class="oral-float-panel__summary-value" x-text="$store.lessonRoster.rosterRemainingCount"></span>
+                </span>
+            </div>
+        </div>
+        <div class="oral-float-panel__roster-list">
+            <template x-if="$store.lessonRoster">
+                <template x-for="student in $store.lessonRoster.roster" :key="student">
+                    <button
+                        type="button"
+                        class="oral-float-panel__roster-student"
+                        :data-status="$store.lessonRoster.getStudentStatus(student)"
+                        @click="$store.lessonRoster.cycleStudent(student)">
+                        <span class="oral-float-panel__roster-name" x-text="student"></span>
+                        <span class="oral-float-panel__roster-badge" x-text="$store.lessonRoster.getStudentStatus(student) || '—'"></span>
+                    </button>
+                </template>
             </template>
-        </template>
+        </div>
+    </div>
+    <div
+        class="oral-float-panel__audit"
+        x-show="!$store.lessonRoster.panelCollapsed && $store.lessonRoster.showAuditStrategyControls"
+        x-cloak>
+        <button
+            type="button"
+            class="oral-float-panel__audit-btn"
+            :class="{ 'oral-float-panel__audit-btn--active': $store.lessonRoster.auditSelectionStrategy === 'roster_order' }"
+            @click="$store.lessonRoster.restartAuditSelectionStrategy('roster_order')">
+            Roster order
+        </button>
+        <button
+            type="button"
+            class="oral-float-panel__audit-btn"
+            :class="{ 'oral-float-panel__audit-btn--active': $store.lessonRoster.auditSelectionStrategy === 'least_recently_checked' }"
+            @click="$store.lessonRoster.restartAuditSelectionStrategy('least_recently_checked')">
+            Least recently checked
+        </button>
+    </div>
+    <div
+        class="oral-float-panel__actions"
+        x-show="!$store.lessonRoster.panelCollapsed && $store.lessonRoster.showMarkingActions"
+        x-cloak>
+        {% for option in ['secure', 'shaky', 'missed', 'deferred', 'absent'] %}
+        <button
+            type="button"
+            class="oral-float-panel__btn oral-float-panel__btn--{{ option }}"
+            @click="$store.lessonRoster.markActiveOralAssignment('{{ option }}')">
+            {{ option | replace('_', ' ') | title }}
+        </button>
+        {% endfor %}
+    </div>
+    <div
+        class="oral-float-panel__footer"
+        x-show="!$store.lessonRoster.panelCollapsed && ($store.lessonRoster.showMarkingActions || $store.lessonRoster.lastMarkingResult)"
+        x-cloak>
+        <span
+            class="oral-float-panel__meta"
+            x-show="$store.lessonRoster.showMarkingActions && $store.lessonRoster.pendingStudents.length"
+            x-cloak>
+            Next up: <span x-text="$store.lessonRoster.pendingStudents[0]"></span>
+        </span>
+        <span
+            class="oral-float-panel__meta"
+            x-show="$store.lessonRoster.showMarkingActions && $store.lessonRoster.reteachStudents.length"
+            x-cloak>
+            Reteach queue: <span x-text="$store.lessonRoster.reteachStudents.length"></span>
+        </span>
+        <span
+            class="oral-float-panel__meta oral-float-panel__meta--result"
+            x-show="$store.lessonRoster.lastMarkingResult"
+            x-cloak
+            x-text="$store.lessonRoster.lastMarkingResult"></span>
     </div>
 </div>
-
-<button
-    type="button"
-    class="roster-float-btn"
-    x-data
-    x-show="$store.lessonRoster && $store.lessonRoster.presentationMode"
-    x-cloak
-    @click="$store.lessonRoster.panelOpen = !$store.lessonRoster.panelOpen">
-    Roster
-</button>
 {% endblock %}

@@ -3,6 +3,10 @@
   "unit_id": "G9",
   "target_pattern": "compound_words",
   "title": "Group 9, Lesson 62: Compound Words",
+  "new_units": [
+    "compound_words"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -303,6 +307,29 @@
           "expected_response": "Students identify the two component words in compound words and use that strategy to decode them.",
           "correction_move": "Model: look at sunshine — can you see sun? Can you see shine? Both are words you know. Put them together. Students find hidden words in: sunflower, doorbell, playground, waterfall.",
           "observation_note": "Watch for students not recognising the component words when they see them in compound form.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say Compound Words In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sun + shine = sunshine",
+            "back_text": "two words, one meaning",
+            "audio": "/static/audio/compound_words.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect Compound Words to one strong word from today.",
+          "expected_response": "Students say Compound Words clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -931,6 +958,28 @@
               "in": "decodable",
               "the": "sight",
               "sunshine": "decodable"
+            },
+            "token_units": {
+              "birthday": [
+                "b",
+                "ir",
+                "th",
+                "d",
+                "ay"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on birthday, in, sunshine.",
@@ -962,6 +1011,28 @@
               "in": "decodable",
               "the": "sight",
               "bedroom": "decodable"
+            },
+            "token_units": {
+              "notebook": [
+                "n",
+                "o",
+                "t",
+                "e",
+                "b",
+                "oo",
+                "k"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "bedroom": [
+                "b",
+                "e",
+                "dr",
+                "oo",
+                "m"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on notebook, in, bedroom.",
@@ -983,21 +1054,43 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The children play football on the playground.",
+            "text_content": "The sunflower was in the sunshine.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "children": "decodable",
-              "play": "decodable",
-              "football": "decodable",
-              "on": "decodable",
+              "sunflower": "decodable",
+              "was": "sight",
+              "in": "decodable",
               "the": "sight",
-              "playground": "decodable"
+              "sunshine": "decodable"
+            },
+            "token_units": {
+              "sunflower": [
+                "s",
+                "u",
+                "n",
+                "fl",
+                "ow",
+                "er"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on children, play, football, on.",
-          "expected_response": "Students read \"The children play football on the playground.\" accurately.",
+          "expected_response": "Students read \"The sunflower was in the sunshine.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The children play football on the playground.\".",
           "korean_interference_flag": "f_p",
@@ -1015,20 +1108,41 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The sunflower opened in the moonlight.",
+            "text_content": "The raincoat was in the bedroom.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "sunflower": "decodable",
-              "opened": "decodable",
+              "raincoat": "decodable",
+              "was": "sight",
               "in": "decodable",
               "the": "sight",
-              "moonlight": "decodable"
+              "bedroom": "decodable"
+            },
+            "token_units": {
+              "raincoat": [
+                "r",
+                "ai",
+                "n",
+                "c",
+                "oa",
+                "t"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "bedroom": [
+                "b",
+                "e",
+                "dr",
+                "oo",
+                "m"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on sunflower, opened, in, moonlight.",
-          "expected_response": "Students read \"The sunflower opened in the moonlight.\" accurately.",
+          "expected_response": "Students read \"The raincoat was in the bedroom.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
           "observation_note": "Watch for accurate reading and smooth phrasing in \"The sunflower opened in the moonlight.\".",
           "korean_interference_flag": "vowel_quality",
@@ -1052,10 +1166,10 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The birthday was in the sunshine.\nThe notebook was in the bedroom.\nThe children play football on the playground.\nThe sunflower opened in the moonlight.\nShe wore a raincoat to the match.\nStarlight was over the playground.",
+            "text_content": "The birthday was in the sunshine.\nThe notebook was in the bedroom.\nThe sunflower was in the sunshine.\nThe raincoat was in the bedroom.\nThe moonlight was on the notebook.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all the compound words. Split each one into its two parts.",
+            "comprehension_prompt": "Where was the notebook? Where was the sunflower?",
             "word_types": {
               "The": "sight",
               "birthday": "decodable",
@@ -1065,28 +1179,290 @@
               "sunshine": "decodable",
               "notebook": "decodable",
               "bedroom": "decodable",
-              "children": "decodable",
-              "play": "decodable",
-              "football": "decodable",
-              "on": "decodable",
-              "playground": "decodable",
               "sunflower": "decodable",
-              "opened": "decodable",
-              "moonlight": "decodable",
-              "She": "sight",
-              "wore": "decodable",
-              "a": "sight",
               "raincoat": "decodable",
-              "to": "sight",
-              "match": "decodable",
-              "Starlight": "decodable",
-              "over": "decodable"
+              "moonlight": "decodable",
+              "on": "decodable"
+            },
+            "token_units": {
+              "birthday": [
+                "b",
+                "ir",
+                "th",
+                "d",
+                "ay"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ],
+              "notebook": [
+                "n",
+                "o",
+                "t",
+                "e",
+                "b",
+                "oo",
+                "k"
+              ],
+              "bedroom": [
+                "b",
+                "e",
+                "dr",
+                "oo",
+                "m"
+              ],
+              "sunflower": [
+                "s",
+                "u",
+                "n",
+                "fl",
+                "ow",
+                "er"
+              ],
+              "raincoat": [
+                "r",
+                "ai",
+                "n",
+                "c",
+                "oa",
+                "t"
+              ],
+              "moonlight": [
+                "m",
+                "oo",
+                "n",
+                "l",
+                "igh",
+                "t"
+              ],
+              "on": [
+                "o",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
-          "expected_response": "Students read the full reader accurately and answer the comprehension prompt with evidence from the text.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
           "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The birthday was in the sunshine.\nThe notebook was in the bedroom.\nThe sunflower was in the sunshine.\nThe raincoat was in the bedroom.\nThe moonlight was on the notebook.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "birthday": "decodable",
+              "was": "sight",
+              "in": "decodable",
+              "the": "sight",
+              "sunshine": "decodable",
+              "notebook": "decodable",
+              "bedroom": "decodable",
+              "sunflower": "decodable",
+              "raincoat": "decodable",
+              "moonlight": "decodable",
+              "on": "decodable"
+            },
+            "token_units": {
+              "birthday": [
+                "b",
+                "ir",
+                "th",
+                "d",
+                "ay"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ],
+              "notebook": [
+                "n",
+                "o",
+                "t",
+                "e",
+                "b",
+                "oo",
+                "k"
+              ],
+              "bedroom": [
+                "b",
+                "e",
+                "dr",
+                "oo",
+                "m"
+              ],
+              "sunflower": [
+                "s",
+                "u",
+                "n",
+                "fl",
+                "ow",
+                "er"
+              ],
+              "raincoat": [
+                "r",
+                "ai",
+                "n",
+                "c",
+                "oa",
+                "t"
+              ],
+              "moonlight": [
+                "m",
+                "oo",
+                "n",
+                "l",
+                "igh",
+                "t"
+              ],
+              "on": [
+                "o",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread Compound Words Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The birthday was in the sunshine.\nThe notebook was in the bedroom.\nThe sunflower was in the sunshine.\nThe raincoat was in the bedroom.\nThe moonlight was on the notebook.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the Compound Words text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "The": "sight",
+              "birthday": "decodable",
+              "was": "sight",
+              "in": "decodable",
+              "the": "sight",
+              "sunshine": "decodable",
+              "notebook": "decodable",
+              "bedroom": "decodable",
+              "sunflower": "decodable",
+              "raincoat": "decodable",
+              "moonlight": "decodable",
+              "on": "decodable"
+            },
+            "token_units": {
+              "birthday": [
+                "b",
+                "ir",
+                "th",
+                "d",
+                "ay"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ],
+              "notebook": [
+                "n",
+                "o",
+                "t",
+                "e",
+                "b",
+                "oo",
+                "k"
+              ],
+              "bedroom": [
+                "b",
+                "e",
+                "dr",
+                "oo",
+                "m"
+              ],
+              "sunflower": [
+                "s",
+                "u",
+                "n",
+                "fl",
+                "ow",
+                "er"
+              ],
+              "raincoat": [
+                "r",
+                "ai",
+                "n",
+                "c",
+                "oa",
+                "t"
+              ],
+              "moonlight": [
+                "m",
+                "oo",
+                "n",
+                "l",
+                "igh",
+                "t"
+              ],
+              "on": [
+                "o",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Read the Compound Words text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -1199,6 +1575,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The birthday was in the sunshine.",
+            "expected_answer": "The birthday was in the sunshine.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1221,7 +1623,8 @@
               "sunburn"
             ],
             "highlighted_chunk": "sun",
-            "support_text": "What word appears in all these compounds? What does it contribute to the meaning?"
+            "support_text": "What word appears in all these compounds? What does it contribute to the meaning?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What word appears in all these compounds? What does it contribute to the meaning?",
           "expected_response": "Students identify the shared morpheme and explain its meaning.",
@@ -1230,6 +1633,114 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The birthday was in the sunshine.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "birthday": "decodable",
+              "was": "sight",
+              "in": "decodable",
+              "the": "sight",
+              "sunshine": "decodable"
+            },
+            "token_units": {
+              "birthday": [
+                "b",
+                "ir",
+                "th",
+                "d",
+                "ay"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use Compound Words In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The birthday was in the sunshine.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using Compound Words, then say a second sentence with one change.",
+            "word_types": {
+              "The": "sight",
+              "birthday": "decodable",
+              "was": "sight",
+              "in": "decodable",
+              "the": "sight",
+              "sunshine": "decodable"
+            },
+            "token_units": {
+              "birthday": [
+                "b",
+                "ir",
+                "th",
+                "d",
+                "ay"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sunshine": [
+                "s",
+                "u",
+                "n",
+                "sh",
+                "i",
+                "n",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Use Compound Words in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1269,6 +1780,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final Compound Words Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's Compound Words focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's Compound Words focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

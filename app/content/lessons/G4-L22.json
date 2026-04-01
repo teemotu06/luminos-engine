@@ -3,6 +3,12 @@
   "unit_id": "G4",
   "target_pattern": "th_voiceless",
   "title": "Group 4, Lesson 22: th (voiceless)",
+  "new_units": [
+    "th"
+  ],
+  "new_sight_words": [
+    "with"
+  ],
   "sight_words": [
     "I",
     "the",
@@ -290,6 +296,29 @@
           "expected_response": "Students produce /θ/ with tongue tip visibly between teeth and continuous airflow, no voicing.",
           "correction_move": "Mirror session: Step 1 — produce /t/, confirm tongue behind teeth. Step 2 — produce /θ/, confirm tongue tip between teeth. Step 3 — alternate t-θ-t-θ until students control the distinction.",
           "observation_note": "Watch for /t/ substitution throughout. This is the single most persistent Korean interference error in English. Do not proceed to word practice until isolation production is secure.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say th (voiceless) In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th",
+            "back_text": "/θ/ (voiceless)",
+            "audio": "/static/audio/th_voiceless.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect th (voiceless) to one strong word from today.",
+          "expected_response": "Students say th (voiceless) clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "th_voiceless",
           "markable": true,
           "marking_options": [
@@ -830,19 +859,30 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I think it is thin.",
+            "text_content": "I am with the moth.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "I": "sight",
-              "think": "decodable",
-              "it": "decodable",
-              "is": "decodable",
-              "thin": "decodable"
+              "am": "decodable",
+              "with": "sight",
+              "the": "sight",
+              "moth": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ]
             }
           },
           "teacher_cue": "I is a sight word. think, it, is, thin all decodable. Confirm /θ/ in think and thin before reading.",
-          "expected_response": "Students read \"I think it is thin.\" accurately.",
+          "expected_response": "Students read \"I am with the moth.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /t/ substitution in think and thin under reading pressure.",
           "korean_interference_flag": "th_voiceless",
@@ -860,23 +900,40 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I think it is thin but thick on top.",
+            "text_content": "The moth is on the path.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "I": "sight",
-              "think": "decodable",
-              "it": "decodable",
+              "The": "sight",
+              "moth": "decodable",
               "is": "decodable",
-              "thin": "decodable",
-              "but": "decodable",
-              "thick": "decodable",
               "on": "decodable",
-              "top": "decodable"
+              "the": "sight",
+              "path": "decodable"
+            },
+            "token_units": {
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "path": [
+                "p",
+                "a",
+                "th"
+              ]
             }
           },
           "teacher_cue": "I is a sight word. All other words decodable.",
-          "expected_response": "Students read \"I think it is thin but thick on top.\" accurately.",
+          "expected_response": "Students read \"The moth is on the path.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /θ/ in think, thin, thick — three voiceless th words in one sentence.",
           "korean_interference_flag": "th_voiceless",
@@ -894,23 +951,34 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He went on the path. The moth is on the shelf.",
+            "text_content": "The bath is hot.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "He": "sight",
-              "went": "decodable",
-              "on": "decodable",
-              "the": "sight",
-              "path": "decodable",
               "The": "sight",
-              "moth": "decodable",
+              "bath": "decodable",
               "is": "decodable",
-              "shelf": "decodable"
+              "hot": "decodable"
+            },
+            "token_units": {
+              "bath": [
+                "b",
+                "a",
+                "th"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "hot": [
+                "h",
+                "o",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Two sentences. He and The are sight words. All other words decodable.",
-          "expected_response": "Students read \"He went on the path. The moth is on the shelf.\" accurately.",
+          "expected_response": "Students read \"The bath is hot.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /θ/ in path and moth — coda position, often weaker than onset.",
           "korean_interference_flag": "th_voiceless",
@@ -928,24 +996,34 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Think! The theft is bad. He ran on the path.",
+            "text_content": "The path is thin.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "Think": "decodable",
               "The": "sight",
-              "theft": "decodable",
+              "path": "decodable",
               "is": "decodable",
-              "bad": "decodable",
-              "He": "sight",
-              "ran": "decodable",
-              "on": "decodable",
-              "the": "sight",
-              "path": "decodable"
+              "thin": "decodable"
+            },
+            "token_units": {
+              "path": [
+                "p",
+                "a",
+                "th"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "thin": [
+                "th",
+                "i",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Three sentences. The and He are sight words. All other words decodable.",
-          "expected_response": "Students read \"Think! The theft is bad. He ran on the path.\" accurately.",
+          "expected_response": "Students read \"The path is thin.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /θ/ in Think, theft, path — onset and coda positions.",
           "korean_interference_flag": "th_voiceless",
@@ -969,48 +1047,243 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I think it is thin.\nI think it is thin but thick on top.\nHe went on the path.\nThe moth is on the shelf.\nThink!\nThe theft is bad.\nHe ran on the path to the shed.\nThe moth sat on the thick shelf.\nI think the broth is hot.\nShe got froth on it.\nHe thinks the broth is just right.",
+            "text_content": "I am with the moth.\nThe moth is on the path.\nThe bath is hot.\nHe is with me.\nThe path is thin.\nThe moth is in the bath.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all the th words. Say each one — where is your tongue? What is the thief stealing?",
+            "comprehension_prompt": "Where is the moth? What is thin?",
             "word_types": {
               "I": "sight",
-              "think": "decodable",
-              "it": "decodable",
-              "is": "decodable",
-              "thin": "decodable",
-              "but": "decodable",
-              "thick": "decodable",
-              "on": "decodable",
-              "top": "decodable",
-              "He": "sight",
-              "went": "decodable",
+              "am": "decodable",
+              "with": "sight",
               "the": "sight",
-              "path": "decodable",
-              "The": "sight",
               "moth": "decodable",
-              "shelf": "decodable",
-              "Think": "decodable",
-              "theft": "decodable",
-              "bad": "decodable",
-              "ran": "decodable",
-              "to": "sight",
-              "shed": "decodable",
-              "sat": "decodable",
-              "broth": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "on": "decodable",
+              "path": "decodable",
+              "bath": "decodable",
               "hot": "decodable",
-              "She": "sight",
-              "got": "decodable",
-              "froth": "decodable",
-              "thinks": "decodable",
-              "just": "decodable",
-              "right": "decodable"
+              "He": "sight",
+              "me": "sight",
+              "thin": "decodable",
+              "in": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "path": [
+                "p",
+                "a",
+                "th"
+              ],
+              "bath": [
+                "b",
+                "a",
+                "th"
+              ],
+              "hot": [
+                "h",
+                "o",
+                "t"
+              ],
+              "thin": [
+                "th",
+                "i",
+                "n"
+              ],
+              "in": [
+                "i",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I am with the moth.\nThe moth is on the path.\nThe bath is hot.\nHe is with me.\nThe path is thin.\nThe moth is in the bath.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "I": "sight",
+              "am": "decodable",
+              "with": "sight",
+              "the": "sight",
+              "moth": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "on": "decodable",
+              "path": "decodable",
+              "bath": "decodable",
+              "hot": "decodable",
+              "He": "sight",
+              "me": "sight",
+              "thin": "decodable",
+              "in": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "path": [
+                "p",
+                "a",
+                "th"
+              ],
+              "bath": [
+                "b",
+                "a",
+                "th"
+              ],
+              "hot": [
+                "h",
+                "o",
+                "t"
+              ],
+              "thin": [
+                "th",
+                "i",
+                "n"
+              ],
+              "in": [
+                "i",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread th (voiceless) Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I am with the moth.\nThe moth is on the path.\nThe bath is hot.\nHe is with me.\nThe path is thin.\nThe moth is in the bath.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the th (voiceless) text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "I": "sight",
+              "am": "decodable",
+              "with": "sight",
+              "the": "sight",
+              "moth": "decodable",
+              "The": "sight",
+              "is": "decodable",
+              "on": "decodable",
+              "path": "decodable",
+              "bath": "decodable",
+              "hot": "decodable",
+              "He": "sight",
+              "me": "sight",
+              "thin": "decodable",
+              "in": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "path": [
+                "p",
+                "a",
+                "th"
+              ],
+              "bath": [
+                "b",
+                "a",
+                "th"
+              ],
+              "hot": [
+                "h",
+                "o",
+                "t"
+              ],
+              "thin": [
+                "th",
+                "i",
+                "n"
+              ],
+              "in": [
+                "i",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Read the th (voiceless) text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "th_voiceless",
           "markable": true,
           "marking_options": [
@@ -1113,6 +1386,37 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write th (voiceless) And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_think.mp3",
+            "dictated_text": "think",
+            "expected_answer": "think",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "th",
+              "i",
+              "n",
+              "k"
+            ],
+            "prompt_text": "Write the th (voiceless) target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the th (voiceless) target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1133,7 +1437,8 @@
               "froth"
             ],
             "highlighted_chunk": "oth",
-            "support_text": "What do these words share at the end?"
+            "support_text": "What do these words share at the end?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What do these words share at the end?",
           "expected_response": "Students identify the shared pattern and name what changes.",
@@ -1142,6 +1447,90 @@
           "korean_interference_flag": "th_voiceless",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I am with the moth.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "I": "sight",
+              "am": "decodable",
+              "with": "sight",
+              "the": "sight",
+              "moth": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use th (voiceless) In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I am with the moth.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using th (voiceless), then say a second sentence with one change.",
+            "word_types": {
+              "I": "sight",
+              "am": "decodable",
+              "with": "sight",
+              "the": "sight",
+              "moth": "decodable"
+            },
+            "token_units": {
+              "am": [
+                "a",
+                "m"
+              ],
+              "moth": [
+                "m",
+                "o",
+                "th"
+              ]
+            }
+          },
+          "teacher_cue": "Use th (voiceless) in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1181,6 +1570,61 @@
           "korean_interference_flag": "th_voiceless",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final th (voiceless) Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's th (voiceless) focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's th (voiceless) focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

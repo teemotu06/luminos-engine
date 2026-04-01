@@ -7,13 +7,16 @@ from sqlalchemy.orm import Session
 
 from app.models.lesson import LessonAttemptRecord, SlideResultRecord, StudentMarkRecord
 from app.schemas.marking import SlideMarkRequest, StudentMarkRequest
+from app.services.review_scheduler_service import update_class_pattern_review
 
 
-STATUS_PRIORITY = {"secure": 0, "shaky": 1, "missed": 2, "skipped": 3}
+STATUS_PRIORITY = {"secure": 0, "shaky": 1, "missed": 2, "skipped": 3, "deferred": 3, "absent": 3}
 RECOMMENDATION_MAP = {
     "secure": "move_on",
     "shaky": "move_on",
     "missed": "repeat",
+    "deferred": "move_on",
+    "absent": "move_on",
 }
 
 
@@ -208,6 +211,12 @@ def record_student_mark(db: Session, mark: StudentMarkRequest) -> StudentMarkRec
         existing.support_level = mark.support_level
         existing.teacher_note = mark.teacher_note
 
+    attempt = db.get(LessonAttemptRecord, mark.attempt_id)
+    if attempt is not None:
+        db.flush()
+        _rebuild_attempt_summary(db, attempt)
+        # Class review state is updated at lesson completion (complete_lesson endpoint).
+        # Not updated here to avoid O(students × slides) repeated DB writes.
     db.commit()
     db.refresh(existing)
     return existing
@@ -263,6 +272,7 @@ def record_slide_mark(db: Session, mark: SlideMarkRequest) -> LessonAttemptRecor
 
     db.flush()
     _rebuild_attempt_summary(db, attempt)
+    update_class_pattern_review(db, attempt)
     db.commit()
     db.refresh(attempt)
     return attempt

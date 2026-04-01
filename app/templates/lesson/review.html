@@ -9,6 +9,7 @@
 
 {% block content %}
 <div
+  id="main-content"
   class="review-shell"
   x-data='reviewShell({
     attemptId: {{ attempt_id | tojson }},
@@ -39,8 +40,190 @@
     </div>
   </div>
 
+  {# ── Class mastery gate ───────────────────────────────── #}
+  {% if class_mastery_gate and class_mastery_gate.gate_level != 'no_data' %}
+  {% set gate = class_mastery_gate %}
+  <section class="mastery-gate mastery-gate--{{ gate.gate_level }}">
+    <div class="mastery-gate__header">
+      <div class="mastery-gate__verdict">{{ gate.gate_label }}</div>
+      {% if gate.marked_count > 0 %}
+      <div class="mastery-gate__counts">
+        <span class="mastery-gate__count mastery-gate__count--secure">{{ gate.secure_count }} secure</span>
+        <span class="mastery-gate__count mastery-gate__count--shaky">{{ gate.shaky_count }} shaky</span>
+        <span class="mastery-gate__count mastery-gate__count--missed">{{ gate.missed_count }} missed</span>
+        <span class="mastery-gate__count mastery-gate__count--total">{{ gate.marked_count }} marked</span>
+      </div>
+      {% endif %}
+    </div>
+    <p class="mastery-gate__description">{{ gate.gate_description }}</p>
+
+    {% if gate.reteach_actions %}
+    <div class="mastery-gate__actions">
+      <div class="mastery-gate__actions-label">Recommended actions</div>
+      {% for action in gate.reteach_actions %}
+      <div class="mastery-gate__action mastery-gate__action--{{ action.action_type }}">
+        <div class="mastery-gate__action-label">{{ action.label }}</div>
+        {% if action.detail %}
+        <div class="mastery-gate__action-detail">{{ action.detail }}</div>
+        {% endif %}
+        {% if action.blocks %}
+        <div class="mastery-gate__action-chips">
+          {% for b in action.blocks %}
+          <span class="mastery-gate__block-chip">Block {{ b }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if action.students %}
+        <div class="mastery-gate__action-chips">
+          {% for student in action.students %}
+          <span class="mastery-gate__student-chip">{{ student }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% set session_interventions = intervention_recommendations.session_recommendations %}
+  {% set student_interventions = intervention_recommendations.student_recommendations %}
+
+  {% if session_interventions %}
+  <section class="review-recommendations">
+    <div class="review-recommendations__label">Recommended Korean Intervention Lessons</div>
+    <div class="review-recommendations__grid">
+      {% for rec in session_interventions %}
+      <a class="review-recommendations__card" href="{{ rec.href }}">
+        <div class="review-recommendations__eyebrow">{{ rec.lesson_id }}</div>
+        <div class="review-recommendations__title">{{ rec.title }}</div>
+        <div class="review-recommendations__body">{{ rec.reason }}</div>
+        <div class="review-recommendations__meta">Signal count: {{ rec.count }}{% if rec.after %} · Recommended after {{ rec.after }}{% endif %}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if class_review_recommendations %}
+  <section class="review-recommendations">
+    <div class="review-recommendations__label">Suggested Block 01 And 02 Review For Next Class Lesson</div>
+    <div class="review-recommendations__grid">
+      {% if class_review_recommendations.recent_review_target %}
+      {% set rec = class_review_recommendations.recent_review_target %}
+      <div class="review-recommendations__card">
+        <div class="review-recommendations__eyebrow">{{ rec.reason }}</div>
+        <div class="review-recommendations__title">{{ rec.pattern_key }}</div>
+        <div class="review-recommendations__meta">Source lesson: {{ rec.source_lesson_id }} · Recommended touches: {{ rec.recommended_touch_count }}</div>
+      </div>
+      {% endif %}
+      {% for rec in class_review_recommendations.due_review_targets %}
+      <div class="review-recommendations__card">
+        <div class="review-recommendations__eyebrow">{{ rec.reason }}</div>
+        <div class="review-recommendations__title">{{ rec.pattern_key }}</div>
+        <div class="review-recommendations__meta">Source lesson: {{ rec.source_lesson_id }} · Recommended touches: {{ rec.recommended_touch_count }}</div>
+      </div>
+      {% endfor %}
+      {% for rec in class_review_recommendations.class_risk_targets %}
+      <div class="review-recommendations__card">
+        <div class="review-recommendations__eyebrow">{{ rec.reason }}</div>
+        <div class="review-recommendations__title">{{ rec.pattern_key }}</div>
+        <div class="review-recommendations__meta">Source lesson: {{ rec.source_lesson_id }} · {{ rec.weak_learner_count }}/{{ rec.marked_learner_count }} learners weak · Recommended touches: {{ rec.recommended_touch_count }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if class_review_recommendations.individual_follow_up_flags %}
+    <div class="review-student-recommendations__list" style="margin-top: 10px;">
+      {% for flag in class_review_recommendations.individual_follow_up_flags %}
+      <div class="review-student-recommendations__item">
+        <div class="review-student-recommendations__student">{{ flag.student_name }}</div>
+        <div class="review-student-recommendations__details">{{ flag.reason }} · Weak marks: {{ flag.weak_mark_count }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if oral_check_reviews %}
+  <section class="review-oral-check">
+    <div class="review-recommendations__label">Block 07 Oral Check</div>
+    <div class="review-oral-check__list">
+      {% for session in oral_check_reviews %}
+      <div class="review-oral-check__card">
+        <div class="review-oral-check__header">
+          <div>
+            <div class="review-oral-check__title">{{ session.slide_title }}</div>
+            <div class="review-oral-check__meta">
+              {{ session.slide_id }} · {{ session.participation_mode | replace('_', ' ') | title }} · {{ session.resolved_student_count }}/{{ session.required_student_count }} resolved
+              {% if session.participation_mode == 'audit_roster' %} · sampled from {{ session.roster_size }} students{% endif %}
+              {% if session.participation_mode == 'audit_roster' %} · {{ session.audit_selection_strategy | replace('_', ' ') }}{% endif %}
+              {% if session.text_length_mode == 'short' %} · Short reader{% endif %}
+            </div>
+          </div>
+          <span class="review-summary__chip review-summary__chip--{{ 'secure' if session.unresolved_student_count == 0 else 'missed' }}">
+            {{ session.session_status | title }}
+          </span>
+        </div>
+        <div class="review-oral-check__counts">
+          {% for status in ['secure', 'shaky', 'missed', 'deferred', 'absent'] %}
+          {% if session.counts[status] %}
+          <span class="review-oral-check__count review-oral-check__count--{{ status }}">{{ session.counts[status] }} {{ status }}</span>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div class="review-oral-check__students">
+          {% for student in session.students %}
+          <div class="review-oral-check__student review-oral-check__student--{{ student.status }}">
+            <div class="review-oral-check__student-main">
+              <span class="review-oral-check__student-name">{{ student.student_name }}</span>
+              <span class="review-oral-check__student-status">{{ student.status }}</span>
+            </div>
+            <div class="review-oral-check__student-meta">
+              {{ student.performance_type | replace('_', ' ') }}
+              {% if student.attempt_count > 1 %} · {{ student.attempt_count }} attempts{% endif %}
+              {% if student.had_reteach %} · reteach{% endif %}
+            </div>
+            {% if student.override_reason %}
+            <div class="review-oral-check__student-note">Override: {{ student.override_reason }}</div>
+            {% elif student.teacher_note %}
+            <div class="review-oral-check__student-note">{{ student.teacher_note }}</div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if student_interventions %}
+  <section class="review-student-recommendations">
+    <div class="review-recommendations__label">Learners Flagged For Intervention</div>
+    <div class="review-student-recommendations__list">
+      {% for student_name, recommendations in student_interventions.items() %}
+      <div class="review-student-recommendations__item">
+        <div class="review-student-recommendations__student">{{ student_name }}</div>
+        <div class="review-student-recommendations__chips">
+          {% for rec in recommendations %}
+          <a class="review-student-recommendations__chip" href="{{ rec.href }}">{{ rec.lesson_id }}</a>
+          {% endfor %}
+        </div>
+        <div class="review-student-recommendations__details">
+          {% for rec in recommendations %}
+          <div>{{ rec.lesson_id }}: {{ rec.reason }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   {% if not markable_blocks %}
-  <p style="color: rgba(17,17,17,0.45); font-size: 15px;">No markable slides in this lesson.</p>
+  <p class="review-empty-notice">No markable slides in this lesson.</p>
   {% else %}
 
   {% for block_id, block_data in markable_blocks.items() %}
@@ -61,6 +244,8 @@
             'review-student-badge--shaky':    getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'shaky',
             'review-student-badge--missed':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'missed',
             'review-student-badge--skipped':  getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'skipped',
+            'review-student-badge--deferred': getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'deferred',
+            'review-student-badge--absent':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'absent',
             'review-student-badge--unmarked': !getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')
           }"
           @click="editingKey === '{{ slide_info.slide_id }}__{{ student }}' ? closeEdit() : openEdit('{{ slide_info.slide_id }}', '{{ student }}')">
@@ -75,7 +260,7 @@
         {% endfor %}
 
         {% if not roster %}
-        <p style="font-size: 13px; color: rgba(17,17,17,0.4);">No class roster linked to this attempt.</p>
+        <p class="review-no-roster">No class roster linked to this attempt.</p>
         {% endif %}
       </div>
 
@@ -84,11 +269,12 @@
       <div
         class="review-edit-panel"
         x-show="editingKey === '{{ slide_info.slide_id }}__{{ student }}'"
+        x-transition
         x-cloak>
         <div class="review-edit-panel__student">{{ student }}</div>
 
         <div class="review-edit-panel__status-row">
-          {% for option in ['secure', 'shaky', 'missed', 'skipped'] %}
+          {% for option in ['secure', 'shaky', 'missed', 'deferred', 'absent', 'skipped'] %}
           <button
             type="button"
             class="review-edit-panel__status-btn review-edit-panel__status-btn--{{ option }}"

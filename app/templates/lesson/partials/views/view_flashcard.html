@@ -55,36 +55,6 @@
       {{ back_word }}
     </span>
     {% endif %}
-
-    <span class="lesson-flashcard__hint" x-show="!revealed" x-cloak>tap to reveal</span>
   </button>
 
-  <div class="lesson-flashcard__actions">
-    {% if slide.content_payload.audio %}
-    <button
-      type="button"
-      class="lesson-flashcard__button lesson-flashcard__button--play"
-      @click="playAudio('{{ slide.content_payload.audio }}')">
-      ▶ Audio
-    </button>
-    {% endif %}
-
-    {% if slide.content_payload.blend_units %}
-    <button
-      type="button"
-      class="lesson-flashcard__button lesson-flashcard__button--blend"
-      x-show="revealed"
-      x-cloak
-      @click='runVocabBlend({{ blend_json }}, {{ slide.content_payload.audio | tojson }})'>
-      Blend
-    </button>
-    {% endif %}
-
-    <button
-      type="button"
-      class="lesson-flashcard__button lesson-flashcard__button--reveal"
-      @click="revealed = !revealed">
-      <span x-text="revealed ? 'Hide' : 'Reveal'">Reveal</span>
-    </button>
-  </div>
 </div>

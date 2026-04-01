@@ -3,6 +3,15 @@
   "unit_id": "G8",
   "target_pattern": "l_clusters",
   "title": "Group 8, Lesson 44: l-clusters (bl cl fl gl pl sl)",
+  "new_units": [
+    "bl",
+    "cl",
+    "fl",
+    "gl",
+    "pl",
+    "sl"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -306,6 +315,29 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say clusters In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bl  cl  fl  gl  pl  sl",
+            "back_text": "l-clusters",
+            "audio": "/static/audio/l_clusters.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect clusters to one strong word from today.",
+          "expected_response": "Students say clusters clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -523,6 +555,42 @@
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Review clusters With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "slim",
+            "back_text": "/s/ /l/ /ɪ/ /m/",
+            "audio": "/static/audio/block04_slim.mp3",
+            "blend_units": [
+              {
+                "grapheme": "sl",
+                "phoneme": "/sl/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for clusters.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -733,6 +801,32 @@
               "by": "decodable",
               "the": "sight",
               "plan": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on black, flag, is, by.",
@@ -764,6 +858,28 @@
               "the": "sight",
               "black": "decodable",
               "flag": "decodable"
+            },
+            "token_units": {
+              "clap": [
+                "cl",
+                "a",
+                "p"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on clap, by, black, flag.",
@@ -796,6 +912,31 @@
               "by": "decodable",
               "the": "sight",
               "flag": "decodable"
+            },
+            "token_units": {
+              "slim": [
+                "sl",
+                "i",
+                "m"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on slim, plan, is, by.",
@@ -826,6 +967,28 @@
               "flag": "decodable",
               "can": "decodable",
               "glow": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "glow": [
+                "gl",
+                "ow"
+              ]
             }
           },
           "teacher_cue": "Read the sentence naturally, then track each word. Focus on black, flag, can, glow.",
@@ -853,10 +1016,10 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The black flag is by the plan.\nI clap by the black flag.\nThe slim flag is black.\nThe slim plan is by the flag.\nThe black flag can glow.\nI clap and the black flag can glow.",
+            "text_content": "The black flag is by the plan.\nI clap by the black flag.\nThe slim plan is by the flag.\nThe black flag can glow.\nThe flag is black.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find all six l-cluster types. Which cluster appears most?",
+            "comprehension_prompt": "Where is the flag? What can glow?",
             "word_types": {
               "The": "sight",
               "black": "decodable",
@@ -869,14 +1032,224 @@
               "clap": "decodable",
               "slim": "decodable",
               "can": "decodable",
-              "glow": "decodable",
-              "and": "decodable"
+              "glow": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "clap": [
+                "cl",
+                "a",
+                "p"
+              ],
+              "slim": [
+                "sl",
+                "i",
+                "m"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "glow": [
+                "gl",
+                "ow"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
-          "expected_response": "Students read all sentences accurately and answer the prompt.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support before rereading.",
           "observation_note": "Watch for cluster blending — no vowel insertion between consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The black flag is by the plan.\nI clap by the black flag.\nThe slim plan is by the flag.\nThe black flag can glow.\nThe flag is black.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "black": "decodable",
+              "flag": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "plan": "decodable",
+              "I": "sight",
+              "clap": "decodable",
+              "slim": "decodable",
+              "can": "decodable",
+              "glow": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "clap": [
+                "cl",
+                "a",
+                "p"
+              ],
+              "slim": [
+                "sl",
+                "i",
+                "m"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "glow": [
+                "gl",
+                "ow"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread clusters Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The black flag is by the plan.\nI clap by the black flag.\nThe slim plan is by the flag.\nThe black flag can glow.\nThe flag is black.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the clusters text smoothly. Then tell one thing you noticed about the clusters.",
+            "word_types": {
+              "The": "sight",
+              "black": "decodable",
+              "flag": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "plan": "decodable",
+              "I": "sight",
+              "clap": "decodable",
+              "slim": "decodable",
+              "can": "decodable",
+              "glow": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "clap": [
+                "cl",
+                "a",
+                "p"
+              ],
+              "slim": [
+                "sl",
+                "i",
+                "m"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "glow": [
+                "gl",
+                "ow"
+              ]
+            }
+          },
+          "teacher_cue": "Read the clusters text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "cluster",
           "markable": true,
           "marking_options": [
@@ -981,6 +1354,32 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The black flag is by the plan.",
+            "expected_answer": "The black flag is by the plan.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1004,7 +1403,8 @@
               "slim"
             ],
             "highlighted_chunk": "l-cluster",
-            "support_text": "What is the second sound in each of these words?"
+            "support_text": "What is the second sound in each of these words?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What is the second sound in each of these words?",
           "expected_response": "Students identify the shared cluster and name its sounds.",
@@ -1013,6 +1413,124 @@
           "korean_interference_flag": "cluster",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The black flag is by the plan.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "black": "decodable",
+              "flag": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "plan": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "L-Cluster Clarity",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The black flag is by the plan.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the sentence. Keep the /l/ tight to the first consonant with no extra vowel. Then say one new cluster sentence.",
+            "word_types": {
+              "The": "sight",
+              "black": "decodable",
+              "flag": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "plan": "decodable"
+            },
+            "token_units": {
+              "black": [
+                "bl",
+                "a",
+                "c",
+                "k"
+              ],
+              "flag": [
+                "fl",
+                "a",
+                "g"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Use the sentence to rehearse tight l-clusters. Prevent inserted vowels between the consonants.",
+          "expected_response": "Students read the model sentence clearly and produce one more oral sentence with the target sound or cluster.",
+          "correction_move": "Model the target sound in isolation, return to the sentence, then guide students into one supported oral sentence.",
+          "observation_note": "Watch articulation accuracy on the target sound or cluster and whether students avoid inserting extra vowels.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1052,6 +1570,61 @@
           "korean_interference_flag": "cluster",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final clusters Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's clusters focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's clusters focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

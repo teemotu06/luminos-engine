@@ -3,6 +3,10 @@
   "unit_id": "G5",
   "target_pattern": "oo_short",
   "title": "Group 5, Lesson 31: oo (short /ʊ/)",
+  "new_units": [
+    "oo_short"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -584,6 +588,42 @@
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Review oo (short /ʊ/) With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "wood",
+            "back_text": "/w/ /ʊ/ /d/",
+            "audio": "/static/audio/block04_wood.mp3",
+            "blend_units": [
+              {
+                "grapheme": "w",
+                "phoneme": "/w/",
+                "audio": null
+              },
+              {
+                "grapheme": "oo",
+                "phoneme": "/ʊ/",
+                "audio": null
+              },
+              {
+                "grapheme": "d",
+                "phoneme": "/d/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for oo (short /ʊ/).",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -786,18 +826,35 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Look at the book.",
+            "text_content": "I look at the book.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "Look": "decodable",
+              "I": "sight",
+              "look": "decodable",
               "at": "decodable",
               "the": "sight",
               "book": "decodable"
+            },
+            "token_units": {
+              "look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ]
             }
           },
           "teacher_cue": "The is a sight word. Look, at, book all decodable — both use short /ʊ/.",
-          "expected_response": "Students read \"Look at the book.\" accurately.",
+          "expected_response": "Students read \"I look at the book.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for short /ʊ/ in look and book — not /uː/.",
           "korean_interference_flag": "vowel_quality",
@@ -815,20 +872,36 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The cook stood by the wood.",
+            "text_content": "The cook had the book.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
               "cook": "decodable",
-              "stood": "decodable",
-              "by": "decodable",
+              "had": "decodable",
               "the": "sight",
-              "wood": "decodable"
+              "book": "decodable"
+            },
+            "token_units": {
+              "cook": [
+                "c",
+                "oo",
+                "k"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ]
             }
           },
           "teacher_cue": "One sentence. The is a sight word. cook, stood, and wood come directly from today's prepared word bank.",
-          "expected_response": "Students read \"The cook stood by the wood.\" accurately.",
+          "expected_response": "Students read \"The cook had the book.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for short /ʊ/ in cook, stood, and wood.",
           "korean_interference_flag": "vowel_quality",
@@ -846,20 +919,34 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The good cook has the book.",
+            "text_content": "The wood is good.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
-              "good": "decodable",
-              "cook": "decodable",
-              "has": "decodable",
-              "the": "sight",
-              "book": "decodable"
+              "wood": "decodable",
+              "is": "decodable",
+              "good": "decodable"
+            },
+            "token_units": {
+              "wood": [
+                "w",
+                "oo",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ]
             }
           },
           "teacher_cue": "One sentence. The is a sight word. good, cook, and book all come from today's lesson vocabulary.",
-          "expected_response": "Students read \"The good cook has the book.\" accurately.",
+          "expected_response": "Students read \"The wood is good.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for short /ʊ/ carried across good, cook, and book in one sentence.",
           "korean_interference_flag": "vowel_quality",
@@ -877,22 +964,30 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I look at the good cook by the wood.",
+            "text_content": "He took the book.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "I": "sight",
-              "look": "decodable",
-              "at": "decodable",
+              "He": "sight",
+              "took": "decodable",
               "the": "sight",
-              "good": "decodable",
-              "cook": "decodable",
-              "by": "decodable",
-              "wood": "decodable"
+              "book": "decodable"
+            },
+            "token_units": {
+              "took": [
+                "t",
+                "oo",
+                "k"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ]
             }
           },
           "teacher_cue": "I and the are sight words. The rest of the sentence recycles today's prepared words in one stable scene.",
-          "expected_response": "Students read \"I look at the good cook by the wood.\" accurately.",
+          "expected_response": "Students read \"He took the book.\" accurately.",
           "correction_move": "Model once, then return to one-to-one word tracking.",
           "observation_note": "Watch for fluency across repeated short oo words without losing tracking.",
           "korean_interference_flag": "vowel_quality",
@@ -916,31 +1011,276 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Look at the book.\nThe cook has a good book.\nThe cook stood by the wood.\nI look at the cook.\nThe good cook has the book.\nThe good cook stood by the wood.",
+            "text_content": "I look at the book.\nThe cook had the book.\nThe wood is good.\nHe took the book.\nLook at it.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Who has the book? Show me the sentence. Where did the cook stand? Find the short oo words in the reader.",
+            "comprehension_prompt": "Who had the book? What is good?",
             "word_types": {
-              "Look": "decodable",
+              "I": "sight",
+              "look": "decodable",
               "at": "decodable",
               "the": "sight",
               "book": "decodable",
               "The": "sight",
               "cook": "decodable",
-              "has": "decodable",
-              "a": "sight",
-              "good": "decodable",
-              "stood": "decodable",
-              "by": "decodable",
+              "had": "decodable",
               "wood": "decodable",
-              "I": "sight",
-              "look": "decodable"
+              "is": "decodable",
+              "good": "decodable",
+              "He": "sight",
+              "took": "decodable",
+              "Look": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ],
+              "cook": [
+                "c",
+                "oo",
+                "k"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "wood": [
+                "w",
+                "oo",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ],
+              "took": [
+                "t",
+                "oo",
+                "k"
+              ],
+              "Look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Keep the scene stable: one cook, one book, one place by the wood. Ask the comprehension prompt after reading.",
-          "expected_response": "Students read the full mini-reader accurately, identify who has the book, and point to the sentence that shows where the cook stood.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
           "observation_note": "Watch for fluent tracking and stable short oo production across book, cook, good, stood, and wood.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I look at the book.\nThe cook had the book.\nThe wood is good.\nHe took the book.\nLook at it.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "I": "sight",
+              "look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "book": "decodable",
+              "The": "sight",
+              "cook": "decodable",
+              "had": "decodable",
+              "wood": "decodable",
+              "is": "decodable",
+              "good": "decodable",
+              "He": "sight",
+              "took": "decodable",
+              "Look": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ],
+              "cook": [
+                "c",
+                "oo",
+                "k"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "wood": [
+                "w",
+                "oo",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ],
+              "took": [
+                "t",
+                "oo",
+                "k"
+              ],
+              "Look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread oo (short /ʊ/) Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I look at the book.\nThe cook had the book.\nThe wood is good.\nHe took the book.\nLook at it.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the oo (short /ʊ/) text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "I": "sight",
+              "look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "book": "decodable",
+              "The": "sight",
+              "cook": "decodable",
+              "had": "decodable",
+              "wood": "decodable",
+              "is": "decodable",
+              "good": "decodable",
+              "He": "sight",
+              "took": "decodable",
+              "Look": "decodable",
+              "it": "decodable"
+            },
+            "token_units": {
+              "look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ],
+              "cook": [
+                "c",
+                "oo",
+                "k"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "wood": [
+                "w",
+                "oo",
+                "d"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ],
+              "took": [
+                "t",
+                "oo",
+                "k"
+              ],
+              "Look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "it": [
+                "i",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Read the oo (short /ʊ/) text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1121,7 +1461,8 @@
               "took"
             ],
             "highlighted_chunk": "ook",
-            "support_text": "What do these words share? What sound does oo make here?"
+            "support_text": "What do these words share? What sound does oo make here?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What do these words share? What sound does oo make here?",
           "expected_response": "Students identify the shared chunk and name the sound it makes.",
@@ -1130,6 +1471,100 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I look at the book.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "I": "sight",
+              "look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "book": "decodable"
+            },
+            "token_units": {
+              "look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use oo (short /ʊ/) In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I look at the book.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using oo (short /ʊ/), then say a second sentence with one change.",
+            "word_types": {
+              "I": "sight",
+              "look": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "book": "decodable"
+            },
+            "token_units": {
+              "look": [
+                "l",
+                "oo",
+                "k"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "book": [
+                "b",
+                "oo",
+                "k"
+              ]
+            }
+          },
+          "teacher_cue": "Use oo (short /ʊ/) in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1169,6 +1604,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final oo (short /ʊ/) Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's oo (short /ʊ/) focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's oo (short /ʊ/) focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

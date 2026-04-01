@@ -3,6 +3,10 @@
   "unit_id": "G3",
   "target_pattern": "y",
   "title": "Group 3, Lesson 20: y (consonant)",
+  "new_units": [
+    "y"
+  ],
+  "new_sight_words": [],
   "sight_words": [
     "I",
     "the",
@@ -290,6 +294,29 @@
           "expected_response": "Students produce consonant /j/ cleanly and understand that y is a consonant here, not a vowel.",
           "correction_move": "Model y-es, y-et, y-ell. Students copy. Explain that y here is a consonant — it makes a sound before the vowel, just like s or t.",
           "observation_note": "Watch for students treating y as a vowel and trying to blend it as a vowel sound. Redirect — consonant y slides quickly into the following vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say y (consonant) In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y",
+            "back_text": "/j/ (consonant)",
+            "audio": "/static/audio/y_consonant.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect y (consonant) to one strong word from today.",
+          "expected_response": "Students say y (consonant) clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -815,6 +842,23 @@
               "I": "sight",
               "can": "decodable",
               "run": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "run": [
+                "r",
+                "u",
+                "n"
+              ]
             }
           },
           "teacher_cue": "I is a sight word. Yes, can, run all decodable.",
@@ -836,21 +880,35 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Yes! I can run and he can yell.",
+            "text_content": "Yes! He can yap.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "Yes": "decodable",
-              "I": "sight",
+              "He": "sight",
               "can": "decodable",
-              "run": "decodable",
-              "and": "decodable",
-              "he": "sight",
-              "yell": "decodable"
+              "yap": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "yap": [
+                "y",
+                "a",
+                "p"
+              ]
             }
           },
           "teacher_cue": "I and he are sight words. All other words decodable.",
-          "expected_response": "Students read \"Yes! I can run and he can yell.\" accurately.",
+          "expected_response": "Students read \"Yes! He can yap.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /j/ in yes and yell — two /j/ words in one sentence.",
           "korean_interference_flag": "r_l",
@@ -868,20 +926,58 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The dog yelps. I yell yes.",
+            "text_content": "The dog can yap. The yam is in the pot.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
               "The": "sight",
               "dog": "decodable",
-              "yelps": "decodable",
-              "I": "sight",
-              "yell": "decodable",
-              "yes": "decodable"
+              "can": "decodable",
+              "yap": "decodable",
+              "yam": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "pot": "decodable"
+            },
+            "token_units": {
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "yap": [
+                "y",
+                "a",
+                "p"
+              ],
+              "yam": [
+                "y",
+                "a",
+                "m"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "pot": [
+                "p",
+                "o",
+                "t"
+              ]
             }
           },
           "teacher_cue": "Two sentences. The and I are sight words. All other words decodable.",
-          "expected_response": "Students read \"The dog yelps. I yell yes.\" accurately.",
+          "expected_response": "Students read \"The dog can yap. The yam is in the pot.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /j/ in yelps and yell — and for the plural s in yelps.",
           "korean_interference_flag": "r_l",
@@ -899,28 +995,30 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He yells yet the dog did not stop. I am glad it is not bad.",
+            "text_content": "I can go. Yes!",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "He": "sight",
-              "yells": "decodable",
-              "yet": "decodable",
-              "the": "sight",
-              "dog": "decodable",
-              "did": "decodable",
-              "not": "decodable",
-              "stop": "decodable",
               "I": "sight",
-              "am": "decodable",
-              "glad": "decodable",
-              "it": "decodable",
-              "is": "decodable",
-              "bad": "decodable"
+              "can": "decodable",
+              "go": "sight",
+              "Yes": "decodable"
+            },
+            "token_units": {
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ]
             }
           },
           "teacher_cue": "Two sentences. He and I are sight words. All other words decodable.",
-          "expected_response": "Students read \"He yells yet the dog did not stop. I am glad it is not bad.\" accurately.",
+          "expected_response": "Students read \"I can go. Yes!\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /j/ in yells and yet — both in the same sentence.",
           "korean_interference_flag": "vowel_quality",
@@ -944,57 +1042,339 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "Yes! I can run.\nHe can yell.\nThe dog yelps.\nI yell yes.\nHe yells yet the dog did not stop.\nI am glad.\nThe yam is in the pot.\nHe yaps and yells and runs.\nThe vet has a big van and a vast kit.\nYes. I got the job and I am glad.\nThe frog fled into the fog and the dog ran into the mud.",
+            "text_content": "Yes! I can run.\nYes! He can yap.\nThe dog can yap.\nThe yam is in the pot.\nI can go.\nYes! The vet has a van.\nI got the job.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Find a sentence with yes. Find a sentence with yet. What is different about these two words?",
+            "comprehension_prompt": "What can the dog do? Where is the yam?",
             "word_types": {
               "Yes": "decodable",
               "I": "sight",
               "can": "decodable",
               "run": "decodable",
               "He": "sight",
-              "yell": "decodable",
+              "yap": "decodable",
               "The": "sight",
               "dog": "decodable",
-              "yelps": "decodable",
-              "yes": "decodable",
-              "yells": "decodable",
-              "yet": "decodable",
-              "the": "sight",
-              "did": "decodable",
-              "not": "decodable",
-              "stop": "decodable",
-              "am": "decodable",
-              "glad": "decodable",
               "yam": "decodable",
               "is": "decodable",
               "in": "decodable",
+              "the": "sight",
               "pot": "decodable",
-              "yaps": "decodable",
-              "and": "decodable",
-              "runs": "decodable",
+              "go": "sight",
               "vet": "decodable",
               "has": "decodable",
               "a": "sight",
-              "big": "decodable",
               "van": "decodable",
-              "vast": "decodable",
-              "kit": "decodable",
               "got": "decodable",
-              "job": "decodable",
-              "frog": "decodable",
-              "fled": "decodable",
-              "into": "decodable",
-              "fog": "decodable",
-              "ran": "decodable",
-              "mud": "decodable"
+              "job": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "run": [
+                "r",
+                "u",
+                "n"
+              ],
+              "yap": [
+                "y",
+                "a",
+                "p"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "yam": [
+                "y",
+                "a",
+                "m"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "pot": [
+                "p",
+                "o",
+                "t"
+              ],
+              "vet": [
+                "v",
+                "e",
+                "t"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Yes! I can run.\nYes! He can yap.\nThe dog can yap.\nThe yam is in the pot.\nI can go.\nYes! The vet has a van.\nI got the job.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "Yes": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "run": "decodable",
+              "He": "sight",
+              "yap": "decodable",
+              "The": "sight",
+              "dog": "decodable",
+              "yam": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "pot": "decodable",
+              "go": "sight",
+              "vet": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "van": "decodable",
+              "got": "decodable",
+              "job": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "run": [
+                "r",
+                "u",
+                "n"
+              ],
+              "yap": [
+                "y",
+                "a",
+                "p"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "yam": [
+                "y",
+                "a",
+                "m"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "pot": [
+                "p",
+                "o",
+                "t"
+              ],
+              "vet": [
+                "v",
+                "e",
+                "t"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread y (consonant) Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Yes! I can run.\nYes! He can yap.\nThe dog can yap.\nThe yam is in the pot.\nI can go.\nYes! The vet has a van.\nI got the job.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the y (consonant) text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "Yes": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "run": "decodable",
+              "He": "sight",
+              "yap": "decodable",
+              "The": "sight",
+              "dog": "decodable",
+              "yam": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "pot": "decodable",
+              "go": "sight",
+              "vet": "decodable",
+              "has": "decodable",
+              "a": "sight",
+              "van": "decodable",
+              "got": "decodable",
+              "job": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "run": [
+                "r",
+                "u",
+                "n"
+              ],
+              "yap": [
+                "y",
+                "a",
+                "p"
+              ],
+              "dog": [
+                "d",
+                "o",
+                "g"
+              ],
+              "yam": [
+                "y",
+                "a",
+                "m"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "pot": [
+                "p",
+                "o",
+                "t"
+              ],
+              "vet": [
+                "v",
+                "e",
+                "t"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "van": [
+                "v",
+                "a",
+                "n"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ]
+            }
+          },
+          "teacher_cue": "Read the y (consonant) text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1096,6 +1476,36 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write y (consonant) And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_yet.mp3",
+            "dictated_text": "yet",
+            "expected_answer": "yet",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "y",
+              "e",
+              "t"
+            ],
+            "prompt_text": "Write the y (consonant) target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the y (consonant) target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1117,7 +1527,8 @@
               "yet"
             ],
             "highlighted_chunk": "y",
-            "support_text": "What starts all these words? What sound does y make here?"
+            "support_text": "What starts all these words? What sound does y make here?",
+            "token_units": {}
           },
           "teacher_cue": "Show the words. Ask: What starts all these words? What sound does y make here?",
           "expected_response": "Students identify the shared pattern and name what changes.",
@@ -1126,6 +1537,100 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Yes! I can run.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "Yes": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "run": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "run": [
+                "r",
+                "u",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use y (consonant) In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Yes! I can run.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using y (consonant), then say a second sentence with one change.",
+            "word_types": {
+              "Yes": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "run": "decodable"
+            },
+            "token_units": {
+              "Yes": [
+                "y",
+                "e",
+                "s"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "run": [
+                "r",
+                "u",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Use y (consonant) in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1165,6 +1670,61 @@
           "korean_interference_flag": "r_l",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final y (consonant) Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's y (consonant) focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's y (consonant) focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

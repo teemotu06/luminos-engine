@@ -3,6 +3,15 @@
   "unit_id": "G3",
   "target_pattern": "j",
   "title": "Group 3, Lesson 18: j",
+  "new_units": [
+    "j"
+  ],
+  "new_sight_words": [
+    "to",
+    "go",
+    "no",
+    "do"
+  ],
   "sight_words": [
     "I",
     "the",
@@ -288,6 +297,29 @@
           "expected_response": "Students produce /dʒ/ cleanly as a voiced postalveolar affricate.",
           "correction_move": "Model the two parts: /d/ position, then release into friction. Students copy. Contrast with /g/ — both voiced stops but /j/ has the friction release.",
           "observation_note": "Watch for any confusion with /g/ or devoicing to /tʃ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say j In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "j",
+            "back_text": "/dʒ/",
+            "audio": "/static/audio/j.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect j to one strong word from today.",
+          "expected_response": "Students say j clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -806,6 +838,23 @@
               "in": "decodable",
               "the": "sight",
               "sun": "decodable"
+            },
+            "token_units": {
+              "jogs": [
+                "j",
+                "o",
+                "g",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sun": [
+                "s",
+                "u",
+                "n"
+              ]
             }
           },
           "teacher_cue": "He and the are sight words. jogs, in, sun all decodable.",
@@ -827,24 +876,30 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He jogs in the sun and I jog with him.",
+            "text_content": "I jog with him.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "He": "sight",
-              "jogs": "decodable",
-              "in": "decodable",
-              "the": "sight",
-              "sun": "decodable",
-              "and": "decodable",
               "I": "sight",
               "jog": "decodable",
               "with": "sight",
               "him": "decodable"
+            },
+            "token_units": {
+              "jog": [
+                "j",
+                "o",
+                "g"
+              ],
+              "him": [
+                "h",
+                "i",
+                "m"
+              ]
             }
           },
           "teacher_cue": "He, I, with are sight words. All other words decodable.",
-          "expected_response": "Students read \"He jogs in the sun and I jog with him.\" accurately.",
+          "expected_response": "Students read \"I jog with him.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /dʒ/ in jogs and jog — consistent production.",
           "korean_interference_flag": "vowel_quality",
@@ -862,7 +917,7 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The jet is big. It just got in.",
+            "text_content": "The jet is big. It got in.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
@@ -871,13 +926,41 @@
               "is": "decodable",
               "big": "decodable",
               "It": "decodable",
-              "just": "decodable",
               "got": "decodable",
               "in": "decodable"
+            },
+            "token_units": {
+              "jet": [
+                "j",
+                "e",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "in": [
+                "i",
+                "n"
+              ]
             }
           },
           "teacher_cue": "Two sentences. The is a sight word. All other words decodable.",
-          "expected_response": "Students read \"The jet is big. It just got in.\" accurately.",
+          "expected_response": "Students read \"The jet is big. It got in.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /dʒ/ in jet and just.",
           "korean_interference_flag": "vowel_quality",
@@ -895,7 +978,7 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I got the job. I am just glad.",
+            "text_content": "I got the job. I got jam.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
@@ -903,13 +986,28 @@
               "got": "decodable",
               "the": "sight",
               "job": "decodable",
-              "am": "decodable",
-              "just": "decodable",
-              "glad": "decodable"
+              "jam": "decodable"
+            },
+            "token_units": {
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ],
+              "jam": [
+                "j",
+                "a",
+                "m"
+              ]
             }
           },
           "teacher_cue": "Two sentences. I and the are sight words. All other words decodable.",
-          "expected_response": "Students read \"I got the job. I am just glad.\" accurately.",
+          "expected_response": "Students read \"I got the job. I got jam.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch for /dʒ/ in job and just — and note the motivational tone.",
           "korean_interference_flag": "vowel_quality",
@@ -933,10 +1031,10 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "He jogs in the sun.\nI jog with him.\nThe jet is big.\nIt just got in.\nI got the job.\nI am just glad.\nHe jabs and jogs and runs.\nI had jam on the rug. It is a bad mess.\nThe jet set off into the fog.\nHe just did not stop.",
+            "text_content": "He jogs in the sun.\nI jog with him.\nThe jet is big.\nIt got in.\nI got the job.\nI got jam.\nHe jabs and jogs.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "What job did I get? Why was there jam on the rug? Where did the jet go?",
+            "comprehension_prompt": "What did I get? Who jogs?",
             "word_types": {
               "He": "sight",
               "jogs": "decodable",
@@ -952,34 +1050,320 @@
               "is": "decodable",
               "big": "decodable",
               "It": "decodable",
-              "just": "decodable",
               "got": "decodable",
               "job": "decodable",
-              "am": "decodable",
-              "glad": "decodable",
-              "jabs": "decodable",
-              "and": "decodable",
-              "runs": "decodable",
-              "had": "decodable",
               "jam": "decodable",
-              "on": "decodable",
-              "rug": "decodable",
-              "a": "sight",
-              "bad": "decodable",
-              "mess": "decodable",
-              "set": "decodable",
-              "off": "decodable",
-              "into": "decodable",
-              "fog": "decodable",
-              "did": "decodable",
-              "not": "decodable",
-              "stop": "decodable"
+              "jabs": "decodable",
+              "and": "decodable"
+            },
+            "token_units": {
+              "jogs": [
+                "j",
+                "o",
+                "g",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sun": [
+                "s",
+                "u",
+                "n"
+              ],
+              "jog": [
+                "j",
+                "o",
+                "g"
+              ],
+              "him": [
+                "h",
+                "i",
+                "m"
+              ],
+              "jet": [
+                "j",
+                "e",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ],
+              "jam": [
+                "j",
+                "a",
+                "m"
+              ],
+              "jabs": [
+                "j",
+                "a",
+                "b",
+                "s"
+              ],
+              "and": [
+                "a",
+                "n",
+                "d"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He jogs in the sun.\nI jog with him.\nThe jet is big.\nIt got in.\nI got the job.\nI got jam.\nHe jabs and jogs.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "He": "sight",
+              "jogs": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "sun": "decodable",
+              "I": "sight",
+              "jog": "decodable",
+              "with": "sight",
+              "him": "decodable",
+              "The": "sight",
+              "jet": "decodable",
+              "is": "decodable",
+              "big": "decodable",
+              "It": "decodable",
+              "got": "decodable",
+              "job": "decodable",
+              "jam": "decodable",
+              "jabs": "decodable",
+              "and": "decodable"
+            },
+            "token_units": {
+              "jogs": [
+                "j",
+                "o",
+                "g",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sun": [
+                "s",
+                "u",
+                "n"
+              ],
+              "jog": [
+                "j",
+                "o",
+                "g"
+              ],
+              "him": [
+                "h",
+                "i",
+                "m"
+              ],
+              "jet": [
+                "j",
+                "e",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ],
+              "jam": [
+                "j",
+                "a",
+                "m"
+              ],
+              "jabs": [
+                "j",
+                "a",
+                "b",
+                "s"
+              ],
+              "and": [
+                "a",
+                "n",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread j Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He jogs in the sun.\nI jog with him.\nThe jet is big.\nIt got in.\nI got the job.\nI got jam.\nHe jabs and jogs.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the j text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "He": "sight",
+              "jogs": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "sun": "decodable",
+              "I": "sight",
+              "jog": "decodable",
+              "with": "sight",
+              "him": "decodable",
+              "The": "sight",
+              "jet": "decodable",
+              "is": "decodable",
+              "big": "decodable",
+              "It": "decodable",
+              "got": "decodable",
+              "job": "decodable",
+              "jam": "decodable",
+              "jabs": "decodable",
+              "and": "decodable"
+            },
+            "token_units": {
+              "jogs": [
+                "j",
+                "o",
+                "g",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sun": [
+                "s",
+                "u",
+                "n"
+              ],
+              "jog": [
+                "j",
+                "o",
+                "g"
+              ],
+              "him": [
+                "h",
+                "i",
+                "m"
+              ],
+              "jet": [
+                "j",
+                "e",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "big": [
+                "b",
+                "i",
+                "g"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "got": [
+                "g",
+                "o",
+                "t"
+              ],
+              "job": [
+                "j",
+                "o",
+                "b"
+              ],
+              "jam": [
+                "j",
+                "a",
+                "m"
+              ],
+              "jabs": [
+                "j",
+                "a",
+                "b",
+                "s"
+              ],
+              "and": [
+                "a",
+                "n",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Read the j text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "r_l",
           "markable": true,
           "marking_options": [
@@ -1081,6 +1465,36 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write j And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_jam.mp3",
+            "dictated_text": "jam",
+            "expected_answer": "jam",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "j",
+              "a",
+              "m"
+            ],
+            "prompt_text": "Write the j target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the j target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -1111,6 +1525,102 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He jogs in the sun.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "He": "sight",
+              "jogs": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "sun": "decodable"
+            },
+            "token_units": {
+              "jogs": [
+                "j",
+                "o",
+                "g",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sun": [
+                "s",
+                "u",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use j In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He jogs in the sun.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using j, then say a second sentence with one change.",
+            "word_types": {
+              "He": "sight",
+              "jogs": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "sun": "decodable"
+            },
+            "token_units": {
+              "jogs": [
+                "j",
+                "o",
+                "g",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "sun": [
+                "s",
+                "u",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Use j in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1150,6 +1660,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final j Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's j focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's j focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

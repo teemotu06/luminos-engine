@@ -3,6 +3,11 @@
   "unit_id": "G2",
   "target_pattern": "c_k",
   "title": "Group 2, Lesson 5: c and k",
+  "new_units": [
+    "c",
+    "k"
+  ],
+  "new_sight_words": [],
   "korean_interference_active": [
     "vowel_quality"
   ],
@@ -256,6 +261,29 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say c and k In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "c / k",
+            "back_text": "/k/",
+            "audio": "/static/audio/k.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect c and k to one strong word from today.",
+          "expected_response": "Students say c and k clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -428,21 +456,16 @@
                 "audio": null
               },
               {
-                "grapheme": "c",
-                "phoneme": "/k/",
-                "audio": null
-              },
-              {
-                "grapheme": "k",
+                "grapheme": "ck",
                 "phoneme": "/k/",
                 "audio": null
               }
             ]
           },
-          "teacher_cue": "Draw a tick mark. Say tick orally, then reveal print and blend. Note the ck ending — two letters, one sound.",
+          "teacher_cue": "Draw a tick mark. Say tick orally, then reveal print and blend. ck is one unit — both letters, one sound /k/.",
           "expected_response": "Students say tick orally and connect meaning before print.",
           "correction_move": "Model tick orally again, then reveal and blend.",
-          "observation_note": "Watch whether students blend four letters cleanly and hold the short /ɪ/.",
+          "observation_note": "Watch whether students treat ck as a single unit and hold the short /ɪ/.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -469,21 +492,16 @@
                 "audio": null
               },
               {
-                "grapheme": "c",
-                "phoneme": "/k/",
-                "audio": null
-              },
-              {
-                "grapheme": "k",
+                "grapheme": "ck",
                 "phoneme": "/k/",
                 "audio": null
               }
             ]
           },
-          "teacher_cue": "Mime picking something up. Say pick orally, then reveal print and blend.",
+          "teacher_cue": "Mime picking something up. Say pick orally, then reveal print and blend. ck is one unit — same as tick.",
           "expected_response": "Students say pick orally and connect meaning before print.",
           "correction_move": "Model pick orally again, then reveal and blend.",
-          "observation_note": "Watch for confusion of pick and tick — same vowel and coda, different onset.",
+          "observation_note": "Watch for confusion of pick and tick — same vowel and coda unit ck, different onset.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -502,6 +520,24 @@
           "expected_response": "Students read sick accurately.",
           "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
           "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Review c and k With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sick",
+            "back_text": "/s/ /i/ /ck/"
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for c and k.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -595,26 +631,23 @@
             "target_letters": [
               "t",
               "i",
-              "c",
-              "k"
+              "ck"
             ],
             "slots": [
               "t",
               "i",
-              "c",
-              "k"
+              "ck"
             ],
             "draggable_letters": [
-              "k",
-              "c",
               "i",
+              "ck",
               "t"
             ]
           },
-          "teacher_cue": "Say the sounds and build tick left to right.",
-          "expected_response": "Students build tick correctly: t | i | c | k.",
+          "teacher_cue": "Say the sounds and build tick left to right. ck goes together in one slot.",
+          "expected_response": "Students build tick correctly: t | i | ck.",
           "correction_move": "Return to oral segmenting of tick, then rebuild one sound at a time.",
-          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "observation_note": "Watch whether students place ck as a single unit, not as separate c and k.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -634,26 +667,23 @@
             "target_letters": [
               "p",
               "i",
-              "c",
-              "k"
+              "ck"
             ],
             "slots": [
               "p",
               "i",
-              "c",
-              "k"
+              "ck"
             ],
             "draggable_letters": [
-              "k",
-              "c",
               "i",
+              "ck",
               "p"
             ]
           },
-          "teacher_cue": "Say the sounds and build pick left to right.",
-          "expected_response": "Students build pick correctly: p | i | c | k.",
+          "teacher_cue": "Say the sounds and build pick left to right. ck goes together in one slot — same as tick.",
+          "expected_response": "Students build pick correctly: p | i | ck.",
           "correction_move": "Return to oral segmenting of pick, then rebuild one sound at a time.",
-          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "observation_note": "Watch whether students place ck as a single unit in the coda position.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -666,33 +696,30 @@
         {
           "slide_id": "05-05",
           "block_id": "05",
-          "slide_title": "Build: scan",
+          "slide_title": "Build: kick",
           "view_type": "drag_letter",
           "content_payload": {
-            "target_word": "scan",
+            "target_word": "kick",
             "target_letters": [
-              "s",
-              "c",
-              "a",
-              "n"
+              "k",
+              "i",
+              "ck"
             ],
             "slots": [
-              "s",
-              "c",
-              "a",
-              "n"
+              "k",
+              "i",
+              "ck"
             ],
             "draggable_letters": [
-              "n",
-              "a",
-              "c",
-              "s"
+              "i",
+              "ck",
+              "k"
             ]
           },
-          "teacher_cue": "Say the sounds and build scan left to right.",
-          "expected_response": "Students build scan correctly: s | c | a | n.",
-          "correction_move": "Return to oral segmenting of scan, then rebuild one sound at a time.",
-          "observation_note": "Watch whether students place every sound correctly, especially the target phoneme.",
+          "teacher_cue": "Say the sounds and build kick left to right. k | i | ck — both ck letters go in the last slot.",
+          "expected_response": "Students build kick correctly: k | i | ck.",
+          "correction_move": "Return to oral segmenting of kick, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students treat ck as a single unit and notice the k onset matches the ck coda — different spellings, same sound.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -721,6 +748,18 @@
               "A": "sight",
               "cat": "decodable",
               "sat": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
             }
           },
           "teacher_cue": "A is a sight word. cat and sat are decodable. Blend through each one left to right.",
@@ -742,20 +781,36 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "A cat sat in a pan.",
+            "text_content": "I can pat a cat.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
-              "A": "sight",
-              "cat": "decodable",
-              "sat": "decodable",
-              "in": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "pat": "decodable",
               "a": "sight",
-              "pan": "decodable"
+              "cat": "decodable"
+            },
+            "token_units": {
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ]
             }
           },
           "teacher_cue": "A and a are sight words. All other words are decodable. Read the full sentence.",
-          "expected_response": "Students read \"A cat sat in a pan.\" accurately.",
+          "expected_response": "Students read \"I can pat a cat.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch whether students can hold a five-word sentence in working memory.",
           "korean_interference_flag": "vowel_quality",
@@ -773,7 +828,7 @@
           "slide_title": "Read the Sentence",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "The cat can sit. I can pick it.",
+            "text_content": "The cat can sit. A cat is in a cap.",
             "display_mode": "sentence",
             "show_font_controls": true,
             "word_types": {
@@ -781,15 +836,112 @@
               "cat": "decodable",
               "can": "decodable",
               "sit": "decodable",
-              "I": "sight",
-              "pick": "decodable",
-              "it": "decodable"
+              "A": "sight",
+              "is": "decodable",
+              "in": "decodable",
+              "a": "sight",
+              "cap": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "cap": [
+                "c",
+                "a",
+                "p"
+              ]
             }
           },
           "teacher_cue": "Two sentences. The and I are sight words. All other words decodable.",
-          "expected_response": "Students read \"The cat can sit. I can pick it.\" accurately.",
+          "expected_response": "Students read \"The cat can sit. A cat is in a cap.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
           "observation_note": "Watch whether students read both sentences in sequence and produce /k/ cleanly in can, pick.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read And Explain c and k",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cat can sit. A cat is in a cap.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "cat": "decodable",
+              "can": "decodable",
+              "sit": "decodable",
+              "A": "sight",
+              "is": "decodable",
+              "in": "decodable",
+              "a": "sight",
+              "cap": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "cap": [
+                "c",
+                "a",
+                "p"
+              ]
+            },
+            "comprehension_prompt": "What does this tell you about the lesson words? Say it back in your own words."
+          },
+          "teacher_cue": "Read it smoothly, then explain the c and k idea in your own words.",
+          "expected_response": "Students read accurately and explain the meaning of the c and k sentence.",
+          "correction_move": "Reread in a phrase, then prompt for a brief retell or answer.",
+          "observation_note": "Push comprehension right after decoding so the focus does not stay mechanical.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -811,31 +963,225 @@
           "slide_title": "Decodable Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "A cat sat.\nA cat sat in a pan.\nThe cat can sit.\nI can pick it.\nA sick cat sat.\nThe cat sat in a cap.",
+            "text_content": "A cat sat.\nI can pat a cat.\nThe cat can sit.\nA cat is in a cap.\nI can sit.\nThe cat sat in a cap.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Where did the cat sit? Is the cat sick? How do you know?",
+            "comprehension_prompt": "What can the cat do? Where is the cat?",
             "word_types": {
               "A": "sight",
               "cat": "decodable",
               "sat": "decodable",
-              "in": "decodable",
-              "a": "sight",
-              "pan": "decodable",
-              "The": "sight",
-              "can": "decodable",
-              "sit": "decodable",
               "I": "sight",
-              "pick": "decodable",
-              "it": "decodable",
-              "sick": "decodable",
+              "can": "decodable",
+              "pat": "decodable",
+              "a": "sight",
+              "The": "sight",
+              "sit": "decodable",
+              "is": "decodable",
+              "in": "decodable",
               "cap": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "cap": [
+                "c",
+                "a",
+                "p"
+              ]
             }
           },
           "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
           "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
           "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
           "observation_note": "Watch for tracking accuracy and any phoneme production errors throughout.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A cat sat.\nI can pat a cat.\nThe cat can sit.\nA cat is in a cap.\nI can sit.\nThe cat sat in a cap.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "pat": "decodable",
+              "a": "sight",
+              "The": "sight",
+              "sit": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "cap": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "cap": [
+                "c",
+                "a",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread c and k Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A cat sat.\nI can pat a cat.\nThe cat can sit.\nA cat is in a cap.\nI can sit.\nThe cat sat in a cap.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the c and k text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable",
+              "I": "sight",
+              "can": "decodable",
+              "pat": "decodable",
+              "a": "sight",
+              "The": "sight",
+              "sit": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "cap": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ],
+              "can": [
+                "c",
+                "a",
+                "n"
+              ],
+              "pat": [
+                "p",
+                "a",
+                "t"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "cap": [
+                "c",
+                "a",
+                "p"
+              ]
+            }
+          },
+          "teacher_cue": "Read the c and k text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
           "marking_options": [
@@ -937,6 +1283,36 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write c and k And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_tick.mp3",
+            "dictated_text": "tick",
+            "expected_answer": "tick",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "t",
+              "i",
+              "ck"
+            ],
+            "prompt_text": "Write the c and k target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the c and k target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },
@@ -965,6 +1341,88 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A cat sat.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use c and k In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A cat sat.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using c and k, then say a second sentence with one change.",
+            "word_types": {
+              "A": "sight",
+              "cat": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "cat": [
+                "c",
+                "a",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use c and k in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -1004,6 +1462,61 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final c and k Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's c and k focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's c and k focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

@@ -124,12 +124,6 @@
         :class="{ 'lesson-read-respond__text--highlighted': highlighted }">
         {{ slide.content_payload.text_content }}
       </div>
-
-      {% if slide.content_payload.comprehension_prompt %}
-      <div class="lesson-read-respond__reader-note">
-        {{ slide.content_payload.comprehension_prompt }}
-      </div>
-      {% endif %}
     </div>
 
     {% if slide.content_payload.image %}
