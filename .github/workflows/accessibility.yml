@@ -21,6 +21,8 @@ jobs:
           pip install -r requirements.txt
       - name: Build static assets
         run: python scripts/build_static.py --check
+      - name: Install matching Chrome and ChromeDriver
+        run: npx -y browser-driver-manager install chrome --link-path /usr/local/bin
       - name: Start app
         env:
           DATABASE_URL: sqlite:////tmp/luminos_engine_a11y.db
