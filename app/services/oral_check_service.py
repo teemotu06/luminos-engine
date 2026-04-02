@@ -1,6 +1,7 @@
 from typing import Iterable, Optional
 
 from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.models.lesson import LessonAttemptRecord, OralCheckAssignmentRecord, OralCheckSessionRecord, StudentMarkRecord
@@ -14,6 +15,7 @@ from app.schemas.oral_check import (
     OralCheckSessionStartRequest,
 )
 from app.services.marking_service import record_student_mark
+from app.services.status_service import normalize_mark_status
 
 
 TERMINAL_STATUSES = {"secure", "shaky", "missed", "deferred", "absent"}
@@ -139,6 +141,7 @@ def _select_roster_subset_with_strategy(
     audit_sample_size: int,
     audit_selection_strategy: str,
 ) -> list[str]:
+    """Choose the audit subset, preferring least-recently-marked learners when requested."""
     if participation_mode != "audit_roster":
         return roster
     if audit_sample_size <= 0:
@@ -236,13 +239,14 @@ def _upsert_final_student_mark(
             slide_id=session.slide_id,
             block_id=session.block_id,
             student_name=assignment.student_name,
-            status=assignment.status,
+            status=normalize_mark_status(assignment.status),
             teacher_note=assignment.teacher_note,
         ),
     )
 
 
 def start_oral_check_session(db: Session, request: OralCheckSessionStartRequest) -> OralCheckSessionResponse:
+    """Create or resume a single oral-check session for an attempt+slide pair."""
     attempt = db.get(LessonAttemptRecord, request.attempt_id)
     if attempt is None:
         raise ValueError(f"Unknown attempt_id {request.attempt_id}")
@@ -270,10 +274,7 @@ def start_oral_check_session(db: Session, request: OralCheckSessionStartRequest)
             db.delete(existing)
             db.commit()
         else:
-            _set_next_active_assignment(existing)
-            _refresh_session_counts(existing)
-            db.commit()
-            db.refresh(existing)
+            existing = _prepare_session_snapshot(existing)
             return _session_response(existing)
 
     selected_roster = _select_roster_subset_with_strategy(
@@ -322,15 +323,39 @@ def start_oral_check_session(db: Session, request: OralCheckSessionStartRequest)
         )
 
     db.flush()
+    try:
+        db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        existing = (
+            db.execute(
+                select(OralCheckSessionRecord).where(
+                    OralCheckSessionRecord.attempt_id == request.attempt_id,
+                    OralCheckSessionRecord.slide_id == request.slide_id,
+                )
+            )
+            .scalars()
+            .first()
+        )
+        if existing is None:
+            raise ValueError("Another teacher started the oral check at the same time; retry.") from exc
+        existing = _prepare_session_snapshot(existing)
+        return _session_response(existing)
+
     session = db.get(OralCheckSessionRecord, session.id)
-    _set_next_active_assignment(session)
-    _refresh_session_counts(session)
-    db.commit()
-    db.refresh(session)
+    session = _prepare_session_snapshot(session)
     return _session_response(session)
 
 
+def _prepare_session_snapshot(session: OralCheckSessionRecord) -> OralCheckSessionRecord:
+    """Refresh derived oral-check counters without committing state as a side effect of reads."""
+    _set_next_active_assignment(session)
+    _refresh_session_counts(session)
+    return session
+
+
 def get_oral_check_session(db: Session, attempt_id: str, slide_id: str) -> OralCheckSessionResponse:
+    """Return the current oral-check session state without mutating durable database state."""
     session = (
         db.execute(
             select(OralCheckSessionRecord).where(
@@ -344,14 +369,12 @@ def get_oral_check_session(db: Session, attempt_id: str, slide_id: str) -> OralC
     if session is None:
         raise ValueError("Oral check session not found")
 
-    _set_next_active_assignment(session)
-    _refresh_session_counts(session)
-    db.commit()
-    db.refresh(session)
+    session = _prepare_session_snapshot(session)
     return _session_response(session)
 
 
 def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequest) -> OralCheckAssignmentMarkResponse:
+    """Resolve a single oral-check assignment and advance the session queue."""
     session = db.get(OralCheckSessionRecord, request.session_id)
     if session is None:
         raise ValueError("Unknown oral check session")
@@ -364,7 +387,7 @@ def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequ
     if assignment.status not in {"active", "pending"}:
         raise ValueError("Assignment already resolved")
 
-    assignment.status = request.status
+    assignment.status = normalize_mark_status(request.status)
     assignment.teacher_note = request.teacher_note
     assignment.override_reason = request.override_reason
 
@@ -376,7 +399,7 @@ def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequ
     requires_reteach = False
     student_resolved = False
     if _should_run_short_reader_followup(session, assignment):
-        if request.status == "secure":
+        if assignment.status == "secure":
             _queue_assignment(
                 db,
                 session,
@@ -384,7 +407,7 @@ def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequ
                 performance_type="reread_fluency",
                 requires_reteach=False,
             )
-        elif request.status in {"shaky", "missed"}:
+        elif assignment.status in {"shaky", "missed"}:
             _queue_assignment(
                 db,
                 session,
@@ -396,7 +419,7 @@ def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequ
         else:
             _mark_student_resolved(db, session, assignment, student_assignments)
             student_resolved = True
-    elif request.status == "missed" and assignment.performance_type == "read_accuracy":
+    elif assignment.status == "missed" and assignment.performance_type == "read_accuracy":
         _queue_assignment(
             db,
             session,
@@ -418,7 +441,7 @@ def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequ
     return OralCheckAssignmentMarkResponse(
         assignment_id=str(assignment.id),
         student_name=assignment.student_name,
-        status=request.status,
+        status=assignment.status,
         requires_reteach=requires_reteach,
         student_resolved=student_resolved,
         next_assignment_id=str(next_assignment.id) if next_assignment else None,
@@ -430,6 +453,7 @@ def mark_oral_check_assignment(db: Session, request: OralCheckAssignmentMarkRequ
 
 
 def complete_oral_check_session(db: Session, request: OralCheckCompleteRequest) -> OralCheckSessionResponse:
+    """Mark the oral-check session complete once all required learners are resolved."""
     session = db.get(OralCheckSessionRecord, request.session_id)
     if session is None:
         raise ValueError("Unknown oral check session")

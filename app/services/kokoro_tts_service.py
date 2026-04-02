@@ -3,6 +3,7 @@ import importlib.util
 import logging
 import os
 import sys
+import threading
 import time
 import types
 from functools import lru_cache
@@ -24,6 +25,8 @@ LOCK_TIMEOUT_SECONDS = float(os.getenv("LUMINOS_TTS_LOCK_TIMEOUT_SECONDS", "20")
 LOCK_STALE_SECONDS = float(os.getenv("LUMINOS_TTS_LOCK_STALE_SECONDS", "120"))
 PREWARM_TEXT = os.getenv("LUMINOS_TTS_PREWARM_TEXT", "Luminos is ready.")
 CACHE_RETENTION_DAYS = int(os.getenv("LUMINOS_TTS_CACHE_RETENTION_DAYS", "30"))
+_MODEL_INIT_LOCK = threading.Lock()
+_MODEL_SINGLETON = None
 
 
 def _normalized_text(text: str) -> str:
@@ -101,27 +104,33 @@ def _get_kmodel_class():
     return sys.modules[f"{runtime_package_name}.model"].KModel
 
 
-@lru_cache(maxsize=1)
 def _get_model():
-    try:
-        KModel = _get_kmodel_class()
-    except ImportError as exc:
-        raise KokoroTtsError(
-            "Kokoro is not installed. Install the local Kokoro dependencies listed in KOKORO_TTS_SETUP.md."
-        ) from exc
-    except Exception as exc:
-        raise KokoroTtsError(f"Failed to load Kokoro model modules: {exc}") from exc
+    global _MODEL_SINGLETON
+    if _MODEL_SINGLETON is not None:
+        return _MODEL_SINGLETON
+    with _MODEL_INIT_LOCK:
+        if _MODEL_SINGLETON is not None:
+            return _MODEL_SINGLETON
+        try:
+            KModel = _get_kmodel_class()
+        except ImportError as exc:
+            raise KokoroTtsError(
+                "Kokoro is not installed. Install the local Kokoro dependencies listed in KOKORO_TTS_SETUP.md."
+            ) from exc
+        except Exception as exc:
+            raise KokoroTtsError(f"Failed to load Kokoro model modules: {exc}") from exc
 
-    try:
-        import torch
-    except ImportError as exc:
-        raise KokoroTtsError("torch is required for local Kokoro synthesis.") from exc
+        try:
+            import torch
+        except ImportError as exc:
+            raise KokoroTtsError("torch is required for local Kokoro synthesis.") from exc
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    try:
-        return KModel().to(device).eval()
-    except Exception as exc:
-        raise KokoroTtsError(f"Failed to initialize Kokoro model: {exc}") from exc
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        try:
+            _MODEL_SINGLETON = KModel().to(device).eval()
+            return _MODEL_SINGLETON
+        except Exception as exc:
+            raise KokoroTtsError(f"Failed to initialize Kokoro model: {exc}") from exc
 
 
 @lru_cache(maxsize=8)

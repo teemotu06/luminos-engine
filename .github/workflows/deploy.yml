@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.LUMINOS_DEPLOY_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "${{ secrets.LUMINOS_DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+      - name: Deploy remotely
+        env:
+          DEPLOY_USER: ${{ secrets.LUMINOS_DEPLOY_USER }}
+          DEPLOY_HOST: ${{ secrets.LUMINOS_DEPLOY_HOST }}
+          APP_DIR: ${{ secrets.LUMINOS_DEPLOY_APP_DIR }}
+          SERVICE_NAME: ${{ secrets.LUMINOS_DEPLOY_SERVICE }}
+        run: |
+          ssh "$DEPLOY_USER@$DEPLOY_HOST" "APP_DIR='$APP_DIR' SERVICE_NAME='$SERVICE_NAME' bash '$APP_DIR/scripts/deploy_app.sh'"

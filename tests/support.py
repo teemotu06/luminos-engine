@@ -9,9 +9,10 @@ from sqlalchemy.orm import sessionmaker
 
 # Force SQLite before app modules resolve DATABASE_URL and JSON column types.
 os.environ["DATABASE_URL"] = "sqlite:////tmp/luminos_engine_test_bootstrap.db"
+os.environ["LUMINOS_AUTH_REQUIRED"] = "false"
 
 from app.db import Base
-from app.models.lesson import LessonAttemptRecord, LessonRecord
+from app.models.lesson import ClassRecord, LessonAttemptRecord, LessonRecord, StudentRecord
 
 
 class SqliteTestSession:
@@ -69,3 +70,14 @@ def seed_attempt(db, lesson_id: str = "G1-L1", class_id: Optional[str] = None) -
     db.commit()
     db.refresh(attempt)
     return attempt
+
+
+def seed_class_with_students(db, class_id: str = "class-1", class_name: str = "Class 1", students: Optional[list[str]] = None):
+    students = students or ["Tom", "James", "Mina"]
+    class_record = ClassRecord(id=class_id, class_name=class_name)
+    db.add(class_record)
+    db.flush()
+    for student_name in students:
+        db.add(StudentRecord(class_id=class_id, student_name=student_name))
+    db.commit()
+    return class_record

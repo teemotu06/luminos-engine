@@ -92,7 +92,27 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Look at the letter. Listen.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "prompt": "Listen. /s/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "prompt": "Everyone. Say /s/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "03-02",
@@ -115,7 +135,27 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Look at the letter. Listen.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "prompt": "Listen. /a/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "prompt": "Everyone. Say /a/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "03-03",
@@ -138,7 +178,27 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Look at the letter. Listen.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "prompt": "Listen. /t/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "prompt": "Everyone. Say /t/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -183,7 +243,33 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look. New word.",
+                "teacher_prompt": "Introduce sat. Keep it oral first, then reveal print.",
+                "tts_prompt": "Look. New word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. sat.",
+                "teacher_prompt": "Model sat clearly once.",
+                "tts_prompt": "Listen. sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say sat.",
+                "teacher_prompt": "Choral response. Listen for clean word reading.",
+                "tts_prompt": "Everyone. Say sat.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "04-03",
@@ -219,7 +305,33 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look. New word.",
+                "teacher_prompt": "Introduce sat. Keep it oral first, then reveal print.",
+                "tts_prompt": "Look. New word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. sat.",
+                "teacher_prompt": "Model sat clearly once.",
+                "tts_prompt": "Listen. sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say sat.",
+                "teacher_prompt": "Choral response. Listen for clean word reading.",
+                "tts_prompt": "Everyone. Say sat.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "04-04",
@@ -250,7 +362,33 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look. New word.",
+                "teacher_prompt": "Introduce at in a short phrase before print.",
+                "tts_prompt": "Look. New word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. at.",
+                "teacher_prompt": "Model at clearly once.",
+                "tts_prompt": "Listen. at.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say at.",
+                "teacher_prompt": "Choral response. Listen for accurate word reading.",
+                "tts_prompt": "Everyone. Say at.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "04-05",
@@ -276,7 +414,33 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look at the picture.",
+                "teacher_prompt": "Set meaning first. One thing only.",
+                "tts_prompt": "Look at the picture.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. a jar.",
+                "teacher_prompt": "Model the phrase once.",
+                "tts_prompt": "Listen. a jar.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say a jar.",
+                "teacher_prompt": "Choral response. Confirm meaning and phrase reading.",
+                "tts_prompt": "Everyone. Say a jar.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "04-06",
@@ -344,7 +508,27 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Get ready to write.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "dictate",
+                "prompt": "Write sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "prompt": "Check every sound. Mark the class.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "05-02",
@@ -488,7 +672,33 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Eyes on the sentence.",
+                "teacher_prompt": "Set tracking and sentence focus.",
+                "tts_prompt": "Eyes on the sentence.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. I sat.",
+                "teacher_prompt": "Model the sentence once with tracking.",
+                "tts_prompt": "Listen. I sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Choral read. Confirm tracking and accuracy.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "06-02",
@@ -527,7 +737,33 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Read first. Then explain.",
+                "teacher_prompt": "Keep meaning tied to the sentence.",
+                "tts_prompt": "Read first. Then explain.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Choral read before explanation.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What does the sentence mean?",
+                "teacher_prompt": "Take one or two oral explanations, then mark the class.",
+                "tts_prompt": "What does the sentence mean?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -737,7 +973,26 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look at both words.",
+                "teacher_prompt": "Direct attention to both printed words.",
+                "tts_prompt": "Look at both words.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What part is the same?",
+                "teacher_prompt": "Elicit the shared ending and then advance.",
+                "tts_prompt": "What part is the same?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "09-02",
@@ -789,7 +1044,26 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Think about the meaning.",
+                "teacher_prompt": "Shift from pattern noticing to meaning.",
+                "tts_prompt": "Think about the meaning.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What does at mean? How is sat different?",
+                "teacher_prompt": "Take one or two oral answers, then mark the class.",
+                "tts_prompt": "What does at mean? How is sat different?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },

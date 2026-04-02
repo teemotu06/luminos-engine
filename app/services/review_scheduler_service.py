@@ -1,5 +1,6 @@
 import logging
-from collections import Counter
+from collections import Counter, defaultdict
+from functools import lru_cache
 from typing import Dict, List, Optional
 
 from sqlalchemy import select
@@ -24,6 +25,7 @@ def lesson_number(lesson_id: str) -> Optional[int]:
         return None
 
 
+@lru_cache(maxsize=256)
 def pattern_key_for_lesson(lesson_id: str) -> Optional[str]:
     try:
         lesson = load_lesson(lesson_id)
@@ -250,47 +252,23 @@ def next_lesson_id(current_lesson_id: str) -> Optional[str]:
     return lesson_ids[index + 1]
 
 
-def get_class_review_recommendations(
-    db: Session,
-    class_id: str,
+def _recommendations_from_records(
+    records: List[ClassPatternReviewRecord],
     upcoming_lesson_id: str,
     *,
-    preloaded_records: Optional[List[ClassPatternReviewRecord]] = None,
-    skip_individual_flags: bool = False,
+    previous_id: Optional[str],
+    previous_pattern: Optional[str],
 ) -> dict:
-    """Compute review recommendations for a class before an upcoming lesson.
-
-    Pass preloaded_records to avoid a per-call DB query (used by lesson_index
-    which pre-fetches all records for a class in one query).
-    Pass skip_individual_flags=True when individual student flags are not needed
-    (e.g. the lesson library card view).
-    """
     current_lesson_number = lesson_number(upcoming_lesson_id)
-    previous_id = previous_lesson_id(upcoming_lesson_id)
-
-    if preloaded_records is not None:
-        records = preloaded_records
-    else:
-        records = (
-            db.execute(
-                select(ClassPatternReviewRecord)
-                .where(ClassPatternReviewRecord.class_id == class_id)
-                .order_by(ClassPatternReviewRecord.priority_score.desc(), ClassPatternReviewRecord.updated_at.desc())
-            )
-            .scalars()
-            .all()
-        )
 
     recent_target = None
-    if previous_id:
-        previous_pattern = pattern_key_for_lesson(previous_id)
-        if previous_pattern:
-            recent_target = {
-                "pattern_key": previous_pattern,
-                "source_lesson_id": previous_id,
-                "reason": "Recent review",
-                "recommended_touch_count": 2,
-            }
+    if previous_id and previous_pattern:
+        recent_target = {
+            "pattern_key": previous_pattern,
+            "source_lesson_id": previous_id,
+            "reason": "Recent review",
+            "recommended_touch_count": 2,
+        }
 
     due_targets = []
     class_risk_targets = []
@@ -311,7 +289,6 @@ def get_class_review_recommendations(
                 }
             )
             seen_patterns.add(record.pattern_key)
-            # Already categorised as due — skip the class-risk check for this pattern.
             continue
 
         marked = record.marked_learner_count
@@ -332,8 +309,100 @@ def get_class_review_recommendations(
             )
             seen_patterns.add(record.pattern_key)
 
-    due_targets = due_targets[:2]
-    class_risk_targets = class_risk_targets[:1]
+    return {
+        "upcoming_lesson_id": upcoming_lesson_id,
+        "recent_review_target": recent_target,
+        "due_review_targets": due_targets[:2],
+        "class_risk_targets": class_risk_targets[:1],
+        "individual_follow_up_flags": [],
+    }
+
+
+def build_lesson_index_review_map(db: Session, class_ids: List[str], lesson_ids: List[str]) -> dict:
+    """Build the full lesson-library review map from one bulk review-record query."""
+    if not class_ids or not lesson_ids:
+        return {}
+
+    records = (
+        db.execute(
+            select(ClassPatternReviewRecord)
+            .where(ClassPatternReviewRecord.class_id.in_(class_ids))
+            .order_by(
+                ClassPatternReviewRecord.class_id,
+                ClassPatternReviewRecord.priority_score.desc(),
+                ClassPatternReviewRecord.updated_at.desc(),
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    records_by_class: dict[str, List[ClassPatternReviewRecord]] = defaultdict(list)
+    for record in records:
+        records_by_class[str(record.class_id)].append(record)
+
+    previous_ids = {lesson_id: previous_lesson_id(lesson_id) for lesson_id in lesson_ids}
+    previous_patterns = {
+        lesson_id: pattern_key_for_lesson(previous_id) if previous_id else None
+        for lesson_id, previous_id in previous_ids.items()
+    }
+    review_map = {
+        class_id: {
+            lesson_id: _recommendations_from_records(
+                records_by_class.get(class_id, []),
+                lesson_id,
+                previous_id=previous_ids[lesson_id],
+                previous_pattern=previous_patterns[lesson_id],
+            )
+            for lesson_id in lesson_ids
+        }
+        for class_id in class_ids
+    }
+    logger.info(
+        "review_scheduler.lesson_index_map classes=%s lessons=%s records=%s",
+        len(class_ids),
+        len(lesson_ids),
+        len(records),
+    )
+    return review_map
+
+
+def get_class_review_recommendations(
+    db: Session,
+    class_id: str,
+    upcoming_lesson_id: str,
+    *,
+    preloaded_records: Optional[List[ClassPatternReviewRecord]] = None,
+    skip_individual_flags: bool = False,
+) -> dict:
+    """Compute review recommendations for a class before an upcoming lesson.
+
+    Pass preloaded_records to avoid a per-call DB query (used by lesson_index
+    which pre-fetches all records for a class in one query).
+    Pass skip_individual_flags=True when individual student flags are not needed
+    (e.g. the lesson library card view).
+    """
+    previous_id = previous_lesson_id(upcoming_lesson_id)
+
+    if preloaded_records is not None:
+        records = preloaded_records
+    else:
+        records = (
+            db.execute(
+                select(ClassPatternReviewRecord)
+                .where(ClassPatternReviewRecord.class_id == class_id)
+                .order_by(ClassPatternReviewRecord.priority_score.desc(), ClassPatternReviewRecord.updated_at.desc())
+            )
+            .scalars()
+            .all()
+        )
+
+    recommendations = _recommendations_from_records(
+        records,
+        upcoming_lesson_id,
+        previous_id=previous_id,
+        previous_pattern=pattern_key_for_lesson(previous_id) if previous_id else None,
+    )
 
     individual_follow_up_flags: List[dict] = []
 
@@ -374,13 +443,8 @@ def get_class_review_recommendations(
                         }
                     )
 
-    return {
-        "upcoming_lesson_id": upcoming_lesson_id,
-        "recent_review_target": recent_target,
-        "due_review_targets": due_targets,
-        "class_risk_targets": class_risk_targets,
-        "individual_follow_up_flags": individual_follow_up_flags[:5],
-    }
+    recommendations["individual_follow_up_flags"] = individual_follow_up_flags[:5]
+    return recommendations
 
 
 def build_dynamic_review_slides(review_recommendations: Optional[dict]) -> List[dict]:

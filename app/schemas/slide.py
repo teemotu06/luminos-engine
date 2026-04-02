@@ -3,6 +3,7 @@ from typing import Optional, Literal, List
 from pydantic import BaseModel, Field
 
 from app.schemas.block_id import BlockId
+from app.schemas.command_state import LuminosRuntimeConfig
 from app.schemas.slide_payloads import SlidePayload
 from app.schemas.view_type import ViewType
 
@@ -35,3 +36,4 @@ class Slide(BaseModel):
     markable: bool
     marking_options: List[str] = Field(default_factory=list)
     next_action: NextAction
+    luminos_runtime: Optional[LuminosRuntimeConfig] = None

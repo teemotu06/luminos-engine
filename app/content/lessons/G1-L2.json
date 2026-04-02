@@ -108,7 +108,33 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look at the letter.",
+                "teacher_prompt": "Set attention on the new letter i.",
+                "tts_prompt": "Look at the letter.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. /i/.",
+                "teacher_prompt": "Model the short i sound once. Keep it short, not tense.",
+                "tts_prompt": "Listen. /i/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say /i/.",
+                "teacher_prompt": "Take a choral response and listen for short vowel quality.",
+                "tts_prompt": "Everyone. Say /i/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "02-02",
@@ -164,7 +190,33 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Keep the new sound ready.",
+                "teacher_prompt": "Shift from isolation to word connection.",
+                "tts_prompt": "Keep the new sound ready.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. /i/ in a word.",
+                "teacher_prompt": "Model the focus sound and connect it to a lesson word.",
+                "tts_prompt": "Listen. /i/ in a word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say the sound and the word.",
+                "teacher_prompt": "Take a choral response and confirm the sound carries into a real word.",
+                "tts_prompt": "Everyone. Say the sound and the word.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -193,7 +245,34 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Eyes on the sentence.",
+                "teacher_prompt": "Set one-to-one tracking before the class reads.",
+                "tts_prompt": "Eyes on the sentence.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "partner_practice",
+                "board_prompt": "Read with your partner.",
+                "teacher_prompt": "Give a short partner read before the whole-class response.",
+                "tts_prompt": "Read with your partner.",
+                "timeout_ms": 12000,
+                "teacher_controls": ["pause", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Take the class read and listen for the short i in sit.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "03-02",
@@ -495,7 +574,41 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Get ready to write.",
+                "teacher_prompt": "Prepare students to encode sit.",
+                "tts_prompt": "Get ready to write.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "dictate",
+                "board_prompt": "Write sit.",
+                "teacher_prompt": "Dictate sit once, then hold the room silent.",
+                "tts_prompt": "Write sit.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "write",
+                "board_prompt": "Write now.",
+                "teacher_prompt": "Short silent writing window.",
+                "tts_prompt": "Write now.",
+                "timeout_ms": 15000,
+                "teacher_controls": ["pause", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "Check every sound.",
+                "teacher_prompt": "Confirm sit and mark the class.",
+                "tts_prompt": "Check every sound.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "05-02",
@@ -528,7 +641,34 @@
             "shaky",
             "missed"
           ],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Eyes on the sentence.",
+                "teacher_prompt": "Set one-to-one tracking before the class reads.",
+                "tts_prompt": "Eyes on the sentence.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "partner_practice",
+                "board_prompt": "Read with your partner.",
+                "teacher_prompt": "Give a short partner read before the whole-class response.",
+                "tts_prompt": "Read with your partner.",
+                "timeout_ms": 12000,
+                "teacher_controls": ["pause", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Take the class read and listen for the short i in sit.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "05-03",
@@ -1086,7 +1226,26 @@
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look carefully.",
+                "teacher_prompt": "Set attention on sit and sat together.",
+                "tts_prompt": "Look carefully.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What changed? Which sound is different?",
+                "teacher_prompt": "Take one or two comparisons, then move on.",
+                "tts_prompt": "What changed? Which sound is different?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "09-02",

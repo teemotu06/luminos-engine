@@ -48,14 +48,28 @@ class SlideMarkRequest(BaseModel):
     teacher_note: Optional[str] = None
     lesson_notes: Optional[str] = None
     completed: bool = False
+    expected_slide_version: Optional[int] = None
     item_results: List[QuickCheckItemResult] = Field(default_factory=list)
 
 
 class SlideMarkResponse(BaseModel):
     attempt_id: str
+    attempt_version: int
+    slide_version: int
     mastery_status: str
     next_recommendation: str
     phoneme_error_log_size: int
+    summary_finalized: bool = False
+
+
+class LessonCompleteRequest(BaseModel):
+    attempt_id: str
+    expected_attempt_version: Optional[int] = None
+
+
+class LessonCompleteResponse(BaseModel):
+    ok: bool = True
+    attempt_version: int
 
 
 class StudentMarkRequest(BaseModel):

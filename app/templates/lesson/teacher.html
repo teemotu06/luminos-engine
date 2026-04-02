@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Teacher Control — {{ lesson.title }}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='dist/lesson.css') }}?v=11">
+<script defer src="{{ url_for('static', path='dist/lesson_teacher.js') }}?v=11"></script>
+{% endblock %}
+
+{% block content %}
+<div
+  id="main-content"
+  class="teacher-shell"
+  x-data='teacherShell({
+    lessonId: {{ lesson.lesson_id | tojson }},
+    attemptId: {{ attempt_id | tojson }},
+    initialSlideId: {{ initial_slide_id | tojson }},
+    initialState: {{ initial_command_state | tojson }},
+    classId: {{ class_id | tojson }},
+    className: {{ class_name | tojson }},
+    roster: {{ roster | tojson }},
+    slides: {{ ordered_slides | map(attribute="slide") | map(attribute="slide_id") | list | tojson }},
+    slideTitles: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ entry.slide.slide_title | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    }
+  })'
+  x-init="init()">
+
+  <header class="teacher-shell__header">
+    <a class="teacher-shell__back" href="/lesson/{{ lesson.lesson_id }}?class_id={{ class_id }}&attempt_id={{ attempt_id }}">← Lesson view</a>
+    <div class="teacher-shell__eyebrow">Teacher Control</div>
+    <h1 class="teacher-shell__title">{{ lesson.title }}</h1>
+    <div class="teacher-shell__meta">
+      {% if class_name %}<span>{{ class_name }}</span>{% endif %}
+      <span>Attempt {{ attempt_id }}</span>
+    </div>
+  </header>
+
+  <section class="teacher-shell__workspace">
+  <section class="teacher-shell__command card">
+    <div class="teacher-shell__state-top">
+      <div>
+        <div class="teacher-shell__state-label">Current state</div>
+        <div class="teacher-shell__state-value" x-text="currentStateLabel"></div>
+      </div>
+      <div class="teacher-shell__command-meta">
+        <div class="teacher-shell__timer-pill" x-show="timerLabel" x-cloak :data-paused="paused">
+          <span class="teacher-shell__timer-pill-label" x-text="paused ? 'Paused' : 'Auto-advance'"></span>
+          <strong x-text="timerLabel"></strong>
+        </div>
+        <div class="teacher-shell__connection" :data-status="connectionStatus">
+          <span class="teacher-shell__connection-dot"></span>
+          <span x-text="connectionLabel"></span>
+        </div>
+      </div>
+    </div>
+    <div class="teacher-shell__prompt" x-text="promptText || 'Waiting for command state...'"></div>
+    <div class="teacher-shell__board-cue" x-show="boardPromptText && boardPromptText !== promptText" x-cloak>
+      Board says: <span x-text="boardPromptText"></span>
+    </div>
+    <div class="teacher-shell__submeta">
+      <span x-show="currentStudent" x-cloak>Student: <strong x-text="currentStudent"></strong></span>
+      <span>Progress: <strong x-text="queueSummary"></strong></span>
+    </div>
+    <div class="teacher-shell__actions teacher-shell__actions--primary">
+      <template x-for="control in teacherControls" :key="control">
+        <button
+          type="button"
+          class="teacher-shell__action-btn"
+          :class="'teacher-shell__action-btn--' + control.replaceAll('_', '-')"
+          @click="handleControl(control)"
+          x-text="controlLabel(control)">
+        </button>
+      </template>
+    </div>
+    <div class="teacher-shell__command-footer">
+      <div class="teacher-shell__slide-nav teacher-shell__slide-nav--compact">
+        <button type="button" class="teacher-shell__nav-btn" @click="goPrevSlide()" :disabled="activeSlideIndex === 0">Prev</button>
+        <div class="teacher-shell__slide-meta">
+          <div class="teacher-shell__slide-id" x-text="activeSlideId"></div>
+          <div class="teacher-shell__slide-title" x-text="activeSlideTitle"></div>
+        </div>
+        <button type="button" class="teacher-shell__nav-btn" @click="goNextSlide()" :disabled="activeSlideIndex >= slides.length - 1">Next</button>
+      </div>
+    </div>
+    <div
+      class="teacher-shell__status"
+      x-show="clientStatusMessage"
+      x-cloak
+      aria-live="polite"
+      :data-tone="clientStatusTone">
+      <span x-text="clientStatusMessage"></span>
+      <button
+        type="button"
+        class="teacher-shell__status-retry"
+        x-show="retryClientAction"
+        x-cloak
+        @click="retryClientRequest()"
+        x-text="retryClientLabel"></button>
+    </div>
+    <div class="teacher-shell__result" x-show="lastResult" x-cloak x-text="lastResult"></div>
+  </section>
+
+  <section class="teacher-shell__details">
+  <section class="teacher-shell__queues card">
+    <div class="teacher-shell__section-title">Queue</div>
+    <div class="teacher-shell__queue-grid">
+      <div class="teacher-shell__queue-block">
+        <div class="teacher-shell__queue-label">Next up</div>
+        <div class="teacher-shell__chip-row">
+          <template x-if="nextStudents.length">
+            <template x-for="student in nextStudents" :key="student">
+              <span class="teacher-shell__chip" x-text="student"></span>
+            </template>
+          </template>
+          <template x-if="!nextStudents.length">
+            <span class="teacher-shell__empty">No upcoming students</span>
+          </template>
+        </div>
+      </div>
+      <div class="teacher-shell__queue-block">
+        <div class="teacher-shell__queue-label">Reteach</div>
+        <div class="teacher-shell__chip-row">
+          <template x-if="reteachQueue.length">
+            <template x-for="student in reteachQueue" :key="student">
+              <span class="teacher-shell__chip teacher-shell__chip--reteach" x-text="student"></span>
+            </template>
+          </template>
+          <template x-if="!reteachQueue.length">
+            <span class="teacher-shell__empty">Queue clear</span>
+          </template>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="teacher-shell__roster card">
+    <div class="teacher-shell__section-title">Roster</div>
+    <div class="teacher-shell__roster-list">
+      <template x-if="roster.length">
+        <template x-for="student in roster" :key="student">
+          <div class="teacher-shell__roster-item">
+            <span class="teacher-shell__roster-name" x-text="student"></span>
+            <span class="teacher-shell__roster-status" :data-status="studentStatuses[student] || ''" :aria-label="student + ' status ' + (studentStatuses[student] || 'not marked')" x-text="studentStatuses[student] || '—'"></span>
+          </div>
+        </template>
+      </template>
+      <template x-if="!roster.length">
+        <div class="teacher-shell__empty">No roster connected</div>
+      </template>
+    </div>
+  </section>
+  </section>
+  </section>
+</div>
+{% endblock %}

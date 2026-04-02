@@ -3,11 +3,13 @@ from app.models.lesson import (
     ClassPatternReviewRecord,
     LessonAttemptRecord,
     LessonRecord,
+    LessonRuntimeStateRecord,
     OralCheckAssignmentRecord,
     OralCheckSessionRecord,
     SlideResultRecord,
     StudentMarkRecord,
     StudentRecord,
+    UserRecord,
 )
 
 __all__ = [
@@ -15,9 +17,11 @@ __all__ = [
     "ClassPatternReviewRecord",
     "LessonRecord",
     "LessonAttemptRecord",
+    "LessonRuntimeStateRecord",
     "OralCheckSessionRecord",
     "OralCheckAssignmentRecord",
     "SlideResultRecord",
     "StudentMarkRecord",
     "StudentRecord",
+    "UserRecord",
 ]

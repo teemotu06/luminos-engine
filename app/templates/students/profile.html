@@ -30,7 +30,7 @@
         <h2 class="launcher__group-title">Status pattern</h2>
       </div>
       <div class="student-profile__status-grid">
-        {% for status in ['secure', 'shaky', 'missed', 'skipped'] %}
+        {% for status in ['secure', 'shaky', 'missed', 'deferred'] %}
         {% set count = status_counts.get(status, 0) %}
         <div class="student-profile__status-card student-profile__status-card--{{ status }}">
           <span class="student-profile__status-count">{{ count }}</span>

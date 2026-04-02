@@ -1,17 +1,22 @@
 (() => {
-  const STATUS_PRIORITY = { secure: 0, shaky: 1, missed: 2, skipped: 3 };
+  const STATUS_PRIORITY = { secure: 0, shaky: 1, missed: 2, deferred: 3, absent: 3 };
   const OralPromptHelper = window.OralPromptHelper || {};
 
   window.lessonShell = (config = {}) => ({
     activeBlendIndex: -1,
     activeSlideIndex: Number(config.initialSlideIndex || 0),
     attemptId: config.attemptId || "",
+    attemptVersion: Number(config.attemptVersion || 1),
     classLabel: config.className || "",
     audioPlayers: {},
     audioUnlocked: false,
     blendTimer: null,
     isSubmitting: false,
     lastMarkingResult: "",
+    lastMarkingTone: "neutral",
+    markingStatusTimer: null,
+    retryMarkingLabel: "",
+    retryMarkingAction: null,
     lastOralPromptAudioUrl: "",
     oralPromptRequestToken: 0,
     oralPromptSpeakTimeout: null,
@@ -22,6 +27,7 @@
     revealed: false,
     roster: config.roster || [],
     slideMarks: {},
+    slideVersions: config.slideVersions || {},
     studentMarks: {},
     topDockOpen: false,
     topDockTimer: null,
@@ -52,6 +58,62 @@
       unresolvedStudentCount: 0,
       sessionStatus: "idle",
       assignments: [],
+    },
+
+    setMarkingStatus(message, tone = "neutral", autoclearMs = 0) {
+      if (this.markingStatusTimer) {
+        window.clearTimeout(this.markingStatusTimer);
+        this.markingStatusTimer = null;
+      }
+      this.lastMarkingResult = message || "";
+      this.lastMarkingTone = tone;
+      if (this.lastMarkingResult && autoclearMs > 0) {
+        this.markingStatusTimer = window.setTimeout(() => {
+          this.clearMarkingStatus();
+        }, autoclearMs);
+      }
+    },
+
+    clearMarkingStatus() {
+      if (this.markingStatusTimer) {
+        window.clearTimeout(this.markingStatusTimer);
+        this.markingStatusTimer = null;
+      }
+      this.lastMarkingResult = "";
+      this.lastMarkingTone = "neutral";
+      this.clearRetryAction();
+    },
+
+    setMarkingError(message) {
+      this.setMarkingStatus(message, "error");
+    },
+
+    setMarkingWarning(message, autoclearMs = 3200) {
+      this.setMarkingStatus(message, "warning", autoclearMs);
+    },
+
+    setMarkingPending(message = "Saving…") {
+      this.setMarkingStatus(message, "pending");
+    },
+
+    setMarkingSuccess(message, autoclearMs = 2200) {
+      this.setMarkingStatus(message, "success", autoclearMs);
+    },
+
+    setRetryAction(label, action) {
+      this.retryMarkingLabel = label || "Retry";
+      this.retryMarkingAction = typeof action === "function" ? action : null;
+    },
+
+    clearRetryAction() {
+      this.retryMarkingLabel = "";
+      this.retryMarkingAction = null;
+    },
+
+    async retryLastMarkingAction() {
+      if (!this.retryMarkingAction || this.isSubmitting) return;
+      const action = this.retryMarkingAction;
+      await action();
     },
 
     get activeBlockId() {
@@ -286,6 +348,7 @@
       const response = await fetch("/lesson/tts/prompt", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        signal: AbortSignal.timeout(8000),
         body: JSON.stringify({ text: normalized }),
       });
 
@@ -352,7 +415,7 @@
       } catch (error) {
         if (requestToken !== this.oralPromptRequestToken) return;
         console.error("Local Kokoro TTS failed:", error);
-        this.lastMarkingResult = error.message;
+        this.setMarkingError(error.message);
       }
     },
 
@@ -697,6 +760,8 @@
       }
 
       try {
+        this.clearRetryAction();
+        this.setMarkingPending("Starting oral check…");
         const response = await fetch(`/lesson/${this.lessonId}/oral-check/session/start`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -721,7 +786,8 @@
         const data = await response.json();
         this.hydrateOralCheck(data, slideId);
       } catch (error) {
-        this.lastMarkingResult = error.message;
+        this.setRetryAction("Retry oral check", () => this.initializeOralCheck(slideId));
+        this.setMarkingError(error.message);
       }
     },
 
@@ -780,7 +846,7 @@
         sessionStatus: data.session_status || "in_progress",
         assignments: data.assignments || [],
       };
-      this.lastMarkingResult = "";
+      this.clearMarkingStatus();
 
       if (!data.active_assignment_id) {
         this.clearPendingOralPromptWork();
@@ -939,13 +1005,13 @@
           completedCount: 0,
         };
         this.clearPendingOralPromptWork();
-        this.lastMarkingResult = "Comprehension round complete";
+        this.setMarkingSuccess("Comprehension round complete", 2600);
         return;
       }
 
       this.comprehensionRound.activeTurnIndex = nextIndex;
       this.lastOralPromptAudioUrl = "";
-      this.lastMarkingResult = `${turn.studentName} · ${status}`;
+      this.setMarkingSuccess(`${turn.studentName} · ${status}`, 1800);
       void this.speakOralPromptIfNeeded(true);
     },
 
@@ -977,6 +1043,8 @@
       const config = this.oralCheckConfigForSlide(this.activeSlideIndex);
       if (!config || !this.canRestartAuditStrategy()) return;
       try {
+        this.clearRetryAction();
+        this.setMarkingPending("Updating audit strategy…");
         const response = await fetch(`/lesson/${this.lessonId}/oral-check/session/start`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -999,9 +1067,10 @@
           throw new Error(`Audit strategy restart failed (${response.status})`);
         }
         this.hydrateOralCheck(await response.json(), this.activeSlideId());
-        this.lastMarkingResult = `Audit strategy · ${strategy.replaceAll("_", " ")}`;
+        this.setMarkingSuccess(`Audit strategy · ${strategy.replaceAll("_", " ")}`);
       } catch (error) {
-        this.lastMarkingResult = error.message;
+        this.setRetryAction("Retry strategy", () => this.restartAuditSelectionStrategy(strategy));
+        this.setMarkingError(error.message);
       }
     },
 
@@ -1009,11 +1078,11 @@
       if (!this.oralCheck.enabled) return true;
       if (this.oralCheck.initializedSlideId !== this.activeSlideId()) return true;
       if (this.oralCheck.unresolvedStudentCount > 0) {
-        this.lastMarkingResult = `Cannot advance: ${this.oralCheck.unresolvedStudentCount} students unresolved`;
+        this.setMarkingWarning(`Cannot advance: ${this.oralCheck.unresolvedStudentCount} students unresolved`);
         return false;
       }
       if (this.comprehensionRound.enabled) {
-        this.lastMarkingResult = `Cannot advance: comprehension round still active`;
+        this.setMarkingWarning("Cannot advance: comprehension round still active");
         return false;
       }
       return true;
@@ -1120,15 +1189,35 @@
     async finishLesson() {
       if (!this.canAdvanceFromActiveSlide()) return;
       try {
-        await fetch(`/lesson/${this.lessonId}/complete`, {
+        this.clearRetryAction();
+        this.setMarkingPending("Finalizing lesson…");
+        const response = await fetch(`/lesson/${this.lessonId}/complete`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ attempt_id: this.attemptId }),
+          body: JSON.stringify({
+            attempt_id: this.attemptId,
+            expected_attempt_version: this.attemptVersion,
+          }),
         });
+        if (!response.ok) {
+          let detail = `Lesson completion failed (${response.status})`;
+          try {
+            const data = await response.json();
+            if (data?.detail) detail = data.detail;
+          } catch (_error) {
+            // Preserve fallback detail.
+          }
+          throw new Error(detail);
+        }
+        const data = await response.json();
+        if (typeof data.attempt_version === "number") {
+          this.attemptVersion = data.attempt_version;
+        }
+        window.location.href = `/lesson/${this.lessonId}/review/${this.attemptId}`;
       } catch (e) {
-        // navigate regardless
+        this.setRetryAction("Retry finish", () => this.finishLesson());
+        this.setMarkingError(e.message || "Lesson completion failed");
       }
-      window.location.href = `/lesson/${this.lessonId}/review/${this.attemptId}`;
     },
 
     setSlideTeacherNote(slideIndex, value) {
@@ -1145,7 +1234,7 @@
         return {
           label: item.label,
           phoneme: item.phoneme || null,
-          status: state.status || "skipped",
+          status: state.status || "deferred",
           error_tags: state.errorTags,
           korean_transfer: state.koreanTransfer,
         };
@@ -1169,6 +1258,7 @@
         korean_transfer: koreanTransfer,
         teacher_note: this.getSlideTeacherNote(slideIndex),
         completed,
+        expected_slide_version: this.slideVersions[slideId] ?? null,
         item_results: itemResults,
       });
     },
@@ -1187,12 +1277,15 @@
         korean_transfer: slideMark.koreanTransfer,
         teacher_note: slideMark.teacherNote,
         completed,
+        expected_slide_version: this.slideVersions[slideId] ?? null,
       });
     },
 
     async postMark(payload) {
       this.isSubmitting = true;
-      this.lastMarkingResult = "";
+      const retryPayload = { ...payload };
+      this.clearRetryAction();
+      this.setMarkingPending("Saving mark…");
 
       try {
         const response = await fetch(`/lesson/${this.lessonId}/mark`, {
@@ -1204,14 +1297,36 @@
         });
 
         if (!response.ok) {
-          throw new Error(`Marking request failed (${response.status})`);
+          let detail = `Marking request failed (${response.status})`;
+          try {
+            const data = await response.json();
+            if (data?.detail) detail = data.detail;
+          } catch (_error) {
+            // Preserve fallback detail.
+          }
+          throw new Error(detail);
         }
 
         const data = await response.json();
-        this.lastMarkingResult = `${data.mastery_status} · ${data.next_recommendation}`;
+        if (payload.slide_id && typeof data.slide_version === "number") {
+          this.slideVersions[payload.slide_id] = data.slide_version;
+        }
+        if (typeof data.attempt_version === "number") {
+          this.attemptVersion = data.attempt_version;
+        }
+        this.setMarkingSuccess(
+          data.summary_finalized
+            ? `${data.mastery_status} · ${data.next_recommendation}`
+            : "Saved"
+        );
         return data;
       } catch (error) {
-        this.lastMarkingResult = error.message;
+        if (String(error.message || "").toLowerCase().includes("conflict")) {
+          this.setMarkingWarning(error.message, 4200);
+        } else {
+          this.setRetryAction("Retry save", () => this.postMark({ ...retryPayload }));
+          this.setMarkingError(error.message);
+        }
         return null;
       } finally {
         this.isSubmitting = false;
@@ -1244,7 +1359,7 @@
     },
 
     cycleStudentMark(studentName, slideId, blockId) {
-      const CYCLE = ["secure", "shaky", "missed", "skipped"];
+      const CYCLE = ["secure", "shaky", "missed", "deferred"];
       const slideIndex = this.activeSlideIndex;
       if (!this.studentMarks[slideIndex]) this.studentMarks[slideIndex] = {};
       const current = this.studentMarks[slideIndex][studentName] || "";
@@ -1278,26 +1393,38 @@
     },
 
     async deleteStudentMark(payload) {
+      const retryPayload = { ...payload };
       try {
+        this.clearRetryAction();
+        this.setMarkingPending("Removing student mark…");
         await fetch(`/lesson/${this.lessonId}/student-mark`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
+        this.setMarkingSuccess(`${payload.student_name} · cleared`, 1800);
       } catch (error) {
         console.error("Student mark delete failed:", error);
+        this.setRetryAction("Retry clear", () => this.deleteStudentMark({ ...retryPayload }));
+        this.setMarkingError("Student mark delete failed");
       }
     },
 
     async postStudentMark(payload) {
+      const retryPayload = { ...payload };
       try {
+        this.clearRetryAction();
+        this.setMarkingPending(`Saving ${payload.student_name}…`);
         await fetch(`/lesson/${this.lessonId}/student-mark`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
+        this.setMarkingSuccess(`${payload.student_name} · ${payload.status}`, 1800);
       } catch (error) {
         console.error("Student mark failed:", error);
+        this.setRetryAction("Retry student save", () => this.postStudentMark({ ...retryPayload }));
+        this.setMarkingError(`Failed to save ${payload.student_name}`);
       }
     },
 
@@ -1308,13 +1435,16 @@
         return;
       }
       if (!this.oralCheck.enabled || !this.oralCheck.activeAssignmentId) return;
+      const assignmentId = this.oralCheck.activeAssignmentId;
       try {
+        this.clearRetryAction();
+        this.setMarkingPending("Saving oral check…");
         const response = await fetch(`/lesson/${this.lessonId}/oral-check/assignment/mark`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             session_id: this.oralCheck.sessionId,
-            assignment_id: this.oralCheck.activeAssignmentId,
+            assignment_id: assignmentId,
             status,
           }),
         });
@@ -1325,7 +1455,7 @@
         this.hydrateOralCheck(data.session, this.activeSlideId());
         this.studentMarks[this.activeSlideIndex] = this.studentMarks[this.activeSlideIndex] || {};
         this.studentMarks[this.activeSlideIndex][data.student_name] = data.status;
-        this.lastMarkingResult = `${data.student_name} · ${data.status}`;
+        this.setMarkingSuccess(`${data.student_name} · ${data.status}`, 1800);
 
         if (data.session.unresolved_student_count === 0) {
           await fetch(`/lesson/${this.lessonId}/oral-check/session/complete`, {
@@ -1339,7 +1469,8 @@
           });
         }
       } catch (error) {
-        this.lastMarkingResult = error.message;
+        this.setRetryAction("Retry oral mark", () => this.markActiveOralAssignment(status));
+        this.setMarkingError(error.message);
       }
     },
 
@@ -1373,67 +1504,6 @@
     toggleSlideKoreanTransfer(slideIndex) {
       const slideMark = this.ensureSlideMark(slideIndex);
       slideMark.koreanTransfer = !slideMark.koreanTransfer;
-    },
-  });
-
-  window.reviewShell = (config = {}) => ({
-    attemptId: config.attemptId || "",
-    lessonId: config.lessonId || "",
-    marks: config.marks || {},
-    editingKey: null,
-    editStatus: "",
-    editNote: "",
-    isSaving: false,
-
-    getMarkStatus(slideId, studentName) {
-      return (this.marks[`${slideId}__${studentName}`] || {}).status || "";
-    },
-
-    hasNote(slideId, studentName) {
-      return !!(this.marks[`${slideId}__${studentName}`] || {}).teacher_note;
-    },
-
-    openEdit(slideId, studentName) {
-      const key = `${slideId}__${studentName}`;
-      const existing = this.marks[key] || {};
-      this.editingKey = key;
-      this.editStatus = existing.status || "";
-      this.editNote = existing.teacher_note || "";
-    },
-
-    closeEdit() {
-      this.editingKey = null;
-    },
-
-    async saveEdit(slideId, studentName, blockId) {
-      if (!this.editStatus) return;
-      this.isSaving = true;
-      try {
-        await fetch(`/lesson/${this.lessonId}/student-mark`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            attempt_id: this.attemptId,
-            lesson_id: this.lessonId,
-            slide_id: slideId,
-            block_id: blockId,
-            student_name: studentName,
-            status: this.editStatus,
-            teacher_note: this.editNote,
-          }),
-        });
-        const key = `${slideId}__${studentName}`;
-        this.marks[key] = {
-          ...(this.marks[key] || {}),
-          status: this.editStatus,
-          teacher_note: this.editNote,
-        };
-        this.closeEdit();
-      } catch (err) {
-        console.error("Review save failed:", err);
-      } finally {
-        this.isSaving = false;
-      }
     },
   });
 
@@ -1501,6 +1571,15 @@
       get lastMarkingResult() {
         return this.shell ? this.shell.lastMarkingResult : "";
       },
+      get lastMarkingTone() {
+        return this.shell ? this.shell.lastMarkingTone : "neutral";
+      },
+      get hasRetryAction() {
+        return !!(this.shell && this.shell.retryMarkingAction);
+      },
+      get retryMarkingLabel() {
+        return this.shell ? this.shell.retryMarkingLabel : "Retry";
+      },
       get canPlayOralPrompt() {
         return !!(
           this.shell &&
@@ -1552,6 +1631,10 @@
       markActiveOralAssignment(status) {
         if (!this.shell) return;
         this.shell.markActiveOralAssignment(status);
+      },
+      retryLastMarkingAction() {
+        if (!this.shell) return;
+        this.shell.retryLastMarkingAction();
       },
       get showMarkingActions() {
         return !!(

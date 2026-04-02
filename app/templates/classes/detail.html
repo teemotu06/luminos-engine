@@ -18,6 +18,9 @@
         <span class="launcher__stat-label">Students</span>
       </div>
     </div>
+    {% if cls.deleted_at %}
+    <div class="form-error" role="status" style="margin-top: 1rem;">This class is archived. Restore it to resume normal use.</div>
+    {% endif %}
   </header>
 
   <main class="launcher__main">
@@ -66,7 +69,7 @@
           placeholder="Student name"
           required
           autofocus>
-        <button class="luminos-form__submit" type="submit">Add student</button>
+        <button class="luminos-form__submit" type="submit" {% if cls.deleted_at %}disabled{% endif %}>Add student</button>
       </form>
     </section>
 
@@ -79,6 +82,24 @@
         <h2 class="launcher__group-title">Open a lesson with this class</h2>
       </div>
       <p class="launcher__intro">Go to the <a href="/lesson/" style="color: var(--accent);">Lesson Library</a> and select this class from the dropdown to launch a lesson with this roster.</p>
+    </section>
+
+    <hr class="launcher__divider">
+
+    <section class="launcher__group">
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Lifecycle</div>
+        <h2 class="launcher__group-title">Archive or restore</h2>
+      </div>
+      {% if cls.deleted_at %}
+      <form method="post" action="/classes/{{ cls.id }}/restore">
+        <button class="luminos-form__submit" type="submit">Restore class</button>
+      </form>
+      {% else %}
+      <form method="post" action="/classes/{{ cls.id }}/archive">
+        <button class="luminos-form__submit" type="submit">Archive class</button>
+      </form>
+      {% endif %}
     </section>
 
   </main>

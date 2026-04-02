@@ -23,6 +23,7 @@
     lessonProgress: {},
     masteryGates: {},
     classReviewMap: {},
+    libraryError: '',
     init() {
       const mapNode = document.getElementById('class-review-map');
       if (mapNode && mapNode.textContent) {
@@ -33,23 +34,31 @@
         }
       }
       this.$watch('selectedClassId', val => {
-        this.fetchProgress(val);
-        this.fetchMasteryGates(val);
+        void this.fetchProgress(val);
+        void this.fetchMasteryGates(val);
       });
     },
-    fetchProgress(classId) {
+    async fetchProgress(classId) {
       if (!classId) { this.lessonProgress = {}; return; }
-      fetch('/lesson/progress?class_id=' + encodeURIComponent(classId))
-        .then(r => r.json())
-        .then(data => { this.lessonProgress = data; })
-        .catch(() => {});
+      try {
+        const response = await fetch('/lesson/progress?class_id=' + encodeURIComponent(classId));
+        if (!response.ok) throw new Error('Failed to load lesson progress');
+        this.lessonProgress = await response.json();
+      } catch (_error) {
+        this.lessonProgress = {};
+        this.libraryError = 'Lesson progress is temporarily unavailable.';
+      }
     },
-    fetchMasteryGates(classId) {
+    async fetchMasteryGates(classId) {
       if (!classId) { this.masteryGates = {}; return; }
-      fetch('/lesson/mastery-gates?class_id=' + encodeURIComponent(classId))
-        .then(r => r.json())
-        .then(data => { this.masteryGates = data; })
-        .catch(() => {});
+      try {
+        const response = await fetch('/lesson/mastery-gates?class_id=' + encodeURIComponent(classId));
+        if (!response.ok) throw new Error('Failed to load mastery gates');
+        this.masteryGates = await response.json();
+      } catch (_error) {
+        this.masteryGates = {};
+        this.libraryError = 'Mastery gate data is temporarily unavailable.';
+      }
     },
     reviewFor(lessonId) {
       if (!this.selectedClassId) return null;
@@ -96,6 +105,9 @@
   </div>
 
   <main id="main-content" class="launcher__main">
+    <template x-if="libraryError">
+      <p class="review-empty-notice" x-text="libraryError"></p>
+    </template>
     {% for group in lesson_groups %}
     {% set grouped_lessons = group.lessons %}
     {% if not loop.first %}<hr class="launcher__divider">{% endif %}
@@ -168,7 +180,29 @@
           {% endif %}
           <div class="launcher__card-footer">
             <span class="launcher__card-meta">{{ pattern_count }} target sound{{ 's' if pattern_count != 1 }}</span>
-            <span class="launcher__lesson-cta" x-text="selectedClassId ? 'Launch with class' : 'Open lesson'"></span>
+            <div class="launcher__launch-row">
+              <span class="launcher__lesson-cta" x-text="selectedClassId ? 'Launch with class' : 'Open lesson'"></span>
+              <div class="launcher__launch-actions">
+                <button
+                  type="button"
+                  class="launcher__launch-btn"
+                  @click.stop.prevent="window.location.assign('/lesson/{{ lesson.lesson_id }}' + (selectedClassId ? ('?class_id=' + encodeURIComponent(selectedClassId)) : ''))">
+                  Lesson
+                </button>
+                <button
+                  type="button"
+                  class="launcher__launch-btn launcher__launch-btn--split"
+                  @click.stop.prevent="window.open('/lesson/{{ lesson.lesson_id }}/teacher' + (selectedClassId ? ('?class_id=' + encodeURIComponent(selectedClassId)) : ''), '_blank')">
+                  Teacher
+                </button>
+                <button
+                  type="button"
+                  class="launcher__launch-btn launcher__launch-btn--split"
+                  @click.stop.prevent="window.open('/lesson/{{ lesson.lesson_id }}/board' + (selectedClassId ? ('?class_id=' + encodeURIComponent(selectedClassId)) : ''), '_blank')">
+                  Board
+                </button>
+              </div>
+            </div>
           </div>
         </a>
         {% endfor %}

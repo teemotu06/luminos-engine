@@ -45,6 +45,23 @@
         <span class="launcher__lesson-cta">New class →</span>
       </a>
     </div>
+
+    {% if archived_classes %}
+    <section class="launcher__group" style="margin-top: 2.5rem;">
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Archived</div>
+        <h2 class="launcher__group-title">Restorable classes</h2>
+      </div>
+      <div class="student-list">
+        {% for cls in archived_classes %}
+        <div class="student-list__row">
+          <span class="student-list__name">{{ cls.class_name }}</span>
+          <a class="student-list__link" href="/classes/{{ cls.id }}">Open archived class →</a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
   </main>
 
 </div>

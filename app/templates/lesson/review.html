@@ -3,8 +3,8 @@
 {% block title %}Review — {{ lesson.title }}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=5">
-<script defer src="{{ url_for('static', path='lesson.js') }}?v=3"></script>
+<link rel="stylesheet" href="{{ url_for('static', path='dist/lesson.css') }}?v=11">
+<script defer src="{{ url_for('static', path='dist/lesson_review.js') }}?v=11"></script>
 {% endblock %}
 
 {% block content %}
@@ -25,6 +25,21 @@
       {% if attempt_date %}<span>{{ attempt_date.strftime('%d %b %Y') }}</span>{% endif %}
     </div>
   </header>
+  <div
+    class="review-shell__status"
+    x-show="clientStatusMessage"
+    x-cloak
+    aria-live="polite"
+    :data-tone="clientStatusTone">
+    <span x-text="clientStatusMessage"></span>
+    <button
+      type="button"
+      class="review-shell__status-retry"
+      x-show="retryClientAction"
+      x-cloak
+      @click="retryClientRequest()"
+      x-text="retryClientLabel"></button>
+  </div>
 
   {# ── Session summary ──────────────────────────────────── #}
   <div class="review-summary">
@@ -243,7 +258,7 @@
             'review-student-badge--secure':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'secure',
             'review-student-badge--shaky':    getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'shaky',
             'review-student-badge--missed':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'missed',
-            'review-student-badge--skipped':  getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'skipped',
+            'review-student-badge--deferred': getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'deferred',
             'review-student-badge--deferred': getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'deferred',
             'review-student-badge--absent':   getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}') === 'absent',
             'review-student-badge--unmarked': !getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')
@@ -251,7 +266,7 @@
           @click="editingKey === '{{ slide_info.slide_id }}__{{ student }}' ? closeEdit() : openEdit('{{ slide_info.slide_id }}', '{{ student }}')">
           <span>{{ student }}</span>
           <template x-if="getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')">
-            <span class="review-student-badge__status" x-text="getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')"></span>
+            <span class="review-student-badge__status" :aria-label="'{{ student }} status ' + getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')" x-text="getMarkStatus('{{ slide_info.slide_id }}', '{{ student }}')"></span>
           </template>
           <template x-if="hasNote('{{ slide_info.slide_id }}', '{{ student }}')">
             <span class="review-student-badge__note-dot" aria-hidden="true"></span>

@@ -3,9 +3,9 @@
 {% block title %}{{ lesson.title }}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='lesson.css') }}?v=6">
-<script defer src="{{ url_for('static', path='oral_prompt_helper.js') }}?v=2"></script>
-<script defer src="{{ url_for('static', path='lesson.js') }}?v=5"></script>
+<link rel="stylesheet" href="{{ url_for('static', path='dist/lesson.css') }}?v=11">
+<script defer src="{{ url_for('static', path='dist/oral_prompt_helper.js') }}?v=11"></script>
+<script defer src="{{ url_for('static', path='dist/lesson.js') }}?v=11"></script>
 {% endblock %}
 
 {% block content %}
@@ -14,13 +14,32 @@
     x-data='lessonShell({
         initialSlideIndex: {{ initial_slide_index | default(0) }},
         attemptId: {{ attempt_id | tojson }},
+        attemptVersion: {{ attempt_version | default(1) }},
         lessonId: {{ lesson.lesson_id | tojson }},
         roster: {{ roster | tojson }},
+        slideVersions: {{ slide_versions | default({}) | tojson }},
         className: {{ class_name | tojson }}
     })'
     @mousemove="handleRuntimePointerMove($event)"
     @mouseleave="hideTopDock()">
     <a class="lesson-shell__backlink" href="/lesson/">Back to Library</a>
+    <div class="lesson-shell__launch-strip">
+        <span class="lesson-shell__launch-label">Split Screen</span>
+        <a
+            class="lesson-shell__launch-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/lesson/{{ lesson.lesson_id }}/teacher?class_id={{ class_id }}&attempt_id={{ attempt_id }}">
+            Teacher
+        </a>
+        <a
+            class="lesson-shell__launch-btn lesson-shell__launch-btn--secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/lesson/{{ lesson.lesson_id }}/board?class_id={{ class_id }}&attempt_id={{ attempt_id }}">
+            Board
+        </a>
+    </div>
 
     <div
         class="lesson-shell__dock-trigger"
@@ -62,6 +81,11 @@
             <span class="smart-review-notice__pattern">{{ slide.slide_title | replace("Smart Review: ", "") }}</span>
             {% endif %}
             {% endfor %}
+        </div>
+        {% endif %}
+        {% if dynamic_review_error %}
+        <div class="smart-review-notice">
+            <strong>Review data unavailable</strong> — class-specific review recommendations could not be loaded for this lesson.
         </div>
         {% endif %}
         {% include "lesson/partials/slide_stage.html" %}
@@ -216,7 +240,16 @@
             class="oral-float-panel__meta oral-float-panel__meta--result"
             x-show="$store.lessonRoster.lastMarkingResult"
             x-cloak
+            aria-live="polite"
+            :data-tone="$store.lessonRoster.lastMarkingTone"
             x-text="$store.lessonRoster.lastMarkingResult"></span>
+        <button
+            type="button"
+            class="oral-float-panel__retry-btn"
+            x-show="$store.lessonRoster.hasRetryAction"
+            x-cloak
+            @click="$store.lessonRoster.retryLastMarkingAction()"
+            x-text="$store.lessonRoster.retryMarkingLabel"></button>
     </div>
 </div>
 {% endblock %}

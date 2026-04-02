@@ -7,13 +7,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles.css?v=4">
+    <link rel="stylesheet" href="/static/dist/styles.css?v=11">
     {% block head %}{% endblock %}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    {% if current_user %}
+    <header class="app-shell-nav" aria-label="Application">
+        <nav class="app-shell-nav__links">
+            <a href="/lesson/">Lessons</a>
+            <a href="/classes/">Classes</a>
+        </nav>
+        <div class="app-shell-nav__session">
+            <span class="app-shell-nav__user">{{ current_user.username }} · {{ current_user.role }}</span>
+            <form method="post" action="/auth/logout">
+                <button type="submit" class="app-shell-nav__logout">Sign out</button>
+            </form>
+        </div>
+    </header>
+    {% endif %}
     {% block content %}{% endblock %}
     {% block body_panels %}{% endblock %}
 </body>

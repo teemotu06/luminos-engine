@@ -22,15 +22,34 @@ class ClassRecord(Base):
     __tablename__ = "class_group"
 
     id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
+    owner_user_id: Mapped[Optional[Union[str, uuid.UUID]]] = mapped_column(
+        ForeignKey("app_user.id", ondelete="SET NULL"),
+        nullable=True,
+        index=True,
+    )
     class_name: Mapped[str] = mapped_column(String(100), nullable=False)
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    deleted_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
 
+    owner: Mapped[Optional["UserRecord"]] = relationship(back_populates="classes")
     students: Mapped[list["StudentRecord"]] = relationship(
         back_populates="class_group",
         cascade="all, delete-orphan",
         order_by="StudentRecord.student_name",
     )
+
+
+class UserRecord(Base):
+    __tablename__ = "app_user"
+
+    id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
+    username: Mapped[str] = mapped_column(String(100), nullable=False, unique=True, index=True)
+    password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
+    role: Mapped[str] = mapped_column(String(20), nullable=False, default="teacher")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+
+    classes: Mapped[list["ClassRecord"]] = relationship(back_populates="owner")
 
 
 class StudentRecord(Base):
@@ -70,6 +89,8 @@ class LessonAttemptRecord(Base):
     teacher_key: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     attempt_date: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
     completed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    version: Mapped[int] = mapped_column(default=1, nullable=False)
+    current_slide_id: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     mastery_status: Mapped[str] = mapped_column(String(20), default="shaky", nullable=False)
     phoneme_error_log: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
     notes: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
@@ -92,6 +113,7 @@ class SlideResultRecord(Base):
     status: Mapped[str] = mapped_column(String(20), nullable=False)
     error_tags: Mapped[list[str]] = mapped_column(JsonType, default=list, nullable=False)
     korean_transfer: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    version: Mapped[int] = mapped_column(default=1, nullable=False)
     teacher_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     item_results: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
 
@@ -176,13 +198,48 @@ class OralCheckAssignmentRecord(Base):
     attempt: Mapped["LessonAttemptRecord"] = relationship()
 
 
+class LessonRuntimeStateRecord(Base):
+    __tablename__ = "lesson_runtime_state"
+
+    id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
+    attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(
+        ForeignKey("lesson_attempt.attempt_id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    block_id: Mapped[str] = mapped_column(String(2), nullable=False)
+    current_state: Mapped[str] = mapped_column(String(40), nullable=False, default="idle")
+    state_sequence: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
+    state_index: Mapped[int] = mapped_column(default=0, nullable=False)
+    student_queue: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
+    queue_position: Mapped[int] = mapped_column(default=0, nullable=False)
+    reteach_queue: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
+    current_student: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    current_prompt_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    teacher_prompt_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    current_audio_url: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    state_version: Mapped[int] = mapped_column(default=0, nullable=False)
+    audio_event_id: Mapped[int] = mapped_column(default=0, nullable=False)
+    ui_event_id: Mapped[int] = mapped_column(default=0, nullable=False)
+    paused: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False
+    )
+
+    attempt: Mapped["LessonAttemptRecord"] = relationship()
+
+    __table_args__ = (UniqueConstraint("attempt_id", "slide_id", name="uq_lesson_runtime_attempt_slide"),)
+
+
 class ClassPatternReviewRecord(Base):
     __tablename__ = "class_pattern_review"
 
     id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
-    # Persist as String(36) to stay compatible with legacy Postgres databases
-    # where this column was created as VARCHAR rather than UUID.
-    class_id: Mapped[str] = mapped_column(String(36), nullable=False, index=True)
+    # Use the same UUID-compatible type as class_group.id so Postgres can enforce
+    # the FK while SQLite still stores the value as a string.
+    class_id: Mapped[Union[str, uuid.UUID]] = mapped_column(
+        ForeignKey("class_group.id", ondelete="CASCADE"), nullable=False, index=True
+    )
     pattern_key: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     source_lesson_id: Mapped[str] = mapped_column(String(20), nullable=False)
     first_taught_lesson_id: Mapped[str] = mapped_column(String(20), nullable=False)

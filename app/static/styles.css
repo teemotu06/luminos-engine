@@ -704,6 +704,14 @@ body {
     margin-top: auto;
 }
 
+.launcher__launch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
 .launcher__card-meta {
     font-size: 12px;
     line-height: 1.5;
@@ -731,6 +739,44 @@ body {
     transform: translateX(2px);
 }
 
+.launcher__launch-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.launcher__launch-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0.45rem 0.82rem;
+    border: 1px solid rgba(23, 20, 17, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: rgba(23, 20, 17, 0.82);
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 120ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.launcher__launch-btn:hover {
+    transform: translateY(-1px);
+    border-color: rgba(23, 20, 17, 0.18);
+    background: #fff;
+}
+
+.launcher__launch-btn--split {
+    background: rgba(245, 248, 255, 0.95);
+    color: #1d4ed8;
+}
+
 
 /* ── Responsive ──────────────────────────────────────────── */
 
@@ -749,6 +795,15 @@ body {
     .launcher__card-footer {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .launcher__launch-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .launcher__launch-actions {
+        flex-wrap: wrap;
     }
 
     .launcher__lesson-grid {
@@ -1011,7 +1066,7 @@ body {
 .student-profile__status-card--secure  { background: #d4edda; border-color: #84c99a; }
 .student-profile__status-card--shaky   { background: #fff3cd; border-color: #f0c04d; }
 .student-profile__status-card--missed  { background: #f8d7da; border-color: #e9838a; }
-.student-profile__status-card--skipped { background: #e9ecef; border-color: #adb5bd; }
+.student-profile__status-card--deferred { background: #e0f2fe; border-color: #7dd3fc; }
 
 .student-profile__status-count {
     font-size: 30px;
@@ -1154,7 +1209,41 @@ body {
 .student-profile__mark-badge--secure  { background: #d4edda; color: #1a5c2e; }
 .student-profile__mark-badge--shaky   { background: #fff3cd; color: #7a4f00; }
 .student-profile__mark-badge--missed  { background: #f8d7da; color: #6e1a1e; }
-.student-profile__mark-badge--skipped { background: #e9ecef; color: #4a4f54; }
+.student-profile__mark-badge--deferred { background: #e0f2fe; color: #075985; }
+
+.app-shell-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem 0;
+}
+
+.app-shell-nav__links,
+.app-shell-nav__session {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.app-shell-nav__links a,
+.app-shell-nav__logout {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--c-text);
+    background: transparent;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    text-decoration: none;
+}
+
+.app-shell-nav__user {
+    font-size: 12px;
+    color: var(--c-text-muted);
+}
 
 .student-profile__support {
     font-size: 11px;

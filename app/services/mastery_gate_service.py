@@ -32,13 +32,14 @@ from app.models.lesson import (
     SlideResultRecord,
     StudentMarkRecord,
 )
+from app.services.status_service import normalize_mark_status
 
 logger = logging.getLogger(__name__)
 
 GateLevel = Literal["proceed", "caution", "reteach", "repeat", "no_data"]
 
 # Worst-wins ranking: higher number = worse status.
-_STATUS_RANK: Dict[str, int] = {"secure": 0, "skipped": 1, "shaky": 2, "missed": 3}
+_STATUS_RANK: Dict[str, int] = {"secure": 0, "deferred": 1, "absent": 1, "shaky": 2, "missed": 3}
 
 GATE_LABELS: Dict[str, str] = {
     "proceed": "Ready to move on",
@@ -108,9 +109,10 @@ def _per_student_worst_status(marks: List[StudentMarkRecord]) -> Dict[str, str]:
     """Collapse all marks for each student to their single worst status."""
     result: Dict[str, str] = {}
     for mark in marks:
+        status = normalize_mark_status(mark.status)
         current = result.get(mark.student_name)
-        if current is None or _STATUS_RANK.get(mark.status, 0) > _STATUS_RANK.get(current, 0):
-            result[mark.student_name] = mark.status
+        if current is None or _STATUS_RANK.get(status, 0) > _STATUS_RANK.get(current, 0):
+            result[mark.student_name] = status
     return result
 
 
@@ -152,9 +154,10 @@ def _compute_weak_blocks(
         # Aggregate per-student worst status per block.
         block_student_status: Dict[str, Dict[str, str]] = defaultdict(dict)
         for mark in student_marks:
+            status = normalize_mark_status(mark.status)
             current = block_student_status[mark.block_id].get(mark.student_name)
-            if current is None or _STATUS_RANK.get(mark.status, 0) > _STATUS_RANK.get(current, 0):
-                block_student_status[mark.block_id][mark.student_name] = mark.status
+            if current is None or _STATUS_RANK.get(status, 0) > _STATUS_RANK.get(current, 0):
+                block_student_status[mark.block_id][mark.student_name] = status
 
         weak_blocks = []
         for block_id, student_statuses in block_student_status.items():
@@ -193,9 +196,10 @@ def _compute_student_support_list(student_marks: List[StudentMarkRecord]) -> Lis
     """
     marks_by_student: Dict[str, Dict[str, str]] = defaultdict(dict)
     for mark in student_marks:
+        status = normalize_mark_status(mark.status)
         current = marks_by_student[mark.student_name].get(mark.slide_id)
-        if current is None or _STATUS_RANK.get(mark.status, 0) > _STATUS_RANK.get(current, 0):
-            marks_by_student[mark.student_name][mark.slide_id] = mark.status
+        if current is None or _STATUS_RANK.get(status, 0) > _STATUS_RANK.get(current, 0):
+            marks_by_student[mark.student_name][mark.slide_id] = status
 
     support_list = []
     for student_name in sorted(marks_by_student):
