@@ -15,14 +15,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - uses: browser-actions/setup-chrome@v2
+        with:
+          chrome-version: stable
+          install-chromedriver: true
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build static assets
         run: python scripts/build_static.py --check
-      - name: Install matching Chrome and ChromeDriver
-        run: npx -y browser-driver-manager install chrome --link-path /usr/local/bin
       - name: Start app
         env:
           DATABASE_URL: sqlite:////tmp/luminos_engine_a11y.db
