@@ -88,7 +88,7 @@ class AuthAndClassRouteTests(unittest.TestCase):
         self.assertNotIn("View class", archived_index.text)
         self.assertIn("Restorable classes", archived_index.text)
 
-        self.client.post(f"/auth/logout", follow_redirects=False)
+        self.client.post("/auth/logout", follow_redirects=False)
         self._login("teacher-two", "teacher-two-pass")
         other_teacher_detail = self.client.get(f"/classes/{class_record.id}")
         self.assertEqual(other_teacher_detail.status_code, 404)

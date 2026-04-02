@@ -6,13 +6,13 @@ from typing import Dict, List, Optional
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-logger = logging.getLogger(__name__)
-
 from app.models.lesson import ClassPatternReviewRecord, LessonAttemptRecord, StudentMarkRecord
 from app.schemas.lesson import Lesson
 from app.schemas.slide import Slide
 from app.schemas.slide_payloads import VIEW_PAYLOAD_MAP
 from app.services.lesson_service import list_lesson_ids, load_lesson
+
+logger = logging.getLogger(__name__)
 
 
 WEAK_STATUSES = {"shaky", "missed"}
