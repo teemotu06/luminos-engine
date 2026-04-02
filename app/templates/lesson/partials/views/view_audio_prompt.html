@@ -1,4 +1,4 @@
-<div class="lesson-audio-prompt" x-data="{ revealed: false }">
+<div class="lesson-audio-prompt">
   {% if slide.content_payload.prompt_text %}
   <p class="lesson-audio-prompt__prompt">
     {{ slide.content_payload.prompt_text }}
@@ -13,24 +13,6 @@
       alt="{{ slide.slide_title }}">
   </div>
   {% endif %}
-
-  <div class="lesson-audio-prompt__actions">
-    <button
-      type="button"
-      class="lesson-audio-prompt__button lesson-audio-prompt__button--play"
-      @click="playAudio('{{ slide.content_payload.audio_file }}')">
-      ▶ Play
-    </button>
-
-    {% if slide.content_payload.reveal_text %}
-    <button
-      type="button"
-      class="lesson-audio-prompt__button"
-      @click="revealed = !revealed">
-      <span x-text="revealed ? 'Hide' : 'Reveal'">Reveal</span>
-    </button>
-    {% endif %}
-  </div>
 
   {% if slide.content_payload.reveal_text %}
   <div class="lesson-audio-prompt__reveal" x-show="revealed">

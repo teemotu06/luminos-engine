@@ -1,0 +1,1576 @@
+{
+  "lesson_id": "G9-L65",
+  "unit_id": "G9",
+  "target_pattern": "ou_ough_variants",
+  "title": "Group 9, Lesson 65: ou /ʌ/ and ough patterns",
+  "new_units": [
+    "ough"
+  ],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: ew/ui",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ew/ui",
+            "back_text": "/juː/ and /uː/",
+            "audio": "/static/audio/ewui.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /juː/ and /uː/ quickly and cleanly.",
+          "correction_move": "Model /juː/ and /uː/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ou/ow /aʊ/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ou/ow /aʊ/",
+            "back_text": "/aʊ/",
+            "audio": "/static/audio/ouow_aʊ.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /aʊ/ quickly and cleanly.",
+          "correction_move": "Model /aʊ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: oo /uː/ and /ʊ/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "oo /uː/ and /ʊ/",
+            "back_text": "two oo sounds",
+            "audio": "/static/audio/oo_uː_and_ʊ.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce two oo sounds quickly and cleanly.",
+          "correction_move": "Model two oo sounds, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: so",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "so",
+            "back_text": "so — sight word",
+            "audio": "/static/audio/sight_so.mp3",
+            "word_types": {
+              "so": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say so immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: of",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "of",
+            "back_text": "of — sight word",
+            "audio": "/static/audio/sight_of.mp3",
+            "word_types": {
+              "of": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say of immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: new",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_new.mp3",
+            "dictated_text": "new",
+            "expected_answer": "new",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "n",
+              "e",
+              "w"
+            ]
+          },
+          "teacher_cue": "Play new once. Replay only if needed.",
+          "expected_response": "Students write new accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: fruit",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_fruit.mp3",
+            "dictated_text": "fruit",
+            "expected_answer": "fruit",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "f",
+              "r",
+              "u",
+              "i",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play fruit once. Replay only if needed.",
+          "expected_response": "Students write fruit accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: juice",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_juice.mp3",
+            "dictated_text": "juice",
+            "expected_answer": "juice",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "j",
+              "u",
+              "i",
+              "c",
+              "e"
+            ]
+          },
+          "teacher_cue": "Play juice once. Replay only if needed.",
+          "expected_response": "Students write juice accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce ou /ʌ/ and ough patterns",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ou → /ʌ/   ough → multiple",
+            "back_text": "vowel team variants",
+            "audio": "/static/audio/ou_ough.mp3"
+          },
+          "teacher_cue": "ou has a third sound. In some words, ou = /ʌ/: young, touch, double, country, trouble. This is the same short /ʌ/ as in cup and mud. ough is the most unpredictable spelling in English — it has at least six pronunciations: through = /uː/, though = /oʊ/, thought = /ɔːt/, tough/rough/enough = /ʌf/, cough = /ɒf/, bough = /aʊ/. Students must learn ough words as lexical items — the pattern alone is not reliable.",
+          "expected_response": "Students recognise ou = /ʌ/ in specific high-frequency words and approach ough words with vocabulary-level knowledge.",
+          "correction_move": "Establish ou = /ʌ/ words as a group: young, touch, double, country, trouble. Then sort ough words by sound. Acknowledge honestly: ough is irregular — context and vocabulary are essential.",
+          "observation_note": "Watch for students applying the /aʊ/ rule from L42 to all ou words — ou has three sounds now.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say ou /ʌ/ and ough patterns In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ou → /ʌ/   ough → multiple",
+            "back_text": "vowel team variants",
+            "audio": "/static/audio/ou_ough.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect ou /ʌ/ and ough patterns to one strong word from today.",
+          "expected_response": "Students say ou /ʌ/ and ough patterns clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: young",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "young",
+            "back_text": "/j/ /ʌ/ /ŋ/",
+            "audio": "/static/audio/block04_young.mp3",
+            "blend_units": [
+              {
+                "grapheme": "y",
+                "phoneme": "/j/",
+                "audio": null
+              },
+              {
+                "grapheme": "ou",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ng",
+                "phoneme": "/ŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say young — not old. ou = /ʌ/ here — same as cup. y = /j/ consonant. Reveal and blend.",
+          "expected_response": "Students say young orally and connect meaning before blending.",
+          "correction_move": "Model young orally again, reveal and blend.",
+          "observation_note": "Watch for ou = /ʌ/ — not /aʊ/ or /uː/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: touch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "touch",
+            "back_text": "/t/ /ʌ/ /tʃ/",
+            "audio": "/static/audio/block04_touch.mp3",
+            "blend_units": [
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "ou",
+                "phoneme": "/ʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ch",
+                "phoneme": "/tʃ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say touch — ou = /ʌ/, ch at end. Reveal and blend.",
+          "expected_response": "Students say touch orally and connect meaning before blending.",
+          "correction_move": "Model touch orally again, reveal and blend.",
+          "observation_note": "Watch for ou = /ʌ/ and /tʃ/ at end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: tough",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "tough",
+            "back_text": "/t/ /ʌ/ /f/",
+            "audio": "/static/audio/block04_tough.mp3",
+            "blend_units": [
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "ough",
+                "phoneme": "/ʌf/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say tough — ough = /ʌf/ here. Same as rough and enough. Reveal and blend.",
+          "expected_response": "Students say tough orally and connect meaning before blending.",
+          "correction_move": "Model tough orally again, reveal and blend.",
+          "observation_note": "Watch for ough = /ʌf/ — not /aʊ/ or /uː/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: through",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "through",
+            "back_text": "/θ/ /r/ /uː/",
+            "audio": "/static/audio/block04_through.mp3",
+            "blend_units": [
+              {
+                "grapheme": "thr",
+                "phoneme": "/θr/",
+                "audio": null
+              },
+              {
+                "grapheme": "ough",
+                "phoneme": "/uː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say through — ough = /uː/ here. This is different from tough. thr triple cluster. Reveal and blend.",
+          "expected_response": "Students say through orally and connect meaning before blending.",
+          "correction_move": "Model through orally again, reveal and blend.",
+          "observation_note": "Watch for ough = /uː/ in through — contrast with tough.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: thought",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "thought",
+            "back_text": "/θ/ /ɔː/ /t/",
+            "audio": "/static/audio/block04_thought.mp3",
+            "blend_units": [
+              {
+                "grapheme": "th",
+                "phoneme": "/θ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ought",
+                "phoneme": "/ɔːt/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say thought — ough = /ɔːt/ here. th + ought. Reveal and blend.",
+          "expected_response": "Students say thought orally and connect meaning before blending.",
+          "correction_move": "Model thought orally again, reveal and blend.",
+          "observation_note": "Watch for ough = /ɔːt/ — three of the ough sounds in three lessons.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: double",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "double",
+            "back_text": "/d/ /ʌ/ /b/ /əl/",
+            "audio": "/static/audio/block04_double.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dou",
+                "phoneme": "/dʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ble",
+                "phoneme": "/bəl/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say double — ou = /ʌ/ in first syllable, -le ending. Reveal and blend.",
+          "expected_response": "Students say double orally and connect meaning before blending.",
+          "correction_move": "Model double orally again, reveal and blend.",
+          "observation_note": "Watch for ou = /ʌ/ and unstressed -le.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Review ou /ʌ/ and ough patterns With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "double",
+            "back_text": "/d/ /ʌ/ /b/ /əl/",
+            "audio": "/static/audio/block04_double.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dou",
+                "phoneme": "/dʌ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ble",
+                "phoneme": "/bəl/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for ou /ʌ/ and ough patterns.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: young",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "young",
+            "target_letters": [
+              "y",
+              "ou",
+              "ng"
+            ],
+            "slots": [
+              "y",
+              "ou",
+              "ng"
+            ],
+            "draggable_letters": [
+              "ng",
+              "ou",
+              "y"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build young left to right.",
+          "expected_response": "Students build young correctly: y | ou | ng.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: touch",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "touch",
+            "target_letters": [
+              "t",
+              "ou",
+              "ch"
+            ],
+            "slots": [
+              "t",
+              "ou",
+              "ch"
+            ],
+            "draggable_letters": [
+              "ch",
+              "ou",
+              "t"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build touch left to right.",
+          "expected_response": "Students build touch correctly: t | ou | ch.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: tough",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "tough",
+            "target_letters": [
+              "t",
+              "ough"
+            ],
+            "slots": [
+              "t",
+              "ough"
+            ],
+            "draggable_letters": [
+              "ough",
+              "t"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build tough left to right.",
+          "expected_response": "Students build tough correctly: t | ough.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: through",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "through",
+            "target_letters": [
+              "thr",
+              "ough"
+            ],
+            "slots": [
+              "thr",
+              "ough"
+            ],
+            "draggable_letters": [
+              "ough",
+              "thr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build through left to right.",
+          "expected_response": "Students build through correctly: thr | ough.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: thought",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "thought",
+            "target_letters": [
+              "th",
+              "ought"
+            ],
+            "slots": [
+              "th",
+              "ought"
+            ],
+            "draggable_letters": [
+              "ought",
+              "th"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build thought left to right.",
+          "expected_response": "Students build thought correctly: th | ought.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The tough plan was good.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "tough": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "good": "decodable"
+            },
+            "token_units": {
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on young, team, had, tough.",
+          "expected_response": "Students read \"The tough plan was good.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The young team had a tough plan.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "They thought it through.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "They": "sight",
+              "thought": "decodable",
+              "it": "decodable",
+              "through": "decodable"
+            },
+            "token_units": {
+              "thought": [
+                "th",
+                "ough",
+                "t"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "through": [
+                "thr",
+                "ough"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on thought, it, through.",
+          "expected_response": "Students read \"They thought it through.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"They thought it through.\".",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The double plan was tough.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "double": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "tough": "decodable"
+            },
+            "token_units": {
+              "double": [
+                "d",
+                "o",
+                "u",
+                "bl",
+                "e"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "tough": [
+                "t",
+                "ough"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on young, team, had, double.",
+          "expected_response": "Students read \"The double plan was tough.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The young team had a double plan.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The young team had a tough plan.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "young": "decodable",
+              "team": "decodable",
+              "had": "decodable",
+              "a": "sight",
+              "tough": "decodable",
+              "plan": "decodable"
+            },
+            "token_units": {
+              "young": [
+                "y",
+                "o",
+                "u",
+                "ng"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ],
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on went, through, tough, plan.",
+          "expected_response": "Students read \"The young team had a tough plan.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"They went through the tough plan.\".",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The tough plan was good.\nThey thought it through.\nThe double plan was tough.\nThe young team had a tough plan.\nThe plan was tough.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "How was the plan? What did the team have?",
+            "word_types": {
+              "The": "sight",
+              "tough": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "good": "decodable",
+              "They": "sight",
+              "thought": "decodable",
+              "it": "decodable",
+              "through": "decodable",
+              "double": "decodable",
+              "young": "decodable",
+              "team": "decodable",
+              "had": "decodable",
+              "a": "sight"
+            },
+            "token_units": {
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ],
+              "thought": [
+                "th",
+                "ough",
+                "t"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "through": [
+                "thr",
+                "ough"
+              ],
+              "double": [
+                "d",
+                "o",
+                "u",
+                "bl",
+                "e"
+              ],
+              "young": [
+                "y",
+                "o",
+                "u",
+                "ng"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The tough plan was good.\nThey thought it through.\nThe double plan was tough.\nThe young team had a tough plan.\nThe plan was tough.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "tough": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "good": "decodable",
+              "They": "sight",
+              "thought": "decodable",
+              "it": "decodable",
+              "through": "decodable",
+              "double": "decodable",
+              "young": "decodable",
+              "team": "decodable",
+              "had": "decodable",
+              "a": "sight"
+            },
+            "token_units": {
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ],
+              "thought": [
+                "th",
+                "ough",
+                "t"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "through": [
+                "thr",
+                "ough"
+              ],
+              "double": [
+                "d",
+                "o",
+                "u",
+                "bl",
+                "e"
+              ],
+              "young": [
+                "y",
+                "o",
+                "u",
+                "ng"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread ou /ʌ/ and ough patterns Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The tough plan was good.\nThey thought it through.\nThe double plan was tough.\nThe young team had a tough plan.\nThe plan was tough.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the ou /ʌ/ and ough patterns text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "The": "sight",
+              "tough": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "good": "decodable",
+              "They": "sight",
+              "thought": "decodable",
+              "it": "decodable",
+              "through": "decodable",
+              "double": "decodable",
+              "young": "decodable",
+              "team": "decodable",
+              "had": "decodable",
+              "a": "sight"
+            },
+            "token_units": {
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ],
+              "thought": [
+                "th",
+                "ough",
+                "t"
+              ],
+              "it": [
+                "i",
+                "t"
+              ],
+              "through": [
+                "thr",
+                "ough"
+              ],
+              "double": [
+                "d",
+                "o",
+                "u",
+                "bl",
+                "e"
+              ],
+              "young": [
+                "y",
+                "o",
+                "u",
+                "ng"
+              ],
+              "team": [
+                "t",
+                "ea",
+                "m"
+              ],
+              "had": [
+                "h",
+                "a",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Read the ou /ʌ/ and ough patterns text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: young",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_young.mp3",
+            "dictated_text": "young",
+            "expected_answer": "young",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "y",
+              "ou",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play young once. Replay only if needed. Remind students: /ŋ/ is spelled 'ng' — both letters go in one box.",
+          "expected_response": "Students write young accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: tough",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_tough.mp3",
+            "dictated_text": "tough",
+            "expected_answer": "tough",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "t",
+              "ou",
+              "g",
+              "h"
+            ]
+          },
+          "teacher_cue": "Play tough once. Replay only if needed.",
+          "expected_response": "Students write tough accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: thought",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_thought.mp3",
+            "dictated_text": "thought",
+            "expected_answer": "thought",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "th",
+              "ou",
+              "g",
+              "h",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play thought once. Replay only if needed. Remind students: /θ/ is spelled 'th' — both letters go in one box.",
+          "expected_response": "Students write thought accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "th_voiceless",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The tough plan was good.",
+            "expected_answer": "The tough plan was good.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "tough",
+              "rough",
+              "enough",
+              "through",
+              "thought"
+            ],
+            "highlighted_chunk": "ough",
+            "support_text": "All these words contain ough — but what sound does ough make in each?",
+            "token_units": {}
+          },
+          "teacher_cue": "Show the words. Ask: All these words contain ough — but what sound does ough make in each?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The tough plan was good.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "tough": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "good": "decodable"
+            },
+            "token_units": {
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use ou /ʌ/ and ough patterns In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The tough plan was good.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using ou /ʌ/ and ough patterns, then say a second sentence with one change.",
+            "word_types": {
+              "The": "sight",
+              "tough": "decodable",
+              "plan": "decodable",
+              "was": "sight",
+              "good": "decodable"
+            },
+            "token_units": {
+              "tough": [
+                "t",
+                "ough"
+              ],
+              "plan": [
+                "pl",
+                "a",
+                "n"
+              ],
+              "good": [
+                "g",
+                "oo",
+                "d"
+              ]
+            }
+          },
+          "teacher_cue": "Use ou /ʌ/ and ough patterns in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "ou has three sounds: /aʊ/ (out), /ʌ/ (young), /uː/ (group). Context is the guide.",
+                "phoneme": null
+              },
+              {
+                "label": "What plan did the young team have? What did they do first? Find the ou and ough words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using young or touch.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final ou /ʌ/ and ough patterns Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's ou /ʌ/ and ough patterns focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's ou /ʌ/ and ough patterns focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

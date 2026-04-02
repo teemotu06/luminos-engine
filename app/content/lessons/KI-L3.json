@@ -1,0 +1,841 @@
+{
+  "lesson_id": "KI-L3",
+  "unit_id": "KI",
+  "target_pattern": "cluster_epenthesis",
+  "title": "Korean Interference 3: Cluster Production — No Vowel Insertion",
+  "new_units": [],
+  "new_sight_words": [],
+  "sight_words": ["I","the","a","he","me","was","we","to","go","no","do","so","of","she","they","come","some","have","our"],
+  "korean_interference_active": ["cluster","r_l"],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: b",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "b",
+            "back_text": "/b/",
+            "audio": "/static/audio/b.mp3"
+          },
+          "teacher_cue": "What sound? Lips together, then pop open — voiced.",
+          "expected_response": "Students produce /b/ cleanly.",
+          "correction_move": "Model /b/ with lips together and pop. Students repeat three times.",
+          "observation_note": "Watch for devoicing — /b/ must be voiced. b is the onset in bl clusters.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: l",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "l",
+            "back_text": "/l/",
+            "audio": "/static/audio/l.mp3"
+          },
+          "teacher_cue": "What sound? Tongue tip touches ridge — air flows around both sides.",
+          "expected_response": "Students produce /l/ with tongue tip contact at the alveolar ridge.",
+          "correction_move": "Model /l/ with mirror — tongue tip contact visible. Students repeat three times.",
+          "observation_note": "Watch for /r/ substitution. /l/ is the second consonant in most l-clusters today.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound? Tongue curls back — no contact with roof.",
+          "expected_response": "Students produce /r/ with tongue curled back, no contact.",
+          "correction_move": "Model /r/ with mirror. Students repeat three times.",
+          "observation_note": "Watch for /l/ substitution. /r/ is the second consonant in gr, pr, tr, fr, br clusters.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Review: f",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "f",
+            "back_text": "/f/",
+            "audio": "/static/audio/f.mp3"
+          },
+          "teacher_cue": "What sound? Upper teeth on lower lip — air escapes. Voiceless.",
+          "expected_response": "Students produce /f/ cleanly.",
+          "correction_move": "Model /f/ with upper teeth on lower lip. Students repeat three times.",
+          "observation_note": "Note: f/p Korean interference may also be active. Watch for /p/ substitution for /f/.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: night",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_night.mp3",
+            "dictated_text": "night",
+            "expected_answer": "night",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["n","igh","t"]
+          },
+          "teacher_cue": "Play night once. Replay only if needed before checking.",
+          "expected_response": "Students write night accurately — note igh trigraph.",
+          "correction_move": "Replay night once, segment orally n-igh-t, then recheck.",
+          "observation_note": "Watch for correct spelling of igh and for voiced final t.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: sharp",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_sharp.mp3",
+            "dictated_text": "sharp",
+            "expected_answer": "sharp",
+            "elkonin_boxes": 4,
+            "grapheme_units": ["sh","ar","p",""]
+          },
+          "teacher_cue": "Play sharp once. Replay only if needed before checking.",
+          "expected_response": "Students write sharp accurately.",
+          "correction_move": "Replay sharp once, segment orally sh-ar-p, then recheck.",
+          "observation_note": "Watch for sh digraph at onset and for the ar vowel team.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: chair",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_chair.mp3",
+            "dictated_text": "chair",
+            "expected_answer": "chair",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["ch","air",""]
+          },
+          "teacher_cue": "Play chair once. Replay only if needed before checking.",
+          "expected_response": "Students write chair accurately.",
+          "correction_move": "Replay chair once, segment orally ch-air, then recheck.",
+          "observation_note": "Watch for ch digraph and for the air vowel team.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Cluster Rule: No Vowel Between",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "bl  cl  fl  gl  pl  sl",
+            "back_text": "No vowel between them"
+          },
+          "teacher_cue": "This is the key rule for English clusters: two consonants come together with NO vowel sound between them. Korean phonology tends to insert a short vowel — 'buh-lack' not 'black'. You must hold both consonants together in one movement. bl = [bl] as one unit, not [b][uh][l].",
+          "expected_response": "Students understand the no-vowel-insertion rule and attempt each cluster as a single unit.",
+          "correction_move": "Model each cluster label — say it once cleanly, then say the epenthesis error, then the correct form again. Students repeat the correct form chorally.",
+          "observation_note": "Watch for any vowel insertion between cluster consonants. This is the primary target for this lesson.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose: black or buh-lack?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "black",
+              "audio": "/static/audio/ki_black_correct.mp3"
+            },
+            "pair_B": {
+              "label": "buh-lack",
+              "audio": "/static/audio/ki_black_epenthesis.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "cluster",
+            "correction_routine": "black is correct — bl blend with no vowel between. buh-lack inserts a vowel — that is the Korean epenthesis error to avoid."
+          },
+          "teacher_cue": "Play both. Which is correct English? Students choose A.",
+          "expected_response": "Students identify A (black) as the correct English production.",
+          "correction_move": "Play each again. Model black slowly — bl as a single unit. Students repeat three times.",
+          "observation_note": "Watch whether students can auditorily discriminate the epenthesis error from the correct cluster production.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose: grip or guh-rip?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "grip",
+              "audio": "/static/audio/ki_grip_correct.mp3"
+            },
+            "pair_B": {
+              "label": "guh-rip",
+              "audio": "/static/audio/ki_grip_epenthesis.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "cluster",
+            "correction_routine": "grip is correct. guh-rip inserts a vowel between g and r."
+          },
+          "teacher_cue": "Play both. Which is correct? Students choose A.",
+          "expected_response": "Students identify A (grip) as the correct English production.",
+          "correction_move": "Play each again. Model grip slowly — gr as a single unit. Students repeat three times.",
+          "observation_note": "Watch for epenthesis discrimination — gr cluster here vs bl cluster in 03-02. Both cluster types must be heard correctly.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: black",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "black",
+            "back_text": "/bl/ /æ/ /k/",
+            "audio": "/static/audio/block04_black.mp3",
+            "blend_units": [
+              {"grapheme": "bl", "phoneme": "/bl/", "audio": null},
+              {"grapheme": "a", "phoneme": "/æ/", "audio": null},
+              {"grapheme": "ck", "phoneme": "/k/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say black. The bl cluster is one unit — no vowel between b and l. Reveal print and blend.",
+          "expected_response": "Students say black with clean bl onset and connect meaning.",
+          "correction_move": "Model bl slowly as a single movement. Students repeat black three times.",
+          "observation_note": "Watch for vowel insertion between the cluster consonants — 'buh-lack' is the epenthesis error.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: clap",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "clap",
+            "back_text": "/cl/ /æ/ /p/",
+            "audio": "/static/audio/block04_clap.mp3",
+            "blend_units": [
+              {"grapheme": "cl", "phoneme": "/kl/", "audio": null},
+              {"grapheme": "a", "phoneme": "/æ/", "audio": null},
+              {"grapheme": "p", "phoneme": "/p/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say clap. The cl cluster is one unit — no vowel between c and l. Mime clapping. Reveal print and blend.",
+          "expected_response": "Students say clap with clean cl onset and connect meaning.",
+          "correction_move": "Model cl slowly as a single movement. Students repeat clap three times.",
+          "observation_note": "Watch for vowel insertion between the cluster consonants — 'cuh-lap' is the epenthesis error.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: flag",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "flag",
+            "back_text": "/fl/ /æ/ /g/",
+            "audio": "/static/audio/block04_flag.mp3",
+            "blend_units": [
+              {"grapheme": "fl", "phoneme": "/fl/", "audio": null},
+              {"grapheme": "a", "phoneme": "/æ/", "audio": null},
+              {"grapheme": "g", "phoneme": "/g/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say flag. The fl cluster is one unit — no vowel between f and l. Show or describe a flag. Reveal print and blend.",
+          "expected_response": "Students say flag with clean fl onset and connect meaning.",
+          "correction_move": "Model fl slowly as a single movement. Students repeat flag three times.",
+          "observation_note": "Watch for vowel insertion between the cluster consonants — 'fuh-lag' is the epenthesis error.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: glow",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "glow",
+            "back_text": "/gl/ /oʊ/",
+            "audio": "/static/audio/block04_glow.mp3",
+            "blend_units": [
+              {"grapheme": "gl", "phoneme": "/gl/", "audio": null},
+              {"grapheme": "ow", "phoneme": "/oʊ/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say glow. The gl cluster is one unit — no vowel between g and l. Mime a warm soft light. Reveal print and blend.",
+          "expected_response": "Students say glow with clean gl onset and connect meaning.",
+          "correction_move": "Model gl slowly as a single movement. Students repeat glow three times.",
+          "observation_note": "Watch for vowel insertion between the cluster consonants — 'guh-low' is the epenthesis error.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: plan",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "plan",
+            "back_text": "/pl/ /æ/ /n/",
+            "audio": "/static/audio/block04_plan.mp3",
+            "blend_units": [
+              {"grapheme": "pl", "phoneme": "/pl/", "audio": null},
+              {"grapheme": "a", "phoneme": "/æ/", "audio": null},
+              {"grapheme": "n", "phoneme": "/n/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say plan. The pl cluster is one unit — no vowel between p and l. Use in a sentence: I have a plan. Reveal print and blend.",
+          "expected_response": "Students say plan with clean pl onset and connect meaning.",
+          "correction_move": "Model pl slowly as a single movement. Students repeat plan three times.",
+          "observation_note": "Watch for vowel insertion between the cluster consonants — 'puh-lan' is the epenthesis error.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: slim",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "slim",
+            "back_text": "/sl/ /ɪ/ /m/",
+            "audio": "/static/audio/block04_slim.mp3",
+            "blend_units": [
+              {"grapheme": "sl", "phoneme": "/sl/", "audio": null},
+              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
+              {"grapheme": "m", "phoneme": "/m/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say slim — thin. The sl cluster is one unit — no vowel between s and l. Reveal print and blend.",
+          "expected_response": "Students say slim with clean sl onset and connect meaning.",
+          "correction_move": "Model sl slowly as a single movement. Students repeat slim three times.",
+          "observation_note": "Watch for vowel insertion between the cluster consonants — 'suh-lim' is the epenthesis error.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: clap",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "clap",
+            "target_letters": ["cl","a","p"],
+            "slots": ["cl","a","p"],
+            "draggable_letters": ["p","a","cl"]
+          },
+          "teacher_cue": "Say the sounds and build clap left to right. The cl is one unit.",
+          "expected_response": "Students build clap correctly: cl | a | p.",
+          "correction_move": "Return to oral segmenting of clap, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students treat cl as a single unit — no vowel insertion when building.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: flag",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "flag",
+            "target_letters": ["fl","a","g"],
+            "slots": ["fl","a","g"],
+            "draggable_letters": ["g","a","fl"]
+          },
+          "teacher_cue": "Say the sounds and build flag left to right. The fl is one unit.",
+          "expected_response": "Students build flag correctly: fl | a | g.",
+          "correction_move": "Return to oral segmenting of flag, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students treat fl as a single unit — no vowel insertion when building.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: plan",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "plan",
+            "target_letters": ["pl","a","n"],
+            "slots": ["pl","a","n"],
+            "draggable_letters": ["n","a","pl"]
+          },
+          "teacher_cue": "Say the sounds and build plan left to right. The pl is one unit.",
+          "expected_response": "Students build plan correctly: pl | a | n.",
+          "correction_move": "Return to oral segmenting of plan, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students treat pl as a single unit — no vowel insertion when building.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: slim",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "slim",
+            "target_letters": ["sl","i","m"],
+            "slots": ["sl","i","m"],
+            "draggable_letters": ["m","i","sl"]
+          },
+          "teacher_cue": "Say the sounds and build slim left to right. The sl is one unit.",
+          "expected_response": "Students build slim correctly: sl | i | m.",
+          "correction_move": "Return to oral segmenting of slim, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students treat sl as a single unit — no vowel insertion when building.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I can clap and plan.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "can": "decodable",
+              "clap": "decodable",
+              "and": "decodable",
+              "plan": "decodable"
+            }
+          },
+          "teacher_cue": "I is a sight word. All other words decodable. Two cluster words: clap and plan.",
+          "expected_response": "Students read \"I can clap and plan.\" accurately — cl and pl clusters with no vowel insertion.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for vowel insertion on clap (cuh-lap) or plan (puh-lan).",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The flag is slim. He held the plan.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "flag": "decodable",
+              "is": "decodable",
+              "slim": "decodable",
+              "He": "sight",
+              "held": "decodable",
+              "the": "sight",
+              "plan": "decodable"
+            }
+          },
+          "teacher_cue": "The, the, He are sight words. All other words decodable. Cluster words: flag, slim, plan.",
+          "expected_response": "Students read both sentences accurately — fl, sl, pl clusters with no vowel insertion.",
+          "correction_move": "Model each sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for vowel insertion on flag (fuh-lag), slim (suh-lim), or plan (puh-lan).",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She can clap. The slim flag fell.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "can": "decodable",
+              "clap": "decodable",
+              "The": "sight",
+              "slim": "decodable",
+              "flag": "decodable",
+              "fell": "decodable"
+            }
+          },
+          "teacher_cue": "She, The are sight words. All other words decodable. Cluster words: clap, slim, flag.",
+          "expected_response": "Students read both sentences accurately — cl, sl, fl clusters with no vowel insertion.",
+          "correction_move": "Model each sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for vowel insertion on any cluster word. Three cluster words in close succession is a strong test.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I can clap.\nHe had a plan.\nThe flag is slim.\nShe can plan.\nI clap and plan.\nThe slim flag fell.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What is slim? What can she plan?",
+            "word_types": {
+              "I": "sight",
+              "can": "decodable",
+              "clap": "decodable",
+              "He": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "plan": "decodable",
+              "The": "sight",
+              "flag": "decodable",
+              "is": "decodable",
+              "slim": "decodable",
+              "She": "sight",
+              "and": "decodable",
+              "the": "sight",
+              "fell": "decodable"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
+          "observation_note": "Watch for cluster production accuracy throughout — clap, plan, flag, slim each require clean onset. Note any vowel insertion.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread — Fluency Pass",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I can clap.\nHe had a plan.\nThe flag is slim.\nShe can plan.\nI clap and plan.\nThe slim flag fell.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "can": "decodable",
+              "clap": "decodable",
+              "He": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "plan": "decodable",
+              "The": "sight",
+              "flag": "decodable",
+              "is": "decodable",
+              "slim": "decodable",
+              "She": "sight",
+              "and": "decodable",
+              "the": "sight",
+              "fell": "decodable"
+            }
+          },
+          "teacher_cue": "Students reread the passage. Listen specifically for cluster production — no vowel insertion. Students reread.",
+          "expected_response": "Students reread with improved fluency and consistent cluster production.",
+          "correction_move": "Pause and correct at the word level for any vowel insertion before continuing.",
+          "observation_note": "Watch whether cluster accuracy holds under fluency demands. Note any degradation.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Partner Read",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I can clap.\nHe had a plan.\nThe flag is slim.\nShe can plan.\nI clap and plan.\nThe slim flag fell.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "can": "decodable",
+              "clap": "decodable",
+              "He": "sight",
+              "had": "decodable",
+              "a": "sight",
+              "plan": "decodable",
+              "The": "sight",
+              "flag": "decodable",
+              "is": "decodable",
+              "slim": "decodable",
+              "She": "sight",
+              "and": "decodable",
+              "the": "sight",
+              "fell": "decodable"
+            }
+          },
+          "teacher_cue": "Students take turns reading one sentence each. Monitor cluster production throughout.",
+          "expected_response": "Students alternate reading sentences with accurate cluster production on every cluster word.",
+          "correction_move": "Pause and correct at the word level immediately for any vowel insertion.",
+          "observation_note": "Watch for cluster accuracy in partner reading — students sometimes revert under the pressure of taking turns.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: clap",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_clap.mp3",
+            "dictated_text": "clap",
+            "expected_answer": "clap",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["cl","a","p"]
+          },
+          "teacher_cue": "Play clap once. Replay only if needed before checking.",
+          "expected_response": "Students write clap accurately — note cl cluster as a single onset unit.",
+          "correction_move": "Replay clap once, segment orally cl-a-p, then recheck.",
+          "observation_note": "Watch whether students encode the cl cluster correctly — no vowel insertion in the spelling.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: flag",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_flag.mp3",
+            "dictated_text": "flag",
+            "expected_answer": "flag",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["fl","a","g"]
+          },
+          "teacher_cue": "Play flag once. Replay only if needed before checking.",
+          "expected_response": "Students write flag accurately — note fl cluster as a single onset unit.",
+          "correction_move": "Replay flag once, segment orally fl-a-g, then recheck.",
+          "observation_note": "Watch whether students encode the fl cluster correctly — no vowel insertion in the spelling.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: plan",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_plan.mp3",
+            "dictated_text": "plan",
+            "expected_answer": "plan",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["pl","a","n"]
+          },
+          "teacher_cue": "Play plan once. Replay only if needed before checking.",
+          "expected_response": "Students write plan accurately — note pl cluster as a single onset unit.",
+          "correction_move": "Replay plan once, segment orally pl-a-n, then recheck.",
+          "observation_note": "Watch whether students encode the pl cluster correctly — no vowel insertion in the spelling.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Choose: clap or cuh-lap?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "clap",
+              "audio": "/static/audio/ki_clap_correct.mp3"
+            },
+            "pair_B": {
+              "label": "cuh-lap",
+              "audio": "/static/audio/ki_clap_epenthesis.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "cluster",
+            "correction_routine": "clap = cl blend, no vowel. cuh-lap = epenthesis error."
+          },
+          "teacher_cue": "Which is correct?",
+          "expected_response": "Students identify A (clap) as the correct English production.",
+          "correction_move": "Play each again. Model clap slowly — cl as a single unit. Students repeat three times.",
+          "observation_note": "Watch whether epenthesis discrimination is stable at lesson close.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Production Check: Cluster Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": ["clap","flag","plan","slim","glow","black"],
+            "support_text": "Each word starts with a two-consonant cluster. Say each one. Hold both consonants together — no vowel between them."
+          },
+          "teacher_cue": "Students produce each cluster word clearly. Check for no vowel insertion on each onset.",
+          "expected_response": "Students say each word with a clean cluster onset — no vowel insertion on any of the six words.",
+          "correction_move": "For any vowel insertion, isolate the cluster, say it as a single movement, then re-attempt the full word.",
+          "observation_note": "Watch for production consistency across all six cluster types. Note which clusters — bl, cl, fl, gl, pl, sl — still trigger epenthesis.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "What is vowel epenthesis and why must we avoid it in English clusters?",
+                "phoneme": null
+              },
+              {
+                "label": "Say each word: clap, flag, plan, slim. No vowel insertion.",
+                "phoneme": null
+              },
+              {
+                "label": "Say one sentence using a cluster word from today.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Check: can students explain epenthesis? Are all four cluster words produced cleanly? Is the oral sentence accurate?"
+          },
+          "teacher_cue": "Close with concept recall, production check on all four cluster words, and one oral transfer sentence.",
+          "expected_response": "Students explain epenthesis in their own words, produce the four cluster words cleanly, and construct one sentence with a cluster word.",
+          "correction_move": "If any cluster triggers vowel insertion, isolate that cluster, drill it as a unit, then re-attempt the word before closing.",
+          "observation_note": "Watch for whether students can verbalize the rule, not just produce it. Note students who need continued cluster drilling in future lessons.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

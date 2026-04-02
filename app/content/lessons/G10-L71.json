@@ -1,0 +1,1678 @@
+{
+  "lesson_id": "G10-L71",
+  "unit_id": "G10",
+  "target_pattern": "y_ee_programme_review",
+  "title": "Group 10, Lesson 71: y as /iː/ + Programme Review & Celebration",
+  "new_units": [
+    "y_ee_programme_review"
+  ],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: morphological families",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "morphological families",
+            "back_text": "roots and affixes",
+            "audio": "/static/audio/morphological_families.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce roots and affixes quickly and cleanly.",
+          "correction_move": "Model roots and affixes, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: Greek roots",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "Greek roots",
+            "back_text": "graph phone scope meter bio",
+            "audio": "/static/audio/Greek_roots.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce graph phone scope meter bio quickly and cleanly.",
+          "correction_move": "Model graph phone scope meter bio, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: Latin roots",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "Latin roots",
+            "back_text": "port rupt dict struct vis",
+            "audio": "/static/audio/Latin_roots.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce port rupt dict struct vis quickly and cleanly.",
+          "correction_move": "Model port rupt dict struct vis, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: they",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "they",
+            "back_text": "they — sight word",
+            "audio": "/static/audio/sight_they.mp3",
+            "word_types": {
+              "they": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say they immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: come",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "come",
+            "back_text": "come — sight word",
+            "audio": "/static/audio/sight_come.mp3",
+            "word_types": {
+              "come": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say come immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: some",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "some",
+            "back_text": "some — sight word",
+            "audio": "/static/audio/sight_some.mp3",
+            "word_types": {
+              "some": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say some immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: have",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "have",
+            "back_text": "have — sight word",
+            "audio": "/static/audio/sight_have.mp3",
+            "word_types": {
+              "have": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say have immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: national",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_national.mp3",
+            "dictated_text": "national",
+            "expected_answer": "national",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "n",
+              "a",
+              "t",
+              "i",
+              "o",
+              "n",
+              "a",
+              "l"
+            ]
+          },
+          "teacher_cue": "Play national once. Replay only if needed.",
+          "expected_response": "Students write national accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: transform",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_transform.mp3",
+            "dictated_text": "transform",
+            "expected_answer": "transform",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "t",
+              "r",
+              "a",
+              "n",
+              "s",
+              "f",
+              "or",
+              "m"
+            ]
+          },
+          "teacher_cue": "Play transform once. Replay only if needed.",
+          "expected_response": "Students write transform accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: information",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_information.mp3",
+            "dictated_text": "information",
+            "expected_answer": "information",
+            "elkonin_boxes": 10,
+            "grapheme_units": [
+              "i",
+              "n",
+              "f",
+              "or",
+              "m",
+              "a",
+              "t",
+              "i",
+              "o",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play information once. Replay only if needed.",
+          "expected_response": "Students write information accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Consolidate y as /iː/ + Programme Review",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y at end of multi-syllable = /iː/",
+            "back_text": "quickly, daily, friendly, lonely",
+            "audio": "/static/audio/y_ee_final.mp3"
+          },
+          "teacher_cue": "Final lesson of the LUMINOS programme. First: y as /iː/ in -ly, -ty, -ry, -ny, -dy endings — quickly, daily, friendly, lonely, twenty, fifty, every, early, ready. The -ly suffix attached to adjectives makes adverbs: quick → quickly, slow → slowly, friend → friendly. Second: full programme review — from s·a·t to morphological families. You now have the tools to decode the great majority of English words. What remains is vocabulary breadth and reading experience.",
+          "expected_response": "Students consolidate y=/iː/ in -ly and related endings, and reflect on the full scope of the programme.",
+          "correction_move": "Review the three y rules one final time. Then run a rapid programme review — students decode challenge words from across all 71 lessons. Celebrate the achievement.",
+          "observation_note": "Watch for any remaining y=/aɪ/ substitution in multi-syllable words.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say y as /iː/ In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "y at end of multi-syllable = /iː/",
+            "back_text": "quickly, daily, friendly, lonely",
+            "audio": "/static/audio/y_ee_final.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect y as /iː/ to one strong word from today.",
+          "expected_response": "Students say y as /iː/ clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: quickly",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "quickly",
+            "back_text": "/k/ /w/ /ɪ/ /k/ /l/ /iː/",
+            "audio": "/static/audio/block04_quickly.mp3",
+            "blend_units": [
+              {
+                "grapheme": "quick",
+                "phoneme": "/kwɪk/",
+                "audio": null
+              },
+              {
+                "grapheme": "ly",
+                "phoneme": "/liː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say quickly — quick + ly. -ly adds /iː/ at end. Reveals the adverb suffix. Reveal and blend.",
+          "expected_response": "Students say quickly orally and connect meaning before blending.",
+          "correction_move": "Model quickly orally again, reveal and blend.",
+          "observation_note": "Watch for qu onset and y=/iː/ in -ly.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: friendly",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "friendly",
+            "back_text": "/f/ /r/ /e/ /n/ /d/ /l/ /iː/",
+            "audio": "/static/audio/block04_friendly.mp3",
+            "blend_units": [
+              {
+                "grapheme": "friend",
+                "phoneme": "/frend/",
+                "audio": null
+              },
+              {
+                "grapheme": "ly",
+                "phoneme": "/liː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say friendly — friend + ly. -ly added to a noun to make an adjective here. Reveal and blend.",
+          "expected_response": "Students say friendly orally and connect meaning before blending.",
+          "correction_move": "Model friendly orally again, reveal and blend.",
+          "observation_note": "Watch for fr cluster and y=/iː/ in -ly.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: daily",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "daily",
+            "back_text": "/d/ /eɪ/ /l/ /iː/",
+            "audio": "/static/audio/block04_daily.mp3",
+            "blend_units": [
+              {
+                "grapheme": "dai",
+                "phoneme": "/deɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ly",
+                "phoneme": "/liː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say daily — day + i + ly. Happening every day. Reveal and blend.",
+          "expected_response": "Students say daily orally and connect meaning before blending.",
+          "correction_move": "Model daily orally again, reveal and blend.",
+          "observation_note": "Watch for ai vowel team in dai- and y=/iː/ at end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: twenty",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "twenty",
+            "back_text": "/t/ /w/ /e/ /n/ /t/ /iː/",
+            "audio": "/static/audio/block04_twenty.mp3",
+            "blend_units": [
+              {
+                "grapheme": "twen",
+                "phoneme": "/twen/",
+                "audio": null
+              },
+              {
+                "grapheme": "ty",
+                "phoneme": "/tiː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say twenty — twen + ty. y=/iː/ at end. Reveal and blend.",
+          "expected_response": "Students say twenty orally and connect meaning before blending.",
+          "correction_move": "Model twenty orally again, reveal and blend.",
+          "observation_note": "Watch for tw onset and y=/iː/ in -ty.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: lonely",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "lonely",
+            "back_text": "/l/ /oʊ/ /n/ /l/ /iː/",
+            "audio": "/static/audio/block04_lonely.mp3",
+            "blend_units": [
+              {
+                "grapheme": "lone",
+                "phoneme": "/loʊn/",
+                "audio": null
+              },
+              {
+                "grapheme": "ly",
+                "phoneme": "/liː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say lonely — lone + ly. CVCe in lone (long /oʊ/), then -ly suffix. Reveal and blend.",
+          "expected_response": "Students say lonely orally and connect meaning before blending.",
+          "correction_move": "Model lonely orally again, reveal and blend.",
+          "observation_note": "Watch for CVCe in lone and y=/iː/ in -ly.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: every",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "every",
+            "back_text": "/e/ /v/ /r/ /iː/",
+            "audio": "/static/audio/block04_every.mp3",
+            "blend_units": [
+              {
+                "grapheme": "ev",
+                "phoneme": "/ev/",
+                "audio": null
+              },
+              {
+                "grapheme": "ery",
+                "phoneme": "/riː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say every — two syllables, y at end = /iː/. A high-frequency word now fully decodable. Reveal and blend.",
+          "expected_response": "Students say every orally and connect meaning before blending.",
+          "correction_move": "Model every orally again, reveal and blend.",
+          "observation_note": "Watch for /v/ not /b/ and y=/iː/ at end.",
+          "korean_interference_flag": "v_b",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Review y as /iː/ With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "every",
+            "back_text": "/e/ /v/ /r/ /iː/",
+            "audio": "/static/audio/block04_every.mp3",
+            "blend_units": [
+              {
+                "grapheme": "ev",
+                "phoneme": "/ev/",
+                "audio": null
+              },
+              {
+                "grapheme": "ery",
+                "phoneme": "/riː/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for y as /iː/.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "v_b",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: quickly",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "quickly",
+            "target_letters": [
+              "quick",
+              "ly"
+            ],
+            "slots": [
+              "quick",
+              "ly"
+            ],
+            "draggable_letters": [
+              "ly",
+              "quick"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build quickly left to right.",
+          "expected_response": "Students build quickly correctly: quick | ly.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: friendly",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "friendly",
+            "target_letters": [
+              "friend",
+              "ly"
+            ],
+            "slots": [
+              "friend",
+              "ly"
+            ],
+            "draggable_letters": [
+              "ly",
+              "friend"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build friendly left to right.",
+          "expected_response": "Students build friendly correctly: friend | ly.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: daily",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "daily",
+            "target_letters": [
+              "dai",
+              "ly"
+            ],
+            "slots": [
+              "dai",
+              "ly"
+            ],
+            "draggable_letters": [
+              "ly",
+              "dai"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build daily left to right.",
+          "expected_response": "Students build daily correctly: dai | ly.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: twenty",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "twenty",
+            "target_letters": [
+              "twen",
+              "ty"
+            ],
+            "slots": [
+              "twen",
+              "ty"
+            ],
+            "draggable_letters": [
+              "ty",
+              "twen"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build twenty left to right.",
+          "expected_response": "Students build twenty correctly: twen | ty.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: lonely",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "lonely",
+            "target_letters": [
+              "lone",
+              "ly"
+            ],
+            "slots": [
+              "lone",
+              "ly"
+            ],
+            "draggable_letters": [
+              "ly",
+              "lone"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build lonely left to right.",
+          "expected_response": "Students build lonely correctly: lone | ly.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every story was friendly.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Every": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on Every, story, friendly.",
+          "expected_response": "Students read \"Every story was friendly.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"Every story was friendly.\".",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every daily story was friendly.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Every": "decodable",
+              "daily": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "daily": [
+                "d",
+                "ai",
+                "l",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on Every, daily, story, friendly.",
+          "expected_response": "Students read \"Every daily story was friendly.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"Every daily story was friendly.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The lonely story was not friendly.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "lonely": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "not": "decodable",
+              "friendly": "decodable"
+            },
+            "token_units": {
+              "lonely": [
+                "l",
+                "o",
+                "n",
+                "e",
+                "l",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "not": [
+                "n",
+                "o",
+                "t"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on lonely, story, not, friendly.",
+          "expected_response": "Students read \"The lonely story was not friendly.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The lonely story was not friendly.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Many stories were read daily.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Many": "decodable",
+              "stories": "decodable",
+              "were": "decodable",
+              "read": "decodable",
+              "daily": "decodable"
+            },
+            "token_units": {
+              "Many": [
+                "m",
+                "a",
+                "n",
+                "y"
+              ],
+              "stories": [
+                "st",
+                "or",
+                "i",
+                "e",
+                "s"
+              ],
+              "were": [
+                "w",
+                "er",
+                "e"
+              ],
+              "read": [
+                "r",
+                "ea",
+                "d"
+              ],
+              "daily": [
+                "d",
+                "ai",
+                "l",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on Twenty, stories, were, read.",
+          "expected_response": "Students read \"Many stories were read daily.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"Twenty stories were read daily.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every story was friendly.\nEvery daily story was friendly.\nThe lonely story was not friendly.\nMany stories were read daily.\nEvery story was friendly at the end.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "How was every story? What were read daily?",
+            "word_types": {
+              "Every": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable",
+              "daily": "decodable",
+              "The": "sight",
+              "lonely": "decodable",
+              "not": "decodable",
+              "Many": "decodable",
+              "stories": "decodable",
+              "were": "decodable",
+              "read": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "end": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ],
+              "daily": [
+                "d",
+                "ai",
+                "l",
+                "y"
+              ],
+              "lonely": [
+                "l",
+                "o",
+                "n",
+                "e",
+                "l",
+                "y"
+              ],
+              "not": [
+                "n",
+                "o",
+                "t"
+              ],
+              "Many": [
+                "m",
+                "a",
+                "n",
+                "y"
+              ],
+              "stories": [
+                "st",
+                "or",
+                "i",
+                "e",
+                "s"
+              ],
+              "were": [
+                "w",
+                "er",
+                "e"
+              ],
+              "read": [
+                "r",
+                "ea",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "end": [
+                "e",
+                "nd"
+              ]
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for multi-syllable decoding accuracy.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every story was friendly.\nEvery daily story was friendly.\nThe lonely story was not friendly.\nMany stories were read daily.\nEvery story was friendly at the end.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "Every": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable",
+              "daily": "decodable",
+              "The": "sight",
+              "lonely": "decodable",
+              "not": "decodable",
+              "Many": "decodable",
+              "stories": "decodable",
+              "were": "decodable",
+              "read": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "end": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ],
+              "daily": [
+                "d",
+                "ai",
+                "l",
+                "y"
+              ],
+              "lonely": [
+                "l",
+                "o",
+                "n",
+                "e",
+                "l",
+                "y"
+              ],
+              "not": [
+                "n",
+                "o",
+                "t"
+              ],
+              "Many": [
+                "m",
+                "a",
+                "n",
+                "y"
+              ],
+              "stories": [
+                "st",
+                "or",
+                "i",
+                "e",
+                "s"
+              ],
+              "were": [
+                "w",
+                "er",
+                "e"
+              ],
+              "read": [
+                "r",
+                "ea",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "end": [
+                "e",
+                "nd"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread y as /iː/ Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every story was friendly.\nEvery daily story was friendly.\nThe lonely story was not friendly.\nMany stories were read daily.\nEvery story was friendly at the end.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the y as /iː/ text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "Every": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable",
+              "daily": "decodable",
+              "The": "sight",
+              "lonely": "decodable",
+              "not": "decodable",
+              "Many": "decodable",
+              "stories": "decodable",
+              "were": "decodable",
+              "read": "decodable",
+              "at": "decodable",
+              "the": "sight",
+              "end": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ],
+              "daily": [
+                "d",
+                "ai",
+                "l",
+                "y"
+              ],
+              "lonely": [
+                "l",
+                "o",
+                "n",
+                "e",
+                "l",
+                "y"
+              ],
+              "not": [
+                "n",
+                "o",
+                "t"
+              ],
+              "Many": [
+                "m",
+                "a",
+                "n",
+                "y"
+              ],
+              "stories": [
+                "st",
+                "or",
+                "i",
+                "e",
+                "s"
+              ],
+              "were": [
+                "w",
+                "er",
+                "e"
+              ],
+              "read": [
+                "r",
+                "ea",
+                "d"
+              ],
+              "at": [
+                "a",
+                "t"
+              ],
+              "end": [
+                "e",
+                "nd"
+              ]
+            }
+          },
+          "teacher_cue": "Read the y as /iː/ text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: quickly",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_quickly.mp3",
+            "dictated_text": "quickly",
+            "expected_answer": "quickly",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "q",
+              "u",
+              "i",
+              "ck",
+              "l",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play quickly once. Replay only if needed. Remind students: /k/ is spelled 'ck' — both letters go in one box.",
+          "expected_response": "Students write quickly accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: friendly",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_friendly.mp3",
+            "dictated_text": "friendly",
+            "expected_answer": "friendly",
+            "elkonin_boxes": 8,
+            "grapheme_units": [
+              "f",
+              "r",
+              "i",
+              "e",
+              "n",
+              "d",
+              "l",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play friendly once. Replay only if needed.",
+          "expected_response": "Students write friendly accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: twenty",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_twenty.mp3",
+            "dictated_text": "twenty",
+            "expected_answer": "twenty",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "t",
+              "w",
+              "e",
+              "n",
+              "t",
+              "y"
+            ]
+          },
+          "teacher_cue": "Play twenty once. Replay only if needed.",
+          "expected_response": "Students write twenty accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "Every story was friendly.",
+            "expected_answer": "Every story was friendly.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "quickly",
+              "slowly",
+              "friendly",
+              "lovely",
+              "clearly"
+            ],
+            "highlighted_chunk": "-ly",
+            "support_text": "What does -ly add to each base word? What part of speech does it create?",
+            "token_units": {}
+          },
+          "teacher_cue": "Show the words. Ask: What does -ly add to each base word? What part of speech does it create?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every story was friendly.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "Every": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use y as /iː/ In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Every story was friendly.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using y as /iː/, then say a second sentence with one change.",
+            "word_types": {
+              "Every": "decodable",
+              "story": "decodable",
+              "was": "sight",
+              "friendly": "decodable"
+            },
+            "token_units": {
+              "Every": [
+                "e",
+                "v",
+                "er",
+                "y"
+              ],
+              "story": [
+                "st",
+                "or",
+                "y"
+              ],
+              "friendly": [
+                "fr",
+                "i",
+                "e",
+                "nd",
+                "l",
+                "y"
+              ]
+            }
+          },
+          "teacher_cue": "Use y as /iː/ in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "y has three sounds: /j/ (yes), /aɪ/ (my), /iː/ (happy, quickly). Which lesson taught each?",
+                "phoneme": null
+              },
+              {
+                "label": "Which story was friendly? Which story was not lonely? Find the words ending in y = /iː/ in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using quickly or friendly.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final y as /iː/ Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's y as /iː/ focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's y as /iː/ focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

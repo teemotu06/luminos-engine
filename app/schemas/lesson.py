@@ -11,6 +11,8 @@ class Lesson(BaseModel):
     unit_id: str
     target_pattern: str
     title: str
+    new_units: List[str] = Field(default_factory=list)
+    new_sight_words: List[str] = Field(default_factory=list)
     korean_interference_active: List[str] = Field(default_factory=list)
     content_pack_status: str = "draft"
     json_path: Optional[str] = None

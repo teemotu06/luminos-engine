@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}New Class — LUMINOS{% endblock %}
+
+{% block content %}
+<div class="page launcher">
+
+  <header class="launcher__header">
+    <a class="launcher__back" href="/classes/">← Classes</a>
+    <div class="launcher__meta-label">LUMINOS · New Class</div>
+    <h1 class="launcher__title">Create a class</h1>
+  </header>
+
+  <main id="main-content" class="launcher__main">
+    {% if error %}
+    <div class="form-error">{{ error }}</div>
+    {% endif %}
+
+    <form class="luminos-form" method="post" action="/classes/new">
+      <div class="luminos-form__field">
+        <label class="luminos-form__label" for="class_name">Class name</label>
+        <input
+          class="luminos-form__input"
+          type="text"
+          id="class_name"
+          name="class_name"
+          placeholder="e.g. Year 1 Blue"
+          required
+          autofocus>
+      </div>
+      <div class="luminos-form__field">
+        <label class="luminos-form__label" for="description">Description <span class="luminos-form__optional">(optional)</span></label>
+        <input
+          class="luminos-form__input"
+          type="text"
+          id="description"
+          name="description"
+          placeholder="e.g. Monday / Wednesday group">
+      </div>
+      <button class="luminos-form__submit" type="submit">Create class</button>
+    </form>
+  </main>
+
+</div>
+{% endblock %}

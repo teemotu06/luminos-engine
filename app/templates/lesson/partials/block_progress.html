@@ -1,4 +1,4 @@
-<nav class="block-progress" aria-label="Lesson block progress" x-show="!presentationMode" x-cloak>
+<nav class="block-progress" aria-label="Lesson block progress" x-cloak>
   {% if ordered_slides %}
     {% for block in ordered_blocks %}
       {% set block_start_index = ordered_slides | selectattr('block.block_id', 'equalto', block.block_id) | map(attribute='block_first_slide_index') | first %}
@@ -9,6 +9,7 @@
         @click="goToSlide({{ block_start_index }})">
         <span class="block-progress__number">Block {{ block.block_id }}</span>
         <span class="block-progress__code">{{ block.label }}</span>
+        <span class="block-progress__meta">{{ block.slides | length }} slide{{ 's' if block.slides | length != 1 }}</span>
       </button>
     {% endfor %}
   {% endif %}

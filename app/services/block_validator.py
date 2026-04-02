@@ -2,6 +2,11 @@ from app.schemas.lesson import Lesson
 from app.services.block_registry import BLOCK_REGISTRY
 
 
+ALTERNATE_BLOCK_LABELS = {
+    ("KI", "09"): {"Production Practice"},
+}
+
+
 def validate_lesson_blocks(lesson: Lesson) -> None:
     if not lesson.blocks:
         return
@@ -27,10 +32,13 @@ def validate_lesson_blocks(lesson: Lesson) -> None:
                 f"Block payload mismatch. Expected block_id {block_id}, got {lesson_block.block_id}."
             )
 
-        if lesson_block.label != registry_block.label:
+        allowed_labels = {registry_block.label}
+        allowed_labels.update(ALTERNATE_BLOCK_LABELS.get((lesson.unit_id, block_id), set()))
+
+        if lesson_block.label not in allowed_labels:
             raise ValueError(
                 f"Invalid block label for block {block_id}. "
-                f"Expected {registry_block.label!r}, got {lesson_block.label!r}."
+                f"Expected one of {sorted(allowed_labels)!r}, got {lesson_block.label!r}."
             )
 
         for slide in lesson_block.slides:

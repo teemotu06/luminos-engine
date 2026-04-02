@@ -3,6 +3,15 @@
   "unit_id": "G1",
   "target_pattern": "s · a · t",
   "title": "Group 1, Lesson 1: s, a, t",
+  "new_units": [
+    "s",
+    "a",
+    "t"
+  ],
+  "new_sight_words": [
+    "I",
+    "a"
+  ],
   "korean_interference_active": [],
   "content_pack_status": "draft",
   "blocks": {
@@ -42,7 +51,10 @@
           "content_payload": {
             "dictated_text": "s",
             "expected_answer": "s",
-            "elkonin_boxes": 1
+            "elkonin_boxes": 1,
+            "grapheme_units": [
+              "s"
+            ]
           },
           "teacher_cue": "There are no prior words yet. Use this block to establish the encoding routine with single sound-to-letter practice.",
           "expected_response": "Students attempt to hear one sound and write one matching letter.",
@@ -75,8 +87,32 @@
           "observation_note": "Voiceless alveolar fricative. Tongue tip near the ridge behind the upper teeth. Air flows continuously.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Look at the letter. Listen.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "prompt": "Listen. /s/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "prompt": "Everyone. Say /s/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "03-02",
@@ -94,8 +130,32 @@
           "observation_note": "Short open front vowel. Mouth open wide, tongue low and flat, jaw drops noticeably.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Look at the letter. Listen.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "prompt": "Listen. /a/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "prompt": "Everyone. Say /a/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "03-03",
@@ -113,8 +173,32 @@
           "observation_note": "Voiceless alveolar stop. Tongue tip touches the ridge behind the upper teeth, builds pressure, then releases.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Look at the letter. Listen.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "prompt": "Listen. /t/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "prompt": "Everyone. Say /t/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -125,6 +209,71 @@
         {
           "slide_id": "04-01",
           "block_id": "04",
+          "slide_title": "Sight Word: I",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Sight word — underlined. Say it as a whole unit. It uses the /aɪ/ diphthong — not taught until Lesson 34. Use it in a short oral sentence: I sat. Then reveal.",
+          "expected_response": "Students say I orally and recognise it as a whole-unit sight word — not a blend.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch whether students try to blend I. Redirect — sight word, say it whole. I appears in Block 06 and Block 07 of this lesson.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Reader Prep: sat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sat",
+            "back_text": "/s/ /a/ /t/"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read sat accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look. New word.",
+                "teacher_prompt": "Introduce sat. Keep it oral first, then reveal print.",
+                "tts_prompt": "Look. New word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. sat.",
+                "teacher_prompt": "Model sat clearly once.",
+                "tts_prompt": "Listen. sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say sat.",
+                "teacher_prompt": "Choral response. Listen for clean word reading.",
+                "tts_prompt": "Everyone. Say sat.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
           "slide_title": "Vocabulary Warm-Up",
           "view_type": "flashcard",
           "content_payload": {
@@ -132,9 +281,21 @@
             "back_text": "sat",
             "image": "/static/images/vocab/sat.png",
             "blend_units": [
-              { "grapheme": "s", "phoneme": "/s/", "audio": null },
-              { "grapheme": "a", "phoneme": "/æ/", "audio": null },
-              { "grapheme": "t", "phoneme": "/t/", "audio": null }
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
             ]
           },
           "teacher_cue": "Teach sat orally first, then reveal print.",
@@ -144,10 +305,36 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look. New word.",
+                "teacher_prompt": "Introduce sat. Keep it oral first, then reveal print.",
+                "tts_prompt": "Look. New word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. sat.",
+                "teacher_prompt": "Model sat clearly once.",
+                "tts_prompt": "Listen. sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say sat.",
+                "teacher_prompt": "Choral response. Listen for clean word reading.",
+                "tts_prompt": "Everyone. Say sat.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
-          "slide_id": "04-02",
+          "slide_id": "04-04",
           "block_id": "04",
           "slide_title": "Vocabulary Warm-Up",
           "view_type": "flashcard",
@@ -156,8 +343,16 @@
             "back_text": "at",
             "image": "/static/images/vocab/at.png",
             "blend_units": [
-              { "grapheme": "a", "phoneme": "/æ/", "audio": null },
-              { "grapheme": "t", "phoneme": "/t/", "audio": null }
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
             ]
           },
           "teacher_cue": "Teach at orally in a simple phrase, then reveal print.",
@@ -167,10 +362,36 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
-          "next_action": "manual_next"
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look. New word.",
+                "teacher_prompt": "Introduce at in a short phrase before print.",
+                "tts_prompt": "Look. New word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. at.",
+                "teacher_prompt": "Model at clearly once.",
+                "tts_prompt": "Listen. at.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say at.",
+                "teacher_prompt": "Choral response. Listen for accurate word reading.",
+                "tts_prompt": "Everyone. Say at.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
-          "slide_id": "04-03",
+          "slide_id": "04-05",
           "block_id": "04",
           "slide_title": "Vocabulary Warm-Up",
           "view_type": "flashcard",
@@ -179,13 +400,69 @@
             "back_text": "a",
             "image": "/static/images/vocab/a.png",
             "blend_units": [
-              { "grapheme": "a", "phoneme": "/æ/", "audio": null }
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              }
             ]
           },
           "teacher_cue": "Point to the picture and model: a jar. Explain that a is used before one thing. Students repeat the phrase together.",
           "expected_response": "Students recognise a as a high-frequency useful word.",
           "correction_move": "Model a in a short phrase, then repeat and reveal print.",
           "observation_note": "Sight word active this lesson alongside the and I.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look at the picture.",
+                "teacher_prompt": "Set meaning first. One thing only.",
+                "tts_prompt": "Look at the picture.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. a jar.",
+                "teacher_prompt": "Model the phrase once.",
+                "tts_prompt": "Listen. a jar.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say a jar.",
+                "teacher_prompt": "Choral response. Confirm meaning and phrase reading.",
+                "tts_prompt": "Everyone. Say a jar.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Review today's sounds With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "",
+            "back_text": "a",
+            "image": "/static/images/vocab/a.png",
+            "blend_units": [
+              {
+                "grapheme": "a",
+                "phoneme": "/æ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for today's sounds.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
@@ -204,9 +481,21 @@
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "sat",
-            "target_letters": ["s", "a", "t"],
-            "slots": ["s", "a", "t"],
-            "draggable_letters": ["a", "t", "s"]
+            "target_letters": [
+              "s",
+              "a",
+              "t"
+            ],
+            "slots": [
+              "s",
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "a",
+              "t",
+              "s"
+            ]
           },
           "teacher_cue": "Build sat left to right.",
           "expected_response": "Students blend and build sat accurately.",
@@ -214,8 +503,32 @@
           "observation_note": "This block establishes the blending routine. Keep volume low and process explicit.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "prompt": "Get ready to write.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "dictate",
+                "prompt": "Write sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "prompt": "Check every sound. Mark the class.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "05-02",
@@ -224,9 +537,18 @@
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "at",
-            "target_letters": ["a", "t"],
-            "slots": ["a", "t"],
-            "draggable_letters": ["t", "a"]
+            "target_letters": [
+              "a",
+              "t"
+            ],
+            "slots": [
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "a"
+            ]
           },
           "teacher_cue": "Build at left to right.",
           "expected_response": "Students build at accurately.",
@@ -234,7 +556,11 @@
           "observation_note": "Only three phonemes are available in Lesson 1, so the word list is intentionally short.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -244,9 +570,18 @@
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "as",
-            "target_letters": ["a", "s"],
-            "slots": ["a", "s"],
-            "draggable_letters": ["s", "a"]
+            "target_letters": [
+              "a",
+              "s"
+            ],
+            "slots": [
+              "a",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "a"
+            ]
           },
           "teacher_cue": "Build as left to right.",
           "expected_response": "Students build as accurately.",
@@ -254,7 +589,45 @@
           "observation_note": "The focus is establishing the blending routine, not volume.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build today's sounds And Rebuild",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "as",
+            "target_letters": [
+              "a",
+              "s"
+            ],
+            "slots": [
+              "a",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "a"
+            ],
+            "prompt_text": "Build the today's sounds word, read it, then rebuild it without help."
+          },
+          "teacher_cue": "Build the today's sounds word once, read it, clear it, then rebuild it without help.",
+          "expected_response": "Students build, read, clear, and rebuild accurately.",
+          "correction_move": "Model one build slowly, then have students repeat with less support.",
+          "observation_note": "Watch for whether students are mapping parts to print or only recalling the shape.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -272,16 +645,125 @@
             "text_content": "I sat.",
             "display_mode": "sentence",
             "show_font_controls": true,
-            "image": "/static/images/readers/i_sat.png"
+            "image": "/static/images/readers/i_sat.png",
+            "word_types": {
+              "I": "sight",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
           },
           "teacher_cue": "Lesson 1 has only one meaningful sentence at this stage. Establish the sentence reading routine, not test volume.",
-          "expected_response": "Students read I sat. with one-to-one word tracking.",
+          "expected_response": "Students read \"I sat.\" accurately.",
           "correction_move": "Model once, then track each word left to right and reread together.",
           "observation_note": "Sight words active: the · a · I. Sentence uses I plus sat.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Eyes on the sentence.",
+                "teacher_prompt": "Set tracking and sentence focus.",
+                "tts_prompt": "Eyes on the sentence.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. I sat.",
+                "teacher_prompt": "Model the sentence once with tracking.",
+                "tts_prompt": "Listen. I sat.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Choral read. Confirm tracking and accuracy.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read And Explain today's sounds",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sat.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "image": "/static/images/readers/i_sat.png",
+            "word_types": {
+              "I": "sight",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            },
+            "comprehension_prompt": "What does this tell you about the sounds? Say it back in your own words."
+          },
+          "teacher_cue": "Read it smoothly, then explain the sentence in your own words.",
+          "expected_response": "Students read accurately and explain the meaning of the s, a, t sentence.",
+          "correction_move": "Reread in a phrase, then prompt for a brief retell or answer.",
+          "observation_note": "Push comprehension right after decoding so the focus does not stay mechanical.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Read first. Then explain.",
+                "teacher_prompt": "Keep meaning tied to the sentence.",
+                "tts_prompt": "Read first. Then explain.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Choral read before explanation.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What does the sentence mean?",
+                "teacher_prompt": "Take one or two oral explanations, then mark the class.",
+                "tts_prompt": "What does the sentence mean?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -292,22 +774,62 @@
         {
           "slide_id": "07-01",
           "block_id": "07",
-          "slide_title": "First Reading — Lesson 1",
+          "slide_title": "Reader Runtime",
           "view_type": "read_respond",
           "content_payload": {
             "text_content": "I sat.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "How many words did you read? Point to each one.",
-            "image": "/static/images/readers/i_sat.png"
+            "oral_enforcement": {
+              "enabled": true,
+              "participation_mode": "short_reader_full_roster",
+              "text_length_mode": "short",
+              "rehearsal_seconds": 30,
+              "required_evidence_count": 2,
+              "allow_teacher_override": true,
+              "require_resolution_for_all": true,
+              "fluency_retry_on_shaky": true,
+              "auto_queue_missed_for_reteach": true,
+              "audit_sample_size": 0,
+              "performance_types": [
+                "read_accuracy",
+                "reread_fluency"
+              ]
+            },
+            "comprehension_questions": [
+              "What did I do?",
+              "Can you show me?",
+              "Point to the word sat.",
+              "What does it mean to sit or sat?",
+              "Use sat in your own sentence."
+            ],
+            "image": "/static/images/readers/i_sat.png",
+            "word_types": {
+              "I": "sight",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
           },
-          "teacher_cue": "Track print left to right and match spoken words to written words.",
-          "expected_response": "Students read the single sentence and point to each word.",
-          "correction_move": "Echo read first, then repeat while pointing to each word.",
-          "observation_note": "Lesson 1 reader is a single-sentence introduction to the reading routine.",
+          "teacher_cue": "Keep the text stable. Luminos runs the reading roster first, then fluency support, then mixed comprehension turns on the same slide.",
+          "expected_response": "Students read the sentence, reread when needed, and then answer the mixed comprehension prompts.",
+          "correction_move": "Echo read first, then repeat while pointing to each word. Use the comprehension round only after every student has had a reading turn.",
+          "observation_note": "Lesson 1 reader is a single-sentence runtime. Do not advance to a new slide for reread or comprehension when the text has not changed.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -324,7 +846,12 @@
           "content_payload": {
             "dictated_text": "sat",
             "expected_answer": "sat",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "a",
+              "t"
+            ]
           },
           "teacher_cue": "Dictate sat. Students segment into phonemes using Elkonin boxes, then write.",
           "expected_response": "Students write sat accurately.",
@@ -332,7 +859,11 @@
           "observation_note": "Reveal and check after writing.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -343,7 +874,11 @@
           "content_payload": {
             "dictated_text": "at",
             "expected_answer": "at",
-            "elkonin_boxes": 2
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "a",
+              "t"
+            ]
           },
           "teacher_cue": "Dictate at. Students segment into phonemes using Elkonin boxes, then write.",
           "expected_response": "Students write at accurately.",
@@ -351,7 +886,11 @@
           "observation_note": "Reveal and check after writing.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -362,7 +901,10 @@
           "content_payload": {
             "dictated_text": "a",
             "expected_answer": "a",
-            "elkonin_boxes": 1
+            "elkonin_boxes": 1,
+            "grapheme_units": [
+              "a"
+            ]
           },
           "teacher_cue": "Dictate a. Students write the word after hearing it.",
           "expected_response": "Students write a accurately.",
@@ -370,7 +912,38 @@
           "observation_note": "Block 08 words are drawn from Block 04 vocabulary.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write today's sounds And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "dictated_text": "a",
+            "expected_answer": "a",
+            "elkonin_boxes": 1,
+            "grapheme_units": [
+              "a"
+            ],
+            "prompt_text": "Write the today's sounds target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the today's sounds target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -386,7 +959,10 @@
           "view_type": "read_respond",
           "content_payload": {
             "display_mode": "spot_part",
-            "displayed_words": ["sat", "at"],
+            "displayed_words": [
+              "sat",
+              "at"
+            ],
             "highlighted_chunk": "at",
             "support_text": "What do you notice? Which sound part do they share?"
           },
@@ -397,7 +973,97 @@
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look at both words.",
+                "teacher_prompt": "Direct attention to both printed words.",
+                "tts_prompt": "Look at both words.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What part is the same?",
+                "teacher_prompt": "Elicit the shared ending and then advance.",
+                "tts_prompt": "What part is the same?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "What Does It Mean?",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "sat",
+              "at"
+            ],
+            "support_text": "Both words share the -at ending. What does at mean? How does adding s- change sat from just at?"
+          },
+          "teacher_cue": "Guide students to see the semantic connection — at is a place word; sat tells us what happened there.",
+          "expected_response": "Students explain that at tells where, and sat tells what happened.",
+          "correction_move": "Model one explanation, then ask students to describe the others.",
+          "observation_note": "Watch whether students can articulate meaning, not just form.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use today's sounds In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "sat",
+              "at"
+            ],
+            "support_text": "Say a full sentence with one of these sounds. Then change one part and say a new sentence."
+          },
+          "teacher_cue": "Use today's sounds in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Think about the meaning.",
+                "teacher_prompt": "Shift from pattern noticing to meaning.",
+                "tts_prompt": "Think about the meaning.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What does at mean? How is sat different?",
+                "teacher_prompt": "Take one or two oral answers, then mark the class.",
+                "tts_prompt": "What does at mean? How is sat different?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -414,21 +1080,86 @@
             "display_mode": "lesson_close",
             "title": "Close the Lesson",
             "check_items": [
-              { "label": "We learned three sounds today: s, a, t.", "phoneme": null },
-              { "label": "Close your eyes. Can you hear the sounds in the word sat?", "phoneme": null },
-              { "label": "Hold up a finger for each sound — how many?", "phoneme": null },
-              { "label": "Now tell me: what did you do today? Use the word sat.", "phoneme": null }
+              {
+                "label": "We learned three sounds today: s, a, t.",
+                "phoneme": null
+              },
+              {
+                "label": "What did I do? Can you show me?",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using I or sat.",
+                "phoneme": null
+              }
             ],
-            "marking_options": ["secure", "shaky", "missed"],
-            "notes_field": "Expected answer for phoneme counting: 3 fingers — /s/ /æ/ /t/."
+            "marking_options": [
+              "secure",
+              "shaky",
+              "missed"
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
           },
-          "teacher_cue": "Close with phoneme counting and oral recall.",
-          "expected_response": "Students identify three sounds in sat and respond orally using the word sat.",
-          "correction_move": "Model the sounds /s/ /æ/ /t/ and count them again together.",
-          "observation_note": "This establishes the idea that words are made of individual sounds.",
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
           "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Show the sentence starter. Students complete it in writing using lesson words. They may use any decodable word from today.",
+          "expected_response": "Students write a complete, accurate sentence using at least one word from the lesson.",
+          "correction_move": "Model one example sentence aloud, then students try again independently.",
+          "observation_note": "Watch spelling accuracy on lesson vocabulary words and whether the sentence is grammatically complete.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final today's sounds Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "support_text": "Say one final strong sentence using today's today's sounds focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's sounds focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]

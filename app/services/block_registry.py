@@ -45,7 +45,7 @@ BLOCK_REGISTRY = [
     BlockDefinition(
         block_id="09",
         label="Morpheme Moment",
-        allowed_view_types=("flashcard", "drag_word", "read_respond"),
+        allowed_view_types=("flashcard", "drag_word", "minimal_pair", "read_respond"),
     ),
     BlockDefinition(
         block_id="10",

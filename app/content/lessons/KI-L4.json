@@ -1,0 +1,964 @@
+{
+  "lesson_id": "KI-L4",
+  "unit_id": "KI",
+  "target_pattern": "final_coda_preservation",
+  "title": "Korean Interference 4: Final Coda Preservation",
+  "new_units": [],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "final_coda"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: t",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "t",
+            "back_text": "/t/",
+            "audio": "/static/audio/t.mp3"
+          },
+          "teacher_cue": "Say /t/ with a clean stop at the end.",
+          "expected_response": "Students produce /t/ cleanly.",
+          "correction_move": "Model /t/ once, then students repeat with a short final stop.",
+          "observation_note": "Watch for weak or missing final release.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: p",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "p",
+            "back_text": "/p/",
+            "audio": "/static/audio/p.mp3"
+          },
+          "teacher_cue": "Say /p/ and keep the final lip pop.",
+          "expected_response": "Students produce /p/ cleanly.",
+          "correction_move": "Model /p/ once, then students repeat with a clear final stop.",
+          "observation_note": "Watch for coda deletion.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: k",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "k",
+            "back_text": "/k/",
+            "audio": "/static/audio/k.mp3"
+          },
+          "teacher_cue": "Say /k/ and keep the end sound audible.",
+          "expected_response": "Students produce /k/ cleanly.",
+          "correction_move": "Model /k/ once, then students repeat with a firm back-of-mouth stop.",
+          "observation_note": "Watch for weak final /k/.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Review: n",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "n",
+            "back_text": "/n/",
+            "audio": "/static/audio/n.mp3"
+          },
+          "teacher_cue": "Say /n/ and keep the end sound on.",
+          "expected_response": "Students produce /n/ cleanly.",
+          "correction_move": "Model /n/ once, then students repeat while holding the nasal sound briefly.",
+          "observation_note": "Watch for coda weakening or deletion.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: cat",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_cat.mp3",
+            "dictated_text": "cat",
+            "expected_answer": "cat",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "c",
+              "a",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play cat once. Students repeat and write it.",
+          "expected_response": "Students write cat accurately.",
+          "correction_move": "Replay cat and segment c-a-t before rewriting.",
+          "observation_note": "Watch whether the final /t/ is held in memory.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: cap",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_cap.mp3",
+            "dictated_text": "cap",
+            "expected_answer": "cap",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "c",
+              "a",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play cap once. Students repeat and write it.",
+          "expected_response": "Students write cap accurately.",
+          "correction_move": "Replay cap and segment c-a-p before rewriting.",
+          "observation_note": "Watch whether the final /p/ is written and pronounced.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_back.mp3",
+            "dictated_text": "back",
+            "expected_answer": "back",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "b",
+              "a",
+              "ck"
+            ]
+          },
+          "teacher_cue": "Play back once. Students repeat and write it.",
+          "expected_response": "Students write back accurately.",
+          "correction_move": "Replay back and segment b-a-ck before rewriting.",
+          "observation_note": "Watch whether the final /k/ is retained.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Rule: Keep the Last Sound",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cat  cap  back",
+            "back_text": "Keep the last sound"
+          },
+          "teacher_cue": "In Korean, final consonants are often reduced or weakened. In English the last sound changes the word. cat is not ca. cap is not ca. back is not ba. Tap your hand when you say the last sound.",
+          "expected_response": "Students understand that the final consonant must be heard and produced.",
+          "correction_move": "Model each word with a hand tap on the coda and have students repeat.",
+          "observation_note": "Watch for coda deletion or coda weakening.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose: cap or ca?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "cap",
+              "audio": "/static/audio/ki_cap_correct.mp3"
+            },
+            "pair_B": {
+              "label": "ca",
+              "audio": "/static/audio/ki_ca_deleted.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "final_coda",
+            "correction_routine": "cap is correct English because the final /p/ stays in the word."
+          },
+          "teacher_cue": "Play both. Which one keeps the last sound?",
+          "expected_response": "Students identify A as the correct production.",
+          "correction_move": "Replay each item and tap on the final sound in cap.",
+          "observation_note": "Watch whether students can hear coda deletion.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose: back or ba?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "back",
+              "audio": "/static/audio/ki_back_correct.mp3"
+            },
+            "pair_B": {
+              "label": "ba",
+              "audio": "/static/audio/ki_ba_deleted.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "final_coda",
+            "correction_routine": "back is correct English because the final /k/ stays in the word."
+          },
+          "teacher_cue": "Play both. Which one keeps the last sound?",
+          "expected_response": "Students identify A as the correct production.",
+          "correction_move": "Replay each item and tap on the final sound in back.",
+          "observation_note": "Watch whether students can hear and keep final /k/.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: cat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cat",
+            "back_text": "/k/ /a/ /t/",
+            "audio": "/static/audio/block04_cat.mp3"
+          },
+          "teacher_cue": "Say cat and tap on the final /t/.",
+          "expected_response": "Students read cat and keep the final /t/.",
+          "correction_move": "Model cat with a hand tap on /t/ and repeat.",
+          "observation_note": "Watch final /t/ retention.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: cap",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cap",
+            "back_text": "/k/ /a/ /p/",
+            "audio": "/static/audio/block04_cap.mp3"
+          },
+          "teacher_cue": "Say cap and keep the final lip pop.",
+          "expected_response": "Students read cap and keep the final /p/.",
+          "correction_move": "Model cap slowly and repeat with a final pop.",
+          "observation_note": "Watch final /p/ retention.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: back",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "back",
+            "back_text": "/b/ /a/ /k/",
+            "audio": "/static/audio/block04_back.mp3"
+          },
+          "teacher_cue": "Say back and keep the final /k/.",
+          "expected_response": "Students read back and keep the final /k/.",
+          "correction_move": "Model back slowly and repeat with a clear end stop.",
+          "observation_note": "Watch final /k/ retention.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: hand",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hand",
+            "back_text": "/h/ /a/ /n/ /d/",
+            "audio": "/static/audio/block04_hand.mp3"
+          },
+          "teacher_cue": "Say hand and keep both end sounds.",
+          "expected_response": "Students read hand with a full final cluster.",
+          "correction_move": "Model hand with a slow finish and repeat.",
+          "observation_note": "Watch cluster reduction on final nd.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: milk",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "milk",
+            "back_text": "/m/ /i/ /l/ /k/",
+            "audio": "/static/audio/block04_milk.mp3"
+          },
+          "teacher_cue": "Say milk and keep the end sounds.",
+          "expected_response": "Students read milk with the full coda.",
+          "correction_move": "Model milk slowly and repeat.",
+          "observation_note": "Watch final lk simplification.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: cat",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "cat",
+            "target_letters": [
+              "c",
+              "a",
+              "t"
+            ],
+            "slots": [
+              "c",
+              "a",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "a",
+              "c"
+            ]
+          },
+          "teacher_cue": "Build cat and say the last sound.",
+          "expected_response": "Students build cat correctly.",
+          "correction_move": "Segment c-a-t, then rebuild left to right.",
+          "observation_note": "Watch the final t slot closely.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: cap",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "cap",
+            "target_letters": [
+              "c",
+              "a",
+              "p"
+            ],
+            "slots": [
+              "c",
+              "a",
+              "p"
+            ],
+            "draggable_letters": [
+              "p",
+              "a",
+              "c"
+            ]
+          },
+          "teacher_cue": "Build cap and say the last sound.",
+          "expected_response": "Students build cap correctly.",
+          "correction_move": "Segment c-a-p, then rebuild left to right.",
+          "observation_note": "Watch the final p slot closely.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: back",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "back",
+            "target_letters": [
+              "b",
+              "a",
+              "ck"
+            ],
+            "slots": [
+              "b",
+              "a",
+              "ck"
+            ],
+            "draggable_letters": [
+              "ck",
+              "a",
+              "b"
+            ]
+          },
+          "teacher_cue": "Build back and say the last sound.",
+          "expected_response": "Students build back correctly.",
+          "correction_move": "Segment b-a-ck, then rebuild left to right.",
+          "observation_note": "Watch the final ck slot closely.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: hand",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hand",
+            "target_letters": [
+              "h",
+              "a",
+              "n",
+              "d"
+            ],
+            "slots": [
+              "h",
+              "a",
+              "n",
+              "d"
+            ],
+            "draggable_letters": [
+              "d",
+              "a",
+              "n",
+              "h"
+            ]
+          },
+          "teacher_cue": "Build hand and keep both end sounds.",
+          "expected_response": "Students build hand correctly.",
+          "correction_move": "Segment h-a-n-d, then rebuild left to right.",
+          "observation_note": "Watch whether students keep the full final cluster.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cat sat.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Tap on the final t in cat and sat.",
+          "expected_response": "Students read the sentence with final /t/ intact.",
+          "correction_move": "Reread slowly and tap the final sounds.",
+          "observation_note": "Watch final /t/ retention in both words.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cap is in the bag. The bag is back.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Keep the final p in cap and the final k in back.",
+          "expected_response": "Students read both sentences with final consonants intact.",
+          "correction_move": "Model cap and back again, then reread the sentences.",
+          "observation_note": "Watch for deleted final p or k.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "My hand is on the desk. The milk is in the cup.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Keep the full codas in hand, desk, milk, and cup.",
+          "expected_response": "Students read both sentences with the full final sounds.",
+          "correction_move": "Model each target word with a hand tap on the coda.",
+          "observation_note": "Watch cluster preservation in nd, sk, and lk.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Say It Again",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "cat  cap  back  hand  milk",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Read each word and make the last sound extra clear.",
+          "expected_response": "Students produce each target with a clear coda.",
+          "correction_move": "Point to the last sound and repeat chorally.",
+          "observation_note": "Watch which coda types still drop out.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cat sat.\nThe cap is in the bag.\nThe bag is back.\nMy hand is on the desk.\nThe milk is in the cup.",
+            "display_mode": "reader",
+            "comprehension_prompt": "What is in the bag? Where is the milk? Which words end with a strong last sound?"
+          },
+          "teacher_cue": "Read once for accuracy, then again with a hand tap on each final consonant.",
+          "expected_response": "Students read accurately and keep the final sounds audible.",
+          "correction_move": "Reread line by line and tap the coda in target words.",
+          "observation_note": "Watch whether students keep final stops and clusters in continuous text.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread — Final Sound Check",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cat sat.\nThe cap is in the bag.\nThe bag is back.\nMy hand is on the desk.\nThe milk is in the cup.",
+            "display_mode": "reader",
+            "comprehension_prompt": "Reread and point to one word that ends in t, one that ends in p, and one that ends in k."
+          },
+          "teacher_cue": "Reread for clean codas. Point to the ending after each target word.",
+          "expected_response": "Students reread accurately and identify target final sounds.",
+          "correction_move": "Model one line, then have students echo and point to the final grapheme.",
+          "observation_note": "Watch for improved coda retention on reread.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Partner Read",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "cat  cap  back  hand  milk",
+            "display_mode": "sentence",
+            "comprehension_prompt": "Take turns. Your partner listens for the last sound in each word."
+          },
+          "teacher_cue": "Partner A reads. Partner B checks whether the last sound stays in the word.",
+          "expected_response": "Students read and monitor each other's coda production.",
+          "correction_move": "If a coda drops out, stop, model once, and repeat the word three times.",
+          "observation_note": "Watch peer-monitoring accuracy and which codas still need support.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: hand",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_hand.mp3",
+            "dictated_text": "hand",
+            "expected_answer": "hand",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "h",
+              "a",
+              "n",
+              "d"
+            ]
+          },
+          "teacher_cue": "Say hand. Students repeat and write it.",
+          "expected_response": "Students write hand accurately.",
+          "correction_move": "Segment h-a-n-d and tap on the final d.",
+          "observation_note": "Watch final cluster retention.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: milk",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_milk.mp3",
+            "dictated_text": "milk",
+            "expected_answer": "milk",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "m",
+              "i",
+              "l",
+              "k"
+            ]
+          },
+          "teacher_cue": "Say milk. Students repeat and write it.",
+          "expected_response": "Students write milk accurately.",
+          "correction_move": "Segment m-i-l-k and tap on the final k.",
+          "observation_note": "Watch lk cluster retention.",
+          "korean_interference_flag": "final_coda",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The cat sat.",
+            "expected_answer": "The cat sat.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence twice. Students write the whole sentence.",
+          "expected_response": "Students write the full sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases and check capitals and punctuation.",
+          "observation_note": "Watch sentence memory and final t retention in cat and sat.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Production Practice",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Choose: cat or ca?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "cat",
+              "audio": "/static/audio/ki_cat_correct.mp3"
+            },
+            "pair_B": {
+              "label": "ca",
+              "audio": "/static/audio/ki_ca_deleted.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "final_coda",
+            "correction_routine": "cat is correct because the final /t/ stays in the word."
+          },
+          "teacher_cue": "Which word keeps the last sound?",
+          "expected_response": "Students identify A as the correct production.",
+          "correction_move": "Replay and tap on the final /t/ in cat.",
+          "observation_note": "Watch final /t/ discrimination.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Production Check: Final Sounds",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "cat  cap  back  hand  milk",
+            "display_mode": "sentence",
+            "comprehension_prompt": "Read each word. Keep the last sound strong."
+          },
+          "teacher_cue": "Students read the list. Stop after each word and check the final sound.",
+          "expected_response": "Students produce the words with clear codas.",
+          "correction_move": "Model one target word and have students repeat three times.",
+          "observation_note": "Watch which final consonants or clusters still drop out.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The cat sat.",
+            "display_mode": "sentence",
+            "comprehension_prompt": "Read the model. Then say one new sentence with cat, cap, or milk."
+          },
+          "teacher_cue": "Model the sentence once, then have students produce one more sentence with a strong final sound.",
+          "expected_response": "Students say a new sentence with a strong coda word.",
+          "correction_move": "Model one new sentence and have students repeat before generating their own.",
+          "observation_note": "Watch whether final sounds stay intact in connected speech.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Why does the last sound matter in English words?"
+              },
+              {
+                "label": "Say one word with final t, one with final p, and one with final k."
+              },
+              {
+                "label": "Tell me one full sentence using hand or milk."
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and articulation-focused."
+          },
+          "teacher_cue": "Close by checking whether students can explain and produce the final sounds.",
+          "expected_response": "Students explain the rule and produce example words clearly.",
+          "correction_move": "Return to one target word if a final sound still drops out.",
+          "observation_note": "Watch whether the rule transfers into oral explanation and sentence use.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Students write one sentence using cat, cap, hand, or milk.",
+          "expected_response": "Students write one complete sentence with a target coda word.",
+          "correction_move": "Model one short sentence aloud, then students write their own.",
+          "observation_note": "Watch whether the final consonant is spelled and remembered in writing.",
+          "korean_interference_flag": "final_coda",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

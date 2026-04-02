@@ -1,0 +1,982 @@
+{
+  "lesson_id": "KI-L5",
+  "unit_id": "KI",
+  "target_pattern": "vowel_quality_contrast",
+  "title": "Korean Interference 5: High-Risk Vowel Contrast",
+  "new_units": [],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: i",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "i",
+            "back_text": "/i/",
+            "audio": "/static/audio/long_i.mp3"
+          },
+          "teacher_cue": "Say /i/ and smile. This is the long tense vowel in sheep.",
+          "expected_response": "Students produce a clear tense /i/.",
+          "correction_move": "Model /i/ once, then students repeat while holding it briefly.",
+          "observation_note": "Watch for laxing the vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: i short",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "i short",
+            "back_text": "/i/",
+            "audio": "/static/audio/i.mp3"
+          },
+          "teacher_cue": "Say the short vowel quickly. This is the lax vowel in ship.",
+          "expected_response": "Students produce a short lax vowel.",
+          "correction_move": "Model it once, then have students repeat quickly without stretching it.",
+          "observation_note": "Watch for tense /i/ substitution.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: e",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "e",
+            "back_text": "/e/",
+            "audio": "/static/audio/e.mp3"
+          },
+          "teacher_cue": "Say /e/ in pen.",
+          "expected_response": "Students produce /e/ cleanly.",
+          "correction_move": "Model /e/ once and repeat chorally.",
+          "observation_note": "Watch for drift toward /a/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Review: a",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "a",
+            "back_text": "/a/",
+            "audio": "/static/audio/a.mp3"
+          },
+          "teacher_cue": "Say /a/ in pan.",
+          "expected_response": "Students produce /a/ cleanly.",
+          "correction_move": "Model /a/ once and repeat chorally.",
+          "observation_note": "Watch for raising or centralising the vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: ship",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_ship.mp3",
+            "dictated_text": "ship",
+            "expected_answer": "ship",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "sh",
+              "i",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play ship once. Students repeat and write it.",
+          "expected_response": "Students write ship accurately.",
+          "correction_move": "Replay ship and segment sh-i-p before rewriting.",
+          "observation_note": "Watch whether the short vowel stays short.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: sheep",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_sheep.mp3",
+            "dictated_text": "sheep",
+            "expected_answer": "sheep",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "sh",
+              "ee",
+              "p"
+            ]
+          },
+          "teacher_cue": "Play sheep once. Students repeat and write it.",
+          "expected_response": "Students write sheep accurately.",
+          "correction_move": "Replay sheep and segment sh-ee-p before rewriting.",
+          "observation_note": "Watch whether the long vowel stays long.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: pen",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_pen.mp3",
+            "dictated_text": "pen",
+            "expected_answer": "pen",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "p",
+              "e",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play pen once. Students repeat and write it.",
+          "expected_response": "Students write pen accurately.",
+          "correction_move": "Replay pen and segment p-e-n before rewriting.",
+          "observation_note": "Watch whether /e/ stays distinct from /a/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Contrast: ship vs sheep",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ship / sheep",
+            "back_text": "Short vowel vs long vowel"
+          },
+          "teacher_cue": "These are different English vowels. ship is short and quick. sheep is long and held. The vowel changes the word meaning.",
+          "expected_response": "Students understand that the vowel change makes a new word.",
+          "correction_move": "Model short vs long and have students repeat in alternation.",
+          "observation_note": "Watch whether students collapse both words into one vowel quality.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose: ship or sheep?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "ship",
+              "audio": "/static/audio/ki_ship.mp3"
+            },
+            "pair_B": {
+              "label": "sheep",
+              "audio": "/static/audio/ki_sheep.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "vowel_quality",
+            "correction_routine": "ship has the short vowel. sheep has the long vowel."
+          },
+          "teacher_cue": "Which word has the short vowel?",
+          "expected_response": "Students choose A.",
+          "correction_move": "Replay each word and contrast short and long length.",
+          "observation_note": "Watch auditory discrimination for short i vs long ee.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose: pen or pan?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "pen",
+              "audio": "/static/audio/ki_pen.mp3"
+            },
+            "pair_B": {
+              "label": "pan",
+              "audio": "/static/audio/ki_pan.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "vowel_quality",
+            "correction_routine": "pen has /e/. pan has /a/."
+          },
+          "teacher_cue": "Which word has /e/?",
+          "expected_response": "Students choose A.",
+          "correction_move": "Replay each word and contrast e vs a.",
+          "observation_note": "Watch discrimination of front mid vs low front vowel quality.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: ship",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ship",
+            "back_text": "/sh/ /i/ /p/",
+            "audio": "/static/audio/block04_ship.mp3"
+          },
+          "teacher_cue": "Say ship with the short vowel.",
+          "expected_response": "Students read ship accurately.",
+          "correction_move": "Model ship and keep the vowel short.",
+          "observation_note": "Watch short-vowel control.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: sheep",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sheep",
+            "back_text": "/sh/ /ee/ /p/",
+            "audio": "/static/audio/block04_sheep.mp3"
+          },
+          "teacher_cue": "Say sheep with the long vowel.",
+          "expected_response": "Students read sheep accurately.",
+          "correction_move": "Model sheep and hold the vowel briefly.",
+          "observation_note": "Watch long-vowel control.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: pen",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "pen",
+            "back_text": "/p/ /e/ /n/",
+            "audio": "/static/audio/block04_pen.mp3"
+          },
+          "teacher_cue": "Say pen with /e/.",
+          "expected_response": "Students read pen accurately.",
+          "correction_move": "Model pen and repeat chorally.",
+          "observation_note": "Watch e-vowel accuracy.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: pan",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "pan",
+            "back_text": "/p/ /a/ /n/",
+            "audio": "/static/audio/block04_pan.mp3"
+          },
+          "teacher_cue": "Say pan with /a/.",
+          "expected_response": "Students read pan accurately.",
+          "correction_move": "Model pan and repeat chorally.",
+          "observation_note": "Watch a-vowel accuracy.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: sit",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "sit",
+            "back_text": "/s/ /i/ /t/",
+            "audio": "/static/audio/block04_sit.mp3"
+          },
+          "teacher_cue": "Say sit with the short vowel.",
+          "expected_response": "Students read sit accurately.",
+          "correction_move": "Model sit and keep the vowel quick.",
+          "observation_note": "Watch short-vowel control.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: seat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "seat",
+            "back_text": "/s/ /ee/ /t/",
+            "audio": "/static/audio/block04_seat.mp3"
+          },
+          "teacher_cue": "Say seat with the long vowel.",
+          "expected_response": "Students read seat accurately.",
+          "correction_move": "Model seat and hold the vowel briefly.",
+          "observation_note": "Watch long-vowel control.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: ship",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "ship",
+            "target_letters": [
+              "sh",
+              "i",
+              "p"
+            ],
+            "slots": [
+              "sh",
+              "i",
+              "p"
+            ],
+            "draggable_letters": [
+              "p",
+              "i",
+              "sh"
+            ]
+          },
+          "teacher_cue": "Build ship and keep the vowel short.",
+          "expected_response": "Students build ship correctly.",
+          "correction_move": "Segment sh-i-p and rebuild left to right.",
+          "observation_note": "Watch short-vowel awareness.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: sheep",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "sheep",
+            "target_letters": [
+              "sh",
+              "ee",
+              "p"
+            ],
+            "slots": [
+              "sh",
+              "ee",
+              "p"
+            ],
+            "draggable_letters": [
+              "p",
+              "ee",
+              "sh"
+            ]
+          },
+          "teacher_cue": "Build sheep and hold the vowel longer than ship.",
+          "expected_response": "Students build sheep correctly.",
+          "correction_move": "Segment sh-ee-p and rebuild left to right.",
+          "observation_note": "Watch long-vowel awareness.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: pen",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "pen",
+            "target_letters": [
+              "p",
+              "e",
+              "n"
+            ],
+            "slots": [
+              "p",
+              "e",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "e",
+              "p"
+            ]
+          },
+          "teacher_cue": "Build pen and say the middle vowel clearly.",
+          "expected_response": "Students build pen correctly.",
+          "correction_move": "Segment p-e-n and rebuild left to right.",
+          "observation_note": "Watch e-vowel awareness.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: pan",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "pan",
+            "target_letters": [
+              "p",
+              "a",
+              "n"
+            ],
+            "slots": [
+              "p",
+              "a",
+              "n"
+            ],
+            "draggable_letters": [
+              "n",
+              "a",
+              "p"
+            ]
+          },
+          "teacher_cue": "Build pan and say the middle vowel clearly.",
+          "expected_response": "Students build pan correctly.",
+          "correction_move": "Segment p-a-n and rebuild left to right.",
+          "observation_note": "Watch a-vowel awareness.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The ship is big.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Read ship with the short vowel.",
+          "expected_response": "Students read the sentence accurately.",
+          "correction_move": "Contrast ship and sheep once, then reread.",
+          "observation_note": "Watch short-vowel control in connected text.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The sheep is here.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Read sheep with the long vowel.",
+          "expected_response": "Students read the sentence accurately.",
+          "correction_move": "Contrast ship and sheep once, then reread.",
+          "observation_note": "Watch long-vowel control in connected text.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The pen is on the desk. The pan is in the bag.",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Read pen and pan clearly and keep the vowels different.",
+          "expected_response": "Students read both sentences accurately.",
+          "correction_move": "Contrast pen and pan once, then reread.",
+          "observation_note": "Watch e vs a vowel quality in connected text.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Say It Again",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "ship  sheep  pen  pan  sit  seat",
+            "display_mode": "sentence"
+          },
+          "teacher_cue": "Say each pair and exaggerate the vowel difference.",
+          "expected_response": "Students produce the contrast pairs clearly.",
+          "correction_move": "Model one pair at a time and have students repeat in alternation.",
+          "observation_note": "Watch which contrast pairs still collapse together.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The ship is big.\nThe sheep is here.\nThe pen is on the desk.\nThe pan is in the bag.\nI sit in the seat.",
+            "display_mode": "reader",
+            "comprehension_prompt": "Which thing is here? Where is the pen? Which words have the long vowel and which have the short vowel?"
+          },
+          "teacher_cue": "Read once for accuracy, then again with finger tracking under the vowel in each target word.",
+          "expected_response": "Students read accurately and can identify the target vowel contrasts.",
+          "correction_move": "Return to one sentence at a time and contrast the key pair before rereading.",
+          "observation_note": "Watch whether students preserve the target contrasts in continuous text.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread — Vowel Check",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The ship is big.\nThe sheep is here.\nThe pen is on the desk.\nThe pan is in the bag.\nI sit in the seat.",
+            "display_mode": "reader",
+            "comprehension_prompt": "Reread and point to one short-vowel word and one long-vowel word in each line."
+          },
+          "teacher_cue": "Reread for contrast accuracy. Point to the vowel as you say it.",
+          "expected_response": "Students reread accurately and identify contrast words.",
+          "correction_move": "Model one line, point to the vowel, then have students echo.",
+          "observation_note": "Watch whether rereading improves contrast control.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Partner Read",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "ship  sheep  pen  pan  sit  seat",
+            "display_mode": "sentence",
+            "comprehension_prompt": "Take turns. Your partner listens for the correct vowel."
+          },
+          "teacher_cue": "Partner A reads. Partner B checks the vowel quality and length.",
+          "expected_response": "Students read and monitor each other's vowel accuracy.",
+          "correction_move": "If the vowel collapses, stop, model the pair, and repeat.",
+          "observation_note": "Watch peer monitoring and which contrast pairs still need support.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sheep",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_sheep.mp3",
+            "dictated_text": "sheep",
+            "expected_answer": "sheep",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "sh",
+              "ee",
+              "p"
+            ]
+          },
+          "teacher_cue": "Say sheep. Students repeat and write it.",
+          "expected_response": "Students write sheep accurately.",
+          "correction_move": "Contrast sheep with ship once, then rewrite.",
+          "observation_note": "Watch whether the long vowel is encoded correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: pan",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_pan.mp3",
+            "dictated_text": "pan",
+            "expected_answer": "pan",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "p",
+              "a",
+              "n"
+            ]
+          },
+          "teacher_cue": "Say pan. Students repeat and write it.",
+          "expected_response": "Students write pan accurately.",
+          "correction_move": "Contrast pan with pen once, then rewrite.",
+          "observation_note": "Watch whether a is encoded distinctly from e.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The ship is big.",
+            "expected_answer": "The ship is big.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence twice. Students write the whole sentence.",
+          "expected_response": "Students write the full sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases and check capitals and punctuation.",
+          "observation_note": "Watch sentence memory and target-vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Production Practice",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Choose: ship or sheep?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "ship",
+              "audio": "/static/audio/ki_ship.mp3"
+            },
+            "pair_B": {
+              "label": "sheep",
+              "audio": "/static/audio/ki_sheep.mp3"
+            },
+            "correct_choice": "B",
+            "korean_flag": "vowel_quality",
+            "correction_routine": "sheep is the long-vowel word."
+          },
+          "teacher_cue": "Which word has the long vowel?",
+          "expected_response": "Students choose B.",
+          "correction_move": "Replay each item and contrast short and long length.",
+          "observation_note": "Watch auditory discrimination for ship vs sheep.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Production Check: Vowel Pairs",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "ship  sheep  pen  pan  sit  seat",
+            "display_mode": "sentence",
+            "comprehension_prompt": "Read each pair. Make the vowel difference clear."
+          },
+          "teacher_cue": "Students read the list. Stop after each pair and check the vowel contrast.",
+          "expected_response": "Students produce each contrast pair clearly.",
+          "correction_move": "Model one pair and have students repeat in alternation.",
+          "observation_note": "Watch which pairs still collapse together.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The sheep is here.",
+            "display_mode": "sentence",
+            "comprehension_prompt": "Read the model. Then say one new sentence with sheep, pen, or pan."
+          },
+          "teacher_cue": "Model the sentence once, then have students produce one more sentence with a target contrast word.",
+          "expected_response": "Students say a new sentence using a target word with clear vowel quality.",
+          "correction_move": "Model one new sentence and have students repeat before generating their own.",
+          "observation_note": "Watch whether the target contrast survives in connected speech.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "How is ship different from sheep?"
+              },
+              {
+                "label": "Say one short-vowel word and one long-vowel word."
+              },
+              {
+                "label": "Tell me one full sentence using pen or sheep."
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and contrast-focused."
+          },
+          "teacher_cue": "Close by checking whether students can explain and produce the vowel contrasts.",
+          "expected_response": "Students explain the contrast and produce example words clearly.",
+          "correction_move": "Return to one minimal pair if the contrast still collapses.",
+          "observation_note": "Watch whether the contrast transfers into oral explanation and sentence use.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Students write one sentence using ship, sheep, pen, or pan.",
+          "expected_response": "Students write one complete sentence with a target contrast word.",
+          "correction_move": "Model one short sentence aloud, then students write their own.",
+          "observation_note": "Watch whether the target vowel is spelled and remembered in writing.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

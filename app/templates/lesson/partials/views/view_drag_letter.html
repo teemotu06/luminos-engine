@@ -1,6 +1,7 @@
 <div
   class="lesson-drag-letter"
   x-data='dragBuild({{ (slide.content_payload.slots or slide.content_payload.target_letters) | tojson }})'
+  @lesson-nav-reveal.window="if ($event.detail.slideIndex === {{ slide_index }}) reveal()"
 >
   {% set slot_units = slide.content_payload.slots or slide.content_payload.target_letters %}
   <div class="lesson-drag-letter__board">
@@ -54,12 +55,6 @@
       Reset
     </button>
 
-    <button
-      type="button"
-      class="lesson-drag-letter__button"
-      @click="reveal()">
-      Reveal
-    </button>
   </div>
 
   <div

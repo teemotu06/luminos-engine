@@ -1,0 +1,46 @@
+name: Accessibility
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  axe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Build static assets
+        run: python scripts/build_static.py --check
+      - name: Install matching Chrome and ChromeDriver
+        run: npx -y browser-driver-manager install chrome
+      - name: Start app
+        env:
+          DATABASE_URL: sqlite:////tmp/luminos_engine_a11y.db
+          LUMINOS_AUTH_REQUIRED: "false"
+          LUMINOS_ADMIN_SECRET: ci-admin-secret
+          LUMINOS_ENFORCE_ADMIN_SECRET: "false"
+        run: |
+          uvicorn app.main:app --host 127.0.0.1 --port 8000 &
+          echo $! > /tmp/luminos-uvicorn.pid
+          sleep 5
+      - name: Run axe
+        run: |
+          . "$HOME/.browser-driver-manager/.env"
+          export CHROME_BIN="$CHROME_TEST_PATH"
+          npx -y @axe-core/cli --chromedriver-path "$CHROMEDRIVER_TEST_PATH" http://127.0.0.1:8000/lesson/ http://127.0.0.1:8000/classes/
+      - name: Stop app
+        if: always()
+        run: |
+          if [ -f /tmp/luminos-uvicorn.pid ]; then
+            kill "$(cat /tmp/luminos-uvicorn.pid)"
+          fi

@@ -1,4 +1,8 @@
-<div class="lesson-drag-word" x-data='dragBuild({{ slide.content_payload.target_sentence.split(" ") | tojson }})'>
+<div
+  class="lesson-drag-word"
+  x-data='dragBuild({{ slide.content_payload.target_sentence.split(" ") | tojson }})'
+  @lesson-nav-reveal.window="if ($event.detail.slideIndex === {{ slide_index }}) reveal()"
+>
   <div class="lesson-drag-word__board">
     <div class="lesson-drag-word__slots">
       <template x-for="(item, index) in placedItems" :key="index">
@@ -48,11 +52,5 @@
       Reset
     </button>
 
-    <button
-      type="button"
-      class="lesson-drag-word__button"
-      @click="reveal()">
-      Reveal
-    </button>
   </div>
 </div>

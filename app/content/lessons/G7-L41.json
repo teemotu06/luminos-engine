@@ -1,0 +1,1707 @@
+{
+  "lesson_id": "G7-L41",
+  "unit_id": "G7",
+  "target_pattern": "soft_c_soft_g",
+  "title": "Group 7, Lesson 41: soft c and soft g",
+  "new_units": [
+    "soft_c",
+    "soft_g"
+  ],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: wh",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "wh",
+            "back_text": "/w/",
+            "audio": "/static/audio/wh.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /w/ quickly and cleanly.",
+          "correction_move": "Model /w/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: ch",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ch",
+            "back_text": "/tʃ/",
+            "audio": "/static/audio/ch.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /tʃ/ quickly and cleanly.",
+          "correction_move": "Model /tʃ/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: th (voiced)",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "th (voiced)",
+            "back_text": "/ð/",
+            "audio": "/static/audio/th_(voiced).mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /ð/ quickly and cleanly.",
+          "correction_move": "Model /ð/, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "th_voiced",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: some",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "some",
+            "back_text": "some — sight word",
+            "audio": "/static/audio/sight_some.mp3",
+            "word_types": {
+              "some": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say some immediately without blending.",
+          "correction_move": "Model some in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: have",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "have",
+            "back_text": "have — sight word",
+            "audio": "/static/audio/sight_have.mp3",
+            "word_types": {
+              "have": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say have immediately without blending.",
+          "correction_move": "Model have in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: I",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say I immediately without blending.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: the",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say the immediately without blending.",
+          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: when",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_when.mp3",
+            "dictated_text": "when",
+            "expected_answer": "when",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "wh",
+              "e",
+              "n"
+            ]
+          },
+          "teacher_cue": "Play when once. Replay only if needed.",
+          "expected_response": "Students write when accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: wheel",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_wheel.mp3",
+            "dictated_text": "wheel",
+            "expected_answer": "wheel",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "wh",
+              "ee",
+              "l"
+            ]
+          },
+          "teacher_cue": "Play wheel once. Replay only if needed.",
+          "expected_response": "Students write wheel accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: white",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_white.mp3",
+            "dictated_text": "white",
+            "expected_answer": "white",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "wh",
+              "i",
+              "t"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play white once. Replay only if needed.",
+          "expected_response": "Students write white accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce soft c /s/ and soft g /dʒ/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "c → /s/   g → /dʒ/",
+            "back_text": "before e, i, y",
+            "audio": "/static/audio/soft_c_g.mp3"
+          },
+          "teacher_cue": "Two related rules today. Soft c: when c comes before e, i, or y it makes /s/ — not /k/. city, face, race, mice, ice. Soft g: when g comes before e, i, or y it makes /dʒ/ — not /g/. page, age, stage, gem, giant. The rule: e, i, y soften both c and g. Before anything else (a, o, u, consonant) they keep their hard sounds: /k/ and /g/.",
+          "expected_response": "Students apply the soft c and soft g rules to read new words correctly.",
+          "correction_move": "Establish the rule visually: c before a/o/u = /k/ (cat, cod, cut). c before e/i/y = /s/ (city, face, ice). Same for g: g before a/o/u = /g/ (gap, got). g before e/i/y = /dʒ/ (gem, page). Students sort word cards.",
+          "observation_note": "Watch for hard /k/ being applied to soft c words and hard /g/ to soft g words.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose the soft c word",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "city",
+              "audio": "/static/audio/block03_city.mp3"
+            },
+            "pair_B": {
+              "label": "cat",
+              "audio": "/static/audio/block03_cat.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "c before i says /s/ in city; c before a stays hard /k/ in cat."
+          },
+          "teacher_cue": "Play both words. Ask students to choose the word where c is soft and explain the letter that follows c.",
+          "expected_response": "Students identify city as the soft c word and explain the e-i-y rule.",
+          "correction_move": "Write both words and underline the vowel after c. Re-state the rule: e, i, y soften c.",
+          "observation_note": "Watch for students who know the rule verbally but still read city with /k/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose the soft g word",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "gem",
+              "audio": "/static/audio/block03_gem.mp3"
+            },
+            "pair_B": {
+              "label": "go",
+              "audio": "/static/audio/block03_go.mp3"
+            },
+            "correct_choice": "A",
+            "correction_routine": "g before e says /dʒ/ in gem; g before o stays hard /g/ in go."
+          },
+          "teacher_cue": "Play both words. Students choose the soft g word and explain why the other word is hard g.",
+          "expected_response": "Students identify gem as soft g and reject go as hard g.",
+          "correction_move": "Sort both words under hard g and soft g. Rehearse the e-i-y rule aloud.",
+          "observation_note": "Watch for students who can do soft c but not soft g.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: face",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "face",
+            "back_text": "/f/ /eɪ/ /s/",
+            "audio": "/static/audio/block04_face.mp3",
+            "blend_units": [
+              {
+                "grapheme": "f",
+                "phoneme": "/f/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "silent",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say face — soft c at end, CVCe pattern. Confirm /f/ onset, /eɪ/ vowel, /s/ from soft c. Reveal and blend.",
+          "expected_response": "Students say face orally and connect meaning before blending.",
+          "correction_move": "Model face orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and /k/ substitution for soft c — it is /s/ here.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: race",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "race",
+            "back_text": "/r/ /eɪ/ /s/",
+            "audio": "/static/audio/block04_race.mp3",
+            "blend_units": [
+              {
+                "grapheme": "r",
+                "phoneme": "/r/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "silent",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say race — a competition. Confirm /r/ onset and soft c = /s/. Reveal and blend.",
+          "expected_response": "Students say race orally and connect meaning before blending.",
+          "correction_move": "Model race orally again, reveal and blend.",
+          "observation_note": "Watch for /l/ on /r/ and soft c = /s/ not /k/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: ice",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "ice",
+            "back_text": "/aɪ/ /s/",
+            "audio": "/static/audio/block04_ice.mp3",
+            "blend_units": [
+              {
+                "grapheme": "i",
+                "phoneme": "/aɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "c",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "silent",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say ice — frozen water. CVCe i_e, soft c = /s/. Reveal and blend.",
+          "expected_response": "Students say ice orally and connect meaning before blending.",
+          "correction_move": "Model ice orally again, reveal and blend.",
+          "observation_note": "Watch for long /aɪ/ in CVCe and soft c = /s/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: page",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "page",
+            "back_text": "/p/ /eɪ/ /dʒ/",
+            "audio": "/static/audio/block04_page.mp3",
+            "blend_units": [
+              {
+                "grapheme": "p",
+                "phoneme": "/p/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/dʒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "silent",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say page — soft g at end. CVCe a_e, soft g = /dʒ/. Reveal and blend.",
+          "expected_response": "Students say page orally and connect meaning before blending.",
+          "correction_move": "Model page orally again, reveal and blend.",
+          "observation_note": "Watch for /eɪ/ in CVCe and soft g = /dʒ/ not /g/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: stage",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stage",
+            "back_text": "/s/ /t/ /eɪ/ /dʒ/",
+            "audio": "/static/audio/block04_stage.mp3",
+            "blend_units": [
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "/dʒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "silent",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say stage — a platform for performance. st onset, CVCe, soft g. Reveal and blend.",
+          "expected_response": "Students say stage orally and connect meaning before blending.",
+          "correction_move": "Model stage orally again, reveal and blend.",
+          "observation_note": "Watch for st onset and soft g = /dʒ/ at end.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: gem",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "gem",
+            "back_text": "/dʒ/ /e/ /m/",
+            "audio": "/static/audio/block04_gem.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/dʒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say gem — a precious stone. Soft g at start — g before e = /dʒ/. Reveal and blend.",
+          "expected_response": "Students say gem orally and connect meaning before blending.",
+          "correction_move": "Model gem orally again, reveal and blend.",
+          "observation_note": "Watch for soft g = /dʒ/ at onset — not hard /g/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Review soft c and soft g With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "gem",
+            "back_text": "/dʒ/ /e/ /m/",
+            "audio": "/static/audio/block04_gem.mp3",
+            "blend_units": [
+              {
+                "grapheme": "g",
+                "phoneme": "/dʒ/",
+                "audio": null
+              },
+              {
+                "grapheme": "e",
+                "phoneme": "/e/",
+                "audio": null
+              },
+              {
+                "grapheme": "m",
+                "phoneme": "/m/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for soft c and soft g.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: face",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "face",
+            "target_letters": [
+              "f",
+              "a",
+              "c",
+              "e"
+            ],
+            "slots": [
+              "f",
+              "a",
+              "c",
+              "e"
+            ],
+            "draggable_letters": [
+              "e",
+              "c",
+              "a",
+              "f"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build face left to right.",
+          "expected_response": "Students build face correctly: f | a | c | e.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: race",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "race",
+            "target_letters": [
+              "r",
+              "a",
+              "c",
+              "e"
+            ],
+            "slots": [
+              "r",
+              "a",
+              "c",
+              "e"
+            ],
+            "draggable_letters": [
+              "e",
+              "c",
+              "a",
+              "r"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build race left to right.",
+          "expected_response": "Students build race correctly: r | a | c | e.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: ice",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "ice",
+            "target_letters": [
+              "i",
+              "c",
+              "e"
+            ],
+            "slots": [
+              "i",
+              "c",
+              "e"
+            ],
+            "draggable_letters": [
+              "e",
+              "c",
+              "i"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build ice left to right.",
+          "expected_response": "Students build ice correctly: i | c | e.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: page",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "page",
+            "target_letters": [
+              "p",
+              "a",
+              "g",
+              "e"
+            ],
+            "slots": [
+              "p",
+              "a",
+              "g",
+              "e"
+            ],
+            "draggable_letters": [
+              "e",
+              "g",
+              "a",
+              "p"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build page left to right.",
+          "expected_response": "Students build page correctly: p | a | g | e.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: stage",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "stage",
+            "target_letters": [
+              "s",
+              "t",
+              "a",
+              "g",
+              "e"
+            ],
+            "slots": [
+              "s",
+              "t",
+              "a",
+              "g",
+              "e"
+            ],
+            "draggable_letters": [
+              "e",
+              "g",
+              "a",
+              "t",
+              "s"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build stage left to right.",
+          "expected_response": "Students build stage correctly: s | t | a | g | e.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct placement of the r-controlled vowel.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The race is here.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "race": "decodable",
+              "is": "decodable",
+              "here": "decodable"
+            },
+            "token_units": {
+              "race": [
+                "r",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on race, is, by, stage.",
+          "expected_response": "Students read \"The race is here.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The race is by the stage.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The page is here.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "page": "decodable",
+              "is": "decodable",
+              "here": "decodable"
+            },
+            "token_units": {
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on page, is, on, stage.",
+          "expected_response": "Students read \"The page is here.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The page is on the stage.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She has a gem.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "has": "decodable",
+              "a": "sight",
+              "gem": "decodable"
+            },
+            "token_units": {
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "gem": [
+                "g",
+                "e",
+                "m"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on has, gem, by, stage.",
+          "expected_response": "Students read \"She has a gem.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"She has a gem by the stage.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Ice is on his face.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Ice": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "his": "decodable",
+              "face": "decodable"
+            },
+            "token_units": {
+              "Ice": [
+                "i",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "his": [
+                "h",
+                "i",
+                "s"
+              ],
+              "face": [
+                "f",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on After, race, ice, is.",
+          "expected_response": "Students read \"Ice is on his face.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"After the race, ice is on his face.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The race is here.\nThe page is here.\nShe has a gem.\nIce is on his face.\nThe gem is here.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What does she have? What is here?",
+            "word_types": {
+              "The": "sight",
+              "race": "decodable",
+              "is": "decodable",
+              "here": "decodable",
+              "page": "decodable",
+              "She": "sight",
+              "has": "decodable",
+              "a": "sight",
+              "gem": "decodable",
+              "Ice": "decodable",
+              "on": "decodable",
+              "his": "decodable",
+              "face": "decodable"
+            },
+            "token_units": {
+              "race": [
+                "r",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "gem": [
+                "g",
+                "e",
+                "m"
+              ],
+              "Ice": [
+                "i",
+                "c",
+                "e"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "his": [
+                "h",
+                "i",
+                "s"
+              ],
+              "face": [
+                "f",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support before rereading the full passage.",
+          "observation_note": "Watch for correct r-controlled vowel production.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The race is here.\nThe page is here.\nShe has a gem.\nIce is on his face.\nThe gem is here.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "race": "decodable",
+              "is": "decodable",
+              "here": "decodable",
+              "page": "decodable",
+              "She": "sight",
+              "has": "decodable",
+              "a": "sight",
+              "gem": "decodable",
+              "Ice": "decodable",
+              "on": "decodable",
+              "his": "decodable",
+              "face": "decodable"
+            },
+            "token_units": {
+              "race": [
+                "r",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "gem": [
+                "g",
+                "e",
+                "m"
+              ],
+              "Ice": [
+                "i",
+                "c",
+                "e"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "his": [
+                "h",
+                "i",
+                "s"
+              ],
+              "face": [
+                "f",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread soft c and soft g Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The race is here.\nThe page is here.\nShe has a gem.\nIce is on his face.\nThe gem is here.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the soft c and soft g text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "The": "sight",
+              "race": "decodable",
+              "is": "decodable",
+              "here": "decodable",
+              "page": "decodable",
+              "She": "sight",
+              "has": "decodable",
+              "a": "sight",
+              "gem": "decodable",
+              "Ice": "decodable",
+              "on": "decodable",
+              "his": "decodable",
+              "face": "decodable"
+            },
+            "token_units": {
+              "race": [
+                "r",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "gem": [
+                "g",
+                "e",
+                "m"
+              ],
+              "Ice": [
+                "i",
+                "c",
+                "e"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "his": [
+                "h",
+                "i",
+                "s"
+              ],
+              "face": [
+                "f",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the soft c and soft g text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: face",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_face.mp3",
+            "dictated_text": "face",
+            "expected_answer": "face",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "f",
+              "a",
+              "c"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play face once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write face accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: race",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_race.mp3",
+            "dictated_text": "race",
+            "expected_answer": "race",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "r",
+              "a",
+              "c"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play race once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write race accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: page",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_page.mp3",
+            "dictated_text": "page",
+            "expected_answer": "page",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "p",
+              "a",
+              "g"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play page once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write page accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students choose the correct vowel spelling.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: cat",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_cat.mp3",
+            "dictated_text": "cat",
+            "expected_answer": "cat",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "c",
+              "a",
+              "t"
+            ]
+          },
+          "teacher_cue": "Transfer check. Dictate cat and ask students whether c is soft or hard before they write.",
+          "expected_response": "Students write cat accurately and identify c as hard /k/ rather than soft /s/.",
+          "correction_move": "Contrast cat with city and face, then re-dictate.",
+          "observation_note": "Watch for overgeneralisation of the new soft c rule.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-05",
+          "block_id": "08",
+          "slide_title": "Listen and Write: go",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/sight_go.mp3",
+            "dictated_text": "go",
+            "expected_answer": "go",
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "g",
+              "o"
+            ]
+          },
+          "teacher_cue": "Use go as a second transfer dictation. Students decide whether g is soft or hard before writing.",
+          "expected_response": "Students write go accurately and identify g as hard /g/ rather than soft /dʒ/.",
+          "correction_move": "Contrast go with gem and page, then revisit the e-i-y rule.",
+          "observation_note": "Watch whether students can switch back to hard g after practicing soft g words.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "face",
+              "race",
+              "ice",
+              "mice",
+              "place"
+            ],
+            "highlighted_chunk": "soft c",
+            "support_text": "All these have soft c = /s/. What letter comes after the c in each word?",
+            "token_units": {}
+          },
+          "teacher_cue": "Show the words. Ask: All these have soft c = /s/. What letter comes after the c in each word?",
+          "expected_response": "Students identify the shared chunk and name the sound it makes.",
+          "correction_move": "Point to the highlighted chunk in each word. Ask again.",
+          "observation_note": "Watch whether students isolate the pattern correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The race is here.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "race": "decodable",
+              "is": "decodable",
+              "here": "decodable"
+            },
+            "token_units": {
+              "race": [
+                "r",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use soft c and soft g In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The race is here.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using soft c and soft g, then say a second sentence with one change.",
+            "word_types": {
+              "The": "sight",
+              "race": "decodable",
+              "is": "decodable",
+              "here": "decodable"
+            },
+            "token_units": {
+              "race": [
+                "r",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Use soft c and soft g in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Soft c rule: c before ___, ___, ___ makes /s/. What are the three letters?",
+                "phoneme": "/s/"
+              },
+              {
+                "label": "Where is the race page? What was on his face after the race? Find the soft c and soft g words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using face or race.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final soft c and soft g Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's soft c and soft g focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's soft c and soft g focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

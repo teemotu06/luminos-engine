@@ -1,0 +1,882 @@
+{
+  "lesson_id": "KI-L2",
+  "unit_id": "KI",
+  "target_pattern": "r_l_production",
+  "title": "Korean Interference 2: /r/ vs /l/ — Print and Production",
+  "new_units": [],
+  "new_sight_words": [],
+  "sight_words": ["I","the","a","he","me","was","we","to","go","no","do","so","of"],
+  "korean_interference_active": ["r_l"],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: r",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r",
+            "back_text": "/r/",
+            "audio": "/static/audio/r.mp3"
+          },
+          "teacher_cue": "What sound? Tongue curls back — no contact with roof.",
+          "expected_response": "Students produce /r/ with tongue curled back, no contact.",
+          "correction_move": "Model /r/ with mirror. Students repeat three times.",
+          "observation_note": "Watch for /l/ substitution or Korean flap. Mirror work mandatory on every /r/ review.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: l",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "l",
+            "back_text": "/l/",
+            "audio": "/static/audio/l.mp3"
+          },
+          "teacher_cue": "What sound? Tongue tip touches the ridge just behind the upper front teeth.",
+          "expected_response": "Students produce /l/ with tongue tip contact at the alveolar ridge.",
+          "correction_move": "Model /l/ with mirror — tongue tip contact visible. Students repeat three times.",
+          "observation_note": "Watch for /r/ substitution (overcorrection) or Korean flap. Both /r/ and /l/ must be drilled from this lesson.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: he",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "he",
+            "back_text": "he — sight word",
+            "audio": "/static/audio/sight_he.mp3",
+            "word_types": {
+              "he": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say he immediately without blending.",
+          "correction_move": "Model he in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: me",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "me",
+            "back_text": "me — sight word",
+            "audio": "/static/audio/sight_me.mp3",
+            "word_types": {
+              "me": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit. Use it in a sentence.",
+          "expected_response": "Students say me immediately without blending.",
+          "correction_move": "Model me in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation or blending attempts — sight word should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: rot",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_rot.mp3",
+            "dictated_text": "rot",
+            "expected_answer": "rot",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["r","o","t"]
+          },
+          "teacher_cue": "Play rot once. Replay only if needed before checking.",
+          "expected_response": "Students write rot accurately.",
+          "correction_move": "Replay rot once, segment orally, then recheck.",
+          "observation_note": "Watch for r at onset — not l. Confirm /r/ production as students segment.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: lip",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_lip.mp3",
+            "dictated_text": "lip",
+            "expected_answer": "lip",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["l","i","p"]
+          },
+          "teacher_cue": "Play lip once. Replay only if needed before checking.",
+          "expected_response": "Students write lip accurately.",
+          "correction_move": "Replay lip once, segment orally, then recheck.",
+          "observation_note": "Watch for l at onset — not r. Confirm /l/ tongue contact at ridge as students segment.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: lock",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_lock.mp3",
+            "dictated_text": "lock",
+            "expected_answer": "lock",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["l","o","ck"]
+          },
+          "teacher_cue": "Play lock once. Replay only if needed before checking.",
+          "expected_response": "Students write lock accurately — note ck digraph.",
+          "correction_move": "Replay lock once, segment orally l-o-ck, then recheck.",
+          "observation_note": "Watch for l at onset — not r — and for correct ck spelling at coda.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Contrast Establishment: r / l",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "r / l",
+            "back_text": "Two sounds. Two letters. Two different words."
+          },
+          "teacher_cue": "Students have now learned BOTH r and l. From this lesson: EVERY /r/ word must be produced with /r/. Every /l/ word must be produced with /l/. Mirror work continues. Show printed card. Drill: r (curl) ... l (touch ridge) ... r ... l ... alternating 10 times.",
+          "expected_response": "Students alternate /r/ and /l/ production correctly and understand that both sounds are now in their reading inventory.",
+          "correction_move": "Mirror session: tongue curls for /r/, tip touches ridge for /l/. Alternate until students can switch cleanly.",
+          "observation_note": "Watch for students who still conflate both sounds. From this lesson, every r and l word in print must be read with the correct phoneme.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Choose: rip or lip?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "rip",
+              "audio": "/static/audio/ki_rip.mp3"
+            },
+            "pair_B": {
+              "label": "lip",
+              "audio": "/static/audio/ki_lip.mp3"
+            },
+            "correct_choice": "B",
+            "korean_flag": "r_l",
+            "correction_routine": "This time correct answer is B — lip. /l/ — tongue touches ridge."
+          },
+          "teacher_cue": "Which word is lip?",
+          "expected_response": "Students identify B (lip) as the /l/-onset word.",
+          "correction_move": "Play each word again. Contrast the onset positions. Students repeat lip three times with mirror.",
+          "observation_note": "Watch for /l/ vs /r/ discrimination accuracy. Note students who still conflate the two.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-03",
+          "block_id": "03",
+          "slide_title": "Choose: lock or rock?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "lock",
+              "audio": "/static/audio/ki_lock.mp3"
+            },
+            "pair_B": {
+              "label": "rock",
+              "audio": "/static/audio/ki_rock.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "r_l",
+            "correction_routine": "lock = /l/ onset. rock = /r/ onset."
+          },
+          "teacher_cue": "Which word is lock?",
+          "expected_response": "Students identify A (lock) as the /l/-onset word.",
+          "correction_move": "Play each word again. Model /l/ tongue contact vs /r/ tongue curl. Students repeat lock three times.",
+          "observation_note": "Watch for accurate discrimination between /l/ and /r/ when the vowel and coda are identical.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-04",
+          "block_id": "03",
+          "slide_title": "Choose: lot or rot?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "lot",
+              "audio": "/static/audio/ki_lot.mp3"
+            },
+            "pair_B": {
+              "label": "rot",
+              "audio": "/static/audio/ki_rot.mp3"
+            },
+            "correct_choice": "A",
+            "korean_flag": "r_l",
+            "correction_routine": "lot = /l/ onset. rot = /r/ onset."
+          },
+          "teacher_cue": "Which word is lot?",
+          "expected_response": "Students identify A (lot) as the /l/-onset word.",
+          "correction_move": "Play each word again. Model /l/ onset tongue position. Students repeat lot three times.",
+          "observation_note": "Watch for accurate discrimination. Three minimal pairs back-to-back builds robust contrast.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: rat",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rat",
+            "back_text": "/r/ /æ/ /t/",
+            "audio": "/static/audio/block04_rat.mp3",
+            "blend_units": [
+              {"grapheme": "r", "phoneme": "/r/", "audio": null},
+              {"grapheme": "a", "phoneme": "/æ/", "audio": null},
+              {"grapheme": "t", "phoneme": "/t/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say rat. Tongue curls back for /r/ at onset — no contact. Reveal print and blend.",
+          "expected_response": "Students say rat with clean /r/ onset and connect meaning.",
+          "correction_move": "Model /r/ with mirror, then model rat in full. Students repeat three times.",
+          "observation_note": "Watch for /l/ substitution at onset — 'lat' for 'rat'.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: rip",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rip",
+            "back_text": "/r/ /ɪ/ /p/",
+            "audio": "/static/audio/block04_rip.mp3",
+            "blend_units": [
+              {"grapheme": "r", "phoneme": "/r/", "audio": null},
+              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
+              {"grapheme": "p", "phoneme": "/p/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say rip. Tongue curls back for /r/ at onset — no contact. Reveal print and blend.",
+          "expected_response": "Students say rip with clean /r/ onset and connect meaning.",
+          "correction_move": "Model /r/ with mirror, then model rip in full. Students repeat three times.",
+          "observation_note": "Watch for /l/ substitution at onset — 'lip' for 'rip'. Note: lip is a real /l/ word.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: rock",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "rock",
+            "back_text": "/r/ /ɒ/ /k/",
+            "audio": "/static/audio/block04_rock.mp3",
+            "blend_units": [
+              {"grapheme": "r", "phoneme": "/r/", "audio": null},
+              {"grapheme": "o", "phoneme": "/ɒ/", "audio": null},
+              {"grapheme": "ck", "phoneme": "/k/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say rock. Tongue curls back for /r/ at onset — no contact. Reveal print and blend.",
+          "expected_response": "Students say rock with clean /r/ onset and connect meaning.",
+          "correction_move": "Model /r/ with mirror, then model rock in full. Students repeat three times.",
+          "observation_note": "Watch for /l/ substitution at onset — 'lock' for 'rock'. Note: lock is a real /l/ word.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: lap",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "lap",
+            "back_text": "/l/ /æ/ /p/",
+            "audio": "/static/audio/block04_lap.mp3",
+            "blend_units": [
+              {"grapheme": "l", "phoneme": "/l/", "audio": null},
+              {"grapheme": "a", "phoneme": "/æ/", "audio": null},
+              {"grapheme": "p", "phoneme": "/p/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say lap. Tongue tip touches ridge for /l/ at onset. Reveal print and blend.",
+          "expected_response": "Students say lap with clean /l/ onset and connect meaning.",
+          "correction_move": "Model /l/ with mirror — tongue contact at ridge — then model lap in full. Students repeat three times.",
+          "observation_note": "Watch for /r/ substitution at onset (overcorrection) — 'rap' for 'lap'.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: lip",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "lip",
+            "back_text": "/l/ /ɪ/ /p/",
+            "audio": "/static/audio/block04_lip.mp3",
+            "blend_units": [
+              {"grapheme": "l", "phoneme": "/l/", "audio": null},
+              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
+              {"grapheme": "p", "phoneme": "/p/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say lip. Tongue tip touches ridge for /l/ at onset. Reveal print and blend.",
+          "expected_response": "Students say lip with clean /l/ onset and connect meaning.",
+          "correction_move": "Model /l/ with mirror — tongue contact at ridge — then model lip in full. Students repeat three times.",
+          "observation_note": "Watch for /r/ substitution at onset (overcorrection) — 'rip' for 'lip'.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: lock",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "lock",
+            "back_text": "/l/ /ɒ/ /k/",
+            "audio": "/static/audio/block04_lock.mp3",
+            "blend_units": [
+              {"grapheme": "l", "phoneme": "/l/", "audio": null},
+              {"grapheme": "o", "phoneme": "/ɒ/", "audio": null},
+              {"grapheme": "ck", "phoneme": "/k/", "audio": null}
+            ]
+          },
+          "teacher_cue": "Say lock. Tongue tip touches ridge for /l/ at onset. Reveal print and blend.",
+          "expected_response": "Students say lock with clean /l/ onset and connect meaning.",
+          "correction_move": "Model /l/ with mirror — tongue contact at ridge — then model lock in full. Students repeat three times.",
+          "observation_note": "Watch for /r/ substitution at onset (overcorrection) — 'rock' for 'lock'.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: rot",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "rot",
+            "target_letters": ["r","o","t"],
+            "slots": ["r","o","t"],
+            "draggable_letters": ["t","o","r"]
+          },
+          "teacher_cue": "Say the sounds and build rot left to right.",
+          "expected_response": "Students build rot correctly: r | o | t.",
+          "correction_move": "Return to oral segmenting of rot, then rebuild one sound at a time.",
+          "observation_note": "Watch that students place r first — not l.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: lot",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "lot",
+            "target_letters": ["l","o","t"],
+            "slots": ["l","o","t"],
+            "draggable_letters": ["t","o","l"]
+          },
+          "teacher_cue": "Say the sounds and build lot left to right.",
+          "expected_response": "Students build lot correctly: l | o | t.",
+          "correction_move": "Return to oral segmenting of lot, then rebuild one sound at a time.",
+          "observation_note": "Watch that students place l first — not r. Contrast this with rot from the previous slide.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: rip",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "rip",
+            "target_letters": ["r","i","p"],
+            "slots": ["r","i","p"],
+            "draggable_letters": ["p","i","r"]
+          },
+          "teacher_cue": "Say the sounds and build rip left to right.",
+          "expected_response": "Students build rip correctly: r | i | p.",
+          "correction_move": "Return to oral segmenting of rip, then rebuild one sound at a time.",
+          "observation_note": "Watch that students place r first — not l.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: lip",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "lip",
+            "target_letters": ["l","i","p"],
+            "slots": ["l","i","p"],
+            "draggable_letters": ["p","i","l"]
+          },
+          "teacher_cue": "Say the sounds and build lip left to right.",
+          "expected_response": "Students build lip correctly: l | i | p.",
+          "correction_move": "Return to oral segmenting of lip, then rebuild one sound at a time.",
+          "observation_note": "Watch that students place l first — not r. Contrast this with rip from the previous slide.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A rat is on the rack.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "A": "sight",
+              "rat": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "rack": "decodable"
+            }
+          },
+          "teacher_cue": "A, the are sight words. All other words decodable. Two /r/-onset words: rat, rack.",
+          "expected_response": "Students read \"A rat is on the rack.\" accurately with clean /r/ on rat and rack.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch for /l/ substitution on rat or rack.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He can lock it. I got a rock.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "can": "decodable",
+              "lock": "decodable",
+              "it": "decodable",
+              "I": "sight",
+              "got": "decodable",
+              "a": "sight",
+              "rock": "decodable"
+            }
+          },
+          "teacher_cue": "He, I, a are sight words. All other words decodable. Mixed: lock (/l/ onset), rock (/r/ onset).",
+          "expected_response": "Students read both sentences accurately — /l/ on lock, /r/ on rock.",
+          "correction_move": "Model each sentence, then return to one-to-one word tracking. Contrast lock and rock if needed.",
+          "observation_note": "Watch for /r/ on lock (overcorrection) or /l/ on rock (interference). Both errors are possible here.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentences",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The lip is on the rock. He ran to the lock.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "lip": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "rock": "decodable",
+              "He": "sight",
+              "ran": "decodable",
+              "to": "sight",
+              "lock": "decodable"
+            }
+          },
+          "teacher_cue": "The, the, He, to are sight words. All other words decodable. Mixed /r/ and /l/ onset words in the same sentences.",
+          "expected_response": "Students read both sentences accurately — /l/ on lip/lock, /r/ on rock/ran.",
+          "correction_move": "Model each sentence once, then return to one-to-one word tracking. Contrast each /r/ and /l/ word explicitly.",
+          "observation_note": "Watch for any phoneme swaps — especially lip vs rip, or lock vs rock — which are minimal pairs both in play here.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A rat ran.\nHe got a rock.\nThe rock is on a rack.\nHe can lock it.\nI can rip the lip.\nThe rat ran to the lock.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "What is on the rack? What can he lock?",
+            "word_types": {
+              "A": "sight",
+              "a": "sight",
+              "rat": "decodable",
+              "ran": "decodable",
+              "He": "sight",
+              "got": "decodable",
+              "rock": "decodable",
+              "The": "sight",
+              "the": "sight",
+              "is": "decodable",
+              "on": "decodable",
+              "rack": "decodable",
+              "can": "decodable",
+              "lock": "decodable",
+              "it": "decodable",
+              "I": "sight",
+              "rip": "decodable",
+              "lip": "decodable",
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Point to each word. Ask the comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support each sentence before rereading the full passage.",
+          "observation_note": "Watch for /r/ vs /l/ accuracy throughout — every onset matters. Note any swaps between r/l pairs.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread — Fluency Pass",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A rat ran.\nHe got a rock.\nThe rock is on a rack.\nHe can lock it.\nI can rip the lip.\nThe rat ran to the lock.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "word_types": {
+              "A": "sight",
+              "a": "sight",
+              "rat": "decodable",
+              "ran": "decodable",
+              "He": "sight",
+              "got": "decodable",
+              "rock": "decodable",
+              "The": "sight",
+              "the": "sight",
+              "is": "decodable",
+              "on": "decodable",
+              "rack": "decodable",
+              "can": "decodable",
+              "lock": "decodable",
+              "it": "decodable",
+              "I": "sight",
+              "rip": "decodable",
+              "lip": "decodable",
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Students reread the passage. Monitor /r/ vs /l/ distinction carefully — this pass is for fluency AND accuracy.",
+          "expected_response": "Students reread with improved fluency and consistent /r/ and /l/ production.",
+          "correction_move": "Pause and correct at the word level for any /r/ or /l/ error before continuing.",
+          "observation_note": "Watch whether /r/ vs /l/ accuracy holds or degrades under fluency demands.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Partner Read",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A rat ran. He got a rock. Lock it. Rip it.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "A": "sight",
+              "rat": "decodable",
+              "ran": "decodable",
+              "He": "sight",
+              "got": "decodable",
+              "a": "sight",
+              "rock": "decodable",
+              "Lock": "decodable",
+              "it": "decodable",
+              "Rip": "decodable"
+            }
+          },
+          "teacher_cue": "Students take turns reading one sentence each. Monitor /r/ vs /l/ production throughout.",
+          "expected_response": "Students read each sentence with accurate /r/ and /l/ production on every onset word.",
+          "correction_move": "Pause and correct at the word level immediately for any /r/ or /l/ swap.",
+          "observation_note": "Watch for accuracy in partner reading — both /r/ and /l/ onset words are present. Note which students swap onsets.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: rat",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_rat.mp3",
+            "dictated_text": "rat",
+            "expected_answer": "rat",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["r","a","t"]
+          },
+          "teacher_cue": "Play rat once. Replay only if needed before checking.",
+          "expected_response": "Students write rat accurately.",
+          "correction_move": "Replay rat once, segment orally, then recheck.",
+          "observation_note": "Watch for r at onset — not l — after the full contrast lesson.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: lock",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_lock.mp3",
+            "dictated_text": "lock",
+            "expected_answer": "lock",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["l","o","ck"]
+          },
+          "teacher_cue": "Play lock once. Replay only if needed before checking.",
+          "expected_response": "Students write lock accurately — note ck digraph.",
+          "correction_move": "Replay lock once, segment orally l-o-ck, then recheck.",
+          "observation_note": "Watch for l at onset — not r — and correct ck spelling at coda.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: rock",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_rock.mp3",
+            "dictated_text": "rock",
+            "expected_answer": "rock",
+            "elkonin_boxes": 3,
+            "grapheme_units": ["r","o","ck"]
+          },
+          "teacher_cue": "Play rock once. Replay only if needed before checking.",
+          "expected_response": "Students write rock accurately — note ck digraph.",
+          "correction_move": "Replay rock once, segment orally r-o-ck, then recheck.",
+          "observation_note": "Watch for r at onset — not l. Contrast with lock from the previous slide: both end in -ock but differ at onset.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Choose: rack or lack?",
+          "view_type": "minimal_pair",
+          "content_payload": {
+            "pair_A": {
+              "label": "rack",
+              "audio": "/static/audio/ki_rack.mp3"
+            },
+            "pair_B": {
+              "label": "lack",
+              "audio": "/static/audio/ki_lack.mp3"
+            },
+            "correct_choice": "B",
+            "korean_flag": "r_l",
+            "correction_routine": "lack = /l/ onset."
+          },
+          "teacher_cue": "Which word is lack?",
+          "expected_response": "Students identify B (lack) as the /l/-onset word.",
+          "correction_move": "Play each word again. Model /l/ tongue contact vs /r/ tongue curl. Students repeat lack three times.",
+          "observation_note": "Watch for accurate /l/ vs /r/ discrimination at lesson close — consolidation check.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Production Contrast: /r/ and /l/ Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": ["rat","rock","rip","lap","lot","lip"],
+            "support_text": "Top row: /r/ words. Bottom row: /l/ words. Say each pair. Feel the difference."
+          },
+          "teacher_cue": "Students say each word. Feel the contrast between /r/ (curl) and /l/ (touch ridge) across paired words.",
+          "expected_response": "Students produce each word with the correct onset phoneme — /r/ on rat, rock, rip and /l/ on lap, lot, lip.",
+          "correction_move": "For any onset error, isolate the onset, mirror the tongue position, and have student re-attempt the full word.",
+          "observation_note": "Watch for production consistency across all six words — both /r/ and /l/ onsets under pressure.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": ["secure","shaky","missed"],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Say rock and lock. What is the difference at the start?",
+                "phoneme": null
+              },
+              {
+                "label": "Which of these starts with /l/: rat, lip, rack, rip?",
+                "phoneme": "/l/"
+              },
+              {
+                "label": "Say one sentence using a word that starts with /l/ and one that starts with /r/.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Check: can students reliably distinguish /r/ and /l/ in both speech and print? Note any students who still need mirror work."
+          },
+          "teacher_cue": "Close with contrast recall, discrimination check, and two oral transfer sentences.",
+          "expected_response": "Students articulate the /r/-/l/ distinction, identify the /l/-onset word correctly, and produce two sentences with the target onsets.",
+          "correction_move": "Return to mirror work for any student who cannot articulate the difference. Model one sentence per phoneme if needed.",
+          "observation_note": "Watch for whether students can name the distinction and apply it in spontaneous oral production.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

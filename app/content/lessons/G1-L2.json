@@ -3,7 +3,15 @@
   "unit_id": "G1",
   "target_pattern": "i",
   "title": "Group 1, Lesson 2: i",
-  "korean_interference_active": ["vowel_quality"],
+  "new_units": [
+    "i"
+  ],
+  "new_sight_words": [
+    "the"
+  ],
+  "korean_interference_active": [
+    "vowel_quality"
+  ],
   "content_pack_status": "draft",
   "blocks": {
     "01": {
@@ -13,7 +21,7 @@
         {
           "slide_id": "01-01",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Review: s",
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "s",
@@ -21,7 +29,7 @@
             "audio": "/static/audio/s.mp3"
           },
           "teacher_cue": "What sound?",
-          "expected_response": "Students respond /s/ quickly and cleanly.",
+          "expected_response": "Students produce /s/ quickly and cleanly.",
           "correction_move": "Model /s/, students repeat three times, then recheck.",
           "observation_note": "Watch for /sh/ drift and delayed retrieval.",
           "korean_interference_flag": null,
@@ -32,16 +40,16 @@
         {
           "slide_id": "01-02",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Review: a",
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "a",
-            "back_text": "/a/",
+            "back_text": "/æ/",
             "audio": "/static/audio/a.mp3"
           },
           "teacher_cue": "What sound?",
-          "expected_response": "Students respond /a/ quickly and cleanly.",
-          "correction_move": "Model /a/, students repeat three times, then recheck.",
+          "expected_response": "Students produce /æ/ quickly and cleanly.",
+          "correction_move": "Model /æ/, students repeat three times, then recheck.",
           "observation_note": "Watch for uncertain retrieval and drifting vowel quality.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
@@ -51,7 +59,7 @@
         {
           "slide_id": "01-03",
           "block_id": "01",
-          "slide_title": "Review Known Sounds",
+          "slide_title": "Review: t",
           "view_type": "flashcard",
           "content_payload": {
             "front_text": "t",
@@ -59,7 +67,7 @@
             "audio": "/static/audio/t.mp3"
           },
           "teacher_cue": "What sound?",
-          "expected_response": "Students respond /t/ quickly and cleanly.",
+          "expected_response": "Students produce /t/ quickly and cleanly.",
           "correction_move": "Model /t/, students repeat three times, then recheck.",
           "observation_note": "Watch for weak release or delayed retrieval.",
           "korean_interference_flag": null,
@@ -76,62 +84,139 @@
         {
           "slide_id": "02-01",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Listen and Write: sat",
           "view_type": "writing_encoding",
           "content_payload": {
             "audio_prompt": "/static/audio/block02_sat.mp3",
             "dictated_text": "sat",
             "expected_answer": "sat",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "a",
+              "t"
+            ]
           },
-          "teacher_cue": "Play sat once, then replay only if needed before checking.",
-          "expected_response": "Students write sat accurately on paper or a whiteboard.",
-          "correction_move": "Replay sat once, then segment /s/ /a/ /t/ orally before checking.",
+          "teacher_cue": "Play sat once. Replay only if needed before checking.",
+          "expected_response": "Students write sat accurately.",
+          "correction_move": "Replay sat once, then segment /s/ /æ/ /t/ orally before rechecking.",
           "observation_note": "Watch whether students can still hold the full word from sound to print.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look at the letter.",
+                "teacher_prompt": "Set attention on the new letter i.",
+                "tts_prompt": "Look at the letter.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. /i/.",
+                "teacher_prompt": "Model the short i sound once. Keep it short, not tense.",
+                "tts_prompt": "Listen. /i/.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say /i/.",
+                "teacher_prompt": "Take a choral response and listen for short vowel quality.",
+                "tts_prompt": "Everyone. Say /i/.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "02-02",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Listen and Write: at",
           "view_type": "writing_encoding",
           "content_payload": {
             "audio_prompt": "/static/audio/block02_at.mp3",
             "dictated_text": "at",
             "expected_answer": "at",
-            "elkonin_boxes": 2
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "a",
+              "t"
+            ]
           },
-          "teacher_cue": "Play at once, then replay only if needed before checking.",
-          "expected_response": "Students write at accurately on paper or a whiteboard.",
-          "correction_move": "Replay at once, then segment /a/ /t/ orally before checking.",
-          "observation_note": "Watch whether students can encode a shorter word without adding extra sounds.",
+          "teacher_cue": "Play at once. Replay only if needed before checking.",
+          "expected_response": "Students write at accurately.",
+          "correction_move": "Replay at once, then segment /æ/ /t/ orally before rechecking.",
+          "observation_note": "Watch whether students add an extra sound before or after the word.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
           "slide_id": "02-03",
           "block_id": "02",
-          "slide_title": "Listen and Write",
+          "slide_title": "Listen and Write: as",
           "view_type": "writing_encoding",
           "content_payload": {
             "audio_prompt": "/static/audio/block02_as.mp3",
             "dictated_text": "as",
             "expected_answer": "as",
-            "elkonin_boxes": 2
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "a",
+              "s"
+            ]
           },
-          "teacher_cue": "Play as once, then replay only if needed before checking.",
-          "expected_response": "Students write as accurately on paper or a whiteboard.",
-          "correction_move": "Replay as once, then segment /a/ /s/ orally before checking.",
-          "observation_note": "Watch whether students can hear the final /s/ clearly in a short word.",
+          "teacher_cue": "Play as once. Replay only if needed before checking.",
+          "expected_response": "Students write as accurately.",
+          "correction_move": "Replay as once, then segment /æ/ /s/ orally before rechecking.",
+          "observation_note": "Watch whether students hear the final /s/ clearly in a short word.",
           "korean_interference_flag": null,
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Keep the new sound ready.",
+                "teacher_prompt": "Shift from isolation to word connection.",
+                "tts_prompt": "Keep the new sound ready.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "model",
+                "board_prompt": "Listen. /i/ in a word.",
+                "teacher_prompt": "Model the focus sound and connect it to a lesson word.",
+                "tts_prompt": "Listen. /i/ in a word.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Say the sound and the word.",
+                "teacher_prompt": "Take a choral response and confirm the sound carries into a real word.",
+                "tts_prompt": "Everyone. Say the sound and the word.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         }
       ]
     },
@@ -149,13 +234,67 @@
             "back_text": "/ɪ/",
             "audio": "/static/audio/i_short.mp3"
           },
-          "teacher_cue": "New sound today. Keep it short, relaxed, and quick.",
-          "expected_response": "Students produce short /ɪ/ cleanly without stretching it.",
-          "correction_move": "Model a short relaxed /ɪ/, contrast it with a longer /iː/, then repeat.",
-          "observation_note": "Watch for tense, overlong vowel production and confusion with /iː/.",
+          "teacher_cue": "New sound today. Lips slightly spread, tongue mid-high, brief. Not a long eeee — just a quick i.",
+          "expected_response": "Students produce short /ɪ/ cleanly without stretching or tensing it.",
+          "correction_move": "Model a short relaxed /ɪ/, contrast it with a sustained /iː/, then recheck.",
+          "observation_note": "Watch for tense overlong vowel production — Korean learners may produce /iː/ instead of /ɪ/.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Eyes on the sentence.",
+                "teacher_prompt": "Set one-to-one tracking before the class reads.",
+                "tts_prompt": "Eyes on the sentence.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "partner_practice",
+                "board_prompt": "Read with your partner.",
+                "teacher_prompt": "Give a short partner read before the whole-class response.",
+                "tts_prompt": "Read with your partner.",
+                "timeout_ms": 12000,
+                "teacher_controls": ["pause", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Take the class read and listen for the short i in sit.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say i In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "i",
+            "back_text": "/ɪ/",
+            "audio": "/static/audio/i_short.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect i to one strong word from today.",
+          "expected_response": "Students say i clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -167,23 +306,21 @@
         {
           "slide_id": "04-01",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
+          "slide_title": "Sight Word: I",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "sit down",
-            "back_text": "sit",
-            "audio": "/static/audio/block04_sit.mp3",
-            "blend_units": [
-              {"grapheme": "s", "phoneme": "/s/", "audio": null},
-              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
-              {"grapheme": "t", "phoneme": "/t/", "audio": null}
-            ]
+            "front_text": "I",
+            "back_text": "I — sight word",
+            "audio": "/static/audio/sight_i.mp3",
+            "word_types": {
+              "I": "sight"
+            }
           },
-          "teacher_cue": "Model sit with the action first, then reveal the written word.",
-          "expected_response": "Students say sit orally and connect it to the action before print.",
-          "correction_move": "Model sit, gesture the action again, then repeat and reveal the word.",
-          "observation_note": "Watch whether students hold the short i sound in a known action word.",
-          "korean_interference_flag": "vowel_quality",
+          "teacher_cue": "Sight word — underlined. Say it as a whole unit. Uses /aɪ/ diphthong — not taught until Lesson 34. Learn as a whole unit. Use it in a short oral sentence, then reveal.",
+          "expected_response": "Students say I orally and recognise it as a whole-unit sight word.",
+          "correction_move": "Model I in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch whether students try to blend I. Redirect — sight word, say it whole.",
+          "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -191,22 +328,21 @@
         {
           "slide_id": "04-02",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
+          "slide_title": "Sight Word: the",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "What is it?",
-            "back_text": "it",
-            "audio": "/static/audio/block04_it.mp3",
-            "blend_units": [
-              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
-              {"grapheme": "t", "phoneme": "/t/", "audio": null}
-            ]
+            "front_text": "the",
+            "back_text": "the — sight word",
+            "audio": "/static/audio/sight_the.mp3",
+            "word_types": {
+              "the": "sight"
+            }
           },
-          "teacher_cue": "Teach it as a whole-word sight word in a simple oral question, then reveal print.",
-          "expected_response": "Students say it orally in context and recognise it as a high-frequency word.",
-          "correction_move": "Model the full word it in a short sentence, then repeat and reveal the word.",
-          "observation_note": "Watch whether students treat it as a whole useful word, not just isolated sounds.",
-          "korean_interference_flag": "vowel_quality",
+          "teacher_cue": "Sight word — underlined. Say it as a whole unit. Uses voiced /ð/ — not taught until Lesson 23. Learn as a whole unit. Use it in a short oral sentence, then reveal.",
+          "expected_response": "Students say the orally and recognise it as a whole-unit sight word.",
+          "correction_move": "Model the in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch whether students try to blend the. Redirect — sight word, say it whole.",
+          "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -214,23 +350,21 @@
         {
           "slide_id": "04-03",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
+          "slide_title": "Sight Word: a",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "its tail",
-            "back_text": "its",
-            "audio": "/static/audio/block04_its.mp3",
-            "blend_units": [
-              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
-              {"grapheme": "t", "phoneme": "/t/", "audio": null},
-              {"grapheme": "s", "phoneme": "/s/", "audio": null}
-            ]
+            "front_text": "a",
+            "back_text": "a — sight word",
+            "audio": "/static/audio/sight_a.mp3",
+            "word_types": {
+              "a": "sight"
+            }
           },
-          "teacher_cue": "Use a short possessive phrase orally, then reveal the written word its.",
-          "expected_response": "Students say its orally and connect it to ownership meaning before print.",
-          "correction_move": "Model its in a short phrase, point to the owned object, then repeat and reveal.",
-          "observation_note": "Watch whether students can hold the full word and final /s/ in connected speech.",
-          "korean_interference_flag": "vowel_quality",
+          "teacher_cue": "Sight word — underlined. Say it as a whole unit. Uses schwa /ə/ — not formally taught. Learn as a whole unit. Use it in a short oral sentence, then reveal.",
+          "expected_response": "Students say a orally and recognise it as a whole-unit sight word.",
+          "correction_move": "Model a in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch whether students try to blend a. Redirect — sight word, say it whole.",
+          "korean_interference_flag": null,
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
@@ -238,21 +372,163 @@
         {
           "slide_id": "04-04",
           "block_id": "04",
-          "slide_title": "Vocabulary Warm-Up",
+          "slide_title": "Vocabulary: sit",
           "view_type": "flashcard",
           "content_payload": {
-            "front_text": "It is a cat.",
-            "back_text": "is",
-            "audio": "/static/audio/block04_is.mp3",
+            "front_text": "sit",
+            "back_text": "/s/ /ɪ/ /t/",
+            "audio": "/static/audio/block04_sit.mp3",
             "blend_units": [
-              {"grapheme": "i", "phoneme": "/ɪ/", "audio": null},
-              {"grapheme": "s", "phoneme": "/z/", "audio": null}
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
             ]
           },
-          "teacher_cue": "Teach is as a whole-word sight word in a short oral sentence, then reveal print.",
-          "expected_response": "Students say is orally in context and recognise it as a high-frequency word.",
-          "correction_move": "Model is in a short sentence, then repeat chorally and reveal the word.",
-          "observation_note": "Watch whether students can use is orally before seeing the written form.",
+          "teacher_cue": "Model the action, say the word, then reveal print. All three sounds are taught.",
+          "expected_response": "Students say sit orally, connect it to the action, then blend the three sounds on the card.",
+          "correction_move": "Model the action again, say sit slowly, then reveal and blend.",
+          "observation_note": "Watch whether students hold the short /ɪ/ in the middle and do not stretch it to /iː/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: it",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "it",
+            "back_text": "/ɪ/ /t/",
+            "audio": "/static/audio/block04_it.mp3",
+            "blend_units": [
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Point to an object and say it orally, then reveal print. Use in a short oral sentence: I sat. It sat.",
+          "expected_response": "Students say it orally in context and recognise it as a high-frequency word.",
+          "correction_move": "Model it in a short oral sentence, then reveal and blend.",
+          "observation_note": "Watch whether students treat it as a useful word in context, not just isolated sounds.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: its",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "its",
+            "back_text": "/ɪ/ /t/ /s/",
+            "audio": "/static/audio/block04_its.mp3",
+            "blend_units": [
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "t",
+                "phoneme": "/t/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Model its orally with a possessive gesture, then reveal print and blend all three sounds.",
+          "expected_response": "Students say its orally with a sense of ownership meaning, then blend the three sounds on the card.",
+          "correction_move": "Model its with a clear gesture, say it again slowly, then reveal and blend.",
+          "observation_note": "Watch whether students preserve the final /s/ both orally and when blending.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Vocabulary: is",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "is",
+            "back_text": "/ɪ/ /z/",
+            "audio": "/static/audio/block04_is.mp3",
+            "blend_units": [
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/z/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Use is orally in a short sentence — I sat. It is. Then reveal print and blend.",
+          "expected_response": "Students say is orally in context before seeing it in print.",
+          "correction_move": "Model is in a short oral sentence, then reveal and blend.",
+          "observation_note": "Watch whether students can use is orally before print exposure. Note: s here makes /z/ — flag this if students query it.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Review i With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "is",
+            "back_text": "/ɪ/ /z/",
+            "audio": "/static/audio/block04_is.mp3",
+            "blend_units": [
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "s",
+                "phoneme": "/z/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for i.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
@@ -267,61 +543,204 @@
         {
           "slide_id": "05-01",
           "block_id": "05",
-          "slide_title": "Build the Word",
+          "slide_title": "Build: sit",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "sit",
-            "target_letters": ["s", "i", "t"],
-            "slots": ["s", "i", "t"],
-            "draggable_letters": ["i", "t", "s"]
+            "target_letters": [
+              "s",
+              "i",
+              "t"
+            ],
+            "slots": [
+              "s",
+              "i",
+              "t"
+            ],
+            "draggable_letters": [
+              "i",
+              "t",
+              "s"
+            ]
           },
-          "teacher_cue": "Say the sounds and build left to right.",
-          "expected_response": "Students build sit using the new short i vowel.",
-          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
-          "observation_note": "Watch whether students can hold the new vowel in the middle of the word.",
+          "teacher_cue": "Say the sounds and build left to right. The new vowel goes in the middle.",
+          "expected_response": "Students build sit correctly: s | i | t.",
+          "correction_move": "Return to oral segmenting of sit, then rebuild one sound at a time.",
+          "observation_note": "Watch whether students place the new short i in the middle slot without hesitation.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Get ready to write.",
+                "teacher_prompt": "Prepare students to encode sit.",
+                "tts_prompt": "Get ready to write.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "dictate",
+                "board_prompt": "Write sit.",
+                "teacher_prompt": "Dictate sit once, then hold the room silent.",
+                "tts_prompt": "Write sit.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "write",
+                "board_prompt": "Write now.",
+                "teacher_prompt": "Short silent writing window.",
+                "tts_prompt": "Write now.",
+                "timeout_ms": 15000,
+                "teacher_controls": ["pause", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "Check every sound.",
+                "teacher_prompt": "Confirm sit and mark the class.",
+                "tts_prompt": "Check every sound.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "05-02",
           "block_id": "05",
-          "slide_title": "Build the Word",
+          "slide_title": "Build: it",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "it",
-            "target_letters": ["i", "t"],
-            "slots": ["i", "t"],
-            "draggable_letters": ["t", "i"]
+            "target_letters": [
+              "i",
+              "t"
+            ],
+            "slots": [
+              "i",
+              "t"
+            ],
+            "draggable_letters": [
+              "t",
+              "i"
+            ]
           },
-          "teacher_cue": "Build the word you hear from left to right.",
-          "expected_response": "Students build it accurately as i | t.",
-          "correction_move": "Repeat the word orally, isolate each sound, then rebuild.",
-          "observation_note": "Watch whether students can map a short high-frequency word accurately.",
+          "teacher_cue": "Build the word from left to right.",
+          "expected_response": "Students build it correctly: i | t.",
+          "correction_move": "Say it orally, isolate each sound, then rebuild.",
+          "observation_note": "Watch whether students can map a short two-sound word accurately without reversing.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
-          "next_action": "manual_next"
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Eyes on the sentence.",
+                "teacher_prompt": "Set one-to-one tracking before the class reads.",
+                "tts_prompt": "Eyes on the sentence.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "partner_practice",
+                "board_prompt": "Read with your partner.",
+                "teacher_prompt": "Give a short partner read before the whole-class response.",
+                "tts_prompt": "Read with your partner.",
+                "timeout_ms": 12000,
+                "teacher_controls": ["pause", "force_advance"]
+              },
+              {
+                "key": "choral",
+                "board_prompt": "Everyone. Read the sentence.",
+                "teacher_prompt": "Take the class read and listen for the short i in sit.",
+                "tts_prompt": "Everyone. Read the sentence.",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
         },
         {
           "slide_id": "05-03",
           "block_id": "05",
-          "slide_title": "Build the Word",
+          "slide_title": "Build: its",
           "view_type": "drag_letter",
           "content_payload": {
             "target_word": "its",
-            "target_letters": ["i", "t", "s"],
-            "slots": ["i", "t", "s"],
-            "draggable_letters": ["s", "i", "t"]
+            "target_letters": [
+              "i",
+              "t",
+              "s"
+            ],
+            "slots": [
+              "i",
+              "t",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "i",
+              "t"
+            ]
           },
-          "teacher_cue": "Build the word and keep the final sound at the end.",
-          "expected_response": "Students build its accurately as i | t | s.",
-          "correction_move": "Return to oral segmenting, then rebuild one sound at a time from the start.",
-          "observation_note": "Watch whether students preserve all three sounds, especially the final /s/.",
+          "teacher_cue": "Build the word and keep all three sounds — including the final one.",
+          "expected_response": "Students build its correctly: i | t | s.",
+          "correction_move": "Say its orally, segment all three sounds, then rebuild from the start.",
+          "observation_note": "Watch whether students preserve the final /s/ and do not stop at i | t.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build i And Rebuild",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "its",
+            "target_letters": [
+              "i",
+              "t",
+              "s"
+            ],
+            "slots": [
+              "i",
+              "t",
+              "s"
+            ],
+            "draggable_letters": [
+              "s",
+              "i",
+              "t"
+            ],
+            "prompt_text": "Build the i word, read it, then rebuild it without help."
+          },
+          "teacher_cue": "Build the i word once, read it, clear it, then rebuild it without help.",
+          "expected_response": "Students build, read, clear, and rebuild accurately.",
+          "correction_move": "Model one build slowly, then have students repeat with less support.",
+          "observation_note": "Watch for whether students are mapping parts to print or only recalling the shape.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -338,15 +757,33 @@
           "content_payload": {
             "text_content": "I sit.",
             "display_mode": "sentence",
-            "show_font_controls": true
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ]
+            }
           },
-          "teacher_cue": "Track left to right and read the full sentence.",
-          "expected_response": "Students read I sit. accurately.",
-          "correction_move": "Model the sentence once, then return to one-to-one tracking.",
-          "observation_note": "Watch whether students can hold the new vowel inside a simple sentence.",
+          "teacher_cue": "Track left to right and read the full sentence. I is a sight word — say it as a whole unit.",
+          "expected_response": "Students read \"I sit.\" accurately.",
+          "correction_move": "Model the sentence once, then return to one-to-one word tracking.",
+          "observation_note": "Watch whether students hold the short /ɪ/ inside a simple sentence and do not stretch it.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
@@ -357,34 +794,131 @@
           "content_payload": {
             "text_content": "It sat.",
             "display_mode": "sentence",
-            "show_font_controls": true
+            "show_font_controls": true,
+            "word_types": {
+              "It": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "It": [
+                "i",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
           },
-          "teacher_cue": "Track left to right and read the full sentence.",
-          "expected_response": "Students read It sat. accurately.",
+          "teacher_cue": "Track left to right. Both words are decodable — blend through each one.",
+          "expected_response": "Students read \"It sat.\" accurately.",
           "correction_move": "Model the sentence once, then return to one-to-one tracking.",
-          "observation_note": "Watch whether students can keep the sight word it and the decodable word sat separate.",
+          "observation_note": "Watch whether students can keep it and sat distinct — both use known phonemes but different vowels.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
           "slide_id": "06-03",
           "block_id": "06",
-          "slide_title": "Read the Sentences",
+          "slide_title": "Read All Three Sentences",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I sit.\nIt sat.",
+            "text_content": "I sit.\nIt sat.\nI sat.",
             "display_mode": "sentence",
-            "show_font_controls": true
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable",
+              "It": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
           },
-          "teacher_cue": "Read both sentences and notice the change from sit to sat.",
-          "expected_response": "Students read both sentences and notice the vowel contrast.",
-          "correction_move": "Model both sentences, then isolate sit and sat before rereading.",
-          "observation_note": "Watch whether students can compare the two similar words inside connected reading.",
+          "teacher_cue": "Read all three sentences left to right. Gesture to each subject as you go — I, then it, then I again. Ask: what did each one do? This previews the full reader in Block 07.",
+          "expected_response": "Students read \"I sit.\nIt sat.\nI sat.\" accurately.",
+          "correction_move": "Model each sentence once, name the subject, then echo-read together before moving on.",
+          "observation_note": "Watch whether students read I sat. correctly — same sentence as G1-L1, now part of a three-sentence scene. Watch for vowel drift in all three sit/sat occurrences.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read And Explain i",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sit.\nIt sat.\nI sat.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable",
+              "It": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            },
+            "comprehension_prompt": "What does this tell you about the lesson words? Say it back in your own words."
+          },
+          "teacher_cue": "Read it smoothly, then explain the i idea in your own words.",
+          "expected_response": "Students read accurately and explain the meaning of the i sentence.",
+          "correction_move": "Reread in a phrase, then prompt for a brief retell or answer.",
+          "observation_note": "Push comprehension right after decoding so the focus does not stay mechanical.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -396,21 +930,151 @@
         {
           "slide_id": "07-01",
           "block_id": "07",
-          "slide_title": "Read the Decodable",
+          "slide_title": "Lesson 2 Reader",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "I sit.\nIt sat.\nI sit at it.",
+            "text_content": "I sit.\nIt sat.\nI sat.",
             "display_mode": "reader",
             "show_font_controls": true,
-            "comprehension_prompt": "Which word says sit? Which says sat? What is different?"
+            "comprehension_prompt": "What did I do? What did it do? Point to the word that has the new sound.",
+            "image": "/static/images/readers/lesson2_reader.png",
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable",
+              "It": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
           },
-          "teacher_cue": "Point to each word as you read, then reread for fluency.",
-          "expected_response": "Students read the three sentences accurately and notice the sit/sat contrast.",
-          "correction_move": "Echo read first, then support line by line before rereading the full passage.",
-          "observation_note": "Watch whether students can track each word and distinguish sit from sat in context.",
+          "teacher_cue": "Use the image to establish the scene before reading — who is I, what is it. Echo read each line, then read chorally with word tracking. After reading, ask the comprehension prompt.",
+          "expected_response": "Students read all three sentences accurately, hold the correct vowel in each word, and answer what each subject did.",
+          "correction_move": "Echo read line by line. For vowel errors, isolate the word, say it slowly, then reread the full sentence.",
+          "observation_note": "Watch whether students track each word precisely and hold /ɪ/ in sit and /æ/ in sat across the full passage. The third sentence I sat. connects to G1-L1 — note if students show recall or hesitation.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sit.\nIt sat.\nI sat.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "image": "/static/images/readers/lesson2_reader.png",
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable",
+              "It": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread i Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sit.\nIt sat.\nI sat.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the i text smoothly. Then tell one thing you noticed about the lesson words.",
+            "image": "/static/images/readers/lesson2_reader.png",
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable",
+              "It": "decodable",
+              "sat": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ],
+              "It": [
+                "i",
+                "t"
+              ],
+              "sat": [
+                "s",
+                "a",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Read the i text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -422,85 +1086,241 @@
         {
           "slide_id": "08-01",
           "block_id": "08",
-          "slide_title": "Listen and Write",
+          "slide_title": "Write: sit",
           "view_type": "writing_encoding",
           "content_payload": {
             "audio_prompt": "/static/audio/block08_sit.mp3",
             "dictated_text": "sit",
             "expected_answer": "sit",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "s",
+              "i",
+              "t"
+            ]
           },
-          "teacher_cue": "Dictate sit once, replay once if needed, then check.",
+          "teacher_cue": "Dictate sit once. Replay once only if needed. Students segment then write.",
           "expected_response": "Students write sit accurately using the short i vowel.",
-          "correction_move": "Repeat the word, segment the sounds orally, then rewrite.",
-          "observation_note": "Watch whether students can encode the new vowel in writing.",
+          "correction_move": "Say sit again, segment /s/ /ɪ/ /t/ orally, then rewrite.",
+          "observation_note": "Watch whether students encode the new /ɪ/ correctly and do not substitute a or e.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
           "slide_id": "08-02",
           "block_id": "08",
-          "slide_title": "Listen and Write",
+          "slide_title": "Write: it",
           "view_type": "writing_encoding",
           "content_payload": {
             "audio_prompt": "/static/audio/block08_it.mp3",
             "dictated_text": "it",
             "expected_answer": "it",
-            "elkonin_boxes": 2
+            "elkonin_boxes": 2,
+            "grapheme_units": [
+              "i",
+              "t"
+            ]
           },
-          "teacher_cue": "Dictate it once, replay once if needed, then check.",
-          "expected_response": "Students write it accurately.",
-          "correction_move": "Repeat the word, segment the sounds orally, then rewrite.",
-          "observation_note": "Watch whether students can encode a short high-frequency word accurately.",
+          "teacher_cue": "Dictate it once. Replay once only if needed. Students segment then write.",
+          "expected_response": "Students write it accurately as i | t.",
+          "correction_move": "Say it again, segment /ɪ/ /t/ orally, then rewrite.",
+          "observation_note": "Watch whether students can encode a short two-sound word without reversing or adding a letter.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         },
         {
           "slide_id": "08-03",
           "block_id": "08",
-          "slide_title": "Listen and Write",
+          "slide_title": "Write: its",
           "view_type": "writing_encoding",
           "content_payload": {
             "audio_prompt": "/static/audio/block08_its.mp3",
             "dictated_text": "its",
             "expected_answer": "its",
-            "elkonin_boxes": 3
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "i",
+              "t",
+              "s"
+            ]
           },
-          "teacher_cue": "Dictate its once, replay once if needed, then check.",
-          "expected_response": "Students write its accurately.",
-          "correction_move": "Repeat the word, segment the sounds orally, then rewrite.",
-          "observation_note": "Watch whether students preserve the final /s/ when encoding.",
+          "teacher_cue": "Dictate its once. Replay once only if needed. Students segment then write.",
+          "expected_response": "Students write its accurately as i | t | s.",
+          "correction_move": "Say its again, segment /ɪ/ /t/ /s/ orally, then rewrite.",
+          "observation_note": "Watch whether students preserve the final /s/ when encoding and do not stop at it.",
           "korean_interference_flag": "vowel_quality",
           "markable": true,
-          "marking_options": ["secure", "shaky", "missed"],
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Write i And Read Back",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_its.mp3",
+            "dictated_text": "its",
+            "expected_answer": "its",
+            "elkonin_boxes": 3,
+            "grapheme_units": [
+              "i",
+              "t",
+              "s"
+            ],
+            "prompt_text": "Write the i target from memory. Then read it back and check every part."
+          },
+          "teacher_cue": "Write the i target carefully from memory, then read it back aloud and check every part.",
+          "expected_response": "Students write accurately and read back what they wrote.",
+          "correction_move": "Prompt students to say each sound or chunk as they check their writing.",
+          "observation_note": "The goal is accurate encoding plus immediate self-checking.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
     },
-    "09": {  
+    "09": {
       "block_id": "09",
       "label": "Morpheme Moment",
       "slides": [
         {
           "slide_id": "09-01",
           "block_id": "09",
-          "slide_title": "Compare the Words",
+          "slide_title": "Compare: sit · sat",
           "view_type": "read_respond",
           "content_payload": {
-            "text_content": "sit · sat",
-            "comprehension_prompt": "What changed? Which sound is different?"
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "sit",
+              "sat"
+            ],
+            "highlighted_chunk": null,
+            "support_text": "What changed? Which sound is different?"
           },
-          "teacher_cue": "Read sit and sat, then ask what changed in the middle.",
-          "expected_response": "Students identify that the vowel changed from /ɪ/ to /a/.",
-          "correction_move": "Model both words, isolate the middle vowel in each, then repeat.",
-          "observation_note": "Watch whether students can hear that one vowel swap changes the word.",
+          "teacher_cue": "Read sit and sat aloud. Ask: what changed in the middle?",
+          "expected_response": "Students identify that the vowel changed from /ɪ/ to /æ/ — one sound swap, different word.",
+          "correction_move": "Model both words, isolate the middle vowel in each, then ask again.",
+          "observation_note": "Watch whether students can hear and name that a single vowel change creates a completely different word.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
+          "next_action": "manual_next",
+          "luminos_runtime": {
+            "enabled": true,
+            "state_sequence": [
+              {
+                "key": "transition",
+                "board_prompt": "Look carefully.",
+                "teacher_prompt": "Set attention on sit and sat together.",
+                "tts_prompt": "Look carefully.",
+                "teacher_controls": ["replay", "force_advance"]
+              },
+              {
+                "key": "check",
+                "board_prompt": "What changed? Which sound is different?",
+                "teacher_prompt": "Take one or two comparisons, then move on.",
+                "tts_prompt": "What changed? Which sound is different?",
+                "teacher_controls": ["mark_class", "replay", "force_advance"]
+              }
+            ]
+          }
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sit.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use i In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "I sit.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using i, then say a second sentence with one change.",
+            "word_types": {
+              "I": "sight",
+              "sit": "decodable"
+            },
+            "token_units": {
+              "I": [
+                "I"
+              ],
+              "sit": [
+                "s",
+                "i",
+                "t"
+              ]
+            }
+          },
+          "teacher_cue": "Use i in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
           "next_action": "manual_next"
         }
       ]
@@ -512,30 +1332,97 @@
         {
           "slide_id": "10-01",
           "block_id": "10",
-          "slide_title": "Meaning Close",
+          "slide_title": "Lesson Close",
           "view_type": "quick_check",
           "content_payload": {
             "display_mode": "lesson_close",
             "title": "Close the Lesson",
             "check_items": [
-              { "label": "We have four sounds now: s, a, t, i. Which new sound did we learn today?", "phoneme": "/ɪ/" },
-              { "label": "Can you think of a word with the i sound?", "phoneme": null },
-              { "label": "Is sit the same as sat? What changed?", "phoneme": null },
-              { "label": "Tell me: I ___. Fill in the gap with a word you know.", "phoneme": null }
+              {
+                "label": "We have four sounds now: s, a, t, i. Which new sound did we learn today?",
+                "phoneme": "/ɪ/"
+              },
+              {
+                "label": "What did I do? What did it do? Point to the word that has the new sound.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using I or the.",
+                "phoneme": null
+              }
             ],
-            "marking_options": ["secure", "shaky", "missed"],
-            "notes_field": "Keep the close brief and oral."
+            "notes_field": "Keep the close brief, oral, and text-based."
           },
-          "teacher_cue": "Close with recall, vowel contrast, and confidence.",
-          "expected_response": "Students answer orally and show lesson recall with the new short i sound.",
-          "correction_move": "Prompt with the new sound or model a full answer, then repeat.",
-          "observation_note": "Watch whether students can explain the sit/sat contrast and recall the new sound.",
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
           "korean_interference_flag": "vowel_quality",
           "markable": false,
           "marking_options": [],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final i Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's i focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's i focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     }
-  }
+  },
+  "sight_words": [
+    "I",
+    "the",
+    "a"
+  ]
 }

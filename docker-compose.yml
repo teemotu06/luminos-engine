@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: luminos_engine
+      POSTGRES_USER: luminos
+      POSTGRES_PASSWORD: luminos-dev-password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U luminos -d luminos_engine"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://luminos:luminos-dev-password@db:5432/luminos_engine
+      ALLOWED_ORIGINS: http://localhost:8000,http://127.0.0.1:8000
+      LUMINOS_ADMIN_SECRET: local-dev-admin-secret
+      LOG_LEVEL: INFO
+      LUMINOS_TTS_CACHE_DIR: /tmp/luminos-tts-cache
+      LUMINOS_TTS_PREWARM_ENABLED: "false"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+volumes:
+  postgres_data:

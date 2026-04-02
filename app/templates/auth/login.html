@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Sign In — LUMINOS{% endblock %}
+
+{% block content %}
+<div class="page launcher">
+  <header class="launcher__header">
+    <div class="launcher__meta-label">LUMINOS · Access</div>
+    <h1 class="launcher__title">Sign in</h1>
+    <p class="launcher__intro">Use a teacher or admin account to access classes, lessons, and student records.</p>
+  </header>
+
+  <main class="launcher__main">
+    {% if error %}
+    <div class="form-error" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form class="luminos-form" method="post" action="/auth/login">
+      <input type="hidden" name="next" value="{{ next }}">
+      <div class="luminos-form__field">
+        <label class="luminos-form__label" for="username">Username</label>
+        <input
+          class="luminos-form__input"
+          type="text"
+          id="username"
+          name="username"
+          autocomplete="username"
+          required
+          autofocus>
+      </div>
+      <div class="luminos-form__field">
+        <label class="luminos-form__label" for="password">Password</label>
+        <input
+          class="luminos-form__input"
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="current-password"
+          required>
+      </div>
+      <button class="luminos-form__submit" type="submit">Sign in</button>
+    </form>
+  </main>
+</div>
+{% endblock %}

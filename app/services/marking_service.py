@@ -1,19 +1,32 @@
+import logging
 from collections import Counter
+from datetime import datetime, timedelta
 from typing import Optional
 from uuid import uuid4
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.lesson import LessonAttemptRecord, SlideResultRecord
-from app.schemas.marking import SlideMarkRequest
+from app.models.lesson import LessonAttemptRecord, SlideResultRecord, StudentMarkRecord
+from app.schemas.marking import SlideMarkRequest, StudentMarkRequest
+from app.services.review_scheduler_service import update_class_pattern_review
+from app.services.status_service import normalize_mark_status
+
+logger = logging.getLogger(__name__)
 
 
-STATUS_PRIORITY = {"secure": 0, "shaky": 1, "missed": 2, "skipped": 3}
+class OptimisticLockError(ValueError):
+    """Raised when a stale client tries to overwrite a newer lesson write."""
+
+
+STATUS_PRIORITY = {"secure": 0, "shaky": 1, "missed": 2, "deferred": 3, "absent": 3}
+ATTEMPT_RESUME_WINDOW = timedelta(hours=8)
 RECOMMENDATION_MAP = {
     "secure": "move_on",
     "shaky": "move_on",
     "missed": "repeat",
+    "deferred": "move_on",
+    "absent": "move_on",
 }
 
 
@@ -22,12 +35,35 @@ def create_attempt(
     lesson_id: str,
     learner_key: Optional[str] = None,
     teacher_key: Optional[str] = None,
+    class_id: Optional[str] = None,
 ) -> LessonAttemptRecord:
+    """Create or resume a recent in-progress lesson attempt for the same class and lesson."""
+    if class_id:
+        cutoff = datetime.utcnow() - ATTEMPT_RESUME_WINDOW
+        existing = (
+            db.execute(
+                select(LessonAttemptRecord)
+                .where(
+                    LessonAttemptRecord.lesson_id == lesson_id,
+                    LessonAttemptRecord.class_id == class_id,
+                    LessonAttemptRecord.completed.is_(False),
+                    LessonAttemptRecord.attempt_date >= cutoff,
+                )
+                .order_by(LessonAttemptRecord.attempt_date.desc())
+            )
+            .scalars()
+            .first()
+        )
+        if existing is not None:
+            logger.info("attempt.resumed attempt_id=%s lesson_id=%s class_id=%s", existing.attempt_id, lesson_id, class_id)
+            return existing
+
     attempt = LessonAttemptRecord(
         attempt_id=str(uuid4()),
         lesson_id=lesson_id,
         learner_key=learner_key,
         teacher_key=teacher_key,
+        class_id=class_id,
         mastery_status="shaky",
         next_recommendation="move_on",
         phoneme_error_log=[],
@@ -35,6 +71,7 @@ def create_attempt(
     db.add(attempt)
     db.commit()
     db.refresh(attempt)
+    logger.info("attempt.created attempt_id=%s lesson_id=%s class_id=%s", attempt.attempt_id, lesson_id, class_id)
     return attempt
 
 
@@ -49,6 +86,7 @@ def _merge_item_results(mark: SlideMarkRequest) -> tuple[str, list[str], bool]:
 
 
 def _rebuild_attempt_summary(db: Session, attempt: LessonAttemptRecord) -> None:
+    """Recompute attempt-level mastery from persisted slide results for the attempt."""
     results = (
         db.execute(
             select(SlideResultRecord)
@@ -146,7 +184,89 @@ def _repeated_problem_phoneme(previous_log: list, current_log: list) -> Optional
     return None
 
 
+def delete_student_mark(
+    db: Session,
+    attempt_id: str,
+    slide_id: str,
+    student_name: str,
+) -> None:
+    """Delete one roster mark without touching attempt summary state."""
+    existing = (
+        db.execute(
+            select(StudentMarkRecord).where(
+                StudentMarkRecord.attempt_id == attempt_id,
+                StudentMarkRecord.slide_id == slide_id,
+                StudentMarkRecord.student_name == student_name,
+            )
+        )
+        .scalars()
+        .first()
+    )
+    if existing is not None:
+        db.delete(existing)
+        db.commit()
+        logger.info(
+            "student_mark.deleted attempt_id=%s slide_id=%s student_name=%s",
+            attempt_id,
+            slide_id,
+            student_name,
+        )
+
+
+def record_student_mark(db: Session, mark: StudentMarkRequest) -> StudentMarkRecord:
+    """Insert or update a roster mark without rewriting lesson-level summary state."""
+    attempt = db.get(LessonAttemptRecord, mark.attempt_id)
+    if attempt is None:
+        raise ValueError(f"Unknown attempt_id {mark.attempt_id}")
+    if attempt.lesson_id != mark.lesson_id:
+        raise ValueError("Attempt lesson_id does not match mark lesson_id")
+    normalized_status = normalize_mark_status(mark.status)
+
+    existing = (
+        db.execute(
+            select(StudentMarkRecord).where(
+                StudentMarkRecord.attempt_id == mark.attempt_id,
+                StudentMarkRecord.slide_id == mark.slide_id,
+                StudentMarkRecord.student_name == mark.student_name,
+            )
+        )
+        .scalars()
+        .first()
+    )
+
+    if existing is None:
+        existing = StudentMarkRecord(
+            attempt_id=mark.attempt_id,
+            lesson_id=mark.lesson_id,
+            slide_id=mark.slide_id,
+            block_id=mark.block_id,
+            student_name=mark.student_name,
+            status=normalized_status,
+            error_tags=mark.error_tags,
+            support_level=mark.support_level,
+            teacher_note=mark.teacher_note,
+        )
+        db.add(existing)
+    else:
+        existing.status = normalized_status
+        existing.error_tags = mark.error_tags
+        existing.support_level = mark.support_level
+        existing.teacher_note = mark.teacher_note
+
+    db.commit()
+    db.refresh(existing)
+    logger.info(
+        "student_mark.saved attempt_id=%s slide_id=%s student_name=%s status=%s",
+        mark.attempt_id,
+        mark.slide_id,
+        mark.student_name,
+        normalized_status,
+    )
+    return existing
+
+
 def record_slide_mark(db: Session, mark: SlideMarkRequest) -> LessonAttemptRecord:
+    """Persist a slide-level mark without rebuilding the full lesson summary on every write."""
     attempt = db.get(LessonAttemptRecord, mark.attempt_id)
     if attempt is None:
         raise ValueError(f"Unknown attempt_id {mark.attempt_id}")
@@ -182,20 +302,51 @@ def record_slide_mark(db: Session, mark: SlideMarkRequest) -> LessonAttemptRecor
         )
         db.add(existing)
     else:
+        if mark.expected_slide_version is not None and existing.version != mark.expected_slide_version:
+            logger.warning(
+                "slide_mark.conflict attempt_id=%s slide_id=%s expected=%s actual=%s",
+                mark.attempt_id,
+                mark.slide_id,
+                mark.expected_slide_version,
+                existing.version,
+            )
+            raise OptimisticLockError(
+                f"Slide mark conflict for {mark.slide_id}: expected version {mark.expected_slide_version}, found {existing.version}"
+            )
         existing.status = status
         existing.error_tags = error_tags
         existing.korean_transfer = korean_transfer
         existing.teacher_note = mark.teacher_note
         existing.item_results = item_results
+        existing.version += 1
 
     if mark.lesson_notes:
         attempt.notes = mark.lesson_notes
-
-    if mark.completed:
-        attempt.completed = True
+    attempt.version += 1
 
     db.flush()
-    _rebuild_attempt_summary(db, attempt)
     db.commit()
     db.refresh(attempt)
+    logger.info(
+        "slide_mark.saved attempt_id=%s slide_id=%s status=%s attempt_version=%s",
+        mark.attempt_id,
+        mark.slide_id,
+        status,
+        attempt.version,
+    )
+    return attempt
+
+
+def finalize_attempt_summary(db: Session, attempt: LessonAttemptRecord) -> LessonAttemptRecord:
+    """Rebuild and persist the attempt-level summary once the lesson is explicitly completed."""
+    _rebuild_attempt_summary(db, attempt)
+    update_class_pattern_review(db, attempt)
+    db.commit()
+    db.refresh(attempt)
+    logger.info(
+        "attempt.finalized attempt_id=%s mastery_status=%s next_recommendation=%s",
+        attempt.attempt_id,
+        attempt.mastery_status,
+        attempt.next_recommendation,
+    )
     return attempt

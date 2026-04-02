@@ -1,0 +1,1672 @@
+{
+  "lesson_id": "G8-L55",
+  "unit_id": "G8",
+  "target_pattern": "age_ice_ace_idge",
+  "title": "Group 8, Lesson 55: -age -ice -ace -idge patterns",
+  "new_units": [
+    "-age",
+    "-ice",
+    "-ace",
+    "-idge"
+  ],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: -nge -nce",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-nge -nce",
+            "back_text": "soft g and soft c with n",
+            "audio": "/static/audio/-nge_-nce.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce soft g and soft c with n quickly and cleanly.",
+          "correction_move": "Model soft g and soft c with n, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: soft c/g",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "soft c/g",
+            "back_text": "before e/i/y",
+            "audio": "/static/audio/soft_cg.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce before e/i/y quickly and cleanly.",
+          "correction_move": "Model before e/i/y, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: -dge",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-dge",
+            "back_text": "/dʒ/ after short vowel",
+            "audio": "/static/audio/-dge.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce /dʒ/ after short vowel quickly and cleanly.",
+          "correction_move": "Model /dʒ/ after short vowel, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: to",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "to",
+            "back_text": "to — sight word",
+            "audio": "/static/audio/sight_to.mp3",
+            "word_types": {
+              "to": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say to immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: dance",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_dance.mp3",
+            "dictated_text": "dance",
+            "expected_answer": "dance",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "d",
+              "a",
+              "n",
+              "c",
+              "e"
+            ]
+          },
+          "teacher_cue": "Play dance once. Replay only if needed.",
+          "expected_response": "Students write dance accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: change",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_change.mp3",
+            "dictated_text": "change",
+            "expected_answer": "change",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "ch",
+              "a",
+              "ng",
+              "e"
+            ]
+          },
+          "teacher_cue": "Play change once. Replay only if needed.",
+          "expected_response": "Students write change accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: chance",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_chance.mp3",
+            "dictated_text": "chance",
+            "expected_answer": "chance",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "ch",
+              "a",
+              "n",
+              "c",
+              "e"
+            ]
+          },
+          "teacher_cue": "Play chance once. Replay only if needed.",
+          "expected_response": "Students write chance accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce pattern families: -age -ice -ace -idge",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-age  -ice  -ace  -idge",
+            "back_text": "word family patterns",
+            "audio": "/static/audio/age_ice_ace_idge.mp3"
+          },
+          "teacher_cue": "Four word family endings to systematise. -age /eɪdʒ/: cage, rage, sage, stage, page (soft g, CVCe-like). -ice /aɪs/: price, twice, slice, rice, nice (soft c, CVCe). -ace /eɪs/: space, place, grace, race, face (soft c, CVCe). -idge /ɪdʒ/: bridge, ridge, fridge, wedge, edge (hard vowel + -dge rule). Students have met all these patterns — today consolidates them as families.",
+          "expected_response": "Students read and write -age, -ice, -ace, and -idge family words fluently.",
+          "correction_move": "Show each family as a column. Students read down each column, then across. Establish: these are word families — same ending, different onset.",
+          "observation_note": "Watch for hesitation on soft endings — should now be automatic.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say -age -ice -ace -idge patterns In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-age  -ice  -ace  -idge",
+            "back_text": "word family patterns",
+            "audio": "/static/audio/age_ice_ace_idge.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect -age -ice -ace -idge patterns to one strong word from today.",
+          "expected_response": "Students say -age -ice -ace -idge patterns clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: cage",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "cage",
+            "back_text": "/k/ /eɪ/ /dʒ/",
+            "audio": "/static/audio/block04_cage.mp3",
+            "blend_units": [
+              {
+                "grapheme": "c",
+                "phoneme": "/k/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ge",
+                "phoneme": "/dʒ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say cage — an enclosure for animals. -age family. Reveal and blend.",
+          "expected_response": "Students say cage orally and connect meaning before blending.",
+          "correction_move": "Model cage orally again, reveal and blend.",
+          "observation_note": "Watch for long /eɪ/ and soft g = /dʒ/.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: price",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "price",
+            "back_text": "/p/ /r/ /aɪ/ /s/",
+            "audio": "/static/audio/block04_price.mp3",
+            "blend_units": [
+              {
+                "grapheme": "pr",
+                "phoneme": "/pr/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/aɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ce",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say price — the cost. pr cluster, -ice family. Reveal and blend.",
+          "expected_response": "Students say price orally and connect meaning before blending.",
+          "correction_move": "Model price orally again, reveal and blend.",
+          "observation_note": "Watch for pr cluster and soft c = /s/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: slice",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "slice",
+            "back_text": "/s/ /l/ /aɪ/ /s/",
+            "audio": "/static/audio/block04_slice.mp3",
+            "blend_units": [
+              {
+                "grapheme": "sl",
+                "phoneme": "/sl/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/aɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ce",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Mime slicing. Say slice — sl cluster, -ice family. Reveal and blend.",
+          "expected_response": "Students say slice orally and connect meaning before blending.",
+          "correction_move": "Model slice orally again, reveal and blend.",
+          "observation_note": "Watch for sl cluster and soft c = /s/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: space",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "space",
+            "back_text": "/s/ /p/ /eɪ/ /s/",
+            "audio": "/static/audio/block04_space.mp3",
+            "blend_units": [
+              {
+                "grapheme": "sp",
+                "phoneme": "/sp/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ce",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Point to empty space. Say space — sp cluster, -ace family. Reveal and blend.",
+          "expected_response": "Students say space orally and connect meaning before blending.",
+          "correction_move": "Model space orally again, reveal and blend.",
+          "observation_note": "Watch for sp cluster and soft c = /s/.",
+          "korean_interference_flag": "cluster",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: grace",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "grace",
+            "back_text": "/g/ /r/ /eɪ/ /s/",
+            "audio": "/static/audio/block04_grace.mp3",
+            "blend_units": [
+              {
+                "grapheme": "gr",
+                "phoneme": "/gr/",
+                "audio": null
+              },
+              {
+                "grapheme": "a",
+                "phoneme": "/eɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "ce",
+                "phoneme": "/s/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say grace — elegance and beauty. gr cluster, -ace family. Reveal and blend.",
+          "expected_response": "Students say grace orally and connect meaning before blending.",
+          "correction_move": "Model grace orally again, reveal and blend.",
+          "observation_note": "Watch for gr cluster and soft c = /s/.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: fridge",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fridge",
+            "back_text": "/f/ /r/ /ɪ/ /dʒ/",
+            "audio": "/static/audio/block04_fridge.mp3",
+            "blend_units": [
+              {
+                "grapheme": "fr",
+                "phoneme": "/fr/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "dge",
+                "phoneme": "/dʒ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Point to a fridge. fr cluster, short i, -dge family (short vowel rule). Reveal and blend.",
+          "expected_response": "Students say fridge orally and connect meaning before blending.",
+          "correction_move": "Model fridge orally again, reveal and blend.",
+          "observation_note": "Watch for /p/ on /f/ and -dge after short /ɪ/.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Review -age -ice -ace -idge patterns With Known Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fridge",
+            "back_text": "/f/ /r/ /ɪ/ /dʒ/",
+            "audio": "/static/audio/block04_fridge.mp3",
+            "blend_units": [
+              {
+                "grapheme": "fr",
+                "phoneme": "/fr/",
+                "audio": null
+              },
+              {
+                "grapheme": "i",
+                "phoneme": "/ɪ/",
+                "audio": null
+              },
+              {
+                "grapheme": "dge",
+                "phoneme": "/dʒ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Read it, track the parts, and confirm that every part fits the taught pool for -age -ice -ace -idge patterns.",
+          "expected_response": "Students read the word accurately and explain why it is safe to read.",
+          "correction_move": "Tap each sound or chunk, blend, then reread smoothly.",
+          "observation_note": "Use this as confidence-building cumulative review, not as a surprise challenge.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: cage",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "cage",
+            "target_letters": [
+              "c",
+              "a",
+              "ge"
+            ],
+            "slots": [
+              "c",
+              "a",
+              "ge"
+            ],
+            "draggable_letters": [
+              "ge",
+              "a",
+              "c"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build cage left to right.",
+          "expected_response": "Students build cage correctly: c | a | ge.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: price",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "price",
+            "target_letters": [
+              "pr",
+              "i",
+              "ce"
+            ],
+            "slots": [
+              "pr",
+              "i",
+              "ce"
+            ],
+            "draggable_letters": [
+              "ce",
+              "i",
+              "pr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build price left to right.",
+          "expected_response": "Students build price correctly: pr | i | ce.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: space",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "space",
+            "target_letters": [
+              "sp",
+              "a",
+              "ce"
+            ],
+            "slots": [
+              "sp",
+              "a",
+              "ce"
+            ],
+            "draggable_letters": [
+              "ce",
+              "a",
+              "sp"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build space left to right.",
+          "expected_response": "Students build space correctly: sp | a | ce.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: grace",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "grace",
+            "target_letters": [
+              "gr",
+              "a",
+              "ce"
+            ],
+            "slots": [
+              "gr",
+              "a",
+              "ce"
+            ],
+            "draggable_letters": [
+              "ce",
+              "a",
+              "gr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build grace left to right.",
+          "expected_response": "Students build grace correctly: gr | a | ce.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: fridge",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "fridge",
+            "target_letters": [
+              "fr",
+              "i",
+              "dge"
+            ],
+            "slots": [
+              "fr",
+              "i",
+              "dge"
+            ],
+            "draggable_letters": [
+              "dge",
+              "i",
+              "fr"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build fridge left to right.",
+          "expected_response": "Students build fridge correctly: fr | i | dge.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct cluster placement — no vowel insertion.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace is by the cage.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Grace": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on Grace, is, by, cage.",
+          "expected_response": "Students read \"Grace is by the cage.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"Grace is by the cage.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The price is on the cage.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "price": "decodable",
+              "is": "decodable",
+              "on": "decodable",
+              "the": "sight",
+              "cage": "decodable"
+            },
+            "token_units": {
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on price, is, on, cage.",
+          "expected_response": "Students read \"The price is on the cage.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The price is on the cage.\".",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "A slice is in the page.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "A": "sight",
+              "slice": "decodable",
+              "is": "decodable",
+              "in": "decodable",
+              "the": "sight",
+              "page": "decodable"
+            },
+            "token_units": {
+              "slice": [
+                "sl",
+                "i",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on slice, is, in, fridge.",
+          "expected_response": "Students read \"A slice is in the page.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"A slice is in the fridge.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace has space by the cage.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "Grace": "decodable",
+              "has": "decodable",
+              "space": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "space": [
+                "sp",
+                "a",
+                "c",
+                "e"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on Grace, has, space, by.",
+          "expected_response": "Students read \"Grace has space by the cage.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"Grace has space by the cage.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace is by the cage.\nThe price is on the cage.\nA slice is in the page.\nGrace has space by the cage.\nThe page is by the cage.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Where is Grace? What is on the cage?",
+            "word_types": {
+              "Grace": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable",
+              "The": "sight",
+              "price": "decodable",
+              "on": "decodable",
+              "A": "sight",
+              "slice": "decodable",
+              "in": "decodable",
+              "page": "decodable",
+              "has": "decodable",
+              "space": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ],
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "slice": [
+                "sl",
+                "i",
+                "c",
+                "e"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "space": [
+                "sp",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Echo read first, then students read chorally. Ask comprehension prompt after.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Echo read line by line, then support before rereading.",
+          "observation_note": "Watch for cluster blending — no vowel insertion between consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace is by the cage.\nThe price is on the cage.\nA slice is in the page.\nGrace has space by the cage.\nThe page is by the cage.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "Grace": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable",
+              "The": "sight",
+              "price": "decodable",
+              "on": "decodable",
+              "A": "sight",
+              "slice": "decodable",
+              "in": "decodable",
+              "page": "decodable",
+              "has": "decodable",
+              "space": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ],
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "slice": [
+                "sl",
+                "i",
+                "c",
+                "e"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "space": [
+                "sp",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread -age -ice -ace -idge patterns Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace is by the cage.\nThe price is on the cage.\nA slice is in the page.\nGrace has space by the cage.\nThe page is by the cage.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the -age -ice -ace -idge patterns text smoothly. Then tell one thing you noticed about the lesson words.",
+            "word_types": {
+              "Grace": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable",
+              "The": "sight",
+              "price": "decodable",
+              "on": "decodable",
+              "A": "sight",
+              "slice": "decodable",
+              "in": "decodable",
+              "page": "decodable",
+              "has": "decodable",
+              "space": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ],
+              "price": [
+                "pr",
+                "i",
+                "c",
+                "e"
+              ],
+              "on": [
+                "o",
+                "n"
+              ],
+              "slice": [
+                "sl",
+                "i",
+                "c",
+                "e"
+              ],
+              "in": [
+                "i",
+                "n"
+              ],
+              "page": [
+                "p",
+                "a",
+                "g",
+                "e"
+              ],
+              "has": [
+                "h",
+                "a",
+                "s"
+              ],
+              "space": [
+                "sp",
+                "a",
+                "c",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the -age -ice -ace -idge patterns text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: price",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_price.mp3",
+            "dictated_text": "price",
+            "expected_answer": "price",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "p",
+              "r",
+              "i",
+              "c"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play price once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write price accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: space",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_space.mp3",
+            "dictated_text": "space",
+            "expected_answer": "space",
+            "elkonin_boxes": 4,
+            "grapheme_units": [
+              "s",
+              "p",
+              "a",
+              "c"
+            ],
+            "trailing_silent_e": true
+          },
+          "teacher_cue": "Play space once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write space accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "cluster",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: fridge",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_fridge.mp3",
+            "dictated_text": "fridge",
+            "expected_answer": "fridge",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "f",
+              "r",
+              "i",
+              "d",
+              "g",
+              "e"
+            ]
+          },
+          "teacher_cue": "Play fridge once. Replay only if needed. Remind students: the silent 'e' at the end is not in a box — write it after the last box.",
+          "expected_response": "Students write fridge accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all cluster consonants.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "Grace is by the cage.",
+            "expected_answer": "Grace is by the cage.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "cage",
+              "rage",
+              "stage",
+              "page",
+              "age"
+            ],
+            "highlighted_chunk": "-age",
+            "support_text": "What do these words share? What are the two sounds in -age?",
+            "token_units": {}
+          },
+          "teacher_cue": "Show the words. Ask: What do these words share? What are the two sounds in -age?",
+          "expected_response": "Students identify the shared cluster and name its sounds.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the cluster correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace is by the cage.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "Grace": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use -age -ice -ace -idge patterns In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "Grace is by the cage.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using -age -ice -ace -idge patterns, then say a second sentence with one change.",
+            "word_types": {
+              "Grace": "decodable",
+              "is": "decodable",
+              "by": "decodable",
+              "the": "sight",
+              "cage": "decodable"
+            },
+            "token_units": {
+              "Grace": [
+                "gr",
+                "a",
+                "c",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "by": [
+                "b",
+                "y"
+              ],
+              "cage": [
+                "c",
+                "a",
+                "g",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Use -age -ice -ace -idge patterns in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "-age = /eɪdʒ/. -ice = /aɪs/. -ace = /eɪs/. -idge = /ɪdʒ/. Say all four.",
+                "phoneme": null
+              },
+              {
+                "label": "Where is Grace? Where is the slice? Find the target-pattern words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using cage or price.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final -age -ice -ace -idge patterns Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's -age -ice -ace -idge patterns focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's -age -ice -ace -idge patterns focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

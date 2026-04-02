@@ -1,0 +1,2041 @@
+{
+  "lesson_id": "G9-L60",
+  "unit_id": "G9",
+  "target_pattern": "suffix_ing_er_est",
+  "title": "Group 9, Lesson 60: Suffixes -ing, -er, -est",
+  "new_units": [
+    "-ing",
+    "-er",
+    "-est"
+  ],
+  "new_sight_words": [],
+  "sight_words": [
+    "I",
+    "the",
+    "a",
+    "he",
+    "me",
+    "was",
+    "we",
+    "to",
+    "go",
+    "no",
+    "do",
+    "so",
+    "of",
+    "she",
+    "they",
+    "come",
+    "some",
+    "have",
+    "our"
+  ],
+  "korean_interference_active": [
+    "vowel_quality",
+    "r_l"
+  ],
+  "content_pack_status": "draft",
+  "blocks": {
+    "01": {
+      "block_id": "01",
+      "label": "Flashcard Phoneme Review",
+      "slides": [
+        {
+          "slide_id": "01-01",
+          "block_id": "01",
+          "slide_title": "Review: -ed /d/ /t/ /ɪd/",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ed /d/ /t/ /ɪd/",
+            "back_text": "past tense suffix",
+            "audio": "/static/audio/-ed_d_t_ɪd.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce past tense suffix quickly and cleanly.",
+          "correction_move": "Model past tense suffix, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-02",
+          "block_id": "01",
+          "slide_title": "Review: prefixes",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "prefixes",
+            "back_text": "un- re- pre- dis-",
+            "audio": "/static/audio/prefixes.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce un- re- pre- dis- quickly and cleanly.",
+          "correction_move": "Model un- re- pre- dis-, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-03",
+          "block_id": "01",
+          "slide_title": "Review: open/closed syllable",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "open/closed syllable",
+            "back_text": "CV vs CVC",
+            "audio": "/static/audio/openclosed_syllable.mp3"
+          },
+          "teacher_cue": "What sound?",
+          "expected_response": "Students produce CV vs CVC quickly and cleanly.",
+          "correction_move": "Model CV vs CVC, students repeat three times, then recheck.",
+          "observation_note": "Watch for hesitation or imprecise production.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-04",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: go",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "go",
+            "back_text": "go — sight word",
+            "audio": "/static/audio/sight_go.mp3",
+            "word_types": {
+              "go": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say go immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-05",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: no",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "no",
+            "back_text": "no — sight word",
+            "audio": "/static/audio/sight_no.mp3",
+            "word_types": {
+              "no": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say no immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-06",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: do",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "do",
+            "back_text": "do — sight word",
+            "audio": "/static/audio/sight_do.mp3",
+            "word_types": {
+              "do": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say do immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "01-07",
+          "block_id": "01",
+          "slide_title": "Sight Word Review: so",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "so",
+            "back_text": "so — sight word",
+            "audio": "/static/audio/sight_so.mp3",
+            "word_types": {
+              "so": "sight"
+            }
+          },
+          "teacher_cue": "Quick review — sight word. Say it as a whole unit.",
+          "expected_response": "Students say so immediately without blending.",
+          "correction_move": "Model in a sentence, point to the underline, repeat chorally.",
+          "observation_note": "Watch for hesitation — should be instant recognition.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "02": {
+      "block_id": "02",
+      "label": "Listening & Write Review",
+      "slides": [
+        {
+          "slide_id": "02-01",
+          "block_id": "02",
+          "slide_title": "Listen and Write: jumped",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_jumped.mp3",
+            "dictated_text": "jumped",
+            "expected_answer": "jumped",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "j",
+              "u",
+              "m",
+              "p",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play jumped once. Replay only if needed.",
+          "expected_response": "Students write jumped accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-02",
+          "block_id": "02",
+          "slide_title": "Listen and Write: waited",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_waited.mp3",
+            "dictated_text": "waited",
+            "expected_answer": "waited",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "w",
+              "ai",
+              "t",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play waited once. Replay only if needed.",
+          "expected_response": "Students write waited accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "02-03",
+          "block_id": "02",
+          "slide_title": "Listen and Write: called",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block02_called.mp3",
+            "dictated_text": "called",
+            "expected_answer": "called",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "c",
+              "a",
+              "ll",
+              "e",
+              "d"
+            ]
+          },
+          "teacher_cue": "Play called once. Replay only if needed.",
+          "expected_response": "Students write called accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "03": {
+      "block_id": "03",
+      "label": "New Sound Introduction",
+      "slides": [
+        {
+          "slide_id": "03-01",
+          "block_id": "03",
+          "slide_title": "Introduce suffixes -ing, -er, -est",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ing  -er  -est",
+            "back_text": "progressive, comparative, superlative",
+            "audio": "/static/audio/suffix_ing_er_est.mp3"
+          },
+          "teacher_cue": "Three more suffixes. -ing marks ongoing action: run→running (double consonant), swim→swimming, hope→hoping (drop the e). -er marks comparative: fast→faster, big→bigger (double), happy→happier (y→i). -est marks superlative: fast→fastest, big→biggest, happy→happiest. Key spelling rules: double the final consonant before a vowel suffix if the vowel is short (run→running, big→bigger). Drop the silent e before a vowel suffix (hope→hoping, late→later).",
+          "expected_response": "Students apply the -ing/-er/-est spelling rules correctly.",
+          "correction_move": "Model: run + ing — short vowel, double n — running. hope + ing — drop e — hoping. big + er — short vowel, double g — bigger. Students apply the rules to new words.",
+          "observation_note": "Watch for students forgetting to double the consonant or failing to drop the e.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "03-02",
+          "block_id": "03",
+          "slide_title": "Say suffixes In Words",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "-ing  -er  -est",
+            "back_text": "progressive, comparative, superlative",
+            "audio": "/static/audio/suffix_ing_er_est.mp3"
+          },
+          "teacher_cue": "Say the new focus, then connect suffixes to one strong word from today.",
+          "expected_response": "Students say suffixes clearly and connect it to a lesson word.",
+          "correction_move": "Model the focus once, then have students echo and use it in a known word.",
+          "observation_note": "Listen for whether students can carry the focus from isolation into a real word.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "04": {
+      "block_id": "04",
+      "label": "Vocabulary Warm-Up",
+      "slides": [
+        {
+          "slide_id": "04-01",
+          "block_id": "04",
+          "slide_title": "Vocabulary: running",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "running",
+            "back_text": "/r/ /ʌ/ /n/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_running.mp3",
+            "blend_units": [
+              {
+                "grapheme": "run",
+                "phoneme": "/rʌn/",
+                "audio": null
+              },
+              {
+                "grapheme": "n",
+                "phoneme": "double",
+                "audio": null
+              },
+              {
+                "grapheme": "ing",
+                "phoneme": "/ɪŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say running — run + double n + ing (short vowel → double). Reveal and blend.",
+          "expected_response": "Students say running orally and connect meaning before blending.",
+          "correction_move": "Model running orally again, reveal and blend.",
+          "observation_note": "Watch for the doubled n and /ɪŋ/ suffix.",
+          "korean_interference_flag": "r_l",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-02",
+          "block_id": "04",
+          "slide_title": "Vocabulary: hoping",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "hoping",
+            "back_text": "/h/ /oʊ/ /p/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_hoping.mp3",
+            "blend_units": [
+              {
+                "grapheme": "hope",
+                "phoneme": "/hoʊp/",
+                "audio": null
+              },
+              {
+                "grapheme": "ing",
+                "phoneme": "/ɪŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say hoping — hope + ing (drop the silent e). Reveal and blend.",
+          "expected_response": "Students say hoping orally and connect meaning before blending.",
+          "correction_move": "Model hoping orally again, reveal and blend.",
+          "observation_note": "Watch for the dropped e and long /oʊ/ — not hopping (double p = short).",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-03",
+          "block_id": "04",
+          "slide_title": "Vocabulary: faster",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "faster",
+            "back_text": "/f/ /æ/ /s/ /t/ /ər/",
+            "audio": "/static/audio/block04_faster.mp3",
+            "blend_units": [
+              {
+                "grapheme": "fast",
+                "phoneme": "/fæst/",
+                "audio": null
+              },
+              {
+                "grapheme": "er",
+                "phoneme": "/ər/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say faster — fast + er. No doubling needed — fast ends in a cluster. Reveal and blend.",
+          "expected_response": "Students say faster orally and connect meaning before blending.",
+          "correction_move": "Model faster orally again, reveal and blend.",
+          "observation_note": "Watch for -er suffix and no spelling change in fast.",
+          "korean_interference_flag": "f_p",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-04",
+          "block_id": "04",
+          "slide_title": "Vocabulary: biggest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "biggest",
+            "back_text": "/b/ /ɪ/ /g/ /ɪ/ /s/ /t/",
+            "audio": "/static/audio/block04_biggest.mp3",
+            "blend_units": [
+              {
+                "grapheme": "big",
+                "phoneme": "/bɪg/",
+                "audio": null
+              },
+              {
+                "grapheme": "g",
+                "phoneme": "double",
+                "audio": null
+              },
+              {
+                "grapheme": "est",
+                "phoneme": "/ɪst/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say biggest — big + double g + est (short vowel → double). Reveal and blend.",
+          "expected_response": "Students say biggest orally and connect meaning before blending.",
+          "correction_move": "Model biggest orally again, reveal and blend.",
+          "observation_note": "Watch for the doubled g and /ɪst/ suffix.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-05",
+          "block_id": "04",
+          "slide_title": "Vocabulary: happier",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "happier",
+            "back_text": "/h/ /æ/ /p/ /iː/ /ər/",
+            "audio": "/static/audio/block04_happier.mp3",
+            "blend_units": [
+              {
+                "grapheme": "happi",
+                "phoneme": "/hæpiː/",
+                "audio": null
+              },
+              {
+                "grapheme": "er",
+                "phoneme": "/ər/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say happier — happy → change y to i + er. Reveal and blend.",
+          "expected_response": "Students say happier orally and connect meaning before blending.",
+          "correction_move": "Model happier orally again, reveal and blend.",
+          "observation_note": "Watch for the y→i change and -er suffix.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-06",
+          "block_id": "04",
+          "slide_title": "Vocabulary: making",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "making",
+            "back_text": "/m/ /eɪ/ /k/ /ɪ/ /ŋ/",
+            "audio": "/static/audio/block04_making.mp3",
+            "blend_units": [
+              {
+                "grapheme": "make",
+                "phoneme": "/meɪk/",
+                "audio": null
+              },
+              {
+                "grapheme": "ing",
+                "phoneme": "/ɪŋ/",
+                "audio": null
+              }
+            ]
+          },
+          "teacher_cue": "Say making — make + ing (drop the e). Long vowel preserved. Reveal and blend.",
+          "expected_response": "Students say making orally and connect meaning before blending.",
+          "correction_move": "Model making orally again, reveal and blend.",
+          "observation_note": "Watch for the dropped e and long /eɪ/ preserved.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-07",
+          "block_id": "04",
+          "slide_title": "Reader Prep: fastest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "fastest",
+            "back_text": "fastest"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read fastest accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-08",
+          "block_id": "04",
+          "slide_title": "Reader Prep: swimmer",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "swimmer",
+            "back_text": "swimmer"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read swimmer accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-09",
+          "block_id": "04",
+          "slide_title": "Reader Prep: than",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "than",
+            "back_text": "than"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read than accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-10",
+          "block_id": "04",
+          "slide_title": "Reader Prep: swimming",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "swimming",
+            "back_text": "swimming"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read swimming accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-11",
+          "block_id": "04",
+          "slide_title": "Reader Prep: happiest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "happiest",
+            "back_text": "happiest"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read happiest accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-12",
+          "block_id": "04",
+          "slide_title": "Reader Prep: prize",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "prize",
+            "back_text": "prize"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read prize accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-13",
+          "block_id": "04",
+          "slide_title": "Reader Prep: getting",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "getting",
+            "back_text": "getting"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read getting accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-14",
+          "block_id": "04",
+          "slide_title": "Reader Prep: better",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "better",
+            "back_text": "better"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read better accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-15",
+          "block_id": "04",
+          "slide_title": "Reader Prep: feeling",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "feeling",
+            "back_text": "feeling"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read feeling accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-16",
+          "block_id": "04",
+          "slide_title": "Reader Prep: stronger",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "stronger",
+            "back_text": "stronger"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read stronger accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-17",
+          "block_id": "04",
+          "slide_title": "Reader Prep: brightest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "brightest",
+            "back_text": "brightest"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read brightest accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-18",
+          "block_id": "04",
+          "slide_title": "Reader Prep: shining",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "shining",
+            "back_text": "shining"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read shining accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-19",
+          "block_id": "04",
+          "slide_title": "Reader Prep: glowing",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "glowing",
+            "back_text": "glowing"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read glowing accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-20",
+          "block_id": "04",
+          "slide_title": "Reader Prep: longest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "longest",
+            "back_text": "longest"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read longest accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-21",
+          "block_id": "04",
+          "slide_title": "Reader Prep: world",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "world",
+            "back_text": "world"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read world accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-22",
+          "block_id": "04",
+          "slide_title": "Reader Prep: jumping",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "jumping",
+            "back_text": "jumping"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read jumping accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-23",
+          "block_id": "04",
+          "slide_title": "Reader Prep: higher",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "higher",
+            "back_text": "higher"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read higher accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-24",
+          "block_id": "04",
+          "slide_title": "Reader Prep: every",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "every",
+            "back_text": "every"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read every accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-25",
+          "block_id": "04",
+          "slide_title": "Reader Prep: be",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "be",
+            "back_text": "be"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read be accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "04-26",
+          "block_id": "04",
+          "slide_title": "Reader Prep: strongest",
+          "view_type": "flashcard",
+          "content_payload": {
+            "front_text": "strongest",
+            "back_text": "strongest"
+          },
+          "teacher_cue": "Vocabulary warm-up. Say the word, connect meaning, then read it together.",
+          "expected_response": "Students read strongest accurately.",
+          "correction_move": "Model the word, then repeat chorally and point to each part if needed.",
+          "observation_note": "Watch for smooth oral reading before it appears in connected text.",
+          "korean_interference_flag": null,
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "05": {
+      "block_id": "05",
+      "label": "Word Building",
+      "slides": [
+        {
+          "slide_id": "05-01",
+          "block_id": "05",
+          "slide_title": "Build: running",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "running",
+            "target_letters": [
+              "run",
+              "n",
+              "ing"
+            ],
+            "slots": [
+              "run",
+              "n",
+              "ing"
+            ],
+            "draggable_letters": [
+              "ing",
+              "n",
+              "run"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build running left to right.",
+          "expected_response": "Students build running correctly: run | n | ing.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-02",
+          "block_id": "05",
+          "slide_title": "Build: hoping",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "hoping",
+            "target_letters": [
+              "hope",
+              "ing"
+            ],
+            "slots": [
+              "hope",
+              "ing"
+            ],
+            "draggable_letters": [
+              "ing",
+              "hope"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build hoping left to right.",
+          "expected_response": "Students build hoping correctly: hope | ing.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-03",
+          "block_id": "05",
+          "slide_title": "Build: fastest",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "fastest",
+            "target_letters": [
+              "fast",
+              "est"
+            ],
+            "slots": [
+              "fast",
+              "est"
+            ],
+            "draggable_letters": [
+              "est",
+              "fast"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build fastest left to right.",
+          "expected_response": "Students build fastest correctly: fast | est.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "f_p",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-04",
+          "block_id": "05",
+          "slide_title": "Build: biggest",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "biggest",
+            "target_letters": [
+              "big",
+              "g",
+              "est"
+            ],
+            "slots": [
+              "big",
+              "g",
+              "est"
+            ],
+            "draggable_letters": [
+              "est",
+              "g",
+              "big"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build biggest left to right.",
+          "expected_response": "Students build biggest correctly: big | g | est.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "05-05",
+          "block_id": "05",
+          "slide_title": "Build: making",
+          "view_type": "drag_letter",
+          "content_payload": {
+            "target_word": "making",
+            "target_letters": [
+              "make",
+              "ing"
+            ],
+            "slots": [
+              "make",
+              "ing"
+            ],
+            "draggable_letters": [
+              "ing",
+              "make"
+            ]
+          },
+          "teacher_cue": "Say the sounds and build making left to right.",
+          "expected_response": "Students build making correctly: make | ing.",
+          "correction_move": "Return to oral segmenting, then rebuild one sound at a time.",
+          "observation_note": "Watch for correct syllable and morpheme boundaries.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "06": {
+      "block_id": "06",
+      "label": "Sentence Bridge",
+      "slides": [
+        {
+          "slide_id": "06-01",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The runner is running faster.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "runner": "decodable",
+              "is": "decodable",
+              "running": "decodable",
+              "faster": "decodable"
+            },
+            "token_units": {
+              "runner": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "er"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "running": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "i",
+                "ng"
+              ],
+              "faster": [
+                "f",
+                "a",
+                "st",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on swimmer, is, running, faster.",
+          "expected_response": "Students read \"The runner is running faster.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The swimmer is running faster.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-02",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "She is hoping for the prize.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "She": "sight",
+              "is": "decodable",
+              "hoping": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "prize": "decodable"
+            },
+            "token_units": {
+              "is": [
+                "i",
+                "s"
+              ],
+              "hoping": [
+                "h",
+                "o",
+                "p",
+                "i",
+                "ng"
+              ],
+              "for": [
+                "f",
+                "or"
+              ],
+              "prize": [
+                "pr",
+                "i",
+                "z",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on is, hoping, for, prize.",
+          "expected_response": "Students read \"She is hoping for the prize.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"She is hoping for the prize.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-03",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "He is getting bigger.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "He": "sight",
+              "is": "decodable",
+              "getting": "decodable",
+              "bigger": "decodable"
+            },
+            "token_units": {
+              "is": [
+                "i",
+                "s"
+              ],
+              "getting": [
+                "g",
+                "e",
+                "t",
+                "t",
+                "i",
+                "ng"
+              ],
+              "bigger": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on is, getting, stronger, every.",
+          "expected_response": "Students read \"He is getting bigger.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"He is getting stronger every day.\".",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "06-04",
+          "block_id": "06",
+          "slide_title": "Read the Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The biggest prize is here.",
+            "display_mode": "sentence",
+            "show_font_controls": true,
+            "word_types": {
+              "The": "sight",
+              "biggest": "decodable",
+              "prize": "decodable",
+              "is": "decodable",
+              "here": "decodable"
+            },
+            "token_units": {
+              "biggest": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "e",
+                "st"
+              ],
+              "prize": [
+                "pr",
+                "i",
+                "z",
+                "e"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ]
+            }
+          },
+          "teacher_cue": "Read the sentence naturally, then track each word. Focus on brightest, star, is, shining.",
+          "expected_response": "Students read \"The biggest prize is here.\" accurately.",
+          "correction_move": "Model once, then return to one-to-one word tracking and reread the full sentence.",
+          "observation_note": "Watch for accurate reading and smooth phrasing in \"The brightest star is shining.\".",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "07": {
+      "block_id": "07",
+      "label": "Decodable Reader / Fluency",
+      "slides": [
+        {
+          "slide_id": "07-01",
+          "block_id": "07",
+          "slide_title": "Decodable Reader",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The runner is running faster.\nShe is hoping for the prize.\nHe is getting bigger.\nThe biggest prize is here.\nThe runner is better.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Who is running? What is here?",
+            "word_types": {
+              "The": "sight",
+              "runner": "decodable",
+              "is": "decodable",
+              "running": "decodable",
+              "faster": "decodable",
+              "She": "sight",
+              "hoping": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "prize": "decodable",
+              "He": "sight",
+              "getting": "decodable",
+              "bigger": "decodable",
+              "biggest": "decodable",
+              "here": "decodable",
+              "better": "decodable"
+            },
+            "token_units": {
+              "runner": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "er"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "running": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "i",
+                "ng"
+              ],
+              "faster": [
+                "f",
+                "a",
+                "st",
+                "er"
+              ],
+              "hoping": [
+                "h",
+                "o",
+                "p",
+                "i",
+                "ng"
+              ],
+              "for": [
+                "f",
+                "or"
+              ],
+              "prize": [
+                "pr",
+                "i",
+                "z",
+                "e"
+              ],
+              "getting": [
+                "g",
+                "e",
+                "t",
+                "t",
+                "i",
+                "ng"
+              ],
+              "bigger": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "er"
+              ],
+              "biggest": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "e",
+                "st"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "better": [
+                "b",
+                "e",
+                "t",
+                "t",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Echo read first, then reread together. Keep the meaning of the scene clear before asking students to hunt for the pattern.",
+          "expected_response": "Students read all sentences accurately and answer the comprehension prompt.",
+          "correction_move": "Return to the Block 06 sentences first, then reread the full reader from the top.",
+          "observation_note": "Watch for fluent tracking, accurate target-pattern reading, and whether students can answer from the text rather than guessing.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-02",
+          "block_id": "07",
+          "slide_title": "Reread for Fluency",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The runner is running faster.\nShe is hoping for the prize.\nHe is getting bigger.\nThe biggest prize is here.\nThe runner is better.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread smoothly. Point to one lesson word and use it in a new sentence.",
+            "word_types": {
+              "The": "sight",
+              "runner": "decodable",
+              "is": "decodable",
+              "running": "decodable",
+              "faster": "decodable",
+              "She": "sight",
+              "hoping": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "prize": "decodable",
+              "He": "sight",
+              "getting": "decodable",
+              "bigger": "decodable",
+              "biggest": "decodable",
+              "here": "decodable",
+              "better": "decodable"
+            },
+            "token_units": {
+              "runner": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "er"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "running": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "i",
+                "ng"
+              ],
+              "faster": [
+                "f",
+                "a",
+                "st",
+                "er"
+              ],
+              "hoping": [
+                "h",
+                "o",
+                "p",
+                "i",
+                "ng"
+              ],
+              "for": [
+                "f",
+                "or"
+              ],
+              "prize": [
+                "pr",
+                "i",
+                "z",
+                "e"
+              ],
+              "getting": [
+                "g",
+                "e",
+                "t",
+                "t",
+                "i",
+                "ng"
+              ],
+              "bigger": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "er"
+              ],
+              "biggest": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "e",
+                "st"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "better": [
+                "b",
+                "e",
+                "t",
+                "t",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Reread the full text for smoother phrasing. Then have students point to one lesson word and say a new sentence with it.",
+          "expected_response": "Students reread with smoother phrasing and produce one oral sentence using a lesson word.",
+          "correction_move": "Echo read one line at a time, then reread the full text and prompt one supported oral sentence.",
+          "observation_note": "Watch for improved fluency, accurate tracking, and whether students can transfer one lesson word into a new sentence.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "07-03",
+          "block_id": "07",
+          "slide_title": "Reread suffixes Smoothly",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The runner is running faster.\nShe is hoping for the prize.\nHe is getting bigger.\nThe biggest prize is here.\nThe runner is better.",
+            "display_mode": "reader",
+            "show_font_controls": true,
+            "comprehension_prompt": "Reread the suffixes text smoothly. Then tell one thing you noticed about the word parts.",
+            "word_types": {
+              "The": "sight",
+              "runner": "decodable",
+              "is": "decodable",
+              "running": "decodable",
+              "faster": "decodable",
+              "She": "sight",
+              "hoping": "decodable",
+              "for": "decodable",
+              "the": "sight",
+              "prize": "decodable",
+              "He": "sight",
+              "getting": "decodable",
+              "bigger": "decodable",
+              "biggest": "decodable",
+              "here": "decodable",
+              "better": "decodable"
+            },
+            "token_units": {
+              "runner": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "er"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "running": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "i",
+                "ng"
+              ],
+              "faster": [
+                "f",
+                "a",
+                "st",
+                "er"
+              ],
+              "hoping": [
+                "h",
+                "o",
+                "p",
+                "i",
+                "ng"
+              ],
+              "for": [
+                "f",
+                "or"
+              ],
+              "prize": [
+                "pr",
+                "i",
+                "z",
+                "e"
+              ],
+              "getting": [
+                "g",
+                "e",
+                "t",
+                "t",
+                "i",
+                "ng"
+              ],
+              "bigger": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "er"
+              ],
+              "biggest": [
+                "b",
+                "i",
+                "g",
+                "g",
+                "e",
+                "st"
+              ],
+              "here": [
+                "h",
+                "er",
+                "e"
+              ],
+              "better": [
+                "b",
+                "e",
+                "t",
+                "t",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Read the suffixes text again smoothly. Scoop the words into phrases and keep your voice steady.",
+          "expected_response": "Students reread with smoother phrasing and stronger fluency.",
+          "correction_move": "Model one line with phrasing, then have students echo and reread the whole text.",
+          "observation_note": "Listen for phrasing, expression, and control, not just speed.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "08": {
+      "block_id": "08",
+      "label": "Encoding & Writing",
+      "slides": [
+        {
+          "slide_id": "08-01",
+          "block_id": "08",
+          "slide_title": "Listen and Write: running",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_running.mp3",
+            "dictated_text": "running",
+            "expected_answer": "running",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "r",
+              "u",
+              "nn",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play running once. Replay only if needed. Remind students: /ŋ/ is spelled 'ng' — both letters go in one box.",
+          "expected_response": "Students write running accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "r_l",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-02",
+          "block_id": "08",
+          "slide_title": "Listen and Write: making",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_making.mp3",
+            "dictated_text": "making",
+            "expected_answer": "making",
+            "elkonin_boxes": 5,
+            "grapheme_units": [
+              "m",
+              "a",
+              "k",
+              "i",
+              "ng"
+            ]
+          },
+          "teacher_cue": "Play making once. Replay only if needed. Remind students: /ŋ/ is spelled 'ng' — both letters go in one box.",
+          "expected_response": "Students write making accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-03",
+          "block_id": "08",
+          "slide_title": "Listen and Write: biggest",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": "/static/audio/block08_biggest.mp3",
+            "dictated_text": "biggest",
+            "expected_answer": "biggest",
+            "elkonin_boxes": 6,
+            "grapheme_units": [
+              "b",
+              "i",
+              "gg",
+              "e",
+              "s",
+              "t"
+            ]
+          },
+          "teacher_cue": "Play biggest once. Replay only if needed.",
+          "expected_response": "Students write biggest accurately.",
+          "correction_move": "Replay once, segment orally, then recheck.",
+          "observation_note": "Watch whether students encode all morphemes correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "08-04",
+          "block_id": "08",
+          "slide_title": "Listen and Write: sentence",
+          "view_type": "writing_encoding",
+          "content_payload": {
+            "audio_prompt": null,
+            "prompt_text": "Listen and write the sentence.",
+            "dictated_text": "The runner is running faster.",
+            "expected_answer": "The runner is running faster.",
+            "display_mode": "sentence",
+            "grapheme_units": []
+          },
+          "teacher_cue": "Read the sentence aloud twice. Students repeat it, then write the whole sentence with capitals and punctuation.",
+          "expected_response": "Students write the full dictated sentence accurately.",
+          "correction_move": "Repeat the sentence in phrases, then have students check capitals, spacing, and punctuation.",
+          "observation_note": "Watch sentence memory, word-boundary control, capitals, and punctuation as well as spelling of lesson words.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "09": {
+      "block_id": "09",
+      "label": "Morpheme Moment",
+      "slides": [
+        {
+          "slide_id": "09-01",
+          "block_id": "09",
+          "slide_title": "Compare the Words",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "spot_part",
+            "displayed_words": [
+              "run→running",
+              "hope→hoping",
+              "big→biggest",
+              "fast→fastest"
+            ],
+            "highlighted_chunk": "spelling rule",
+            "support_text": "What spelling change happens before the suffix in each word?",
+            "token_units": {}
+          },
+          "teacher_cue": "Show the words. Ask: What spelling change happens before the suffix in each word?",
+          "expected_response": "Students identify the shared morpheme and explain its meaning.",
+          "correction_move": "Point to the highlighted chunk. Ask again.",
+          "observation_note": "Watch whether students isolate the morpheme correctly.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-02",
+          "block_id": "09",
+          "slide_title": "Say a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The runner is running faster.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Read the model sentence. Then say a new sentence with one lesson word.",
+            "word_types": {
+              "The": "sight",
+              "runner": "decodable",
+              "is": "decodable",
+              "running": "decodable",
+              "faster": "decodable"
+            },
+            "token_units": {
+              "runner": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "er"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "running": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "i",
+                "ng"
+              ],
+              "faster": [
+                "f",
+                "a",
+                "st",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Use the model sentence once, then ask students to say a new sentence that keeps one lesson word but changes the meaning.",
+          "expected_response": "Students read the model sentence and say one new oral sentence using a lesson word.",
+          "correction_move": "Model one new sentence aloud, then have students repeat and generate their own.",
+          "observation_note": "Watch whether students can hold the target pattern while generating a meaningful new sentence.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "09-03",
+          "block_id": "09",
+          "slide_title": "Use suffixes In New Speech",
+          "view_type": "read_respond",
+          "content_payload": {
+            "text_content": "The runner is running faster.",
+            "display_mode": "sentence",
+            "show_font_controls": false,
+            "comprehension_prompt": "Say one sentence using suffixes, then say a second sentence with one change.",
+            "word_types": {
+              "The": "sight",
+              "runner": "decodable",
+              "is": "decodable",
+              "running": "decodable",
+              "faster": "decodable"
+            },
+            "token_units": {
+              "runner": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "er"
+              ],
+              "is": [
+                "i",
+                "s"
+              ],
+              "running": [
+                "r",
+                "u",
+                "n",
+                "n",
+                "i",
+                "ng"
+              ],
+              "faster": [
+                "f",
+                "a",
+                "st",
+                "er"
+              ]
+            }
+          },
+          "teacher_cue": "Use suffixes in one full sentence. Then change one part and say a second sentence.",
+          "expected_response": "Students produce one complete sentence and then extend or vary it.",
+          "correction_move": "Model one sentence, then prompt for a second sentence with one changed word or part.",
+          "observation_note": "Push for full oral language, not one-word answers.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    },
+    "10": {
+      "block_id": "10",
+      "label": "Meaning-Making Close",
+      "slides": [
+        {
+          "slide_id": "10-01",
+          "block_id": "10",
+          "slide_title": "Lesson Close",
+          "view_type": "quick_check",
+          "content_payload": {
+            "display_mode": "lesson_close",
+            "title": "Close the Lesson",
+            "check_items": [
+              {
+                "label": "Double the consonant before a vowel suffix if the vowel is short. Drop the e before a vowel suffix.",
+                "phoneme": null
+              },
+              {
+                "label": "Who was hoping for the prize? What was shining at the end? Find the -ing, -er, and -est words in the reader.",
+                "phoneme": null
+              },
+              {
+                "label": "Tell me one full sentence using running or hoping.",
+                "phoneme": null
+              }
+            ],
+            "notes_field": "Keep the close brief, oral, and text-based."
+          },
+          "teacher_cue": "Close with pattern recall, meaning from the reader, and one brief oral transfer sentence.",
+          "expected_response": "Students answer orally, refer back to the reader when needed, and produce one full sentence with lesson vocabulary.",
+          "correction_move": "Return to the reader, point to the relevant sentence, then model one full oral answer.",
+          "observation_note": "Watch for pattern recall, text-based answers, and whether the final oral sentence stays accurate and complete.",
+          "korean_interference_flag": "vowel_quality",
+          "markable": false,
+          "marking_options": [],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-02",
+          "block_id": "10",
+          "slide_title": "Write a New Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {}
+          },
+          "teacher_cue": "Show the sentence starter. Students write one full sentence that uses at least one lesson word from today.",
+          "expected_response": "Students write one complete sentence using at least one lesson word.",
+          "correction_move": "Model one short sentence aloud, then have students write their own version.",
+          "observation_note": "Watch for accurate spelling of lesson words and a complete sentence frame.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        },
+        {
+          "slide_id": "10-03",
+          "block_id": "10",
+          "slide_title": "Final suffixes Sentence",
+          "view_type": "read_respond",
+          "content_payload": {
+            "display_mode": "sentence",
+            "text_content": "I ...",
+            "show_font_controls": true,
+            "word_types": {
+              "I": "sight"
+            },
+            "token_units": {},
+            "support_text": "Say one final strong sentence using today's suffixes focus."
+          },
+          "teacher_cue": "Give me one more full sentence or idea using today's suffixes focus before we finish.",
+          "expected_response": "Students give one final complete sentence or idea connected to the lesson focus.",
+          "correction_move": "If needed, model the start of a sentence and have students finish it clearly.",
+          "observation_note": "End with a strong oral response so the lesson closes on language and meaning.",
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
+        }
+      ]
+    }
+  }
+}

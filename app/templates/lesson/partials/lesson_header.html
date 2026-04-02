@@ -1,20 +1,20 @@
-<header class="card lesson-header" x-show="!presentationMode" x-cloak>
+<header class="lesson-header" x-cloak>
     {% set title_parts = lesson.title.split(': ', 1) %}
     {% set title_prefix = title_parts[0] %}
     {% set title_segments = title_prefix.split(', ') %}
     {% set main_title = title_segments[0] %}
     {% set lesson_label = title_segments[1] if title_segments | length > 1 else title_prefix %}
-    <a class="lesson-header__back" href="/lesson/">← Lesson Library</a>
-    <div class="lesson-header__meta-row">
+    <div class="lesson-header__topline">
         <p class="lesson-header__meta">
             <span class="lesson-header__meta-item">{{ lesson.unit_id }}</span>
-            <span class="lesson-header__meta-separator" aria-hidden="true">·</span>
             <span class="lesson-header__meta-item">{{ lesson_label }}</span>
             {% if lesson.target_pattern %}
-            <span class="lesson-header__meta-separator" aria-hidden="true">·</span>
             <span class="lesson-header__meta-item lesson-header__meta-item--pattern">{{ lesson.target_pattern }}</span>
             {% endif %}
         </p>
+        <div class="lesson-header__focus-inline">
+            <span class="lesson-header__focus-label">Current</span>
+            <span class="lesson-header__focus-inline-text" x-text='activeBlockLabel || activeSlideTitle || {{ main_title | tojson }}'>{{ main_title }}</span>
+        </div>
     </div>
-    <h1 class="lesson-title">{{ main_title }}</h1>
 </header>
