@@ -21,8 +21,8 @@ jobs:
           pip install -r requirements.txt
       - name: Build static assets
         run: python scripts/build_static.py --check
-      - name: Install matching ChromeDriver
-        run: npx -y browser-driver-manager install chromedriver
+      - name: Install matching Chrome and ChromeDriver
+        run: npx -y browser-driver-manager install chrome
       - name: Start app
         env:
           DATABASE_URL: sqlite:////tmp/luminos_engine_a11y.db
@@ -35,8 +35,9 @@ jobs:
           sleep 5
       - name: Run axe
         run: |
-          CHROMEDRIVER_PATH="$(npx -y browser-driver-manager which chromedriver)"
-          npx -y @axe-core/cli --chromedriver-path "$CHROMEDRIVER_PATH" http://127.0.0.1:8000/lesson/ http://127.0.0.1:8000/classes/
+          . "$HOME/.browser-driver-manager/.env"
+          export CHROME_BIN="$CHROME_TEST_PATH"
+          npx -y @axe-core/cli --chromedriver-path "$CHROMEDRIVER_TEST_PATH" http://127.0.0.1:8000/lesson/ http://127.0.0.1:8000/classes/
       - name: Stop app
         if: always()
         run: |
