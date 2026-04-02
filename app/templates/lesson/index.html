@@ -67,6 +67,20 @@
     gateFor(lessonId) {
       if (!this.selectedClassId) return null;
       return this.masteryGates[lessonId] || null;
+    },
+    lessonUrl(lessonId, mode = 'lesson') {
+      const classId = this.selectedClassId ? ('?class_id=' + encodeURIComponent(this.selectedClassId)) : '';
+      if (mode === 'teacher') return '/lesson/' + lessonId + '/teacher' + classId;
+      if (mode === 'board') return '/lesson/' + lessonId + '/board' + classId;
+      return '/lesson/' + lessonId + classId;
+    },
+    openLesson(lessonId, mode = 'lesson') {
+      const url = this.lessonUrl(lessonId, mode);
+      if (mode === 'lesson') {
+        window.location.assign(url);
+        return;
+      }
+      window.open(url, '_blank');
     }
   }">
 
@@ -122,11 +136,14 @@
         {% set lesson_label = parts[1] if parts | length > 1 else lesson.title %}
         {% set pattern_count = lesson.target_pattern.split(' · ') | length if lesson.target_pattern else 0 %}
         {% set ki_anchor = ki_anchors.get(lesson.lesson_id) %}
-        <a
+        <article
           class="launcher__lesson-card"
-          href="/lesson/{{ lesson.lesson_id }}"
           :class="{ 'launcher__lesson-card--active': selectedClassId }"
-          onclick="const classSelect=document.getElementById('class-select'); const classId=classSelect && classSelect.value ? '?class_id=' + encodeURIComponent(classSelect.value) : ''; window.location.assign('/lesson/{{ lesson.lesson_id }}' + classId); return false;">
+          role="link"
+          tabindex="0"
+          @click="openLesson('{{ lesson.lesson_id }}')"
+          @keydown.enter.prevent="openLesson('{{ lesson.lesson_id }}')"
+          @keydown.space.prevent="openLesson('{{ lesson.lesson_id }}')">
           <div class="launcher__card-top">
             <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
             <template x-if="lessonProgress['{{ lesson.lesson_id }}']">
@@ -186,25 +203,25 @@
                 <button
                   type="button"
                   class="launcher__launch-btn"
-                  @click.stop.prevent="window.location.assign('/lesson/{{ lesson.lesson_id }}' + (selectedClassId ? ('?class_id=' + encodeURIComponent(selectedClassId)) : ''))">
+                  @click.stop.prevent="openLesson('{{ lesson.lesson_id }}')">
                   Lesson
                 </button>
                 <button
                   type="button"
                   class="launcher__launch-btn launcher__launch-btn--split"
-                  @click.stop.prevent="window.open('/lesson/{{ lesson.lesson_id }}/teacher' + (selectedClassId ? ('?class_id=' + encodeURIComponent(selectedClassId)) : ''), '_blank')">
+                  @click.stop.prevent="openLesson('{{ lesson.lesson_id }}', 'teacher')">
                   Teacher
                 </button>
                 <button
                   type="button"
                   class="launcher__launch-btn launcher__launch-btn--split"
-                  @click.stop.prevent="window.open('/lesson/{{ lesson.lesson_id }}/board' + (selectedClassId ? ('?class_id=' + encodeURIComponent(selectedClassId)) : ''), '_blank')">
+                  @click.stop.prevent="openLesson('{{ lesson.lesson_id }}', 'board')">
                   Board
                 </button>
               </div>
             </div>
           </div>
-        </a>
+        </article>
         {% endfor %}
       </div>
     </section>
