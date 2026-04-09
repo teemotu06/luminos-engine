@@ -1,0 +1,70 @@
+{% extends "authoring/base.html" %}
+
+{% block authoring_title %}Lesson Editor{% endblock %}
+
+{% block authoring_content %}
+<div x-data="authoringEditorShell()" class="authoring-stack">
+
+  <section class="authoring-card authoring-lesson-card--sticky">
+    <div class="authoring-card__body">
+      <div class="authoring-lesson-header">
+        <div class="authoring-lesson-heading">
+          <div class="authoring-eyebrow">{{ lesson.lesson_id }}</div>
+          <h2 class="authoring-lesson-title">{{ lesson.title }}</h2>
+          <div class="authoring-meta-grid authoring-meta-grid--inline">
+            <div class="authoring-meta">
+              <div class="authoring-meta__label">Group</div>
+              <div class="authoring-meta__value">{{ lesson.unit_id }}</div>
+            </div>
+            <div class="authoring-meta">
+              <div class="authoring-meta__label">Pattern</div>
+              <div class="authoring-meta__value">{{ lesson.target_pattern }}</div>
+            </div>
+            <div class="authoring-meta">
+              <div class="authoring-meta__label">Status</div>
+              <div class="authoring-meta__value">{{ lesson.content_pack_status }}</div>
+            </div>
+            <div class="authoring-meta">
+              <div class="authoring-meta__label">Blocks</div>
+              <div class="authoring-meta__value">{{ blocks | length }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="authoring-actions">
+          <a href="/authoring/lessons" class="authoring-btn-secondary">← Lessons</a>
+          <form method="post" action="/authoring/lessons/{{ lesson.lesson_id }}/save" hx-post="/authoring/lessons/{{ lesson.lesson_id }}/save" hx-target="#save-results" hx-swap="innerHTML">
+            <button type="submit" class="authoring-btn">Save Lesson</button>
+          </form>
+        </div>
+      </div>
+      <div id="save-results" class="authoring-results-anchor"></div>
+    </div>
+  </section>
+
+  <div class="authoring-stack">
+    {% for block in blocks %}
+    <section
+      x-data="{ loaded: {{ 'true' if loop.first else 'false' }} }"
+      class="authoring-section-card"
+      :class="{ 'authoring-section-card--open': openBlockId === '{{ block.block_id }}' }">
+      <button
+        type="button"
+        class="authoring-section-toggle"
+        @click="if (openBlockId === '{{ block.block_id }}') { openBlockId = ''; } else { openBlockId = '{{ block.block_id }}'; if (!loaded) { htmx.ajax('GET', '/authoring/lessons/{{ lesson.lesson_id }}/blocks/{{ block.block_id }}', { target: '#block-panel-{{ block.block_id }}', swap: 'innerHTML' }); loaded = true; } }">
+        <div class="authoring-section-toggle__body">
+          <div class="authoring-section-title">{{ block.block_id }} — {{ block.label }}</div>
+          <span class="authoring-badge">{{ block.slide_count }} slide{{ 's' if block.slide_count != 1 }}</span>
+        </div>
+        <span class="authoring-section-chevron" :class="{ 'authoring-section-chevron--open': openBlockId === '{{ block.block_id }}' }">›</span>
+      </button>
+      <div x-show="openBlockId === '{{ block.block_id }}'" x-cloak class="authoring-panel-body">
+        <div
+          id="block-panel-{{ block.block_id }}"
+          {% if loop.first %}hx-get="/authoring/lessons/{{ lesson.lesson_id }}/blocks/{{ block.block_id }}" hx-trigger="load" hx-swap="innerHTML"{% endif %}>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

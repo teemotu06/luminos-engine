@@ -1,0 +1,28 @@
+{% extends "authoring/base.html" %}
+
+{% block authoring_title %}{{ "Edit Group" if group else "New Group" }}{% endblock %}
+
+{% block authoring_content %}
+<form method="post" action="{{ form_action }}" style="display:grid; gap:16px; max-width:720px;">
+  <label>
+    <div>Unit ID</div>
+    <input type="text" name="unit_id" value="{{ group.unit_id if group else suggested_unit_id }}" {% if group %}readonly{% endif %} required>
+  </label>
+  <label>
+    <div>Title</div>
+    <input type="text" name="title" value="{{ group.title if group else '' }}" required>
+  </label>
+  <label>
+    <div>Description</div>
+    <textarea name="description" rows="4">{{ group.description if group else '' }}</textarea>
+  </label>
+  <label>
+    <div>Target phonemes</div>
+    <input type="text" name="target_phonemes" value="{{ group.target_phonemes | join(', ') if group else '' }}">
+  </label>
+  <div style="display:flex; gap:12px;">
+    <button type="submit">Save</button>
+    <a href="/authoring/groups">Cancel</a>
+  </div>
+</form>
+{% endblock %}

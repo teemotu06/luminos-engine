@@ -6,101 +6,102 @@
 <div class="page launcher">
 
   <header class="launcher__header">
-    <a class="launcher__back" href="/classes/">← Classes</a>
-    <div class="launcher__meta-label">LUMINOS · Class</div>
-    <h1 class="launcher__title">{{ cls.class_name }}</h1>
-    {% if cls.description %}
-    <p class="launcher__intro">{{ cls.description }}</p>
-    {% endif %}
-    <div class="launcher__stats">
-      <div class="launcher__stat">
-        <span class="launcher__stat-number">{{ cls.students | length }}</span>
-        <span class="launcher__stat-label">Students</span>
-      </div>
+    <div class="launcher__header-identity">
+      <span class="launcher__header-sep">LUMINOS</span>
+      <h1 class="launcher__header-title">{{ cls.class_name }}</h1>
+    </div>
+    <div class="launcher__header-stats">
+      <span class="launcher__stat-inline">{{ cls.students | length }} students</span>
+      {% if cls.deleted_at %}
+      <span class="launcher__stat-inline">archived</span>
+      {% else %}
+      <span class="launcher__stat-inline launcher__stat-inline--ready">active</span>
+      {% endif %}
     </div>
     {% if cls.deleted_at %}
-    <div class="form-error" role="status" style="margin-top: 1rem;">This class is archived. Restore it to resume normal use.</div>
+    <div class="form-error" role="status">This class is archived. Restore it to resume normal use.</div>
     {% endif %}
   </header>
+  <a class="launcher__back" href="/classes/">← Classes</a>
+  {% if cls.description %}
+  <p class="launcher__section-intro">{{ cls.description }}</p>
+  {% else %}
+  <p class="launcher__section-intro">Manage this roster and use it when launching lessons from the library.</p>
+  {% endif %}
 
   <main id="main-content" class="launcher__main">
 
-    {# ── Error banner ─────────────────────────────────────── #}
     {% if error %}
-    <div class="form-error" style="margin-bottom: 1.5rem;">{{ error }}</div>
+    <div class="form-error">{{ error }}</div>
     {% endif %}
 
-    {# ── Student list ─────────────────────────────────────── #}
-    <section class="launcher__group">
-      <div class="launcher__group-header">
-        <div class="launcher__group-kicker">Roster</div>
-        <h2 class="launcher__group-title">Students</h2>
-      </div>
-
-      {% if cls.students %}
-      <div class="student-list">
-        {% for student in cls.students %}
-        <div class="student-list__row">
-          <span class="student-list__name">{{ student.student_name }}</span>
-          <a class="student-list__link" href="/students/{{ student.student_name }}/profile?class_id={{ cls.id }}">
-            View profile →
-          </a>
+    <div class="launcher__detail-layout">
+      <section class="launcher__group launcher__section-card launcher__section-card--primary">
+        <div class="launcher__group-header">
+          <div class="launcher__group-kicker">Roster</div>
+          <h2 class="launcher__group-title">Students</h2>
         </div>
-        {% endfor %}
-      </div>
-      {% else %}
-      <p style="color: rgba(17,17,17,0.45); font-size: 15px;">No students yet. Add one below.</p>
-      {% endif %}
-    </section>
 
-    <hr class="launcher__divider">
+        {% if cls.students %}
+        <div class="student-list">
+          {% for student in cls.students %}
+          <div class="student-list__row">
+            <span class="student-list__name">{{ student.student_name }}</span>
+            <a class="student-list__link" href="/students/{{ student.student_name }}/profile?class_id={{ cls.id }}">
+              View profile →
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <p class="launcher__empty-copy">No students yet. Use the quick add panel to build the roster.</p>
+        {% endif %}
+      </section>
 
-    {# ── Add student form ─────────────────────────────────── #}
-    <section class="launcher__group">
-      <div class="launcher__group-header">
-        <div class="launcher__group-kicker">Add student</div>
-        <h2 class="launcher__group-title">Add to roster</h2>
-      </div>
-      <form class="luminos-form luminos-form--inline" method="post" action="/classes/{{ cls.id }}/students">
-        <input
-          class="luminos-form__input"
-          type="text"
-          name="student_name"
-          placeholder="Student name"
-          required
-          autofocus>
-        <button class="luminos-form__submit" type="submit" {% if cls.deleted_at %}disabled{% endif %}>Add student</button>
-      </form>
-    </section>
+      <aside class="launcher__detail-sidebar">
+        <section class="launcher__group launcher__section-card">
+          <div class="launcher__group-header">
+            <div class="launcher__group-kicker">Quick add</div>
+            <h2 class="launcher__group-title">Add student</h2>
+          </div>
+          <form class="luminos-form" method="post" action="/classes/{{ cls.id }}/students">
+            <input
+              class="luminos-form__input"
+              type="text"
+              name="student_name"
+              placeholder="Student name"
+              required
+              autocomplete="name"
+              autofocus>
+            <button class="luminos-form__submit" type="submit" {% if cls.deleted_at %}disabled{% endif %}>Add student</button>
+          </form>
+        </section>
 
-    <hr class="launcher__divider">
+        <section class="launcher__group launcher__section-card">
+          <div class="launcher__group-header">
+            <div class="launcher__group-kicker">Quick launch</div>
+            <h2 class="launcher__group-title">Use in lessons</h2>
+          </div>
+          <p class="launcher__section-copy">Open the <a class="launcher__inline-link" href="/lesson/">Lesson Library</a> and select this class from the dropdown before launching Teacher or Board.</p>
+        </section>
 
-    {# ── Launch a lesson ──────────────────────────────────── #}
-    <section class="launcher__group">
-      <div class="launcher__group-header">
-        <div class="launcher__group-kicker">Quick launch</div>
-        <h2 class="launcher__group-title">Open a lesson with this class</h2>
-      </div>
-      <p class="launcher__intro">Go to the <a href="/lesson/" style="color: var(--accent);">Lesson Library</a> and select this class from the dropdown to launch a lesson with this roster.</p>
-    </section>
-
-    <hr class="launcher__divider">
-
-    <section class="launcher__group">
-      <div class="launcher__group-header">
-        <div class="launcher__group-kicker">Lifecycle</div>
-        <h2 class="launcher__group-title">Archive or restore</h2>
-      </div>
-      {% if cls.deleted_at %}
-      <form method="post" action="/classes/{{ cls.id }}/restore">
-        <button class="luminos-form__submit" type="submit">Restore class</button>
-      </form>
-      {% else %}
-      <form method="post" action="/classes/{{ cls.id }}/archive">
-        <button class="luminos-form__submit" type="submit">Archive class</button>
-      </form>
-      {% endif %}
-    </section>
+        <section class="launcher__group launcher__section-card">
+          <div class="launcher__group-header">
+            <div class="launcher__group-kicker">Lifecycle</div>
+            <h2 class="launcher__group-title">Class status</h2>
+          </div>
+          {% if cls.deleted_at %}
+          <form method="post" action="/classes/{{ cls.id }}/restore">
+            <button class="luminos-form__submit" type="submit">Restore class</button>
+          </form>
+          {% else %}
+          <form method="post" action="/classes/{{ cls.id }}/archive">
+            <button class="luminos-form__submit luminos-form__submit--secondary" type="submit">Archive class</button>
+          </form>
+          {% endif %}
+        </section>
+      </aside>
+    </div>
 
   </main>
 

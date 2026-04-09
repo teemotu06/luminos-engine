@@ -1,4 +1,4 @@
-<div class="lesson-minimal-pair" x-data="{ selectedResult: '' }">
+<div class="lesson-minimal-pair">
   {% if slide.content_payload.korean_flag %}
   <div class="lesson-minimal-pair__flag">
     <div class="lesson-minimal-pair__flag-label">Korean interference flag</div>
@@ -45,16 +45,16 @@
     <button
       type="button"
       class="lesson-minimal-pair__mark-button"
-      :class="{ 'lesson-minimal-pair__mark-button--active': selectedResult === 'correct' }"
-      @click="selectedResult = 'correct'">
+      :class="{ 'lesson-minimal-pair__mark-button--active': slideMarks[{{ slide_index }}]?.status === 'secure' }"
+      @click="setAndSubmitSlideMark({{ slide_index }}, 'secure', '{{ slide.slide_id }}', '{{ slide.block_id }}')">
       Correct
     </button>
 
     <button
       type="button"
       class="lesson-minimal-pair__mark-button"
-      :class="{ 'lesson-minimal-pair__mark-button--active': selectedResult === 'incorrect' }"
-      @click="selectedResult = 'incorrect'">
+      :class="{ 'lesson-minimal-pair__mark-button--active': slideMarks[{{ slide_index }}]?.status === 'missed' }"
+      @click="setAndSubmitSlideMark({{ slide_index }}, 'missed', '{{ slide.slide_id }}', '{{ slide.block_id }}')">
       Incorrect
     </button>
   </div>

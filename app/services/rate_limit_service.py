@@ -7,7 +7,9 @@ from typing import Deque, Dict, Optional, Tuple
 DEFAULT_RATE_LIMIT_SPECS = [
     ("/lesson/tts/prompt", 5, 60),
     ("/admin/", 10, 60),
-    ("/lesson/", 180, 60),
+    # command-state polling: board (4 req/s) + teacher (2 req/s) + learner (1 req/s)
+    # from the same IP in dev, or per-device in prod — allow 600/min (10/s)
+    ("/lesson/", 600, 60),
 ]
 
 

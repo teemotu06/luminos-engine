@@ -1,0 +1,14 @@
+{% set letters = slide.content_payload.letter_pool or [] %}
+<div class="lesson-spell-word">
+  <div class="lesson-spell-word__letters">
+    {% for item in letters %}
+    <div class="lesson-spell-word__tile">{{ item }}</div>
+    {% endfor %}
+  </div>
+  <div class="lesson-spell-word__center">
+    {% if slide_audio_url %}
+    <div class="lesson-spell-word__audio">Audio</div>
+    {% endif %}
+    <div class="lesson-spell-word__answer-box"></div>
+  </div>
+</div>

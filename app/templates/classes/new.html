@@ -6,39 +6,52 @@
 <div class="page launcher">
 
   <header class="launcher__header">
-    <a class="launcher__back" href="/classes/">← Classes</a>
-    <div class="launcher__meta-label">LUMINOS · New Class</div>
-    <h1 class="launcher__title">Create a class</h1>
+    <div class="launcher__header-identity">
+      <span class="launcher__header-sep">LUMINOS</span>
+      <h1 class="launcher__header-title">Create a Class</h1>
+    </div>
+    <div class="launcher__header-stats">
+      <span class="launcher__stat-inline">roster setup</span>
+    </div>
   </header>
+  <a class="launcher__back" href="/classes/">← Classes</a>
+  <p class="launcher__section-intro">Create a roster that can be selected from the lesson library for Teacher and Board launches.</p>
 
   <main id="main-content" class="launcher__main">
     {% if error %}
     <div class="form-error">{{ error }}</div>
     {% endif %}
 
-    <form class="luminos-form" method="post" action="/classes/new">
-      <div class="luminos-form__field">
-        <label class="luminos-form__label" for="class_name">Class name</label>
-        <input
-          class="luminos-form__input"
-          type="text"
-          id="class_name"
-          name="class_name"
-          placeholder="e.g. Year 1 Blue"
-          required
-          autofocus>
+    <section class="launcher__group launcher__section-card launcher__section-card--form">
+      <div class="launcher__group-header">
+        <div class="launcher__group-kicker">Setup</div>
+        <h2 class="launcher__group-title">Class details</h2>
       </div>
-      <div class="luminos-form__field">
-        <label class="luminos-form__label" for="description">Description <span class="luminos-form__optional">(optional)</span></label>
-        <input
-          class="luminos-form__input"
-          type="text"
-          id="description"
-          name="description"
-          placeholder="e.g. Monday / Wednesday group">
-      </div>
-      <button class="luminos-form__submit" type="submit">Create class</button>
-    </form>
+      <form class="luminos-form" method="post" action="/classes/new">
+        <div class="luminos-form__field">
+          <label class="luminos-form__label" for="class_name">Class name</label>
+          <input
+            class="luminos-form__input"
+            type="text"
+            id="class_name"
+            name="class_name"
+            placeholder="e.g. Year 1 Blue"
+            required
+            autocomplete="organization"
+            autofocus>
+        </div>
+        <div class="luminos-form__field">
+          <label class="luminos-form__label" for="description">Description <span class="luminos-form__optional">(optional)</span></label>
+          <input
+            class="luminos-form__input"
+            type="text"
+            id="description"
+            name="description"
+            placeholder="e.g. Monday / Wednesday group">
+        </div>
+        <button class="luminos-form__submit" type="submit">Create class</button>
+      </form>
+    </section>
   </main>
 
 </div>

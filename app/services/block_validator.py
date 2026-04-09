@@ -1,4 +1,5 @@
 from app.schemas.lesson import Lesson
+from app.slide_types import registry
 from app.services.block_registry import BLOCK_REGISTRY
 
 
@@ -47,8 +48,7 @@ def validate_lesson_blocks(lesson: Lesson) -> None:
                     f"Slide {slide.slide_id} has block_id {slide.block_id}, expected {block_id}."
                 )
 
-            if slide.view_type not in registry_block.allowed_view_types:
+            if not registry.exists(str(slide.view_type)):
                 raise ValueError(
-                    f"Slide {slide.slide_id} uses view_type {slide.view_type!r} "
-                    f"which is not allowed in block {block_id}."
+                    f"Slide {slide.slide_id} uses unknown view_type {slide.view_type!r}."
                 )

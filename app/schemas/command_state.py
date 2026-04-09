@@ -1,9 +1,21 @@
-from typing import List, Literal, Optional
+from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
 
-CommandAction = Literal["mark", "mark_class", "skip", "force_advance", "replay", "pause", "resume"]
+CommandAction = Literal[
+    "mark",
+    "mark_class",
+    "mark_grid",
+    "skip",
+    "force_advance",
+    "hide_answer",
+    "begin_slide",
+    "continue",
+    "replay",
+    "pause",
+    "resume",
+]
 
 
 class LuminosRuntimeStateConfig(BaseModel):
@@ -50,6 +62,16 @@ class CommandStateResponse(BaseModel):
     teacher_controls: List[str] = Field(default_factory=list)
     paused: bool = False
     session_mode: str = "legacy"
+    ui_phase: Literal["ready", "deliver", "observe", "mark_sequential", "mark_grid", "complete"] = "ready"
+    marking_mode: Literal["none", "sequential", "grid"] = "none"
+    student_outcomes: Dict[str, str] = Field(default_factory=dict)
+    pending_count: int = 0
+    secure_count: int = 0
+    mixed_count: int = 0
+    revisit_count: int = 0
+    board_banner_text: str = ""
+    board_banner_tone: Literal["neutral", "focus", "celebrate", "warning"] = "neutral"
+    auto_advance_at: Optional[str] = None
 
 
 class CommandStateAdvanceRequest(BaseModel):

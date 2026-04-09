@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+
+{% block title %}Teach — LUMINOS{% endblock %}
+
+{% block head %}
+<style>
+  .teach-page {
+    position: relative;
+  }
+
+  .teach-page__intro {
+    margin: -0.35rem 0 0;
+    max-width: 58rem;
+    color: rgba(23, 20, 17, 0.58);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .teach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  .teach-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+  }
+
+  .teach-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .teach-card__title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .teach-card__name {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.05;
+    color: #24170f;
+  }
+
+  .teach-card__count {
+    font-size: 12px;
+    line-height: 1.4;
+    color: rgba(23, 20, 17, 0.5);
+  }
+
+  .teach-card__status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0.3rem 0.62rem;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .teach-card__status--in_progress {
+    background: rgba(180, 120, 30, 0.11);
+    color: #92400e;
+  }
+
+  .teach-card__status--ready,
+  .teach-card__status--not_started {
+    background: rgba(120, 100, 80, 0.07);
+    color: rgba(80, 60, 40, 0.62);
+    border: 1px solid rgba(120, 100, 80, 0.1);
+  }
+
+  .teach-card__status--finished {
+    background: rgba(22, 101, 52, 0.12);
+    color: #166534;
+  }
+
+  .teach-card__lesson {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(107, 82, 60, 0.12);
+  }
+
+  .teach-card__kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(23, 20, 17, 0.46);
+  }
+
+  .teach-card__lesson-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--c-text);
+  }
+
+  .teach-card__phonemes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .teach-card__phoneme {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0.34rem 0.56rem;
+    background: rgba(246, 233, 221, 0.96);
+    color: #7b4828;
+    border: 1px solid rgba(182, 102, 54, 0.14);
+    border-radius: 999px;
+  }
+
+  .teach-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: auto;
+  }
+
+  .teach-card__primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 140ms ease, opacity 140ms ease, transform 120ms ease;
+  }
+
+  .teach-card__primary:active {
+    transform: scale(0.985);
+  }
+
+  .teach-card__primary--active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .teach-card__primary--active:hover {
+    background: var(--accent-strong);
+  }
+
+  .teach-card__primary--disabled {
+    background: rgba(120, 100, 80, 0.08);
+    color: rgba(23, 20, 17, 0.4);
+    cursor: default;
+  }
+
+  .teach-card__secondary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .teach-card__secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0.42rem 0.78rem;
+    border: 1px solid rgba(23, 20, 17, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: rgba(23, 20, 17, 0.82);
+    font: inherit;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 120ms ease, border-color 140ms ease, background 140ms ease;
+  }
+
+  .teach-card__secondary-btn:hover {
+    transform: translateY(-1px);
+    border-color: rgba(23, 20, 17, 0.18);
+    background: #fff;
+  }
+
+  .teach-card__copy-confirm {
+    font-size: 12px;
+    font-weight: 600;
+    color: #166534;
+  }
+
+  .teach-empty {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .teach-empty__title {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: #24170f;
+  }
+
+  .teach-empty__body {
+    margin: 0;
+    color: rgba(23, 20, 17, 0.58);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .teach-empty__link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .teach-empty__link:hover {
+    color: var(--accent-strong);
+  }
+
+  .teach-footer {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .teach-footer__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0.42rem 0.78rem;
+    border: 1px solid rgba(23, 20, 17, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: rgba(23, 20, 17, 0.76);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .teach-footer__link:hover {
+    background: #fff;
+    border-color: rgba(23, 20, 17, 0.18);
+  }
+
+  @media (max-width: 680px) {
+    .teach-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page launcher teach-page" id="main-content">
+
+  <header class="launcher__header">
+    <div class="launcher__header-identity">
+      <span class="launcher__header-sep">LUMINOS</span>
+      <h1 class="launcher__header-title">Teach</h1>
+    </div>
+    <div class="launcher__header-stats">
+      <span class="launcher__stat-inline">{{ class_cards | length }} classes</span>
+      <span class="launcher__stat-inline launcher__stat-inline--ready">{{ class_cards | selectattr('status', 'equalto', 'in_progress') | list | length }} active</span>
+    </div>
+  </header>
+
+  <p class="teach-page__intro">Resume a class, copy its board link, or jump into the lesson library with the classroom context already selected.</p>
+
+  {% if class_cards %}
+  <main class="teach-grid">
+    {% for card in class_cards %}
+    <section class="launcher__section-card teach-card" x-data="{ copied: false }">
+      <div class="teach-card__top">
+        <div class="teach-card__title-wrap">
+          <h2 class="teach-card__name">{{ card.class_name }}</h2>
+          <div class="teach-card__count">{{ card.student_count }} student{{ 's' if card.student_count != 1 }}</div>
+        </div>
+        <span class="teach-card__status teach-card__status--{{ card.status }}">
+          {% if card.status == 'in_progress' %}In Progress
+          {% elif card.status == 'ready' %}Ready
+          {% elif card.status == 'not_started' %}Not Started
+          {% elif card.status == 'finished' %}Finished
+          {% endif %}
+        </span>
+      </div>
+
+      {% if card.lesson_id %}
+      <div class="teach-card__lesson">
+        <div class="teach-card__kicker">
+          {% if card.status == 'in_progress' %}Continuing{% else %}Up Next{% endif %}
+        </div>
+        <div class="teach-card__lesson-title">{{ card.lesson_title }}</div>
+        {% if card.phonemes %}
+        <div class="teach-card__phonemes">
+          {% for p in card.phonemes %}
+          <span class="teach-card__phoneme">{{ p }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <div class="teach-card__actions">
+        {% if card.lesson_id and card.status != 'finished' %}
+        <a href="/teach/class/{{ card.id }}/start" class="teach-card__primary teach-card__primary--active">
+          {{ card.cta }}
+        </a>
+        {% else %}
+        <span class="teach-card__primary teach-card__primary--disabled">{{ card.cta }}</span>
+        {% endif %}
+
+        <div class="teach-card__secondary">
+          <button
+            type="button"
+            class="teach-card__secondary-btn"
+            @click="
+              navigator.clipboard.writeText(window.location.origin + '/classes/{{ card.id }}/board');
+              copied = true;
+              setTimeout(() => copied = false, 2000);
+            ">
+            Board Link
+          </button>
+          <a href="/lesson/?class_id={{ card.id }}" class="teach-card__secondary-btn">
+            Browse Lessons
+          </a>
+          <span x-show="copied" x-cloak class="teach-card__copy-confirm">Copied!</span>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+  </main>
+  {% else %}
+  <main class="launcher__section-card teach-empty">
+    <h2 class="teach-empty__title">No classes yet</h2>
+    <p class="teach-empty__body">Create a class to get started. You can add students and link them to lessons.</p>
+    <a href="/classes/new" class="teach-empty__link">Create your first class →</a>
+  </main>
+  {% endif %}
+
+  <nav class="teach-footer" aria-label="Quick links">
+    <a href="/lesson/" class="teach-footer__link">Lesson Library</a>
+    <a href="/classes/" class="teach-footer__link">Manage Classes</a>
+  </nav>
+
+</div>
+{% endblock %}

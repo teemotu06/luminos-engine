@@ -1,0 +1,59 @@
+{% extends "authoring/base.html" %}
+
+{% block authoring_title %}Lessons{% endblock %}
+
+{% block authoring_content %}
+<div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px;">
+  <form method="get" action="/authoring/lessons" style="display:flex; gap:8px; align-items:center;">
+    <label for="unit_id">Filter by group</label>
+    <select name="unit_id" id="unit_id">
+      <option value="">All groups</option>
+      {% for group in groups %}
+      <option value="{{ group.unit_id }}" {% if selected_unit_id == group.unit_id %}selected{% endif %}>{{ group.unit_id }} — {{ group.title }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Apply</button>
+  </form>
+  <a href="/authoring/lessons/new{% if selected_unit_id %}?unit_id={{ selected_unit_id }}{% endif %}">New Lesson</a>
+</div>
+
+{% for group in lesson_groups %}
+<section style="margin-bottom:24px;">
+  <h2 style="margin-bottom:12px;">{{ group.unit_id }}</h2>
+  <table style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Lesson ID</th>
+        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Title</th>
+        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Pattern</th>
+        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Slides</th>
+        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Status</th>
+        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for lesson in group.lessons %}
+      <tr>
+        <td style="padding:8px; border-bottom:1px solid #eee;">{{ lesson.lesson_id }}</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;">{{ lesson.title }}</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;">{{ lesson.target_pattern }}</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;">{{ lesson.slide_count }}</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;"><span>{{ lesson.content_pack_status }}</span></td>
+        <td style="padding:8px; border-bottom:1px solid #eee;">
+          <a href="/authoring/lessons/{{ lesson.lesson_id }}/edit">Edit</a>
+          <form method="post" action="/authoring/lessons/{{ lesson.lesson_id }}/duplicate" style="display:inline;">
+            <button type="submit" onclick="return confirm('Duplicate {{ lesson.lesson_id }}?')">Duplicate</button>
+          </form>
+          <form method="post" action="/authoring/lessons/{{ lesson.lesson_id }}/delete" style="display:inline;">
+            <button type="submit" onclick="return confirm('Delete {{ lesson.lesson_id }}? A backup will be kept.')">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% else %}
+<p>No lessons found.</p>
+{% endfor %}
+{% endblock %}

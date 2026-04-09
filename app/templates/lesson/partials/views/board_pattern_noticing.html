@@ -1,0 +1,21 @@
+<div class="lesson-pattern-noticing">
+  <div class="lesson-pattern-noticing__grid lesson-pattern-noticing__grid--{{ 'stack' if slide.content_payload.words|length <= 2 else 'grid' }}">
+    {% for word in slide.content_payload.words %}
+    <div class="lesson-pattern-noticing__word-card">
+      <div class="lesson-pattern-noticing__word">
+        {% for segment in word.segments %}
+        <span class="{% if segment.highlight %}lesson-pattern-noticing__segment lesson-pattern-noticing__segment--highlight{% endif %}">
+          {{ segment.text }}
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if slide.content_payload.prompt %}
+  <div class="lesson-pattern-noticing__prompt">
+    {{ slide.content_payload.prompt }}
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,49 @@
+<div class="lesson-writing-encoding">
+  {% if slide.content_payload.display_mode == 'sentence' %}
+  <div class="lesson-writing-encoding__hero">
+    <div class="lesson-writing-encoding__eyebrow">Encoding & Writing</div>
+
+    {% if slide.content_payload.prompt_text %}
+    <div class="lesson-writing-encoding__prompt">
+      {{ slide.content_payload.prompt_text }}
+    </div>
+    {% endif %}
+
+    <div class="lesson-writing-encoding__board">
+      <div class="lesson-writing-encoding__lines" aria-hidden="true">
+        <div class="lesson-writing-encoding__line"></div>
+        <div class="lesson-writing-encoding__line"></div>
+        <div class="lesson-writing-encoding__line"></div>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  {% if slide.content_payload.prompt_text %}
+  <div class="lesson-writing-encoding__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </div>
+  {% endif %}
+
+  {% set answer_text = slide.content_payload.expected_answer.replace(' ', '') %}
+  {% set answer_chars = answer_text | list %}
+  {% set box_count = slide.content_payload.elkonin_boxes or (answer_chars | length) %}
+
+  <div class="lesson-writing-encoding__dictation lesson-writing-encoding__dictation--word">
+    <div class="lesson-writing-encoding__student-note">
+      Students write on paper or a whiteboard.
+    </div>
+
+    <div class="lesson-writing-encoding__boxes">
+      {% for idx in range(box_count) %}
+      <div class="lesson-writing-encoding__box">
+        {% if idx < answer_chars | length %}
+        <span class="lesson-writing-encoding__box-letter">
+          {{ answer_chars[idx] }}
+        </span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,19 @@
+<div class="lesson-drag-word">
+  <div class="lesson-drag-word__board">
+    <div class="lesson-drag-word__slots">
+      {% for _ in slide.content_payload.target_sentence.split(" ") %}
+      <div class="lesson-drag-word__slot lesson-drag-word__slot--empty"></div>
+      {% endfor %}
+    </div>
+
+    <div class="lesson-drag-word__bank-label">Word Bank</div>
+
+    <div class="lesson-drag-word__cards">
+      {% for word in slide.content_payload.word_cards %}
+      <div class="lesson-drag-word__card">
+        {{ word }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

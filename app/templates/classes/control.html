@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+{% block title %}{{ class_name }} Control — LUMINOS{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ asset_url('styles.css') }}">
+<style>
+  .control-shell { max-width: 1100px; margin: 0 auto; padding: 28px 20px 56px; }
+  .control-header { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin-bottom: 24px; }
+  .control-title { font-family: var(--font-serif); font-size: clamp(32px, 5vw, 44px); margin: 0; }
+  .control-subtitle { color: rgba(23,20,17,0.55); margin-top: 6px; }
+  .control-board-link { font: inherit; text-decoration: none; border: 1px solid var(--c-border); border-radius: 10px; padding: 10px 14px; color: var(--c-text); background: #fff; white-space: nowrap; }
+  .control-grid { display: grid; gap: 18px; grid-template-columns: 320px minmax(0, 1fr); }
+  .control-card { background: var(--surface); border: 1px solid var(--c-border); border-radius: 18px; padding: 18px; }
+  .control-card h2 { margin: 0 0 12px; font-size: 16px; }
+  .control-field { display: grid; gap: 8px; margin-bottom: 14px; }
+  .control-field label { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: rgba(23,20,17,0.5); }
+  .control-field select, .control-field textarea { width: 100%; font: inherit; border: 1px solid var(--c-border); border-radius: 10px; padding: 10px 12px; background: #fff; }
+  .control-field textarea { min-height: 88px; resize: vertical; }
+  .control-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .control-btn { border: 1px solid var(--c-border); border-radius: 10px; background: #fff; color: var(--c-text); font: inherit; font-weight: 700; padding: 10px 14px; cursor: pointer; }
+  .control-btn--primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .control-btn--danger { background: #8b2f2f; border-color: #8b2f2f; color: #fff; }
+  .control-status { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(182,102,54,0.1); color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+  .control-stage { display: grid; gap: 16px; }
+  .control-stage__title { font-family: var(--font-serif); font-size: clamp(34px, 5vw, 56px); line-height: 1.05; margin: 0; }
+  .control-stage__content { font-family: var(--font-serif); font-size: clamp(48px, 8vw, 96px); line-height: 1.05; margin: 0; }
+  .control-stage__prompt { font-size: 18px; color: rgba(23,20,17,0.72); }
+  .control-meta { display: flex; flex-wrap: wrap; gap: 10px; color: rgba(23,20,17,0.58); font-size: 14px; }
+  .control-slide-nav { display: flex; gap: 10px; flex-wrap: wrap; }
+  .control-error { color: #8b2f2f; font-weight: 600; min-height: 24px; }
+  .control-lessons { max-height: 300px; overflow: auto; border: 1px solid var(--c-border); border-radius: 12px; padding: 8px; background: rgba(255,255,255,0.6); }
+  .control-lesson-item { padding: 8px 10px; border-radius: 10px; cursor: pointer; }
+  .control-lesson-item:hover, .control-lesson-item[data-selected="true"] { background: rgba(182,102,54,0.1); }
+  .control-lesson-id { font-size: 12px; font-weight: 700; color: var(--accent); }
+  .control-lesson-title { font-size: 14px; font-weight: 600; color: var(--c-text); }
+  @media (max-width: 900px) { .control-grid { grid-template-columns: 1fr; } .control-header { align-items: start; flex-direction: column; } }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="control-shell" x-data="classControl()" x-init="init()">
+  <div class="control-header">
+    <div>
+      <div class="teach-home__eyebrow">Luminos Control</div>
+      <h1 class="control-title">{{ class_name }}</h1>
+      <div class="control-subtitle">Lesson launcher for the public board and full teacher shell.</div>
+    </div>
+    <a class="control-board-link" href="/classes/{{ class_id }}/board" target="_blank" rel="noopener">Open Board</a>
+  </div>
+
+  <div class="control-grid">
+    <section class="control-card">
+      <h2>Lesson Control</h2>
+      <div class="control-field">
+        <label>Selected Lesson</label>
+        <select x-model="selectedLessonId">
+          <option value="">Choose a lesson</option>
+          {% for lesson in lessons %}
+          <option value="{{ lesson.lesson_id }}">{{ lesson.lesson_id }} · {{ lesson.title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="control-actions" style="margin-bottom: 16px;">
+        <button class="control-btn control-btn--primary" type="button" @click="startLesson()">Start Lesson</button>
+        <button class="control-btn control-btn--danger" type="button" @click="stopLesson()">End Lesson</button>
+        <button
+          class="control-btn"
+          type="button"
+          @click="openFullControl()"
+          :disabled="!selectedLessonId">
+          Open Full Control
+        </button>
+      </div>
+
+      <h2>Quick Message</h2>
+      <div class="control-field">
+        <label>Board Message</label>
+        <textarea x-model="messageDraft" placeholder="Optional message shown on the board"></textarea>
+      </div>
+      <div class="control-actions" style="margin-bottom: 16px;">
+        <button class="control-btn" type="button" @click="saveMessage()">Save Message</button>
+        <button class="control-btn" type="button" @click="clearMessage()">Clear Message</button>
+      </div>
+
+      <h2>Lesson Library</h2>
+      <div class="control-lessons">
+        {% for lesson in lessons %}
+        <div class="control-lesson-item" :data-selected="selectedLessonId === '{{ lesson.lesson_id }}'" @click="selectedLessonId = '{{ lesson.lesson_id }}'">
+          <div class="control-lesson-id">{{ lesson.lesson_id }}</div>
+          <div class="control-lesson-title">{{ lesson.title }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="control-card">
+      <div class="control-stage">
+        <div class="control-status" x-text="statusLabel"></div>
+        <div class="control-meta">
+          <span x-text="lessonTitle || 'No active lesson'"></span>
+          <span x-show="active" x-text="slideCount ? `Slide ${slideIndex + 1} / ${slideCount}` : ''"></span>
+          <span x-show="active" x-text="blockId ? `Block ${blockId}` : ''"></span>
+        </div>
+        <h2 class="control-stage__title" x-text="active ? 'Teaching runs in Full Control' : 'Start a lesson to begin'"></h2>
+        <div class="control-stage__prompt">
+          Use this page to choose the lesson, open the board, and hand off into the full teacher shell.
+        </div>
+        <div class="control-stage__prompt" x-show="active">
+          Current slide: <strong x-text="slideTitle || 'Untitled slide'"></strong>
+        </div>
+        <div class="control-stage__prompt" x-show="displayMessage" x-text="displayMessage"></div>
+        <div class="control-actions">
+          <button
+            class="control-btn control-btn--primary"
+            type="button"
+            @click="openFullControl()"
+            :disabled="!selectedLessonId">
+            Open Full Control
+          </button>
+        </div>
+        <div class="control-error" x-text="errorMessage"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+function classControl() {
+  return {
+    classId: {{ class_id | tojson }},
+    suggestedLessonId: {{ suggested_lesson_id | tojson }},
+    selectedLessonId: "",
+    active: false,
+    paused: false,
+    attemptId: "",
+    lessonTitle: "",
+    slideTitle: "",
+    slideIndex: 0,
+    slideCount: 0,
+    blockId: "",
+    content: "",
+    prompt: "",
+    displayMessage: "",
+    messageDraft: "",
+    status: "idle",
+    errorMessage: "",
+    pollTimer: null,
+    get statusLabel() {
+      if (this.status === "paused") return "Paused";
+      if (this.status === "active") return "Live";
+      return "Idle";
+    },
+    init() {
+      this.selectedLessonId = this.suggestedLessonId || "";
+      this.refresh();
+      this.pollTimer = window.setInterval(() => this.refresh(), 1500);
+    },
+    async refresh() {
+      const response = await fetch(`/classes/${this.classId}/session-state`, { cache: "no-store" });
+      if (!response.ok) return;
+      const data = await response.json();
+      this.active = !!data.active;
+      this.paused = !!data.paused;
+      this.status = data.status || "idle";
+      this.attemptId = data.attempt_id || "";
+      this.lessonTitle = data.lesson_title || "";
+      this.slideTitle = data.slide_title || "";
+      this.slideIndex = data.slide_index || 0;
+      this.slideCount = data.slide_count || 0;
+      this.blockId = data.block_id || "";
+      this.content = data.content || "";
+      this.prompt = data.prompt || "";
+      this.displayMessage = data.display_message || "";
+      if (!this.messageDraft) this.messageDraft = this.displayMessage;
+      if (data.lesson_id && !this.selectedLessonId) this.selectedLessonId = data.lesson_id;
+    },
+    async post(path, body) {
+      this.errorMessage = "";
+      const response = await fetch(path, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: body ? JSON.stringify(body) : "{}",
+      });
+      if (!response.ok) {
+        let detail = "Request failed";
+        try {
+          const data = await response.json();
+          detail = data.detail || detail;
+        } catch (_) {}
+        this.errorMessage = detail;
+        return;
+      }
+      const data = await response.json();
+      this.active = !!data.active;
+      this.paused = !!data.paused;
+      this.status = data.status || "idle";
+      this.attemptId = data.attempt_id || "";
+      this.lessonTitle = data.lesson_title || "";
+      this.slideTitle = data.slide_title || "";
+      this.slideIndex = data.slide_index || 0;
+      this.slideCount = data.slide_count || 0;
+      this.blockId = data.block_id || "";
+      this.content = data.content || "";
+      this.prompt = data.prompt || "";
+      this.displayMessage = data.display_message || "";
+      this.messageDraft = this.displayMessage;
+    },
+    async startLesson() {
+      if (!this.selectedLessonId) {
+        this.errorMessage = "Choose a lesson first.";
+        return;
+      }
+      await this.post(`/classes/${this.classId}/control/start`, { lesson_id: this.selectedLessonId });
+      this.openFullControl();
+    },
+    async stopLesson() {
+      await this.post(`/classes/${this.classId}/control/stop`);
+    },
+    async nextSlide() {
+      await this.post(`/classes/${this.classId}/control/next`);
+    },
+    async previousSlide() {
+      await this.post(`/classes/${this.classId}/control/previous`);
+    },
+    async togglePause() {
+      await this.post(`/classes/${this.classId}/control/pause`, { paused: !this.paused });
+    },
+    async saveMessage() {
+      await this.post(`/classes/${this.classId}/control/message`, { message: this.messageDraft });
+    },
+    async clearMessage() {
+      this.messageDraft = "";
+      await this.post(`/classes/${this.classId}/control/message`, { message: "" });
+    },
+    openFullControl() {
+      if (!this.selectedLessonId) return;
+      const params = new URLSearchParams({ class_id: this.classId });
+      if (this.attemptId) {
+        params.set("attempt_id", this.attemptId);
+      }
+      window.location.href = `/lesson/${this.selectedLessonId}/teacher?${params.toString()}`;
+    },
+  };
+}
+</script>
+{% endblock %}

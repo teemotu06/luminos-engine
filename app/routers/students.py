@@ -2,15 +2,14 @@ from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.requests import Request
-from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
 from app.db import get_db
 from app.services.auth_service import require_class_access, require_current_user
 from app.services.student_service import get_student_profile
+from app.template_env import templates
 
 router = APIRouter(prefix="/students", tags=["students"])
-templates = Jinja2Templates(directory="app/templates")
 
 
 @router.get("/{student_name}/profile")

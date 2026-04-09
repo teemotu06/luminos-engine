@@ -476,6 +476,71 @@ body {
     gap: 1.25rem;
 }
 
+.launcher__section-intro {
+    margin: -0.35rem 0 0;
+    max-width: 58rem;
+    color: rgba(23, 20, 17, 0.58);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.launcher__section-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem 1.2rem 1.15rem;
+    background: rgba(255, 254, 251, 0.96);
+    border: 1px solid rgba(107, 82, 60, 0.10);
+    border-radius: 22px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.launcher__section-card--form {
+    max-width: 40rem;
+}
+
+.launcher__section-card--primary {
+    min-height: 100%;
+}
+
+.launcher__detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(18rem, 0.9fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.launcher__detail-sidebar {
+    display: grid;
+    gap: 1rem;
+}
+
+.launcher__group-kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(23, 20, 17, 0.48);
+}
+
+.launcher__inline-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.launcher__inline-link:hover {
+    color: var(--accent-strong);
+}
+
+.launcher__section-copy,
+.launcher__empty-copy {
+    margin: 0;
+    color: rgba(23, 20, 17, 0.58);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 .launcher__divider {
     border: none;
     border-top: 1px solid rgba(107, 82, 60, 0.12);
@@ -565,11 +630,26 @@ body {
     border-color: rgba(182, 102, 54, 0.24);
 }
 
+.launcher__lesson-card--new {
+    border-style: dashed;
+    border-color: rgba(182, 102, 54, 0.20);
+    background: rgba(255, 250, 244, 0.96);
+}
+
 .launcher__card-top {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.75rem;
+}
+
+.launcher__card-top-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    min-width: 0;
 }
 
 .launcher__lesson-id {
@@ -581,19 +661,26 @@ body {
     color: rgba(23, 20, 17, 0.62);
 }
 
+.launcher__lesson-id--plus {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
 
 .launcher__status-badge {
     display: inline-flex;
     align-items: center;
     min-height: 28px;
-    padding: 0.32rem 0.7rem;
+    padding: 0.3rem 0.62rem;
     border-radius: 999px;
     background: rgba(116, 132, 153, 0.12);
     color: rgba(53, 65, 82, 0.82);
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -625,9 +712,9 @@ body {
 .launcher__gate-pill {
     display: inline-flex;
     align-items: center;
-    padding: 3px 9px;
+    padding: 3px 8px;
     border-radius: 999px;
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -698,17 +785,17 @@ body {
 
 .launcher__card-footer {
     display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
     margin-top: auto;
 }
 
 .launcher__launch-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
     width: 100%;
 }
 
@@ -740,9 +827,12 @@ body {
 }
 
 .launcher__launch-actions {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
     position: relative;
     z-index: 2;
 }
@@ -752,13 +842,13 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 34px;
-    padding: 0.45rem 0.82rem;
+    padding: 0.42rem 0.78rem;
     border: 1px solid rgba(23, 20, 17, 0.1);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.88);
     color: rgba(23, 20, 17, 0.82);
     font: inherit;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -767,14 +857,29 @@ body {
 }
 
 .launcher__launch-btn:hover {
-    transform: translateY(-1px);
-    border-color: rgba(23, 20, 17, 0.18);
-    background: #fff;
+  transform: translateY(-1px);
+  border-color: rgba(23, 20, 17, 0.18);
+  background: #fff;
+}
+
+.launcher__launch-btn[disabled] {
+  cursor: not-allowed;
+  color: rgba(23, 20, 17, 0.38);
+  background: rgba(245, 241, 236, 0.96);
+  border-color: rgba(23, 20, 17, 0.08);
+  box-shadow: none;
+  transform: none;
+}
+
+.launcher__launch-btn[disabled]:hover {
+  transform: none;
+  border-color: rgba(23, 20, 17, 0.08);
+  background: rgba(245, 241, 236, 0.96);
 }
 
 .launcher__launch-btn--split {
-    background: rgba(245, 248, 255, 0.95);
-    color: #1d4ed8;
+  background: rgba(245, 248, 255, 0.95);
+  color: #1d4ed8;
 }
 
 
@@ -807,6 +912,10 @@ body {
     }
 
     .launcher__lesson-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .launcher__detail-layout {
         grid-template-columns: 1fr;
     }
 }
@@ -992,6 +1101,16 @@ body {
 
 .luminos-form__submit:hover {
     background: var(--accent-strong);
+}
+
+.luminos-form__submit--secondary {
+    background: rgba(255, 244, 233, 0.96);
+    color: var(--accent-strong);
+    border: 1px solid rgba(182, 102, 54, 0.18);
+}
+
+.luminos-form__submit--secondary:hover {
+    background: rgba(255, 239, 223, 0.98);
 }
 
 .form-error {

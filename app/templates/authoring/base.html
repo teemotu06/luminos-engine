@@ -1,0 +1,1364 @@
+{% extends "base.html" %}
+
+{% block title %}Authoring — LUMINOS{% endblock %}
+
+{% block head %}
+{{ super() }}
+<script src="https://unpkg.com/htmx.org@1.9.12"></script>
+<script defer src="/static/authoring.js"></script>
+<style>
+  :root {
+    --authoring-bg: #f7f5f2;
+    --authoring-surface: #ffffff;
+    --authoring-surface-soft: #fcfbf8;
+    --authoring-border: #e7e1d8;
+    --authoring-border-strong: #d5cabd;
+    --authoring-text: #1f1b17;
+    --authoring-muted: #71685d;
+    --authoring-accent: #c4783e;
+    --authoring-accent-soft: #f4e4d3;
+    --authoring-accent-strong: #a85f2b;
+    --authoring-success: #2d6a4f;
+    --authoring-success-soft: #e8f5ee;
+    --authoring-danger: #a13939;
+    --authoring-danger-soft: #fff2f2;
+    --authoring-radius-lg: 18px;
+    --authoring-radius-md: 12px;
+    --authoring-radius-sm: 10px;
+    --authoring-shadow: 0 12px 28px rgba(35, 25, 16, 0.06);
+    --authoring-shadow-soft: 0 4px 12px rgba(35, 25, 16, 0.035);
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(196, 120, 62, 0.08), transparent 28%),
+      linear-gradient(180deg, #faf8f4 0%, var(--authoring-bg) 100%);
+    color: var(--authoring-text);
+  }
+
+  .authoring-shell {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 28px 20px 48px;
+  }
+
+  .authoring-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding: 20px 22px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(231, 225, 216, 0.95);
+    border-radius: 22px;
+    box-shadow: var(--authoring-shadow-soft);
+  }
+
+  .authoring-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--authoring-muted);
+  }
+
+  .authoring-page-title {
+    margin: 6px 0 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--authoring-text);
+  }
+
+  .authoring-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .authoring-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 999px;
+    background: var(--authoring-surface);
+    border: 1px solid var(--authoring-border);
+    color: var(--authoring-text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color .18s ease, border-color .18s ease, transform .18s ease;
+  }
+
+  .authoring-nav a:hover,
+  .authoring-nav a:focus-visible {
+    background: var(--authoring-accent-soft);
+    border-color: var(--authoring-accent);
+    transform: translateY(-1px);
+  }
+
+  .authoring-stack {
+    display: grid;
+    gap: 18px;
+  }
+
+  .authoring-stack--tight {
+    gap: 12px;
+  }
+
+  .authoring-card {
+    background: var(--authoring-surface);
+    border: 1px solid rgba(231, 225, 216, 0.75);
+    border-radius: var(--authoring-radius-lg);
+    box-shadow: var(--authoring-shadow-soft);
+  }
+
+  .authoring-card--soft {
+    background: var(--authoring-surface-soft);
+  }
+
+  .authoring-card__body {
+    padding: 20px 22px;
+  }
+
+  .authoring-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, max-content));
+    gap: 10px 18px;
+    margin-top: 18px;
+  }
+
+  .authoring-meta {
+    padding: 0;
+    min-width: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .authoring-meta__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--authoring-muted);
+    margin-bottom: 4px;
+  }
+
+  .authoring-meta__value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--authoring-text);
+    word-break: break-word;
+  }
+
+  .authoring-lesson-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .authoring-lesson-heading {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .authoring-lesson-title {
+    margin: 8px 0 0;
+    font-size: 32px;
+    line-height: 1.05;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  .authoring-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .authoring-btn,
+  .authoring-btn-secondary,
+  .authoring-btn-danger,
+  .authoring-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease;
+  }
+
+  .authoring-btn:hover,
+  .authoring-btn-secondary:hover,
+  .authoring-btn-danger:hover,
+  .authoring-btn-ghost:hover,
+  .authoring-btn:focus-visible,
+  .authoring-btn-secondary:focus-visible,
+  .authoring-btn-danger:focus-visible,
+  .authoring-btn-ghost:focus-visible {
+    transform: translateY(-1px);
+  }
+
+  .authoring-btn {
+    background: var(--authoring-accent);
+    border-color: var(--authoring-accent);
+    color: #fff;
+  }
+
+  .authoring-btn-secondary {
+    background: var(--authoring-surface);
+    border-color: rgba(213, 202, 189, 0.9);
+    color: #4c433a;
+  }
+
+  .authoring-btn-danger {
+    background: transparent;
+    border-color: rgba(220, 193, 193, 0.8);
+    color: var(--authoring-danger);
+  }
+
+  .authoring-btn-ghost {
+    background: transparent;
+    border-color: transparent;
+    color: var(--authoring-muted);
+    padding-inline: 10px;
+  }
+
+  .authoring-btn[disabled],
+  .authoring-btn-secondary[disabled],
+  .authoring-btn-danger[disabled],
+  .authoring-btn-ghost[disabled] {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .authoring-section-card {
+    border: 1px solid rgba(231, 225, 216, 0.72);
+    border-radius: var(--authoring-radius-lg);
+    background: var(--authoring-surface);
+    overflow: hidden;
+    box-shadow: none;
+    transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+  }
+
+  .authoring-section-card--open {
+    border-color: rgba(196, 120, 62, 0.34);
+    box-shadow: var(--authoring-shadow-soft);
+  }
+
+  .authoring-section-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    border: none;
+    background: var(--authoring-surface);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .authoring-section-toggle:hover {
+    background: #fcfaf7;
+  }
+
+  .authoring-section-card--open .authoring-section-toggle {
+    background: #fdfaf5;
+  }
+
+  .authoring-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--authoring-text);
+  }
+
+  .authoring-section-subtitle {
+    font-size: 13px;
+    color: var(--authoring-muted);
+    margin-top: 3px;
+  }
+
+  .authoring-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: var(--authoring-accent-soft);
+    color: var(--authoring-accent-strong);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .authoring-panel-body {
+    padding: 0 20px 20px;
+    border-top: 1px solid rgba(231, 225, 216, 0.56);
+  }
+
+  .authoring-empty {
+    padding: 16px 18px;
+    border-radius: var(--authoring-radius-md);
+    border: 1px dashed var(--authoring-border-strong);
+    color: var(--authoring-muted);
+    background: #fffdfa;
+  }
+
+  .authoring-slide-row {
+    display: grid;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: var(--authoring-radius-md);
+    border: 1px solid rgba(231, 225, 216, 0.28);
+    background: transparent;
+    transition: border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
+  }
+
+  .authoring-slide-row[data-open="true"] {
+    border-color: rgba(196, 120, 62, 0.36);
+    background: rgba(255, 253, 250, 0.42);
+    box-shadow: var(--authoring-shadow-soft);
+  }
+
+  .authoring-slide-row__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .authoring-slide-row__summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .authoring-slide-row__summary-body {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .authoring-slide-row__meta {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--authoring-muted);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .authoring-slide-row__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--authoring-text);
+    line-height: 1.25;
+  }
+
+  .authoring-slide-row__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .authoring-slide-row__move-actions {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .authoring-slide-row__pos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(231, 225, 216, 0.72);
+    color: var(--authoring-muted);
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .authoring-add-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .authoring-add-grid--padded {
+    padding: 0 0 0 0;
+  }
+
+  .authoring-add-details {
+    margin-top: 6px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(231, 225, 216, 0.56);
+  }
+
+  .authoring-add-summary {
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0;
+    list-style: none;
+  }
+
+  .authoring-add-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .authoring-add-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    border-top: 1px solid rgba(231, 225, 216, 0.36);
+  }
+
+  .authoring-add-grid > .authoring-add-card:first-child {
+    border-top: none;
+  }
+
+  .authoring-add-card__body {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .authoring-add-card__title {
+    font-weight: 700;
+    color: var(--authoring-text);
+  }
+
+  .authoring-add-card__description {
+    font-size: 13px;
+    color: var(--authoring-muted);
+    line-height: 1.45;
+    margin-top: 2px;
+  }
+
+  .authoring-form {
+    display: grid;
+    gap: 20px;
+  }
+
+  .authoring-form-section {
+    display: grid;
+    gap: 16px;
+    padding: 18px 18px 20px;
+    border: 1px solid rgba(231, 225, 216, 0.46);
+    border-radius: 18px;
+    background: rgba(255, 252, 248, 0.86);
+    box-shadow: none;
+  }
+
+  .authoring-form-section--soft {
+    background: rgba(252, 248, 243, 0.92);
+    border-color: rgba(231, 225, 216, 0.4);
+  }
+
+  .authoring-form > .authoring-form-section + .authoring-form-section {
+    margin-top: 0;
+  }
+
+  .authoring-section-intro {
+    display: grid;
+    gap: 6px;
+    padding-bottom: 4px;
+    border-bottom: none;
+  }
+
+  .authoring-section-intro__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .authoring-section-intro--toggle {
+    cursor: pointer;
+  }
+
+  .authoring-section-intro--toggle:focus-visible {
+    outline: none;
+  }
+
+  .authoring-form-heading {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--authoring-text);
+    letter-spacing: 0.01em;
+  }
+
+  .authoring-form-subtext {
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--authoring-muted);
+    max-width: 62ch;
+  }
+
+  .authoring-field {
+    display: grid;
+    gap: 7px;
+  }
+
+  .authoring-field__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--authoring-text);
+  }
+
+  .authoring-field__help {
+    font-size: 11px;
+    line-height: 1.45;
+    color: var(--authoring-muted);
+  }
+
+  .authoring-field__error {
+    font-size: 12px;
+    color: #b42318;
+  }
+
+  .authoring-input,
+  .authoring-select,
+  .authoring-textarea {
+    width: 100%;
+    border-radius: 13px;
+    border: 1px solid rgba(213, 202, 189, 0.92);
+    background: rgba(255,255,255,0.96);
+    color: var(--authoring-text);
+    font: inherit;
+    padding: 12px 14px;
+  }
+
+  .authoring-textarea {
+    min-height: 92px;
+    resize: vertical;
+  }
+
+  .authoring-input:focus,
+  .authoring-select:focus,
+  .authoring-textarea:focus {
+    outline: none;
+    border-color: var(--authoring-accent);
+    box-shadow: 0 0 0 4px rgba(196, 120, 62, 0.12);
+  }
+
+  .authoring-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--authoring-text);
+  }
+
+  .authoring-inline-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .authoring-media-stack {
+    display: grid;
+    gap: 10px;
+  }
+
+  .authoring-preview-frame {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: var(--authoring-radius-md);
+    border: 1px solid rgba(231, 225, 216, 0.4);
+    background: rgba(255, 253, 250, 0.55);
+  }
+
+  .authoring-preview-frame:empty {
+    display: none;
+  }
+
+  .authoring-repeatable {
+    display: grid;
+    gap: 12px;
+    padding: 14px 0 0;
+    border-radius: 0;
+    border: none;
+    border-top: none;
+    background: transparent;
+  }
+
+  .authoring-repeatable-row {
+    display: grid;
+    gap: 12px;
+    padding: 14px;
+    border-radius: var(--authoring-radius-md);
+    border: 1px solid rgba(231, 225, 216, 0.4);
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .authoring-repeatable__header,
+  .authoring-repeatable-row__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .authoring-status {
+    padding: 12px 14px;
+    border-radius: var(--authoring-radius-md);
+    border: 1px solid var(--authoring-border);
+    background: var(--authoring-success-soft);
+    color: var(--authoring-success);
+    font-weight: 600;
+  }
+
+  .authoring-status--error {
+    background: var(--authoring-danger-soft);
+    border-color: #efcccc;
+    color: var(--authoring-danger);
+  }
+
+  [data-slide-form-root] {
+    margin-top: 8px;
+    border: 1px solid rgba(231, 225, 216, 0.46) !important;
+    border-radius: var(--authoring-radius-lg) !important;
+    background: var(--authoring-surface) !important;
+    box-shadow: none;
+    padding: 18px;
+  }
+
+  [data-slide-form-root] form[method="post"] {
+    display: grid;
+    gap: 22px;
+  }
+
+  [data-slide-form-root] section {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  [data-slide-form-root] h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--authoring-text);
+  }
+
+  [data-slide-form-root] label {
+    display: grid;
+    gap: 6px;
+  }
+
+  [data-slide-form-root] input[type="text"],
+  [data-slide-form-root] input[type="number"],
+  [data-slide-form-root] select,
+  [data-slide-form-root] textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--authoring-border-strong);
+    background: #fff;
+    color: var(--authoring-text);
+    font: inherit;
+    padding: 11px 13px;
+  }
+
+  [data-slide-form-root] textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
+  [data-slide-form-root] input[type="text"]:focus,
+  [data-slide-form-root] input[type="number"]:focus,
+  [data-slide-form-root] select:focus,
+  [data-slide-form-root] textarea:focus {
+    outline: none;
+    border-color: var(--authoring-accent);
+    box-shadow: 0 0 0 4px rgba(196, 120, 62, 0.12);
+  }
+
+  [data-slide-form-root] button,
+  [data-slide-form-root] a {
+    cursor: pointer;
+  }
+
+  [data-slide-form-root] button[type="submit"],
+  [data-slide-form-root] .authoring-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 1px solid var(--authoring-accent);
+    background: var(--authoring-accent);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+  }
+
+  [data-slide-form-root] button[type="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid var(--authoring-border-strong);
+    background: var(--authoring-surface);
+    color: var(--authoring-text);
+    font: inherit;
+    font-weight: 700;
+  }
+
+  [data-slide-form-root] button:hover {
+    transform: translateY(-1px);
+  }
+
+  [data-slide-form-root] [data-media-browser-inline] {
+    border-radius: var(--authoring-radius-md);
+  }
+
+  [data-slide-form-root] .media-browser-inline:empty {
+    display: none;
+  }
+
+  [data-slide-form-root] audio,
+  [data-slide-form-root] img {
+    border-radius: 12px;
+  }
+
+  [data-slide-form-root] [x-show="!items.length"] {
+    border-radius: var(--authoring-radius-md) !important;
+    border-color: var(--authoring-border-strong) !important;
+    background: #fffdfa !important;
+  }
+
+  [data-media-browser] {
+    padding: 14px;
+    border: 1px solid rgba(231, 225, 216, 0.42);
+    border-radius: var(--authoring-radius-md);
+    background: #fdfbf8;
+    box-shadow: none;
+  }
+
+  .authoring-media-browser {
+    display: grid;
+    gap: 12px;
+  }
+
+  .authoring-media-browser__topbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .authoring-media-browser__list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .authoring-media-upload-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+
+  .authoring-media-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid rgba(231, 225, 216, 0.36);
+    border-radius: var(--authoring-radius-md);
+    background: #fff;
+  }
+
+  .authoring-media-item__content {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .authoring-media-item__meta {
+    min-width: 0;
+  }
+
+  .authoring-media-item__name {
+    font-weight: 600;
+    word-break: break-word;
+    margin-bottom: 2px;
+  }
+
+  .authoring-media-item__path {
+    word-break: break-all;
+  }
+
+  .authoring-media-item__preview {
+    border-radius: 10px;
+  }
+
+  .authoring-media-item__preview--audio,
+  .authoring-media-preview-audio {
+    width: min(100%, 280px);
+    max-width: 100%;
+  }
+
+  .authoring-media-item__preview--image {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    border: 1px solid rgba(231, 225, 216, 0.5);
+    background: #faf7f2;
+  }
+
+  .authoring-media-preview-image {
+    max-width: 160px;
+    border: 1px solid rgba(231, 225, 216, 0.5);
+    border-radius: 10px;
+  }
+
+  .authoring-audio-attachment {
+    display: grid;
+    gap: 10px;
+  }
+
+  .authoring-audio-card,
+  .authoring-audio-empty,
+  .authoring-audio-drawer {
+    border: 1px solid rgba(231, 225, 216, 0.42);
+    border-radius: var(--authoring-radius-md);
+    background: rgba(255, 255, 255, 0.74);
+  }
+
+  .authoring-audio-card,
+  .authoring-audio-empty {
+    padding: 12px;
+  }
+
+  .authoring-audio-card {
+    display: grid;
+    gap: 10px;
+  }
+
+  .authoring-audio-card__header,
+  .authoring-audio-drawer__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .authoring-audio-card__meta {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--authoring-muted);
+    white-space: nowrap;
+  }
+
+  .authoring-audio-empty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .authoring-audio-empty__copy {
+    display: grid;
+    gap: 4px;
+  }
+
+  .authoring-audio-empty__action {
+    min-width: 138px;
+  }
+
+  .authoring-audio-drawer {
+    padding: 12px;
+    display: grid;
+    gap: 10px;
+    background: rgba(252, 249, 244, 0.94);
+    border-color: rgba(196, 120, 62, 0.18);
+    box-shadow: 0 10px 28px rgba(48, 36, 26, 0.08);
+  }
+
+  .authoring-audio-drawer [data-media-browser-inline] {
+    display: grid;
+    gap: 10px;
+  }
+
+  .authoring-audio-drawer .authoring-media-browser__list {
+    max-height: 340px;
+    overflow: auto;
+    padding-right: 4px;
+  }
+
+  .authoring-btn-danger {
+    border-color: rgba(220, 38, 38, 0.18) !important;
+    color: #991b1b !important;
+    background: rgba(254, 242, 242, 0.86) !important;
+  }
+
+  .authoring-advanced-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    color: var(--authoring-text);
+  }
+
+  .media-upload-form input[type="file"] {
+    max-width: 100%;
+  }
+
+  /* ============================================================
+     VISUAL IMPROVEMENTS
+     ============================================================ */
+
+  /* 1. Compact inline meta row */
+  .authoring-meta-grid--inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(213, 202, 189, 0.45);
+  }
+
+  .authoring-meta-grid--inline .authoring-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    padding-right: 16px;
+    margin-right: 16px;
+    border-right: 1px solid rgba(213, 202, 189, 0.5);
+  }
+
+  .authoring-meta-grid--inline .authoring-meta:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .authoring-meta-grid--inline .authoring-meta__label {
+    font-size: 10px;
+    margin-bottom: 0;
+    letter-spacing: .07em;
+  }
+
+  .authoring-meta-grid--inline .authoring-meta__value {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* 2. Sticky lesson header */
+  .authoring-lesson-card--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-color: rgba(213, 202, 189, 0.65);
+    border-radius: var(--authoring-radius-md);
+    box-shadow:
+      0 1px 0 rgba(213, 202, 189, 0.7),
+      0 8px 28px rgba(35, 25, 16, 0.09);
+  }
+
+  .authoring-lesson-card--sticky .authoring-card__body {
+    padding: 12px 20px;
+  }
+
+  .authoring-lesson-card--sticky .authoring-lesson-title {
+    font-size: 22px;
+    margin: 3px 0 0;
+  }
+
+  /* 3. Results: hidden when empty, tidy when populated */
+  .authoring-results-anchor:empty {
+    display: none;
+  }
+
+  .authoring-results-anchor {
+    margin-top: 10px;
+  }
+
+  /* 4. Block section: subtle top border when open */
+  .authoring-section-card--open {
+    border-top-color: rgba(196, 120, 62, 0.28);
+  }
+
+  /* 5. Block toggle body row */
+  .authoring-section-toggle__body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-width: 0;
+    flex: 1;
+  }
+
+  /* 6. Block toggle chevron */
+  .authoring-section-chevron {
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--authoring-muted);
+    opacity: 0.5;
+    transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), color 0.18s ease, opacity 0.18s ease;
+    transform: rotate(0deg);
+    user-select: none;
+  }
+
+  .authoring-section-chevron--open {
+    transform: rotate(90deg);
+    color: var(--authoring-accent);
+    opacity: 1;
+  }
+
+  /* 7. Panel body: tinted background + breathing room */
+  .authoring-panel-body {
+    padding-top: 18px;
+    padding-bottom: 24px;
+    background: rgba(250, 247, 242, 0.6);
+    border-bottom-left-radius: calc(var(--authoring-radius-lg) - 2px);
+    border-bottom-right-radius: calc(var(--authoring-radius-lg) - 2px);
+  }
+
+  /* 8. Slide row: numbered position indicator */
+  .authoring-slide-row__summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .authoring-slide-row__pos {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--authoring-bg);
+    border: 1px solid var(--authoring-border);
+    color: var(--authoring-muted);
+    font-size: 10px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    transition: background .18s, border-color .18s, color .18s;
+  }
+
+  .authoring-slide-row[data-open="true"] .authoring-slide-row__pos {
+    background: var(--authoring-surface);
+    border-color: var(--authoring-border-strong);
+    color: var(--authoring-text);
+  }
+
+  /* 9. Slide rows in block panel: tighter gap */
+  [data-block-panel] {
+    gap: 10px;
+  }
+
+  /* 10. Add Slide: styled dashed affordance */
+  .authoring-add-details {
+    margin-top: 4px;
+  }
+
+  .authoring-add-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 14px;
+    border-radius: var(--authoring-radius-md);
+    border: 1.5px dashed rgba(196, 120, 62, 0.35);
+    background: rgba(244, 228, 211, 0.15);
+    color: var(--authoring-accent-strong);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background .18s, border-color .18s;
+    list-style: none;
+  }
+
+  .authoring-add-summary::-webkit-details-marker { display: none; }
+
+  .authoring-add-summary:hover,
+  .authoring-add-summary:focus-visible {
+    background: rgba(244, 228, 211, 0.4);
+    border-color: var(--authoring-accent);
+  }
+
+  .authoring-add-summary__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--authoring-accent-soft);
+    border: 1px solid rgba(196, 120, 62, 0.22);
+    color: var(--authoring-accent);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  /* 11. Slide form section accents — subtle section-header label only, no colored borders */
+  .authoring-form-section--board .authoring-form-heading::before,
+  .authoring-form-section--audio .authoring-form-heading::before,
+  .authoring-form-section--teacher .authoring-form-heading::before,
+  .authoring-form-section--prompts .authoring-form-heading::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    opacity: 0.65;
+  }
+
+  .authoring-form-section--board .authoring-form-heading::before {
+    background: #4a89c4;
+  }
+
+  .authoring-form-section--audio .authoring-form-heading::before {
+    background: var(--authoring-accent);
+  }
+
+  .authoring-form-section--teacher .authoring-form-heading::before {
+    background: #2d6a4f;
+  }
+
+  .authoring-form-section--prompts .authoring-form-heading::before {
+    background: #6d539b;
+  }
+
+  /* 12. Slide form action row */
+  .authoring-form-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 14px 18px;
+    border-radius: var(--authoring-radius-md);
+    background: rgba(250, 247, 242, 0.8);
+    border: 1px solid rgba(213, 202, 189, 0.45);
+  }
+
+  .authoring-form-actions--sticky {
+    position: sticky;
+    top: 12px;
+    z-index: 6;
+    background: rgba(250, 247, 242, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .authoring-form-actions button[type="submit"] {
+    min-height: 42px !important;
+    padding: 0 22px !important;
+    font-size: 14px !important;
+  }
+
+  /* 13. Icon-only ghost buttons (up/down arrows) */
+  .authoring-btn-ghost--icon {
+    padding-inline: 7px;
+    min-width: 32px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  @media (max-width: 900px) {
+    .authoring-shell {
+      padding: 20px 14px 32px;
+    }
+
+    .authoring-header {
+      padding: 18px;
+      border-radius: 18px;
+    }
+
+    .authoring-page-title {
+      font-size: 34px;
+    }
+
+    .authoring-actions {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .authoring-meta-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /* ============================================================
+     EDITOR: VISUAL CLARITY PASS
+     ============================================================ */
+
+  /* 1. Slide form: color-coded left-border per section type.
+     Both the reset rule and these use !important; higher specificity (class vs element) wins. */
+  [data-slide-form-root] .authoring-form-section {
+    position: relative;
+    padding-left: 14px !important;
+  }
+
+  [data-slide-form-root] .authoring-form-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 999px;
+    background: rgba(213, 202, 189, 0.7);
+  }
+
+  [data-slide-form-root] .authoring-form-section--board::before   { background: rgba(74, 137, 196, 0.42); }
+  [data-slide-form-root] .authoring-form-section--audio::before   { background: rgba(196, 120, 62, 0.42); }
+  [data-slide-form-root] .authoring-form-section--teacher::before { background: rgba(45, 106, 79, 0.42); }
+  [data-slide-form-root] .authoring-form-section--prompts::before { background: rgba(109, 83, 155, 0.42); }
+  [data-slide-form-root] .authoring-form-section--soft::before    { background: rgba(213, 202, 189, 0.7); }
+
+  /* 2. Slide form: a touch more breathing room between sections */
+  [data-slide-form-root] form[method="post"] { gap: 28px; }
+
+  /* 3. Section heading inside slide form: label-style (smaller, uppercase, muted) */
+  [data-slide-form-root] h4.authoring-form-heading {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--authoring-muted);
+    margin: 0;
+  }
+
+  /* 4. Thin divider beneath each section heading in slide form */
+  [data-slide-form-root] .authoring-section-intro {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(231, 225, 216, 0.5);
+    margin-bottom: 2px;
+  }
+
+  /* 5. ⓘ icon on info-toggle headers — signals clickability */
+  .authoring-section-intro--toggle .authoring-section-intro__header::after {
+    content: 'ⓘ';
+    font-size: 11px;
+    font-style: normal;
+    color: var(--authoring-muted);
+    opacity: 0.4;
+    transition: opacity 0.15s ease;
+    margin-left: auto;
+  }
+  .authoring-section-intro--toggle:hover .authoring-section-intro__header::after {
+    opacity: 0.8;
+  }
+
+  /* 6. Slide row: subtle hover to feel interactive */
+  .authoring-slide-row:not([data-open="true"]):hover {
+    border-color: rgba(196, 120, 62, 0.22);
+    background: rgba(255, 252, 248, 0.7);
+  }
+
+  /* 7. Slide row actions: tighter gap */
+  .authoring-slide-row__actions { gap: 6px; }
+
+  /* 10. Fix: authoring-checkbox broken by the [data-slide-form-root] label { display: grid } reset.
+     Higher specificity (class + element) restores inline-flex. */
+  [data-slide-form-root] label.authoring-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* 11. Fix: authoring-advanced-toggle broken by the generic button[type="button"] override
+     which applies display:inline-flex + justify-content:center, concatenating both spans.
+     Same specificity but later source order wins. */
+  [data-slide-form-root] button.authoring-advanced-toggle {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    min-height: auto;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--authoring-text);
+  }
+
+  /* 8. Sticky form action bar: stand out from page bg more clearly */
+  .authoring-form-actions--sticky {
+    box-shadow: 0 2px 12px rgba(35, 25, 16, 0.08);
+  }
+
+  /* 9. Lesson editor: consistent stack gap */
+  .authoring-stack > .authoring-section-card { --section-gap: 16px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<main id="main-content" class="authoring-shell">
+  <header class="authoring-header">
+    <div>
+      <div class="authoring-eyebrow">LUMINOS</div>
+      <h1 class="authoring-page-title">{% block authoring_title %}Authoring{% endblock %}</h1>
+    </div>
+    <nav class="authoring-nav">
+      <a href="/authoring/groups">Groups</a>
+      <a href="/authoring/lessons">Lessons</a>
+      <a href="/authoring/media">Media</a>
+    </nav>
+  </header>
+  {% block authoring_content %}{% endblock %}
+</main>
+{% endblock %}

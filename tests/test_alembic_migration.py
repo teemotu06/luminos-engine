@@ -49,8 +49,16 @@ class AlembicMigrationTests(unittest.TestCase):
             class_group_columns = {row[1] for row in cur.fetchall()}
             self.assertIn("owner_user_id", class_group_columns)
             self.assertIn("deleted_at", class_group_columns)
+            cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='class_session'")
+            self.assertEqual(cur.fetchone()[0], "class_session")
             cur.execute("SELECT version_num FROM alembic_version")
-            self.assertEqual(cur.fetchone()[0], "20260402_0004")
+            self.assertEqual(cur.fetchone()[0], "20260409_0001")
+            cur.execute("PRAGMA table_info(lesson_attempt)")
+            lesson_attempt_info = {row[1]: row[2] for row in cur.fetchall()}
+            self.assertEqual(lesson_attempt_info["current_slide_id"], "VARCHAR(64)")
+            cur.execute("PRAGMA table_info(class_session)")
+            class_session_info = {row[1]: row[2] for row in cur.fetchall()}
+            self.assertEqual(class_session_info["current_slide_id"], "VARCHAR(64)")
             conn.close()
 
     def test_upgrade_head_patches_legacy_sqlite_schema(self):
@@ -76,10 +84,13 @@ class AlembicMigrationTests(unittest.TestCase):
             conn = sqlite3.connect(db_path)
             cur = conn.cursor()
             cur.execute("PRAGMA table_info(lesson_attempt)")
-            lesson_attempt_columns = {row[1] for row in cur.fetchall()}
+            lesson_attempt_rows = cur.fetchall()
+            lesson_attempt_columns = {row[1] for row in lesson_attempt_rows}
             self.assertIn("class_id", lesson_attempt_columns)
             self.assertIn("current_slide_id", lesson_attempt_columns)
             self.assertIn("version", lesson_attempt_columns)
+            lesson_attempt_info = {row[1]: row[2] for row in lesson_attempt_rows}
+            self.assertEqual(lesson_attempt_info["current_slide_id"], "VARCHAR(64)")
             cur.execute("PRAGMA table_info(slide_result)")
             slide_result_columns = {row[1] for row in cur.fetchall()}
             self.assertIn("version", slide_result_columns)
@@ -100,6 +111,11 @@ class AlembicMigrationTests(unittest.TestCase):
             self.assertIn("sqlite_autoindex_oral_check_session_2", oral_indexes)
             cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='lesson_runtime_state'")
             self.assertEqual(cur.fetchone()[0], "lesson_runtime_state")
+            cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='class_session'")
+            self.assertEqual(cur.fetchone()[0], "class_session")
+            cur.execute("PRAGMA table_info(class_session)")
+            class_session_info = {row[1]: row[2] for row in cur.fetchall()}
+            self.assertEqual(class_session_info["current_slide_id"], "VARCHAR(64)")
             conn.close()
 
     def test_upgrade_head_drops_orphaned_class_pattern_review_rows_before_fk(self):

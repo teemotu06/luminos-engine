@@ -1,0 +1,80 @@
+{% if slide.content_payload.phoneme_parts %}
+<div class="lesson-read-respond">
+  {% if slide.content_payload.prompt_text %}
+  <div class="lesson-read-respond__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </div>
+  {% endif %}
+
+  <div class="lesson-read-respond__text lesson-read-respond__text--blend">
+    {% for part in slide.content_payload.phoneme_parts %}
+    <span class="lesson-read-respond__phoneme-group">
+      <span class="lesson-read-respond__phoneme">
+        {{ part }}
+      </span>
+      <span class="lesson-read-respond__phoneme-dot"></span>
+    </span>
+    {% endfor %}
+  </div>
+
+  {% if slide.content_payload.target_word %}
+  <div class="lesson-read-respond__prompt lesson-read-respond__answer">
+    {{ slide.content_payload.target_word }}
+  </div>
+  {% endif %}
+</div>
+{% else %}
+<div class="lesson-read-respond">
+  {% if slide.content_payload.display_mode == 'spot_part' %}
+  <div class="lesson-read-respond__spot-part">
+    <div class="lesson-read-respond__spot-compare-row">
+      {% for word in slide.content_payload.displayed_words %}
+      <div class="lesson-read-respond__spot-word">
+        <div class="lesson-read-respond__spot-word-text">
+        {% if slide.content_payload.highlighted_chunk and slide.content_payload.highlighted_chunk in word %}
+          {% set parts = word.split(slide.content_payload.highlighted_chunk, 1) %}
+          <span>{{ parts[0] }}</span><span class="lesson-read-respond__spot-chunk">{{ slide.content_payload.highlighted_chunk }}</span><span>{{ parts[1] }}</span>
+        {% else %}
+          {{ word }}
+        {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if slide.content_payload.support_text %}
+    <div class="lesson-read-respond__spot-support">
+      {{ slide.content_payload.support_text }}
+    </div>
+    {% endif %}
+  </div>
+  {% elif slide.content_payload.display_mode == 'reader' %}
+  <div class="lesson-read-respond__reader{% if slide.content_payload.image %} lesson-read-respond__reader--with-image{% endif %}">
+    <div class="lesson-read-respond__reader-copy">
+      <div class="lesson-read-respond__text lesson-read-respond__text--reader">
+        {{ slide.content_payload.text_content }}
+      </div>
+    </div>
+
+    {% if slide.content_payload.image %}
+    <div class="lesson-read-respond__reader-media">
+      <img
+        class="lesson-read-respond__reader-image"
+        src="{{ slide.content_payload.image }}"
+        alt="{{ slide.slide_title }}">
+    </div>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="lesson-read-respond__text {% if slide.content_payload.display_mode == 'sentence' %}lesson-read-respond__text--sentence{% endif %}">
+    {{ slide.content_payload.text_content }}
+  </div>
+
+  {% if slide.content_payload.comprehension_prompt %}
+  <div class="lesson-read-respond__prompt">
+    {{ slide.content_payload.comprehension_prompt }}
+  </div>
+  {% endif %}
+  {% endif %}
+</div>
+{% endif %}

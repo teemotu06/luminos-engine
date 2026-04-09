@@ -1,0 +1,16 @@
+<div class="lesson-drag-word">
+  <div class="lesson-read-respond__text">{{ slide.content_payload.target_sentence }}</div>
+  {% if slide.content_payload.image_url %}
+  <div class="lesson-audio-prompt__image-wrap" style="margin-top:12px;">
+    <img class="lesson-audio-prompt__image" src="{{ slide.content_payload.image_url }}" alt="{{ slide.slide_title }}">
+  </div>
+  {% endif %}
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;">
+    {% for tile in slide.content_payload.word_tiles %}
+    <div style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; background:#fff;">{{ tile }}</div>
+    {% endfor %}
+  </div>
+  {% if slide.content_payload.audio_url %}
+  <button type="button" class="lesson-nav-btn" style="margin-top:12px;" @click="playAudio('{{ slide.content_payload.audio_url }}')">Play sentence audio</button>
+  {% endif %}
+</div>

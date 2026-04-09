@@ -1,1 +1,5 @@
-{% include "lesson/partials/views/view_" ~ slide.view_type ~ ".html" %}
+{% if shell_mode == "board" %}
+{% include registry_helper.board_template_for(slide.view_type) %}
+{% else %}
+{% include registry_helper.teacher_template_for(slide.view_type) %}
+{% endif %}

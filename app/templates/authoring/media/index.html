@@ -1,0 +1,16 @@
+{% extends "authoring/base.html" %}
+
+{% block authoring_title %}Media{% endblock %}
+
+{% block authoring_content %}
+<div style="display:flex; gap:12px; margin-bottom:16px;">
+  <a href="/authoring/media?media_type=audio">Audio</a>
+  <a href="/authoring/media?media_type=image">Images</a>
+  <a href="/authoring/media?media_type=video">Video</a>
+</div>
+<div
+  hx-get="/authoring/media/browse/{{ request.query_params.get('media_type', 'audio') }}"
+  hx-trigger="load"
+  hx-swap="innerHTML">
+</div>
+{% endblock %}

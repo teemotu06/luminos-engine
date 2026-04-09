@@ -1,0 +1,89 @@
+<div class="authoring-stack" data-block-panel data-open-slide-id="">
+  {% if block.slides %}
+    {% for slide in block.slides %}
+    <div class="authoring-slide-row" data-slide-row data-slide-id="{{ slide.slide_id }}">
+      <div class="authoring-slide-row__header">
+        <div class="authoring-slide-row__summary">
+          <span class="authoring-slide-row__pos">{{ loop.index }}</span>
+          <div class="authoring-slide-row__summary-body">
+            <div class="authoring-slide-row__meta">{{ slide_labels[slide.slide_id] }}</div>
+            <div class="authoring-slide-row__title">{{ slide_summaries[slide.slide_id] }}</div>
+          </div>
+        </div>
+        <div class="authoring-slide-row__actions">
+          <button
+            type="button"
+            class="authoring-btn-secondary"
+            data-lesson-id="{{ lesson_id }}"
+            data-block-id="{{ block.block_id }}"
+            data-slide-edit-button="{{ slide.slide_id }}"
+            data-slide-id="{{ slide.slide_id }}"
+            data-edit-label="Edit"
+            data-close-label="Close"
+            onclick="toggleAuthoringSlideEditor(this, this.dataset.lessonId, this.dataset.blockId, this.dataset.slideId)">
+            Edit
+          </button>
+          <form
+            method="post"
+            action="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/{{ slide.slide_id }}/delete"
+            hx-post="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/{{ slide.slide_id }}/delete"
+            hx-target="#block-panel-{{ block.block_id }}"
+            hx-swap="innerHTML"
+            style="display:inline;">
+            <button type="submit" class="authoring-btn-danger" onclick="return confirm('Delete {{ slide.slide_id }}?')">Delete</button>
+          </form>
+          <div class="authoring-slide-row__move-actions">
+          <form
+            method="post"
+            action="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/reorder"
+            hx-post="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/reorder"
+            hx-target="#block-panel-{{ block.block_id }}"
+            hx-swap="innerHTML"
+            style="display:inline;">
+            <input type="hidden" name="slide_id" value="{{ slide.slide_id }}">
+            <input type="hidden" name="direction" value="up">
+            <button type="submit" class="authoring-btn-ghost authoring-btn-ghost--icon" title="Move up" {% if loop.first %}disabled{% endif %}>↑</button>
+          </form>
+          <form
+            method="post"
+            action="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/reorder"
+            hx-post="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/reorder"
+            hx-target="#block-panel-{{ block.block_id }}"
+            hx-swap="innerHTML"
+            style="display:inline;">
+            <input type="hidden" name="slide_id" value="{{ slide.slide_id }}">
+            <input type="hidden" name="direction" value="down">
+            <button type="submit" class="authoring-btn-ghost authoring-btn-ghost--icon" title="Move down" {% if loop.last %}disabled{% endif %}>↓</button>
+          </form>
+          </div>
+        </div>
+      </div>
+      <div id="slide-editor-{{ slide.slide_id }}" style="margin-top:12px;"></div>
+    </div>
+    {% endfor %}
+  {% else %}
+    <div class="authoring-empty">No slides in this block yet.</div>
+  {% endif %}
+
+  <details class="authoring-add-details">
+    <summary class="authoring-add-summary"><span class="authoring-add-summary__icon">+</span> Add Slide</summary>
+    <div class="authoring-add-grid authoring-add-grid--padded">
+      {% for definition in slide_definitions %}
+      <form
+        method="post"
+        action="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/add"
+        hx-post="/authoring/lessons/{{ lesson_id }}/blocks/{{ block.block_id }}/slides/add"
+        hx-target="#block-panel-{{ block.block_id }}"
+        hx-swap="innerHTML"
+        class="authoring-add-card">
+        <input type="hidden" name="view_type" value="{{ definition.type_key }}">
+        <div class="authoring-add-card__body">
+          <div class="authoring-add-card__title">{{ definition.label }}</div>
+          <div class="authoring-add-card__description">{{ definition.description }}</div>
+        </div>
+        <button type="submit" class="authoring-btn">Add</button>
+      </form>
+      {% endfor %}
+    </div>
+  </details>
+</div>

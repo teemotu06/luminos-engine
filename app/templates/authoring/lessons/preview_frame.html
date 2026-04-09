@@ -1,0 +1,19 @@
+<div style="border:1px solid #ddd; border-radius:10px; padding:16px; background:#fff;">
+  <div style="font-size:12px; color:#666; margin-bottom:12px;">{{ mode | title }} Preview</div>
+  <style>[x-cloak]{display:none!important;}</style>
+  <script>
+    window.dragBuild = window.dragBuild || function(initialItems) {
+      return { initialItems: initialItems || [], placedItems: [], revealed: false };
+    };
+    window.quickCheckMarking = window.quickCheckMarking || function(config) {
+      return { items: (config && config.items) || [], markingMode: "none" };
+    };
+  </script>
+  <div x-data="{ revealed: false, activeBlendIndex: -1, fontScale: 1, getResponsiveTextStyle(){ return ''; }, playAudio(){}, runBlendSequence(){}, showAnswer: false }">
+    {% if mode == "teacher" %}
+      {% include registry_helper.teacher_template_for(slide.view_type) %}
+    {% else %}
+      {% include registry_helper.board_template_for(slide.view_type) %}
+    {% endif %}
+  </div>
+</div>

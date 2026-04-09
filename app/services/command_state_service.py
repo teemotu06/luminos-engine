@@ -1,4 +1,5 @@
 import logging
+from datetime import timedelta
 from typing import Any, Optional
 
 from sqlalchemy import select
@@ -6,11 +7,9 @@ from sqlalchemy.orm import Session
 
 from app.models.lesson import LessonAttemptRecord, LessonRuntimeStateRecord, OralCheckSessionRecord, StudentRecord
 from app.schemas.command_state import CommandStateAdvanceRequest, CommandStateResponse, LuminosRuntimeStateConfig
-from app.services.command_runtime_profiles import BLOCK_RUNTIME_PROFILES
 from app.schemas.oral_check import OralCheckAssignmentMarkRequest, OralCheckSessionStartRequest
 from app.services.kokoro_tts_service import KokoroTtsError, ensure_tts_audio
-from app.services.lesson_navigation import flatten_lesson_slides
-from app.services.lesson_service import load_lesson
+from app.services.lesson_navigation import build_runtime_lesson_for_attempt
 from app.services.oral_check_service import (
     get_oral_check_session,
     is_oral_check_eligible,
@@ -18,13 +17,16 @@ from app.services.oral_check_service import (
     resolve_oral_check_runtime,
     start_oral_check_session,
 )
+from app.slide_types import registry
 
 logger = logging.getLogger(__name__)
 
 
-def _load_slide(lesson_id: str, slide_id: str) -> Any:
-    lesson = load_lesson(lesson_id)
-    for entry in flatten_lesson_slides(lesson):
+def _load_slide(db: Session, lesson_id: str, slide_id: str, class_id: Optional[str] = None) -> Any:
+    runtime_lesson, ordered_slides, _dynamic_review_recommendations, _dynamic_review_error = (
+        build_runtime_lesson_for_attempt(db, lesson_id, class_id)
+    )
+    for entry in ordered_slides:
         if entry["slide"].slide_id == slide_id:
             return entry["slide"]
     raise ValueError(f"Slide {slide_id} not found in lesson {lesson_id}")
@@ -63,193 +65,19 @@ def _default_runtime_state_sequence(slide: Any) -> list[LuminosRuntimeStateConfi
     teacher_cue = slide.teacher_cue or ""
     view_type = str(slide.view_type)
     block_id = str(slide.block_id)
-    profile = BLOCK_RUNTIME_PROFILES.get((block_id, view_type))
-
-    if view_type == "flashcard":
-        front_text = getattr(payload, "front_text", "") or slide.slide_title
-        spoken_unit = getattr(payload, "back_text", "") or front_text
-        states = [
-            LuminosRuntimeStateConfig(
-                key="transition",
-                board_prompt=f"Look at {front_text}.",
-                teacher_prompt=teacher_cue or f"Set attention on {front_text}.",
-                tts_prompt=f"Look at {front_text}.",
-                teacher_controls=["replay", "force_advance"],
-            ),
-            LuminosRuntimeStateConfig(
-                key="model",
-                board_prompt=f"Listen. {spoken_unit}",
-                teacher_prompt=teacher_cue or f"Model {spoken_unit} once.",
-                tts_prompt=f"Listen. {spoken_unit}",
-                teacher_controls=["replay", "force_advance"],
-            ),
-            LuminosRuntimeStateConfig(
-                key="choral",
-                board_prompt=f"Everyone. Say {spoken_unit}.",
-                teacher_prompt=teacher_cue or "Take a choral response, then mark the class.",
-                tts_prompt=f"Everyone. Say {spoken_unit}.",
-                teacher_controls=["mark_class", "replay", "force_advance"],
-            ),
-        ]
-        if profile == "sound_intro":
-            states[0].board_prompt = "Look at the letter."
-            states[0].tts_prompt = "Look at the letter."
-        elif profile == "vocab_warmup":
-            states[0].board_prompt = "Look. New word."
-            states[0].tts_prompt = "Look. New word."
-        return states
-
-    if view_type == "drag_letter":
-        target_word = getattr(payload, "target_word", "") or "the word"
-        states = [
-            LuminosRuntimeStateConfig(
-                key="transition",
-                board_prompt=f"Get ready to build {target_word}.",
-                teacher_prompt=teacher_cue or f"Set the build routine for {target_word}.",
-                tts_prompt=f"Get ready to build {target_word}.",
-                teacher_controls=["replay", "force_advance"],
-            ),
-            LuminosRuntimeStateConfig(
-                key="build",
-                board_prompt=f"Build {target_word}.",
-                teacher_prompt=teacher_cue or f"Students build {target_word}.",
-                tts_prompt=f"Build {target_word}.",
-                teacher_controls=["replay", "force_advance"],
-            ),
-            LuminosRuntimeStateConfig(
-                key="check",
-                board_prompt="Check every part.",
-                teacher_prompt=teacher_cue or "Confirm the build, then mark the class.",
-                tts_prompt="Check every part.",
-                teacher_controls=["mark_class", "replay", "force_advance"],
-            ),
-        ]
-        if profile == "word_build":
-            states.insert(
-                2,
-                LuminosRuntimeStateConfig(
-                    key="partner_practice",
-                    board_prompt="Work with your partner. Check it together.",
-                    teacher_prompt="Give them a short check window before class confirmation.",
-                    tts_prompt="Work with your partner. Check it together.",
-                    timeout_ms=12000,
-                    teacher_controls=["pause", "force_advance"],
-                ),
-            )
-        return states
-
-    if view_type == "writing_encoding":
-        dictated_text = getattr(payload, "dictated_text", "") or "the word"
-        states = [
-            LuminosRuntimeStateConfig(
-                key="transition",
-                board_prompt="Get ready to write.",
-                teacher_prompt=teacher_cue or "Prepare students to encode.",
-                tts_prompt="Get ready to write.",
-                teacher_controls=["replay", "force_advance"],
-            ),
-            LuminosRuntimeStateConfig(
-                key="dictate",
-                board_prompt=f"Write {dictated_text}.",
-                teacher_prompt=teacher_cue or f"Dictate {dictated_text}.",
-                tts_prompt=f"Write {dictated_text}.",
-                teacher_controls=["replay", "force_advance"],
-            ),
-            LuminosRuntimeStateConfig(
-                key="check",
-                board_prompt="Check every sound.",
-                teacher_prompt=teacher_cue or "Confirm the writing, then mark the class.",
-                tts_prompt="Check every sound.",
-                teacher_controls=["mark_class", "replay", "force_advance"],
-            ),
-        ]
-        if profile == "encoding_write":
-            states.insert(
-                2,
-                LuminosRuntimeStateConfig(
-                    key="write",
-                    board_prompt="Write now.",
-                    teacher_prompt="Give a short silent writing window.",
-                    tts_prompt="Write now.",
-                    timeout_ms=15000,
-                    teacher_controls=["pause", "force_advance"],
-                ),
-            )
-        return states
-
-    if view_type == "read_respond":
-        display_mode = getattr(payload, "display_mode", "") or ""
-        comprehension_prompt = getattr(payload, "comprehension_prompt", "") or ""
-        if display_mode == "sentence":
-            states = [
-                LuminosRuntimeStateConfig(
-                    key="transition",
-                    board_prompt="Eyes on the sentence.",
-                    teacher_prompt=teacher_cue or "Set tracking and attention.",
-                    tts_prompt="Eyes on the sentence.",
-                    teacher_controls=["replay", "force_advance"],
-                ),
-                LuminosRuntimeStateConfig(
-                    key="choral",
-                    board_prompt="Everyone. Read the sentence.",
-                    teacher_prompt=teacher_cue or "Take a choral sentence read.",
-                    tts_prompt="Everyone. Read the sentence.",
-                    teacher_controls=["mark_class", "replay", "force_advance"],
-                ),
-            ]
-            if profile == "sentence_bridge":
-                states.insert(
-                    1,
-                    LuminosRuntimeStateConfig(
-                        key="partner_practice",
-                        board_prompt="Read with your partner.",
-                        teacher_prompt="Give a short partner read before whole-class check.",
-                        tts_prompt="Read with your partner.",
-                        timeout_ms=12000,
-                        teacher_controls=["pause", "force_advance"],
-                    ),
-                )
-            if comprehension_prompt:
-                states.append(
-                    LuminosRuntimeStateConfig(
-                        key="check",
-                        board_prompt=comprehension_prompt,
-                        teacher_prompt=teacher_cue or "Take a brief oral answer, then mark the class.",
-                        tts_prompt=comprehension_prompt,
-                        teacher_controls=["mark_class", "replay", "force_advance"],
-                    )
-                )
-            return states
-        if display_mode == "spot_part":
-            support_text = getattr(payload, "support_text", "") or prompt_text or slide.slide_title
-            states = [
-                LuminosRuntimeStateConfig(
-                    key="transition",
-                    board_prompt="Look carefully.",
-                    teacher_prompt=teacher_cue or "Set attention on the displayed words.",
-                    tts_prompt="Look carefully.",
-                    teacher_controls=["replay", "force_advance"],
-                ),
-                LuminosRuntimeStateConfig(
-                    key="check",
-                    board_prompt=support_text,
-                    teacher_prompt=teacher_cue or "Take one or two oral answers, then mark the class.",
-                    tts_prompt=support_text,
-                    teacher_controls=["mark_class", "replay", "force_advance"],
-                ),
-            ]
-            if profile == "pattern_notice":
-                states[1].board_prompt = support_text
-                states[1].teacher_prompt = teacher_cue or "Take one or two oral answers, then mark the class."
-            return states
+    defaults = registry.command_state_defaults_for(view_type)
+    if defaults is not None:
+        state_sequence = list(defaults(slide, block_id) or [])
+        if state_sequence:
+            return state_sequence
 
     if prompt_text or teacher_cue:
         return [
             LuminosRuntimeStateConfig(
                 key="transition",
-                board_prompt=prompt_text or teacher_cue,
+                board_prompt=prompt_text or "",
                 teacher_prompt=teacher_cue or prompt_text or slide.slide_title,
-                tts_prompt=prompt_text or teacher_cue,
+                tts_prompt=prompt_text or "",
                 teacher_controls=["replay", "force_advance"],
             )
         ]
@@ -292,8 +120,6 @@ def _build_generic_prompt(slide: Any) -> str:
     prompt_text = getattr(payload, "prompt_text", None)
     if prompt_text:
         return str(prompt_text).strip()
-    if slide.teacher_cue:
-        return str(slide.teacher_cue).strip()
     front_text = getattr(payload, "front_text", None)
     if front_text:
         return f"What sound is {front_text}?"
@@ -303,7 +129,7 @@ def _build_generic_prompt(slide: Any) -> str:
     dictated_text = getattr(payload, "dictated_text", None)
     if dictated_text:
         return f"Write {dictated_text}."
-    return slide.slide_title
+    return ""
 
 
 def _resolve_runtime_prompts(runtime: LessonRuntimeStateRecord, slide: Any) -> tuple[str, str, str]:
@@ -328,6 +154,84 @@ def _resolve_runtime_prompts(runtime: LessonRuntimeStateRecord, slide: Any) -> t
         or fallback_prompt
     ).strip()
     return board_prompt, teacher_prompt, tts_prompt
+
+
+def _compute_marking_mode(session_mode: str, teacher_controls: list[str], has_roster: bool) -> str:
+    if session_mode == "oral_check":
+        return "sequential"
+    if has_roster and any(c.startswith("mark_") for c in teacher_controls):
+        return "grid"
+    return "none"
+
+
+def _compute_ui_phase(
+    current_state: str,
+    prompt_text: str,
+    marking_mode: str,
+    state_timeout_ms: Optional[int],
+    paused: bool,
+) -> str:
+    if current_state == "complete":
+        return "complete"
+    if marking_mode == "sequential":
+        return "mark_sequential"
+    if marking_mode == "grid":
+        return "mark_grid"
+    if state_timeout_ms and not paused and prompt_text:
+        return "observe"
+    if prompt_text:
+        return "deliver"
+    return "ready"
+
+
+def _compute_outcome_counts(student_outcomes: dict) -> dict[str, int]:
+    counts = {"pending": 0, "secure": 0, "mixed": 0, "revisit": 0}
+    for status in student_outcomes.values():
+        key = status if status in counts else "pending"
+        counts[key] += 1
+    return counts
+
+
+def _compute_board_banner(
+    ui_phase: str,
+    current_student: Optional[str],
+    outcome_counts: dict[str, int],
+    total_students: int,
+) -> tuple[str, str]:
+    if ui_phase == "complete":
+        secure = outcome_counts.get("secure", 0)
+        revisit = outcome_counts.get("revisit", 0)
+        mixed = outcome_counts.get("mixed", 0)
+        if total_students == 0:
+            return "Slide complete", "celebrate"
+        if revisit == 0 and mixed == 0:
+            return f"All {secure} secure — great work", "celebrate"
+        parts = []
+        if secure:
+            parts.append(f"{secure} secure")
+        if mixed:
+            parts.append(f"{mixed} mixed")
+        if revisit:
+            parts.append(f"{revisit} to revisit")
+        return " · ".join(parts), "focus"
+    if ui_phase == "mark_sequential" and current_student:
+        return f"{current_student} — your turn", "focus"
+    if ui_phase == "mark_grid":
+        if total_students > 0 and outcome_counts.get("pending", 0) == 0 and outcome_counts.get("secure", 0) == total_students:
+            return "Class marked secure", "celebrate"
+        return "Mark your class", "neutral"
+    return "", "neutral"
+
+
+_OUTCOME_CYCLE = ["pending", "secure", "mixed", "revisit"]
+
+
+def _cycle_outcome(current: str) -> str:
+    try:
+        idx = _OUTCOME_CYCLE.index(current)
+    except ValueError:
+        idx = 0
+    return _OUTCOME_CYCLE[(idx + 1) % len(_OUTCOME_CYCLE)]
 
 
 def _teacher_controls_for_state(current_state: str, session_mode: str) -> list[str]:
@@ -360,25 +264,28 @@ def _teacher_controls_for_runtime_state(runtime: LessonRuntimeStateRecord, slide
     return controls or _teacher_controls_for_state(runtime.current_state, "legacy")
 
 
-def _get_runtime_record(db: Session, attempt_id: str, slide_id: str) -> Optional[LessonRuntimeStateRecord]:
-    return (
-        db.execute(
-            select(LessonRuntimeStateRecord).where(
-                LessonRuntimeStateRecord.attempt_id == attempt_id,
-                LessonRuntimeStateRecord.slide_id == slide_id,
-            )
-        )
-        .scalars()
-        .first()
+def _get_runtime_record(
+    db: Session,
+    attempt_id: str,
+    slide_id: str,
+    for_update: bool = False,
+) -> Optional[LessonRuntimeStateRecord]:
+    q = select(LessonRuntimeStateRecord).where(
+        LessonRuntimeStateRecord.attempt_id == attempt_id,
+        LessonRuntimeStateRecord.slide_id == slide_id,
     )
+    if for_update:
+        q = q.with_for_update()
+    return db.execute(q).scalars().first()
 
 
 def _ensure_runtime_record(
     db: Session,
     attempt: LessonAttemptRecord,
     slide: Any,
+    for_update: bool = False,
 ) -> LessonRuntimeStateRecord:
-    existing = _get_runtime_record(db, str(attempt.attempt_id), slide.slide_id)
+    existing = _get_runtime_record(db, str(attempt.attempt_id), slide.slide_id, for_update=for_update)
     if existing is not None:
         return existing
 
@@ -389,6 +296,9 @@ def _ensure_runtime_record(
         state_sequence = ["individual_turn", "complete"]
     else:
         state_sequence = ["transition", "complete"]
+
+    roster = _roster_for_attempt(db, attempt)
+    student_outcomes = {name: "pending" for name in roster} if roster else {}
 
     record = LessonRuntimeStateRecord(
         attempt_id=attempt.attempt_id,
@@ -408,6 +318,7 @@ def _ensure_runtime_record(
         audio_event_id=0,
         ui_event_id=0,
         paused=False,
+        student_outcomes=student_outcomes,
     )
     db.add(record)
     db.flush()
@@ -473,6 +384,13 @@ def _sync_runtime_from_oral(db: Session, runtime: LessonRuntimeStateRecord, atte
     elif current_state == "complete":
         prompt_text = ""
 
+    _STATUS_MAP = {
+        "complete": "secure",
+        "correction_reread": "mixed",
+        "missed": "revisit",
+        "deferred": "revisit",
+        "absent": "revisit",
+    }
     runtime.current_state = current_state
     runtime.current_student = session_response.active_student_name
     runtime.student_queue = [assignment.student_name for assignment in session_response.assignments]
@@ -485,6 +403,12 @@ def _sync_runtime_from_oral(db: Session, runtime: LessonRuntimeStateRecord, atte
     runtime.current_prompt_text = prompt_text
     runtime.teacher_prompt_text = prompt_text
     runtime.current_audio_url = _safe_audio_url(prompt_text) if prompt_text else None
+    runtime.student_outcomes = {
+        assignment.student_name: _STATUS_MAP.get(assignment.performance_type or assignment.status or "", "pending")
+        if assignment.status != "pending"
+        else "pending"
+        for assignment in session_response.assignments
+    }
     if current_state != previous_state:
         runtime.state_version += 1
         runtime.ui_event_id += 1
@@ -518,9 +442,17 @@ def _runtime_to_response(
     session_mode: str = "legacy",
     teacher_controls: Optional[list[str]] = None,
     state_timeout_ms: Optional[int] = None,
+    has_roster: bool = False,
 ) -> CommandStateResponse:
     teacher_controls = teacher_controls or _teacher_controls_for_state(runtime.current_state, session_mode)
     mark_required = any(control.startswith("mark_") for control in teacher_controls)
+    student_outcomes = dict(getattr(runtime, "student_outcomes", None) or {})
+    marking_mode = _compute_marking_mode(session_mode, teacher_controls, has_roster)
+    prompt_text = runtime.current_prompt_text or ""
+    ui_phase = _compute_ui_phase(runtime.current_state, prompt_text, marking_mode, state_timeout_ms, runtime.paused)
+    outcome_counts = _compute_outcome_counts(student_outcomes)
+    total_students = len(student_outcomes)
+    board_banner_text, board_banner_tone = _compute_board_banner(ui_phase, runtime.current_student, outcome_counts, total_students)
     return CommandStateResponse(
         attempt_id=str(runtime.attempt_id),
         slide_id=runtime.slide_id,
@@ -530,8 +462,8 @@ def _runtime_to_response(
         ui_event_id=runtime.ui_event_id,
         current_state=runtime.current_state,
         current_student=runtime.current_student,
-        prompt_text=runtime.current_prompt_text or "",
-        teacher_prompt_text=getattr(runtime, "teacher_prompt_text", None) or runtime.current_prompt_text or "",
+        prompt_text=prompt_text,
+        teacher_prompt_text=getattr(runtime, "teacher_prompt_text", None) or prompt_text,
         state_timeout_ms=state_timeout_ms,
         state_started_at=runtime.updated_at.isoformat() if getattr(runtime, "updated_at", None) else None,
         audio_url=runtime.current_audio_url,
@@ -544,6 +476,20 @@ def _runtime_to_response(
         teacher_controls=teacher_controls,
         paused=runtime.paused,
         session_mode=session_mode,
+        ui_phase=ui_phase,
+        marking_mode=marking_mode,
+        student_outcomes=student_outcomes,
+        pending_count=outcome_counts["pending"],
+        secure_count=outcome_counts["secure"],
+        mixed_count=outcome_counts["mixed"],
+        revisit_count=outcome_counts["revisit"],
+        board_banner_text=board_banner_text,
+        board_banner_tone=board_banner_tone,
+        auto_advance_at=(
+            (runtime.updated_at + timedelta(milliseconds=state_timeout_ms)).isoformat()
+            if state_timeout_ms and getattr(runtime, "updated_at", None)
+            else None
+        ),
     )
 
 
@@ -554,17 +500,21 @@ def get_command_state(db: Session, lesson_id: str, attempt_id: str, slide_id: Op
     if not slide_id:
         slide_id = attempt.current_slide_id
     if not slide_id:
-        lesson = load_lesson(lesson_id)
-        ordered = flatten_lesson_slides(lesson)
+        _runtime_lesson, ordered, _dynamic_review_recommendations, _dynamic_review_error = (
+            build_runtime_lesson_for_attempt(db, lesson_id, attempt.class_id)
+        )
         if not ordered:
             raise ValueError("Lesson has no slides")
         slide_id = ordered[0]["slide"].slide_id
         attempt.current_slide_id = slide_id
-    slide = _load_slide(lesson_id, slide_id)
+    elif not attempt.current_slide_id:
+        attempt.current_slide_id = slide_id
+    slide = _load_slide(db, lesson_id, slide_id, attempt.class_id)
     runtime = _ensure_runtime_record(db, attempt, slide)
 
+    roster = _roster_for_attempt(db, attempt)
     session_mode = "legacy"
-    if is_oral_check_eligible(slide) and _roster_for_attempt(db, attempt):
+    if is_oral_check_eligible(slide) and roster:
         session_mode = "oral_check"
         _sync_runtime_from_oral(db, runtime, attempt, slide)
     else:
@@ -578,19 +528,27 @@ def get_command_state(db: Session, lesson_id: str, attempt_id: str, slide_id: Op
             session_mode=session_mode,
             teacher_controls=teacher_controls,
             state_timeout_ms=getattr(state_config, "timeout_ms", None),
+            has_roster=bool(roster),
         )
 
     db.commit()
     db.refresh(runtime)
-    return _runtime_to_response(runtime, session_mode=session_mode)
+    return _runtime_to_response(runtime, session_mode=session_mode, has_roster=bool(roster))
 
 
 def advance_command_state(db: Session, lesson_id: str, attempt_id: str, request: CommandStateAdvanceRequest) -> CommandStateResponse:
     attempt = db.get(LessonAttemptRecord, attempt_id)
     if attempt is None or attempt.lesson_id != lesson_id:
         raise ValueError("Lesson attempt not found")
-    slide = _load_slide(lesson_id, request.slide_id)
-    runtime = _ensure_runtime_record(db, attempt, slide)
+    slide_id = attempt.current_slide_id or request.slide_id
+    if not slide_id:
+        raise ValueError("No active slide for lesson attempt")
+    if request.slide_id and attempt.current_slide_id and request.slide_id != attempt.current_slide_id:
+        raise ValueError("Slide action does not match the active slide")
+    if not attempt.current_slide_id:
+        attempt.current_slide_id = slide_id
+    slide = _load_slide(db, lesson_id, slide_id, attempt.class_id)
+    runtime = _ensure_runtime_record(db, attempt, slide, for_update=True)
     session_mode = "oral_check" if is_oral_check_eligible(slide) and _roster_for_attempt(db, attempt) else "legacy"
 
     if request.action == "replay":
@@ -601,7 +559,17 @@ def advance_command_state(db: Session, lesson_id: str, attempt_id: str, request:
     elif request.action == "resume":
         runtime.paused = False
         runtime.ui_event_id += 1
-    elif request.action == "force_advance":
+    elif request.action == "hide_answer":
+        sequence = list(runtime.state_sequence or [])
+        runtime.state_index = 0
+        runtime.current_state = sequence[0] if sequence else "idle"
+        runtime.current_student = None
+        runtime.current_prompt_text = ""
+        runtime.teacher_prompt_text = ""
+        runtime.current_audio_url = None
+        runtime.state_version += 1
+        runtime.ui_event_id += 1
+    elif request.action in {"force_advance", "begin_slide", "continue"}:
         if _runtime_state_sequence(slide):
             _advance_runtime_state(runtime)
         else:
@@ -610,6 +578,16 @@ def advance_command_state(db: Session, lesson_id: str, attempt_id: str, request:
             runtime.current_prompt_text = ""
             runtime.teacher_prompt_text = ""
             runtime.current_audio_url = None
+        runtime.state_version += 1
+        runtime.ui_event_id += 1
+    elif request.action == "mark_grid":
+        student = request.student
+        status = request.status
+        if not student or not status:
+            raise ValueError("student and status required for mark_grid")
+        outcomes = dict(runtime.student_outcomes or {})
+        outcomes[student] = status
+        runtime.student_outcomes = outcomes
         runtime.state_version += 1
         runtime.ui_event_id += 1
     elif request.action in {"mark", "skip"} and session_mode == "oral_check":
@@ -644,6 +622,7 @@ def advance_command_state(db: Session, lesson_id: str, attempt_id: str, request:
     else:
         raise ValueError(f"Unsupported command action {request.action} for current slide")
 
+    roster = _roster_for_attempt(db, attempt)
     if session_mode == "oral_check":
         _sync_runtime_from_oral(db, runtime, attempt, slide)
     else:
@@ -657,17 +636,18 @@ def advance_command_state(db: Session, lesson_id: str, attempt_id: str, request:
             session_mode=session_mode,
             teacher_controls=teacher_controls,
             state_timeout_ms=getattr(state_config, "timeout_ms", None),
+            has_roster=bool(roster),
         )
 
     db.commit()
     db.refresh(runtime)
-    return _runtime_to_response(runtime, session_mode=session_mode)
+    return _runtime_to_response(runtime, session_mode=session_mode, has_roster=bool(roster))
 
 
 def set_active_attempt_slide(db: Session, lesson_id: str, attempt_id: str, slide_id: str) -> None:
     attempt = db.get(LessonAttemptRecord, attempt_id)
     if attempt is None or attempt.lesson_id != lesson_id:
         raise ValueError("Lesson attempt not found")
-    _load_slide(lesson_id, slide_id)
+    _load_slide(db, lesson_id, slide_id, attempt.class_id)
     attempt.current_slide_id = slide_id
     db.commit()

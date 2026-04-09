@@ -1,0 +1,17 @@
+<div class="lesson-read-respond">
+  <div class="lesson-read-respond__text">
+    {{ slide.content_payload.sentence_template.replace("{blank}", "____") }}
+  </div>
+  {% if slide.content_payload.image_url %}
+  <div class="lesson-audio-prompt__image-wrap" style="margin-top:12px;">
+    <img class="lesson-audio-prompt__image" src="{{ slide.content_payload.image_url }}" alt="{{ slide.slide_title }}">
+  </div>
+  {% endif %}
+  {% if slide.content_payload.distractors %}
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">
+    {% for option in slide.content_payload.distractors %}
+    <div style="padding:10px 14px; border:1px solid #ddd; border-radius:999px; background:#fff;">{{ option }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

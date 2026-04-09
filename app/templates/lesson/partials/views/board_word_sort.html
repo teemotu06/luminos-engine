@@ -1,0 +1,18 @@
+<div class="lesson-quick-check">
+  <p class="lesson-audio-prompt__prompt">{{ slide.content_payload.instruction_text }}</p>
+  <div style="display:grid; grid-template-columns:repeat({{ slide.content_payload.categories | length }}, 1fr); gap:12px; margin-top:12px;">
+    {% for category in slide.content_payload.categories %}
+    <div style="border:1px dashed #bbb; border-radius:10px; padding:12px; min-height:120px;">
+      <div style="font-weight:700; margin-bottom:10px;">{{ category.category_label }}</div>
+      <div style="color:#666;">Drop zone</div>
+    </div>
+    {% endfor %}
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;">
+    {% for category in slide.content_payload.categories %}
+      {% for word in category.words %}
+      <div style="padding:10px 14px; border:1px solid #ddd; border-radius:999px; background:#fff;">{{ word }}</div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,13 +1,10 @@
-from typing import Literal
+ViewType = str
 
 
-ViewType = Literal[
-    "flashcard",
-    "audio_prompt",
-    "minimal_pair",
-    "drag_letter",
-    "drag_word",
-    "read_respond",
-    "writing_encoding",
-    "quick_check",
-]
+def validate_view_type(v: str) -> str:
+    from app.slide_types import registry
+
+    value = str(v)
+    if not registry.exists(value):
+        raise ValueError(f"Unknown view_type '{value}'")
+    return value

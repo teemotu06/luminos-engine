@@ -1,16 +1,809 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <title>Teacher — {{ lesson.title }}</title>
+  <script>
+    (function() {
+      const saved = window.localStorage.getItem("luminos-theme");
+      const preferred = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = saved || preferred;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-{% block title %}Teacher Control — {{ lesson.title }}{% endblock %}
+    :root {
+      --bg:           #f4f0ea;
+      --bg-elev:      rgba(255,255,255,0.72);
+      --surface:      rgba(255,255,255,0.92);
+      --surface-2:    rgba(255,252,247,0.76);
+      --border:       rgba(81,58,38,0.12);
+      --border-strong:rgba(81,58,38,0.18);
+      --text:         #191511;
+      --muted:        #71685d;
+      --muted-strong: #5f564d;
+      --accent:       #b96d34;
+      --accent-dim:   rgba(185,109,52,0.12);
+      --accent-soft:  rgba(185,109,52,0.08);
+      --shadow-sm:    0 8px 24px rgba(22, 16, 11, 0.06);
+      --shadow-md:    0 18px 44px rgba(22, 16, 11, 0.08);
+      --secure:       #2d6a4f;
+      --secure-bg:    #d8f3dc;
+      --secure-mid:   #52b788;
+      --mixed:        #9c6b00;
+      --mixed-bg:     #fff3cd;
+      --mixed-mid:    #f4a726;
+      --revisit:      #9b1c1c;
+      --revisit-bg:   #fde8e8;
+      --revisit-mid:  #e05252;
+      --revisit-mid:  #e05252;
+      --radius:       20px;
+      --radius-sm:    12px;
+      --radius-pill:  999px;
+      --shell-max:    560px;
+      --header-gap:   14px;
+      --section-gap:  12px;
+      --card-pad:     18px;
+    }
 
-{% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='dist/lesson.css') }}?v=11">
-<script defer src="{{ url_for('static', path='dist/lesson_teacher.js') }}?v=11"></script>
-{% endblock %}
+    html[data-theme="dark"] {
+        --bg:            #090705;
+        --bg-elev:       rgba(18,14,11,0.88);
+        --surface:       rgba(22,17,13,0.94);
+        --surface-2:     rgba(28,22,17,0.88);
+        --border:        rgba(255,244,232,0.08);
+        --border-strong: rgba(255,244,232,0.12);
+        --text:          #f4ede4;
+        --muted:         rgba(244,237,228,0.58);
+        --muted-strong:  rgba(244,237,228,0.72);
+        --accent:        #cb834d;
+        --accent-dim:    rgba(203,131,77,0.18);
+        --accent-soft:   rgba(203,131,77,0.10);
+        --shadow-sm:     0 12px 28px rgba(0, 0, 0, 0.22);
+        --shadow-md:     0 24px 64px rgba(0, 0, 0, 0.28);
+        --secure-bg:     rgba(45,106,79,0.18);
+        --mixed-bg:      rgba(156,107,0,0.18);
+        --revisit-bg:    rgba(155,28,28,0.18);
+      color-scheme: dark;
+    }
 
-{% block content %}
+    html[data-theme="light"] {
+      color-scheme: light;
+    }
+
+    html, body {
+      height: 100%; font-family: 'Inter', sans-serif;
+      background: var(--bg); color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    [x-cloak] { display: none !important; }
+
+    /* ── Shell ── */
+    .shell {
+      display: flex; flex-direction: column;
+      min-height: 100dvh; max-width: var(--shell-max); margin: 0 auto;
+      position: relative;
+      background:
+        radial-gradient(circle at top center, rgba(185,109,52,0.06), transparent 42%),
+        linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      background: color-mix(in srgb, var(--surface) 84%, transparent);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      flex-shrink: 0; gap: var(--header-gap);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .topbar-left { min-width: 0; flex: 1; }
+    .lesson-label {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .lesson-name {
+      font-size: 15px; font-weight: 600; color: var(--text);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .topbar-actions {
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+    }
+    .theme-toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 40px; height: 40px; padding: 0 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      cursor: pointer;
+    }
+    .topbar-board-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 8px 12px; border-radius: var(--radius-pill);
+      border: 1px solid var(--border); background: var(--surface-2);
+      color: var(--text); text-decoration: none;
+      font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .topbar-board-link:hover { border-color: var(--border-strong); background: var(--bg-elev); }
+    .topbar-board-link:active { background: var(--accent-dim); }
+    .conn-pill {
+      display: flex; align-items: center; gap: 5px;
+      padding: 5px 10px; border-radius: var(--radius-pill);
+      font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      flex-shrink: 0;
+      border: 1px solid transparent;
+    }
+    .conn-pill--ok      { background: var(--secure-bg); color: var(--secure); }
+    .conn-pill--degraded{ background: var(--mixed-bg);  color: var(--mixed);  }
+    .conn-pill--lost    { background: var(--revisit-bg);color: var(--revisit);}
+    .conn-pill--connecting{ background: var(--border); color: var(--muted); }
+    .conn-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: currentColor;
+    }
+    .conn-pill--ok .conn-dot { animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    /* Class switcher dropdown */
+    .class-switcher { position: relative; }
+    .class-switcher-btn {
+      display: flex; align-items: center; gap: 4px;
+      background: none; border: none; padding: 0; cursor: pointer;
+    }
+    .class-switcher-caret { font-size: 10px; color: var(--muted); }
+    .class-dropdown {
+      position: absolute; left: 0; top: calc(100% + 8px);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 8px; min-width: 200px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1); z-index: 200;
+    }
+    .class-dropdown-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; color: var(--muted); margin: 4px 8px 8px;
+    }
+    .class-dropdown-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 12px; border-radius: var(--radius-sm);
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      color: var(--text);
+    }
+    .class-dropdown-link--active { background: rgba(196,120,62,.08); }
+    .class-dropdown-count { opacity: .4; font-size: 11px; font-weight: 400; }
+
+    /* ── Block dots strip ── */
+    .block-strip {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 18px;
+      background: color-mix(in srgb, var(--surface) 78%, transparent);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .block-label {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted); flex-shrink: 0;
+    }
+    .block-dots { display: flex; gap: 5px; flex: 1; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .block-dots::-webkit-scrollbar { display: none; }
+    .block-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--border); flex-shrink: 0; transition: all .2s;
+    }
+    .block-dot--done    { background: var(--accent-dim); }
+    .block-dot--current { width: 22px; border-radius: 4px; background: var(--accent); }
+    .block-count { font-size: 11px; font-weight: 600; color: var(--muted-strong); flex-shrink: 0; }
+
+    /* ── Student queue ── */
+    .queue-scroll {
+      padding: 10px 18px;
+      background: color-mix(in srgb, var(--surface) 72%, transparent);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .queue-label {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+    }
+    .queue-chips {
+      display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px;
+    }
+    .queue-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      padding: 5px 12px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 500;
+      white-space: nowrap; flex-shrink: 0; border: 1.5px solid transparent; cursor: default;
+    }
+    .chip--active  { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .chip--waiting { background: var(--bg); color: var(--muted); border-color: var(--border); }
+    .chip--secure  { background: var(--secure-bg); color: var(--secure); border-color: var(--secure-mid); }
+    .chip--mixed   { background: var(--mixed-bg);  color: var(--mixed);  border-color: var(--mixed-mid);  }
+    .chip--revisit { background: var(--revisit-bg);color: var(--revisit);border-color: var(--revisit-mid);}
+
+    /* ── Status banner ── */
+    .status-banner {
+      padding: 10px 18px; font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      flex-shrink: 0;
+      letter-spacing: .01em;
+    }
+    .status-banner--error   { background: var(--revisit-bg); color: var(--revisit); }
+    .status-banner--warning { background: var(--mixed-bg);   color: var(--mixed);   }
+    .status-banner--neutral { background: var(--border);     color: var(--muted);   }
+    .status-banner__retry {
+      background: none; border: none; font-weight: 700; font-size: inherit;
+      color: inherit; cursor: pointer; padding: 0; flex-shrink: 0;
+    }
+
+    /* ── Scrollable stage ── */
+    .stage {
+      flex: 1; overflow-y: auto; padding: 18px;
+      display: flex; flex-direction: column; gap: var(--section-gap);
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: var(--card-pad);
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .card-label {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+    }
+
+    /* ── Ready mode card ── */
+    .ready-card { text-align: center; padding: 24px 20px; }
+    .ready-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px; font-weight: 500; color: var(--text); margin-bottom: 8px;
+    }
+    .ready-meta { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+    .ready-begin-btn {
+      width: 100%; padding: 16px; border-radius: var(--radius-sm); border: none;
+      background: var(--accent); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .board-url-bar {
+      margin-top: 14px; display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px; background: var(--bg);
+      border-radius: var(--radius-sm); border: 1px solid var(--border);
+    }
+    .board-url-text {
+      flex: 1; font-size: 11px; color: var(--muted);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .board-url-copy {
+      flex-shrink: 0; padding: 5px 12px; border-radius: 6px; border: none;
+      background: var(--accent); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; cursor: pointer;
+    }
+    .roster-preview { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .roster-chip {
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500;
+      border: 1px solid var(--border); color: var(--muted); background: var(--bg);
+    }
+
+    /* ── Deliver / observe mode ── */
+    .script-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+    }
+    .script-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px; font-weight: 500; line-height: 1.35; color: var(--text);
+    }
+    .script-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .ctrl-btn {
+      flex: 1; min-width: 100px; padding: 13px 16px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border); background: var(--bg);
+      font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--text);
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .ctrl-btn--advance {
+      background: var(--accent); color: #fff; border-color: var(--accent);
+    }
+    .ctrl-btn:active { filter: brightness(.9); }
+
+    /* Observer mode */
+    .observe-timer {
+      font-size: 48px; font-weight: 700; color: var(--accent);
+      font-variant-numeric: tabular-nums; text-align: center; margin: 8px 0 16px;
+    }
+    .observe-timer--urgent { color: var(--revisit); }
+    .observe-hint { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 16px; }
+
+    /* ── Student card (mark sequential mode) ── */
+    .student-header {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .student-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 4px;
+    }
+    .student-name {
+      font-size: 26px; font-weight: 700; color: var(--text); line-height: 1.1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .attempt-badge {
+      display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent-dim); font-size: 13px; font-weight: 700;
+      color: var(--accent); flex-shrink: 0;
+    }
+    .content-preview {
+      background: var(--bg); border-radius: var(--radius-sm); padding: 12px 14px;
+      border-left: 3px solid var(--accent); margin-bottom: 14px;
+    }
+    .preview-phase {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .preview-content {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px; font-weight: 500; color: var(--text); line-height: 1.3;
+    }
+    .preview-instruction {
+      font-size: 12px; color: var(--muted); margin-top: 4px; font-style: italic;
+    }
+    .preview-response {
+      margin-top: 8px; font-size: 13px; color: var(--muted); line-height: 1.45;
+    }
+    .preview-toggle {
+      margin-top: 10px; background: none; border: none; padding: 0;
+      color: var(--accent); font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+    .preview-correction {
+      margin-top: 8px; padding: 10px 12px; border-radius: var(--radius-sm);
+      background: #fff7ed; border: 1px solid #fed7aa; font-size: 12px; color: var(--text);
+      line-height: 1.45;
+    }
+
+    .slide-actions-card { display: grid; gap: 10px; }
+    .slide-actions {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;
+    }
+    .slide-action-btn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 11px 10px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+      background: var(--surface-2); color: var(--text); font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+      min-height: 48px;
+    }
+    .slide-action-btn:disabled { opacity: .4; cursor: not-allowed; }
+    .slide-action-btn--audio { border-color: var(--accent-dim); }
+    .slide-action-btn--reveal { border-color: #cbd5e1; }
+    .slide-action-btn--mark { border-color: var(--secure-mid); }
+    .slide-action-btn--active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .teacher-prompt-btn {
+      width: 100%;
+      justify-content: flex-start;
+      text-align: left;
+      white-space: normal;
+      line-height: 1.35;
+      letter-spacing: .03em;
+      text-transform: none;
+      padding: 12px 14px;
+      min-height: 0;
+    }
+
+    /* drag letter builder */
+    .drag-build-card { display: grid; gap: 14px; }
+    .drag-build-reveal-row { display: flex; gap: 8px; align-items: center; border-top: 1px solid var(--border); padding-top: 12px; }
+    .drag-build-reveal-row .slide-action-btn { flex: 1; }
+    .drag-build-reveal-count { font-size: 11px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+    .drag-build-section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: .10em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 4px;
+    }
+    .drag-build-slots,
+    .drag-build-tiles {
+      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; min-height: 56px;
+    }
+    .drag-build-slot {
+      width: 54px; height: 54px;
+      border: 2px dashed var(--border-strong);
+      border-radius: 12px;
+      background: transparent;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px; line-height: 1;
+      color: var(--text);
+      display: grid; place-items: center;
+      transition: background 0.14s, border-color 0.14s;
+      cursor: default;
+    }
+    .drag-build-slot--filled {
+      border-style: solid;
+      border-color: var(--accent);
+      background: var(--accent-dim);
+      cursor: pointer;
+    }
+    .drag-build-slot--filled:hover { background: var(--accent-soft); }
+    .spell-word-answer-box {
+      width: 100%;
+      min-height: 92px;
+      border: 1.5px dashed var(--border-strong);
+      border-radius: 16px;
+      background: var(--surface-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+    }
+    .spell-word-answer-box--correct {
+      border-style: solid;
+      border-color: var(--secure-mid);
+      background: var(--secure-bg);
+    }
+    .spell-word-answer-box--incorrect {
+      border-style: solid;
+      border-color: var(--revisit-mid);
+      background: var(--revisit-bg);
+    }
+    .spell-word-answer-box__letters {
+      width: 100%;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .spell-word-answer-chip {
+      width: 56px;
+      height: 56px;
+      flex: 0 0 auto;
+      border: 1.5px solid var(--accent);
+      border-radius: 14px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      line-height: 1;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .spell-word-answer-chip--empty {
+      border-color: var(--border);
+      background: transparent;
+      color: transparent;
+      cursor: default;
+    }
+    .drag-build-tile {
+      width: 54px; height: 54px;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px; line-height: 1;
+      color: var(--text);
+      display: grid; place-items: center;
+      cursor: pointer;
+      transition: transform 0.14s, box-shadow 0.14s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .drag-build-tile:active { transform: scale(0.92); box-shadow: none; }
+
+    .manual-mark-card { display: grid; gap: 12px; }
+    .manual-mark-students { display: grid; gap: 10px; }
+    .manual-mark-student {
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 12px; background: var(--surface-2);
+    }
+    .manual-mark-name { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .manual-mark-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .manual-mark-option {
+      padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+      background: var(--surface); color: var(--text); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .manual-mark-option--selected { border-color: var(--accent); background: var(--accent-dim); }
+
+    /* ── Mark buttons ── */
+    .mark-buttons {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px;
+    }
+    .mark-btn {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 4px; padding: 15px 8px;
+      border-radius: var(--radius-sm); border: 2px solid transparent;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      font-weight: 700; font-size: 11px; letter-spacing: .06em;
+      text-transform: uppercase; transition: all .12s;
+      -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    }
+    .mark-btn .icon { font-size: 18px; line-height: 1; }
+    .mark-btn--secure { background: var(--secure-bg); color: var(--secure); border-color: var(--secure-mid); }
+    .mark-btn--mixed  { background: var(--mixed-bg);  color: var(--mixed);  border-color: var(--mixed-mid);  }
+    .mark-btn--revisit{ background: var(--revisit-bg);color: var(--revisit);border-color: var(--revisit-mid);}
+    .mark-btn--secure:active  { background: var(--secure-mid); color: #fff; }
+    .mark-btn--mixed:active   { background: var(--mixed-mid);  color: #fff; }
+    .mark-btn--revisit:active { background: var(--revisit-mid);color: #fff; }
+    .mark-btn--whole {
+      grid-column: 1 / -1; background: var(--surface);
+      color: var(--secure); border-color: var(--secure-mid); font-size: 12px;
+    }
+
+    .action-row { display: flex; gap: 8px; }
+    .action-btn {
+      flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 11px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+      background: var(--surface); color: var(--muted);
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .action-btn:active { background: var(--bg); color: var(--text); }
+
+    /* Overflow controls (deferred/absent) */
+    .overflow-controls { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .overflow-btn {
+      padding: 6px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--border); background: var(--bg);
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+      color: var(--muted); cursor: pointer;
+    }
+
+    /* ── Mark grid ── */
+    .grid-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    .grid-cell {
+      flex: 1; min-width: 80px; padding: 12px 10px;
+      border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+      background: var(--bg); display: flex; flex-direction: column;
+      align-items: center; gap: 4px; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .grid-cell[data-status="secure"]  { background: var(--secure-bg); border-color: var(--secure-mid); }
+    .grid-cell[data-status="mixed"]   { background: var(--mixed-bg);  border-color: var(--mixed-mid);  }
+    .grid-cell[data-status="revisit"] { background: var(--revisit-bg);border-color: var(--revisit-mid);}
+    .grid-cell__name  { font-size: 12px; font-weight: 600; color: var(--text); text-align: center; }
+    .grid-cell__status{ font-size: 10px; color: var(--muted); text-transform: capitalize; }
+    .grid-cell[data-status="secure"]  .grid-cell__status { color: var(--secure); }
+    .grid-cell[data-status="mixed"]   .grid-cell__status { color: var(--mixed);  }
+    .grid-cell[data-status="revisit"] .grid-cell__status { color: var(--revisit);}
+
+    /* ── Navigation card ── */
+    .nav-card { display: grid; gap: 12px; }
+    .nav-section {
+      display: grid;
+      grid-template-columns: auto auto minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 12px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface-2);
+    }
+    .nav-section__eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted);
+      min-width: 72px;
+    }
+    .nav-section__meta {
+      font-size: 12px; font-weight: 700; color: var(--muted);
+      letter-spacing: .08em;
+      min-width: 52px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .nav-btn {
+      display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 999px;
+      border: 2px solid var(--border); background: var(--surface);
+      color: var(--text); font-size: 20px; cursor: pointer; flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .nav-btn:active { background: var(--accent-dim); border-color: var(--accent); }
+    .nav-btn:disabled { opacity: .3; pointer-events: none; }
+    .nav-info {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      text-align: center;
+    }
+    .nav-phase {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      line-height: 1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .nav-phase--block {
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+    .nav-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .nav-progress__dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(166, 153, 139, 0.28);
+      transition: background-color .16s ease, transform .16s ease;
+    }
+    .nav-progress__dot--active {
+      background: var(--accent);
+      transform: scale(1.04);
+    }
+    .teacher-disclosure {
+      display: grid;
+      gap: 12px;
+    }
+    .teacher-disclosure__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      text-align: left;
+    }
+    .teacher-disclosure__title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .teacher-disclosure__icon {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1;
+    }
+    .nav-meta {
+      font-size: 10px; color: rgba(122,116,108,0.82);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .advance-btn {
+      width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none;
+      background: var(--accent); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .advance-btn:active { background: #a8622f; }
+
+    /* ── Outcomes card ── */
+    .outcomes-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+    .outcome-stat {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      padding: 10px 6px; border-radius: var(--radius-sm); background: var(--bg);
+    }
+    .outcome-num {
+      font-size: 26px; font-weight: 700; line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .outcome-num--secure  { color: var(--secure); }
+    .outcome-num--mixed   { color: var(--mixed);  }
+    .outcome-num--revisit { color: var(--revisit);}
+    .outcome-tag {
+      font-size: 10px; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .progress-bar-wrap {
+      height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden; display: flex;
+    }
+    .pb-secure  { height: 100%; background: var(--secure-mid); transition: width .4s; }
+    .pb-mixed   { height: 100%; background: var(--mixed-mid);  transition: width .4s; }
+    .pb-revisit { height: 100%; background: var(--revisit-mid);transition: width .4s; }
+
+    /* Complete mode extras */
+    .reteach-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .reteach-chip {
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      background: var(--revisit-bg); color: var(--revisit); border: 1px solid var(--revisit-mid);
+    }
+    .complete-next-btn {
+      width: 100%; margin-top: 14px; padding: 14px;
+      border-radius: var(--radius-sm); border: none;
+      background: var(--accent); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
+      cursor: pointer;
+    }
+    .complete-next-btn:disabled { opacity: .4; pointer-events: none; }
+
+    /* ── Bottom bar ── */
+    .bottombar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 18px;
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+      background: color-mix(in srgb, var(--surface) 84%, transparent); border-top: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      flex-shrink: 0;
+      position: sticky;
+      bottom: 0;
+      z-index: 20;
+    }
+    .end-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 10px 16px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border); background: var(--bg);
+      color: var(--muted); font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 600; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .end-btn:active { border-color: var(--revisit-mid); color: var(--revisit); }
+    .queue-summary { flex: 1; text-align: center; font-size: 12px; color: var(--muted); }
+    .queue-summary strong { color: var(--text); font-weight: 600; }
+
+    @media (max-width: 640px) {
+      :root {
+        --shell-max: 100vw;
+        --card-pad: 16px;
+        --section-gap: 10px;
+      }
+      .topbar,
+      .block-strip,
+      .queue-scroll,
+      .status-banner,
+      .bottombar,
+      .stage { padding-left: 14px; padding-right: 14px; }
+      .lesson-name { font-size: 14px; }
+      .script-text { font-size: 20px; }
+      .slide-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .slide-action-btn { min-height: 44px; }
+      .theme-toggle span:last-child { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+  <script defer src="{{ asset_url('lesson_teacher.js') }}"></script>
+  <script defer src="{{ asset_url('alpinejs.min.js') }}"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      const toggle = document.getElementById("teacher-theme-toggle");
+      const root = document.documentElement;
+      if (!toggle) return;
+      toggle.addEventListener("click", function() {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        window.localStorage.setItem("luminos-theme", next);
+      });
+    });
+  </script>
+</head>
+<body>
+
+{% set ns = namespace(blocks=[]) %}
+{% for entry in ordered_slides %}
+  {% if entry.slide.block_id not in ns.blocks %}
+    {% set ns.blocks = ns.blocks + [entry.slide.block_id] %}
+  {% endif %}
+{% endfor %}
+
+{% set server_active_slide_index = initial_slide_index | default(0) %}
+
 <div
-  id="main-content"
-  class="teacher-shell"
+  class="shell"
   x-data='teacherShell({
     lessonId: {{ lesson.lesson_id | tojson }},
     attemptId: {{ attempt_id | tojson }},
@@ -20,139 +813,510 @@
     className: {{ class_name | tojson }},
     roster: {{ roster | tojson }},
     slides: {{ ordered_slides | map(attribute="slide") | map(attribute="slide_id") | list | tojson }},
+    blocks: {{ ns.blocks | tojson }},
     slideTitles: {
       {% for entry in ordered_slides %}
       {{ entry.slide.slide_id | tojson }}: {{ entry.slide.slide_title | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideBlocks: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ entry.slide.block_id | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    blockLabels: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.block_id | tojson }}: {{ entry.block.label | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideContents: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ slide_display_content(entry.slide) | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slidePayloads: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ effective_slide_payloads[entry.slide.slide_id] | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideViewTypes: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ effective_slide_view_types[entry.slide.slide_id] | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideTeacherCues: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ (entry.slide.teacher_cue or "") | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideExpectedResponses: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ (entry.slide.expected_response or "") | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideCorrectionMoves: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ (entry.slide.correction_move or "") | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideTeacherPrompts: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ entry.slide.model_dump()["teacher_prompts"] | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideAudioUrls: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ (entry.slide.slide_audio_url or "") | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideMarkable: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ entry.slide.markable | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideMarkingOptions: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ entry.slide.marking_options | tojson }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    },
+    slideTypeLabels: {{ registry_helper.all_labels() | tojson }},
+    slideTypeControlActions: {
+      {% for entry in ordered_slides %}
+      {{ entry.slide.slide_id | tojson }}: {{ effective_slide_control_actions[entry.slide.slide_id] | tojson }}{% if not loop.last %},{% endif %}
       {% endfor %}
     }
   })'
   x-init="init()">
 
-  <header class="teacher-shell__header">
-    <a class="teacher-shell__back" href="/lesson/{{ lesson.lesson_id }}?class_id={{ class_id }}&attempt_id={{ attempt_id }}">← Lesson view</a>
-    <div class="teacher-shell__eyebrow">Teacher Control</div>
-    <h1 class="teacher-shell__title">{{ lesson.title }}</h1>
-    <div class="teacher-shell__meta">
-      {% if class_name %}<span>{{ class_name }}</span>{% endif %}
-      <span>Attempt {{ attempt_id }}</span>
+  <!-- ── Top bar ── -->
+  <header class="topbar">
+    <div class="topbar-left">
+      {% if all_classes and all_classes | length > 1 %}
+      <div class="class-switcher" x-data="{ open: false }">
+        <button
+          type="button"
+          class="class-switcher-btn"
+          @click="open = !open"
+          @click.outside="open = false">
+          <div>
+            <div class="lesson-label">Teaching</div>
+            <div class="lesson-name">{{ class_name if class_name else 'Select class' }}</div>
+          </div>
+          <span class="class-switcher-caret" x-text="open ? '▲' : '▾'">▾</span>
+        </button>
+        <div class="class-dropdown" x-show="open" x-cloak>
+          <div class="class-dropdown-label">Switch class</div>
+          {% for cls in all_classes %}
+          <a
+            href="/teach/class/{{ cls.id }}/start"
+            class="class-dropdown-link {% if cls.id == class_id %}class-dropdown-link--active{% endif %}">
+            <span>{% if cls.id == class_id %}✓ {% endif %}{{ cls.class_name }}</span>
+            <span class="class-dropdown-count">{{ cls.student_count }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% else %}
+      <div class="lesson-label">Teaching</div>
+      <div class="lesson-name">{{ class_name if class_name else lesson.title }}</div>
+      {% endif %}
+    </div>
+    <div class="topbar-actions">
+      <button id="teacher-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme"><span>◐</span><span>&nbsp;Theme</span></button>
+      {% if class_id %}
+      <a
+        class="topbar-board-link"
+        href="/classes/{{ class_id }}/board"
+        target="_blank"
+        rel="noopener">
+        Open Board
+      </a>
+      {% endif %}
+      <div
+        class="conn-pill"
+        :class="{
+          'conn-pill--ok':         connectionStatus === 'ok',
+          'conn-pill--degraded':   connectionStatus === 'degraded',
+          'conn-pill--lost':       connectionStatus === 'lost',
+          'conn-pill--connecting': connectionStatus === 'connecting'
+        }">
+        <div class="conn-dot"></div>
+        <span x-text="connectionLabel">Live</span>
+      </div>
     </div>
   </header>
 
-  <section class="teacher-shell__workspace">
-  <section class="teacher-shell__command card">
-    <div class="teacher-shell__state-top">
-      <div>
-        <div class="teacher-shell__state-label">Current state</div>
-        <div class="teacher-shell__state-value" x-text="currentStateLabel"></div>
-      </div>
-      <div class="teacher-shell__command-meta">
-        <div class="teacher-shell__timer-pill" x-show="timerLabel" x-cloak :data-paused="paused">
-          <span class="teacher-shell__timer-pill-label" x-text="paused ? 'Paused' : 'Auto-advance'"></span>
-          <strong x-text="timerLabel"></strong>
-        </div>
-        <div class="teacher-shell__connection" :data-status="connectionStatus">
-          <span class="teacher-shell__connection-dot"></span>
-          <span x-text="connectionLabel"></span>
-        </div>
-      </div>
-    </div>
-    <div class="teacher-shell__prompt" x-text="promptText || 'Waiting for command state...'"></div>
-    <div class="teacher-shell__board-cue" x-show="boardPromptText && boardPromptText !== promptText" x-cloak>
-      Board says: <span x-text="boardPromptText"></span>
-    </div>
-    <div class="teacher-shell__submeta">
-      <span x-show="currentStudent" x-cloak>Student: <strong x-text="currentStudent"></strong></span>
-      <span>Progress: <strong x-text="queueSummary"></strong></span>
-    </div>
-    <div class="teacher-shell__actions teacher-shell__actions--primary">
-      <template x-for="control in teacherControls" :key="control">
-        <button
-          type="button"
-          class="teacher-shell__action-btn"
-          :class="'teacher-shell__action-btn--' + control.replaceAll('_', '-')"
-          @click="handleControl(control)"
-          x-text="controlLabel(control)">
-        </button>
+  <!-- ── Block dots ── -->
+  <div class="block-strip">
+    <span class="block-label">Block</span>
+    <div class="block-dots">
+      <template x-for="(b, i) in blockStatus" :key="b.id">
+        <div class="block-dot" :class="{
+          'block-dot--done':    b.status === 'done',
+          'block-dot--current': b.status === 'current'
+        }"></div>
       </template>
     </div>
-    <div class="teacher-shell__command-footer">
-      <div class="teacher-shell__slide-nav teacher-shell__slide-nav--compact">
-        <button type="button" class="teacher-shell__nav-btn" @click="goPrevSlide()" :disabled="activeSlideIndex === 0">Prev</button>
-        <div class="teacher-shell__slide-meta">
-          <div class="teacher-shell__slide-id" x-text="activeSlideId"></div>
-          <div class="teacher-shell__slide-title" x-text="activeSlideTitle"></div>
+    <span class="block-count" x-text="blockProgressLabel">{{ server_active_slide_index + 1 }} / {{ ns.blocks | length }}</span>
+  </div>
+
+  <!-- ── Status banner ── -->
+  <div
+    class="status-banner"
+    :class="{
+      'status-banner--error':   clientStatusTone === 'error',
+      'status-banner--warning': clientStatusTone === 'warning',
+      'status-banner--neutral': clientStatusTone === 'neutral'
+    }"
+    x-show="clientStatusMessage"
+    x-cloak
+    aria-live="polite">
+    <span x-text="clientStatusMessage"></span>
+    <button
+      type="button"
+      class="status-banner__retry"
+      x-show="retryClientAction"
+      @click="retryClientRequest()"
+      x-text="retryClientLabel">
+    </button>
+  </div>
+
+  <!-- ── Student queue (mark_sequential mode only) ── -->
+  <div
+    class="queue-scroll"
+    x-show="false"
+    x-cloak>
+    <div class="queue-label">Queue</div>
+    <div class="queue-chips">
+      <template x-for="student in roster" :key="student">
+        <div
+          class="chip"
+          :class="chipClass(student)"
+          x-text="student">
         </div>
-        <button type="button" class="teacher-shell__nav-btn" @click="goNextSlide()" :disabled="activeSlideIndex >= slides.length - 1">Next</button>
-      </div>
+      </template>
     </div>
-    <div
-      class="teacher-shell__status"
-      x-show="clientStatusMessage"
-      x-cloak
-      aria-live="polite"
-      :data-tone="clientStatusTone">
-      <span x-text="clientStatusMessage"></span>
+  </div>
+
+  <!-- ── Scrollable stage ── -->
+  <div class="stage">
+
+    <!-- READY mode -->
+    <div class="card ready-card" x-show="teachingMode === 'ready'" x-cloak>
+      <div class="card-label">Up next</div>
+      <div class="ready-title" x-text="activeSlideTitle || activeSlideId || 'Starting…'"></div>
+      <div class="ready-meta">
+        <span x-text="activeViewTypeLabel"></span>
+        <span x-show="queueSummary" x-text="' · ' + queueSummary"></span>
+      </div>
       <button
         type="button"
-        class="teacher-shell__status-retry"
-        x-show="retryClientAction"
-        x-cloak
-        @click="retryClientRequest()"
-        x-text="retryClientLabel"></button>
-    </div>
-    <div class="teacher-shell__result" x-show="lastResult" x-cloak x-text="lastResult"></div>
-  </section>
-
-  <section class="teacher-shell__details">
-  <section class="teacher-shell__queues card">
-    <div class="teacher-shell__section-title">Queue</div>
-    <div class="teacher-shell__queue-grid">
-      <div class="teacher-shell__queue-block">
-        <div class="teacher-shell__queue-label">Next up</div>
-        <div class="teacher-shell__chip-row">
-          <template x-if="nextStudents.length">
-            <template x-for="student in nextStudents" :key="student">
-              <span class="teacher-shell__chip" x-text="student"></span>
-            </template>
-          </template>
-          <template x-if="!nextStudents.length">
-            <span class="teacher-shell__empty">No upcoming students</span>
-          </template>
-        </div>
+        class="ready-begin-btn"
+        @click="handleControl('force_advance')"
+        :disabled="!slides.length">
+        Begin →
+      </button>
+      {% if class_id %}
+      <div class="board-url-bar" x-data="{ copied: false }">
+        <span class="board-url-text"
+          x-text="window.location.origin + '/classes/{{ class_id }}/board'"></span>
+        <button
+          type="button"
+          class="board-url-copy"
+          @click="navigator.clipboard.writeText(window.location.origin + '/classes/{{ class_id }}/board'); copied=true; setTimeout(()=>copied=false,2000)"
+          x-text="copied ? '✓' : 'Copy'">
+        </button>
       </div>
-      <div class="teacher-shell__queue-block">
-        <div class="teacher-shell__queue-label">Reteach</div>
-        <div class="teacher-shell__chip-row">
-          <template x-if="reteachQueue.length">
-            <template x-for="student in reteachQueue" :key="student">
-              <span class="teacher-shell__chip teacher-shell__chip--reteach" x-text="student"></span>
-            </template>
-          </template>
-          <template x-if="!reteachQueue.length">
-            <span class="teacher-shell__empty">Queue clear</span>
-          </template>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="teacher-shell__roster card">
-    <div class="teacher-shell__section-title">Roster</div>
-    <div class="teacher-shell__roster-list">
+      {% endif %}
       <template x-if="roster.length">
+        <div class="roster-preview">
+          <template x-for="s in roster" :key="s">
+            <span class="roster-chip" x-text="s"></span>
+          </template>
+        </div>
+      </template>
+    </div>
+
+    <!-- Teaching instructions -->
+    <div class="card" x-show="teachingMode !== 'ready'" x-cloak x-data="{ teacherOpen: false }">
+      <div class="teacher-disclosure">
+        <button type="button" class="teacher-disclosure__toggle" @click="teacherOpen = !teacherOpen" :aria-expanded="teacherOpen.toString()">
+          <span class="teacher-disclosure__title">Teacher</span>
+          <span class="teacher-disclosure__icon" x-text="teacherOpen ? '−' : '+'"></span>
+        </button>
+        <div x-show="teacherOpen" x-cloak>
+          <div class="card-label">What To Do</div>
+          <div class="script-text" x-text="activeTeacherCue"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card slide-actions-card" x-show="currentSlideActions.length" x-cloak>
+      <div class="card-label">Slide actions</div>
+      <div id="slide-actions" class="slide-actions">
+        <template x-for="action in currentSlideActions" :key="action">
+          <button
+            type="button"
+            class="slide-action-btn"
+            :class="actionButtonClass(action)"
+            :disabled="actionDisabled(action)"
+            :title="actionTooltip(action)"
+            @click="handleSlideAction(action)">
+            <span x-text="actionLabel(action)"></span>
+          </button>
+        </template>
+        <template x-if="teacherControls.includes('pause')">
+          <button
+            type="button"
+            class="slide-action-btn"
+            @click="handleControl('pause')"
+            x-text="paused ? 'Resume' : 'Pause'">
+          </button>
+        </template>
+      </div>
+    </div>
+
+    <!-- ── Drag Letter Builder ── -->
+    <div class="card drag-build-card" x-show="isDragLetterSlide" x-cloak>
+      <div class="card-label">Build the Word</div>
+      <div>
+        <div class="drag-build-section-label">Slots</div>
+        <div class="drag-build-slots">
+          <template x-for="(letter, i) in dragLetterPlaced" :key="i">
+            <button
+              type="button"
+              class="drag-build-slot"
+              :class="{
+                'drag-build-slot--filled': letter !== null,
+                'spell-word-answer-box--correct': dragLetterIsComplete && dragLetterIsCorrect,
+                'spell-word-answer-box--incorrect': dragLetterIsComplete && !dragLetterIsCorrect
+              }"
+              @click="dragLetterSlotClick(i)">
+              <span x-text="letter || ''"></span>
+            </button>
+          </template>
+        </div>
+      </div>
+      <div>
+        <div class="drag-build-section-label">Tiles</div>
+        <div class="drag-build-tiles">
+          <template x-for="(letter, i) in dragLetterAvailable" :key="'tile-' + i">
+            <button type="button" class="drag-build-tile" @click="dragLetterTileClick(i)">
+              <span x-text="letter"></span>
+            </button>
+          </template>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="slide-action-btn"
+        @click="dragLetterReset()"
+        x-show="dragLetterPlaced.some(l => l !== null)"
+        x-cloak>
+        Reset
+      </button>
+
+      <div class="drag-build-reveal-count" x-show="classId && dragLetterRevealCount > 0" x-cloak
+        x-text="dragLetterRevealCount + ' / ' + dragLetterMaxReveal + ' revealed'"></div>
+    </div>
+
+    <div class="card drag-build-card" x-show="isSpellWordSlide" x-cloak>
+      <div class="card-label">Spell the Word</div>
+      <div>
+        <div class="drag-build-section-label">Answer</div>
+        <div
+          class="spell-word-answer-box"
+          :class="{
+            'spell-word-answer-box--correct': spellWordIsComplete && spellWordIsCorrect && !isAnswerRevealed,
+            'spell-word-answer-box--incorrect': spellWordIsComplete && !spellWordIsCorrect && !isAnswerRevealed
+          }">
+          <div class="spell-word-answer-box__letters">
+            <template x-for="item in spellWordFilledLetters" :key="item.id">
+              <button
+                type="button"
+                class="spell-word-answer-chip"
+                @click="spellWordSlotClick(item.slotIndex)">
+                <span x-text="item.letter"></span>
+              </button>
+            </template>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="drag-build-section-label">Letters</div>
+        <div class="drag-build-tiles">
+          <template x-for="(item, i) in spellWordAvailable" :key="item.id">
+            <button type="button" class="drag-build-tile" @click="spellWordTileClick(i)">
+              <span x-text="item.letter"></span>
+            </button>
+          </template>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="slide-action-btn"
+        @click="spellWordReset()"
+        x-show="spellWordPlaced.some(l => l !== null)"
+        x-cloak>
+        Reset
+      </button>
+    </div>
+
+    <div class="card drag-build-card" x-show="isPatternNoticingSlide" x-cloak>
+      <div class="card-label">Pattern Noticing</div>
+      <div class="drag-build-section-label">Words</div>
+      <div style="display:grid; gap:8px;">
+        <template x-for="(word, index) in patternNoticingBracketWords" :key="'pattern-word-' + index">
+          <div class="preview-correction" style="margin-top:0;" x-text="word"></div>
+        </template>
+      </div>
+      <div class="drag-build-section-label" style="margin-top:14px;">Prompt</div>
+      <div class="preview-correction" style="margin-top:0;" x-text="patternNoticingPrompt"></div>
+      <div class="drag-build-reveal-count" x-text="patternNoticingProgressLabel + ' revealed'"></div>
+    </div>
+
+    <div class="card slide-actions-card" x-show="hasPromptPanel" x-cloak>
+      <div class="card-label">Teacher prompts</div>
+      <div class="slide-actions" style="display:grid; gap:8px;">
+        <template x-for="(prompt, index) in currentTeacherPrompts" :key="activeSlideId + '-prompt-' + index">
+          <button
+            type="button"
+            class="slide-action-btn teacher-prompt-btn"
+            :class="{ 'slide-action-btn--active': isPromptPlaying(index) }"
+            @click="handlePromptAction(index)">
+            <span x-text="promptButtonLabel(prompt, index)"></span>
+          </button>
+        </template>
+      </div>
+      <div
+        class="preview-correction"
+        x-show="activePromptText"
+        x-cloak
+        style="margin-top:10px;"
+        x-text="activePromptText"></div>
+    </div>
+
+    <div class="card manual-mark-card" x-show="manualMarkingOpen" x-cloak>
+      <div class="card-label">Mark students</div>
+      <div class="manual-mark-students">
         <template x-for="student in roster" :key="student">
-          <div class="teacher-shell__roster-item">
-            <span class="teacher-shell__roster-name" x-text="student"></span>
-            <span class="teacher-shell__roster-status" :data-status="studentStatuses[student] || ''" :aria-label="student + ' status ' + (studentStatuses[student] || 'not marked')" x-text="studentStatuses[student] || '—'"></span>
+          <div class="manual-mark-student">
+            <div class="manual-mark-name" x-text="student"></div>
+            <div class="manual-mark-options">
+              <template x-for="option in currentMarkingOptions" :key="student + '-' + option">
+                <button
+                  type="button"
+                  class="manual-mark-option"
+                  :class="{ 'manual-mark-option--selected': isSelectedMark(student, option) }"
+                  @click="handleStudentMark(student, option)">
+                  <span x-text="option"></span>
+                  <span x-show="isSelectedMark(student, option)" x-cloak>✓</span>
+                </button>
+              </template>
+            </div>
           </div>
         </template>
+      </div>
+    </div>
+
+    <!-- ── Navigation card ── -->
+    <div class="card nav-card" x-cloak>
+      <div class="card-label">Navigation</div>
+      <div class="nav-section">
+        <div class="nav-section__eyebrow">Slide</div>
+        <button
+          type="button"
+          class="nav-btn"
+          @click="goPrevSlide()"
+          :disabled="activeSlideIndex === 0">‹</button>
+        <div class="nav-info">
+          <div class="nav-progress">
+            <template x-for="dotIndex in currentBlockSlideCount" :key="'slide-dot-' + dotIndex">
+              <span
+                class="nav-progress__dot"
+                :class="{ 'nav-progress__dot--active': dotIndex === currentBlockSlidePosition }"></span>
+            </template>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="nav-btn"
+          @click="goNextSlide()"
+          :disabled="activeSlideIndex >= slides.length - 1">›</button>
+        <div class="nav-section__meta" x-text="currentBlockSlidePosition + ' / ' + currentBlockSlideCount"></div>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section__eyebrow">Block</div>
+        <button
+          type="button"
+          class="nav-btn"
+          @click="goPrevBlock()"
+          :disabled="!hasPrevBlock">‹</button>
+          <div class="nav-info">
+            <div class="nav-phase nav-phase--block" x-text="'BLOCK ' + Number(activeBlockId || 0)"></div>
+          </div>
+        <button
+          type="button"
+          class="nav-btn"
+          @click="goNextBlock()"
+          :disabled="!hasNextBlock">›</button>
+        <div class="nav-section__meta" x-text="blockProgressLabel"></div>
+      </div>
+    </div>
+
+    <div
+      class="card"
+      x-show="false"
+      x-cloak>
+      <div class="card-label">Class outcomes — this slide</div>
+      <div class="outcomes-row">
+        <div class="outcome-stat">
+          <div class="outcome-num outcome-num--secure" x-text="secureCount"></div>
+          <div class="outcome-tag">Secure</div>
+        </div>
+        <div class="outcome-stat">
+          <div class="outcome-num outcome-num--mixed" x-text="mixedCount"></div>
+          <div class="outcome-tag">Mixed</div>
+        </div>
+        <div class="outcome-stat">
+          <div class="outcome-num outcome-num--revisit" x-text="revisitCount"></div>
+          <div class="outcome-tag">Revisit</div>
+        </div>
+      </div>
+      <div class="progress-bar-wrap" style="margin-top:8px;">
+        <div class="pb-secure"  :style="`width:${roster.length ? secureCount/roster.length*100 : 0}%`"></div>
+        <div class="pb-mixed"   :style="`width:${roster.length ? mixedCount/roster.length*100 : 0}%`"></div>
+        <div class="pb-revisit" :style="`width:${roster.length ? revisitCount/roster.length*100 : 0}%`"></div>
+      </div>
+    </div>
+
+  </div><!-- /stage -->
+
+  <!-- ── Bottom bar ── -->
+  <footer class="bottombar">
+    <a
+      href="/teach"
+      class="end-btn"
+      style="text-decoration:none;">
+      ← Exit
+    </a>
+    <div class="queue-summary">
+      <template x-if="roster.length && pendingCount > 0">
+        <span><strong x-text="pendingCount"></strong> remaining</span>
       </template>
-      <template x-if="!roster.length">
-        <div class="teacher-shell__empty">No roster connected</div>
+      <template x-if="!roster.length || pendingCount === 0">
+        <span x-text="lesson_title_fallback"></span>
       </template>
     </div>
-  </section>
-  </section>
-  </section>
+  </footer>
+
+  <audio x-ref="slideAudio" hidden></audio>
 </div>
-{% endblock %}
+
+<script>
+  // Make lesson title available to Alpine for bottom bar fallback
+  window.lesson_title_fallback = {{ lesson.title | tojson }};
+</script>
+
+</body>
+</html>

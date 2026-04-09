@@ -1,36 +1,32 @@
 <div class="lesson-flashcard">
-  {% if slide.content_payload.image and slide.content_payload.front_text %}
-  <div class="lesson-flashcard__image-wrap">
-    <img
-      class="lesson-flashcard__image"
-      src="{{ slide.content_payload.image }}"
-      alt="{{ slide.slide_title }}">
-  </div>
-  {% endif %}
+  {% set legacy_image = slide.content_payload.image if not slide.content_payload.front_image and not slide.content_payload.back_image else None %}
+  {% set front_image = slide.content_payload.front_image or (legacy_image if not slide.content_payload.front_text else None) %}
+  {% set back_image = slide.content_payload.back_image or (legacy_image if slide.content_payload.front_text and not slide.content_payload.back_text else None) %}
+  {% set front_text = slide.content_payload.front_text %}
+  {% set back_word = slide.content_payload.back_text or slide.content_payload.front_text %}
+  {% set has_distinct_back = back_word != slide.content_payload.front_text or slide.content_payload.blend_units or back_image %}
 
   <button
     type="button"
     class="lesson-flashcard__card"
     @click="revealed = !revealed">
-    {% if slide.content_payload.image and not slide.content_payload.front_text %}
+    {% if front_image %}
     <img
       class="lesson-flashcard__card-image"
       x-show="!revealed"
       x-cloak
-      src="{{ slide.content_payload.image }}"
+      src="{{ front_image }}"
       alt="{{ slide.slide_title }}">
     {% endif %}
 
-    {% if slide.content_payload.front_text %}
+    {% if front_text %}
     <span
       class="lesson-flashcard__text"
       x-show="!revealed"
-      :style='getResponsiveTextStyle({{ slide.content_payload.front_text | tojson }}, "word")'>
-      {{ slide.content_payload.front_text }}
+      :style='getResponsiveTextStyle({{ front_text | tojson }}, "word")'>
+      {{ front_text }}
     </span>
     {% endif %}
-
-    {% set back_word = slide.content_payload.back_text or slide.content_payload.front_text %}
 
     {% if slide.content_payload.blend_units %}
     {% set blend_json = slide.content_payload.model_dump().blend_units | tojson %}
@@ -38,7 +34,7 @@
       class="lesson-flashcard__blend-row"
       x-show="revealed"
       x-cloak
-      :style='getResponsiveTextStyle({{ back_word | tojson }}, "word")'>
+      :style='getResponsiveTextStyle({{ back_word | default("", true) | tojson }}, "word")'>
       {% for unit in slide.content_payload.blend_units %}
       <span
         class="lesson-flashcard__blend-unit"
@@ -47,13 +43,30 @@
       </span>
       {% endfor %}
     </div>
-    {% else %}
+    {% elif back_image %}
+    <img
+      class="lesson-flashcard__card-image"
+      x-show="revealed"
+      x-cloak
+      src="{{ back_image }}"
+      alt="{{ slide.slide_title }} back">
+    {% elif has_distinct_back %}
     <span
       class="lesson-flashcard__text"
       x-show="revealed"
-      :style='getResponsiveTextStyle({{ back_word | tojson }}, "word")'>
+      x-cloak
+      :style='getResponsiveTextStyle({{ back_word | default("", true) | tojson }}, "word")'>
       {{ back_word }}
     </span>
+    {% else %}
+    {% if back_word %}
+    <span
+      class="lesson-flashcard__text"
+      x-show="!revealed"
+      :style='getResponsiveTextStyle({{ back_word | default("", true) | tojson }}, "word")'>
+      {{ back_word }}
+    </span>
+    {% endif %}
     {% endif %}
   </button>
 

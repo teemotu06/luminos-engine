@@ -1,0 +1,82 @@
+[
+  {
+    "unit_id": "G1",
+    "group_number": 1,
+    "title": "Short Vowels & Early Consonants",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 1
+  },
+  {
+    "unit_id": "G2",
+    "group_number": 2,
+    "title": "Core CVC Expansion",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 2
+  },
+  {
+    "unit_id": "G3",
+    "group_number": 3,
+    "title": "Late Consonants & Contrast Review",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 3
+  },
+  {
+    "unit_id": "G4",
+    "group_number": 4,
+    "title": "Digraph Foundations",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 4
+  },
+  {
+    "unit_id": "G5",
+    "group_number": 5,
+    "title": "Long Vowels & Extended Spellings",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 5
+  },
+  {
+    "unit_id": "G6",
+    "group_number": 6,
+    "title": "R-Controlled Vowels",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 6
+  },
+  {
+    "unit_id": "G7",
+    "group_number": 7,
+    "title": "Advanced Spellings & Suffix Patterns",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 7
+  },
+  {
+    "unit_id": "G8",
+    "group_number": 8,
+    "title": "Consonant Clusters & Complex Patterns",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 8
+  },
+  {
+    "unit_id": "G9",
+    "group_number": 9,
+    "title": "Syllables, Prefixes & Schwa",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 9
+  },
+  {
+    "unit_id": "G10",
+    "group_number": 10,
+    "title": "Roots, Morphology & Programme Review",
+    "description": "",
+    "target_phonemes": [],
+    "sort_order": 10
+  }
+]

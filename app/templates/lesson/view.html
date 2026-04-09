@@ -3,9 +3,9 @@
 {% block title %}{{ lesson.title }}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='dist/lesson.css') }}?v=11">
-<script defer src="{{ url_for('static', path='dist/oral_prompt_helper.js') }}?v=11"></script>
-<script defer src="{{ url_for('static', path='dist/lesson.js') }}?v=11"></script>
+<link rel="stylesheet" href="{{ asset_url('lesson.css') }}">
+<script defer src="{{ asset_url('oral_prompt_helper.js') }}"></script>
+<script defer src="{{ asset_url('lesson.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -36,7 +36,7 @@
             class="lesson-shell__launch-btn lesson-shell__launch-btn--secondary"
             target="_blank"
             rel="noopener noreferrer"
-            href="/lesson/{{ lesson.lesson_id }}/board?class_id={{ class_id }}&attempt_id={{ attempt_id }}">
+            href="/classes/{{ class_id }}/board">
             Board
         </a>
     </div>
@@ -72,6 +72,7 @@
     <div class="lesson-shell__meta" hidden data-attempt-id="{{ attempt_id }}" data-lesson-id="{{ lesson.lesson_id }}"></div>
 
     <main id="main-content" class="block-list lesson-shell__workspace">
+        {% set shell_mode = 'lesson' %}
         {% if dynamic_review_slides %}
         {% set review_pattern_count = (dynamic_review_slides | length) // 2 %}
         <div class="smart-review-notice">
