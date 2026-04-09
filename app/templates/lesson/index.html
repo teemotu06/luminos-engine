@@ -2,6 +2,10 @@
 
 {% block title %}Lesson Library — LUMINOS{% endblock %}
 
+{% block head %}
+<script defer src="{{ asset_url('lesson_launcher.js') }}"></script>
+{% endblock %}
+
 {% block content %}
 
 {# ── Pre-compute stats ─────────────────────────────────── #}
@@ -18,71 +22,7 @@
 
 <div
   class="page launcher"
-  x-data="{
-    selectedClassId: '',
-    lessonProgress: {},
-    masteryGates: {},
-    classReviewMap: {},
-    libraryError: '',
-    init() {
-      const mapNode = document.getElementById('class-review-map');
-      if (mapNode && mapNode.textContent) {
-        try {
-          this.classReviewMap = JSON.parse(mapNode.textContent);
-        } catch (_error) {
-          this.classReviewMap = {};
-        }
-      }
-      this.$watch('selectedClassId', val => {
-        void this.fetchProgress(val);
-        void this.fetchMasteryGates(val);
-      });
-    },
-    async fetchProgress(classId) {
-      if (!classId) { this.lessonProgress = {}; return; }
-      try {
-        const response = await fetch('/lesson/progress?class_id=' + encodeURIComponent(classId));
-        if (!response.ok) throw new Error('Failed to load lesson progress');
-        this.lessonProgress = await response.json();
-      } catch (_error) {
-        this.lessonProgress = {};
-        this.libraryError = 'Lesson progress is temporarily unavailable.';
-      }
-    },
-    async fetchMasteryGates(classId) {
-      if (!classId) { this.masteryGates = {}; return; }
-      try {
-        const response = await fetch('/lesson/mastery-gates?class_id=' + encodeURIComponent(classId));
-        if (!response.ok) throw new Error('Failed to load mastery gates');
-        this.masteryGates = await response.json();
-      } catch (_error) {
-        this.masteryGates = {};
-        this.libraryError = 'Mastery gate data is temporarily unavailable.';
-      }
-    },
-    reviewFor(lessonId) {
-      if (!this.selectedClassId) return null;
-      return (this.classReviewMap[this.selectedClassId] || {})[lessonId] || null;
-    },
-    gateFor(lessonId) {
-      if (!this.selectedClassId) return null;
-      return this.masteryGates[lessonId] || null;
-    },
-    lessonUrl(lessonId, mode = 'lesson') {
-      const classId = this.selectedClassId ? ('?class_id=' + encodeURIComponent(this.selectedClassId)) : '';
-      if (mode === 'teacher') return '/lesson/' + lessonId + '/teacher' + classId;
-      if (mode === 'board') return '/lesson/' + lessonId + '/board' + classId;
-      return '/lesson/' + lessonId + classId;
-    },
-    openLesson(lessonId, mode = 'lesson') {
-      const url = this.lessonUrl(lessonId, mode);
-      if (mode === 'lesson') {
-        window.location.assign(url);
-        return;
-      }
-      window.open(url, '_blank');
-    }
-  }">
+  x-data="launcherShell()">
 
   <header class="launcher__header">
     <div class="launcher__header-identity">
@@ -146,25 +86,27 @@
           @keydown.space.prevent="openLesson('{{ lesson.lesson_id }}')">
           <div class="launcher__card-top">
             <span class="launcher__lesson-id">{{ lesson.lesson_id }}</span>
-            <template x-if="lessonProgress['{{ lesson.lesson_id }}']">
-              <span
-                class="launcher__status-badge"
-                :class="'launcher__status-badge--' + lessonProgress['{{ lesson.lesson_id }}'].replace('_', '-')"
-                x-text="lessonProgress['{{ lesson.lesson_id }}'] === 'completed' ? 'Completed' : 'In Progress'">
-              </span>
-            </template>
-            <template x-if="!lessonProgress['{{ lesson.lesson_id }}']">
-              {% set status_labels = {'draft': 'Building', 'ready': 'Ready'} %}
-              <span class="launcher__status-badge launcher__status-badge--{{ lesson.content_pack_status }}">{{ status_labels.get(lesson.content_pack_status, lesson.content_pack_status | replace('_', ' ') | title) }}</span>
-            </template>
-            <template x-if="selectedClassId && gateFor('{{ lesson.lesson_id }}')">
-              <span
-                class="launcher__gate-pill"
-                :class="'launcher__gate-pill--' + gateFor('{{ lesson.lesson_id }}').gate_level"
-                :title="gateFor('{{ lesson.lesson_id }}').gate_label + (gateFor('{{ lesson.lesson_id }}').marked_count ? ' · ' + gateFor('{{ lesson.lesson_id }}').secure_count + '/' + gateFor('{{ lesson.lesson_id }}').marked_count + ' secure' : '')"
-                x-text="gateFor('{{ lesson.lesson_id }}').gate_label">
-              </span>
-            </template>
+            <div class="launcher__card-top-meta">
+              <template x-if="lessonProgress['{{ lesson.lesson_id }}']">
+                <span
+                  class="launcher__status-badge"
+                  :class="'launcher__status-badge--' + lessonProgress['{{ lesson.lesson_id }}'].replace('_', '-')"
+                  x-text="lessonProgress['{{ lesson.lesson_id }}'] === 'completed' ? 'Completed' : 'In Progress'">
+                </span>
+              </template>
+              <template x-if="!lessonProgress['{{ lesson.lesson_id }}']">
+                {% set status_labels = {'draft': 'Building', 'ready': 'Ready'} %}
+                <span class="launcher__status-badge launcher__status-badge--{{ lesson.content_pack_status }}">{{ status_labels.get(lesson.content_pack_status, lesson.content_pack_status | replace('_', ' ') | title) }}</span>
+              </template>
+              <template x-if="selectedClassId && gateFor('{{ lesson.lesson_id }}')">
+                <span
+                  class="launcher__gate-pill"
+                  :class="'launcher__gate-pill--' + gateFor('{{ lesson.lesson_id }}').gate_level"
+                  :title="gateFor('{{ lesson.lesson_id }}').gate_label + (gateFor('{{ lesson.lesson_id }}').marked_count ? ' · ' + gateFor('{{ lesson.lesson_id }}').secure_count + '/' + gateFor('{{ lesson.lesson_id }}').marked_count + ' secure' : '')"
+                  x-text="gateChipLabel('{{ lesson.lesson_id }}')">
+                </span>
+              </template>
+            </div>
           </div>
           {% if lesson.target_pattern %}
           <div class="launcher__phoneme-pills">
@@ -209,12 +151,16 @@
                 <button
                   type="button"
                   class="launcher__launch-btn launcher__launch-btn--split"
+                  :disabled="!selectedClassId"
+                  :title="selectedClassId ? 'Open class control' : 'Select a class to open Teacher'"
                   @click.stop.prevent="openLesson('{{ lesson.lesson_id }}', 'teacher')">
                   Teacher
                 </button>
                 <button
                   type="button"
                   class="launcher__launch-btn launcher__launch-btn--split"
+                  :disabled="!selectedClassId"
+                  :title="selectedClassId ? 'Open class board' : 'Select a class to open Board'"
                   @click.stop.prevent="openLesson('{{ lesson.lesson_id }}', 'board')">
                   Board
                 </button>

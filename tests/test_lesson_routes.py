@@ -248,7 +248,7 @@ class LessonRouteTests(unittest.TestCase):
         self.assertIn("expected version 1, found 2", stale_complete.json()["detail"])
 
     def test_get_lesson_fails_open_when_dynamic_review_lookup_breaks(self):
-        with patch("app.routers.lesson.get_class_review_recommendations", side_effect=RuntimeError("boom")):
+        with patch("app.services.lesson_navigation.get_class_review_recommendations", side_effect=RuntimeError("boom")):
             response = self.client.get("/lesson/G1-L1?class_id=class-1")
 
         self.assertEqual(response.status_code, 200)
@@ -260,8 +260,8 @@ class LessonRouteTests(unittest.TestCase):
         )
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Teacher Control", response.text)
-        self.assertIn("teacher-shell", response.text)
+        self.assertIn("Class 1", response.text)
+        self.assertIn("teacherShell", response.text)
 
     def test_teacher_shell_ignores_invalid_placeholder_ids(self):
         response = self.client.get(
@@ -269,37 +269,67 @@ class LessonRouteTests(unittest.TestCase):
         )
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Teacher Control", response.text)
+        self.assertIn("teacherShell", response.text)
 
-    def test_get_board_shell_renders(self):
+    def test_get_board_shell_redirects_to_class_board(self):
         response = self.client.get(
-            f"/lesson/G1-L1/board?class_id=class-1&attempt_id={self.attempt.attempt_id}"
+            f"/lesson/G1-L1/board?class_id=class-1&attempt_id={self.attempt.attempt_id}",
+            follow_redirects=False,
         )
 
-        self.assertEqual(response.status_code, 200)
-        self.assertIn("board-shell", response.text)
-        self.assertIn("board-command__surface", response.text)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.headers["location"], "/classes/class-1/board")
 
-    def test_board_shell_ignores_invalid_placeholder_ids(self):
+    def test_board_route_rejects_missing_class_id(self):
         response = self.client.get(
-            "/lesson/G1-L1/board?class_id=YOUR_CLASS_ID&attempt_id=YOUR_ATTEMPT_ID"
+            "/lesson/G1-L1/board"
         )
 
-        self.assertEqual(response.status_code, 200)
-        self.assertIn("board-shell", response.text)
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("class board URL", response.json()["detail"])
 
-    def test_command_state_route_returns_generic_slide_runtime(self):
+    def test_command_state_route_rejects_inactive_lesson_one_block_slide(self):
         response = self.client.get(
-            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}?slide_id=01-01"
+            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}?slide_id=02-01"
         )
 
+        self.assertEqual(response.status_code, 404)
+        self.assertIn("not found in lesson", response.json()["detail"])
+
+    def test_command_state_without_slide_id_uses_attempt_current_slide(self):
+        set_slide = self.client.post(
+            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}/active-slide",
+            json={"slide_id": "phonemes_1179a7e9"},
+        )
+        self.assertEqual(set_slide.status_code, 200)
+
+        response = self.client.get(f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}")
+
         self.assertEqual(response.status_code, 200)
-        data = response.json()
-        self.assertEqual(data["slide_id"], "01-01")
-        self.assertEqual(data["current_state"], "transition")
-        self.assertEqual(data["session_mode"], "legacy")
-        self.assertEqual(data["audio_url"], "/tts-cache/test.wav")
-        self.assertIn("replay", data["teacher_controls"])
+        self.assertEqual(response.json()["slide_id"], "phonemes_1179a7e9")
+
+    def test_command_state_advance_rejects_non_active_slide(self):
+        set_slide = self.client.post(
+            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}/active-slide",
+            json={"slide_id": "phonemes_1179a7e9"},
+        )
+        self.assertEqual(set_slide.status_code, 200)
+
+        response = self.client.post(
+            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}/advance",
+            json={"slide_id": "04-03", "action": "force_advance"},
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("does not match the active slide", response.json()["detail"])
+
+    def test_ensure_attempt_endpoint_reuses_same_attempt_for_split_screen_launches(self):
+        first = self.client.post("/lesson/G1-L1/attempt")
+        self.assertEqual(first.status_code, 200)
+
+        second = self.client.post("/lesson/G1-L1/attempt")
+        self.assertEqual(second.status_code, 200)
+        self.assertEqual(first.json()["attempt_id"], second.json()["attempt_id"])
 
     def test_command_state_route_returns_oral_runtime_and_supports_replay_and_mark(self):
         started = self.client.get(
@@ -329,24 +359,27 @@ class LessonRouteTests(unittest.TestCase):
 
     def test_authored_runtime_slide_advances_through_defined_states(self):
         started = self.client.get(
-            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}?slide_id=03-01"
+            f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}?slide_id=04-03"
         )
         self.assertEqual(started.status_code, 200)
         self.assertEqual(started.json()["current_state"], "transition")
         self.assertEqual(started.json()["teacher_controls"], ["replay", "force_advance"])
-        self.assertEqual(started.json()["prompt_text"], "Look at the letter. Listen.")
-        self.assertEqual(started.json()["teacher_prompt_text"], "Look at the letter. Listen.")
+        self.assertEqual(started.json()["prompt_text"], "Look. New word.")
+        self.assertEqual(
+            started.json()["teacher_prompt_text"],
+            "Introduce sat. Keep it oral first, then reveal print.",
+        )
 
         model = self.client.post(
             f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}/advance",
-            json={"slide_id": "03-01", "action": "force_advance"},
+            json={"slide_id": "04-03", "action": "force_advance"},
         )
         self.assertEqual(model.status_code, 200)
         self.assertEqual(model.json()["current_state"], "model")
 
         choral = self.client.post(
             f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}/advance",
-            json={"slide_id": "03-01", "action": "force_advance"},
+            json={"slide_id": "04-03", "action": "force_advance"},
         )
         self.assertEqual(choral.status_code, 200)
         self.assertEqual(choral.json()["current_state"], "choral")
@@ -354,7 +387,7 @@ class LessonRouteTests(unittest.TestCase):
 
         complete = self.client.post(
             f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}/advance",
-            json={"slide_id": "03-01", "action": "mark_class", "status": "secure"},
+            json={"slide_id": "04-03", "action": "mark_class", "status": "secure"},
         )
         self.assertEqual(complete.status_code, 200)
         self.assertEqual(complete.json()["current_state"], "complete")
@@ -434,7 +467,8 @@ class LessonRouteTests(unittest.TestCase):
             json={"slide_id": "07-01"},
         )
         self.assertEqual(set_active.status_code, 200)
-        self.assertEqual(set_active.json(), {"ok": True, "slide_id": "07-01"})
+        self.assertEqual(set_active.json()["slide_id"], "07-01")
+        self.assertEqual(set_active.json()["attempt_id"], str(self.attempt.attempt_id))
 
         response = self.client.get(
             f"/lesson/G1-L1/command-state/{self.attempt.attempt_id}"

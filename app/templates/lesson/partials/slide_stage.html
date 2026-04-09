@@ -1,4 +1,5 @@
 {% if ordered_slides %}
+{% set server_active_slide_index = initial_slide_index | default(server_active_slide_index | default(0)) %}
 <section class="lesson-stage">
     <div class="lesson-slide-stack">
         {% for entry in ordered_slides %}
@@ -26,7 +27,7 @@
                     data-oral-check-eligible="{% if slide.block_id == '07' and slide.view_type == 'read_respond' and slide.content_payload.display_mode == 'reader' %}true{% else %}false{% endif %}"
                     data-oral-check-config='{{ slide.content_payload.oral_enforcement.model_dump() | tojson if slide.content_payload.oral_enforcement else "null" }}'
                     x-show="activeSlideIndex === {{ slide_index }}"
-                    x-cloak>
+                    {% if slide_index != server_active_slide_index %}style="display:none"{% endif %}>
                     {% include "lesson/partials/block_card.html" %}
                 </div>
             {% endwith %}

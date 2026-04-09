@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from app.models.lesson import ClassPatternReviewRecord, LessonAttemptRecord, StudentMarkRecord
 from app.schemas.lesson import Lesson
 from app.schemas.slide import Slide
-from app.schemas.slide_payloads import VIEW_PAYLOAD_MAP
+from app.schemas.slide_payloads import get_payload_model
 from app.services.lesson_service import list_lesson_ids, load_lesson
 
 logger = logging.getLogger(__name__)
@@ -527,11 +527,12 @@ def inject_dynamic_review_into_lesson(
     grouped_slides: Dict[str, List[Slide]] = {"01": [], "02": []}
 
     for slide_data in dynamic_slide_dicts:
-        payload_cls = VIEW_PAYLOAD_MAP.get(slide_data["view_type"])
-        if payload_cls is None:
+        try:
+            payload_cls = get_payload_model(slide_data["view_type"])
+        except KeyError:
             logger.warning(
                 "inject_dynamic_review: unknown view_type %r for slide %r — skipping. "
-                "Check VIEW_PAYLOAD_MAP for missing entries.",
+                "Check the slide type registry for missing entries.",
                 slide_data.get("view_type"),
                 slide_data.get("slide_id"),
             )

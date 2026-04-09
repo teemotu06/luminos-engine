@@ -1,0 +1,28 @@
+<div class="lesson-connect-word-picture">
+  {% if slide.content_payload.instruction_text %}
+  <p class="lesson-audio-prompt__prompt">
+    {{ slide.content_payload.instruction_text }}
+  </p>
+  {% endif %}
+
+  {% if slide.content_payload.shuffle_items %}
+  <div style="font-size:12px; color:#666; margin-bottom:12px;">Shuffle enabled for runtime display.</div>
+  {% endif %}
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+    <div style="display:grid; gap:10px;">
+      {% for item in slide.content_payload.items %}
+      <div style="padding:12px; border:1px solid #e5e5e5; border-radius:10px; background:#fff; font-weight:600;">
+        {{ item.word }}
+      </div>
+      {% endfor %}
+    </div>
+    <div style="display:grid; gap:10px;">
+      {% for item in slide.content_payload.items %}
+      <div style="padding:12px; border:1px solid #e5e5e5; border-radius:10px; background:#fff; display:flex; align-items:center; justify-content:center; min-height:120px;">
+        <img src="{{ item.image_url }}" alt="{{ item.word }}" style="max-width:100%; max-height:96px; object-fit:contain;">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

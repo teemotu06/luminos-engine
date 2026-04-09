@@ -1,0 +1,15 @@
+<form
+  hx-post="/authoring/media/upload"
+  hx-encoding="multipart/form-data"
+  hx-target="closest [data-media-browser]"
+  hx-swap="outerHTML"
+  class="media-upload-form authoring-media-upload-form"
+>
+  <input type="hidden" name="media_type" value="{{ media_type }}">
+  <input type="hidden" name="show_library" value="{{ 'true' if show_library else 'false' }}">
+  {% if subfolder %}
+  <input type="hidden" name="subfolder" value="{{ subfolder }}">
+  {% endif %}
+  <input type="file" name="file" accept="{{ accept_value }}" required>
+  <button type="submit" class="authoring-btn-secondary">Upload</button>
+</form>

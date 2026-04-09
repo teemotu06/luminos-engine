@@ -27,13 +27,17 @@ If the code and the specs diverge, this file should describe the code as it exis
 - Templating: Jinja2
 - Frontend state: Alpine.js
 - Audio playback: Howler.js
+- Data validation: Pydantic 2
 - ORM: SQLAlchemy 2.x
+- Migrations: Alembic
 - Primary DB target: PostgreSQL via `psycopg2-binary`
 - Test DB path: SQLite is used in tests
 - Content source: JSON lesson files under `app/content/lessons/`
 - Local TTS: Kokoro-based runtime with on-disk WAV cache
+- Auth/session model: signed cookie session auth with bootstrap admin/teacher users
 
 Python dependencies currently declared in `requirements.txt` include:
+- `alembic`
 - `fastapi`
 - `jinja2`
 - `sqlalchemy`
@@ -41,6 +45,9 @@ Python dependencies currently declared in `requirements.txt` include:
 - `psycopg2-binary`
 - `httpx`
 - `numpy`
+- `pydantic`
+- `python-multipart`
+- `sentry-sdk[fastapi]`
 - `soundfile`
 - `uvicorn`
 
@@ -53,18 +60,25 @@ App entrypoint: `app/main.py`
 Current startup behavior:
 - loads `DATABASE_URL` from env via `app/db.py`
 - raises `RuntimeError` if `DATABASE_URL` is missing
-- creates tables with `Base.metadata.create_all(bind=engine)`
-- runs a startup shim to ensure `lesson_attempt.class_id` exists
-- syncs all lesson JSON metadata into the `lesson` table
-- rebuilds `class_pattern_review` records only if that table is empty
+- validates auth env when auth is enabled
+- refuses to start if `LUMINOS_ENFORCE_ADMIN_SECRET` is true and `LUMINOS_ADMIN_SECRET` is unset
+- bootstraps configured admin/teacher users when auth is enabled
+- optionally initializes Sentry when `SENTRY_DSN` is set and the package is installed
 - optionally prunes old TTS cache files on startup
 - optionally prewarms the Kokoro TTS runtime on startup
+
+Current middleware behavior:
+- request IDs are generated or propagated via `X-Request-ID`
+- baseline security headers are added to all responses
+- simple in-memory per-path rate limiting is applied outside static/health paths
+- CORS is enabled only when `ALLOWED_ORIGINS` is configured
 
 Mounted paths:
 - `/static` -> `app/static`
 - `/tts-cache` -> local WAV cache directory
 
 Included routers:
+- `auth_router`
 - `lesson_router`
 - `students_router`
 - `classes_router`
@@ -75,6 +89,7 @@ Included routers:
 `app/db.py` supports both PostgreSQL and SQLite based on `DATABASE_URL`.
 
 Current ORM tables:
+- `app_user`
 - `lesson`
 - `lesson_attempt`
 - `slide_result`
@@ -83,24 +98,37 @@ Current ORM tables:
 - `student_record`
 - `oral_check_session`
 - `oral_check_assignment`
+- `lesson_runtime_state`
 - `class_pattern_review`
 
 Current persistence behavior:
 - opening a lesson creates a new `lesson_attempt`
+- command/teacher-mode progression persists per-slide runtime state in `lesson_runtime_state`
 - slide-level class marks write `slide_result`
 - student roster marks write `student_mark`
 - oral-check completion also upserts final per-student `student_mark` records
 - lesson completion sets `lesson_attempt.completed = True`
+- lesson and slide writes use optimistic version fields on `lesson_attempt` and `slide_result`
 - class-pattern review scheduling is updated at lesson completion, not on every mark
+- classes are soft-deletable via `class_group.deleted_at`
+- non-admin teachers only see their own classes via `owner_user_id`
 
 Implementation note:
-- there is no Alembic migration system yet
-- schema evolution is handled by `create_all()` plus small startup shims and service-layer rebuild logic
+- there is now an Alembic migration chain under `alembic/versions/`
+- tests explicitly cover fresh-schema upgrades and patching of legacy SQLite schemas
+- runtime startup is no longer the source of truth for schema evolution
 
 ## 6. Current route surface
 
 ### Root
-- `GET /` -> redirects to `/lesson/`
+- `GET /` -> redirects to `/auth/login` when auth is enabled, otherwise `/lesson/`
+- `GET /health` -> DB-backed liveness check
+- `GET /ready` -> same readiness payload as `/health`
+
+### Auth routes
+- `GET /auth/login`
+- `POST /auth/login`
+- `POST /auth/logout`
 
 ### Lesson routes
 - `GET /lesson/` -> lesson launcher/library
@@ -108,6 +136,8 @@ Implementation note:
 - `GET /lesson/progress?class_id=...` -> lesson progress for a class
 - `GET /lesson/{lesson_id}` -> lesson shell, creates attempt
 - `GET /lesson/{lesson_id}/block/{block_id}` -> lesson shell starting at a block
+- `GET /lesson/{lesson_id}/teacher` -> teacher control surface
+- `GET /lesson/{lesson_id}/board` -> board/student-display surface
 - `GET /lesson/{lesson_id}/review/{attempt_id}` -> post-lesson review page
 - `POST /lesson/{lesson_id}/mark` -> write/update class slide result
 - `POST /lesson/{lesson_id}/student-mark` -> upsert one student mark
@@ -117,6 +147,9 @@ Implementation note:
 - `POST /lesson/{lesson_id}/oral-check/assignment/mark` -> mark active oral assignment
 - `POST /lesson/{lesson_id}/oral-check/session/complete` -> complete oral-check session
 - `POST /lesson/tts/prompt` -> generate or fetch cached local TTS audio
+- `GET /lesson/{lesson_id}/command-state/{attempt_id}` -> fetch current command/runtime state
+- `POST /lesson/{lesson_id}/command-state/{attempt_id}/active-slide` -> move active slide
+- `POST /lesson/{lesson_id}/command-state/{attempt_id}/advance` -> advance teacher/board runtime state
 - `POST /lesson/{lesson_id}/complete` -> complete lesson attempt if oral checks are resolved
 
 ### Class routes
@@ -125,6 +158,8 @@ Implementation note:
 - `POST /classes/new` -> create class
 - `GET /classes/{class_id}` -> class detail page with roster
 - `POST /classes/{class_id}/students` -> add student to class
+- `POST /classes/{class_id}/archive` -> soft-delete class
+- `POST /classes/{class_id}/restore` -> restore soft-deleted class
 
 ### Student routes
 - `GET /students/{student_name}/profile`
@@ -135,7 +170,7 @@ Implementation note:
 - `GET /admin/tts-health`
 - `POST /admin/tts-prune-cache`
 
-Admin routes are guarded by `LUMINOS_ADMIN_SECRET` only if that env var is set. If it is unset, the app logs a warning and the endpoints are effectively unprotected.
+Admin routes are guarded by `X-Admin-Secret` and are unavailable when `LUMINOS_ADMIN_SECRET` is unset. By default, startup also refuses to run without the admin secret.
 
 ## 7. Current lesson/content inventory
 
@@ -241,7 +276,7 @@ Terminal statuses currently accepted by the service:
 
 ## 11. Oral-check system
 
-The repo now has a block-07 oral enforcement system, implemented in `app/services/oral_check_service.py` and wired through `lesson.js`.
+The repo now has a block-07 oral enforcement system, implemented in `app/services/oral_check_service.py` and wired through the lesson runtime plus the teacher/board command-state flow.
 
 Current behavior:
 - eligible slides start or resume an oral-check session automatically when the slide becomes active and a roster is present
@@ -285,17 +320,25 @@ Relevant env vars include:
 
 ## 13. Frontend runtime
 
-Primary frontend file: `app/static/lesson.js`
+Current frontend entrypoints are split by surface:
+- `app/static/lesson.js` -> lesson/review shell
+- `app/static/lesson_teacher.js` -> teacher control surface
+- `app/static/lesson_board.js` -> board display
+- `app/static/lesson_launcher.js` -> launcher/library behavior
 
-Main Alpine components/stores:
+Main Alpine components/stores now include:
 - `lessonShell(...)`
 - `reviewShell(...)`
+- `teacherShell(...)`
+- `boardShell(...)`
+- `launcherShell(...)`
 - `Alpine.store("lessonRoster", ...)`
 - `dragBuild(...)`
 
-Current lesson-shell responsibilities:
-- slide navigation
-- reveal state
+Current frontend responsibilities across those surfaces:
+- lesson launch with class-aware progress/review metadata
+- teacher/board command-state synchronization
+- slide navigation and reveal flow
 - audio playback
 - TTS prompt fetching/caching
 - class slide marking
@@ -304,12 +347,6 @@ Current lesson-shell responsibilities:
 - comprehension follow-up orchestration
 - dynamic-review skipping
 
-Keyboard controls currently implemented:
-- `R` -> toggles roster details
-- `Space` -> reveal or next slide
-- `ArrowLeft` -> previous slide
-- `ArrowRight` -> next slide
-
 The old `P` presentation-mode toggle described in earlier project-context versions is no longer a reliable description of the current frontend behavior and should not be assumed.
 
 ## 14. Current UI/template structure
@@ -317,6 +354,8 @@ The old `P` presentation-mode toggle described in earlier project-context versio
 Key templates:
 - `app/templates/lesson/index.html`
 - `app/templates/lesson/view.html`
+- `app/templates/lesson/teacher.html`
+- `app/templates/lesson/board.html`
 - `app/templates/lesson/review.html`
 - lesson partials under `app/templates/lesson/partials/`
 
@@ -356,12 +395,17 @@ Important implementation detail:
 There is now a dedicated `tests/` directory.
 
 Current test coverage includes:
+- Alembic migration behavior
+- auth/login behavior
+- class ownership and soft-delete behavior
 - lesson-route behavior
 - admin-route behavior
 - oral-check service behavior
 - Kokoro TTS cache behavior
 
 Notable tested cases:
+- fresh-schema and legacy-schema Alembic upgrades
+- bootstrap auth configuration and teacher ownership boundaries
 - `/lesson/tts/prompt` success and failure handling
 - oral checks blocking lesson completion until resolved
 - dynamic-review lookup failing open instead of breaking lesson rendering
@@ -404,7 +448,6 @@ This repo still does not implement:
 - a full authoring CMS
 - analytics dashboards
 - speech recognition / ASR
-- Alembic-based schema migrations
 
 ## 19. Practical summary
 

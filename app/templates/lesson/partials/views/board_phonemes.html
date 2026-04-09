@@ -1,0 +1,10 @@
+<div class="lesson-phoneme-card">
+  <div class="lesson-phoneme-card__symbol">
+    {{ slide.content_payload.symbol }}
+  </div>
+  {% if slide.content_payload.prompt_text %}
+  <div class="lesson-phoneme-card__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </div>
+  {% endif %}
+</div>

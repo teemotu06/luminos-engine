@@ -1,0 +1,39 @@
+{% if slide.content_payload.display_mode == 'lesson_close' %}
+{% set items = slide.content_payload.check_items %}
+<div class="lesson-close">
+  {% if items %}
+  <div class="lesson-close__stage">
+    {% for item in items %}
+    <div class="lesson-close__prompt">
+      {{ item.label }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% else %}
+<div class="lesson-quick-check">
+  {% if slide.content_payload.check_items %}
+  <div class="lesson-quick-check__items">
+    {% for item in slide.content_payload.check_items %}
+    <div class="lesson-quick-check__item">
+      <div class="lesson-quick-check__item-label">
+        {{ item.label }}
+      </div>
+      {% if item.phoneme %}
+      <div class="lesson-quick-check__item-phoneme">
+        {{ item.phoneme }}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.notes_field %}
+  <div class="lesson-quick-check__notes">
+    {{ slide.content_payload.notes_field }}
+  </div>
+  {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,20 @@
+<div class="lesson-drag-letter">
+  {% set slot_units = slide.content_payload.slots or slide.content_payload.target_letters %}
+  <div class="lesson-drag-letter__board">
+    <div class="lesson-drag-letter__target-row">
+      <div class="lesson-drag-letter__slots" aria-label="Word slots">
+        {% for _ in range(slot_units | length) %}
+        <div class="lesson-drag-letter__slot lesson-drag-letter__slot--empty"></div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="lesson-drag-letter__cards">
+      {% for letter in slide.content_payload.draggable_letters %}
+      <div class="lesson-drag-letter__card">
+        {{ letter }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

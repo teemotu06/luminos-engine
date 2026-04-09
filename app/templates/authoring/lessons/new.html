@@ -1,0 +1,40 @@
+{% extends "authoring/base.html" %}
+
+{% block authoring_title %}New Lesson{% endblock %}
+
+{% block authoring_content %}
+<form method="post" action="/authoring/lessons" style="display:grid; gap:16px; max-width:760px;">
+  <label>
+    <div>Group</div>
+    <select name="unit_id" required>
+      {% for group in groups %}
+      <option value="{{ group.unit_id }}" {% if selected_unit_id == group.unit_id %}selected{% endif %}>{{ group.unit_id }} — {{ group.title }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    <div>Lesson number</div>
+    <input type="number" name="lesson_number" min="1" value="{{ suggested_lesson_number }}" required>
+  </label>
+  <label>
+    <div>Title</div>
+    <input type="text" name="title" required>
+  </label>
+  <label>
+    <div>Target pattern</div>
+    <input type="text" name="target_pattern" required>
+  </label>
+  <label>
+    <div>New units</div>
+    <input type="text" name="new_units" placeholder="Comma-separated">
+  </label>
+  <label>
+    <div>New sight words</div>
+    <input type="text" name="new_sight_words" placeholder="Comma-separated">
+  </label>
+  <div style="display:flex; gap:12px;">
+    <button type="submit">Create Lesson</button>
+    <a href="/authoring/lessons">Cancel</a>
+  </div>
+</form>
+{% endblock %}

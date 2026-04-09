@@ -1,0 +1,29 @@
+<div class="lesson-connect-word-picture">
+  {% if slide.content_payload.instruction_text %}
+  <p class="lesson-audio-prompt__prompt">
+    {{ slide.content_payload.instruction_text }}
+  </p>
+  {% endif %}
+
+  {% if slide.content_payload.luminos_says and slide.content_payload.luminos_says.prompt_text %}
+  <div class="lesson-read-respond__support">
+    {{ slide.content_payload.luminos_says.prompt_text }}
+  </div>
+  {% endif %}
+
+  <div style="display:grid; gap:12px;">
+    {% for item in slide.content_payload.items %}
+    <div style="display:flex; align-items:center; gap:12px; padding:12px; border:1px solid #e5e5e5; border-radius:10px; background:#fff;">
+      <div style="font-weight:600; min-width:120px;">{{ item.word }}</div>
+      <div style="width:96px; height:96px; display:flex; align-items:center; justify-content:center; border:1px solid #eee; border-radius:8px; overflow:hidden; background:#fafafa;">
+        <img src="{{ item.image_url }}" alt="{{ item.word }}" style="max-width:100%; max-height:100%; object-fit:contain;">
+      </div>
+      {% if item.audio_url %}
+      <button type="button" class="lesson-nav-btn" @click="playAudio('{{ item.audio_url }}')">
+        Play audio
+      </button>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

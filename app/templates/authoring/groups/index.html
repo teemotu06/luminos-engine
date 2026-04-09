@@ -1,0 +1,32 @@
+{% extends "authoring/base.html" %}
+
+{% block authoring_title %}Groups{% endblock %}
+
+{% block authoring_content %}
+<div style="margin-bottom:16px;">
+  <a href="/authoring/groups/new">New Group</a>
+</div>
+
+<table style="width:100%; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Unit</th>
+      <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Title</th>
+      <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Lessons</th>
+      <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for group in groups %}
+    <tr>
+      <td style="padding:8px; border-bottom:1px solid #eee;">{{ group.unit_id }}</td>
+      <td style="padding:8px; border-bottom:1px solid #eee;">{{ group.title }}</td>
+      <td style="padding:8px; border-bottom:1px solid #eee;">{{ lesson_counts.get(group.unit_id, 0) }}</td>
+      <td style="padding:8px; border-bottom:1px solid #eee;">
+        <a href="/authoring/groups/{{ group.unit_id }}/edit">Edit</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

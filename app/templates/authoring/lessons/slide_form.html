@@ -1,0 +1,832 @@
+<div
+  data-slide-form-root
+  x-data='authoringSlideForm({
+    slideType: {{ effective_slide_type | tojson }},
+    requiredFields: {
+      slide_title: {{ (slide.slide_title or "") | tojson }},
+      teacher_cue: {{ (slide.teacher_cue or "") | tojson }},
+      observation_note: {{ (slide.observation_note or "") | tojson }}
+    },
+    initialMarkable: {{ slide.markable | tojson }},
+    defaultMarkingOptions: {{ (default_marking.marking_options or []) | tojson }},
+    initialSlideAudioUrl: {{ (slide_audio_url or "") | tojson }},
+    initialBuildUnitsInput: {{ ((slide.content_payload.target_letters or slide.content_payload.draggable_letters or []) | join(' | ')) | tojson }},
+    initialTargetWord: {{ (slide.content_payload.target_word or "") | tojson }},
+    initialSpellWord: {{ (slide.content_payload.correct_word or "") | tojson }},
+    initialSpellLetterPoolInput: {{ ((slide.content_payload.letter_pool or []) | join(' | ')) | tojson }},
+    initialPatternWordInputs: {{ initialPatternWordInputs | tojson }},
+    initialPatternPrompt: {{ initialPatternPrompt | tojson }},
+    initialPatternRevealMode: {{ initialPatternRevealMode | tojson }},
+    initialImageFieldValues: {{ image_field_values | tojson }}
+  })'
+  @media-selected.window="applyMediaSelection($event)"
+  @media-browser-close.window="closeSlideAudioPicker()"
+  class="authoring-slide-form-shell">
+  <form
+    method="post"
+    action="/authoring/lessons/{{ lesson_id }}/blocks/{{ block_id }}/slides/{{ slide.slide_id }}"
+    hx-post="/authoring/lessons/{{ lesson_id }}/blocks/{{ block_id }}/slides/{{ slide.slide_id }}"
+    hx-target="#block-panel-{{ block_id }}"
+    hx-swap="innerHTML"
+    @submit="validateBeforeSubmit($event)"
+    @htmx:response-error="handleHtmxError($event)"
+    class="authoring-form">
+
+    <div class="authoring-form-actions authoring-form-actions--sticky">
+      <button type="submit" class="authoring-btn">Save Slide</button>
+      <button type="button" class="authoring-btn-secondary"
+        hx-get="/authoring/lessons/{{ lesson_id }}/blocks/{{ block_id }}"
+        hx-target="#block-panel-{{ block_id }}"
+        hx-swap="innerHTML">
+        Cancel
+      </button>
+    </div>
+
+    <div x-show="generalErrors.length" x-cloak class="authoring-repeatable" style="border-color: rgba(220,38,38,0.18); background: rgba(254,242,242,0.9);">
+      <div class="authoring-field__label" style="color:#991b1b;">Fix these before saving</div>
+      <ul style="margin:0; padding-left:18px; color:#991b1b; font-size:0.9rem;">
+        <template x-for="(error, index) in generalErrors" :key="index">
+          <li x-text="error"></li>
+        </template>
+      </ul>
+    </div>
+
+    <section class="authoring-form-section authoring-form-section--board">
+      <div class="authoring-section-intro authoring-section-intro--toggle" x-data="{ showInfo: false }" @click="showInfo = !showInfo" @keydown.enter.prevent="showInfo = !showInfo" @keydown.space.prevent="showInfo = !showInfo" role="button" tabindex="0" :aria-expanded="showInfo.toString()">
+        <div class="authoring-section-intro__header">
+          <h4 class="authoring-form-heading">Board Section</h4>
+        </div>
+        <div class="authoring-form-subtext" x-show="showInfo" x-cloak>What appears on the student display.</div>
+      </div>
+
+      {% if effective_slide_type == "drag_letter" %}
+      {% set image_fields = content_fields | selectattr('name', 'equalto', 'image') | list %}
+
+      <label class="authoring-field">
+        <div class="authoring-field__label">Build Units *</div>
+        <input
+          class="authoring-input"
+          type="text"
+          x-model="buildUnitsInput"
+          placeholder="sat or b | a | ck">
+        <div class="authoring-field__help">Type a word for automatic segmentation, or enter explicit units like <strong>b | a | ck</strong>.</div>
+        <div x-show="formErrors.build_units" x-text="formErrors.build_units" class="authoring-field__error"></div>
+      </label>
+
+      <input type="hidden" name="payload__target_word" :value="buildWordPreview">
+      <input type="hidden" name="payload__draggable_letters" :value="buildUnitsDelimited">
+      <input type="hidden" name="payload__target_letters" :value="buildUnitsDelimited">
+      <input type="hidden" name="payload__slots" :value="buildUnitsDelimited">
+
+      <div class="authoring-repeatable">
+        <div class="authoring-repeatable__header">
+          <div class="authoring-field__label">Preview</div>
+        </div>
+        <div class="authoring-stack authoring-stack--tight">
+          <div class="authoring-field__help">
+            Boxes: <strong x-text="parsedBuildUnits.length"></strong>
+          </div>
+          <div class="authoring-field__help">
+            Tiles: <strong x-text="parsedBuildUnits.join(' | ') || '—'"></strong>
+          </div>
+          <div class="authoring-field__help">
+            Word: <strong x-text="buildWordPreview || '—'"></strong>
+          </div>
+        </div>
+      </div>
+
+      {% for field in image_fields %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+        <input type="hidden" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" :value="imageUrlFor('{{ field.name }}')">
+        <input
+          type="file"
+          accept=".png,.jpg,.jpeg,.gif,.webp,.svg,image/*"
+          :key="imageInputKeys['{{ field.name }}'] || 0"
+          data-image-upload-input="{{ field.name }}"
+          style="display:none"
+          @change="handleImageFileSelected($event, '{{ field.name }}')">
+        <div class="authoring-audio-attachment">
+          <template x-if="imageUrlFor('{{ field.name }}')">
+            <div class="authoring-audio-card" :title="filenameFromPath(imageUrlFor('{{ field.name }}'))">
+              <div class="authoring-audio-card__header">
+                <div><div class="authoring-field__label">Attached Image</div></div>
+              </div>
+              <img class="authoring-media-preview-image" :src="imageUrlFor('{{ field.name }}')" alt="{{ field.display_label }}">
+              <div class="authoring-inline-actions">
+                <button type="button" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Replace Image</button>
+                <button type="button" class="authoring-btn-danger" @click="removeImageAttachment('{{ field.name }}')">Remove Image</button>
+              </div>
+            </div>
+          </template>
+          <template x-if="!imageUrlFor('{{ field.name }}')">
+            <div class="authoring-audio-empty">
+              <div class="authoring-audio-empty__copy">
+                <div class="authoring-field__label">No image attached</div>
+              </div>
+              <button type="button" class="authoring-audio-empty__action" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Upload Image</button>
+            </div>
+          </template>
+          <div x-show="imageUploadErrors['{{ field.name }}']" x-text="imageUploadErrors['{{ field.name }}']" class="authoring-field__error"></div>
+        </div>
+      </label>
+      {% endfor %}
+
+      {% elif effective_slide_type == "pattern_noticing" %}
+      <template x-for="(word, index) in patternWordInputs" :key="'pattern-word-' + index">
+        <label class="authoring-field">
+          <div class="authoring-field__label" x-text="'Word ' + (index + 1) + ' *'"></div>
+          <div class="authoring-inline-actions" style="justify-content:space-between; align-items:center; margin-bottom:8px;" x-show="patternWordInputs.length > 2">
+            <span></span>
+            <button type="button" class="authoring-btn-secondary" @click="removePatternWord(index)" x-show="patternWordInputs.length > 2">Remove</button>
+          </div>
+          <input class="authoring-input" type="text" x-model="patternWordInputs[index]" placeholder="s[at]">
+        </label>
+      </template>
+
+      <div class="authoring-inline-actions" style="justify-content:flex-start;" x-show="patternWordInputs.length < 4">
+        <button type="button" class="authoring-btn-secondary" @click="addPatternWord()">Add Word</button>
+      </div>
+
+      <label class="authoring-field">
+        <div class="authoring-field__label">Prompt *</div>
+        <textarea class="authoring-input" rows="3" x-model="patternPrompt"></textarea>
+        <div x-show="formErrors.pattern_prompt" x-text="formErrors.pattern_prompt" class="authoring-field__error"></div>
+      </label>
+
+      <div class="authoring-field">
+        <div class="authoring-field__label">Reveal Mode *</div>
+        <div class="authoring-inline-actions" style="justify-content:flex-start; gap:12px;">
+          <label class="authoring-check">
+            <input type="radio" value="sequential" x-model="patternRevealMode">
+            <span>Sequential</span>
+          </label>
+          <label class="authoring-check">
+            <input type="radio" value="all_at_once" x-model="patternRevealMode">
+            <span>All at once</span>
+          </label>
+        </div>
+      </div>
+
+      <input type="hidden" name="payload__words" :value="patternWordsJson">
+      <input type="hidden" name="payload__prompt" :value="patternPrompt">
+      <input type="hidden" name="payload__reveal_mode" :value="patternRevealMode">
+
+      <div class="authoring-repeatable">
+        <div class="authoring-repeatable__header">
+          <div class="authoring-field__label">Preview</div>
+        </div>
+        <div class="authoring-stack authoring-stack--tight">
+          <template x-for="(word, index) in patternWordPreview" :key="'pattern-preview-' + index">
+            <div class="authoring-field__help" x-text="word || '—'"></div>
+          </template>
+        </div>
+        <div x-show="formErrors.pattern_words" x-text="formErrors.pattern_words" class="authoring-field__error"></div>
+      </div>
+
+      {% elif effective_slide_type == "spell_word" %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">Correct Word *</div>
+        <input
+          class="authoring-input"
+          type="text"
+          x-model="spellWordInput"
+          placeholder="pink">
+        <div x-show="formErrors.spell_word" x-text="formErrors.spell_word" class="authoring-field__error"></div>
+      </label>
+
+      <label class="authoring-field">
+        <div class="authoring-field__label">Letter Pool *</div>
+        <input
+          class="authoring-input"
+          type="text"
+          x-model="spellLetterPoolInput"
+          placeholder="p | i | n | k">
+        <div class="authoring-field__help">Use the letters or units that should appear around the answer box.</div>
+        <div x-show="formErrors.spell_letter_pool" x-text="formErrors.spell_letter_pool" class="authoring-field__error"></div>
+      </label>
+
+      <input type="hidden" name="payload__correct_word" :value="spellWordPreview">
+      <input type="hidden" name="payload__letter_pool" :value="spellLetterPoolDelimited">
+
+      <div class="authoring-repeatable">
+        <div class="authoring-repeatable__header">
+          <div class="authoring-field__label">Preview</div>
+        </div>
+        <div class="authoring-stack authoring-stack--tight">
+          <div class="authoring-field__help">
+            Answer: <strong x-text="spellWordPreview || '—'"></strong>
+          </div>
+          <div class="authoring-field__help">
+            Letters: <strong x-text="parsedSpellLetterPool.join(' | ') || '—'"></strong>
+          </div>
+        </div>
+      </div>
+
+      {% elif effective_slide_type == "flashcard" %}
+      {% set front_fields = content_fields | selectattr('name', 'in', ['front_text', 'front_image']) | list %}
+      {% set back_fields = content_fields | selectattr('name', 'in', ['back_text', 'back_image']) | list %}
+      {% set other_content_fields = content_fields | rejectattr('name', 'in', ['front_text', 'front_image', 'back_text', 'back_image']) | list %}
+
+      <div class="authoring-stack authoring-stack--tight">
+        <section class="authoring-form-section" style="padding:16px; border:1px solid rgba(148,163,184,0.16);">
+          <div class="authoring-section-intro">
+            <h5 class="authoring-form-heading" style="font-size:0.95rem;">Front of Card</h5>
+            <div class="authoring-form-subtext">Use text or image on the front, not both.</div>
+          </div>
+          {% for field in front_fields %}
+          <label class="authoring-field">
+            <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+            {% if field.media_type == "image" %}
+            <input type="hidden" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" :value="imageUrlFor('{{ field.name }}')">
+            <input
+              type="file"
+              accept=".png,.jpg,.jpeg,.gif,.webp,.svg,image/*"
+              :key="imageInputKeys['{{ field.name }}'] || 0"
+              data-image-upload-input="{{ field.name }}"
+              style="display:none"
+              @change="handleImageFileSelected($event, '{{ field.name }}')">
+            <div class="authoring-audio-attachment">
+              <template x-if="imageUrlFor('{{ field.name }}')">
+                <div class="authoring-audio-card" :title="filenameFromPath(imageUrlFor('{{ field.name }}'))">
+                  <div class="authoring-audio-card__header"><div><div class="authoring-field__label">Attached Image</div></div></div>
+                  <img class="authoring-media-preview-image" :src="imageUrlFor('{{ field.name }}')" alt="{{ field.display_label }}">
+                  <div class="authoring-inline-actions">
+                    <button type="button" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Replace Image</button>
+                    <button type="button" class="authoring-btn-danger" @click="removeImageAttachment('{{ field.name }}')">Remove Image</button>
+                  </div>
+                </div>
+              </template>
+              <template x-if="!imageUrlFor('{{ field.name }}')">
+                <div class="authoring-audio-empty">
+                  <div class="authoring-audio-empty__copy"><div class="authoring-field__label">No image attached</div></div>
+                  <button type="button" class="authoring-audio-empty__action" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Upload Image</button>
+                </div>
+              </template>
+              <div x-show="imageUploadErrors['{{ field.name }}']" x-text="imageUploadErrors['{{ field.name }}']" class="authoring-field__error"></div>
+            </div>
+            {% else %}
+            <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+            {% if field.help_text %}
+            <div class="authoring-field__help">{{ field.help_text }}</div>
+            {% endif %}
+            {% endif %}
+          </label>
+          {% endfor %}
+        </section>
+
+        <section class="authoring-form-section" style="padding:16px; border:1px solid rgba(148,163,184,0.16);">
+          <div class="authoring-section-intro">
+            <h5 class="authoring-form-heading" style="font-size:0.95rem;">Back of Card</h5>
+            <div class="authoring-form-subtext">Use text or image on the back, not both.</div>
+          </div>
+          {% for field in back_fields %}
+          <label class="authoring-field">
+            <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+            {% if field.media_type == "image" %}
+            <input type="hidden" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" :value="imageUrlFor('{{ field.name }}')">
+            <input
+              type="file"
+              accept=".png,.jpg,.jpeg,.gif,.webp,.svg,image/*"
+              :key="imageInputKeys['{{ field.name }}'] || 0"
+              data-image-upload-input="{{ field.name }}"
+              style="display:none"
+              @change="handleImageFileSelected($event, '{{ field.name }}')">
+            <div class="authoring-audio-attachment">
+              <template x-if="imageUrlFor('{{ field.name }}')">
+                <div class="authoring-audio-card" :title="filenameFromPath(imageUrlFor('{{ field.name }}'))">
+                  <div class="authoring-audio-card__header"><div><div class="authoring-field__label">Attached Image</div></div></div>
+                  <img class="authoring-media-preview-image" :src="imageUrlFor('{{ field.name }}')" alt="{{ field.display_label }}">
+                  <div class="authoring-inline-actions">
+                    <button type="button" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Replace Image</button>
+                    <button type="button" class="authoring-btn-danger" @click="removeImageAttachment('{{ field.name }}')">Remove Image</button>
+                  </div>
+                </div>
+              </template>
+              <template x-if="!imageUrlFor('{{ field.name }}')">
+                <div class="authoring-audio-empty">
+                  <div class="authoring-audio-empty__copy"><div class="authoring-field__label">No image attached</div></div>
+                  <button type="button" class="authoring-audio-empty__action" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Upload Image</button>
+                </div>
+              </template>
+              <div x-show="imageUploadErrors['{{ field.name }}']" x-text="imageUploadErrors['{{ field.name }}']" class="authoring-field__error"></div>
+            </div>
+            {% else %}
+            <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+            {% if field.help_text %}
+            <div class="authoring-field__help">{{ field.help_text }}</div>
+            {% endif %}
+            {% endif %}
+          </label>
+          {% endfor %}
+        </section>
+      </div>
+
+      {% for field in other_content_fields %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+        {% if field.widget == "textarea" %}
+        <textarea class="authoring-textarea" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" rows="{{ field.rows }}">{{ field.value }}</textarea>
+        {% elif field.widget == "checkbox" %}
+        <input type="checkbox" name="payload__{{ field.name }}" value="true" data-authoring-field="payload__{{ field.name }}" {% if field.value %}checked{% endif %}>
+        {% elif field.widget == "select" %}
+        <select class="authoring-select" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}">
+          <option value="">Select</option>
+          {% for option in field.options %}
+          <option value="{{ option }}" {% if field.value == option %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        {% endif %}
+        {% if field.help_text %}
+        <div class="authoring-field__help">{{ field.help_text }}</div>
+        {% endif %}
+      </label>
+      {% endfor %}
+
+      {% elif slide.view_type == "read_respond" %}
+      {% set read_content_fields = content_fields | rejectattr('name', 'equalto', 'comprehension_prompt') | list %}
+
+      {% for field in read_content_fields %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+        {% if field.media_type == "image" %}
+        <input type="hidden" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" :value="imageUrlFor('{{ field.name }}')">
+        <input
+          type="file"
+          accept=".png,.jpg,.jpeg,.gif,.webp,.svg,image/*"
+          :key="imageInputKeys['{{ field.name }}'] || 0"
+          data-image-upload-input="{{ field.name }}"
+          style="display:none"
+          @change="handleImageFileSelected($event, '{{ field.name }}')">
+        <div class="authoring-audio-attachment">
+          <template x-if="imageUrlFor('{{ field.name }}')">
+            <div class="authoring-audio-card" :title="filenameFromPath(imageUrlFor('{{ field.name }}'))">
+              <div class="authoring-audio-card__header"><div><div class="authoring-field__label">Attached Image</div></div></div>
+              <img class="authoring-media-preview-image" :src="imageUrlFor('{{ field.name }}')" alt="{{ field.display_label }}">
+              <div class="authoring-inline-actions">
+                <button type="button" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Replace Image</button>
+                <button type="button" class="authoring-btn-danger" @click="removeImageAttachment('{{ field.name }}')">Remove Image</button>
+              </div>
+            </div>
+          </template>
+          <template x-if="!imageUrlFor('{{ field.name }}')">
+            <div class="authoring-audio-empty">
+              <div class="authoring-audio-empty__copy"><div class="authoring-field__label">No image attached</div></div>
+              <button type="button" class="authoring-audio-empty__action" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Upload Image</button>
+            </div>
+          </template>
+          <div x-show="imageUploadErrors['{{ field.name }}']" x-text="imageUploadErrors['{{ field.name }}']" class="authoring-field__error"></div>
+        </div>
+        {% elif field.widget == "textarea" %}
+        <textarea class="authoring-textarea" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" rows="{{ field.rows }}">{{ field.value }}</textarea>
+        {% elif field.widget == "checkbox" %}
+        <input type="checkbox" name="payload__{{ field.name }}" value="true" data-authoring-field="payload__{{ field.name }}" {% if field.value %}checked{% endif %}>
+        {% elif field.widget == "select" %}
+        <select class="authoring-select" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}">
+          <option value="">Select</option>
+          {% for option in field.options %}
+          <option value="{{ option }}" {% if field.value == option %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        {% endif %}
+        {% if field.help_text %}
+        <div class="authoring-field__help">{{ field.help_text }}</div>
+        {% endif %}
+      </label>
+      {% if field.media_type == "video" %}
+      <div class="authoring-media-stack">
+        <div class="authoring-inline-actions">
+          <button
+            type="button"
+            @click="setMediaTarget('payload__{{ field.name }}'); openMediaBrowser('{{ field.media_type }}', '#media-browser-{{ slide.slide_id }}-{{ field.name }}')">
+            Browse {{ field.media_type | title }}
+          </button>
+        </div>
+        <div
+          class="media-browser-inline"
+          data-media-browser-inline
+          id="media-browser-{{ slide.slide_id }}-{{ field.name }}"></div>
+        {% if field.media_type == "image" and field.value %}
+        <img class="authoring-media-preview-image" src="{{ field.value }}" alt="{{ field.display_label }}">
+        {% elif field.media_type == "video" and field.value %}
+        <div class="authoring-field__help">Current file: {{ field.value }}</div>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      {% elif slide.view_type == "writing_encoding" and block_id == "02" %}
+      {% set answer_fields = content_fields | selectattr('name', 'equalto', 'expected_answer') | list %}
+      {% set other_content_fields = content_fields | rejectattr('name', 'in', ['dictated_text', 'expected_answer']) | list %}
+
+      <div class="authoring-repeatable" style="margin-bottom:12px;">
+        <div class="authoring-field__help">This review slide is audio-first. Students hear the sound or word from the Slide Audio section. The board only shows the answer when you tap Answer.</div>
+      </div>
+
+      {% for field in answer_fields %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">Answer{% if field.required %} *{% endif %}</div>
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        <div class="authoring-field__help">Shown on the board only after the teacher reveals the answer.</div>
+      </label>
+      {% endfor %}
+
+      {% for field in other_content_fields %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+        {% if field.widget == "textarea" %}
+        <textarea class="authoring-textarea" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" rows="{{ field.rows }}">{{ field.value }}</textarea>
+        {% elif field.widget == "checkbox" %}
+        <input type="checkbox" name="payload__{{ field.name }}" value="true" data-authoring-field="payload__{{ field.name }}" {% if field.value %}checked{% endif %}>
+        {% elif field.widget == "select" %}
+        <select class="authoring-select" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}">
+          <option value="">Select</option>
+          {% for option in field.options %}
+          <option value="{{ option }}" {% if field.value == option %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        {% endif %}
+        {% if field.help_text %}
+        <div class="authoring-field__help">{{ field.help_text }}</div>
+        {% endif %}
+      </label>
+      {% endfor %}
+
+      {% else %}
+      {% for field in content_fields %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+        {% if field.media_type == "image" %}
+        <input type="hidden" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" :value="imageUrlFor('{{ field.name }}')">
+        <input
+          type="file"
+          accept=".png,.jpg,.jpeg,.gif,.webp,.svg,image/*"
+          :key="imageInputKeys['{{ field.name }}'] || 0"
+          data-image-upload-input="{{ field.name }}"
+          style="display:none"
+          @change="handleImageFileSelected($event, '{{ field.name }}')">
+        <div class="authoring-audio-attachment">
+          <template x-if="imageUrlFor('{{ field.name }}')">
+            <div class="authoring-audio-card" :title="filenameFromPath(imageUrlFor('{{ field.name }}'))">
+              <div class="authoring-audio-card__header"><div><div class="authoring-field__label">Attached Image</div></div></div>
+              <img class="authoring-media-preview-image" :src="imageUrlFor('{{ field.name }}')" alt="{{ field.display_label }}">
+              <div class="authoring-inline-actions">
+                <button type="button" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Replace Image</button>
+                <button type="button" class="authoring-btn-danger" @click="removeImageAttachment('{{ field.name }}')">Remove Image</button>
+              </div>
+            </div>
+          </template>
+          <template x-if="!imageUrlFor('{{ field.name }}')">
+            <div class="authoring-audio-empty">
+              <div class="authoring-audio-empty__copy"><div class="authoring-field__label">No image attached</div></div>
+              <button type="button" class="authoring-audio-empty__action" @click="triggerImageUpload('{{ field.name }}')" :disabled="imageUploadingField === '{{ field.name }}'">Upload Image</button>
+            </div>
+          </template>
+          <div x-show="imageUploadErrors['{{ field.name }}']" x-text="imageUploadErrors['{{ field.name }}']" class="authoring-field__error"></div>
+        </div>
+        {% elif field.widget == "textarea" %}
+        <textarea class="authoring-textarea" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" rows="{{ field.rows }}">{{ field.value }}</textarea>
+        {% elif field.widget == "checkbox" %}
+        <input type="checkbox" name="payload__{{ field.name }}" value="true" data-authoring-field="payload__{{ field.name }}" {% if field.value %}checked{% endif %}>
+        {% elif field.widget == "select" %}
+        <select class="authoring-select" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}">
+          <option value="">Select</option>
+          {% for option in field.options %}
+          <option value="{{ option }}" {% if field.value == option %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        {% endif %}
+        {% if field.help_text %}
+        <div class="authoring-field__help">{{ field.help_text }}</div>
+        {% endif %}
+      </label>
+      {% if field.media_type == "video" %}
+      <div class="authoring-media-stack">
+        <div class="authoring-inline-actions">
+          <button
+            type="button"
+            @click="setMediaTarget('payload__{{ field.name }}'); openMediaBrowser('{{ field.media_type }}', '#media-browser-{{ slide.slide_id }}-{{ field.name }}')">
+            Browse {{ field.media_type | title }}
+          </button>
+        </div>
+        <div
+          class="media-browser-inline"
+          data-media-browser-inline
+          id="media-browser-{{ slide.slide_id }}-{{ field.name }}"></div>
+        {% if field.media_type == "image" and field.value %}
+        <img class="authoring-media-preview-image" src="{{ field.value }}" alt="{{ field.display_label }}">
+        {% elif field.media_type == "video" and field.value %}
+        <div class="authoring-field__help">Current file: {{ field.value }}</div>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if list_fields %}
+      <div class="authoring-stack authoring-stack--tight">
+        {% for field in list_fields %}
+        <div
+          x-data='itemListEditor({{ field.value | tojson }}, {{ field.sub_fields | default([], true) | tojson }})'
+          @media-selected.window="applyMediaSelection($event)"
+          class="authoring-repeatable">
+          <div class="authoring-repeatable__header">
+            <div>
+              <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+              {% if field.help_text %}
+              <div class="authoring-field__help">{{ field.help_text }}</div>
+              {% endif %}
+            </div>
+            <button type="button" @click="addItem()">Add Item</button>
+          </div>
+          <input type="hidden" name="payload__{{ field.name }}" :value="serializedItems">
+          <template x-for="(item, rowIndex) in items" :key="rowIndex">
+            <div class="authoring-repeatable-row">
+              <div class="authoring-repeatable-row__header">
+                <strong x-text="'Item ' + (rowIndex + 1)"></strong>
+                <div class="authoring-inline-actions">
+                  <button type="button" @click="moveUp(rowIndex)" :disabled="rowIndex === 0">Up</button>
+                  <button type="button" @click="moveDown(rowIndex)" :disabled="rowIndex === items.length - 1">Down</button>
+                  <button type="button" @click="removeItem(rowIndex)">Remove</button>
+                </div>
+              </div>
+              <template x-for="subField in subFields" :key="subField.name">
+                <div class="authoring-field">
+                  <label class="authoring-field">
+                    <div class="authoring-field__label" x-text="(subField.display_label || subField.label || subField.name) + (subField.required ? ' *' : '')"></div>
+                    <template x-if="subField.type === 'bool'">
+                      <input type="checkbox" :checked="!!item[subField.name]" @change="item[subField.name] = $event.target.checked">
+                    </template>
+                    <template x-if="subField.type === 'list[str]'">
+                      <textarea class="authoring-textarea" rows="3" :value="Array.isArray(item[subField.name]) ? item[subField.name].join('\n') : ''" @input="item[subField.name] = $event.target.value.split('\n').map(v => v.trim()).filter(Boolean)"></textarea>
+                    </template>
+                    <template x-if="subField.type !== 'bool' && subField.type !== 'list[str]'">
+                      <input class="authoring-input" type="text" :value="item[subField.name] || ''" @input="item[subField.name] = $event.target.value">
+                    </template>
+                    <template x-if="subField.help_text">
+                      <div class="authoring-field__help" x-text="subField.help_text"></div>
+                    </template>
+                  </label>
+                  <template x-if="subField.media_type">
+                    <div class="authoring-media-stack">
+                      <div class="authoring-inline-actions">
+                        <button
+                          type="button"
+                          @click="setPendingMediaTarget(rowIndex, subField.name); openMediaBrowser(subField.media_type, '#media-browser-{{ slide.slide_id }}-{{ field.name }}-' + rowIndex + '-' + subField.name)">
+                          Browse {{ subField.media_type }}
+                        </button>
+                      </div>
+                      <div
+                        class="media-browser-inline"
+                        data-media-browser-inline
+                        :id="'media-browser-{{ slide.slide_id }}-{{ field.name }}-' + rowIndex + '-' + subField.name"></div>
+                    </div>
+                  </template>
+                </div>
+              </template>
+            </div>
+          </template>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="authoring-form-section authoring-form-section--audio">
+      <div class="authoring-section-intro authoring-section-intro--toggle" x-data="{ showInfo: false }" @click="showInfo = !showInfo" @keydown.enter.prevent="showInfo = !showInfo" @keydown.space.prevent="showInfo = !showInfo" role="button" tabindex="0" :aria-expanded="showInfo.toString()">
+        <div class="authoring-section-intro__header">
+          <h4 class="authoring-form-heading">Audio Attachment</h4>
+        </div>
+        <div class="authoring-form-subtext" x-show="showInfo" x-cloak>Audio tied to the board content.</div>
+      </div>
+      {% if slide.view_type == "writing_encoding" and block_id == "02" %}
+      {% for field in content_fields if field.name == "dictated_text" %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">Audio Transcript{% if field.required %} *{% endif %}</div>
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        <div class="authoring-field__help">Reference text for the sound or word students hear. This is not shown on the board.</div>
+      </label>
+      {% endfor %}
+      {% endif %}
+      <input type="hidden" name="slide_audio_url" data-authoring-field="slide_audio_url" :value="attachedSlideAudioUrl">
+      <input
+        type="file"
+        accept=".mp3,.wav,.ogg,.m4a,audio/*"
+        data-slide-audio-file-input
+        style="display:none"
+        @change="handleSlideAudioFileSelected($event)">
+      <div class="authoring-audio-attachment">
+        <template x-if="attachedSlideAudioUrl">
+          <div class="authoring-audio-card" :title="filenameFromPath(attachedSlideAudioUrl)">
+            <div class="authoring-audio-card__header">
+              <div>
+                <div class="authoring-field__label">Attached Audio</div>
+              </div>
+              <div class="authoring-audio-card__meta" x-show="slideAudioDuration" x-cloak x-text="slideAudioDuration"></div>
+            </div>
+            <audio
+              class="authoring-media-preview-audio"
+              controls
+              preload="metadata"
+              :src="attachedSlideAudioUrl"
+              @loadedmetadata="updateSlideAudioDuration($event)"></audio>
+            <div class="authoring-inline-actions">
+              <button
+                type="button"
+                @click="triggerSlideAudioUpload()"
+                :disabled="slideAudioUploading">
+                Replace Audio
+              </button>
+              <button
+                type="button"
+                class="authoring-btn-danger"
+                @click="removeSlideAudio()">
+                Remove Audio
+              </button>
+            </div>
+          </div>
+        </template>
+        <template x-if="!attachedSlideAudioUrl">
+          <div class="authoring-audio-empty">
+            <div class="authoring-audio-empty__copy">
+              <div class="authoring-field__label">No audio attached</div>
+              <div class="authoring-field__help">Attach one audio file for this slide.</div>
+            </div>
+            <button
+              type="button"
+              class="authoring-audio-empty__action"
+              @click="triggerSlideAudioUpload()"
+              :disabled="slideAudioUploading">
+              Upload Audio
+            </button>
+          </div>
+        </template>
+        <div class="authoring-field__help" x-show="slideAudioUploading" x-cloak>Uploading audio…</div>
+        <div class="authoring-field__error" x-show="slideAudioUploadError" x-cloak x-text="slideAudioUploadError"></div>
+      </div>
+    </section>
+
+    <section class="authoring-form-section authoring-form-section--teacher">
+      <div class="authoring-section-intro authoring-section-intro--toggle" x-data="{ showInfo: false }" @click="showInfo = !showInfo" @keydown.enter.prevent="showInfo = !showInfo" @keydown.space.prevent="showInfo = !showInfo" role="button" tabindex="0" :aria-expanded="showInfo.toString()">
+        <div class="authoring-section-intro__header">
+          <h4 class="authoring-form-heading">Teacher Instructions Section</h4>
+        </div>
+        <div class="authoring-form-subtext" x-show="showInfo" x-cloak>Shown on the teacher control screen.</div>
+      </div>
+
+      <input type="hidden" name="expected_response" value="{{ slide.expected_response or '' }}">
+      <input type="hidden" name="correction_move" value="{{ slide.correction_move or '' }}">
+      <input type="hidden" name="observation_note" value="{{ slide.observation_note or '' }}">
+      <input type="hidden" name="slide_title" x-model="requiredFields.slide_title">
+
+      <label class="authoring-field">
+        <div class="authoring-field__label">What To Do *</div>
+        <textarea class="authoring-textarea" name="teacher_cue" rows="3" x-model="requiredFields.teacher_cue" required></textarea>
+        <div x-show="formErrors.teacher_cue" x-text="formErrors.teacher_cue" class="authoring-field__error"></div>
+      </label>
+    </section>
+
+    <section class="authoring-form-section authoring-form-section--prompts">
+      <div class="authoring-section-intro authoring-section-intro--toggle" x-data="{ showInfo: false }" @click="showInfo = !showInfo" @keydown.enter.prevent="showInfo = !showInfo" @keydown.space.prevent="showInfo = !showInfo" role="button" tabindex="0" :aria-expanded="showInfo.toString()">
+        <div class="authoring-section-intro__header">
+          <h4 class="authoring-form-heading">Teacher Prompts Section</h4>
+        </div>
+        <div class="authoring-form-subtext" x-show="showInfo" x-cloak>Questions or cues for this slide. Each can include audio.</div>
+      </div>
+      <div
+        x-data='itemListEditor({{ teacher_prompts | tojson }}, {{ [
+          {'name': 'text', 'type': 'str', 'display_label': 'Prompt', 'required': True},
+          {'name': 'audio_url', 'type': 'str', 'display_label': 'Audio', 'required': False, 'media_type': 'audio'}
+        ] | tojson }})'
+        @media-selected.window="applyMediaSelection($event)"
+        class="authoring-repeatable">
+        <div class="authoring-repeatable__header">
+          <button type="button" @click="addItem()">Add Prompt</button>
+        </div>
+        <input type="hidden" name="teacher_prompts" :value="serializedItems">
+        <div x-show="!items.length" x-cloak class="authoring-empty">
+          No prompts added.
+        </div>
+        <template x-for="(item, rowIndex) in items" :key="rowIndex">
+          <div class="authoring-repeatable-row">
+            <div class="authoring-repeatable-row__header">
+              <strong x-text="'Prompt ' + (rowIndex + 1)"></strong>
+              <div class="authoring-inline-actions">
+                <button type="button" @click="moveUp(rowIndex)" :disabled="rowIndex === 0">Up</button>
+                <button type="button" @click="moveDown(rowIndex)" :disabled="rowIndex === items.length - 1">Down</button>
+                <button type="button" @click="removeItem(rowIndex)">Remove</button>
+              </div>
+            </div>
+            <label class="authoring-field">
+              <div class="authoring-field__label">Prompt *</div>
+              <input class="authoring-input" type="text" :value="item.text || ''" @input="item.text = $event.target.value">
+            </label>
+            <label class="authoring-field">
+              <div class="authoring-field__label">Audio</div>
+              <input class="authoring-input" type="text" :value="item.audio_url || ''" @input="item.audio_url = $event.target.value">
+            </label>
+            <div class="authoring-media-stack">
+              <div class="authoring-inline-actions">
+                <button
+                  type="button"
+                  @click="setPendingMediaTarget(rowIndex, 'audio_url'); openMediaBrowser('audio', '#media-browser-{{ slide.slide_id }}-teacher-prompts-' + rowIndex + '-audio')">
+                  Browse Audio
+                </button>
+              </div>
+              <div
+                class="media-browser-inline"
+                data-media-browser-inline
+                :id="'media-browser-{{ slide.slide_id }}-teacher-prompts-' + rowIndex + '-audio'"></div>
+              <template x-if="item.audio_url">
+                <audio class="authoring-media-preview-audio" controls preload="none" :src="item.audio_url"></audio>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <section class="authoring-form-section authoring-form-section--soft">
+      <div class="authoring-section-intro">
+        <div class="authoring-section-intro__header">
+          <h4 class="authoring-form-heading">Marking</h4>
+        </div>
+      </div>
+      <label class="authoring-checkbox">
+        <input type="checkbox" name="markable" value="true" x-model="markable" {% if slide.markable %}checked{% endif %}>
+        <span>Mark students on this slide</span>
+      </label>
+      <div x-show="markable" x-cloak class="authoring-field__help">
+        Outcomes: <strong>{{ (default_marking.marking_options or []) | join(' · ') }}</strong>
+      </div>
+    </section>
+
+    {% set rendered_advanced_fields = advanced_fields %}
+    {% if slide.view_type == "read_respond" %}
+    {% set rendered_advanced_fields = advanced_fields | rejectattr('name', 'equalto', 'comprehension_questions') | list %}
+    {% endif %}
+    {% if capability_flags.supports_teacher_says or rendered_advanced_fields %}
+    <section class="authoring-form-section authoring-form-section--soft">
+      <button type="button" @click="toggleAdvanced()" class="authoring-advanced-toggle">
+        <span>Advanced Settings</span>
+        <span x-text="advancedOpen ? 'Hide' : 'Show'"></span>
+      </button>
+      <div x-show="advancedOpen" x-cloak class="authoring-stack authoring-stack--tight">
+        {% if capability_flags.supports_teacher_says %}
+        <div class="authoring-repeatable">
+          <label class="authoring-field">
+            <div class="authoring-field__label">Task Prompt (auto-speak)</div>
+            <textarea class="authoring-textarea" name="luminos_says__prompt_text" rows="3">{{ luminos_says.prompt_text if luminos_says else '' }}</textarea>
+          </label>
+          <label class="authoring-field">
+            <div class="authoring-field__label">Support Prompt</div>
+            <textarea class="authoring-textarea" name="luminos_says__support_text" rows="2">{{ luminos_says.support_text if luminos_says else '' }}</textarea>
+          </label>
+          <label class="authoring-checkbox">
+            <input type="checkbox" name="luminos_says__auto_speak" value="true" {% if luminos_says and luminos_says.auto_speak %}checked{% endif %}>
+            <span>Auto-speak this prompt</span>
+          </label>
+          <label class="authoring-checkbox">
+            <input type="checkbox" name="luminos_says__enabled" value="true" {% if not luminos_says or luminos_says.enabled %}checked{% endif %}>
+            <span>Enable prompts for this slide</span>
+          </label>
+        </div>
+        {% endif %}
+
+        {% for field in rendered_advanced_fields %}
+        <label class="authoring-field">
+          <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+          {% if field.widget == "textarea" %}
+          <textarea class="authoring-textarea" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" rows="{{ field.rows }}">{{ field.value }}</textarea>
+          {% elif field.widget == "checkbox" %}
+          <input type="checkbox" name="payload__{{ field.name }}" value="true" data-authoring-field="payload__{{ field.name }}" {% if field.value %}checked{% endif %}>
+          {% elif field.widget == "select" %}
+          <select class="authoring-select" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}">
+            <option value="">Select</option>
+            {% for option in field.options %}
+            <option value="{{ option }}" {% if field.value == option %}selected{% endif %}>{{ option }}</option>
+            {% endfor %}
+          </select>
+          {% else %}
+          <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+          {% endif %}
+          {% if field.help_text %}
+          <div class="authoring-field__help">{{ field.help_text }}</div>
+          {% endif %}
+        </label>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+  </form>
+  <div id="slide-preview-{{ slide.slide_id }}" class="authoring-preview-frame"></div>
+</div>

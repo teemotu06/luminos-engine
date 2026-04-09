@@ -1,16 +1,12 @@
 {% if slide.content_payload.display_mode == 'lesson_close' %}
-{% set mark_labels = {
-  'secure': 'Secure',
-  'shaky': 'Shaky',
-  'missed': 'Missed',
-  'deferred': 'Deferred'
-} %}
+{% set items = slide.content_payload.check_items %}
 <div
   class="lesson-close"
-  x-data="{ activeIndex: 0, total: {{ slide.content_payload.check_items | length }} }">
-  {% if slide.content_payload.check_items %}
+  x-data="{ activeIndex: 0, total: {{ items | length }} }">
+
+  {% if items %}
   <div class="lesson-close__stage">
-    {% for item in slide.content_payload.check_items %}
+    {% for item in items %}
     <div
       class="lesson-close__prompt"
       x-show="activeIndex === {{ loop.index0 }}">
@@ -19,12 +15,40 @@
     {% endfor %}
   </div>
 
+  <!-- Per-item marking: tap Got it / Mixed / Revisit for the active item -->
+  <div class="lesson-close__item-marking">
+    <button
+      type="button"
+      class="lesson-close__mark-btn lesson-close__mark-btn--secure"
+      :class="{ 'lesson-close__mark-btn--active': getQuickCheckItemMark({{ slide_index }}, activeIndex) === 'secure' }"
+      @click="setQuickCheckItemMark({{ slide_index }}, activeIndex, 'secure')">
+      Got it
+    </button>
+    <button
+      type="button"
+      class="lesson-close__mark-btn lesson-close__mark-btn--mixed"
+      :class="{ 'lesson-close__mark-btn--active': getQuickCheckItemMark({{ slide_index }}, activeIndex) === 'shaky' }"
+      @click="setQuickCheckItemMark({{ slide_index }}, activeIndex, 'shaky')">
+      Mixed
+    </button>
+    <button
+      type="button"
+      class="lesson-close__mark-btn lesson-close__mark-btn--revisit"
+      :class="{ 'lesson-close__mark-btn--active': getQuickCheckItemMark({{ slide_index }}, activeIndex) === 'missed' }"
+      @click="setQuickCheckItemMark({{ slide_index }}, activeIndex, 'missed')">
+      Revisit
+    </button>
+  </div>
+
   <div class="lesson-close__progress" aria-hidden="true">
-    {% for item in slide.content_payload.check_items %}
+    {% for item in items %}
     <button
       type="button"
       class="lesson-close__dot"
-      :class="{ 'lesson-close__dot--active': activeIndex === {{ loop.index0 }} }"
+      :class="{
+        'lesson-close__dot--active': activeIndex === {{ loop.index0 }},
+        'lesson-close__dot--marked': !!getQuickCheckItemMark({{ slide_index }}, {{ loop.index0 }})
+      }"
       @click="activeIndex = {{ loop.index0 }}"
       aria-label="Prompt {{ loop.index }}">
     </button>
@@ -43,8 +67,26 @@
     <button
       type="button"
       class="lesson-close__button"
-      @click="activeIndex = activeIndex + 1 < total ? activeIndex + 1 : 0"
-      x-text="activeIndex + 1 < total ? 'Next Prompt' : 'Restart'">
+      @click="activeIndex + 1 < total ? (activeIndex = activeIndex + 1) : null"
+      :disabled="activeIndex + 1 >= total"
+      x-show="activeIndex + 1 < total">
+      Next →
+    </button>
+  </div>
+
+  <!-- Submit button: visible once all items have a mark -->
+  <div class="lesson-close__submit-row">
+    <button
+      type="button"
+      class="lesson-close__submit-btn"
+      @click="submitQuickCheck({
+        slideIndex: {{ slide_index }},
+        slideId: '{{ slide.slide_id }}',
+        blockId: '{{ slide.block_id }}',
+        items: {{ slide.content_payload.model_dump()['check_items'] | tojson }},
+        completed: false
+      })">
+      Submit marks
     </button>
   </div>
   {% endif %}

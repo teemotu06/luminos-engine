@@ -2,20 +2,53 @@ import uuid
 from datetime import datetime
 from typing import Optional, Union
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, String, Text, UniqueConstraint
-from sqlalchemy.dialects.postgresql import JSONB, UUID
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy.dialects.postgresql import JSONB, UUID as PG_UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy.types import JSON
+from sqlalchemy.types import CHAR, JSON, TypeDecorator
 
-from app.db import Base, DATABASE_URL
+from app.db import Base
 
 
-JsonType = JSONB if DATABASE_URL.startswith("postgresql") else JSON
-UuidType = UUID(as_uuid=True) if DATABASE_URL.startswith("postgresql") else String(36)
+JsonType = JSON().with_variant(JSONB, "postgresql")
+
+
+class GuidType(TypeDecorator):
+    """Store UUIDs natively on Postgres and as 36-char strings elsewhere."""
+
+    impl = CHAR
+    cache_ok = True
+
+    def load_dialect_impl(self, dialect):
+        if dialect.name == "postgresql":
+            return dialect.type_descriptor(PG_UUID(as_uuid=True))
+        return dialect.type_descriptor(CHAR(36))
+
+    def process_bind_param(self, value, dialect):
+        if value is None:
+            return None
+        if dialect.name == "postgresql":
+            if not isinstance(value, uuid.UUID):
+                value = uuid.UUID(str(value))
+            return value
+        return str(value)
+
+    def process_result_value(self, value, dialect):
+        if value is None:
+            return None
+        if isinstance(value, uuid.UUID):
+            return value
+        try:
+            return uuid.UUID(str(value))
+        except (TypeError, ValueError, AttributeError):
+            return str(value)
+
+
+UuidType = GuidType()
 
 
 def new_uuid_value():
-    return uuid.uuid4() if DATABASE_URL.startswith("postgresql") else str(uuid.uuid4())
+    return uuid.uuid4()
 
 
 class ClassRecord(Base):
@@ -37,6 +70,11 @@ class ClassRecord(Base):
         back_populates="class_group",
         cascade="all, delete-orphan",
         order_by="StudentRecord.student_name",
+    )
+    class_session: Mapped[Optional["ClassSessionRecord"]] = relationship(
+        back_populates="class_group",
+        cascade="all, delete-orphan",
+        uselist=False,
     )
 
 
@@ -79,6 +117,44 @@ class LessonRecord(Base):
     attempts: Mapped[list["LessonAttemptRecord"]] = relationship(back_populates="lesson")
 
 
+class ClassSessionRecord(Base):
+    __tablename__ = "class_session"
+
+    class_id: Mapped[Union[str, uuid.UUID]] = mapped_column(
+        ForeignKey("class_group.id", ondelete="CASCADE"),
+        primary_key=True,
+    )
+    lesson_id: Mapped[Optional[str]] = mapped_column(ForeignKey("lesson.lesson_id"), nullable=True)
+    attempt_id: Mapped[Optional[Union[str, uuid.UUID]]] = mapped_column(
+        ForeignKey("lesson_attempt.attempt_id", ondelete="SET NULL"),
+        nullable=True,
+    )
+    current_slide_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    status: Mapped[str] = mapped_column(String(20), nullable=False, default="idle")
+    paused: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    display_message: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    letter_reveal_count: Mapped[Optional[int]] = mapped_column(Integer, nullable=True, default=0)
+    letter_reveal_slide_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    drag_letter_selection: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
+    drag_letter_slide_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    pattern_noticing_reveal_count: Mapped[Optional[int]] = mapped_column(Integer, nullable=True, default=0)
+    pattern_noticing_slide_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    spell_word_selection: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
+    spell_word_slide_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    version: Mapped[int] = mapped_column(default=1, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        default=datetime.utcnow,
+        onupdate=datetime.utcnow,
+        nullable=False,
+    )
+
+    class_group: Mapped["ClassRecord"] = relationship(back_populates="class_session")
+    lesson: Mapped[Optional["LessonRecord"]] = relationship()
+    attempt: Mapped[Optional["LessonAttemptRecord"]] = relationship()
+
+
 class LessonAttemptRecord(Base):
     __tablename__ = "lesson_attempt"
 
@@ -90,7 +166,7 @@ class LessonAttemptRecord(Base):
     attempt_date: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
     completed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     version: Mapped[int] = mapped_column(default=1, nullable=False)
-    current_slide_id: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    current_slide_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     mastery_status: Mapped[str] = mapped_column(String(20), default="shaky", nullable=False)
     phoneme_error_log: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
     notes: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
@@ -108,7 +184,7 @@ class SlideResultRecord(Base):
 
     result_id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
     attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(ForeignKey("lesson_attempt.attempt_id"), nullable=False)
-    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    slide_id: Mapped[str] = mapped_column(String(64), nullable=False)
     block_id: Mapped[str] = mapped_column(String(2), nullable=False)
     status: Mapped[str] = mapped_column(String(20), nullable=False)
     error_tags: Mapped[list[str]] = mapped_column(JsonType, default=list, nullable=False)
@@ -126,7 +202,7 @@ class StudentMarkRecord(Base):
     id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
     attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(ForeignKey("lesson_attempt.attempt_id"), nullable=False)
     lesson_id: Mapped[str] = mapped_column(String(20), nullable=False)
-    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    slide_id: Mapped[str] = mapped_column(String(64), nullable=False)
     block_id: Mapped[str] = mapped_column(String(2), nullable=False)
     student_name: Mapped[str] = mapped_column(String(100), nullable=False)
     status: Mapped[str] = mapped_column(String(20), nullable=False)
@@ -144,7 +220,7 @@ class OralCheckSessionRecord(Base):
     id: Mapped[Union[str, uuid.UUID]] = mapped_column(UuidType, primary_key=True, default=new_uuid_value)
     attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(ForeignKey("lesson_attempt.attempt_id"), nullable=False)
     lesson_id: Mapped[str] = mapped_column(String(20), nullable=False)
-    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    slide_id: Mapped[str] = mapped_column(String(64), nullable=False)
     block_id: Mapped[str] = mapped_column(String(2), nullable=False)
     participation_mode: Mapped[str] = mapped_column(String(40), nullable=False)
     audit_selection_strategy: Mapped[str] = mapped_column(String(40), nullable=False, default="roster_order")
@@ -178,7 +254,7 @@ class OralCheckAssignmentRecord(Base):
     )
     attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(ForeignKey("lesson_attempt.attempt_id"), nullable=False)
     lesson_id: Mapped[str] = mapped_column(String(20), nullable=False)
-    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    slide_id: Mapped[str] = mapped_column(String(64), nullable=False)
     block_id: Mapped[str] = mapped_column(String(2), nullable=False)
     student_name: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     performance_type: Mapped[str] = mapped_column(String(40), nullable=False)
@@ -205,7 +281,7 @@ class LessonRuntimeStateRecord(Base):
     attempt_id: Mapped[Union[str, uuid.UUID]] = mapped_column(
         ForeignKey("lesson_attempt.attempt_id", ondelete="CASCADE"), nullable=False, index=True
     )
-    slide_id: Mapped[str] = mapped_column(String(20), nullable=False)
+    slide_id: Mapped[str] = mapped_column(String(64), nullable=False)
     block_id: Mapped[str] = mapped_column(String(2), nullable=False)
     current_state: Mapped[str] = mapped_column(String(40), nullable=False, default="idle")
     state_sequence: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
@@ -213,6 +289,7 @@ class LessonRuntimeStateRecord(Base):
     student_queue: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
     queue_position: Mapped[int] = mapped_column(default=0, nullable=False)
     reteach_queue: Mapped[list] = mapped_column(JsonType, default=list, nullable=False)
+    student_outcomes: Mapped[dict] = mapped_column(JsonType, default=dict, nullable=False)
     current_student: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     current_prompt_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     teacher_prompt_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)

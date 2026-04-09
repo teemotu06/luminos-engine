@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMINOS — Lesson Library</title>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════
+   LUMINOS · Warm Glass · Tahoe Edition
+   ════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --canvas:#faf9f5; --canvas-raised:#FFFFFF;
+  --warm-50:#fdf5f1; --warm-100:#f5ddd2; --warm-200:#e8c1b0;
+  --warm-300:#d9a48e; --warm-400:#d97757; --warm-500:#c96a4c;
+  --warm-600:#b25a3e; --warm-700:#9a4a34;
+  --stone-100:#f0efeb; --stone-200:#e8e6dc; --stone-300:#d4d1c7;
+  --stone-400:#b0aea5; --stone-500:#8a877e; --stone-600:#6b6862;
+  --stone-700:#4a4843; --stone-800:#2d2b28; --stone-900:#141413;
+  --green:#16a34a; --green-bg:rgba(22,163,74,0.07); --green-border:rgba(22,163,74,0.18);
+  --amber:#d97706; --amber-bg:rgba(217,119,6,0.08); --amber-border:rgba(217,119,6,0.2);
+  --red:#dc2626; --red-bg:rgba(220,38,38,0.07); --red-border:rgba(220,38,38,0.17);
+  --blue:#3b82f6; --blue-bg:rgba(59,130,246,0.07); --blue-border:rgba(59,130,246,0.18);
+  --glass-bg:rgba(255,255,255,0.55); --glass-border:rgba(255,255,255,0.75);
+  --glass-shadow:0 1px 3px rgba(0,0,0,0.02),0 8px 24px rgba(0,0,0,0.04);
+  --glass-shadow-h:0 2px 4px rgba(0,0,0,0.02),0 14px 36px rgba(0,0,0,0.07);
+  --sidebar-glass:rgba(255,255,255,0.68);
+  --r-sm:10px; --r-md:14px; --r-lg:18px; --r-xl:22px;
+}
+
+html { height:100%; }
+body {
+  font-family:'Outfit',-apple-system,BlinkMacSystemFont,sans-serif;
+  height:100%; color:var(--stone-800);
+  -webkit-font-smoothing:antialiased; overflow:hidden;
+  background:var(--canvas);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 75% 15%,rgba(217,119,87,0.09) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 80%,rgba(217,119,87,0.06) 0%,transparent 50%);
+}
+
+.shell { display:flex; height:100%; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width:252px; flex-shrink:0;
+  background:var(--sidebar-glass);
+  backdrop-filter:blur(40px) saturate(160%);
+  -webkit-backdrop-filter:blur(40px) saturate(160%);
+  border-right:1px solid rgba(0,0,0,0.06);
+  display:flex; flex-direction:column; padding:24px 14px 20px;
+  animation:slideIn 0.35s ease both;
+}
+@keyframes slideIn { from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)} }
+.logo { display:flex; align-items:center; gap:11px; padding:2px 10px 28px; }
+.logo-mark {
+  width:34px; height:34px; border-radius:var(--r-sm);
+  background:linear-gradient(135deg,var(--warm-400),var(--warm-600));
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 1px 4px rgba(217,119,87,0.28),0 4px 14px rgba(217,119,87,0.14);
+}
+.logo-mark svg { color:#fff; width:16px; height:16px; }
+.logo-text {
+  font-family:'Newsreader',Georgia,serif; font-size:19px; font-weight:500;
+  color:var(--stone-800); letter-spacing:-0.01em;
+}
+.nav { flex:1; display:flex; flex-direction:column; gap:2px; }
+.nav-item {
+  display:flex; align-items:center; gap:10px;
+  padding:9px 12px; border-radius:var(--r-sm);
+  font-size:13.5px; font-weight:450; color:var(--stone-500);
+  text-decoration:none; cursor:pointer; transition:all 0.15s;
+}
+.nav-item svg { width:16px; height:16px; flex-shrink:0; opacity:0.65; }
+.nav-item:hover { background:rgba(0,0,0,0.03); color:var(--stone-700); }
+.nav-item:hover svg { opacity:1; }
+.nav-item.active {
+  background:var(--canvas-raised); color:var(--stone-900);
+  font-weight:550; box-shadow:0 1px 3px rgba(0,0,0,0.05);
+}
+.nav-item.active svg { opacity:1; color:var(--warm-500); }
+.sidebar-spacer { flex:1; }
+
+/* Sidebar filters */
+.filter-section { margin-top:20px; }
+.filter-label {
+  font-size:10.5px; font-weight:650; letter-spacing:0.08em;
+  text-transform:uppercase; color:var(--stone-400); padding:4px 12px 8px;
+}
+.filter-item {
+  display:flex; align-items:center; gap:8px;
+  padding:7px 12px; border-radius:8px; font-size:13px;
+  color:var(--stone-500); cursor:pointer; transition:all 0.12s;
+}
+.filter-item svg { width:13px; height:13px; flex-shrink:0; opacity:0.5; }
+.filter-item:hover { background:rgba(0,0,0,0.025); color:var(--stone-700); }
+.filter-item.active { color:var(--warm-600); font-weight:550; }
+.filter-item.active svg { opacity:1; color:var(--warm-500); }
+.filter-count {
+  margin-left:auto; font-size:11px; font-weight:500;
+  color:var(--stone-400); min-width:18px; text-align:right;
+}
+.user-card {
+  display:flex; align-items:center; gap:10px; padding:12px;
+  border-radius:var(--r-md); margin-top:12px; cursor:pointer; transition:background 0.15s;
+}
+.user-card:hover { background:rgba(0,0,0,0.025); }
+.user-avatar {
+  width:32px; height:32px; border-radius:50%;
+  background:linear-gradient(135deg,var(--warm-300),var(--warm-500));
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:#fff; flex-shrink:0;
+}
+.user-name { font-size:13px; font-weight:550; color:var(--stone-800); }
+.user-role { font-size:11px; color:var(--stone-400); margin-top:1px; }
+
+/* ── MAIN ── */
+.main { flex:1; overflow-y:auto; padding:40px 44px 120px; }
+.main::-webkit-scrollbar { width:5px; }
+.main::-webkit-scrollbar-track { background:transparent; }
+.main::-webkit-scrollbar-thumb { background:var(--stone-300); border-radius:99px; }
+
+/* Page header */
+.page-header {
+  display:flex; align-items:flex-start; justify-content:space-between;
+  margin-bottom:28px; animation:enter 0.4s ease both;
+}
+.page-kicker {
+  font-size:11px; font-weight:650; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--warm-500); margin-bottom:6px;
+}
+.page-title {
+  font-family:'Newsreader',Georgia,serif; font-size:32px; font-weight:400;
+  letter-spacing:-0.02em; color:var(--stone-900); line-height:1.1;
+}
+.stats-bar { display:flex; gap:6px; padding-top:8px; }
+.stat-pill {
+  font-size:12px; font-weight:500; color:var(--stone-400);
+  padding:5px 12px; border-radius:99px; border:1px solid var(--stone-200);
+  background:var(--canvas-raised); white-space:nowrap;
+}
+.stat-pill strong { font-weight:650; color:var(--stone-600); }
+.stat-pill.hi { background:var(--warm-50); border-color:var(--warm-200); color:var(--warm-600); }
+.stat-pill.hi strong { color:var(--warm-600); }
+
+/* Class selector panel */
+.class-panel {
+  background:var(--glass-bg);
+  backdrop-filter:blur(32px) saturate(150%);
+  -webkit-backdrop-filter:blur(32px) saturate(150%);
+  border:1px solid var(--glass-border); border-radius:var(--r-xl);
+  padding:22px 26px; margin-bottom:28px; box-shadow:var(--glass-shadow);
+  animation:enter 0.4s ease 0.04s both;
+}
+.class-panel-top {
+  display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;
+}
+.class-panel-label {
+  font-size:10.5px; font-weight:650; letter-spacing:0.08em;
+  text-transform:uppercase; color:var(--stone-400);
+}
+.class-panel-action {
+  font-size:12px; font-weight:550; color:var(--warm-500); cursor:pointer;
+  text-decoration:none; display:flex; align-items:center; gap:3px; transition:color 0.12s;
+}
+.class-panel-action:hover { color:var(--warm-600); }
+.class-panel-action svg { width:12px; height:12px; }
+.class-select {
+  width:100%; padding:12px 16px;
+  background:var(--canvas-raised); border:1px solid var(--stone-200);
+  border-radius:var(--r-md); color:var(--stone-800);
+  font-family:inherit; font-size:14px; font-weight:450;
+  outline:none; cursor:pointer; appearance:none; -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23A8A29E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 14px center;
+  transition:border-color 0.15s,box-shadow 0.15s;
+}
+.class-select:hover { border-color:var(--stone-300); }
+.class-select:focus { border-color:var(--warm-400); box-shadow:0 0 0 3px rgba(217,119,87,0.1); }
+.class-note {
+  font-size:11.5px; color:var(--stone-400); margin-top:8px; padding-left:2px;
+  display:flex; align-items:center; gap:5px;
+}
+.class-note-dot { width:5px; height:5px; border-radius:50%; background:var(--stone-300); flex-shrink:0; }
+.class-note-dot.active { background:var(--warm-400); box-shadow:0 0 0 3px rgba(217,119,87,0.15); }
+
+/* Toolbar */
+.toolbar {
+  display:flex; gap:8px; margin-bottom:36px; align-items:center;
+  animation:enter 0.4s ease 0.08s both;
+}
+.search-bar {
+  flex:1; display:flex; align-items:center; gap:9px;
+  padding:0 14px; height:42px; background:var(--canvas-raised);
+  border:1px solid var(--stone-200); border-radius:var(--r-md);
+  transition:border-color 0.15s,box-shadow 0.15s;
+}
+.search-bar:focus-within { border-color:var(--warm-400); box-shadow:0 0 0 3px rgba(217,119,87,0.08); }
+.search-bar svg { width:15px; height:15px; color:var(--stone-400); flex-shrink:0; }
+.search-bar input {
+  flex:1; border:none; outline:none; background:none;
+  font-family:inherit; font-size:13.5px; color:var(--stone-800);
+}
+.search-bar input::placeholder { color:var(--stone-400); }
+.tool-btn {
+  display:flex; align-items:center; gap:6px;
+  padding:0 14px; height:42px; background:var(--canvas-raised);
+  border:1px solid var(--stone-200); border-radius:var(--r-sm);
+  color:var(--stone-500); font-family:inherit; font-size:13px; font-weight:500;
+  cursor:pointer; transition:all 0.12s; white-space:nowrap;
+}
+.tool-btn svg { width:14px; height:14px; }
+.tool-btn:hover { border-color:var(--stone-300); color:var(--stone-700); background:#fff; }
+
+/* Group sections */
+.group-header {
+  display:flex; align-items:baseline; justify-content:space-between;
+  margin-top:40px; margin-bottom:16px;
+  padding-bottom:10px; border-bottom:1px solid var(--stone-200);
+  animation:enter 0.35s ease 0.1s both;
+}
+.group-header:first-of-type { margin-top:0; }
+.group-name {
+  font-family:'Newsreader',Georgia,serif; font-size:24px; font-weight:400;
+  color:var(--stone-800); letter-spacing:-0.01em;
+}
+.group-count {
+  font-size:11.5px; font-weight:600; color:var(--stone-400);
+  text-transform:uppercase; letter-spacing:0.06em;
+}
+
+/* Lesson grid */
+.lesson-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:12px;
+}
+
+/* Lesson card */
+.lesson-card {
+  background:var(--glass-bg);
+  backdrop-filter:blur(24px) saturate(140%);
+  -webkit-backdrop-filter:blur(24px) saturate(140%);
+  border:1px solid var(--glass-border); border-radius:var(--r-lg);
+  padding:20px; cursor:pointer;
+  display:flex; flex-direction:column;
+  box-shadow:var(--glass-shadow);
+  transition:all 0.25s cubic-bezier(0.25,0.46,0.45,0.94);
+  position:relative; animation:enter 0.4s ease both;
+}
+.lesson-card:hover {
+  transform:translateY(-2px); box-shadow:var(--glass-shadow-h);
+  border-color:rgba(0,0,0,0.06); background:rgba(255,255,255,0.72);
+}
+.lesson-card.is-live {
+  border-color:rgba(217,119,87,0.22);
+  background:rgba(253,245,241,0.72);
+}
+.lesson-grid .lesson-card:nth-child(1){animation-delay:0.08s}
+.lesson-grid .lesson-card:nth-child(2){animation-delay:0.11s}
+.lesson-grid .lesson-card:nth-child(3){animation-delay:0.14s}
+.lesson-grid .lesson-card:nth-child(4){animation-delay:0.17s}
+
+/* Card top */
+.card-top { display:flex; align-items:center; gap:6px; margin-bottom:12px; flex-wrap:wrap; }
+.card-id {
+  font-size:11px; font-weight:650; color:var(--stone-500);
+  letter-spacing:0.04em; font-variant-numeric:tabular-nums; margin-right:auto;
+}
+.card-stage {
+  font-size:10px; font-weight:650; letter-spacing:0.06em;
+  text-transform:uppercase; padding:3px 9px; border-radius:99px;
+}
+.stage-foundation { background:var(--blue-bg); color:var(--blue); border:1px solid var(--blue-border); }
+.stage-building { background:var(--warm-50); color:var(--warm-600); border:1px solid var(--warm-200); }
+.stage-extending { background:var(--green-bg); color:var(--green); border:1px solid var(--green-border); }
+
+/* Gate pill — the KI readiness indicator */
+.gate-pill {
+  font-size:10px; font-weight:650; letter-spacing:0.05em;
+  text-transform:uppercase; padding:3px 8px; border-radius:99px;
+}
+.gate-green { background:var(--green-bg); color:var(--green); border:1px solid var(--green-border); }
+.gate-amber { background:var(--amber-bg); color:#92400e; border:1px solid var(--amber-border); }
+.gate-red { background:var(--red-bg); color:var(--red); border:1px solid var(--red-border); }
+
+/* Phoneme pills */
+.phoneme-pills { display:flex; gap:5px; margin-bottom:10px; flex-wrap:wrap; }
+.phoneme-pill {
+  min-width:28px; height:28px; padding:0 8px;
+  border-radius:99px;
+  background:linear-gradient(145deg,var(--warm-100),var(--warm-200));
+  border:1px solid var(--warm-200);
+  display:flex; align-items:center; justify-content:center;
+  font-size:12px; font-weight:600; color:var(--warm-700);
+}
+
+/* Card body */
+.card-title {
+  font-size:16px; font-weight:650; color:var(--stone-900);
+  letter-spacing:-0.01em; margin-bottom:4px; line-height:1.25;
+}
+.card-targets { font-size:12px; color:var(--stone-400); margin-bottom:auto; }
+
+/* Review preview */
+.review-preview {
+  margin-top:10px; padding:10px 12px;
+  background:rgba(217,119,87,0.05); border-radius:var(--r-sm);
+  border-left:2px solid var(--warm-300);
+}
+.review-line { font-size:11.5px; color:var(--stone-500); margin-bottom:2px; }
+.review-line:last-child { margin-bottom:0; }
+.review-line strong { color:var(--stone-700); font-weight:600; }
+
+/* Card footer */
+.card-footer {
+  display:flex; align-items:center; gap:6px;
+  margin-top:16px; padding-top:14px;
+  border-top:1px solid rgba(0,0,0,0.04);
+}
+.card-status {
+  font-size:11px; font-weight:600;
+  display:flex; align-items:center; gap:4px; margin-right:auto;
+}
+.card-status svg { width:12px; height:12px; }
+.status-done { color:var(--green); }
+.status-revisit { color:var(--amber); }
+.status-none { color:var(--stone-400); }
+.status-live { color:var(--warm-500); }
+
+/* Split launch buttons */
+.launch-group { display:flex; border-radius:var(--r-sm); overflow:hidden; border:1px solid var(--stone-200); }
+.launch-btn {
+  padding:6px 10px; background:var(--canvas-raised);
+  border:none; border-left:1px solid var(--stone-200);
+  font-family:inherit; font-size:11.5px; font-weight:600;
+  color:var(--stone-600); cursor:pointer; transition:all 0.12s;
+  white-space:nowrap;
+}
+.launch-btn:first-child { border-left:none; }
+.launch-btn:hover { background:var(--stone-100); color:var(--stone-800); }
+.launch-btn.primary { background:var(--warm-500); color:#fff; }
+.launch-btn.primary:hover { background:var(--warm-600); }
+
+/* Live badge */
+.live-badge {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:10px; font-weight:700; color:var(--warm-600);
+  background:rgba(201,106,76,0.1); border:1px solid rgba(201,106,76,0.2);
+  padding:3px 8px; border-radius:99px;
+}
+.live-dot { width:5px; height:5px; border-radius:50%; background:var(--warm-500);
+  animation:pulse 1.8s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+
+/* Resume btn (live card) */
+.btn-resume {
+  padding:6px 14px; border-radius:var(--r-sm);
+  background:var(--warm-50); color:var(--warm-600);
+  border:1px solid var(--warm-200); font-family:inherit;
+  font-size:11.5px; font-weight:600; cursor:pointer; transition:all 0.12s;
+}
+.btn-resume:hover { background:var(--warm-100); }
+
+@keyframes enter {
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Dock */
+.dock {
+  position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(32px) saturate(160%);
+  -webkit-backdrop-filter:blur(32px) saturate(160%);
+  border:1px solid rgba(0,0,0,0.06); border-radius:99px;
+  padding:6px 16px; display:flex; align-items:center; gap:2px;
+  z-index:999; box-shadow:0 2px 14px rgba(0,0,0,0.07);
+  animation:enter 0.4s ease 0.25s both;
+}
+.dock-label {
+  font-size:9px; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--stone-400);
+  margin-right:8px; padding-right:10px; border-right:1px solid var(--stone-200);
+}
+.dock a {
+  font-size:12px; font-weight:450; color:var(--stone-500);
+  text-decoration:none; padding:5px 10px; border-radius:99px; transition:all 0.12s;
+}
+.dock a:hover { background:rgba(0,0,0,0.03); color:var(--stone-700); }
+.dock a.here { color:var(--warm-600); font-weight:600; background:var(--warm-50); }
+</style>
+</head>
+<body>
+<div class="shell">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">
+    <div class="logo-mark"><i data-lucide="zap"></i></div>
+    <div class="logo-text">Luminos</div>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="mockup_teacher_dashboard.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+    <span class="nav-item active"><i data-lucide="book-open"></i> Library</span>
+    <a class="nav-item" href="mockup_class_management.html"><i data-lucide="users"></i> Classes</a>
+    <a class="nav-item" href="mockup_teacher_controls.html"><i data-lucide="sliders-horizontal"></i> Session Controls</a>
+    <div class="sidebar-spacer"></div>
+    <div class="filter-section">
+      <div class="filter-label">Level</div>
+      <div class="filter-item active"><i data-lucide="layers"></i> All Levels <span class="filter-count">76</span></div>
+      <div class="filter-item"><i data-lucide="circle"></i> Foundation (L0) <span class="filter-count">8</span></div>
+      <div class="filter-item"><i data-lucide="circle"></i> Building (L1) <span class="filter-count">10</span></div>
+      <div class="filter-item"><i data-lucide="circle"></i> Extending (L2) <span class="filter-count">6</span></div>
+    </div>
+    <div class="filter-section">
+      <div class="filter-label">Focus Area</div>
+      <div class="filter-item"><i data-lucide="mic"></i> CVC Words</div>
+      <div class="filter-item"><i data-lucide="mic"></i> Digraphs</div>
+      <div class="filter-item"><i data-lucide="mic"></i> Blends</div>
+      <div class="filter-item"><i data-lucide="mic"></i> Vowel Teams</div>
+    </div>
+  </nav>
+  <div class="user-card">
+    <div class="user-avatar">ST</div>
+    <div>
+      <div class="user-name">Ms. Torres</div>
+      <div class="user-role">Lead Teacher</div>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div>
+      <div class="page-kicker">Luminos</div>
+      <div class="page-title">Lesson Library</div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-pill"><strong>76</strong> Lessons</div>
+      <div class="stat-pill"><strong>11</strong> Groups</div>
+      <div class="stat-pill hi"><strong>63</strong> Ready</div>
+      <div class="stat-pill"><strong>78</strong> Sounds</div>
+    </div>
+  </div>
+
+  <!-- Class selector -->
+  <div class="class-panel">
+    <div class="class-panel-top">
+      <div class="class-panel-label">Select Your Class</div>
+      <a class="class-panel-action" href="mockup_class_management.html">Manage Classes <i data-lucide="arrow-right"></i></a>
+    </div>
+    <select class="class-select">
+      <option>No class — quick preview</option>
+      <option>Group 1 · Beginners (5 students)</option>
+      <option selected>Group 2 · Intermediate (7 students)</option>
+      <option>Group 3 · Extending (5 students)</option>
+    </select>
+    <div class="class-note">
+      <span class="class-note-dot active"></span>
+      Roster-connected — marks will be saved
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="search-bar">
+      <i data-lucide="search"></i>
+      <input type="text" placeholder="Search lessons, phonemes, words…">
+    </div>
+    <button class="tool-btn"><i data-lucide="sliders-horizontal"></i> Filter</button>
+    <button class="tool-btn"><i data-lucide="arrow-up-down"></i> Sort</button>
+  </div>
+
+  <!-- ─── G1 ─── -->
+  <div class="group-header">
+    <div class="group-name">G1 — Foundation</div>
+    <div class="group-count">4 Lessons</div>
+  </div>
+  <div class="lesson-grid">
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G1-L1</span>
+        <span class="card-stage stage-foundation">Foundation</span>
+        <span class="gate-pill gate-green">Ready</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill">s</span>
+        <span class="phoneme-pill">a</span>
+        <span class="phoneme-pill">t</span>
+      </div>
+      <div class="card-title">s, a, t</div>
+      <div class="card-targets">3 target sounds</div>
+      <div class="card-footer">
+        <div class="card-status status-done"><i data-lucide="check-circle-2"></i> Done</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G1-L2</span>
+        <span class="card-stage stage-foundation">Foundation</span>
+        <span class="gate-pill gate-green">Ready</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill">i</span>
+        <span class="phoneme-pill">p</span>
+        <span class="phoneme-pill">n</span>
+      </div>
+      <div class="card-title">i, p, n</div>
+      <div class="card-targets">3 target sounds</div>
+      <div class="card-footer">
+        <div class="card-status status-done"><i data-lucide="check-circle-2"></i> Done</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G1-L3</span>
+        <span class="card-stage stage-foundation">Foundation</span>
+        <span class="gate-pill gate-amber">Review</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill">Short</span>
+        <span class="phoneme-pill">/a/</span>
+      </div>
+      <div class="card-title">Short /a/ CVC Words</div>
+      <div class="card-targets">1 target sound</div>
+      <div class="review-preview">
+        <div class="review-line"><strong>Auto-review added:</strong> Spaced review: /a/</div>
+        <div class="review-line">2 students weak on this pattern</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-status status-revisit"><i data-lucide="alert-circle"></i> Revisit</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G1-L4</span>
+        <span class="card-stage stage-foundation">Foundation</span>
+        <span class="gate-pill gate-red">Not ready</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill">ck</span>
+        <span class="phoneme-pill">ff</span>
+        <span class="phoneme-pill">ll</span>
+        <span class="phoneme-pill">ss</span>
+      </div>
+      <div class="card-title">Floss Rule</div>
+      <div class="card-targets">4 target sounds</div>
+      <div class="card-footer">
+        <div class="card-status status-none"><i data-lucide="circle-dashed"></i> Not started</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /G1 grid -->
+
+  <!-- ─── G2 ─── -->
+  <div class="group-header">
+    <div class="group-name">G2 — Building</div>
+    <div class="group-count">7 Lessons</div>
+  </div>
+  <div class="lesson-grid">
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G2-L6</span>
+        <span class="card-stage stage-building">Building</span>
+        <span class="gate-pill gate-green">Ready</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill" style="font-size:10px">sh</span>
+      </div>
+      <div class="card-title">Digraph: sh</div>
+      <div class="card-targets">1 target sound · /ʃ/</div>
+      <div class="card-footer">
+        <div class="card-status status-done"><i data-lucide="check-circle-2"></i> Done</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card is-live">
+      <div class="card-top">
+        <span class="card-id">G2-L7</span>
+        <span class="card-stage stage-building">Building</span>
+        <div class="live-badge"><span class="live-dot"></span> Live now</div>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill" style="font-size:10px">ch</span>
+        <span class="phoneme-pill" style="font-size:10px">th</span>
+      </div>
+      <div class="card-title">Digraphs: ch, th</div>
+      <div class="card-targets">2 target sounds</div>
+      <div class="card-footer">
+        <div class="card-status status-live"><i data-lucide="zap"></i> In session</div>
+        <button class="btn-resume">Resume →</button>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G2-L8</span>
+        <span class="card-stage stage-building">Building</span>
+        <span class="gate-pill gate-amber">Soon</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill" style="font-size:10px">bl</span>
+        <span class="phoneme-pill" style="font-size:10px">cl</span>
+        <span class="phoneme-pill" style="font-size:10px">fl</span>
+      </div>
+      <div class="card-title">Consonant Blends bl/cl/fl</div>
+      <div class="card-targets">3 target sounds</div>
+      <div class="card-footer">
+        <div class="card-status status-none"><i data-lucide="circle-dashed"></i> Not started</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /G2 grid -->
+
+  <!-- ─── G3 ─── -->
+  <div class="group-header">
+    <div class="group-name">G3 — Extending</div>
+    <div class="group-count">6 Lessons</div>
+  </div>
+  <div class="lesson-grid">
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G3-L12</span>
+        <span class="card-stage stage-extending">Extending</span>
+        <span class="gate-pill gate-green">Ready</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill" style="font-size:10px">ai</span>
+        <span class="phoneme-pill" style="font-size:10px">ay</span>
+      </div>
+      <div class="card-title">Vowel Team ai/ay</div>
+      <div class="card-targets">1 target sound · /eɪ/</div>
+      <div class="card-footer">
+        <div class="card-status status-done"><i data-lucide="check-circle-2"></i> Done</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="card-top">
+        <span class="card-id">G3-L13</span>
+        <span class="card-stage stage-extending">Extending</span>
+        <span class="gate-pill gate-amber">Review</span>
+      </div>
+      <div class="phoneme-pills">
+        <span class="phoneme-pill" style="font-size:10px">oa</span>
+        <span class="phoneme-pill" style="font-size:10px">ow</span>
+      </div>
+      <div class="card-title">Vowel Team oa/ow</div>
+      <div class="card-targets">1 target sound · /oʊ/</div>
+      <div class="review-preview">
+        <div class="review-line"><strong>Warm-up:</strong> ai/ay (last lesson)</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-status status-revisit"><i data-lucide="alert-circle"></i> Revisit</div>
+        <div class="launch-group">
+          <button class="launch-btn">Lesson</button>
+          <button class="launch-btn">Teacher</button>
+          <button class="launch-btn primary">Board</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /G3 grid -->
+
+</div><!-- /main -->
+</div><!-- /shell -->
+
+<!-- Dock -->
+<div class="dock">
+  <span class="dock-label">Mockups</span>
+  <a href="mockup_login.html">Login</a>
+  <a href="mockup_teacher_dashboard.html">Dashboard</a>
+  <a class="here" href="mockup_library.html">Library</a>
+  <a href="mockup_board.html">Board</a>
+  <a href="mockup_teacher_controls.html">Teacher</a>
+  <a href="mockup_class_management.html">Classes</a>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

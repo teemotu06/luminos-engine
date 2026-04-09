@@ -38,6 +38,8 @@ def create_attempt(
     class_id: Optional[str] = None,
 ) -> LessonAttemptRecord:
     """Create or resume a recent in-progress lesson attempt for the same class and lesson."""
+    cutoff = datetime.utcnow() - ATTEMPT_RESUME_WINDOW
+
     if class_id:
         cutoff = datetime.utcnow() - ATTEMPT_RESUME_WINDOW
         existing = (
@@ -56,6 +58,30 @@ def create_attempt(
         )
         if existing is not None:
             logger.info("attempt.resumed attempt_id=%s lesson_id=%s class_id=%s", existing.attempt_id, lesson_id, class_id)
+            return existing
+    elif teacher_key:
+        existing = (
+            db.execute(
+                select(LessonAttemptRecord)
+                .where(
+                    LessonAttemptRecord.lesson_id == lesson_id,
+                    LessonAttemptRecord.teacher_key == teacher_key,
+                    LessonAttemptRecord.class_id.is_(None),
+                    LessonAttemptRecord.completed.is_(False),
+                    LessonAttemptRecord.attempt_date >= cutoff,
+                )
+                .order_by(LessonAttemptRecord.attempt_date.desc())
+            )
+            .scalars()
+            .first()
+        )
+        if existing is not None:
+            logger.info(
+                "attempt.resumed attempt_id=%s lesson_id=%s teacher_key=%s",
+                existing.attempt_id,
+                lesson_id,
+                teacher_key,
+            )
             return existing
 
     attempt = LessonAttemptRecord(
@@ -211,6 +237,34 @@ def delete_student_mark(
             slide_id,
             student_name,
         )
+
+
+def get_marks_for_slide(
+    db: Session,
+    *,
+    attempt_id: str,
+    lesson_id: str,
+    slide_id: str,
+) -> list[StudentMarkRecord]:
+    """Return persisted roster marks for one slide in one lesson attempt."""
+    attempt = db.get(LessonAttemptRecord, attempt_id)
+    if attempt is None:
+        raise ValueError(f"Unknown attempt_id {attempt_id}")
+    if attempt.lesson_id != lesson_id:
+        raise ValueError("Attempt lesson_id does not match lesson_id")
+    return (
+        db.execute(
+            select(StudentMarkRecord)
+            .where(
+                StudentMarkRecord.attempt_id == attempt_id,
+                StudentMarkRecord.lesson_id == lesson_id,
+                StudentMarkRecord.slide_id == slide_id,
+            )
+            .order_by(StudentMarkRecord.student_name)
+        )
+        .scalars()
+        .all()
+    )
 
 
 def record_student_mark(db: Session, mark: StudentMarkRequest) -> StudentMarkRecord:

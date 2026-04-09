@@ -1,0 +1,22 @@
+<div class="lesson-audio-prompt">
+  {% if slide.content_payload.prompt_text %}
+  <p class="lesson-audio-prompt__prompt">
+    {{ slide.content_payload.prompt_text }}
+  </p>
+  {% endif %}
+
+  {% if slide.content_payload.image %}
+  <div class="lesson-audio-prompt__image-wrap">
+    <img
+      class="lesson-audio-prompt__image"
+      src="{{ slide.content_payload.image }}"
+      alt="{{ slide.slide_title }}">
+  </div>
+  {% endif %}
+
+  {% if slide.content_payload.reveal_text %}
+  <div class="lesson-audio-prompt__reveal">
+    {{ slide.content_payload.reveal_text }}
+  </div>
+  {% endif %}
+</div>

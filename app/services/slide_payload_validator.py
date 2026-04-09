@@ -1,6 +1,7 @@
 from app.schemas.lesson import Lesson
-from app.schemas.slide_payloads import VIEW_PAYLOAD_MAP
+from app.schemas.slide_payloads import get_payload_model
 from app.services.block_registry import BLOCK_REGISTRY
+from app.slide_types import registry
 
 ALLOWED_RUNTIME_CONTROLS = {
     "mark_secure",
@@ -24,12 +25,12 @@ def validate_slide_payloads(lesson: Lesson) -> None:
 
             view_type = slide.view_type
 
-            if view_type not in VIEW_PAYLOAD_MAP:
+            if not registry.exists(view_type):
                 raise ValueError(
                     f"Unknown view_type '{view_type}' in slide {slide.slide_id}"
                 )
 
-            payload_model = VIEW_PAYLOAD_MAP[view_type]
+            payload_model = get_payload_model(view_type)
 
             try:
                 payload_model(**slide.content_payload.model_dump())

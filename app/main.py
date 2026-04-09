@@ -14,10 +14,13 @@ from app.config import allowed_origins, env_flag, get_admin_secret, parse_rate_l
 from app.db import SessionLocal, engine
 from app.logging_utils import configure_logging, request_id_var
 from app.routers.admin import router as admin_router
+from app.routers.authoring import router as authoring_router
+from app.routers.authoring_media import router as authoring_media_router
 from app.routers.auth import router as auth_router
 from app.routers.classes import router as classes_router
 from app.routers.lesson import router as lesson_router
 from app.routers.students import router as students_router
+from app.routers.teach import router as teach_router
 from app.services.auth_service import auth_required, ensure_bootstrap_users, validate_auth_configuration
 from app.services.kokoro_tts_service import KokoroTtsError, TTS_CACHE_DIR, prune_tts_cache, warmup_tts_runtime
 from app.services.rate_limit_service import DEFAULT_RATE_LIMIT_SPECS, InMemoryRateLimiter
@@ -58,7 +61,7 @@ def apply_security_headers(response, scheme: str) -> None:
         "media-src 'self' blob:; "
         "font-src 'self' https://fonts.gstatic.com; "
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-        "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; "
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net; "
         "connect-src 'self'; "
         "frame-ancestors 'none'",
     )
@@ -91,7 +94,13 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 
 class RateLimitMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request, call_next):
-        if request.url.path in {"/health", "/ready"} or request.url.path.startswith("/static") or request.url.path.startswith("/tts-cache"):
+        if (request.url.path in {"/health", "/ready"}
+                or request.url.path.startswith("/static")
+                or request.url.path.startswith("/tts-cache")
+                or "/command-state/" in request.url.path
+                or request.url.path.endswith("/board")
+                or request.url.path.endswith("/student-marks")
+                or request.url.path.endswith("/active-lesson")):
             return await call_next(request)
 
         client_host = request.client.host if request.client else "unknown"
@@ -118,10 +127,13 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 TTS_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 app.mount("/tts-cache", StaticFiles(directory=str(TTS_CACHE_DIR)), name="tts-cache")
 app.include_router(auth_router)
+app.include_router(teach_router)
 app.include_router(lesson_router)
 app.include_router(students_router)
 app.include_router(classes_router)
 app.include_router(admin_router)
+app.include_router(authoring_router)
+app.include_router(authoring_media_router)
 
 
 @app.on_event("startup")
@@ -161,7 +173,7 @@ def startup():
 def root():
     if auth_required():
         return RedirectResponse(url="/auth/login")
-    return RedirectResponse(url="/lesson/")
+    return RedirectResponse(url="/teach")
 
 
 @app.get("/health")

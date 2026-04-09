@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from typing import Iterable
 
 
@@ -44,3 +45,10 @@ def parse_rate_limit_specs(value: str, default: Iterable[tuple[str, int, int]]) 
                 f"Invalid rate limit spec '{item}'. Expected '<path-prefix>:<limit>:<window-seconds>'."
             ) from exc
     return specs
+
+
+def get_upload_dir() -> Path:
+    raw = os.getenv("UPLOAD_DIR", "").strip()
+    if raw:
+        return Path(raw)
+    return Path(__file__).resolve().parent / "static" / "uploads"

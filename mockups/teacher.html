@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Luminos — Teacher Control (Mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:         #f7f5f2;
+    --surface:    #ffffff;
+    --border:     #e8e3dc;
+    --text:       #1a1714;
+    --muted:      #7a746c;
+    --accent:     #c4783e;
+    --accent-dim: #e8d5c2;
+
+    --secure:     #2d6a4f;
+    --secure-bg:  #d8f3dc;
+    --secure-mid: #52b788;
+
+    --mixed:      #9c6b00;
+    --mixed-bg:   #fff3cd;
+    --mixed-mid:  #f4a726;
+
+    --revisit:    #9b1c1c;
+    --revisit-bg: #fde8e8;
+    --revisit-mid:#e05252;
+
+    --radius:     14px;
+    --radius-sm:  8px;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Layout shell ── */
+  .shell {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    gap: 12px;
+  }
+
+  .topbar-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+
+  .lesson-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lesson-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+  }
+
+  .conn-pill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    background: var(--secure-bg);
+    color: var(--secure);
+    flex-shrink: 0;
+  }
+
+  .conn-pill .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--secure-mid);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: .4; }
+  }
+
+  /* ── Slide progress strip ── */
+  .slide-strip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .slide-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .slide-dots {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .slide-dots::-webkit-scrollbar { display: none; }
+
+  .slide-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+    transition: all .2s;
+    cursor: pointer;
+  }
+  .slide-dot.done  { background: var(--accent-dim); }
+  .slide-dot.current {
+    width: 24px;
+    border-radius: 4px;
+    background: var(--accent);
+  }
+
+  .slide-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* ── Student queue strip ── */
+  .queue-scroll {
+    padding: 10px 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .queue-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .queue-chips {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .queue-chips::-webkit-scrollbar { display: none; }
+
+  .chip {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all .15s;
+  }
+
+  .chip.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  .chip.waiting {
+    background: var(--bg);
+    color: var(--muted);
+    border-color: var(--border);
+  }
+
+  .chip.done-secure { background: var(--secure-bg); color: var(--secure); border-color: var(--secure-mid); }
+  .chip.done-mixed  { background: var(--mixed-bg);  color: var(--mixed);  border-color: var(--mixed-mid);  }
+  .chip.done-revisit{ background: var(--revisit-bg);color: var(--revisit);border-color: var(--revisit-mid);}
+
+  /* ── Main stage (scrollable) ── */
+  .stage {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* ── Current student card ── */
+  .student-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .student-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .student-meta { min-width: 0; }
+
+  .student-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .student-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .attempt-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Content preview ── */
+  .content-preview {
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .preview-phase {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .preview-content {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .preview-instruction {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* ── Mark buttons ── */
+  .mark-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .mark-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 16px 8px;
+    border-radius: var(--radius-sm);
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    transition: all .12s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .mark-btn .icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .mark-btn.secure {
+    background: var(--secure-bg);
+    color: var(--secure);
+    border-color: var(--secure-mid);
+  }
+  .mark-btn.secure:active  { background: var(--secure-mid); color: #fff; }
+
+  .mark-btn.mixed {
+    background: var(--mixed-bg);
+    color: var(--mixed);
+    border-color: var(--mixed-mid);
+  }
+  .mark-btn.mixed:active   { background: var(--mixed-mid); color: #fff; }
+
+  .mark-btn.revisit {
+    background: var(--revisit-bg);
+    color: var(--revisit);
+    border-color: var(--revisit-mid);
+  }
+  .mark-btn.revisit:active { background: var(--revisit-mid); color: #fff; }
+
+  /* ── Skip / move buttons ── */
+  .action-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .12s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .action-btn:active {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* ── Slide navigation card ── */
+  .nav-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .nav-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all .12s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-btn:active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .nav-btn.disabled { opacity: .3; pointer-events: none; }
+
+  .nav-info {
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-phase {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .nav-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .advance-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .12s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .advance-btn:active { background: #a8622f; }
+
+  /* ── Outcomes summary card ── */
+  .outcomes-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .outcomes-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .outcomes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .outcome-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 6px;
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+  }
+
+  .outcome-num {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .outcome-num.secure  { color: var(--secure); }
+  .outcome-num.mixed   { color: var(--mixed); }
+  .outcome-num.revisit { color: var(--revisit); }
+
+  .outcome-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .progress-bar-wrap {
+    height: 6px;
+    background: var(--bg);
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .pb-secure  { height: 100%; background: var(--secure-mid); transition: width .4s; }
+  .pb-mixed   { height: 100%; background: var(--mixed-mid);  transition: width .4s; }
+  .pb-revisit { height: 100%; background: var(--revisit-mid);transition: width .4s; }
+
+  /* ── Bottom bar ── */
+  .bottombar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .end-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    background: var(--bg);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all .12s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .end-btn:active { border-color: var(--revisit-mid); color: var(--revisit); }
+
+  .queue-summary {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .queue-summary strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* ── Demo switcher (for mockup only) ── */
+  .demo-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 20px;
+    background: #fff;
+    border-top: 1px dashed #ccc;
+  }
+
+  .demo-bar span {
+    font-size: 10px;
+    font-weight: 700;
+    color: #999;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    align-self: center;
+    margin-right: 4px;
+  }
+
+  .demo-btn {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: 11px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  .demo-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div>
+        <div class="lesson-label">Teaching</div>
+        <div class="lesson-name">Consonant Blends — Unit 3</div>
+      </div>
+    </div>
+    <div class="conn-pill">
+      <div class="dot"></div>
+      LIVE
+    </div>
+  </header>
+
+  <!-- Slide progress strip -->
+  <div class="slide-strip">
+    <span class="slide-label">Slide</span>
+    <div class="slide-dots">
+      <div class="slide-dot done"></div>
+      <div class="slide-dot done"></div>
+      <div class="slide-dot current"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+    </div>
+    <span class="slide-count">3 / 7</span>
+  </div>
+
+  <!-- Student queue strip -->
+  <div class="queue-scroll">
+    <div class="queue-label">Queue</div>
+    <div class="queue-chips">
+      <div class="chip done-secure">Amara</div>
+      <div class="chip done-mixed">Ben</div>
+      <div class="chip active">Cleo</div>
+      <div class="chip waiting">Diego</div>
+      <div class="chip waiting">Eva</div>
+      <div class="chip waiting">Finn</div>
+      <div class="chip waiting">Grace</div>
+    </div>
+  </div>
+
+  <!-- Scrollable stage -->
+  <div class="stage">
+
+    <!-- Current student card -->
+    <div class="student-card">
+
+      <div class="student-header">
+        <div class="student-meta">
+          <div class="student-tag">Now reading</div>
+          <div class="student-name" id="student-name">Cleo Martinez</div>
+        </div>
+        <div class="attempt-badge" id="attempt-badge">3</div>
+      </div>
+
+      <!-- Content preview -->
+      <div class="content-preview" id="content-preview">
+        <div class="preview-phase" id="preview-phase">Word Phase</div>
+        <div class="preview-content" id="preview-content">blend</div>
+        <div class="preview-instruction" id="preview-instruction">Read aloud — listen for the bl- cluster</div>
+      </div>
+
+      <!-- Mark buttons -->
+      <div class="mark-buttons">
+        <button class="mark-btn secure" onclick="demo('secure')">
+          <span class="icon">✓</span>
+          Secure
+        </button>
+        <button class="mark-btn mixed" onclick="demo('mixed')">
+          <span class="icon">∼</span>
+          Mixed
+        </button>
+        <button class="mark-btn revisit" onclick="demo('revisit')">
+          <span class="icon">↩</span>
+          Revisit
+        </button>
+      </div>
+
+      <!-- Secondary actions -->
+      <div class="action-row">
+        <button class="action-btn">
+          ⏭ Skip student
+        </button>
+        <button class="action-btn">
+          ♻ Repeat prompt
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Slide navigation card -->
+    <div class="nav-card">
+      <div class="nav-card-label">Slide navigation</div>
+      <div class="nav-row">
+        <button class="nav-btn disabled">←</button>
+        <div class="nav-info">
+          <div class="nav-phase" id="nav-phase">Word — Blend</div>
+          <div class="nav-sub" id="nav-sub">Slide 3 of 7</div>
+        </div>
+        <button class="nav-btn">→</button>
+      </div>
+      <button class="advance-btn" id="advance-btn">
+        ▶ Advance to Sentence
+      </button>
+    </div>
+
+    <!-- Outcomes card -->
+    <div class="outcomes-card">
+      <div class="outcomes-label">Class outcomes — this slide</div>
+      <div class="outcomes-row">
+        <div class="outcome-stat">
+          <div class="outcome-num secure" id="out-secure">2</div>
+          <div class="outcome-tag">Secure</div>
+        </div>
+        <div class="outcome-stat">
+          <div class="outcome-num mixed" id="out-mixed">1</div>
+          <div class="outcome-tag">Mixed</div>
+        </div>
+        <div class="outcome-stat">
+          <div class="outcome-num revisit" id="out-revisit">0</div>
+          <div class="outcome-tag">Revisit</div>
+        </div>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="pb-secure"  id="pb-s" style="width:29%"></div>
+        <div class="pb-mixed"   id="pb-m" style="width:14%"></div>
+        <div class="pb-revisit" id="pb-r" style="width:0%"></div>
+      </div>
+    </div>
+
+  </div><!-- /stage -->
+
+  <!-- Bottom bar -->
+  <footer class="bottombar">
+    <button class="end-btn">⏹ End lesson</button>
+    <div class="queue-summary">
+      <strong>4</strong> students remaining
+    </div>
+  </footer>
+
+  <!-- Demo switcher -->
+  <div class="demo-bar">
+    <span>Demo:</span>
+    <button class="demo-btn active" onclick="setPhase('word')">Word</button>
+    <button class="demo-btn" onclick="setPhase('sentence')">Sentence</button>
+    <button class="demo-btn" onclick="setPhase('observe')">Observe</button>
+    <button class="demo-btn" onclick="setPhase('complete')">Complete</button>
+  </div>
+
+</div>
+
+<script>
+const phases = {
+  word: {
+    phase: 'Word Phase',
+    content: 'blend',
+    instruction: 'Read aloud — listen for the bl- cluster',
+    navPhase: 'Word — Blend',
+    navSub: 'Slide 3 of 7',
+    advance: '▶ Advance to Sentence',
+  },
+  sentence: {
+    phase: 'Sentence Phase',
+    content: 'The breeze blends with the mist.',
+    instruction: 'Read the full sentence with fluency',
+    navPhase: 'Sentence — Blend',
+    navSub: 'Slide 3 of 7',
+    advance: '▶ Advance to Observe',
+  },
+  observe: {
+    phase: 'Observe Phase',
+    content: 'Watch & listen',
+    instruction: 'Observe the teacher model — then repeat',
+    navPhase: 'Observe — Blend',
+    navSub: 'Slide 3 of 7',
+    advance: '▶ Next slide',
+  },
+  complete: {
+    phase: 'Complete',
+    content: 'All slides done',
+    instruction: 'Lesson finished — mark outcomes and close',
+    navPhase: 'Lesson complete',
+    navSub: '7 of 7 slides',
+    advance: '✓ Finish lesson',
+  },
+};
+
+let outcomes = { secure: 2, mixed: 1, revisit: 0 };
+let totalStudents = 7;
+
+function setPhase(key) {
+  const p = phases[key];
+  document.getElementById('preview-phase').textContent    = p.phase;
+  document.getElementById('preview-content').textContent  = p.content;
+  document.getElementById('preview-instruction').textContent = p.instruction;
+  document.getElementById('nav-phase').textContent        = p.navPhase;
+  document.getElementById('nav-sub').textContent          = p.navSub;
+  document.getElementById('advance-btn').textContent      = p.advance;
+  document.querySelectorAll('.demo-btn').forEach((b, i) => {
+    b.classList.toggle('active', Object.keys(phases)[i] === key);
+  });
+}
+
+function demo(outcome) {
+  outcomes[outcome]++;
+  const total = outcomes.secure + outcomes.mixed + outcomes.revisit;
+  document.getElementById('out-secure').textContent  = outcomes.secure;
+  document.getElementById('out-mixed').textContent   = outcomes.mixed;
+  document.getElementById('out-revisit').textContent = outcomes.revisit;
+  document.getElementById('pb-s').style.width = (outcomes.secure  / totalStudents * 100) + '%';
+  document.getElementById('pb-m').style.width = (outcomes.mixed   / totalStudents * 100) + '%';
+  document.getElementById('pb-r').style.width = (outcomes.revisit / totalStudents * 100) + '%';
+}
+</script>
+
+</body>
+</html>

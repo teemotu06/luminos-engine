@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import re
 import sys
 from pathlib import Path
@@ -15,9 +16,14 @@ ASSETS = [
     "lesson.css",
     "oral_prompt_helper.js",
     "lesson.js",
+    "lesson_launcher.js",
     "lesson_teacher.js",
-    "lesson_board.js",
     "lesson_review.js",
+]
+
+# Vendored third-party assets — copied as-is (no minification)
+VENDOR_ASSETS = [
+    "alpinejs.min.js",
 ]
 
 
@@ -77,6 +83,25 @@ def main(argv: list[str]) -> int:
     built_assets = [build_asset(asset) for asset in ASSETS]
     for path, digest in built_assets:
         print(f"built {path.relative_to(REPO_ROOT)} {digest}")
+
+    for vendor in VENDOR_ASSETS:
+        src = STATIC_ROOT / vendor
+        dst = DIST_ROOT / vendor
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_bytes(src.read_bytes())
+        print(f"copied {dst.relative_to(REPO_ROOT)}")
+
+    manifest: dict[str, str] = {}
+    for asset, (_, digest) in zip(ASSETS, built_assets):
+        name = Path(asset).name
+        manifest[name] = f"/static/dist/{name}?v={digest}"
+    for vendor in VENDOR_ASSETS:
+        manifest[vendor] = f"/static/dist/{vendor}"
+
+    manifest_path = DIST_ROOT / "manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    print(f"wrote {manifest_path.relative_to(REPO_ROOT)}")
+
     return 0
 
 

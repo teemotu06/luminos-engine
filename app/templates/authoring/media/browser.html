@@ -1,0 +1,64 @@
+<div data-media-browser x-data class="authoring-media-browser">
+  <div class="authoring-media-browser__topbar">
+    <button
+      type="button"
+      class="authoring-btn-ghost"
+      onclick="const host=this.closest('[data-media-browser-inline]'); if(host){ host.innerHTML=''; host.dispatchEvent(new CustomEvent('media-browser-close',{bubbles:true})); }">
+      Close
+    </button>
+  </div>
+  {% include "authoring/media/upload_form.html" %}
+
+  {% if upload_error %}
+    <div class="authoring-status authoring-status--error">
+      {{ upload_error }}
+    </div>
+  {% endif %}
+
+  {% if not show_library and recent_upload_path %}
+    <div class="authoring-status">
+      Audio uploaded. Select it to attach it to this slide.
+    </div>
+  {% endif %}
+
+  {% if files %}
+    <div class="authoring-media-browser__list">
+      {% for file in files %}
+      <div class="authoring-media-item">
+        <div class="authoring-media-item__content">
+          {% if media_type == "audio" %}
+          <audio class="authoring-media-item__preview authoring-media-item__preview--audio" controls preload="none" src="{{ file.path }}"></audio>
+          {% elif media_type == "image" %}
+          <img class="authoring-media-item__preview authoring-media-item__preview--image" src="{{ file.path }}" alt="{{ file.filename }}">
+          {% endif %}
+
+          <div class="authoring-media-item__meta">
+            <div class="authoring-media-item__name">{{ file.filename }}</div>
+            <div class="authoring-field__help">{{ human_readable_size(file.size) }}</div>
+            <div class="authoring-field__help">{{ file.modified }}</div>
+            <div class="authoring-field__help authoring-media-item__path">{{ file.path }}</div>
+          </div>
+        </div>
+
+        <div class="authoring-inline-actions">
+          <button
+            type="button"
+            class="authoring-btn-secondary"
+            @click="$dispatch('media-selected', { path: '{{ file.path }}', mediaType: '{{ media_type }}' })"
+          >
+            Select
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% elif not show_library %}
+    <div class="authoring-empty">
+      Upload one audio file to attach it to this slide.
+    </div>
+  {% else %}
+    <div class="authoring-empty">
+      No {{ media_type }} files uploaded yet.
+    </div>
+  {% endif %}
+</div>

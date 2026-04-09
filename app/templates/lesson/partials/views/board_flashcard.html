@@ -1,0 +1,41 @@
+<div class="lesson-flashcard">
+  {% set legacy_image = slide.content_payload.image if not slide.content_payload.front_image and not slide.content_payload.back_image else None %}
+  {% set front_image = slide.content_payload.front_image or (legacy_image if not slide.content_payload.front_text else None) %}
+  {% set back_image = slide.content_payload.back_image or (legacy_image if slide.content_payload.front_text and not slide.content_payload.back_text else None) %}
+  {% set front_text = slide.content_payload.front_text %}
+  {% set back_word = slide.content_payload.back_text or slide.content_payload.front_text %}
+
+  <div class="lesson-flashcard__card">
+    {% if front_image %}
+    <img
+      class="lesson-flashcard__card-image"
+      src="{{ front_image }}"
+      alt="{{ slide.slide_title }}">
+    {% endif %}
+
+    {% if front_text %}
+    <span class="lesson-flashcard__text">
+      {{ front_text }}
+    </span>
+    {% endif %}
+
+    {% if slide.content_payload.blend_units %}
+    <div class="lesson-flashcard__blend-row">
+      {% for unit in slide.content_payload.blend_units %}
+      <span class="lesson-flashcard__blend-unit">
+        {{ unit.grapheme }}
+      </span>
+      {% endfor %}
+    </div>
+    {% elif back_image %}
+    <img
+      class="lesson-flashcard__card-image"
+      src="{{ back_image }}"
+      alt="{{ slide.slide_title }} back">
+    {% elif back_word and back_word != slide.content_payload.front_text %}
+    <span class="lesson-flashcard__text">
+      {{ back_word }}
+    </span>
+    {% endif %}
+  </div>
+</div>

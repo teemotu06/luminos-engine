@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMINOS — Sign In</title>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════
+   LUMINOS · Warm Glass · Tahoe Edition
+   ════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --canvas: #faf9f5;
+  --canvas-raised: #FFFFFF;
+  --warm-50: #fdf5f1; --warm-100: #f5ddd2; --warm-200: #e8c1b0;
+  --warm-300: #d9a48e; --warm-400: #d97757; --warm-500: #c96a4c;
+  --warm-600: #b25a3e; --warm-700: #9a4a34;
+  --stone-200: #e8e6dc; --stone-300: #d4d1c7; --stone-400: #b0aea5;
+  --stone-500: #8a877e; --stone-600: #6b6862; --stone-700: #4a4843;
+  --stone-800: #2d2b28; --stone-900: #141413;
+  --glass-bg: rgba(255,255,255,0.62);
+  --glass-border: rgba(255,255,255,0.85);
+  --r-md: 14px; --r-lg: 18px; --r-xl: 22px;
+}
+
+html, body { height: 100%; }
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--stone-800);
+  -webkit-font-smoothing: antialiased;
+  background: var(--canvas);
+  background-image:
+    radial-gradient(ellipse 75% 55% at 75% 10%, rgba(217,119,87,0.11) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 20% 90%, rgba(217,119,87,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255,240,228,0.45) 0%, transparent 70%);
+}
+
+/* Brand strip */
+.brand-strip {
+  position: fixed; top: 32px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 10px;
+  animation: fadeDown 0.4s ease both;
+}
+.logo-mark {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--warm-400), var(--warm-600));
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(217,119,87,0.3), 0 6px 16px rgba(217,119,87,0.15);
+}
+.logo-mark svg { color: #fff; width: 15px; height: 15px; }
+.logo-text {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 19px; font-weight: 500;
+  color: var(--stone-800); letter-spacing: -0.01em;
+}
+
+/* Glass card */
+.login-card {
+  width: 100%; max-width: 400px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(40px) saturate(170%);
+  -webkit-backdrop-filter: blur(40px) saturate(170%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-xl);
+  padding: 40px 36px 36px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02), 0 20px 60px rgba(0,0,0,0.07),
+    inset 0 1px 0 rgba(255,255,255,0.95), inset 0 -1px 0 rgba(0,0,0,0.02);
+  animation: riseIn 0.5s cubic-bezier(0.25,0.46,0.45,0.94) 0.1s both;
+}
+@keyframes riseIn {
+  from { opacity:0; transform: translateY(20px) scale(0.97); }
+  to   { opacity:1; transform: translateY(0) scale(1); }
+}
+@keyframes fadeDown {
+  from { opacity:0; transform: translateX(-50%) translateY(-8px); }
+  to   { opacity:1; transform: translateX(-50%) translateY(0); }
+}
+
+.card-kicker {
+  font-size: 10.5px; font-weight: 650; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--warm-500); margin-bottom: 8px;
+}
+.card-title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 29px; font-weight: 400; letter-spacing: -0.02em;
+  color: var(--stone-900); margin-bottom: 8px; line-height: 1.15;
+}
+.card-subtitle {
+  font-size: 13px; color: var(--stone-500); line-height: 1.55; margin-bottom: 30px;
+}
+
+/* Form */
+.form-field { margin-bottom: 14px; }
+.form-label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: var(--stone-600); margin-bottom: 6px;
+}
+.form-input {
+  width: 100%; padding: 11px 14px;
+  background: var(--canvas-raised);
+  border: 1px solid var(--stone-200);
+  border-radius: var(--r-md);
+  font-family: inherit; font-size: 14px; color: var(--stone-900);
+  outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-input::placeholder { color: var(--stone-400); }
+.form-input:focus {
+  border-color: var(--warm-400);
+  box-shadow: 0 0 0 3px rgba(217,119,87,0.11);
+}
+.input-wrap { position: relative; }
+.input-eye {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; padding: 4px;
+  color: var(--stone-400); display: flex; align-items: center;
+}
+.input-eye svg { width: 14px; height: 14px; }
+.input-eye:hover { color: var(--stone-600); }
+
+/* CTA */
+.btn-primary {
+  width: 100%; padding: 13px 20px; margin-top: 22px;
+  background: var(--warm-500); color: #fff; border: none;
+  border-radius: var(--r-md); font-family: inherit;
+  font-size: 14.5px; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  transition: all 0.15s;
+  box-shadow: 0 1px 3px rgba(201,106,76,0.25), 0 6px 18px rgba(201,106,76,0.2);
+}
+.btn-primary svg { width: 15px; height: 15px; }
+.btn-primary:hover {
+  background: var(--warm-600); transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(201,106,76,0.3), 0 8px 22px rgba(201,106,76,0.24);
+}
+.btn-primary:active { transform: none; filter: brightness(0.95); }
+
+/* Footer */
+.card-footer {
+  margin-top: 26px; padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+.card-footer p { font-size: 12px; color: var(--stone-400); line-height: 1.6; }
+.card-footer a { color: var(--warm-500); text-decoration: none; font-weight: 550; }
+.card-footer a:hover { color: var(--warm-600); }
+
+/* Version */
+.ver { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  font-size: 11px; color: var(--stone-300); letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<div class="brand-strip">
+  <div class="logo-mark"><i data-lucide="zap"></i></div>
+  <div class="logo-text">Luminos</div>
+</div>
+
+<div class="login-card">
+  <div class="card-kicker">Teacher Access</div>
+  <div class="card-title">Sign in</div>
+  <p class="card-subtitle">Use your teacher or admin account to access classes, lessons, and student records.</p>
+
+  <form action="/auth/login" method="post">
+    <div class="form-field">
+      <label class="form-label" for="username">Username</label>
+      <input class="form-input" type="text" id="username" name="username"
+        autocomplete="username" placeholder="your.username" required autofocus>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="password">Password</label>
+      <div class="input-wrap">
+        <input class="form-input" type="password" id="password" name="password"
+          autocomplete="current-password" placeholder="••••••••" required style="padding-right:42px">
+        <button type="button" class="input-eye"><i data-lucide="eye"></i></button>
+      </div>
+    </div>
+    <button class="btn-primary" type="submit">
+      <i data-lucide="log-in"></i> Sign in
+    </button>
+  </form>
+
+  <div class="card-footer">
+    <p>Access is restricted to authorised educators.<br>
+    Contact your administrator if you need credentials.</p>
+  </div>
+</div>
+
+<div class="ver">Luminos Engine · v1.0</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 {% block title %}Review — {{ lesson.title }}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', path='dist/lesson.css') }}?v=11">
-<script defer src="{{ url_for('static', path='dist/lesson_review.js') }}?v=11"></script>
+<link rel="stylesheet" href="{{ asset_url('lesson.css') }}">
+<script defer src="{{ asset_url('lesson_review.js') }}"></script>
 {% endblock %}
 
 {% block content %}
