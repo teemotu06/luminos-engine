@@ -12,6 +12,8 @@ class SlideTypeRegistryTests(unittest.TestCase):
     KNOWN_ACTIONS = {
         "reveal",
         "reveal_answer",
+        "produce_phase",
+        "play_model",
         "play_sound",
         "play_audio",
         "read_sentence",
@@ -25,6 +27,9 @@ class SlideTypeRegistryTests(unittest.TestCase):
                 "flashcard",
                 "phonemes",
                 "spell_word",
+                "listen_spell",
+                "sound_match",
+                "pattern_noticing",
                 "audio_prompt",
                 "minimal_pair",
                 "drag_letter",

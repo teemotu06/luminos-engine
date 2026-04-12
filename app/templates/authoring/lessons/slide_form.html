@@ -17,6 +17,7 @@
     initialPatternWordInputs: {{ initialPatternWordInputs | tojson }},
     initialPatternPrompt: {{ initialPatternPrompt | tojson }},
     initialPatternRevealMode: {{ initialPatternRevealMode | tojson }},
+    initialAudioFieldValues: {{ audio_field_values | tojson }},
     initialImageFieldValues: {{ image_field_values | tojson }}
   })'
   @media-selected.window="applyMediaSelection($event)"
@@ -129,6 +130,119 @@
           </template>
           <div x-show="imageUploadErrors['{{ field.name }}']" x-text="imageUploadErrors['{{ field.name }}']" class="authoring-field__error"></div>
         </div>
+      </label>
+      {% endfor %}
+
+      {% elif effective_slide_type == "sound_match" %}
+      {% set sound_match_fields = content_fields | rejectattr('name', 'in', ['pair_a_audio', 'pair_b_audio']) | list %}
+
+      <div class="authoring-stack authoring-stack--tight">
+        <section class="authoring-form-section" style="padding:16px; border:1px solid rgba(148,163,184,0.16);">
+          <div class="authoring-section-intro">
+            <h5 class="authoring-form-heading" style="font-size:0.95rem;">Pair A</h5>
+          </div>
+          {% for field in sound_match_fields if field.name in ['pair_a_label', 'pair_a_example_word'] %}
+          <label class="authoring-field">
+            <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+            <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+          </label>
+          {% endfor %}
+          <label class="authoring-field">
+            <div class="authoring-field__label">Pair A Audio *</div>
+            <input type="hidden" name="payload__pair_a_audio" data-authoring-field="payload__pair_a_audio" :value="audioUrlFor('pair_a_audio')">
+            <input
+              type="file"
+              accept=".mp3,.wav,.m4a,.aac,.ogg,.webm,audio/*"
+              :key="audioInputKeys['pair_a_audio'] || 0"
+              data-audio-upload-input="pair_a_audio"
+              style="display:none"
+              @change="handleFieldAudioSelected($event, 'pair_a_audio')">
+            <div class="authoring-audio-attachment">
+              <template x-if="audioUrlFor('pair_a_audio')">
+                <div class="authoring-audio-card" :title="filenameFromPath(audioUrlFor('pair_a_audio'))">
+                  <div class="authoring-audio-card__header">
+                    <div><div class="authoring-field__label">Attached Audio</div></div>
+                    <div class="authoring-audio-card__meta" x-text="audioFieldDurations['pair_a_audio'] || ''"></div>
+                  </div>
+                  <audio controls :src="audioUrlFor('pair_a_audio')" @loadedmetadata="updateFieldAudioDuration($event, 'pair_a_audio')"></audio>
+                  <div class="authoring-inline-actions">
+                    <button type="button" @click="triggerFieldAudioUpload('pair_a_audio')" :disabled="audioUploadingField === 'pair_a_audio'">Replace Audio</button>
+                    <button type="button" class="authoring-btn-danger" @click="removeFieldAudio('pair_a_audio')">Remove Audio</button>
+                  </div>
+                </div>
+              </template>
+              <template x-if="!audioUrlFor('pair_a_audio')">
+                <div class="authoring-audio-empty">
+                  <div class="authoring-audio-empty__copy"><div class="authoring-field__label">No audio attached</div></div>
+                  <button type="button" class="authoring-audio-empty__action" @click="triggerFieldAudioUpload('pair_a_audio')" :disabled="audioUploadingField === 'pair_a_audio'">Upload Audio</button>
+                </div>
+              </template>
+              <div x-show="audioUploadErrors['pair_a_audio']" x-text="audioUploadErrors['pair_a_audio']" class="authoring-field__error"></div>
+            </div>
+          </label>
+        </section>
+
+        <section class="authoring-form-section" style="padding:16px; border:1px solid rgba(148,163,184,0.16);">
+          <div class="authoring-section-intro">
+            <h5 class="authoring-form-heading" style="font-size:0.95rem;">Pair B</h5>
+          </div>
+          {% for field in sound_match_fields if field.name in ['pair_b_label', 'pair_b_example_word'] %}
+          <label class="authoring-field">
+            <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+            <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+          </label>
+          {% endfor %}
+          <label class="authoring-field">
+            <div class="authoring-field__label">Pair B Audio *</div>
+            <input type="hidden" name="payload__pair_b_audio" data-authoring-field="payload__pair_b_audio" :value="audioUrlFor('pair_b_audio')">
+            <input
+              type="file"
+              accept=".mp3,.wav,.m4a,.aac,.ogg,.webm,audio/*"
+              :key="audioInputKeys['pair_b_audio'] || 0"
+              data-audio-upload-input="pair_b_audio"
+              style="display:none"
+              @change="handleFieldAudioSelected($event, 'pair_b_audio')">
+            <div class="authoring-audio-attachment">
+              <template x-if="audioUrlFor('pair_b_audio')">
+                <div class="authoring-audio-card" :title="filenameFromPath(audioUrlFor('pair_b_audio'))">
+                  <div class="authoring-audio-card__header">
+                    <div><div class="authoring-field__label">Attached Audio</div></div>
+                    <div class="authoring-audio-card__meta" x-text="audioFieldDurations['pair_b_audio'] || ''"></div>
+                  </div>
+                  <audio controls :src="audioUrlFor('pair_b_audio')" @loadedmetadata="updateFieldAudioDuration($event, 'pair_b_audio')"></audio>
+                  <div class="authoring-inline-actions">
+                    <button type="button" @click="triggerFieldAudioUpload('pair_b_audio')" :disabled="audioUploadingField === 'pair_b_audio'">Replace Audio</button>
+                    <button type="button" class="authoring-btn-danger" @click="removeFieldAudio('pair_b_audio')">Remove Audio</button>
+                  </div>
+                </div>
+              </template>
+              <template x-if="!audioUrlFor('pair_b_audio')">
+                <div class="authoring-audio-empty">
+                  <div class="authoring-audio-empty__copy"><div class="authoring-field__label">No audio attached</div></div>
+                  <button type="button" class="authoring-audio-empty__action" @click="triggerFieldAudioUpload('pair_b_audio')" :disabled="audioUploadingField === 'pair_b_audio'">Upload Audio</button>
+                </div>
+              </template>
+              <div x-show="audioUploadErrors['pair_b_audio']" x-text="audioUploadErrors['pair_b_audio']" class="authoring-field__error"></div>
+            </div>
+          </label>
+        </section>
+      </div>
+
+      {% for field in sound_match_fields if field.name in ['correct_choice', 'production_cue'] %}
+      <label class="authoring-field">
+        <div class="authoring-field__label">{{ field.display_label }}{% if field.required %} *{% endif %}</div>
+        {% if field.widget == "textarea" %}
+        <textarea class="authoring-textarea" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" rows="{{ field.rows }}">{{ field.value }}</textarea>
+        {% elif field.widget == "select" %}
+        <select class="authoring-select" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}">
+          <option value="">Select</option>
+          {% for option in field.options %}
+          <option value="{{ option }}" {% if field.value == option %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input class="authoring-input" type="{{ field.input_type }}" name="payload__{{ field.name }}" data-authoring-field="payload__{{ field.name }}" value="{{ field.value }}">
+        {% endif %}
       </label>
       {% endfor %}
 
@@ -600,6 +714,7 @@
       {% endif %}
     </section>
 
+    {% if effective_slide_type != "sound_match" %}
     <section class="authoring-form-section authoring-form-section--audio">
       <div class="authoring-section-intro authoring-section-intro--toggle" x-data="{ showInfo: false }" @click="showInfo = !showInfo" @keydown.enter.prevent="showInfo = !showInfo" @keydown.space.prevent="showInfo = !showInfo" role="button" tabindex="0" :aria-expanded="showInfo.toString()">
         <div class="authoring-section-intro__header">
@@ -673,6 +788,7 @@
         <div class="authoring-field__error" x-show="slideAudioUploadError" x-cloak x-text="slideAudioUploadError"></div>
       </div>
     </section>
+    {% endif %}
 
     <section class="authoring-form-section authoring-form-section--teacher">
       <div class="authoring-section-intro authoring-section-intro--toggle" x-data="{ showInfo: false }" @click="showInfo = !showInfo" @keydown.enter.prevent="showInfo = !showInfo" @keydown.space.prevent="showInfo = !showInfo" role="button" tabindex="0" :aria-expanded="showInfo.toString()">

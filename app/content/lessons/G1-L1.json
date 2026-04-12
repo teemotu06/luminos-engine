@@ -52,6 +52,36 @@
             "missed"
           ],
           "next_action": "manual_next"
+        },
+        {
+          "slide_id": "sound_match_3961e11c",
+          "block_id": "03",
+          "slide_title": "Sound Match",
+          "view_type": "sound_match",
+          "content_payload": {
+            "pair_a_label": "/f/",
+            "pair_a_example_word": "fan",
+            "pair_a_audio": "/static/audio/example-f.mp3",
+            "pair_b_label": "/p/",
+            "pair_b_example_word": "pan",
+            "pair_b_audio": "/static/audio/example-p.mp3",
+            "correct_choice": "A",
+            "production_cue": "Top teeth on lower lip. Air flows continuously."
+          },
+          "teacher_cue": "",
+          "expected_response": "",
+          "correction_move": "",
+          "observation_note": "",
+          "slide_audio_url": null,
+          "teacher_prompts": [],
+          "korean_interference_flag": null,
+          "markable": true,
+          "marking_options": [
+            "secure",
+            "shaky",
+            "missed"
+          ],
+          "next_action": "manual_next"
         }
       ]
     },

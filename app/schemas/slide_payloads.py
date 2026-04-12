@@ -77,6 +77,22 @@ class SpellWordPayload(BaseModel):
         return self
 
 
+class ListenSpellPayload(BaseModel):
+    target_word: str = Field(..., min_length=1)
+    target_pattern: Optional[str] = None
+    luminos_says: Optional[LuminosSaysConfig] = None
+
+    @model_validator(mode="after")
+    def normalize_listen_spell_fields(self):
+        target_word = str(self.target_word or "").strip()
+        target_pattern = str(self.target_pattern or "").strip() or None
+        if not target_word:
+            raise ValueError("Listen & Spell requires a target word.")
+        self.target_word = target_word
+        self.target_pattern = target_pattern
+        return self
+
+
 class PatternNoticingSegment(BaseModel):
     text: str = Field(..., min_length=1)
     highlight: bool = False
@@ -186,6 +202,37 @@ class MinimalPairPayload(BaseModel):
     korean_flag: Optional[str] = None
     correction_routine: Optional[str] = None
     luminos_says: Optional[LuminosSaysConfig] = None
+
+
+class SoundMatchPayload(BaseModel):
+    pair_a_label: str = Field(..., min_length=1)
+    pair_a_example_word: str = Field(..., min_length=1)
+    pair_a_audio: str = Field(..., min_length=1)
+    pair_b_label: str = Field(..., min_length=1)
+    pair_b_example_word: str = Field(..., min_length=1)
+    pair_b_audio: str = Field(..., min_length=1)
+    correct_choice: Literal["A", "B"]
+    korean_flag: Optional[str] = None
+    production_cue: str = Field(..., min_length=1)
+    luminos_says: Optional[LuminosSaysConfig] = None
+
+    @model_validator(mode="after")
+    def normalize_sound_match_fields(self):
+        for field_name in (
+            "pair_a_label",
+            "pair_a_example_word",
+            "pair_a_audio",
+            "pair_b_label",
+            "pair_b_example_word",
+            "pair_b_audio",
+            "production_cue",
+        ):
+            value = str(getattr(self, field_name) or "").strip()
+            if not value:
+                raise ValueError(f"Sound Match requires {field_name.replace('_', ' ')}.")
+            setattr(self, field_name, value)
+        self.korean_flag = str(self.korean_flag or "").strip() or None
+        return self
 
 
 class DragLetterPayload(BaseModel):
@@ -348,6 +395,8 @@ class SentenceBuilderPayload(BaseModel):
 SlidePayload = Union[
     PhonemePayload,
     SpellWordPayload,
+    ListenSpellPayload,
+    SoundMatchPayload,
     PatternNoticingPayload,
     FlashcardPayload,
     AudioPromptPayload,

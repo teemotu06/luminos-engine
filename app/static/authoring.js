@@ -84,6 +84,11 @@
       slideAudioUploading: false,
       slideAudioUploadError: "",
       slideAudioInputKey: 0,
+      attachedAudioUrls: Object.assign({}, config.initialAudioFieldValues || {}),
+      audioFieldDurations: {},
+      audioUploadingField: "",
+      audioUploadErrors: {},
+      audioInputKeys: {},
       attachedImageUrls: Object.assign({}, config.initialImageFieldValues || {}),
       imageDurations: {},
       imageUploadingField: "",
@@ -201,6 +206,71 @@
         input.value = "";
         input.dispatchEvent(new Event("input", { bubbles: true }));
         input.dispatchEvent(new Event("change", { bubbles: true }));
+      },
+      audioUrlFor(fieldName) {
+        return String(this.attachedAudioUrls[fieldName] || "").trim();
+      },
+      updateFieldAudioDuration(event, fieldName) {
+        const seconds = Number(event?.target?.duration);
+        this.audioFieldDurations[fieldName] = this.formatAudioDuration(seconds);
+      },
+      triggerFieldAudioUpload(fieldName) {
+        const input = this.$root.querySelector(`[data-audio-upload-input="${fieldName}"]`);
+        if (!input) return;
+        this.audioUploadErrors[fieldName] = "";
+        input.click();
+      },
+      async handleFieldAudioSelected(event, fieldName) {
+        const input = event?.target;
+        const file = input?.files?.[0];
+        if (!file) return;
+        this.audioUploadErrors[fieldName] = "";
+        this.audioUploadingField = fieldName;
+        try {
+          const formData = new FormData();
+          formData.append("file", file);
+          formData.append("media_type", "audio");
+          const response = await fetch("/authoring/media/upload", {
+            method: "POST",
+            body: formData,
+            credentials: "same-origin",
+            headers: { Accept: "application/json" },
+          });
+          let payload = {};
+          try {
+            payload = await response.json();
+          } catch (_error) {
+            payload = {};
+          }
+          if (!response.ok || !payload?.success || !payload?.path) {
+            this.audioUploadErrors[fieldName] = String(payload?.error || "Audio upload failed. Please try again.");
+            return;
+          }
+          this.attachedAudioUrls[fieldName] = payload.path;
+          this.audioFieldDurations[fieldName] = "";
+          const hiddenInput = this.$root.querySelector(`[data-authoring-field="payload__${fieldName}"]`);
+          if (hiddenInput) {
+            hiddenInput.value = payload.path;
+            hiddenInput.dispatchEvent(new Event("input", { bubbles: true }));
+            hiddenInput.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+        } catch (_error) {
+          this.audioUploadErrors[fieldName] = "Audio upload failed. Please try again.";
+        } finally {
+          this.audioUploadingField = "";
+          this.audioInputKeys[fieldName] = (this.audioInputKeys[fieldName] || 0) + 1;
+          if (input) input.value = "";
+        }
+      },
+      removeFieldAudio(fieldName) {
+        this.attachedAudioUrls[fieldName] = "";
+        this.audioFieldDurations[fieldName] = "";
+        this.audioUploadErrors[fieldName] = "";
+        const hiddenInput = this.$root.querySelector(`[data-authoring-field="payload__${fieldName}"]`);
+        if (!hiddenInput) return;
+        hiddenInput.value = "";
+        hiddenInput.dispatchEvent(new Event("input", { bubbles: true }));
+        hiddenInput.dispatchEvent(new Event("change", { bubbles: true }));
       },
       imageUrlFor(fieldName) {
         return String(this.attachedImageUrls[fieldName] || "").trim();

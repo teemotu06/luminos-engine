@@ -5,3 +5,7 @@ __pycache__/
 .vscode/
 *.db
 .env
+node_modules/
+tmp/
+app/static/uploads/
+app/content/lesson_backups/

@@ -5,6 +5,8 @@ from app.slide_types.registry import registry
 from app.slide_types.definitions import flashcard  # noqa: F401
 from app.slide_types.definitions import phonemes  # noqa: F401
 from app.slide_types.definitions import spell_word  # noqa: F401
+from app.slide_types.definitions import listen_spell  # noqa: F401
+from app.slide_types.definitions import sound_match  # noqa: F401
 from app.slide_types.definitions import pattern_noticing  # noqa: F401
 from app.slide_types.definitions import audio_prompt  # noqa: F401
 from app.slide_types.definitions import minimal_pair  # noqa: F401

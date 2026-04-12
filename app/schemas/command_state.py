@@ -9,6 +9,7 @@ CommandAction = Literal[
     "mark_grid",
     "skip",
     "force_advance",
+    "produce_phase",
     "hide_answer",
     "begin_slide",
     "continue",

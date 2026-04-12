@@ -253,6 +253,134 @@
     .board-pattern__segment--pending {
       color: var(--text);
     }
+    .board-sound-match {
+      width:min(1040px,100%);
+      display:grid;
+      gap:24px;
+      justify-items:center;
+    }
+    .board-sound-match__flag {
+      width:min(920px,100%);
+      border:1px solid rgba(196,120,62,0.16);
+      border-radius:18px;
+      background:rgba(196,120,62,0.10);
+      color:var(--text);
+      padding:14px 18px;
+      font-size:clamp(18px,2vw,24px);
+      line-height:1.25;
+    }
+    .board-sound-match__choices {
+      width:min(920px,100%);
+      display:grid;
+      grid-template-columns:repeat(2, minmax(220px, 1fr));
+      gap:22px;
+    }
+    .board-sound-match__choice {
+      min-height:320px;
+      border:1px solid var(--border);
+      border-radius:28px;
+      background:var(--surface);
+      box-shadow:var(--shadow);
+      display:grid;
+      align-content:center;
+      justify-items:center;
+      gap:20px;
+      padding:30px 28px;
+      transition:opacity .28s ease, border-color .28s ease, background-color .28s ease, transform .28s ease;
+    }
+    .board-sound-match__choice--correct {
+      border-color:rgba(34,197,94,0.38);
+      background:rgba(220,252,231,0.92);
+      color:#14532d;
+    }
+    .board-sound-match__choice--faded {
+      opacity:0.34;
+    }
+    .board-sound-match__label {
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(68px,10vw,140px);
+      line-height:0.92;
+      color:var(--text);
+    }
+    .board-sound-match__choice--correct .board-sound-match__label,
+    .board-sound-match__choice--correct .board-sound-match__example,
+    .board-sound-match__choice--correct .board-sound-match__speaker {
+      color:#14532d;
+    }
+    .board-sound-match__example {
+      font-size:clamp(28px,3vw,42px);
+      line-height:1.15;
+      color:var(--muted-strong);
+      text-align:center;
+    }
+    .board-sound-match__speaker {
+      font-size:clamp(44px,5vw,62px);
+      line-height:1;
+      color:var(--accent);
+    }
+    .board-sound-match__produce {
+      width:min(920px,100%);
+      min-height:min(58vh,520px);
+      display:grid;
+      align-content:center;
+      justify-items:center;
+      gap:20px;
+      text-align:center;
+    }
+    .board-sound-match__produce-word {
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(120px,16vw,220px);
+      line-height:0.9;
+      color:var(--text);
+    }
+    .board-sound-match__produce-cue {
+      max-width:760px;
+      font-size:clamp(24px,2.8vw,34px);
+      line-height:1.35;
+      color:var(--muted-strong);
+    }
+    .board-listen-spell {
+      width:min(980px,100%);
+      min-height:min(72vh,680px);
+      display:grid;
+      align-content:center;
+      justify-items:center;
+      gap:32px;
+    }
+    .board-listen-spell__count {
+      font-size:clamp(28px,3vw,48px);
+      line-height:1;
+      color:var(--muted-strong);
+      font-weight:500;
+    }
+    .board-listen-spell__speaker {
+      width:clamp(140px,18vw,196px);
+      height:clamp(140px,18vw,196px);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:color-mix(in srgb, var(--accent) 10%, var(--surface-strong));
+      color:var(--muted-strong);
+      box-shadow:var(--shadow);
+    }
+    .board-listen-spell__speaker-icon {
+      font-size:clamp(56px,7vw,84px);
+      line-height:1;
+    }
+    .board-listen-spell__answer-word {
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(110px,16vw,236px);
+      line-height:0.92;
+      color:var(--text);
+      text-align:center;
+      text-wrap:balance;
+    }
+    .board-listen-spell__answer-segment--highlight {
+      color:#5a50c8;
+    }
+    html[data-theme="dark"] .board-listen-spell__answer-segment--highlight {
+      color:#7066df;
+    }
     @keyframes boardPatternWordIn {
       to { opacity:1; transform:translateY(0); }
     }
@@ -629,6 +757,14 @@
             cardEl.innerHTML = renderSpellWord(data, message);
             return;
           }
+          if (data.view_type === "listen_spell") {
+            cardEl.innerHTML = renderListenSpell(data, message);
+            return;
+          }
+          if (data.view_type === "sound_match") {
+            cardEl.innerHTML = renderSoundMatch(data, message);
+            return;
+          }
           if (data.view_type === "pattern_noticing") {
             cardEl.innerHTML = renderPatternNoticing(data, message);
             return;
@@ -754,6 +890,105 @@
                   </div>
                 </div>
                 ${bottomHtml ? `<div class="board-spell-word__letters--bottom">${bottomHtml}</div>` : ""}
+              </div>
+              ${message}
+            </div>
+          `;
+        }
+
+        function highlightListenSpellWord(word, pattern) {
+          const targetWord = String(word || "");
+          const targetPattern = String(pattern || "").trim();
+          if (!targetPattern) return escapeHtml(targetWord);
+          const lowerWord = targetWord.toLowerCase();
+          const lowerPattern = targetPattern.toLowerCase();
+          let index = 0;
+          let html = "";
+          while (index < targetWord.length) {
+            const matchIndex = lowerWord.indexOf(lowerPattern, index);
+            if (matchIndex === -1) {
+              html += escapeHtml(targetWord.slice(index));
+              break;
+            }
+            if (matchIndex > index) {
+              html += escapeHtml(targetWord.slice(index, matchIndex));
+            }
+            html += `<span class="board-listen-spell__answer-segment--highlight">${escapeHtml(targetWord.slice(matchIndex, matchIndex + targetPattern.length))}</span>`;
+            index = matchIndex + targetPattern.length;
+          }
+          return html;
+        }
+
+        function renderListenSpell(data, message) {
+          const payload = data.payload || {};
+          const word = String(payload.target_word || data.content || "").trim();
+          const pattern = String(payload.target_pattern || "").trim();
+          const position = Number(data.block_slide_index || 0) + 1;
+          const total = Number(data.block_slide_count || 0) || 1;
+          const countLabel = `${Math.max(1, position)} of ${total}`;
+          return `
+            <div class="board-slide-shell">
+              <div class="board-listen-spell">
+                <div class="board-listen-spell__count">${escapeHtml(countLabel)}</div>
+                ${data.revealed
+                  ? `<div class="board-listen-spell__answer-word">${highlightListenSpellWord(word, pattern)}</div>`
+                  : `<div class="board-listen-spell__speaker" aria-hidden="true"><div class="board-listen-spell__speaker-icon">🔊</div></div>`}
+              </div>
+              ${message}
+            </div>
+          `;
+        }
+
+        function renderSoundMatch(data, message) {
+          const payload = data.payload || {};
+          const state = String(data.current_state || "listening");
+          const correctChoice = String(payload.correct_choice || "A").trim().toUpperCase() === "B" ? "B" : "A";
+          const koreanFlag = String(payload.korean_flag || "").trim();
+          const pairA = {
+            label: String(payload.pair_a_label || "").trim(),
+            example: String(payload.pair_a_example_word || "").trim(),
+          };
+          const pairB = {
+            label: String(payload.pair_b_label || "").trim(),
+            example: String(payload.pair_b_example_word || "").trim(),
+          };
+          const flagHtml = koreanFlag ? `<div class="board-sound-match__flag">${escapeHtml(koreanFlag)}</div>` : "";
+          if (state === "produce") {
+            const correctWord = correctChoice === "B" ? pairB.example : pairA.example;
+            const cue = String(payload.production_cue || "").trim();
+            return `
+              <div class="board-slide-shell">
+                <div class="board-sound-match">
+                  ${flagHtml}
+                  <div class="board-sound-match__produce">
+                    <div class="board-sound-match__produce-word">${escapeHtml(correctWord)}</div>
+                    ${cue ? `<div class="board-sound-match__produce-cue">${escapeHtml(cue)}</div>` : ""}
+                  </div>
+                </div>
+                ${message}
+              </div>
+            `;
+          }
+          const revealed = state === "revealed";
+          const choiceHtml = (choice, key) => {
+            const isCorrect = revealed && key === correctChoice;
+            const isFaded = revealed && key !== correctChoice;
+            return `
+              <div class="board-sound-match__choice ${isCorrect ? "board-sound-match__choice--correct" : ""} ${isFaded ? "board-sound-match__choice--faded" : ""}">
+                <div class="board-sound-match__label">${escapeHtml(choice.label)}</div>
+                <div class="board-sound-match__example">${escapeHtml(choice.example)}</div>
+                <div class="board-sound-match__speaker" aria-hidden="true">🔊</div>
+              </div>
+            `;
+          };
+          return `
+            <div class="board-slide-shell">
+              <div class="board-sound-match">
+                ${flagHtml}
+                <div class="board-sound-match__choices">
+                  ${choiceHtml(pairA, "A")}
+                  ${choiceHtml(pairB, "B")}
+                </div>
               </div>
               ${message}
             </div>
@@ -906,6 +1141,7 @@
               drag_letter_selection: data.drag_letter_selection,
               spell_word_selection: data.spell_word_selection,
               pattern_noticing_reveal_count: data.pattern_noticing_reveal_count,
+              current_state: data.current_state,
               display_message: data.display_message,
             });
             if (renderKey !== lastRenderKey) {

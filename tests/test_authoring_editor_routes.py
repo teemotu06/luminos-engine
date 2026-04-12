@@ -85,9 +85,9 @@ def test_authoring_editor_routes(tmp_path):
         assert panel.status_code == 200
         assert "flashcard_1234abcd" in panel.text
 
-        added = client.post("/authoring/lessons/G1-L99/blocks/01/slides/add", data={"view_type": "audio_prompt"})
+        added = client.post("/authoring/lessons/G1-L99/blocks/01/slides/add", data={"view_type": "phonemes"})
         assert added.status_code == 200
-        assert "Listen" in added.text
+        assert "Phonemes" in added.text
 
         form = client.get("/authoring/lessons/G1-L99/blocks/01/slides/flashcard_1234abcd")
         assert form.status_code == 200
@@ -179,6 +179,218 @@ def test_block_two_writing_review_form_uses_audio_first_labels(tmp_path):
         assert "Audio Transcript" in form.text
         assert "Shown on the board only after the teacher reveals the answer." in form.text
         assert "Dictation Word" not in form.text
+
+    client.close()
+
+
+def test_listen_spell_form_exposes_target_word_and_pattern_fields(tmp_path):
+    lessons_dir = tmp_path / "lessons"
+    backups_dir = tmp_path / "backups"
+    groups_file = tmp_path / "groups.json"
+    lessons_dir.mkdir()
+    backups_dir.mkdir()
+    groups_file.write_text(Path("app/content/groups.json").read_text(encoding="utf-8"), encoding="utf-8")
+    lesson = _lesson_payload()
+    lesson["blocks"]["02"]["slides"] = [
+        {
+            "slide_id": "02-02",
+            "block_id": "02",
+            "slide_title": "Listen & Spell",
+            "view_type": "listen_spell",
+            "content_payload": {"target_word": "ship", "target_pattern": "sh"},
+            "teacher_cue": "",
+            "expected_response": "",
+            "correction_move": "",
+            "observation_note": "",
+            "korean_interference_flag": None,
+            "markable": True,
+            "marking_options": ["secure", "shaky", "missed"],
+            "next_action": "manual_next",
+        }
+    ]
+    (lessons_dir / "G1-L99.json").write_text(json.dumps(lesson), encoding="utf-8")
+
+    app = FastAPI()
+    app.include_router(authoring_router)
+    client = TestClient(app)
+    with patch("app.services.lesson_authoring_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_backup_service.LESSON_BACKUPS_DIR", backups_dir), \
+         patch("app.services.group_service.GROUPS_FILE", groups_file):
+        form = client.get("/authoring/lessons/G1-L99/blocks/02/slides/02-02")
+        assert form.status_code == 200
+        assert "Target Word" in form.text
+        assert "Target Phoneme Pattern" in form.text
+        assert "Upload Audio" in form.text
+        assert "Browse Image" not in form.text
+
+    client.close()
+
+
+def test_listen_spell_target_pattern_persists_after_save_and_reopen(tmp_path):
+    lessons_dir = tmp_path / "lessons"
+    backups_dir = tmp_path / "backups"
+    groups_file = tmp_path / "groups.json"
+    lessons_dir.mkdir()
+    backups_dir.mkdir()
+    groups_file.write_text(Path("app/content/groups.json").read_text(encoding="utf-8"), encoding="utf-8")
+    lesson = _lesson_payload()
+    lesson["blocks"]["02"]["slides"] = [
+        {
+            "slide_id": "02-03",
+            "block_id": "02",
+            "slide_title": "Listen & Spell",
+            "view_type": "listen_spell",
+            "content_payload": {"target_word": "ship", "target_pattern": "sh"},
+            "teacher_cue": "Say the word.",
+            "expected_response": "",
+            "correction_move": "",
+            "observation_note": "",
+            "korean_interference_flag": None,
+            "markable": True,
+            "marking_options": ["secure", "shaky", "missed"],
+            "next_action": "manual_next",
+        }
+    ]
+    (lessons_dir / "G1-L99.json").write_text(json.dumps(lesson), encoding="utf-8")
+
+    app = FastAPI()
+    app.include_router(authoring_router)
+    client = TestClient(app)
+    with patch("app.services.lesson_authoring_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_backup_service.LESSON_BACKUPS_DIR", backups_dir), \
+         patch("app.services.group_service.GROUPS_FILE", groups_file):
+        response = client.post(
+            "/authoring/lessons/G1-L99/blocks/02/slides/02-03",
+            data={
+                "slide_title": "Listen & Spell",
+                "teacher_cue": "Say the word.",
+                "expected_response": "",
+                "correction_move": "",
+                "observation_note": "",
+                "payload__target_word": "ship",
+                "payload__target_pattern": "sh",
+                "slide_audio_url": "",
+                "teacher_prompts": "[]",
+                "markable": "on",
+            },
+        )
+        assert response.status_code == 200
+
+        saved = json.loads((lessons_dir / "G1-L99.json").read_text(encoding="utf-8"))
+        assert saved["blocks"]["02"]["slides"][0]["content_payload"]["target_pattern"] == "sh"
+
+        reopened = client.get("/authoring/lessons/G1-L99/blocks/02/slides/02-03")
+        assert reopened.status_code == 200
+        assert 'name="payload__target_pattern"' in reopened.text
+        assert 'value="sh"' in reopened.text
+
+    client.close()
+
+
+def test_block_two_offers_listen_spell_not_old_writing_encoding(tmp_path):
+    lessons_dir = tmp_path / "lessons"
+    backups_dir = tmp_path / "backups"
+    groups_file = tmp_path / "groups.json"
+    lessons_dir.mkdir()
+    backups_dir.mkdir()
+    groups_file.write_text(Path("app/content/groups.json").read_text(encoding="utf-8"), encoding="utf-8")
+    _write_lesson(lessons_dir / "G1-L99.json")
+
+    app = FastAPI()
+    app.include_router(authoring_router)
+    client = TestClient(app)
+    with patch("app.services.lesson_authoring_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_backup_service.LESSON_BACKUPS_DIR", backups_dir), \
+         patch("app.services.group_service.GROUPS_FILE", groups_file):
+        panel = client.get("/authoring/lessons/G1-L99/blocks/02")
+        assert panel.status_code == 200
+        assert "Listen &amp; Spell" in panel.text
+        assert "Write It" not in panel.text
+
+        blocked = client.post("/authoring/lessons/G1-L99/blocks/02/slides/add", data={"view_type": "writing_encoding"})
+        assert blocked.status_code == 400
+
+    client.close()
+
+
+def test_authoring_add_list_hides_deprecated_listen_slide(tmp_path):
+    lessons_dir = tmp_path / "lessons"
+    backups_dir = tmp_path / "backups"
+    groups_file = tmp_path / "groups.json"
+    lessons_dir.mkdir()
+    backups_dir.mkdir()
+    groups_file.write_text(Path("app/content/groups.json").read_text(encoding="utf-8"), encoding="utf-8")
+    _write_lesson(lessons_dir / "G1-L99.json")
+
+    app = FastAPI()
+    app.include_router(authoring_router)
+    client = TestClient(app)
+    with patch("app.services.lesson_authoring_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_backup_service.LESSON_BACKUPS_DIR", backups_dir), \
+         patch("app.services.group_service.GROUPS_FILE", groups_file):
+        panel = client.get("/authoring/lessons/G1-L99/blocks/01")
+        assert panel.status_code == 200
+        assert "Listen</div>" not in panel.text
+        assert "Listen &amp; Choose" not in panel.text
+
+    client.close()
+
+
+def test_sound_match_form_exposes_pair_audio_fields_and_hides_global_audio(tmp_path):
+    lessons_dir = tmp_path / "lessons"
+    backups_dir = tmp_path / "backups"
+    groups_file = tmp_path / "groups.json"
+    lessons_dir.mkdir()
+    backups_dir.mkdir()
+    groups_file.write_text(Path("app/content/groups.json").read_text(encoding="utf-8"), encoding="utf-8")
+    lesson = _lesson_payload()
+    lesson["blocks"]["04"]["slides"] = [
+        {
+            "slide_id": "04-01",
+            "block_id": "04",
+            "slide_title": "Sound Match",
+            "view_type": "sound_match",
+            "content_payload": {
+                "pair_a_label": "/f/",
+                "pair_a_example_word": "fan",
+                "pair_a_audio": "/static/audio/f.mp3",
+                "pair_b_label": "/p/",
+                "pair_b_example_word": "pan",
+                "pair_b_audio": "/static/audio/p.mp3",
+                "correct_choice": "A",
+                "korean_flag": "f_p",
+                "production_cue": "Top teeth on lower lip.",
+            },
+            "teacher_cue": "Play the target sound.",
+            "expected_response": "",
+            "correction_move": "",
+            "observation_note": "",
+            "korean_interference_flag": None,
+            "markable": True,
+            "marking_options": ["secure", "shaky", "missed"],
+            "next_action": "manual_next",
+        }
+    ]
+    (lessons_dir / "G1-L99.json").write_text(json.dumps(lesson), encoding="utf-8")
+
+    app = FastAPI()
+    app.include_router(authoring_router)
+    client = TestClient(app)
+    with patch("app.services.lesson_authoring_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_service.LESSONS_DIR", lessons_dir), \
+         patch("app.services.lesson_backup_service.LESSON_BACKUPS_DIR", backups_dir), \
+         patch("app.services.group_service.GROUPS_FILE", groups_file):
+        form = client.get("/authoring/lessons/G1-L99/blocks/04/slides/04-01")
+        assert form.status_code == 200
+        assert "Pair A Audio" in form.text
+        assert "Pair B Audio" in form.text
+        assert 'data-audio-upload-input="pair_a_audio"' in form.text
+        assert 'data-audio-upload-input="pair_b_audio"' in form.text
+        assert "Audio Attachment" not in form.text
 
     client.close()
 

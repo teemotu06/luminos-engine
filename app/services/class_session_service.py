@@ -21,12 +21,15 @@ class SessionSlideView:
     slide_title: str
     slide_index: int
     slide_count: int
+    block_slide_index: int
+    block_slide_count: int
     block_id: str
     view_type: str
     payload: dict
     audio_url: str
     content: str
     prompt: str
+    current_state: str = ""
     revealed: bool = False
     paused: bool = False
 
@@ -93,9 +96,14 @@ def _slide_audio_url(slide: object) -> str:
     return ""
 
 
-def _is_runtime_revealed(runtime_state) -> bool:
+def _is_runtime_revealed(runtime_state, slide: object | None = None) -> bool:
     if runtime_state is None:
         return False
+    view_type = str(getattr(slide, "view_type", "") or "")
+    if view_type == "listen_spell":
+        return str(getattr(runtime_state, "current_state", "") or "") == "revealed"
+    if view_type == "sound_match":
+        return str(getattr(runtime_state, "current_state", "") or "") in {"revealed", "produce"}
     return str(getattr(runtime_state, "current_state", "") or "") not in {"", "idle", "transition"}
 
 
@@ -334,6 +342,12 @@ def session_slide_view(db: Session, class_id: str) -> Optional[SessionSlideView]
         slide_index = 0
         current_slide_id = slide_ids[0]
     slide = ordered_slides[slide_index]["slide"]
+    current_block_slides = [entry["slide"] for entry in ordered_slides if str(entry["slide"].block_id) == str(slide.block_id)]
+    current_block_slide_ids = [item.slide_id for item in current_block_slides]
+    try:
+        block_slide_index = current_block_slide_ids.index(current_slide_id)
+    except ValueError:
+        block_slide_index = 0
     raw_payload = slide.content_payload.model_dump() if hasattr(slide.content_payload, "model_dump") else dict(slide.content_payload)
     adapted_pattern = adapt_pattern_noticing_payload(str(slide.view_type), raw_payload)
     payload = adapted_pattern or raw_payload
@@ -346,12 +360,14 @@ def session_slide_view(db: Session, class_id: str) -> Optional[SessionSlideView]
         content = _slide_primary_text(slide)
         prompt = "" if str(getattr(slide, "view_type", "") or "") == "flashcard" else (runtime_state.prompt_text or _slide_prompt(slide))
         paused = bool(session.paused or runtime_state.paused)
-        revealed = _is_runtime_revealed(runtime_state)
+        revealed = _is_runtime_revealed(runtime_state, slide)
+        current_state = str(getattr(runtime_state, "current_state", "") or "")
     else:
         content = _slide_primary_text(slide)
         prompt = _slide_prompt(slide)
         paused = bool(session.paused)
         revealed = False
+        current_state = ""
     return SessionSlideView(
         lesson_id=lesson.lesson_id,
         lesson_title=lesson.title,
@@ -359,12 +375,15 @@ def session_slide_view(db: Session, class_id: str) -> Optional[SessionSlideView]
         slide_title=slide.slide_title,
         slide_index=slide_index,
         slide_count=len(ordered_slides),
+        block_slide_index=block_slide_index,
+        block_slide_count=len(current_block_slide_ids),
         block_id=slide.block_id,
         view_type=effective_view_type,
         payload=payload,
         audio_url=_slide_audio_url(slide),
         content=content,
         prompt=prompt,
+        current_state=current_state,
         revealed=revealed,
         paused=paused,
     )
@@ -414,12 +433,15 @@ def class_session_payload(db: Session, class_id: str) -> dict:
                 "slide_title": None,
                 "slide_index": 0,
                 "slide_count": 0,
+                "block_slide_index": 0,
+                "block_slide_count": 0,
                 "block_id": None,
                 "view_type": None,
                 "payload": {},
                 "audio_url": "",
                 "content": "",
                 "prompt": "",
+                "current_state": "",
                 "revealed": False,
             }
         )
@@ -432,12 +454,15 @@ def class_session_payload(db: Session, class_id: str) -> dict:
             "slide_title": slide_view.slide_title,
             "slide_index": slide_view.slide_index,
             "slide_count": slide_view.slide_count,
+            "block_slide_index": slide_view.block_slide_index,
+            "block_slide_count": slide_view.block_slide_count,
             "block_id": slide_view.block_id,
             "view_type": slide_view.view_type,
             "payload": slide_view.payload,
             "audio_url": slide_view.audio_url,
             "content": slide_view.content,
             "prompt": slide_view.prompt,
+            "current_state": slide_view.current_state,
             "revealed": slide_view.revealed,
         }
     )

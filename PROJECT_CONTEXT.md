@@ -1,315 +1,498 @@
 # Project Context
 
-## 1. Purpose
+This document is a descriptive snapshot of the current implemented state of `luminos-engine`.
+It is not the product spec. It is the operational map of what exists in the codebase now.
 
-This file is a working summary of the current implemented state of `luminos-engine`.
-It is descriptive, not normative.
+Use it to answer:
+- what surfaces the app currently has
+- how lesson delivery currently works
+- how authoring is wired
+- how teacher control and board synchronization currently behave
+- what slide types now exist
+- what persistence and migration assumptions the code relies on
 
-Use it to understand:
-- what the app currently does
-- what data and routes exist now
-- how lesson delivery, marking, oral checks, review injection, and TTS currently behave
-- what content exists on disk today
+If this file diverges from the code, the code wins.
 
-Do not use this file to override the formal specs in the repo root.
+## 1. Source-of-truth order
 
-## 2. Source-of-truth hierarchy
+1. Repository code and tests
+2. Active migration chain in `alembic/versions/`
+3. This file
+4. Older mockups/spec documents
 
-1. Current repository implementation
-2. Formal specs in the repo root
-3. `PROJECT_CONTEXT.md`
+## 2. Current product shape
 
-If the code and the specs diverge, this file should describe the code as it exists now.
+`luminos-engine` is no longer just a lesson runner.
+It is now a teacher-facing literacy lesson platform with four main surfaces:
 
-## 3. Current stack
+- Lesson library / launcher
+- Lesson authoring
+- Teacher control
+- Student board
+
+The current implementation also includes:
+- class and roster management
+- per-slide and per-student marking
+- class-session state for the detached board
+- command-state for teacher lesson progression
+- local media upload for authoring
+- Kokoro-backed TTS prompt generation
+- dynamic review injection and KI lesson insertion
+
+## 3. Stack
 
 - Backend: FastAPI
-- Templating: Jinja2
+- Templates: Jinja2
 - Frontend state: Alpine.js
-- Audio playback: Howler.js
-- Data validation: Pydantic 2
 - ORM: SQLAlchemy 2.x
+- Validation: Pydantic 2
 - Migrations: Alembic
-- Primary DB target: PostgreSQL via `psycopg2-binary`
-- Test DB path: SQLite is used in tests
-- Content source: JSON lesson files under `app/content/lessons/`
-- Local TTS: Kokoro-based runtime with on-disk WAV cache
-- Auth/session model: signed cookie session auth with bootstrap admin/teacher users
+- Primary DB: PostgreSQL
+- Test DB: SQLite
+- Audio playback: browser audio + Howler-backed flows where applicable
+- Static asset build: `scripts/build_static.py`
 
-Python dependencies currently declared in `requirements.txt` include:
-- `alembic`
+Key runtime libraries declared in `requirements.txt` include:
 - `fastapi`
 - `jinja2`
 - `sqlalchemy`
-- `python-dotenv`
-- `psycopg2-binary`
-- `httpx`
-- `numpy`
+- `alembic`
 - `pydantic`
+- `psycopg2-binary`
 - `python-multipart`
-- `sentry-sdk[fastapi]`
-- `soundfile`
+- `httpx`
 - `uvicorn`
+- `soundfile`
+- `numpy`
+- `sentry-sdk[fastapi]`
 
-Kokoro runtime dependencies are documented separately in `KOKORO_TTS_SETUP.md`; they are not fully represented in `requirements.txt`.
+## 4. Entry points and app boot
 
-## 4. App startup and mounting
-
-App entrypoint: `app/main.py`
+App entrypoint:
+- `app/main.py`
 
 Current startup behavior:
-- loads `DATABASE_URL` from env via `app/db.py`
-- raises `RuntimeError` if `DATABASE_URL` is missing
-- validates auth env when auth is enabled
-- refuses to start if `LUMINOS_ENFORCE_ADMIN_SECRET` is true and `LUMINOS_ADMIN_SECRET` is unset
-- bootstraps configured admin/teacher users when auth is enabled
-- optionally initializes Sentry when `SENTRY_DSN` is set and the package is installed
-- optionally prunes old TTS cache files on startup
-- optionally prewarms the Kokoro TTS runtime on startup
+- loads DB config from `DATABASE_URL`
+- sets up template environment
+- mounts `/static`
+- mounts `/tts-cache`
+- includes routers for auth, lessons, classes, students, admin, authoring, and media
+- installs request/security/rate-limit middleware
+- can bootstrap auth users when auth is enabled
+- can initialize Sentry
+- can prewarm or prune TTS cache depending on env
 
-Current middleware behavior:
-- request IDs are generated or propagated via `X-Request-ID`
-- baseline security headers are added to all responses
-- simple in-memory per-path rate limiting is applied outside static/health paths
-- CORS is enabled only when `ALLOWED_ORIGINS` is configured
+Current important mounted/served paths:
+- `/static`
+- `/tts-cache`
 
-Mounted paths:
-- `/static` -> `app/static`
-- `/tts-cache` -> local WAV cache directory
+Current important routers:
+- `app/routers/auth.py`
+- `app/routers/lesson.py`
+- `app/routers/classes.py`
+- `app/routers/students.py`
+- `app/routers/admin.py`
+- `app/routers/authoring.py`
+- `app/routers/authoring_media.py`
+- `app/routers/teach.py`
 
-Included routers:
-- `auth_router`
-- `lesson_router`
-- `students_router`
-- `classes_router`
-- `admin_router`
+## 5. Core architecture split
 
-## 5. Database and persistence
+There are now two distinct runtime state systems:
 
-`app/db.py` supports both PostgreSQL and SQLite based on `DATABASE_URL`.
+### 5.1 Command state
 
-Current ORM tables:
+Used for teacher lesson flow and generic reveal/progression behavior.
+
+Primary files:
+- `app/services/command_state_service.py`
+- `app/schemas/command_state.py`
+- `app/routers/lesson.py`
+
+This drives:
+- active slide selection
+- advance/reveal state
+- teacher control progression
+- board projections for generic reveal-based slides
+
+### 5.2 Class session state
+
+Used for detached board synchronization and interactive slide states that need class-level persistence.
+
+Primary files:
+- `app/services/class_session_service.py`
+- `app/routers/classes.py`
+- `app/models/lesson.py`
+
+This now drives:
+- current board slide projection
+- `drag_letter` manual selection state
+- `spell_word` manual selection state
+- `pattern_noticing` reveal count
+- detached board render payloads
+
+This split matters:
+- if a slide only depends on generic reveal/hide, command state may be enough
+- if a slide has interactive selection state that must survive polling and sync to the board, it now needs class-session persistence
+
+## 6. Database and persistence
+
+Primary model file:
+- `app/models/lesson.py`
+
+Current important persisted tables/entities:
 - `app_user`
+- `class_group`
+- `student_record`
 - `lesson`
 - `lesson_attempt`
 - `slide_result`
 - `student_mark`
-- `class_group`
-- `student_record`
 - `oral_check_session`
 - `oral_check_assignment`
 - `lesson_runtime_state`
 - `class_pattern_review`
+- `class_session`
 
-Current persistence behavior:
-- opening a lesson creates a new `lesson_attempt`
-- command/teacher-mode progression persists per-slide runtime state in `lesson_runtime_state`
-- slide-level class marks write `slide_result`
-- student roster marks write `student_mark`
-- oral-check completion also upserts final per-student `student_mark` records
-- lesson completion sets `lesson_attempt.completed = True`
-- lesson and slide writes use optimistic version fields on `lesson_attempt` and `slide_result`
-- class-pattern review scheduling is updated at lesson completion, not on every mark
-- classes are soft-deletable via `class_group.deleted_at`
-- non-admin teachers only see their own classes via `owner_user_id`
+Current important `class_session` persisted fields include:
+- `class_id`
+- `lesson_id`
+- `attempt_id`
+- `current_slide_id`
+- `status`
+- `paused`
+- `display_message`
+- `letter_reveal_count`
+- `letter_reveal_slide_id`
+- `pattern_noticing_reveal_count`
+- `pattern_noticing_slide_id`
+- `spell_word_selection`
+- `spell_word_slide_id`
+- `drag_letter_selection`
+- `drag_letter_selection_slide_id`
+- optimistic/version timestamps
 
-Implementation note:
-- there is now an Alembic migration chain under `alembic/versions/`
-- tests explicitly cover fresh-schema upgrades and patching of legacy SQLite schemas
-- runtime startup is no longer the source of truth for schema evolution
+Important persistence behavior:
+- opening a lesson creates a `lesson_attempt`
+- teacher progression state persists
+- board session state persists per class
+- roster marking persists independently of slide-level marking
+- review scheduling state is persisted across attempts
 
-## 6. Current route surface
+## 7. Migration chain
 
-### Root
-- `GET /` -> redirects to `/auth/login` when auth is enabled, otherwise `/lesson/`
-- `GET /health` -> DB-backed liveness check
-- `GET /ready` -> same readiness payload as `/health`
+Current migration chain includes:
+- `20260402_0001_baseline_schema.py`
+- `20260402_0002_optimistic_locking.py`
+- `20260402_0003_class_pattern_review_fk.py`
+- `20260402_0004_auth_and_soft_delete.py`
+- `20260403_0001_runtime_student_outcomes.py`
+- `20260408_0001_class_session_control_plane.py`
+- `20260409_0001_widen_slide_id_columns.py`
+- `20260409_0002_drag_letter_reveal.py`
+- `20260409_0003_spell_word_selection.py`
+- `20260409_0004_pattern_noticing_reveal.py`
+- `20260409_0005_drag_letter_selection.py`
 
-### Auth routes
-- `GET /auth/login`
-- `POST /auth/login`
-- `POST /auth/logout`
+Operational rule:
+- if the app code references new `class_session` columns and the DB is not at head, teacher/class routes will fail
+- after pulling schema changes, run:
 
-### Lesson routes
-- `GET /lesson/` -> lesson launcher/library
-- `GET /lesson/mastery-gates?class_id=...` -> compact per-lesson mastery gate summaries
-- `GET /lesson/progress?class_id=...` -> lesson progress for a class
-- `GET /lesson/{lesson_id}` -> lesson shell, creates attempt
-- `GET /lesson/{lesson_id}/block/{block_id}` -> lesson shell starting at a block
-- `GET /lesson/{lesson_id}/teacher` -> teacher control surface
-- `GET /lesson/{lesson_id}/board` -> board/student-display surface
-- `GET /lesson/{lesson_id}/review/{attempt_id}` -> post-lesson review page
-- `POST /lesson/{lesson_id}/mark` -> write/update class slide result
-- `POST /lesson/{lesson_id}/student-mark` -> upsert one student mark
-- `DELETE /lesson/{lesson_id}/student-mark` -> delete one student mark
-- `POST /lesson/{lesson_id}/oral-check/session/start` -> create or resume oral-check session
-- `GET /lesson/{lesson_id}/oral-check/session/{attempt_id}/{slide_id}` -> fetch oral-check session
-- `POST /lesson/{lesson_id}/oral-check/assignment/mark` -> mark active oral assignment
-- `POST /lesson/{lesson_id}/oral-check/session/complete` -> complete oral-check session
-- `POST /lesson/tts/prompt` -> generate or fetch cached local TTS audio
-- `GET /lesson/{lesson_id}/command-state/{attempt_id}` -> fetch current command/runtime state
-- `POST /lesson/{lesson_id}/command-state/{attempt_id}/active-slide` -> move active slide
-- `POST /lesson/{lesson_id}/command-state/{attempt_id}/advance` -> advance teacher/board runtime state
-- `POST /lesson/{lesson_id}/complete` -> complete lesson attempt if oral checks are resolved
+```bash
+cd /Users/tanioramotu/luminos-engine
+. .venv/bin/activate
+alembic upgrade head
+```
 
-### Class routes
-- `GET /classes/` -> class list
-- `GET /classes/new` -> class creation form
-- `POST /classes/new` -> create class
-- `GET /classes/{class_id}` -> class detail page with roster
-- `POST /classes/{class_id}/students` -> add student to class
-- `POST /classes/{class_id}/archive` -> soft-delete class
-- `POST /classes/{class_id}/restore` -> restore soft-deleted class
+## 8. Content system
 
-### Student routes
-- `GET /students/{student_name}/profile`
+Lessons live under:
+- `app/content/lessons/`
 
-### Admin routes
-- `POST /admin/rebuild-review-records`
-- `POST /admin/clear-lesson-cache`
-- `GET /admin/tts-health`
-- `POST /admin/tts-prune-cache`
+Groups live under:
+- `app/content/groups.json`
 
-Admin routes are guarded by `X-Admin-Secret` and are unavailable when `LUMINOS_ADMIN_SECRET` is unset. By default, startup also refuses to run without the admin secret.
+Backups created by authoring currently land in:
+- `app/content/lesson_backups/`
 
-## 7. Current lesson/content inventory
+Current inventory on disk:
+- G1 through G10 lesson JSON files
+- KI intervention lessons
 
-Lesson files currently on disk: 76 total, all marked `content_pack_status: draft`.
+The lesson runtime still assumes canonical block structure from `BLOCK_REGISTRY`, but runtime behavior can now be filtered or specialized per lesson.
 
-Current distribution:
-- `G1`: 4 lessons (`G1-L1` to `G1-L4`)
-- `G2`: 7 lessons (`G2-L5` to `G2-L11`)
-- `G3`: 9 lessons (`G3-L12` to `G3-L20`)
-- `G4`: 6 lessons (`G4-L21` to `G4-L26`)
-- `G5`: 9 lessons (`G5-L27` to `G5-L35`)
-- `G6`: 4 lessons (`G6-L36` to `G6-L39`)
-- `G7`: 4 lessons (`G7-L40` to `G7-L43`)
-- `G8`: 13 lessons (`G8-L44` to `G8-L56`)
-- `G9`: 11 lessons (`G9-L57` to `G9-L67`)
-- `G10`: 4 lessons (`G10-L68` to `G10-L71`)
-- `KI`: 5 intervention lessons (`KI-L1` to `KI-L5`)
+Implemented special-case runtime behavior:
+- `G1-L1` starts from Block `03` at runtime
+- Blocks `01` and `02` are structurally present but skipped for runtime navigation
 
-This is a major change from earlier repo states that only had the first few G1 lessons implemented.
+## 9. Slide-type system
 
-## 8. Lesson schema and ordering
+Slide types are now formalized through a registry.
 
-Current lesson loading path:
-- file read in `app/services/lesson_service.py`
-- parsed into `app.schemas.lesson.Lesson`
-- validated by:
-  - `validate_lesson_blocks`
-  - `validate_slide_payloads`
+Primary files:
+- `app/slide_types/base.py`
+- `app/slide_types/registry.py`
+- `app/slide_types/__init__.py`
+- `app/slide_types/definitions/*.py`
 
-Lesson ordering:
-- standard lessons are sorted by `Gx-Ly`
-- KI lessons are inserted using `KI_INSERTION_MAP`
-- lesson IDs are cached in-process via `_lesson_ids_cached()`
-- admin cache-clear and rebuild endpoints invalidate this cache
-
-The lesson runtime still assumes a fixed 10-block architecture enforced by `BLOCK_REGISTRY`.
-
-Implemented view types remain:
-- `flashcard`
+Current implemented slide types in the registry include:
 - `audio_prompt`
-- `minimal_pair`
+- `connect_word_to_picture`
 - `drag_letter`
 - `drag_word`
-- `read_respond`
-- `writing_encoding`
+- `fill_in_the_blank`
+- `flashcard`
+- `minimal_pair`
+- `pattern_noticing`
+- `phonemes`
 - `quick_check`
+- `read_respond`
+- `sentence_builder`
+- `spell_word`
+- `word_sort`
+- `writing_encoding`
 
-## 9. Dynamic review and KI insertion
+Notes on newer/important types:
 
-Two repo-level systems now materially affect lesson runtime:
+### Flashcard
+- side-based model
+- `front_text`, `front_image`, `back_text`, `back_image`
+- one content mode per side is enforced
+- generic legacy `image` handling was cleaned up
 
-### KI insertion metadata
-`KI_INSERTION_MAP` defines where intervention lessons belong relative to the main sequence and provides assignment/skip guidance text.
+### Phonemes
+- large single-card board presentation
+- symbol on board
+- audio-driven teacher control
 
-### Dynamic class review injection
-For graded lessons with a selected class:
-- the launcher computes class review recommendations from `class_pattern_review`
-- lesson load can inject dynamic review slides into the runtime lesson via `inject_dynamic_review_into_lesson(...)`
-- `build_dynamic_review_slides(...)` exposes those recommendations to the template layer
+### Drag Letter / Build the Word
+- authoring supports simplified grapheme-unit input
+- teacher manual placement now syncs to the board
+- `Letter Answer` assisted reveal exists
+- `Reset` clears board + teacher state
+- board and teacher show green/red correctness feedback when full
 
-The runtime lesson shown to the teacher can therefore differ from the raw JSON lesson on disk when class review recommendations are present.
+### Spell the Word
+- separate from `writing_encoding`
+- central answer box with surrounding letters
+- teacher manual placement syncs to the board
+- green/red correctness feedback exists
+- `Reset` clears both teacher and board
 
-## 10. Marking model
+### Pattern Noticing
+- new dedicated type for Morpheme Moment / shared-part spotting
+- replaces prior `read_respond` + `display_mode: "spot_part"` usage
+- authoring uses bracket notation such as `s[at]`
+- teacher action reveals the pattern
+- board now shows words immediately and reveals highlight styling progressively
 
-There are now three distinct marking paths:
+### Read & Respond
+- dedicated board rendering now exists
+- if image exists, image is prominent and sentence sits below it
+- if no image exists, sentence is centered and prominent
+- comprehension is now driven through teacher prompts rather than a separate visible comprehension field in authoring
 
-### 1. Slide/class marking
-Stored in `slide_result`.
+## 10. Authoring system
+
+Authoring is now a first-class surface.
+
+Primary files:
+- `app/routers/authoring.py`
+- `app/routers/authoring_media.py`
+- `app/services/lesson_authoring_service.py`
+- `app/services/slide_editor_service.py`
+- `app/services/lesson_backup_service.py`
+- `app/templates/authoring/base.html`
+- `app/templates/authoring/lessons/*.html`
+- `app/templates/authoring/media/*.html`
+- `app/static/authoring.js`
+
+Current authoring capabilities:
+- lesson list
+- create lesson
+- open lesson editor
+- add/reorder/delete slides
+- block-based editing
+- type-specific form rendering
+- upload and attach media
+- save slide
+- save lesson with backup creation
+
+Current authoring UX rules that were recently implemented:
+- slide editing is grouped into distinct visual sections:
+  - Board Section
+  - Audio Attachment
+  - Teacher Instructions Section
+  - Teacher Prompts Section
+  - Tracking
+- helper copy is hidden behind clickable section headers instead of being always visible
+- `Save Slide` and `Cancel` live in a sticky slide editor header
+- `Teacher Preview` and `Board Preview` were removed from the visible slide form
+- `Validate` was removed from the visible lesson-level controls
+
+### Media attachment pattern
+
+Main-editor media now follows a single-attached-asset model.
+
+For slide audio:
+- main editor shows only current attachment or empty state
+- upload/replace opens file picker directly
+- old library items are not shown inline
+
+For top-level image fields:
+- same attached-asset pattern
+- current image card or empty state
+- upload/replace rather than inline library browsing
+
+### Teacher instructions simplification
+
+Visible authoring fields were reduced.
+
+Removed from visible authoring teacher-instruction UI:
+- `Slide Title`
+- `Students Should`
+- `If They Struggle`
+- `Notes`
+
+Important implementation detail:
+- some of these still post as hidden values to avoid wiping legacy data or breaking save contracts
+
+## 11. Teacher control surface
+
+Primary files:
+- `app/templates/lesson/teacher.html`
+- `app/static/lesson_teacher.js`
+- `app/routers/lesson.py`
+
+Current teacher shell behavior:
+- opens against a lesson attempt and optional class
+- supports board detachment/open
+- shows slide actions based on slide type and runtime state
+- has simplified `TEACHER` disclosure instead of always-open instruction clutter
+- has redesigned navigation cards for slide/block
+
+Important recent behavior:
+- teacher prompts are clickable and can still trigger audio-backed behavior
+- prompt buttons now use full width and wrap instead of truncating
+- navigation now shows:
+  - slide dots + count
+  - block label + count
+
+### Action mapping
+
+Teacher control actions are not uniform across all slide types.
+
+Examples:
+- `flashcard` uses answer/hide reveal flow
+- `phonemes` uses `Play Sound`
+- `drag_letter` uses `Letter Answer`, manual tile placement, reset, and marking
+- `spell_word` uses answer/hide, manual placement, reset, and marking
+- `pattern_noticing` uses `Reveal Pattern`
+
+Operational rule:
+- new slide types should not modify shared action behavior for existing slide types
+- regressions in teacher control usually mean shared action plumbing was touched when it should have been isolated
+
+## 12. Student board surface
+
+Primary files:
+- `app/templates/classes/board.html`
+- `app/services/class_session_service.py`
+- `app/routers/classes.py`
+
+Current board behavior:
+- detached board polls class session state
+- board rerenders only when relevant state changes
+- board polling now includes cache-busting query params
+- board flashing was reduced by relaxing poll cadence and preventing no-op rerenders
+
+Current board-specific rendering rules of note:
+- flashcards render only board-owned content, not teacher-only copy
+- `Build the Word` and `Spell the Word` show interactive correctness state
+- `Read & Respond` no longer ignores image attachments
+- `Pattern Noticing` no longer shows the prompt on the board
+
+### Theme support
+
+Teacher and board now have explicit light/dark theme toggles.
+
+Important styling fix already applied:
+- `Spell the Word` letters needed explicit dark text fill in dark theme so the letters do not disappear
+
+## 13. Class control surface
+
+Primary files:
+- `app/templates/classes/control.html`
+- `app/routers/classes.py`
+- `app/services/class_session_service.py`
+
+Current role:
+- launch teacher flow for a class
+- create or reuse active class session
+- manage board link and teacher entrypoint
+
+This is now the normal starting point for class-aware lesson delivery.
+
+## 14. Marking model
+
+There are multiple distinct marking paths.
+
+### Slide/class marking
+Stored in:
+- `slide_result`
 
 Used for:
-- teacher overlay class-response buttons
-- quick-check aggregate submission
+- class response marking
+- quick-check aggregate status
 
-Stored fields include:
-- `status`
-- `error_tags`
-- `korean_transfer`
-- `teacher_note`
-- `item_results`
-
-### 2. Per-student roster marking
-Stored in `student_mark`.
+### Per-student roster marking
+Stored in:
+- `student_mark`
 
 Used for:
-- roster taps during the lesson
-- review-page inline editing
-- oral-check final per-student resolution
+- teacher roster interactions during lesson
+- review edits
+- oral-check resolution
 
-Current student status cycle in the lesson shell:
-- `"" -> secure -> shaky -> missed -> skipped -> ""`
+### Oral-check marking
+Stored in:
+- `oral_check_session`
+- `oral_check_assignment`
 
-`student_mark.error_tags` is nullable and not collected in the main lesson flow today.
+### Mark Students visibility rule
 
-### 3. Oral-check assignment marking
-Stored in `oral_check_assignment` and summarized by `oral_check_session`.
+This rule matters and was explicitly corrected:
+- if authoring/slide config marks the slide as markable, teacher control shows `MARK STUDENTS`
+- if not, teacher control must not invent it
 
-Terminal statuses currently accepted by the service:
-- `secure`
-- `shaky`
-- `missed`
-- `deferred`
-- `absent`
+## 15. Oral-check and review scheduling
 
-## 11. Oral-check system
+Still implemented and still active.
 
-The repo now has a block-07 oral enforcement system, implemented in `app/services/oral_check_service.py` and wired through the lesson runtime plus the teacher/board command-state flow.
+Primary files:
+- `app/services/oral_check_service.py`
+- `app/services/review_scheduler_service.py`
+- `app/services/review_service.py`
+- `app/services/pattern_noticing_service.py`
+
+Still true:
+- oral-check can block lesson completion
+- class pattern review persists across attempts
+- review recommendations can affect runtime lesson presentation
+
+## 16. Local TTS
+
+Primary files:
+- `app/services/kokoro_tts_service.py`
+- `app/routers/lesson.py`
 
 Current behavior:
-- eligible slides start or resume an oral-check session automatically when the slide becomes active and a roster is present
-- lesson completion is blocked while any oral-check session for the attempt has unresolved students
-- the active prompt can be full-roster or audit-roster based
-- short-reader mode can require multiple evidence passes
-- missed reads can queue a correction/reread assignment
-- once all required readers are resolved, the frontend auto-completes the session
-- after oral check completes, the same slide can run a comprehension round across the roster if comprehension prompts are configured
-
-Audit selection strategies currently supported:
-- `roster_order`
-- `least_recently_checked`
-
-Frontend consequence:
-- the old small presentation-mode roster button has been replaced by a larger floating oral/roster control panel that also handles prompt playback, assignment marking, audit controls, and roster inspection
-
-## 12. Local TTS system
-
-The repo now includes a Kokoro-backed local TTS path:
-- service: `app/services/kokoro_tts_service.py`
-- route: `POST /lesson/tts/prompt`
-- cache mount: `/tts-cache`
-
-Current TTS behavior:
 - prompt text is normalized and hashed
-- generated WAVs are cached on disk
-- generation uses file locks to prevent duplicate concurrent synthesis
-- cache can be prewarmed on startup
-- cache can be pruned on startup or through admin endpoints
-- frontend fetches TTS on demand for oral prompts and prefetches likely next prompts
+- generated files are cached on disk
+- TTS can be prewarmed or pruned
+- teacher/oral prompt flows can fetch audio on demand
 
-Relevant env vars include:
+Related env vars include:
 - `LUMINOS_TTS_CACHE_DIR`
 - `LUMINOS_TTS_PREWARM_ENABLED`
 - `LUMINOS_TTS_STRICT_STARTUP`
@@ -318,148 +501,131 @@ Relevant env vars include:
 - `KOKORO_SPEED`
 - `KOKORO_SAMPLE_RATE`
 
-## 13. Frontend runtime
+## 17. Assets and uploads
 
-Current frontend entrypoints are split by surface:
-- `app/static/lesson.js` -> lesson/review shell
-- `app/static/lesson_teacher.js` -> teacher control surface
-- `app/static/lesson_board.js` -> board display
-- `app/static/lesson_launcher.js` -> launcher/library behavior
+Static source:
+- `app/static/`
 
-Main Alpine components/stores now include:
-- `lessonShell(...)`
-- `reviewShell(...)`
-- `teacherShell(...)`
-- `boardShell(...)`
-- `launcherShell(...)`
-- `Alpine.store("lessonRoster", ...)`
-- `dragBuild(...)`
+Built assets:
+- `app/static/dist/`
 
-Current frontend responsibilities across those surfaces:
-- lesson launch with class-aware progress/review metadata
-- teacher/board command-state synchronization
-- slide navigation and reveal flow
-- audio playback
-- TTS prompt fetching/caching
-- class slide marking
-- per-student roster marking
-- oral-check session orchestration
-- comprehension follow-up orchestration
-- dynamic-review skipping
+Uploads currently land under:
+- `app/static/uploads/audio/`
+- `app/static/uploads/images/`
 
-The old `P` presentation-mode toggle described in earlier project-context versions is no longer a reliable description of the current frontend behavior and should not be assumed.
+Important operational rule:
+- after changing `app/static/authoring.js`, `app/static/lesson_teacher.js`, `app/static/lesson.css`, or `app/static/styles.css`, rebuild static assets so the served bundle matches source
 
-## 14. Current UI/template structure
+Typical command:
 
-Key templates:
-- `app/templates/lesson/index.html`
-- `app/templates/lesson/view.html`
-- `app/templates/lesson/teacher.html`
-- `app/templates/lesson/board.html`
-- `app/templates/lesson/review.html`
-- lesson partials under `app/templates/lesson/partials/`
+```bash
+cd /Users/tanioramotu/luminos-engine
+. .venv/bin/activate
+python scripts/build_static.py
+```
 
-Current launcher behavior:
-- grouped lesson library
-- class selector
-- KI insertion context
-- class review map data for lesson cards
-- roster-connected vs no-roster messaging
+## 18. Tests
 
-Current lesson-view behavior:
-- full lesson rendered into the page
-- slide frames flattened in canonical order
-- dynamic review slides can be rendered ahead of the main lesson sequence
-- floating oral/roster panel is body-level UI, driven by the Alpine store
+There is now substantial test coverage under `tests/`.
 
-Current review-page behavior:
-- session summary and mark grid
-- inline save of student status and note edits
-- oral-check review information is also rendered when present
+Important areas covered:
+- Alembic migrations
+- auth and class routes
+- authoring routes and end-to-end flows
+- media upload flows
+- slide type registry
+- teacher control behavior
+- teacher/board session sync
+- new slide types
+- lesson authoring services
 
-## 15. Review scheduling model
+Files of note:
+- `tests/test_alembic_migration.py`
+- `tests/test_auth_and_class_routes.py`
+- `tests/test_authoring_editor_routes.py`
+- `tests/test_authoring_end_to_end.py`
+- `tests/test_authoring_media_routes.py`
+- `tests/test_flashcard_payload.py`
+- `tests/test_new_slide_types.py`
+- `tests/test_new_types_authoring_integration.py`
+- `tests/test_teacher_control_marking.py`
+- `tests/test_teacher_shell_session_sync.py`
 
-`class_pattern_review` is now a first-class persistence concept.
+## 19. Known operational pitfalls
 
-Current intent:
-- track pattern mastery at class level across attempts
-- derive review urgency using weak-learner counts, Korean-transfer evidence, consecutive weak lessons, and due-gap logic
-- support lesson-card review recommendations before the teacher opens the next lesson
+These are current practical pitfalls, not abstract risks.
 
-Important implementation detail:
-- startup rebuild is conservative and only runs when the table is empty
-- a full wipe-and-replay exists behind `POST /admin/rebuild-review-records`
+### 19.1 Migrations must be current
 
-## 16. Tests that exist now
+If routes start failing with missing column errors on `class_session`, the DB is behind the code.
+Run:
 
-There is now a dedicated `tests/` directory.
+```bash
+alembic upgrade head
+```
 
-Current test coverage includes:
-- Alembic migration behavior
-- auth/login behavior
-- class ownership and soft-delete behavior
-- lesson-route behavior
-- admin-route behavior
-- oral-check service behavior
-- Kokoro TTS cache behavior
+### 19.2 Static bundle staleness
 
-Notable tested cases:
-- fresh-schema and legacy-schema Alembic upgrades
-- bootstrap auth configuration and teacher ownership boundaries
-- `/lesson/tts/prompt` success and failure handling
-- oral checks blocking lesson completion until resolved
-- dynamic-review lookup failing open instead of breaking lesson rendering
-- TTS cache reuse and prune logic
+If teacher or authoring behavior does not match source code:
+- rebuild static assets
+- hard refresh browser
+- sometimes restart the dev server
 
-## 17. Assets and supporting files
+This was a repeated source of confusion during recent teacher/control work.
 
-Current static assets include:
-- lesson and base CSS
-- `oral_prompt_helper.js`
-- vocabulary images
-- reader images
-- some local phoneme audio assets
+### 19.3 Shared control-path regressions
 
-Current supporting/spec files in the repo root include:
-- `BLOCK_07_ORAL_ENFORCEMENT_SPEC.md`
-- `KOKORO_TTS_SETUP.md`
-- `KI_INSERTION_MAP.md`
-- `SPACED_REVIEW_ENGINE_SPEC.md`
-- `STRICT_VALIDATOR_SPEC.md`
-- `LUMINOS_COMMAND_SYSTEM_SPEC.md`
+Teacher control has generic action plumbing plus slide-specific branches.
+If a new slide type changes shared action resolution instead of being isolated, existing blocks can regress.
 
-There is also a `scripts/` directory with validation and repair utilities, including strict lesson validation.
+Safe rule:
+- additive behavior for new slide types
+- do not rewrite shared teacher action behavior unless necessary
 
-## 18. Current implementation boundaries
+### 19.4 Board sync is split by mechanism
 
-This repo currently implements:
+Not every board interaction is driven the same way.
+
+Examples:
+- generic reveal slides rely on command-state/runtime projection
+- `drag_letter`, `spell_word`, and `pattern_noticing` now rely on class-session persisted state
+
+When debugging board/teacher mismatches, identify which state path the slide uses first.
+
+## 20. Current repo boundaries
+
+Currently implemented:
 - teacher-facing lesson delivery
-- class roster management
-- per-student and per-slide marking
-- post-lesson review editing
-- class-level review scheduling/recommendations
-- KI intervention lesson inventory
-- oral reading enforcement workflow
-- local TTS-backed oral prompting
+- class-aware control and detached board
+- authoring UI for lesson editing
+- media upload/attachment for authoring
+- slide-type registry with specialized slide renderers
+- per-slide and per-student marking
+- post-lesson review/editing
+- review scheduling
+- KI insertion metadata
+- oral-check enforcement
+- local TTS generation
 
-This repo still does not implement:
-- student-device mode
-- parent-facing views
-- a full authoring CMS
+Not implemented as first-class product surfaces:
+- student device workflow
+- parent-facing surfaces
 - analytics dashboards
 - speech recognition / ASR
+- a public multi-user content CMS beyond the current authoring editor
 
-## 19. Practical summary
+## 21. Practical summary
 
-Today `luminos-engine` is not just a simple lesson runner.
-It is currently a teacher-facing literacy lesson system with:
-- a JSON lesson library
-- class-aware lesson launch
-- dynamic review injection
-- KI intervention sequencing metadata
-- per-slide and per-student persistence
-- enforced oral-check workflow for reading passages
-- Kokoro-backed local TTS prompts
-- post-lesson review and class-pattern scheduling state
+As of the current branch state, `luminos-engine` should be understood as:
 
-Any future context or planning should start from that broader implemented surface, not from the earlier two-lesson / simple-overlay version of the project.
+- a JSON-driven literacy lesson system
+- with a formal authoring surface
+- a teacher control plane
+- a detached synchronized board
+- a slide-type registry instead of ad hoc template branching
+- PostgreSQL-backed runtime/session persistence
+- Alembic-managed schema evolution
+- media attachment and backup-aware lesson editing
+
+Any future work should assume this broader architecture.
+Do not plan against the older “simple lesson player” mental model.

@@ -1,0 +1,23 @@
+<div class="lesson-minimal-pair">
+  {% if slide.content_payload.korean_flag %}
+  <div class="lesson-minimal-pair__flag">
+    <div class="lesson-minimal-pair__flag-label">Korean interference flag</div>
+    <div class="lesson-minimal-pair__flag-value">{{ slide.content_payload.korean_flag }}</div>
+  </div>
+  {% endif %}
+
+  <div class="lesson-minimal-pair__choices">
+    <button type="button" class="lesson-minimal-pair__choice" @click="playAudio('{{ slide.content_payload.pair_a_audio }}')">
+      <span class="lesson-minimal-pair__choice-label">{{ slide.content_payload.pair_a_label }}</span>
+      <span class="lesson-minimal-pair__choice-audio">{{ slide.content_payload.pair_a_example_word }}</span>
+    </button>
+    <button type="button" class="lesson-minimal-pair__choice" @click="playAudio('{{ slide.content_payload.pair_b_audio }}')">
+      <span class="lesson-minimal-pair__choice-label">{{ slide.content_payload.pair_b_label }}</span>
+      <span class="lesson-minimal-pair__choice-audio">{{ slide.content_payload.pair_b_example_word }}</span>
+    </button>
+  </div>
+
+  <div class="lesson-minimal-pair__answer">
+    Correct choice: {{ slide.content_payload.correct_choice }}
+  </div>
+</div>

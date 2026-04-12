@@ -3,6 +3,8 @@ const ACTION_BUTTONS = {
 reveal: { label: "Reveal Answer", icon: "Show", className: "slide-action-btn--reveal" },
 reveal_answer: { label: "Reveal Answer", icon: "Show", className: "slide-action-btn--reveal" },
 reveal_letter: { label: "Letter Answer", icon: "Letter", className: "slide-action-btn--reveal" },
+produce_phase: { label: "Produce", icon: "Produce", className: "slide-action-btn--reveal" },
+play_model: { label: "Play Model", icon: "Model", className: "slide-action-btn--audio" },
 play_sound: { label: "Play Sound", icon: "Audio", className: "slide-action-btn--audio" },
 play_audio: { label: "Play Sound", icon: "Audio", className: "slide-action-btn--audio" },
 read_sentence: { label: "Read Aloud", icon: "Read", className: "slide-action-btn--audio" },
@@ -183,8 +185,45 @@ return (this.slideViewTypes[this.activeSlideId] || "") === "drag_letter";
 get isSpellWordSlide() {
 return (this.slideViewTypes[this.activeSlideId] || "") === "spell_word";
 },
+get isListenSpellSlide() {
+return (this.slideViewTypes[this.activeSlideId] || "") === "listen_spell";
+},
 get isPatternNoticingSlide() {
 return (this.slideViewTypes[this.activeSlideId] || "") === "pattern_noticing";
+},
+get isSoundMatchSlide() {
+return (this.slideViewTypes[this.activeSlideId] || "") === "sound_match";
+},
+get soundMatchPayload() {
+return this.slidePayloads[this.activeSlideId] || {};
+},
+get soundMatchCorrectChoice() {
+const choice = String(this.soundMatchPayload.correct_choice || "A").trim().toUpperCase();
+return choice === "B" ? "B" : "A";
+},
+get soundMatchCorrectAudio() {
+const payload = this.soundMatchPayload;
+const field = this.soundMatchCorrectChoice === "B" ? "pair_b_audio" : "pair_a_audio";
+return String(payload[field] || "").trim();
+},
+get soundMatchCorrectWord() {
+const payload = this.soundMatchPayload;
+const field = this.soundMatchCorrectChoice === "B" ? "pair_b_example_word" : "pair_a_example_word";
+return String(payload[field] || "").trim();
+},
+get soundMatchProductionCue() {
+return String(this.soundMatchPayload.production_cue || "").trim();
+},
+get soundMatchKoreanFlag() {
+return String(this.soundMatchPayload.korean_flag || "").trim();
+},
+get listenSpellTargetWord() {
+const payload = this.slidePayloads[this.activeSlideId] || {};
+return String(payload.target_word || "").trim();
+},
+get listenSpellTargetPattern() {
+const payload = this.slidePayloads[this.activeSlideId] || {};
+return String(payload.target_pattern || "").trim();
 },
 get patternNoticingWords() {
 const payload = this.slidePayloads[this.activeSlideId] || {};
@@ -572,6 +611,19 @@ return "reveal_letter";
 return action;
 })
 .filter((action, index, array) => array.indexOf(action) === index);
+if (this.isSoundMatchSlide) {
+const phaseActions = {
+listening: ["play_sound", "reveal_answer"],
+revealed: ["produce_phase", "reveal_answer", "mark_students"],
+produce: ["play_model", "reveal_answer"],
+};
+const allowed = phaseActions[this.currentState] || phaseActions.listening;
+return normalized.filter((action) => {
+if (!allowed.includes(action)) return false;
+if (action === "mark_students") return this.currentSlideMarkable && this.roster.length > 0;
+return true;
+});
+}
 return normalized.filter((action) => {
 if (action === "prompts") return false;
 if (action === "mark_students") return this.currentSlideMarkable && this.roster.length > 0;
@@ -579,6 +631,12 @@ return true;
 });
 },
 get isAnswerRevealed() {
+if (this.isListenSpellSlide) {
+return this.currentState === "revealed";
+}
+if (this.isSoundMatchSlide) {
+return ["revealed", "produce"].includes(this.currentState);
+}
 return !["idle", "transition"].includes(this.currentState);
 },
 get hasPersistentMarkButton() {
@@ -1063,6 +1121,14 @@ return this.patternNoticingRevealCount >= this.patternNoticingMaxReveal ? "Hide"
 if (action === "reveal_letter") {
 return this.dragLetterRevealCount >= this.dragLetterMaxReveal ? "Hide" : "Letter Answer";
 }
+if (this.isListenSpellSlide && ["reveal", "reveal_answer"].includes(action)) {
+return this.isAnswerRevealed ? "Hide" : "Reveal";
+}
+if (this.isSoundMatchSlide) {
+if (action === "reveal_answer") return "Reveal";
+if (action === "produce_phase") return "Produce";
+if (action === "play_model") return "Play Model";
+}
 if (["reveal", "reveal_answer"].includes(action)) {
 return this.isAnswerRevealed ? "Hide" : "Answer";
 }
@@ -1080,6 +1146,14 @@ return classes;
 actionDisabled(action) {
 if (this.isPatternNoticingSlide && ["reveal", "reveal_answer"].includes(action)) {
 return !this.classId || !this.patternNoticingMaxReveal;
+}
+if (this.isSoundMatchSlide) {
+if (["play_sound", "play_model"].includes(action)) {
+return !this.soundMatchCorrectAudio;
+}
+if (action === "mark_students") {
+return this.currentState !== "revealed" || !this.currentSlideMarkable || !this.roster.length;
+}
 }
 if (action === "reveal_letter") {
 return !this.classId || !this.dragLetterMaxReveal;
@@ -1222,6 +1296,20 @@ await this.setPatternNoticingRevealCount(this.patternNoticingRevealCount + 1);
 await this.setPatternNoticingRevealCount(this.patternNoticingMaxReveal);
 }
 return;
+}
+if (this.isSoundMatchSlide) {
+if (action === "play_sound" || action === "play_model") {
+await this.playAudio(this.soundMatchCorrectAudio, "slide");
+return;
+}
+if (action === "reveal_answer") {
+await this.handleControl(this.isAnswerRevealed ? "hide_answer" : "force_advance");
+return;
+}
+if (action === "produce_phase") {
+await this.handleControl("force_advance");
+return;
+}
 }
 if (action === "reveal_letter") {
 if (this.dragLetterRevealCount >= this.dragLetterMaxReveal) await this.resetLetterReveal();

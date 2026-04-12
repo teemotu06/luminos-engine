@@ -1162,6 +1162,19 @@
       </button>
     </div>
 
+    <div class="card drag-build-card" x-show="isListenSpellSlide" x-cloak>
+      <div class="card-label">Listen &amp; Spell</div>
+      <div class="drag-build-section-label">Target Word</div>
+      <div class="preview-correction" style="margin-top:0;" x-text="listenSpellTargetWord"></div>
+      <template x-if="listenSpellTargetPattern">
+        <div>
+          <div class="drag-build-section-label" style="margin-top:14px;">Target Pattern</div>
+          <div class="preview-correction" style="margin-top:0;" x-text="listenSpellTargetPattern"></div>
+        </div>
+      </template>
+      <div class="drag-build-reveal-count" x-text="currentBlockSlidePosition + ' / ' + currentBlockSlideCount"></div>
+    </div>
+
     <div class="card drag-build-card" x-show="isPatternNoticingSlide" x-cloak>
       <div class="card-label">Pattern Noticing</div>
       <div class="drag-build-section-label">Words</div>
@@ -1173,6 +1186,21 @@
       <div class="drag-build-section-label" style="margin-top:14px;">Prompt</div>
       <div class="preview-correction" style="margin-top:0;" x-text="patternNoticingPrompt"></div>
       <div class="drag-build-reveal-count" x-text="patternNoticingProgressLabel + ' revealed'"></div>
+    </div>
+
+    <div class="card drag-build-card" x-show="isSoundMatchSlide" x-cloak>
+      <div class="card-label">Sound Match</div>
+      <template x-if="soundMatchKoreanFlag">
+        <div class="preview-correction" style="margin-top:0;" x-text="soundMatchKoreanFlag"></div>
+      </template>
+      <div style="display:grid; gap:10px;">
+        <div class="preview-correction" style="margin-top:0;" x-text="(soundMatchPayload.pair_a_label || '') + ' — ' + (soundMatchPayload.pair_a_example_word || '')"></div>
+        <div class="preview-correction" style="margin-top:0;" x-text="(soundMatchPayload.pair_b_label || '') + ' — ' + (soundMatchPayload.pair_b_example_word || '')"></div>
+      </div>
+      <div class="drag-build-section-label" style="margin-top:14px;">Correct Word</div>
+      <div class="preview-correction" style="margin-top:0;" x-text="soundMatchCorrectWord"></div>
+      <div class="drag-build-section-label" style="margin-top:14px;">Production Cue</div>
+      <div class="preview-correction" style="margin-top:0;" x-text="soundMatchProductionCue"></div>
     </div>
 
     <div class="card slide-actions-card" x-show="hasPromptPanel" x-cloak>

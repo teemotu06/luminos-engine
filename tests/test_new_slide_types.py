@@ -2,13 +2,14 @@ from pathlib import Path
 
 import pytest
 
-from app.schemas.slide_payloads import FillInTheBlankPayload, SentenceBuilderPayload, WordSortPayload
+from app.schemas.slide_payloads import FillInTheBlankPayload, ListenSpellPayload, SentenceBuilderPayload, WordSortPayload
 from app.slide_types import registry
 
 
 @pytest.mark.parametrize(
     "type_key,label",
     [
+        ("listen_spell", "Listen & Spell"),
         ("fill_in_the_blank", "Fill in the Blank"),
         ("word_sort", "Word Sort"),
         ("sentence_builder", "Sentence Builder"),
@@ -38,3 +39,8 @@ def test_word_sort_payload_validates_with_two_categories():
 def test_sentence_builder_payload_validates():
     payload = SentenceBuilderPayload(target_sentence="I can read.", word_tiles=["I", "can", "read."])
     assert payload.target_sentence == "I can read."
+
+
+def test_listen_spell_payload_validates():
+    payload = ListenSpellPayload(target_word="ship", target_pattern="sh")
+    assert payload.target_word == "ship"

@@ -43,6 +43,16 @@ from app.template_env import templates
 router = APIRouter(prefix="/authoring", tags=["authoring"])
 
 
+def _is_deprecated_block_option(block_id: str, type_key: str) -> bool:
+    deprecated_type_keys = {
+        "audio_prompt",
+        "minimal_pair",
+    }
+    if str(type_key) in deprecated_type_keys:
+        return True
+    return str(block_id) == "02" and str(type_key) == "writing_encoding"
+
+
 def _parse_csv_list(raw: Optional[str]) -> List[str]:
     return [item.strip() for item in (raw or "").split(",") if item.strip()]
 
@@ -303,7 +313,12 @@ def _render_block_panel(request: Request, lesson_id: str, block_id: str, lesson_
         {
             "lesson_id": lesson_id,
             "block": block,
-            "slide_definitions": [registry.get(type_key) for type_key in registry.all_type_keys()],
+            "slide_definitions": [
+                registry.get(type_key)
+                for type_key in registry.all_type_keys()
+                if str(block_id) in tuple(registry.get(type_key).allowed_blocks or ())
+                and not _is_deprecated_block_option(block_id, type_key)
+            ],
             "slide_labels": slide_labels,
             "slide_summaries": slide_summaries,
             "current_user": current_user,
@@ -590,6 +605,11 @@ def authoring_add_slide(
 ):
     lesson_data = get_lesson_data(lesson_id)
     try:
+        definition = registry.get(view_type)
+        if _is_deprecated_block_option(block_id, view_type):
+            raise ValueError("Write It is no longer available for new Block 02 slides. Use Listen & Spell instead.")
+        if str(block_id) not in tuple(definition.allowed_blocks or ()):
+            raise ValueError(f"{definition.label} is not available in Block {block_id}.")
         add_slide(lesson_data, block_id, view_type, position=position)
         save_lesson_data(lesson_id, lesson_data, backup=False)
     except Exception as exc:
@@ -665,6 +685,11 @@ def authoring_slide_form(request: Request, lesson_id: str, block_id: str, slide_
                 field["name"]: field.get("value", "")
                 for field in (form_context.get("content_fields", []) + form_context.get("advanced_fields", []))
                 if field.get("media_type") == "image"
+            },
+            "audio_field_values": {
+                key: value
+                for key, value in payload_dict.items()
+                if "audio" in str(key) and isinstance(value, str)
             },
             "video_fields": ["video", "video_url"],
             **form_context,
