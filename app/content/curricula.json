@@ -1,0 +1,9 @@
+[
+  {
+    "id": "luminos-core",
+    "title": "Luminos Core Programme",
+    "subtitle": "Groups 1–10",
+    "description": "The full phonics decoding and encoding sequence from short vowels through advanced morphology.",
+    "unit_ids": ["G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G10"]
+  }
+]

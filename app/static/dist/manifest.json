@@ -1,10 +1,10 @@
 {
-  "styles.css": "/static/dist/styles.css?v=04a782a64a3c",
+  "styles.css": "/static/dist/styles.css?v=31d4951227bc",
   "lesson.css": "/static/dist/lesson.css?v=754f2b129c32",
   "oral_prompt_helper.js": "/static/dist/oral_prompt_helper.js?v=e2025f6161be",
   "lesson.js": "/static/dist/lesson.js?v=66e97258fba3",
   "lesson_launcher.js": "/static/dist/lesson_launcher.js?v=7d1f34ef4ccb",
-  "lesson_teacher.js": "/static/dist/lesson_teacher.js?v=d01d6bdc9961",
+  "lesson_teacher.js": "/static/dist/lesson_teacher.js?v=1950cc3ebd45",
   "lesson_review.js": "/static/dist/lesson_review.js?v=359dadcf9784",
   "alpinejs.min.js": "/static/dist/alpinejs.min.js"
 }

@@ -11,15 +11,18 @@ from app.models.lesson import (
     StudentRecord,
     UserRecord,
 )
+from app.models.knowledge import CoursePlanRecord, PublicHolidayRecord
 
 __all__ = [
     "ClassRecord",
     "ClassPatternReviewRecord",
+    "CoursePlanRecord",
     "LessonRecord",
     "LessonAttemptRecord",
     "LessonRuntimeStateRecord",
     "OralCheckSessionRecord",
     "OralCheckAssignmentRecord",
+    "PublicHolidayRecord",
     "SlideResultRecord",
     "StudentMarkRecord",
     "StudentRecord",

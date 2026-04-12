@@ -87,6 +87,41 @@
 
         <section class="launcher__group launcher__section-card">
           <div class="launcher__group-header">
+            <div class="launcher__group-kicker">Course plan</div>
+            <h2 class="launcher__group-title">Schedule</h2>
+          </div>
+          {% if plan_summary %}
+          <div class="plan-summary">
+            <div class="plan-summary__row">
+              <span class="plan-summary__label">Curriculum</span>
+              <span class="plan-summary__value">{{ plan_summary.curriculum_title }}</span>
+            </div>
+            <div class="plan-summary__row">
+              <span class="plan-summary__label">Start</span>
+              <span class="plan-summary__value">{{ plan_summary.start_date }}</span>
+            </div>
+            <div class="plan-summary__row">
+              <span class="plan-summary__label">End</span>
+              <span class="plan-summary__value">{{ plan_summary.end_date }}</span>
+            </div>
+            <div class="plan-summary__row">
+              <span class="plan-summary__label">Teaching</span>
+              <span class="plan-summary__value">{{ plan_summary.teaching_day_labels | join(' · ') }}</span>
+            </div>
+            <div class="plan-summary__row">
+              <span class="plan-summary__label">Lessons</span>
+              <span class="plan-summary__value">{{ plan_summary.total_lessons }}</span>
+            </div>
+          </div>
+          <a class="luminos-form__submit" style="display:block;text-align:center;margin-top:0.75rem;text-decoration:none;" href="/knowledge/plan/{{ cls.id }}">View full schedule →</a>
+          {% else %}
+          <p class="launcher__section-copy">No course plan yet.</p>
+          <a class="luminos-form__submit luminos-form__submit--secondary" style="display:block;text-align:center;text-decoration:none;" href="/knowledge/plan/{{ cls.id }}">Set up course plan →</a>
+          {% endif %}
+        </section>
+
+        <section class="launcher__group launcher__section-card">
+          <div class="launcher__group-header">
             <div class="launcher__group-kicker">Lifecycle</div>
             <h2 class="launcher__group-title">Class status</h2>
           </div>

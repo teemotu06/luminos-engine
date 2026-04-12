@@ -1482,3 +1482,264 @@ a:focus-visible {
     color: rgba(17, 17, 17, 0.45);
     font-style: italic;
 }
+
+/* ==========================================================
+   KNOWLEDGE — COURSE PLAN & SCHEDULING
+   ========================================================== */
+
+/* ── Layout ─────────────────────────────────────────────── */
+
+.knowledge-plan-layout {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .knowledge-plan-layout {
+        grid-template-columns: 340px 1fr;
+        align-items: start;
+    }
+}
+
+/* ── Day picker ──────────────────────────────────────────── */
+
+.day-picker {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.day-picker__btn {
+    padding: 5px 12px;
+    border: 1.5px solid var(--c-border);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--c-text);
+    font-size: 13px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.day-picker__btn--active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.day-picker__btn:hover:not(.day-picker__btn--active) {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ── Plan preview box ────────────────────────────────────── */
+
+.plan-preview {
+    background: var(--surface);
+    border: 1px solid var(--c-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 1rem;
+}
+
+.plan-preview__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--c-border);
+    font-size: 13.5px;
+}
+
+.plan-preview__row:last-of-type {
+    border-bottom: none;
+}
+
+.plan-preview__label {
+    color: rgba(23, 20, 17, 0.55);
+    font-weight: 500;
+}
+
+.plan-preview__value {
+    font-weight: 600;
+    color: var(--c-text);
+}
+
+.plan-preview__note {
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: rgba(23, 20, 17, 0.5);
+    font-style: italic;
+}
+
+/* ── Plan summary (class detail sidebar) ─────────────────── */
+
+.plan-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.plan-summary__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 13px;
+    padding: 3px 0;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.plan-summary__row:last-child {
+    border-bottom: none;
+}
+
+.plan-summary__label {
+    color: rgba(23, 20, 17, 0.55);
+    font-weight: 500;
+}
+
+.plan-summary__value {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ── Schedule table ──────────────────────────────────────── */
+
+.knowledge-schedule {
+    overflow-x: auto;
+}
+
+.knowledge-schedule__meta {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(23, 20, 17, 0.5);
+    margin-left: 0.5rem;
+}
+
+.knowledge-schedule__teaching-days {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(23, 20, 17, 0.6);
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.knowledge-schedule__day-tag {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.knowledge-schedule__unit {
+    margin-bottom: 1.5rem;
+}
+
+.knowledge-schedule__unit-header {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(23, 20, 17, 0.45);
+    padding: 4px 0 6px;
+    border-bottom: 1px solid var(--c-border);
+    margin-bottom: 2px;
+}
+
+.knowledge-schedule__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.knowledge-schedule__th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(23, 20, 17, 0.45);
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.knowledge-schedule__row {
+    border-bottom: 1px solid rgba(221, 208, 191, 0.4);
+}
+
+.knowledge-schedule__row:last-child {
+    border-bottom: none;
+}
+
+.knowledge-schedule__td {
+    padding: 7px 8px;
+    vertical-align: middle;
+}
+
+.knowledge-schedule__td--num {
+    width: 40px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: rgba(23, 20, 17, 0.4);
+}
+
+.knowledge-schedule__td--lesson {
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.knowledge-schedule__td--date {
+    font-variant-numeric: tabular-nums;
+    color: rgba(23, 20, 17, 0.65);
+}
+
+.knowledge-schedule__td--action {
+    width: 72px;
+}
+
+/* ── Toggle checkbox (plan opt-in) ───────────────────────── */
+
+.knowledge-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--c-text);
+}
+
+.knowledge-toggle__check {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ── Holiday delete button ───────────────────────────────── */
+
+.holiday-delete-btn {
+    background: none;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-family: var(--font-sans);
+    color: rgba(23, 20, 17, 0.6);
+    cursor: pointer;
+    transition: border-color 0.12s, color 0.12s;
+}
+
+.holiday-delete-btn:hover {
+    border-color: #c0392b;
+    color: #c0392b;
+}

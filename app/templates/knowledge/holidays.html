@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Public Holidays — LUMINOS{% endblock %}
+
+{% block content %}
+<div class="page launcher">
+
+  <header class="launcher__header">
+    <div class="launcher__header-identity">
+      <span class="launcher__header-sep">LUMINOS</span>
+      <h1 class="launcher__header-title">Public Holidays</h1>
+    </div>
+    <div class="launcher__header-stats">
+      <span class="launcher__stat-inline">{{ holidays | length }} registered</span>
+    </div>
+  </header>
+
+  <p class="launcher__section-intro">Holidays listed here are automatically skipped when calculating course lesson dates. Add national and local public holidays for your region.</p>
+
+  <main id="main-content" class="launcher__main">
+    {% if error %}
+    <div class="form-error">{{ error }}</div>
+    {% endif %}
+
+    <div class="launcher__detail-layout">
+
+      <!-- Holiday list -->
+      <section class="launcher__group launcher__section-card launcher__section-card--primary">
+        <div class="launcher__group-header">
+          <div class="launcher__group-kicker">Calendar</div>
+          <h2 class="launcher__group-title">Registered holidays</h2>
+        </div>
+
+        {% if holidays %}
+        <table class="knowledge-schedule__table">
+          <thead>
+            <tr>
+              <th class="knowledge-schedule__th">Date</th>
+              <th class="knowledge-schedule__th">Name</th>
+              <th class="knowledge-schedule__th">Region</th>
+              <th class="knowledge-schedule__th"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for h in holidays %}
+            <tr class="knowledge-schedule__row">
+              <td class="knowledge-schedule__td knowledge-schedule__td--date">{{ h.holiday_date }}</td>
+              <td class="knowledge-schedule__td">{{ h.name }}</td>
+              <td class="knowledge-schedule__td">{{ h.region or '—' }}</td>
+              <td class="knowledge-schedule__td knowledge-schedule__td--action">
+                <form method="post" action="/knowledge/holidays/{{ h.id }}/delete"
+                      onsubmit="return confirm('Remove {{ h.name }}?')">
+                  <button class="holiday-delete-btn" type="submit" aria-label="Delete {{ h.name }}">Remove</button>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p class="launcher__empty-copy">No holidays added yet.</p>
+        {% endif %}
+      </section>
+
+      <!-- Add holiday form -->
+      <aside class="launcher__detail-sidebar">
+        <section class="launcher__group launcher__section-card">
+          <div class="launcher__group-header">
+            <div class="launcher__group-kicker">Add</div>
+            <h2 class="launcher__group-title">New holiday</h2>
+          </div>
+          <form class="luminos-form" method="post" action="/knowledge/holidays">
+            <div class="luminos-form__field">
+              <label class="luminos-form__label" for="holiday_date">Date</label>
+              <input
+                class="luminos-form__input"
+                type="date"
+                id="holiday_date"
+                name="holiday_date"
+                required
+                autofocus>
+            </div>
+            <div class="luminos-form__field">
+              <label class="luminos-form__label" for="holiday_name">Name</label>
+              <input
+                class="luminos-form__input"
+                type="text"
+                id="holiday_name"
+                name="name"
+                placeholder="e.g. Chuseok"
+                required>
+            </div>
+            <div class="luminos-form__field">
+              <label class="luminos-form__label" for="region">Region <span class="luminos-form__optional">(optional)</span></label>
+              <input
+                class="luminos-form__input"
+                type="text"
+                id="region"
+                name="region"
+                placeholder="e.g. KR">
+            </div>
+            <button class="luminos-form__submit" type="submit">Add holiday</button>
+          </form>
+        </section>
+
+        <section class="launcher__group launcher__section-card">
+          <div class="launcher__group-header">
+            <div class="launcher__group-kicker">Note</div>
+            <h2 class="launcher__group-title">Recalculate plans</h2>
+          </div>
+          <p class="launcher__section-copy">After adding or removing holidays, re-save any active course plan from the class page — this will rebuild the schedule with the updated holiday list.</p>
+        </section>
+      </aside>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

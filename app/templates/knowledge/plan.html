@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}New Class — LUMINOS{% endblock %}
+{% block title %}Course Plan — {{ cls.class_name }} — LUMINOS{% endblock %}
 
 {% block head %}
 <script>
 var LUMINOS_CURRICULA = {{ curricula | tojson }};
-var DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+var DAY_NAMES = {{ day_names | tojson }};
 
-function newClassForm() {
+function coursePlanEditor() {
+  var defaultPlan = {{ plan | tojson if plan else 'null' }};
   return {
-    withPlan: false,
-    curriculum: LUMINOS_CURRICULA[0] ? LUMINOS_CURRICULA[0].id : '',
-    startDate: '',
-    teachingDays: [0, 1, 2, 3, 4],
+    curriculum: defaultPlan ? defaultPlan.curriculum_id : (LUMINOS_CURRICULA[0] ? LUMINOS_CURRICULA[0].id : ''),
+    startDate: defaultPlan ? defaultPlan.start_date : '',
+    teachingDays: defaultPlan ? defaultPlan.teaching_days : [0, 1, 2, 3, 4],
     preview: null,
     loading: false,
     get selectedCurriculum() {
@@ -26,7 +26,7 @@ function newClassForm() {
       var idx = this.teachingDays.indexOf(d);
       if (idx === -1) {
         this.teachingDays.push(d);
-        this.teachingDays.sort(function(a, b) { return a - b; });
+        this.teachingDays.sort(function(a,b){return a-b;});
       } else {
         this.teachingDays.splice(idx, 1);
       }
@@ -46,7 +46,9 @@ function newClassForm() {
           teaching_days: this.teachingDays.join(',')
         });
         var res = await fetch('/knowledge/plan/preview?' + params);
-        if (res.ok) { this.preview = await res.json(); }
+        if (res.ok) {
+          this.preview = await res.json();
+        }
       } catch(e) {}
       this.loading = false;
     },
@@ -64,65 +66,30 @@ function newClassForm() {
   <header class="launcher__header">
     <div class="launcher__header-identity">
       <span class="launcher__header-sep">LUMINOS</span>
-      <h1 class="launcher__header-title">Create a Class</h1>
+      <h1 class="launcher__header-title">Course Plan</h1>
     </div>
     <div class="launcher__header-stats">
-      <span class="launcher__stat-inline">roster setup</span>
+      <span class="launcher__stat-inline">{{ cls.class_name }}</span>
+      {% if summary %}
+      <span class="launcher__stat-inline launcher__stat-inline--ready">{{ summary.total_lessons }} lessons</span>
+      {% endif %}
     </div>
   </header>
-  <a class="launcher__back" href="/classes/">← Classes</a>
-  <p class="launcher__section-intro">Create a roster and optionally attach a course plan with a curriculum, start date, and teaching schedule.</p>
 
-  <main id="main-content" class="launcher__main" x-data="newClassForm()">
-    {% if error %}
-    <div class="form-error">{{ error }}</div>
-    {% endif %}
+  <a class="launcher__back" href="/classes/{{ class_id }}">← {{ cls.class_name }}</a>
+  <p class="launcher__section-intro">Set the curriculum, start date, and teaching days. Lessons are automatically assigned to teaching days while skipping public holidays.</p>
 
-    <form class="luminos-form" method="post" action="/classes/new">
+  <main id="main-content" class="launcher__main">
+    <div class="knowledge-plan-layout" x-data="coursePlanEditor()">
 
-      <!-- ── Basic details ── -->
+      <!-- Editor panel -->
       <section class="launcher__group launcher__section-card launcher__section-card--form">
         <div class="launcher__group-header">
-          <div class="launcher__group-kicker">Setup</div>
-          <h2 class="launcher__group-title">Class details</h2>
+          <div class="launcher__group-kicker">Configuration</div>
+          <h2 class="launcher__group-title">Plan settings</h2>
         </div>
 
-        <div class="luminos-form__field">
-          <label class="luminos-form__label" for="class_name">Class name</label>
-          <input
-            class="luminos-form__input"
-            type="text"
-            id="class_name"
-            name="class_name"
-            placeholder="e.g. Year 1 Blue"
-            required
-            autocomplete="organization"
-            autofocus>
-        </div>
-        <div class="luminos-form__field">
-          <label class="luminos-form__label" for="description">Description <span class="luminos-form__optional">(optional)</span></label>
-          <input
-            class="luminos-form__input"
-            type="text"
-            id="description"
-            name="description"
-            placeholder="e.g. Monday / Wednesday group">
-        </div>
-      </section>
-
-      <!-- ── Course plan (toggle) ── -->
-      <section class="launcher__group launcher__section-card">
-        <div class="launcher__group-header">
-          <div class="launcher__group-kicker">Optional</div>
-          <h2 class="launcher__group-title">Course plan</h2>
-        </div>
-
-        <label class="knowledge-toggle">
-          <input type="checkbox" x-model="withPlan" name="_with_plan" value="1" class="knowledge-toggle__check">
-          <span class="knowledge-toggle__label">Attach a course plan now</span>
-        </label>
-
-        <div x-show="withPlan" x-cloak style="margin-top:1.25rem;">
+        <form class="luminos-form" method="post" action="/knowledge/plan/{{ class_id }}">
 
           <!-- Curriculum -->
           <div class="luminos-form__field">
@@ -148,13 +115,14 @@ function newClassForm() {
               id="start_date"
               name="start_date"
               x-model="startDate"
-              @change="preview = null">
+              @change="preview = null"
+              required>
           </div>
 
           <!-- Teaching days -->
           <div class="luminos-form__field">
-            <span class="luminos-form__label">Teaching days per week</span>
-            <div class="day-picker" role="group" aria-label="Teaching days">
+            <span class="luminos-form__label">Teaching days</span>
+            <div class="day-picker" role="group" aria-label="Select teaching days">
               <template x-for="(label, idx) in DAY_NAMES" :key="idx">
                 <button
                   type="button"
@@ -178,7 +146,7 @@ function newClassForm() {
               class="luminos-form__submit luminos-form__submit--secondary"
               @click="fetchPreview()"
               :disabled="!canPreview || loading"
-              x-text="loading ? 'Calculating…' : 'Preview end date'">
+              x-text="loading ? 'Calculating…' : 'Preview schedule'">
             </button>
           </div>
 
@@ -190,24 +158,65 @@ function newClassForm() {
                 <span class="plan-preview__value" x-text="preview.total_lessons"></span>
               </div>
               <div class="plan-preview__row">
-                <span class="plan-preview__label">Course end date</span>
+                <span class="plan-preview__label">End date</span>
                 <span class="plan-preview__value" x-text="preview.end_date"></span>
               </div>
               <div class="plan-preview__row">
-                <span class="plan-preview__label">Teaching</span>
+                <span class="plan-preview__label">Teaching days</span>
                 <span class="plan-preview__value" x-text="preview.teaching_day_labels.join(' · ')"></span>
               </div>
-              <p class="plan-preview__note">Public holidays are excluded. The full lesson schedule is generated on save.</p>
+              <p class="plan-preview__note">Public holidays have been excluded from this schedule.</p>
             </div>
           </template>
 
-        </div>
+          <button class="luminos-form__submit" type="submit">Save course plan</button>
+        </form>
       </section>
 
-      <button class="luminos-form__submit" type="submit">Create class</button>
-    </form>
+      <!-- Schedule display -->
+      {% if plan and schedule_by_unit %}
+      <section class="launcher__group launcher__section-card knowledge-schedule">
+        <div class="launcher__group-header">
+          <div class="launcher__group-kicker">Schedule</div>
+          <h2 class="launcher__group-title">
+            Lesson dates
+            <span class="knowledge-schedule__meta">{{ summary.start_date }} → {{ summary.end_date }}</span>
+          </h2>
+        </div>
 
+        <div class="knowledge-schedule__teaching-days">
+          Teaching: {% for label in summary.teaching_day_labels %}<span class="knowledge-schedule__day-tag">{{ label }}</span>{% endfor %}
+        </div>
+
+        {% for unit in schedule_by_unit %}
+        <div class="knowledge-schedule__unit">
+          <div class="knowledge-schedule__unit-header">{{ unit.unit_id }}</div>
+          <table class="knowledge-schedule__table">
+            <thead>
+              <tr>
+                <th class="knowledge-schedule__th">#</th>
+                <th class="knowledge-schedule__th">Lesson</th>
+                <th class="knowledge-schedule__th">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for entry in unit.lessons %}
+              <tr class="knowledge-schedule__row">
+                <td class="knowledge-schedule__td knowledge-schedule__td--num">{{ entry.lesson_index }}</td>
+                <td class="knowledge-schedule__td knowledge-schedule__td--lesson">
+                  <a class="launcher__inline-link" href="/lesson/{{ entry.lesson_id }}">{{ entry.lesson_id }}</a>
+                </td>
+                <td class="knowledge-schedule__td knowledge-schedule__td--date">{{ entry.scheduled_date }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+    </div>
   </main>
-
 </div>
 {% endblock %}

@@ -1,3 +1,6 @@
+import json
+import logging
+from datetime import date
 from typing import Optional
 
 from fastapi import APIRouter, Depends, Form, HTTPException
@@ -17,6 +20,15 @@ from app.services.class_service import (
     get_class_with_students,
     restore_class,
 )
+from app.services.knowledge_service import (
+    create_or_update_course_plan,
+    get_course_plan,
+    get_curriculum,
+    list_curricula,
+    plan_summary,
+)
+
+logger = logging.getLogger(__name__)
 from app.services.class_session_service import (
     class_session_payload,
     ensure_class_session,
@@ -56,7 +68,7 @@ def new_class_form(request: Request, current_user=Depends(require_current_user))
     return templates.TemplateResponse(
         request,
         "classes/new.html",
-        {"error": None, "current_user": current_user},
+        {"error": None, "curricula": list_curricula(), "current_user": current_user},
     )
 
 
@@ -65,6 +77,11 @@ def create_class_submit(
     request: Request,
     class_name: str = Form(...),
     description: str = Form(""),
+    # Optional course plan fields
+    with_plan: str = Form(""),
+    curriculum_id: str = Form(""),
+    start_date: str = Form(""),
+    teaching_days_json: str = Form("[]"),
     db: Session = Depends(get_db),
     current_user=Depends(require_current_user),
 ):
@@ -73,7 +90,7 @@ def create_class_submit(
         return templates.TemplateResponse(
             request,
             "classes/new.html",
-            {"error": "Class name cannot be empty", "current_user": current_user},
+            {"error": "Class name cannot be empty", "curricula": list_curricula(), "current_user": current_user},
             status_code=422,
         )
     cls = create_class(
@@ -82,6 +99,24 @@ def create_class_submit(
         description=description.strip() or None,
         owner_user_id=None if current_user.role == "admin" else str(current_user.id),
     )
+
+    # Attach a course plan if the toggle was checked and all plan fields are present
+    if with_plan == "1" and curriculum_id and start_date:
+        try:
+            parsed_date = date.fromisoformat(start_date)
+            teaching_days = json.loads(teaching_days_json)
+            teaching_days = [int(d) for d in teaching_days]
+            if teaching_days:
+                create_or_update_course_plan(
+                    db,
+                    class_id=str(cls.id),
+                    curriculum_id=curriculum_id,
+                    start_date=parsed_date,
+                    teaching_days=teaching_days,
+                )
+        except Exception:
+            logger.warning("course_plan.attach_failed class_id=%s", cls.id, exc_info=True)
+
     return RedirectResponse(url=f"/classes/{cls.id}", status_code=303)
 
 
@@ -97,10 +132,17 @@ def class_detail(
     cls = get_class_with_students(db, class_id, include_deleted=True)
     if cls is None:
         raise HTTPException(status_code=404, detail="Class not found")
+    plan = get_course_plan(db, class_id)
+    curriculum = get_curriculum(plan.curriculum_id) if plan else None
     return templates.TemplateResponse(
         request,
         "classes/detail.html",
-        {"cls": cls, "error": error, "current_user": current_user},
+        {
+            "cls": cls,
+            "error": error,
+            "plan_summary": plan_summary(plan, curriculum) if plan else None,
+            "current_user": current_user,
+        },
     )
 
 

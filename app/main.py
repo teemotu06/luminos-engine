@@ -18,6 +18,7 @@ from app.routers.authoring import router as authoring_router
 from app.routers.authoring_media import router as authoring_media_router
 from app.routers.auth import router as auth_router
 from app.routers.classes import router as classes_router
+from app.routers.knowledge import router as knowledge_router
 from app.routers.lesson import router as lesson_router
 from app.routers.students import router as students_router
 from app.routers.teach import router as teach_router
@@ -131,6 +132,7 @@ app.include_router(teach_router)
 app.include_router(lesson_router)
 app.include_router(students_router)
 app.include_router(classes_router)
+app.include_router(knowledge_router)
 app.include_router(admin_router)
 app.include_router(authoring_router)
 app.include_router(authoring_media_router)
